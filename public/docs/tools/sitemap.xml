@@ -35,4 +35,40 @@
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
-    </urlset>
+    <url>
+        <loc>http://localhost:1313/personal-site/docs/tools/hugo/hugo-1/</loc>
+        <lastmod>2024-10-23T15:33:22+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/tools/hugo/hugo-2/</loc>
+        <lastmod>2024-10-23T15:33:28+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/tools/hugo/hugo-3/</loc>
+        <lastmod>2024-10-23T15:33:37+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/tools/hugo/doks-theme-1/</loc>
+        <lastmod>2024-10-23T15:31:58+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/tools/hugo/doks-theme-2/</loc>
+        <lastmod>2024-10-23T15:32:29+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/tools/hugo/doks-theme-3/</loc>
+        <lastmod>2024-10-23T15:32:52+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      </urlset>

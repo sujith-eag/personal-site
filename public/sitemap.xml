@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/personal-site/docs/tools/hugo/hugo-1/</loc>
+    <lastmod>2024-10-23T15:33:22+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>http://localhost:1313/personal-site/docs/tools/git-github/</loc>
     <lastmod>2024-10-22T14:47:02+05:30</lastmod>
     <changefreq>monthly</changefreq>
@@ -14,6 +19,11 @@
   </url><url>
     <loc>http://localhost:1313/personal-site/docs/linux-terminal/terminal-1-basics/</loc>
     <lastmod>2024-10-22T09:32:39+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/personal-site/docs/tools/hugo/hugo-2/</loc>
+    <lastmod>2024-10-23T15:33:28+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -37,6 +47,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>http://localhost:1313/personal-site/docs/tools/hugo/hugo-3/</loc>
+    <lastmod>2024-10-23T15:33:37+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>http://localhost:1313/personal-site/docs/tools/obsidian/</loc>
     <lastmod>2024-10-22T14:47:43+05:30</lastmod>
     <changefreq>monthly</changefreq>
@@ -52,6 +67,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>http://localhost:1313/personal-site/docs/tools/hugo/doks-theme-1/</loc>
+    <lastmod>2024-10-23T15:31:58+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>http://localhost:1313/personal-site/docs/tools/chrome/</loc>
     <lastmod>2024-10-22T14:48:00+05:30</lastmod>
     <changefreq>monthly</changefreq>
@@ -64,6 +84,11 @@
   </url><url>
     <loc>http://localhost:1313/personal-site/docs/linux-terminal/</loc>
     <lastmod>2024-10-22T09:31:50+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/personal-site/docs/tools/hugo/doks-theme-2/</loc>
+    <lastmod>2024-10-23T15:32:29+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -94,6 +119,11 @@
   </url><url>
     <loc>http://localhost:1313/personal-site/blog/</loc>
     <lastmod>2023-09-07T16:21:44+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/personal-site/docs/tools/hugo/doks-theme-3/</loc>
+    <lastmod>2024-10-23T15:32:52+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>

@@ -7,14 +7,28 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright (c) 2020-2024 Thulite</copyright>
-    <lastBuildDate>Tue, 22 Oct 2024 09:34:55 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 23 Oct 2024 15:33:37 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/personal-site/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo 1</title>
+      <link>http://localhost:1313/personal-site/docs/tools/hugo/hugo-1/</link>
+      <pubDate>Wed, 23 Oct 2024 15:33:22 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/tools/hugo/hugo-1/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Terminal - 1 Basics</title>
       <link>http://localhost:1313/personal-site/docs/linux-terminal/terminal-1-basics/</link>
       <pubDate>Tue, 22 Oct 2024 09:32:39 +0530</pubDate>
       <guid>http://localhost:1313/personal-site/docs/linux-terminal/terminal-1-basics/</guid>
       <description>&lt;p&gt;Bash - &lt;code&gt;Bourne Again SHell&lt;/code&gt;&#x9;&#x9;&lt;br /&gt;&#xA;(git Bash - for windows interaction with git )&lt;/p&gt;&#xA;&lt;h2 id=&#34;bash&#34;&gt;Bash&lt;/h2&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;div class=&#34;expressive-code&#34;&gt;&#xD;&#xA;  &lt;figure class=&#34;frame not-content&#34;&gt;&#xD;&#xA;  &lt;figcaption class=&#34;header&#34;&gt;&#xD;&#xA;    &lt;span class=&#34;title&#34;&gt;&lt;/span&gt;&#xD;&#xA;  &lt;/figcaption&gt;&#xD;&#xA;  &lt;div class=&#34;highlight&#34; frame=&#34;none&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Ctrl + Alt + T  &lt;span class=&#34;c1&#34;&gt;# Launch terminal&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Ctrl + Shift + C  &lt;span class=&#34;c1&#34;&gt;# for copying from terminal&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Ctrl + Shift + V  &lt;span class=&#34;c1&#34;&gt;# for pasting in terminal&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;clear      &lt;span class=&#34;c1&#34;&gt;# to clear the terminal&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xD;&#xA;  &lt;/figure&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;p&gt;The grammar of a shell allows to combine existing tools into powerful pipelines and handle large volumes of data automatically.&#x9;&lt;br /&gt;&#xA;Sequence of commands written in a &amp;lsquo;script&amp;rsquo;, improves the reproduciblity of workflows.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hugo 2</title>
+      <link>http://localhost:1313/personal-site/docs/tools/hugo/hugo-2/</link>
+      <pubDate>Wed, 23 Oct 2024 15:33:28 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/tools/hugo/hugo-2/</guid>
+      <description></description>
     </item>
     <item>
       <title>Terminal - 2 Working With Files</title>
@@ -24,11 +38,25 @@
       <description>&lt;h2 id=&#34;creating-directories&#34;&gt;Creating Directories&lt;/h2&gt;&#xA;&lt;p&gt;Open where a directory has to be added.   &lt;br /&gt;&#xA;&lt;code&gt;mkdir [name]&lt;/code&gt;  to &amp;lsquo;make directory&amp;rsquo; in the current directory.   &lt;br /&gt;&#xA;Using relative path without leading slash.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Hugo 3</title>
+      <link>http://localhost:1313/personal-site/docs/tools/hugo/hugo-3/</link>
+      <pubDate>Wed, 23 Oct 2024 15:33:37 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/tools/hugo/hugo-3/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Terminal - 3 Pipes Filters</title>
       <link>http://localhost:1313/personal-site/docs/linux-terminal/terminal-3-pipes-filters/</link>
       <pubDate>Tue, 22 Oct 2024 09:33:44 +0530</pubDate>
       <guid>http://localhost:1313/personal-site/docs/linux-terminal/terminal-3-pipes-filters/</guid>
       <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;Objective&lt;/strong&gt;&lt;/em&gt;  &lt;br /&gt;&#xA;Linking commands with pipes and filters.    &lt;br /&gt;&#xA;Combining sequences of commands to get output.  &lt;br /&gt;&#xA;Redirecting commands output to a file.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Doks Theme 1</title>
+      <link>http://localhost:1313/personal-site/docs/tools/hugo/doks-theme-1/</link>
+      <pubDate>Wed, 23 Oct 2024 15:31:58 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/tools/hugo/doks-theme-1/</guid>
+      <description>&lt;p&gt;Creating new project directory.         &lt;br /&gt;&#xA;Get all dependencies which were a lot.    &lt;br /&gt;&#xA;Run the local development server.&lt;/p&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;div class=&#34;expressive-code&#34;&gt;&#xD;&#xA;  &lt;figure class=&#34;frame not-content&#34;&gt;&#xD;&#xA;  &lt;figcaption class=&#34;header&#34;&gt;&#xD;&#xA;    &lt;span class=&#34;title&#34;&gt;&lt;/span&gt;&#xD;&#xA;  &lt;/figcaption&gt;&#xD;&#xA;  &lt;div class=&#34;highlight&#34; frame=&#34;none&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm create thulite@latest -- --template doks&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm install&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm run dev&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xD;&#xA;  &lt;/figure&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;p&gt;Updating the dependencies.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Terminal - 4 Loops Scripting</title>
@@ -38,32 +66,18 @@
       <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;Objectives&lt;/strong&gt;&lt;/em&gt;    &lt;br /&gt;&#xA;Writing a loop that applies to one or more commands separately to each file in a set of files. &lt;br /&gt;&#xA;Trace the values taken by a loop variable during the execution of the loop. &lt;br /&gt;&#xA;Explain the difference between variable&amp;rsquo;s name and its value. &lt;br /&gt;&#xA;Explain why spaces and some punctuation characters should&amp;rsquo;t be used in the file name. &lt;br /&gt;&#xA;Demonstrate how to see what commands have recently been executed. &lt;br /&gt;&#xA;Run recently executed commands without retyping them.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Doks Theme 2</title>
+      <link>http://localhost:1313/personal-site/docs/tools/hugo/doks-theme-2/</link>
+      <pubDate>Wed, 23 Oct 2024 15:32:29 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/tools/hugo/doks-theme-2/</guid>
+      <description>&lt;p&gt;Usual code block with usual triple block quote language can also be indicated.&lt;/p&gt;&#xA;&lt;h2 id=&#34;codeblocks-to-write-code&#34;&gt;Codeblocks to Write code&lt;/h2&gt;&#xA;&lt;h3 id=&#34;frames-and-titles&#34;&gt;Frames and titles&lt;/h3&gt;&#xA;&lt;p&gt;Code block in a window-like frame looking like a terminal with a tag of file name&#xA;using &lt;code&gt;toml {title=&amp;quot;..&amp;quot;}&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Terminal - 5 Shell Scripting</title>
       <link>http://localhost:1313/personal-site/docs/linux-terminal/terminal-5-shell-scripting/</link>
       <pubDate>Tue, 22 Oct 2024 09:34:28 +0530</pubDate>
       <guid>http://localhost:1313/personal-site/docs/linux-terminal/terminal-5-shell-scripting/</guid>
       <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;Objective&lt;/strong&gt;&lt;/em&gt;     &lt;br /&gt;&#xA;Shell script that runs a command or a series of commands for a fixed set of files.    &lt;br /&gt;&#xA;Run a shell script from the command line.   &lt;br /&gt;&#xA;Using a shell script that operates on a set of fines defines by the user on the command line.   &lt;br /&gt;&#xA;Creating a pipeline that included shell scripts.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>First Blog Post</title>
-      <link>http://localhost:1313/personal-site/blog/first-blog-post/</link>
-      <pubDate>Thu, 07 Sep 2023 16:27:22 +0200</pubDate>
-      <guid>http://localhost:1313/personal-site/blog/first-blog-post/</guid>
-      <description>Nothing important to announce, just figuring out things.</description>
-    </item>
-    <item>
-      <title>Terminal - 6 Searching Wildcards</title>
-      <link>http://localhost:1313/personal-site/docs/linux-terminal/terminal-6-searching-wildcards/</link>
-      <pubDate>Tue, 22 Oct 2024 09:34:55 +0530</pubDate>
-      <guid>http://localhost:1313/personal-site/docs/linux-terminal/terminal-6-searching-wildcards/</guid>
-      <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;Overview&lt;/strong&gt;&lt;/em&gt;      &lt;br /&gt;&#xA;Use &lt;code&gt;grep&lt;/code&gt; to select lines from text files that match simple patterns.          &lt;br /&gt;&#xA;Use &lt;code&gt;find&lt;/code&gt; to find files and directories whose names match simple patterns.     &lt;br /&gt;&#xA;Use the output of one command as the command-line argument to another command.  &lt;br /&gt;&#xA;Understanding &amp;rsquo;text&amp;rsquo; &amp;amp; &amp;lsquo;binary&amp;rsquo; files, and why many common tools don&amp;rsquo;t handle the latter well.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Privacy Policy</title>
-      <link>http://localhost:1313/personal-site/privacy/</link>
-      <pubDate>Thu, 07 Sep 2023 17:19:07 +0200</pubDate>
-      <guid>http://localhost:1313/personal-site/privacy/</guid>
-      <description>&lt;h1 id=&#34;surprised&#34;&gt;Surprised!!&lt;/h1&gt;&#xA;&lt;h2 id=&#34;why-are-you-even-here&#34;&gt;Why are you even here??&lt;/h2&gt;</description>
     </item>
   </channel>
 </rss>
