@@ -64,7 +64,7 @@ jobs:
         run: |
           npm run build \
             -- \
-            --baseURL "https://sujith-eag.io/personal-site/"
+            --baseURL "https://sujith-eag.github.io/personal-site/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
