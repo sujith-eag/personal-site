@@ -54,7 +54,7 @@ jobs:
         id: pages
         uses: actions/configure-pages@v4
       - name: Install dependencies
-        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+        run: npm install
       - name: Build production website
         env:
           # For maximum backward compatibility with Hugo modules
@@ -64,7 +64,7 @@ jobs:
         run: |
           npm run build \
             -- \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
+            --baseURL "https://sujith-eag.io/personal-site/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
