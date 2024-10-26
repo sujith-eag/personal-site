@@ -45,12 +45,12 @@
 <link rel="manifest" href="/personal-site/manifest.webmanifest">
 
 <meta property="og:title" content="Terminal - 4 Loops Scripting">
-<meta property="og:description" content="Objectives    
-Writing a loop that applies to one or more commands separately to each file in a set of files. 
-Trace the values taken by a loop variable during the execution of the loop. 
-Explain the difference between variable&rsquo;s name and its value. 
-Explain why spaces and some punctuation characters should&rsquo;t be used in the file name. 
-Demonstrate how to see what commands have recently been executed. 
+<meta property="og:description" content="Objectives
+Writing a loop that applies to one or more commands separately to each file in a set of files.
+Trace the values taken by a loop variable during the execution of the loop.
+Explain the difference between variable&rsquo;s name and its value.
+Explain why spaces and some punctuation characters should&rsquo;t be used in the file name.
+Demonstrate how to see what commands have recently been executed.
 Run recently executed commands without retyping them.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://localhost:1313/personal-site/docs/linux-terminal/terminal-4-loops-scripting/"><meta property="og:image" content="http://localhost:1313/personal-site/cover.png"><meta property="article:section" content="docs">
@@ -59,12 +59,12 @@ Run recently executed commands without retyping them.">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://localhost:1313/personal-site/cover.png"><meta name="twitter:title" content="Terminal - 4 Loops Scripting">
-<meta name="twitter:description" content="Objectives    
-Writing a loop that applies to one or more commands separately to each file in a set of files. 
-Trace the values taken by a loop variable during the execution of the loop. 
-Explain the difference between variable&rsquo;s name and its value. 
-Explain why spaces and some punctuation characters should&rsquo;t be used in the file name. 
-Demonstrate how to see what commands have recently been executed. 
+<meta name="twitter:description" content="Objectives
+Writing a loop that applies to one or more commands separately to each file in a set of files.
+Trace the values taken by a loop variable during the execution of the loop.
+Explain the difference between variable&rsquo;s name and its value.
+Explain why spaces and some punctuation characters should&rsquo;t be used in the file name.
+Demonstrate how to see what commands have recently been executed.
 Run recently executed commands without retyping them.">
 
     
@@ -571,12 +571,12 @@ Run recently executed commands without retyping them.">
   </details>
 
 			</nav>
-			<p><em><strong>Objectives</strong></em>    <br />
-Writing a loop that applies to one or more commands separately to each file in a set of files. <br />
-Trace the values taken by a loop variable during the execution of the loop. <br />
-Explain the difference between variable&rsquo;s name and its value. <br />
-Explain why spaces and some punctuation characters should&rsquo;t be used in the file name. <br />
-Demonstrate how to see what commands have recently been executed. <br />
+			<p><em><strong>Objectives</strong></em><br>
+Writing a loop that applies to one or more commands separately to each file in a set of files.<br>
+Trace the values taken by a loop variable during the execution of the loop.<br>
+Explain the difference between variable&rsquo;s name and its value.<br>
+Explain why spaces and some punctuation characters should&rsquo;t be used in the file name.<br>
+Demonstrate how to see what commands have recently been executed.<br>
 Run recently executed commands without retyping them.</p>
 <h2 id="loops">Loops<a href="#loops" class="anchor" aria-hidden="true">#</a> </h2>
 <p>Loops are programming constructs that allow us to repeat a command or set of commands for each item in a list.</p>
@@ -595,9 +595,9 @@ Run recently executed commands without retyping them.</p>
 </span></span><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="n">done</span></span></span></code></pre></div>
   </figure>
 </div>
-<p><code>for</code> indicates the start of for-loop.    <br />
-<code>do</code> indicates the start of job execution list. <br />
-<code>done</code> indicates the end of a loop. <br />
+<p><code>for</code> indicates the start of for-loop.<br>
+<code>do</code> indicates the start of job execution list.<br>
+<code>done</code> indicates the end of a loop.<br>
 <code>$</code> is used to indicate it as a variable that has to be replaced by its value.</p>
 <p><code>echo</code> all 10 numbers using loop</p>
 
@@ -691,7 +691,7 @@ Run recently executed commands without retyping them.</p>
 </span></span><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="n">done</span></span></span></code></pre></div>
   </figure>
 </div>
-<p>prints all  <code>.pdb</code>  and appends all into <code>alkanes.pdb</code>    <br />
+<p>prints all  <code>.pdb</code>  and appends all into <code>alkanes.pdb</code><br>
 using <code>&gt;</code> would have only one value in the file.</p>
 <h2 id="piping">Piping<a href="#piping" class="anchor" aria-hidden="true">#</a> </h2>
 
@@ -709,9 +709,9 @@ using <code>&gt;</code> would have only one value in the file.</p>
 </span></span><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="n">done</span></span></span></code></pre></div>
   </figure>
 </div>
-<p>echo all  <code>.dat</code>  <br />
-assuming each file has at least 100 lines, <br />
-take the first 100 lines and take the last 20 lines from that.  <br />
+<p>echo all  <code>.dat</code><br>
+assuming each file has at least 100 lines,<br>
+take the first 100 lines and take the last 20 lines from that.<br>
 So gives lines from 81 to 100.</p>
 <p>what happens to the lines??</p>
 <h2 id="spaces-in-names">Spaces in names<a href="#spaces-in-names" class="anchor" aria-hidden="true">#</a> </h2>
@@ -742,8 +742,8 @@ So gives lines from 81 to 100.</p>
   <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="err">$</span> <span class="n">cp</span> <span class="o">*</span><span class="p">.</span><span class="n">dat</span> <span class="n">original</span><span class="o">-*</span><span class="p">.</span><span class="n">dat</span></span></span></code></pre></div>
   </figure>
 </div>
-<p>To create a new file with original<code>-</code> as prefix.    <br />
-But raises error as the last argument is not a directory and there are multiple files,  <br />
+<p>To create a new file with original<code>-</code> as prefix.<br>
+But raises error as the last argument is not a directory and there are multiple files,<br>
 When <code>*.dat</code>  is expanded.</p>
 
 
@@ -759,7 +759,7 @@ When <code>*.dat</code>  is expanded.</p>
 </span></span><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="n">done</span></span></span></code></pre></div>
   </figure>
 </div>
-<p>Now each of <code>.dat</code> file come one by one and in the cp there will be only two files, <br />
+<p>Now each of <code>.dat</code> file come one by one and in the cp there will be only two files,<br>
 so will be copied into the other.</p>
 <h2 id="scripting">Scripting<a href="#scripting" class="anchor" aria-hidden="true">#</a> </h2>
 

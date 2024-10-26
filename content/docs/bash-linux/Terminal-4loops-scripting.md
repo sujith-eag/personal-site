@@ -1,11 +1,11 @@
 ---
-title: "Terminal - 4 Loops Scripting"
+title: "Bash - 4 Loops Scripting"
 description: ""
 summary: ""
 date: 2024-10-22T09:34:02+05:30
 lastmod: 2024-10-22T09:34:02+05:30
 draft: false
-weight: 40
+weight: 4
 toc: true
 seo:
   title: "" # custom title (optional)
@@ -15,12 +15,12 @@ seo:
 ---
 
 
-***Objectives***    <br />
-Writing a loop that applies to one or more commands separately to each file in a set of files. <br />
-Trace the values taken by a loop variable during the execution of the loop. <br />
-Explain the difference between variable's name and its value. <br />
-Explain why spaces and some punctuation characters should't be used in the file name. <br />
-Demonstrate how to see what commands have recently been executed. <br />
+***Objectives***      
+Writing a loop that applies to one or more commands separately to each file in a set of files.   
+Trace the values taken by a loop variable during the execution of the loop.   
+Explain the difference between variable's name and its value.   
+Explain why spaces and some punctuation characters should't be used in the file name.   
+Demonstrate how to see what commands have recently been executed.   
 Run recently executed commands without retyping them.
 
 
@@ -34,9 +34,9 @@ $ for filename is basilisk.dat minotaur.dat unicorn.dat
 > 	head -n 2 $filename | tail -n 1
 > done
 ```
-`for` indicates the start of for-loop.    <br />
-`do` indicates the start of job execution list. <br />
-`done` indicates the end of a loop. <br />
+`for` indicates the start of for-loop.      
+`do` indicates the start of job execution list.   
+`done` indicates the end of a loop.   
 `$` is used to indicate it as a variable that has to be replaced by its value.
 
 
@@ -93,7 +93,7 @@ $ for alkanes in *.pdb
 > 	cat $alkanes >> alkanes.pdb
 > done
 ```
-prints all  `.pdb`  and appends all into `alkanes.pdb`    <br />
+prints all  `.pdb`  and appends all into `alkanes.pdb`      
 using `>` would have only one value in the file.
 
 
@@ -106,9 +106,9 @@ $ for filename in *.dat
 > 	head -n 100 $filename | tail -n 20
 > done
 ```
-echo all  `.dat`  <br />
-assuming each file has at least 100 lines, <br />
-take the first 100 lines and take the last 20 lines from that.  <br />
+echo all  `.dat`    
+assuming each file has at least 100 lines,   
+take the first 100 lines and take the last 20 lines from that.    
 So gives lines from 81 to 100.
 
 what happens to the lines??
@@ -130,8 +130,8 @@ Enclosing the file with " " around the filename but it should not be around $fil
 ```c
 $ cp *.dat original-*.dat
 ```
-To create a new file with original`-` as prefix.    <br />
-But raises error as the last argument is not a directory and there are multiple files,  <br />
+To create a new file with original`-` as prefix.      
+But raises error as the last argument is not a directory and there are multiple files,    
 When `*.dat`  is expanded.
 
 
@@ -141,7 +141,7 @@ $ for filename in *.dat
 > 	cp $filename original-$filename
 > done
 ```
-Now each of `.dat` file come one by one and in the cp there will be only two files, <br />
+Now each of `.dat` file come one by one and in the cp there will be only two files,   
 so will be copied into the other.
 
 

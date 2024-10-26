@@ -4,7 +4,7 @@ description: ""
 summary: ""
 date: 2024-10-23T15:33:22+05:30
 lastmod: 2024-10-23T15:33:22+05:30
-draft: false
+draft: true
 weight: 10
 toc: true
 seo:

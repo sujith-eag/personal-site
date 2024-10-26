@@ -1,11 +1,11 @@
 ---
-title: "Terminal - 2 Working With Files"
+title: "Bash - 2 Working With Files"
 description: ""
 summary: ""
 date: 2024-10-22T09:33:16+05:30
 lastmod: 2024-10-22T09:33:16+05:30
 draft: false
-weight: 20
+weight: 2
 toc: true
 seo:
   title: "" # custom title (optional)
@@ -17,13 +17,13 @@ seo:
 
 ## Creating Directories
 
-Open where a directory has to be added.   <br />
-`mkdir [name]`  to 'make directory' in the current directory.   <br />
+Open where a directory has to be added.     
+`mkdir [name]`  to 'make directory' in the current directory.     
 	Using relative path without leading slash.
 
-`-p`  for multiple directories    <br />
-`mkdir -p` creates a directory with nested sub-directories in a single operation.   <br />
-`mkdir -p ../project/data ../project/results`.    <br />
+`-p`  for multiple directories      
+`mkdir -p` creates a directory with nested sub-directories in a single operation.     
+`mkdir -p ../project/data ../project/results`.      
 
 `ls -R` to list all nested sub directories within a directories.
 
@@ -56,11 +56,11 @@ mkdir north south pacific
 * Stick with `0-9, a-z . - _`  as other symbols have different meaning.
 * To refer to names with spaces or other special characters, surround the name in single quotes ' '.
 
-***Single Quotes*** -   <br />
+***Single Quotes*** -     
 Enclosing characters in single quotes ' ' preserves the literal value of each character within the quotes.
 
-***Escape Character*** -    <br />
-A non-quoted backslash `\` is the escape character.   <br />
+***Escape Character*** -      
+A non-quoted backslash `\` is the escape character.     
 It preserves the literal value of the next character that follows, with exception of newline.
 
 
@@ -68,31 +68,31 @@ It preserves the literal value of the next character that follows, with exceptio
 
 ### Using nano editor
 
-`nano` text editor is used to create a `txt` file.    <br />
+`nano` text editor is used to create a `txt` file.      
 `nano draft.txt` will open nano text editor, data can be typed and then saved(many more options) commands are accessed by holding down `Ctr`.
 
-`nano` can only work with plain character data, no tables or images.    <br />
+`nano` can only work with plain character data, no tables or images.      
 `nano` can do only this basic operation.
 
 Programmers use `Emacs` or `Vim`.
-Graphical editors such as `Gedit` or `VScode`.    <br />
+Graphical editors such as `Gedit` or `VScode`.      
 On windows there are `Notecode++`.  `notepad` can run like `nano`
 
 
 ### *touch* command
 
-`touch my_file.txt` creates a blank text file.    <br />
+`touch my_file.txt` creates a blank text file.      
 `touch  <name.txt>`  to make a file.
 
 
 ### *rm* for Removing a file
 
-`rm my_file.txt`    file gets removed.      <br />
-`rm -i`  will ask for confirmation before the deletion.     <br />
-`rm` works only on files, not on directories.  `rm thesis`  raises an error.  <br />
+`rm my_file.txt`    file gets removed.        
+`rm -i`  will ask for confirmation before the deletion.       
+`rm` works only on files, not on directories.  `rm thesis`  raises an error.    
 `rm -i thesis/quote.txt` will work after confirmation.
 
-We can remove a directory and all its contents by using the recursive `-r`    <br />
+We can remove a directory and all its contents by using the recursive `-r`      
 `rm -r thesis`   `rm -r -i`
 
 `rm -i *.txt`  removing all `.txt` file in directory with permission needed for each.
@@ -106,13 +106,13 @@ Shell does not have any trash bin so any file deleted is actually deleted.
 
 `mv [old] [new]`  moves or renames a file or directory.
 
-While in directory behind the directory with file.   <br />
+While in directory behind the directory with file.     
 ```c
 $ mv trial/draft.txt  trial/quotes.txt
 ```
-The `draft.txt` file is moved to `quotes.txt`  which is similar to renaming the file.   <br />
+The `draft.txt` file is moved to `quotes.txt`  which is similar to renaming the file.     
 
-While in the same directory   <br />
+While in the same directory     
 ```c
 $ mv draft.txt quotes.txt
 ```
@@ -142,7 +142,7 @@ $ cp quotes.txt thesis/quotation.txt
 # copies file to another directory with different name.
 ```
 
-A directory and all its contents are copied by using recursive option `-r`  <br />
+A directory and all its contents are copied by using recursive option `-r`    
 (like backing up directory)
 ```c
 $ cp -r thesis thesis_backup
@@ -155,7 +155,7 @@ $ cp -r thesis thesis_backup
 
 Copying or moving several files can be done by giving multiple files,
 
-If given more than one file names followed by a directory name(directory as last argument) <br />
+If given more than one file names followed by a directory name(directory as last argument)   
 `cp` copies the files to the named directory
 ```c
 $ mkdir backup
@@ -171,16 +171,16 @@ $ cd minotaur.dat unicorn.dat basilisk.dat
 
 'wildcards' are special characters that can be used to represent unknown characters or sets of characters when navigating the Unix system.
 
-`ethane.pdb   methane.pdb   propane.pdb   pentane.pdb`      <br />
-`*` is a wild card which represents 0 or more characters.   <br />
-`*.pdb`  represents every file that ends with `.pdb`        <br />
-`*ethane.pdb` represents ethane and methane.                <br />
-`p*.pdb` represents files that begin with `p` and has `.pdb`  <br />
+`ethane.pdb   methane.pdb   propane.pdb   pentane.pdb`        
+`*` is a wild card which represents 0 or more characters.     
+`*.pdb`  represents every file that ends with `.pdb`          
+`*ethane.pdb` represents ethane and methane.                  
+`p*.pdb` represents files that begin with `p` and has `.pdb`    
 
-`?` is also a wildcard, but represents exactly one character.   <br />
+`?` is also a wildcard, but represents exactly one character.     
 `?ethane.pdb`  represents only `methane.pdb`
 
-Wild cards can be used in combination with one another.     <br />
+Wild cards can be used in combination with one another.       
 `???ane.pde`   is any three characters followed by `---ane.pde`
 
 ```c

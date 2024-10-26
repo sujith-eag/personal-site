@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/bash-linux/command-docs/bash-commands/</loc>
+      <lastmod>2024-10-22T09:32:39+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/bash-linux/command-docs/cat-concatination/</loc>
+      <lastmod>2024-10-22T09:32:39+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/bash-linux/command-docs/cat-copy/</loc>
+      <lastmod>2024-10-22T09:32:39+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/bash-linux/command-docs/cd-change-directory/</loc>
+      <lastmod>2024-10-22T09:32:39+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/bash-linux/command-docs/cut-with-deliminator/</loc>
+      <lastmod>2024-10-22T09:32:39+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/bash-linux/command-docs/echo/</loc>
+      <lastmod>2024-10-22T09:32:39+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/bash-linux/command-docs/grep/</loc>
+      <lastmod>2024-10-22T09:32:39+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/bash-linux/command-docs/head-tail/</loc>
+      <lastmod>2024-10-22T09:32:39+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/bash-linux/command-docs/la-list/</loc>
+      <lastmod>2024-10-22T09:32:39+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/bash-linux/command-docs/mkdir/</loc>
+      <lastmod>2024-10-22T09:32:39+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/bash-linux/command-docs/mv-move/</loc>
+      <lastmod>2024-10-22T09:32:39+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/bash-linux/command-docs/pwd/</loc>
+      <lastmod>2024-10-22T09:32:39+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/bash-linux/command-docs/rm-remove/</loc>
+      <lastmod>2024-10-22T09:32:39+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/bash-linux/command-docs/sort/</loc>
+      <lastmod>2024-10-22T09:32:39+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/bash-linux/command-docs/touch/</loc>
+      <lastmod>2024-10-22T09:32:39+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/bash-linux/command-docs/uniq/</loc>
+      <lastmod>2024-10-22T09:32:39+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/bash-linux/command-docs/wc-word-count/</loc>
+      <lastmod>2024-10-22T09:32:39+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    </urlset>

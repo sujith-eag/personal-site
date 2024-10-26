@@ -1,0 +1,919 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="/personal-site/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=personal-site/livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preload" href="http://localhost:1313/personal-site/fonts/vendor/jost/jost-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/personal-site/fonts/vendor/jost/jost-v4-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/personal-site/fonts/vendor/jost/jost-v4-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<script 
+  src="/personal-site/js/color-mode.f14b3e296de1d0b69e75af684b62a4a912a2cadab04e36123407cd8388204f1d.js"
+  integrity="sha256-8Us&#43;KW3h0Laeda9oS2KkqRKiytqwTjYSNAfNg4ggTx0=">
+</script>
+
+
+<link rel="stylesheet" href="/personal-site/main.01b0834d5af51b24812d02878d09c8d7677d6b8af13164fb50215889dc19aaefd0e9366c13b45a9a57ae481dfd1836bce46b5ebfe461d56e3498b9443d8c5e27.css" integrity="sha512-AbCDTVr1GySBLQKHjQnI12d9a4rxMWT7UCFYidwZqu/Q6TZsE7RamleuSB39GDa85Gtev&#43;Rh1W40mLlEPYxeJw==" crossorigin="anonymous">
+
+<noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/personal-site/docs/bash-linux/terminal-3-pipes-filters/">
+  <link rel="canonical" href="http://localhost:1313/personal-site/docs/bash-linux/terminal-3-pipes-filters/">
+<title>Terminal - 3 Pipes Filters  |  Sujith&#39;s Library</title>
+<meta name="description" content="A reference site with summary of various coding topics">
+
+    
+    <link rel="icon" href="/personal-site/favicon.ico" sizes="32x32">
+    
+      <link rel="icon" href="/personal-site/favicon.svg" type="image/svg+xml">
+    
+      <link
+        rel="apple-touch-icon"
+        href="/personal-site/personal-site/apple-touch-icon.png"
+        sizes="180x180"
+        type="image/png"
+      >
+      <link
+        rel="icon"
+        href="/personal-site/favicon-192x192.png"
+        sizes="192x192"
+        type="image/png"
+      >
+      <link
+        rel="icon"
+        href="/personal-site/favicon-512x512.png"
+        sizes="512x512"
+        type="image/png"
+      >
+<link rel="manifest" href="/personal-site/manifest.webmanifest">
+
+<meta property="og:title" content="Terminal - 3 Pipes Filters">
+<meta property="og:description" content="Objective
+Linking commands with pipes and filters.
+Combining sequences of commands to get output.
+Redirecting commands output to a file.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://localhost:1313/personal-site/docs/bash-linux/terminal-3-pipes-filters/"><meta property="og:image" content="http://localhost:1313/personal-site/cover.png"><meta property="article:section" content="docs">
+<meta property="article:published_time" content="2024-10-22T09:33:44+05:30">
+<meta property="article:modified_time" content="2024-10-22T09:33:44+05:30"><meta property="og:site_name" content="Sujith&#39;s Notes">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://localhost:1313/personal-site/cover.png"><meta name="twitter:title" content="Terminal - 3 Pipes Filters">
+<meta name="twitter:description" content="Objective
+Linking commands with pipes and filters.
+Combining sequences of commands to get output.
+Redirecting commands output to a file.">
+
+    
+    
+    <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/personal-site/",
+       "name": "Sujith's Library",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/personal-site/docs/",
+       "name": "All Notes Articles",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/personal-site/docs/bash-linux/",
+       "name": "Linux Bash Terminal",
+       "position": 3
+     },
+     {
+       "@type": "ListItem",
+       "name": "Terminal 3 Pipes Filters",
+       "position": 4
+     }
+   ]
+ }
+</script>
+
+
+
+
+
+</head>
+
+  
+  <body class="single section docs" data-bs-spy="scroll" data-bs-target="#toc" data-bs-root-margin="0px 0px -60%" data-bs-smooth-scroll="true" tabindex="0">
+    <div class="sticky-top">
+<header class="navbar navbar-expand-lg">
+  <div class="container-lg">
+  
+    <a class="navbar-brand me-auto me-lg-3" href="/personal-site/">Sujith&#39;s Library</a>
+
+    
+    
+    <button type="button" id="searchToggleMobile" class="btn btn-link nav-link mx-2 d-lg-none" aria-label="Search website">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <circle cx="10" cy="10" r="7"></circle>
+        <line x1="21" y1="21" x2="15" y2="15"></line>
+      </svg>
+    </button>
+    
+    <button class="btn btn-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavSection" aria-controls="offcanvasNavSection" aria-label="Open section navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+      </svg>
+    </button>
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavSection" aria-labelledby="offcanvasNavSectionLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavSectionLabel">Docs</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <aside class="doks-sidebar mt-n3">
+          <nav id="doks-docs-nav" aria-label="Tertiary navigation">
+            
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+      <a href="/personal-site/docs/python/">Python</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/">JavaScript</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>HTML &amp; CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/">HTML</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/">CSS</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open open>
+      <summary>Linux Bash Terminal</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/terminal-1-basics/">Terminal - 1 Basics</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/terminal-2-working-with-files/">Terminal - 2 Working With Files</a>
+  </li>
+
+  <li class="active" >
+      <a aria-current="page" href="/personal-site/docs/bash-linux/terminal-3-pipes-filters/">Terminal - 3 Pipes Filters</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/terminal-4-loops-scripting/">Terminal - 4 Loops Scripting</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/terminal-5-shell-scripting/">Terminal - 5 Shell Scripting</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/terminal-6-searching-wildcards/">Terminal - 6 Searching Wildcards</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Tools &amp; Accesories</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/tools/git-github/">Git Github</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/vscode/">Vscode</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/obsidian/">Obsidian</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/chrome/">Chrome</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Hugo</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/tools/hugo/hugo-1/">Hugo 1</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/hugo/hugo-2/">Hugo 2</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/hugo/hugo-3/">Hugo 3</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/hugo/doks-theme-1/">Doks Theme 1</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/hugo/doks-theme-2/">Doks Theme 2</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/hugo/doks-theme-3/">Doks Theme 3</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+          </nav>
+        </aside>
+      </div>
+    </div>
+    
+    <button class="btn btn-link nav-link mx-2 order-3 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavMain" aria-controls="offcanvasNavMain" aria-label="Open main navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <line x1="4" y1="8" x2="20" y2="8"></line>
+        <line x1="4" y1="16" x2="20" y2="16"></line>
+      </svg>
+    </button>
+
+    
+    <div class="offcanvas offcanvas-end h-auto" tabindex="-1" id="offcanvasNavMain" aria-labelledby="offcanvasNavMainLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavMainLabel">Sujith&#39;s Library</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+         </svg>
+        </button>
+      </div>
+      
+      <div class="offcanvas-body d-flex flex-column flex-lg-row justify-content-between">
+        <ul class="navbar-nav flex-grow-1"><li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/python/">Python</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/java-script/">JavaScript</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/html-css/">HTML/CSS</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/linux-terminal/">Bash</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/tools/">Tools</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/blog/">Blog</a>
+              </li>
+            </ul>
+
+        
+        
+        <button type="button" id="searchToggleDesktop" class="btn btn-link nav-link p-2 d-none d-lg-block" aria-label="Search website">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <circle cx="10" cy="10" r="7"></circle>
+            <line x1="21" y1="21" x2="15" y2="15"></line>
+          </svg>
+        </button>
+        
+        
+        
+        <button id="buttonColorMode" class="btn btn-link mx-auto nav-link p-0 ms-lg-2 me-lg-1" type="button" aria-label="Toggle theme">
+          <svg data-bs-theme-value="dark" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+          </svg>
+          <svg data-bs-theme-value="light" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0m-5 0h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+          </svg>
+        </button>
+        
+        <ul id="socialMenu" class="nav mx-auto flex-row order-lg-4">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/sujith-eag"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg><small class="ms-2 visually-hidden">GitHub</small></a>
+            </li>
+          </ul>
+        
+        </div>
+    </div>
+
+    
+    </div>
+</header>
+</div>
+
+<div class="modal" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-md-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 visually-hidden" id="searchModalLabel">Search</h1>
+        <button type="button" class="btn-close visually-hidden" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="search-input flex-grow-1 d-none">
+          <form id="search-form" class="search-form" action="#" method="post" accept-charset="UTF-8" role="search">
+            <label for="query" class="visually-hidden">Search</label>
+            <div class="d-flex">
+              <input type="search" id="query" name="query" class="search-text form-control form-control-lg" placeholder="Search" aria-label="Search" maxlength="128" autocomplete="off">
+              <button type="button" class="btn btn-link text-decoration-none px-0 ms-3 d-md-none" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-body">
+        <p class="search-loading status message d-none mt-3 text-center">Loading search index…</p>
+        <p class="search-no-recent message d-none mt-3 text-center">No recent searches</p>
+        <p class="search-no-results message d-none mt-3 text-center">No results for "<strong><span class="query-no-results">Query here</span></strong>"</p>
+        <div id="searchResults" class="search-results"></div>
+        <template>
+          <article class="search-result list-view">
+            <div class="card my-3">
+              <div class="card-body">
+                <header>
+                  <h2 class="h5 title title-submitted mb-0"><a class="stretched-link text-decoration-none text-reset" href="#">Title here</a></h2>
+                  <div class="submitted d-none"><time class="created-date">Date here</time></div>
+                </header>
+                <div class="content">Summary here</div>
+              </div>
+            </div>
+          </article>
+        </template>
+      </div>
+      <div class="modal-footer">
+        <ul class="list-inline me-auto d-none d-md-block">
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Enter key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M12 3.53088v3c0 1-1 2-2 2H4M7 11.53088l-3-3 3-3"></path></g></svg></kbd><span class="DocSearch-Label">to select</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow down" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 3.5v8M10.5 8.5l-3 3-3-3"></path></g></svg></kbd><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow up" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 11.5v-8M10.5 6.5l-3-3-3 3"></path></g></svg></kbd><span class="DocSearch-Label">to navigate</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Escape key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M13.6167 8.936c-.1065.3583-.6883.962-1.4875.962-.7993 0-1.653-.9165-1.653-2.1258v-.5678c0-1.2548.7896-2.1016 1.653-2.1016.8634 0 1.3601.4778 1.4875 1.0724M9 6c-.1352-.4735-.7506-.9219-1.46-.8972-.7092.0246-1.344.57-1.344 1.2166s.4198.8812 1.3445.9805C8.465 7.3992 8.968 7.9337 9 8.5c.032.5663-.454 1.398-1.4595 1.398C6.6593 9.898 6 9 5.963 8.4851m-1.4748.5368c-.2635.5941-.8099.876-1.5443.876s-1.7073-.6248-1.7073-2.204v-.4603c0-1.0416.721-2.131 1.7073-2.131.9864 0 1.6425 1.031 1.5443 2.2492h-2.956"></path></g></svg></kbd><span class="DocSearch-Label">to close</span></li>
+        </ul>
+        <p class="d-md-none">Search by <a class="text-decoration-none" href="https://github.com/nextapps-de/flexsearch">FlexSearch</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="wrap container-lg" role="document">
+      <div class="content">
+      
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+      <a href="/personal-site/docs/python/">Python</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/">JavaScript</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>HTML &amp; CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/">HTML</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/">CSS</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open open>
+      <summary>Linux Bash Terminal</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/terminal-1-basics/">Terminal - 1 Basics</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/terminal-2-working-with-files/">Terminal - 2 Working With Files</a>
+  </li>
+
+  <li class="active" >
+      <a aria-current="page" href="/personal-site/docs/bash-linux/terminal-3-pipes-filters/">Terminal - 3 Pipes Filters</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/terminal-4-loops-scripting/">Terminal - 4 Loops Scripting</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/terminal-5-shell-scripting/">Terminal - 5 Shell Scripting</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/terminal-6-searching-wildcards/">Terminal - 6 Searching Wildcards</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Tools &amp; Accesories</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/tools/git-github/">Git Github</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/vscode/">Vscode</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/obsidian/">Obsidian</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/chrome/">Chrome</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Hugo</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/tools/hugo/hugo-1/">Hugo 1</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/hugo/hugo-2/">Hugo 2</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/hugo/hugo-3/">Hugo 3</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/hugo/doks-theme-1/">Doks Theme 1</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/hugo/doks-theme-2/">Doks Theme 2</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/hugo/doks-theme-3/">Doks Theme 3</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+		</div>
+		
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="page-links">
+  <h3>On this page</h3>
+    <nav id="toc">
+  <ul>
+    <li><a href="#word-count">Word count</a></li>
+    <li><a href="#capturing-output-from-commands">Capturing output from commands</a>
+      <ul>
+        <li><a href="#cat-for-concatenation"><em>cat</em> for concatenation.</a></li>
+      </ul>
+    </li>
+    <li><a href="#sort-filtering-output"><em>sort</em> Filtering output</a>
+      <ul>
+        <li><a href="#head-to-get-first-few-lines-in-sorted-file"><em>head</em> to get first few lines in sorted file</a></li>
+        <li><a href="#-for-appending-values-in-file"><em>&raquo;</em> for appending values in file</a></li>
+      </ul>
+    </li>
+    <li><a href="#pipes-for-passing-output-to-another-command"><em>pipes</em> for passing output to another command</a></li>
+    <li><a href="#filters">Filters</a></li>
+    <li><a href="#pipe-construction">Pipe construction</a></li>
+  </ul>
+</nav>
+</div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+			<h1>Terminal - 3 Pipes Filters</h1>
+			
+			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
+				<details>
+    <summary>On this page</summary>
+    <div class="page-links">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#word-count">Word count</a></li>
+    <li><a href="#capturing-output-from-commands">Capturing output from commands</a>
+      <ul>
+        <li><a href="#cat-for-concatenation"><em>cat</em> for concatenation.</a></li>
+      </ul>
+    </li>
+    <li><a href="#sort-filtering-output"><em>sort</em> Filtering output</a>
+      <ul>
+        <li><a href="#head-to-get-first-few-lines-in-sorted-file"><em>head</em> to get first few lines in sorted file</a></li>
+        <li><a href="#-for-appending-values-in-file"><em>&raquo;</em> for appending values in file</a></li>
+      </ul>
+    </li>
+    <li><a href="#pipes-for-passing-output-to-another-command"><em>pipes</em> for passing output to another command</a></li>
+    <li><a href="#filters">Filters</a></li>
+    <li><a href="#pipe-construction">Pipe construction</a></li>
+  </ul>
+</nav>
+    </div>
+  </details>
+
+			</nav>
+			<p><em><strong>Objective</strong></em><br>
+Linking commands with pipes and filters.<br>
+Combining sequences of commands to get output.<br>
+Redirecting commands output to a file.</p>
+<h2 id="word-count">Word count<a href="#word-count" class="anchor" aria-hidden="true">#</a> </h2>
+<p><code>wc</code> gives word count of a file.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ wc cubane.pdb</span></span></code></pre></div>
+  </figure>
+</div>
+<p>gives output <code>(20 156 1158)</code> which is &rsquo;number of lines&rsquo;, &lsquo;words&rsquo; and &lsquo;characters&rsquo; in a file.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ wc *.pdb</span></span></code></pre></div>
+  </figure>
+</div>
+<p>returns word count of all <code>.pdb</code> files individually and also total.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wc -l   <span class="c1"># shows only the number of lines per file</span>
+</span></span><span class="line"><span class="cl">wc -m   <span class="c1"># shows number of characters only</span>
+</span></span><span class="line"><span class="cl">wc -w  <span class="c1"># shows number of words only</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p><code>$ wc -l</code> which doesn&rsquo;t have any filename, so it assumes the input will come from the command prompt so it will keep waiting for input without doing anything.</p>
+<p><code>Ctrl + C</code> can be used to come out of such mistakes.</p>
+<h2 id="capturing-output-from-commands">Capturing output from commands<a href="#capturing-output-from-commands" class="anchor" aria-hidden="true">#</a> </h2>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ wc -l *.pdb &gt; lengths.txt</span></span></code></pre></div>
+  </figure>
+</div>
+<p>reads all <code>.pbs</code> lines in directory.<br>
+The <code>&gt;</code> symbol redirect&rsquo;s the command&rsquo;s output to a file called <code>lengths.txt</code>.<br>
+It will create it if doesn&rsquo;t exist or replaces if it does. so caution.</p>
+<p><em>echo</em> command to print strings.</p>
+<h3 id="cat-for-concatenation"><em>cat</em> for concatenation.<a href="#cat-for-concatenation" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Joins together and prints all the contents of the file one after the other.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ cat lengths.txt</span></span></code></pre></div>
+  </figure>
+</div>
+<p>Disadvantage of <code>cat</code> is it always dumps the whole file onto the screen.<br>
+Using <code>less</code> is more safe approach in practice.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ less lengths.pbd</span></span></code></pre></div>
+  </figure>
+</div>
+<p>This displays only screen full of the file and stops.<br>
+<code>b</code> and <code>space</code> can be used to go for next page, <code>q</code> for quit.</p>
+<h2 id="sort-filtering-output"><em>sort</em> Filtering output<a href="#sort-filtering-output" class="anchor" aria-hidden="true">#</a> </h2>
+<p>Will do alphanumerical sort by default</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sort -n   <span class="c1"># for numerical sort</span>
+</span></span><span class="line"><span class="cl">sort -r   <span class="c1"># sorts in reverse order</span></span></span></code></pre></div>
+  </figure>
+</div>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sort -n lengths.txt
+</span></span><span class="line"><span class="cl"><span class="c1"># this does not change the file, just sends results to screen</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Shifting sorted results to new file</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sort -n lengths.txt &gt; sorted-lengths.txt</span></span></code></pre></div>
+  </figure>
+</div>
+<h3 id="head-to-get-first-few-lines-in-sorted-file"><em>head</em> to get first few lines in sorted file<a href="#head-to-get-first-few-lines-in-sorted-file" class="anchor" aria-hidden="true">#</a> </h3>
+<p>By default head and tail create the first 10 lines of its input.<br>
+<code>$ head -n 1 sorted-lengths.txt</code>   gives the first line of the file.<br>
+<code>head -n 20</code> would give the first 20 lines.<br>
+<code>tail -n 2</code> gives the last 2 lines.</p>
+<h3 id="-for-appending-values-in-file"><em>&raquo;</em> for appending values in file<a href="#-for-appending-values-in-file" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Redirecting results to the same file is not good, causes errors or deletes the file.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sort -n lengths.txt &gt; lengths.txt</span></span></code></pre></div>
+  </figure>
+</div>
+<p><code>&gt;</code>  creates and recreates the same file,<br>
+<code>&gt;&gt;</code> appends the values sequentially again and again like append, so can be run multiple times to enter into a file.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ head -n <span class="m">3</span> animal.csv &gt; animals-subset.csv
+</span></span><span class="line"><span class="cl"><span class="c1"># creates the file for first value.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ tail -n <span class="m">2</span> animals.csv &gt;&gt; animals-subsets.csv
+</span></span><span class="line"><span class="cl"><span class="c1"># appends the second value.</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h2 id="pipes-for-passing-output-to-another-command"><em>pipes</em> for passing output to another command<a href="#pipes-for-passing-output-to-another-command" class="anchor" aria-hidden="true">#</a> </h2>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sort -n lengths.txt <span class="p">|</span> head -n <span class="m">1</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>The <code>|</code> vector bar between the two commands is called the <em><strong>pipe</strong></em>.<br>
+It tells the shell that we want to use the output of the command on the left as input to the command on the right.</p>
+<p>Piping removes the need for other files to hold values.</p>
+<p>we can pass <code>wc</code> values directly to <code>sort</code> and then send resulting output to <code>head</code>.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ wc -l *.pdb <span class="p">|</span> sort -n <span class="p">|</span> head -n <span class="m">1</span>
+</span></span><span class="line"><span class="cl">gives the first element which is the shortest.</span></span></code></pre></div>
+  </figure>
+</div>
+<h2 id="filters">Filters<a href="#filters" class="anchor" aria-hidden="true">#</a> </h2>
+<p>A filter is a program like <code>wc</code> and <code>sort</code> that transforms a stream of input into a stream output.<br>
+All standard Unix tools work like this, they read from standard input, do something with what they have read and write to standard output.<br>
+This programming model is called <code>pipes and filters</code></p>
+<h2 id="pipe-construction">Pipe construction<a href="#pipe-construction" class="anchor" aria-hidden="true">#</a> </h2>
+<p><code>cut</code> command is used to <em><strong>remove</strong></em> or <em><strong>cut out</strong></em> certain section of each line in the file.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ cut -d , -f <span class="m">2</span> animals.csv</span></span></code></pre></div>
+  </figure>
+</div>
+<p><code>cut</code> expects the lines to be separated into columns by a <code>tab</code> character,<br>
+these are called <strong>delimiter</strong>.<br>
+Here <code>-d ,</code> is used as <code>delimiter</code> character.</p>
+<p><code>-f</code> option specifies that we want to extract the second field (column).</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ cut -d , -f <span class="m">2</span> animals.csv <span class="p">|</span> sort <span class="p">|</span> uniq</span></span></code></pre></div>
+  </figure>
+</div>
+<p>removing the duplicates using <code>uniq</code></p>
+<p><code>uniq -c</code> option gives the count of the number of times a line occurs in its input.</p>
+<hr>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nb">cd</span> nart-pacific-gyre
+</span></span><span class="line"><span class="cl">    <span class="c1"># move into directory</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ wc -l *.txt
+</span></span><span class="line"><span class="cl">    <span class="c1"># get the word count of all `txt` files.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ wc -l *.txt <span class="p">|</span> sort -n <span class="p">|</span> head -n <span class="m">5</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># checking the first five.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ wc -l *.txt <span class="p">|</span> sort -n <span class="p">|</span> tail -n <span class="m">5</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># checking the last five, can be reversed if needed.</span></span></span></code></pre></div>
+  </figure>
+</div>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="page-nav d-flex flex-column flex-sm-row">
+	
+	<div class="card w-100">
+			<div class="card-body d-flex">
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M5 12l6 6"></path>
+						<path d="M5 12l6 -6"></path>
+				 	</svg>
+				</div>
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Prev</div>
+					<a href="/personal-site/docs/tools/hugo/hugo-3/" class="stretched-link text-reset text-decoration-none">Hugo 3</a>
+				</div>
+			</div>
+		</div>
+	<div class="m-2"></div>
+	<div class="card text-end w-100">
+			<div class="card-body d-flex justify-content-end">
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Next</div>
+					<a href="/personal-site/docs/tools/hugo/doks-theme-1/" class="stretched-link text-reset text-decoration-none">Doks Theme 1</a>
+				</div>
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M13 18l6 -6"></path>
+						<path d="M13 6l6 6"></path>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</div>
+
+			
+		</main>
+		
+	</div>
+
+      
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-lg">
+    <div class="row">
+      <div class="col-lg-8 text-center text-lg-start">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a class="text-muted" href="/personal-site/privacy/">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 text-center text-lg-end">
+        <ul class="list-inline">
+          <li class="list-inline-item">Made by <a class="text-muted" href="https://sujith-eag.github.io/personal-site/">Sujith</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+<script async
+  src="/personal-site/js/app.4ca3b61e3452c943f4197457251b3551cb46579ecf58e675999fbc96411dcb0d.js"
+  integrity="sha256-TKO2HjRSyUP0GXRXJRs1UctGV57PWOZ1mZ&#43;8lkEdyw0=">
+</script>
+
+
+
+
+
+<script async
+  src="/personal-site/js/flexsearch.be33aab3067e96554f261851c25a593228b91154cd28ff5c7f8d52b2e7f306d2.js"
+  integrity="sha256-vjOqswZ&#43;llVPJhhRwlpZMii5EVTNKP9cf41SsufzBtI=">
+</script>
+<script async
+  src="/personal-site/js/search-modal.97d606e77f08deeb37876860d99c8f6813ef29263e73b6435c252de6be98d55e.js"
+  integrity="sha256-l9YG538I3us3h2hg2ZyPaBPvKSY&#43;c7ZDXCUt5r6Y1V4=">
+</script>
+
+    
+  </body>
+</html>

@@ -1,5 +1,5 @@
 ---
-title: "Linux Bash Terminal"
+title: "Bash - Linux Terminal"
 description: ""
 summary: "Reference points of Linux Bash scripting"
 date: 2024-10-22T09:31:50+05:30

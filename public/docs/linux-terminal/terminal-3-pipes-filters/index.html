@@ -45,9 +45,9 @@
 <link rel="manifest" href="/personal-site/manifest.webmanifest">
 
 <meta property="og:title" content="Terminal - 3 Pipes Filters">
-<meta property="og:description" content="Objective  
-Linking commands with pipes and filters.    
-Combining sequences of commands to get output.  
+<meta property="og:description" content="Objective
+Linking commands with pipes and filters.
+Combining sequences of commands to get output.
 Redirecting commands output to a file.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://localhost:1313/personal-site/docs/linux-terminal/terminal-3-pipes-filters/"><meta property="og:image" content="http://localhost:1313/personal-site/cover.png"><meta property="article:section" content="docs">
@@ -56,9 +56,9 @@ Redirecting commands output to a file.">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://localhost:1313/personal-site/cover.png"><meta name="twitter:title" content="Terminal - 3 Pipes Filters">
-<meta name="twitter:description" content="Objective  
-Linking commands with pipes and filters.    
-Combining sequences of commands to get output.  
+<meta name="twitter:description" content="Objective
+Linking commands with pipes and filters.
+Combining sequences of commands to get output.
 Redirecting commands output to a file.">
 
     
@@ -581,9 +581,9 @@ Redirecting commands output to a file.">
   </details>
 
 			</nav>
-			<p><em><strong>Objective</strong></em>  <br />
-Linking commands with pipes and filters.    <br />
-Combining sequences of commands to get output.  <br />
+			<p><em><strong>Objective</strong></em><br>
+Linking commands with pipes and filters.<br>
+Combining sequences of commands to get output.<br>
 Redirecting commands output to a file.</p>
 <h2 id="word-count">Word count<a href="#word-count" class="anchor" aria-hidden="true">#</a> </h2>
 <p><code>wc</code> gives word count of a file.</p>
@@ -598,7 +598,7 @@ Redirecting commands output to a file.</p>
   <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ wc cubane.pdb</span></span></code></pre></div>
   </figure>
 </div>
-<p>gives output <code>(20 156 1158)</code> which is &rsquo;number of lines&rsquo;, &lsquo;words&rsquo; and &lsquo;characters&rsquo; in a file.    <br /></p>
+<p>gives output <code>(20 156 1158)</code> which is &rsquo;number of lines&rsquo;, &lsquo;words&rsquo; and &lsquo;characters&rsquo; in a file.</p>
 
 
 
@@ -638,8 +638,8 @@ Redirecting commands output to a file.</p>
   <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ wc -l *.pdb &gt; lengths.txt</span></span></code></pre></div>
   </figure>
 </div>
-<p>reads all <code>.pbs</code> lines in directory.    <br />
-The <code>&gt;</code> symbol redirect&rsquo;s the command&rsquo;s output to a file called <code>lengths.txt</code>.  <br />
+<p>reads all <code>.pbs</code> lines in directory.<br>
+The <code>&gt;</code> symbol redirect&rsquo;s the command&rsquo;s output to a file called <code>lengths.txt</code>.<br>
 It will create it if doesn&rsquo;t exist or replaces if it does. so caution.</p>
 <p><em>echo</em> command to print strings.</p>
 <h3 id="cat-for-concatenation"><em>cat</em> for concatenation.<a href="#cat-for-concatenation" class="anchor" aria-hidden="true">#</a> </h3>
@@ -655,7 +655,7 @@ It will create it if doesn&rsquo;t exist or replaces if it does. so caution.</p>
   <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ cat lengths.txt</span></span></code></pre></div>
   </figure>
 </div>
-<p>Disadvantage of <code>cat</code> is it always dumps the whole file onto the screen.  <br />
+<p>Disadvantage of <code>cat</code> is it always dumps the whole file onto the screen.<br>
 Using <code>less</code> is more safe approach in practice.</p>
 
 
@@ -668,7 +668,7 @@ Using <code>less</code> is more safe approach in practice.</p>
   <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ less lengths.pbd</span></span></code></pre></div>
   </figure>
 </div>
-<p>This displays only screen full of the file and stops.     <br />
+<p>This displays only screen full of the file and stops.<br>
 <code>b</code> and <code>space</code> can be used to go for next page, <code>q</code> for quit.</p>
 <h2 id="sort-filtering-output"><em>sort</em> Filtering output<a href="#sort-filtering-output" class="anchor" aria-hidden="true">#</a> </h2>
 <p>Will do alphanumerical sort by default</p>
@@ -709,10 +709,10 @@ Using <code>less</code> is more safe approach in practice.</p>
   </figure>
 </div>
 <h3 id="head-to-get-first-few-lines-in-sorted-file"><em>head</em> to get first few lines in sorted file<a href="#head-to-get-first-few-lines-in-sorted-file" class="anchor" aria-hidden="true">#</a> </h3>
-<p>By default head and tail create the first 10 lines of its input.      <br />
-<code>$ head -n 1 sorted-lengths.txt</code>   gives the first line of the file.  <br />
-<code>head -n 20</code> would give the first 20 lines.                           <br />
-<code>tail -n 2</code> gives the last 2 lines.                 <br /></p>
+<p>By default head and tail create the first 10 lines of its input.<br>
+<code>$ head -n 1 sorted-lengths.txt</code>   gives the first line of the file.<br>
+<code>head -n 20</code> would give the first 20 lines.<br>
+<code>tail -n 2</code> gives the last 2 lines.</p>
 <h3 id="-for-appending-values-in-file"><em>&raquo;</em> for appending values in file<a href="#-for-appending-values-in-file" class="anchor" aria-hidden="true">#</a> </h3>
 <p>Redirecting results to the same file is not good, causes errors or deletes the file.</p>
 
@@ -726,7 +726,7 @@ Using <code>less</code> is more safe approach in practice.</p>
   <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sort -n lengths.txt &gt; lengths.txt</span></span></code></pre></div>
   </figure>
 </div>
-<p><code>&gt;</code>  creates and recreates the same file,   <br />
+<p><code>&gt;</code>  creates and recreates the same file,<br>
 <code>&gt;&gt;</code> appends the values sequentially again and again like append, so can be run multiple times to enter into a file.</p>
 
 
@@ -755,7 +755,7 @@ Using <code>less</code> is more safe approach in practice.</p>
   <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sort -n lengths.txt <span class="p">|</span> head -n <span class="m">1</span></span></span></code></pre></div>
   </figure>
 </div>
-<p>The <code>|</code> vector bar between the two commands is called the <em><strong>pipe</strong></em>.   <br />
+<p>The <code>|</code> vector bar between the two commands is called the <em><strong>pipe</strong></em>.<br>
 It tells the shell that we want to use the output of the command on the left as input to the command on the right.</p>
 <p>Piping removes the need for other files to hold values.</p>
 <p>we can pass <code>wc</code> values directly to <code>sort</code> and then send resulting output to <code>head</code>.</p>
@@ -772,8 +772,8 @@ It tells the shell that we want to use the output of the command on the left as 
   </figure>
 </div>
 <h2 id="filters">Filters<a href="#filters" class="anchor" aria-hidden="true">#</a> </h2>
-<p>A filter is a program like <code>wc</code> and <code>sort</code> that transforms a stream of input into a stream output.    <br />
-All standard Unix tools work like this, they read from standard input, do something with what they have read and write to standard output.    <br />
+<p>A filter is a program like <code>wc</code> and <code>sort</code> that transforms a stream of input into a stream output.<br>
+All standard Unix tools work like this, they read from standard input, do something with what they have read and write to standard output.<br>
 This programming model is called <code>pipes and filters</code></p>
 <h2 id="pipe-construction">Pipe construction<a href="#pipe-construction" class="anchor" aria-hidden="true">#</a> </h2>
 <p><code>cut</code> command is used to <em><strong>remove</strong></em> or <em><strong>cut out</strong></em> certain section of each line in the file.</p>
@@ -788,8 +788,8 @@ This programming model is called <code>pipes and filters</code></p>
   <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ cut -d , -f <span class="m">2</span> animals.csv</span></span></code></pre></div>
   </figure>
 </div>
-<p><code>cut</code> expects the lines to be separated into columns by a <code>tab</code> character, <br />
-these are called <strong>delimiter</strong>.     <br />
+<p><code>cut</code> expects the lines to be separated into columns by a <code>tab</code> character,<br>
+these are called <strong>delimiter</strong>.<br>
 Here <code>-d ,</code> is used as <code>delimiter</code> character.</p>
 <p><code>-f</code> option specifies that we want to extract the second field (column).</p>
 

@@ -46,8 +46,8 @@
 
 <meta property="og:title" content="Terminal - 2 Working With Files">
 <meta property="og:description" content="Creating Directories
-Open where a directory has to be added.   
-mkdir [name]  to &lsquo;make directory&rsquo; in the current directory.   
+Open where a directory has to be added.
+mkdir [name]  to &lsquo;make directory&rsquo; in the current directory.
 Using relative path without leading slash.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://localhost:1313/personal-site/docs/linux-terminal/terminal-2-working-with-files/"><meta property="og:image" content="http://localhost:1313/personal-site/cover.png"><meta property="article:section" content="docs">
@@ -57,8 +57,8 @@ Using relative path without leading slash.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://localhost:1313/personal-site/cover.png"><meta name="twitter:title" content="Terminal - 2 Working With Files">
 <meta name="twitter:description" content="Creating Directories
-Open where a directory has to be added.   
-mkdir [name]  to &lsquo;make directory&rsquo; in the current directory.   
+Open where a directory has to be added.
+mkdir [name]  to &lsquo;make directory&rsquo; in the current directory.
 Using relative path without leading slash.">
 
     
@@ -594,12 +594,12 @@ Using relative path without leading slash.">
 
 			</nav>
 			<h2 id="creating-directories">Creating Directories<a href="#creating-directories" class="anchor" aria-hidden="true">#</a> </h2>
-<p>Open where a directory has to be added.   <br />
-<code>mkdir [name]</code>  to &lsquo;make directory&rsquo; in the current directory.   <br />
+<p>Open where a directory has to be added.<br>
+<code>mkdir [name]</code>  to &lsquo;make directory&rsquo; in the current directory.<br>
 Using relative path without leading slash.</p>
-<p><code>-p</code>  for multiple directories    <br />
-<code>mkdir -p</code> creates a directory with nested sub-directories in a single operation.   <br />
-<code>mkdir -p ../project/data ../project/results</code>.    <br /></p>
+<p><code>-p</code>  for multiple directories<br>
+<code>mkdir -p</code> creates a directory with nested sub-directories in a single operation.<br>
+<code>mkdir -p ../project/data ../project/results</code>.</p>
 <p><code>ls -R</code> to list all nested sub directories within a directories.</p>
 <p>To make a directory <code>2016</code> which has <code>data</code> and that has 2 directory <code>processed</code> and <code>raw</code></p>
 
@@ -634,36 +634,36 @@ Using relative path without leading slash.</p>
 <li>Stick with <code>0-9, a-z . - _</code>  as other symbols have different meaning.</li>
 <li>To refer to names with spaces or other special characters, surround the name in single quotes &rsquo; &lsquo;.</li>
 </ul>
-<p><em><strong>Single Quotes</strong></em> -   <br />
+<p><em><strong>Single Quotes</strong></em> -<br>
 Enclosing characters in single quotes &rsquo; &rsquo; preserves the literal value of each character within the quotes.</p>
-<p><em><strong>Escape Character</strong></em> -    <br />
-A non-quoted backslash <code>\</code> is the escape character.   <br />
+<p><em><strong>Escape Character</strong></em> -<br>
+A non-quoted backslash <code>\</code> is the escape character.<br>
 It preserves the literal value of the next character that follows, with exception of newline.</p>
 <h2 id="create-a-text-file">Create a text file<a href="#create-a-text-file" class="anchor" aria-hidden="true">#</a> </h2>
 <h3 id="using-nano-editor">Using nano editor<a href="#using-nano-editor" class="anchor" aria-hidden="true">#</a> </h3>
-<p><code>nano</code> text editor is used to create a <code>txt</code> file.    <br />
+<p><code>nano</code> text editor is used to create a <code>txt</code> file.<br>
 <code>nano draft.txt</code> will open nano text editor, data can be typed and then saved(many more options) commands are accessed by holding down <code>Ctr</code>.</p>
-<p><code>nano</code> can only work with plain character data, no tables or images.    <br />
+<p><code>nano</code> can only work with plain character data, no tables or images.<br>
 <code>nano</code> can do only this basic operation.</p>
 <p>Programmers use <code>Emacs</code> or <code>Vim</code>.
-Graphical editors such as <code>Gedit</code> or <code>VScode</code>.    <br />
+Graphical editors such as <code>Gedit</code> or <code>VScode</code>.<br>
 On windows there are <code>Notecode++</code>.  <code>notepad</code> can run like <code>nano</code></p>
 <h3 id="touch-command"><em>touch</em> command<a href="#touch-command" class="anchor" aria-hidden="true">#</a> </h3>
-<p><code>touch my_file.txt</code> creates a blank text file.    <br />
+<p><code>touch my_file.txt</code> creates a blank text file.<br>
 <code>touch  &lt;name.txt&gt;</code>  to make a file.</p>
 <h3 id="rm-for-removing-a-file"><em>rm</em> for Removing a file<a href="#rm-for-removing-a-file" class="anchor" aria-hidden="true">#</a> </h3>
-<p><code>rm my_file.txt</code>    file gets removed.      <br />
-<code>rm -i</code>  will ask for confirmation before the deletion.     <br />
-<code>rm</code> works only on files, not on directories.  <code>rm thesis</code>  raises an error.  <br />
+<p><code>rm my_file.txt</code>    file gets removed.<br>
+<code>rm -i</code>  will ask for confirmation before the deletion.<br>
+<code>rm</code> works only on files, not on directories.  <code>rm thesis</code>  raises an error.<br>
 <code>rm -i thesis/quote.txt</code> will work after confirmation.</p>
-<p>We can remove a directory and all its contents by using the recursive <code>-r</code>    <br />
+<p>We can remove a directory and all its contents by using the recursive <code>-r</code><br>
 <code>rm -r thesis</code>   <code>rm -r -i</code></p>
 <p><code>rm -i *.txt</code>  removing all <code>.txt</code> file in directory with permission needed for each.</p>
 <p>Shell does not have any trash bin so any file deleted is actually deleted.</p>
 <h2 id="moving-files-and-directories">Moving files and directories<a href="#moving-files-and-directories" class="anchor" aria-hidden="true">#</a> </h2>
 <h3 id="renaming-by-moving-a-file-to-new-name">Renaming by moving a file to new name!!<a href="#renaming-by-moving-a-file-to-new-name" class="anchor" aria-hidden="true">#</a> </h3>
 <p><code>mv [old] [new]</code>  moves or renames a file or directory.</p>
-<p>While in directory behind the directory with file.   <br /></p>
+<p>While in directory behind the directory with file.</p>
 
 
 
@@ -675,8 +675,8 @@ On windows there are <code>Notecode++</code>.  <code>notepad</code> can run like
   <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="err">$</span> <span class="n">mv</span> <span class="n">trial</span><span class="o">/</span><span class="n">draft</span><span class="p">.</span><span class="n">txt</span>  <span class="n">trial</span><span class="o">/</span><span class="n">quotes</span><span class="p">.</span><span class="n">txt</span></span></span></code></pre></div>
   </figure>
 </div>
-<p>The <code>draft.txt</code> file is moved to <code>quotes.txt</code>  which is similar to renaming the file.   <br /></p>
-<p>While in the same directory   <br /></p>
+<p>The <code>draft.txt</code> file is moved to <code>quotes.txt</code>  which is similar to renaming the file.</p>
+<p>While in the same directory</p>
 
 
 
@@ -723,7 +723,7 @@ An additional option, <code>mv -i</code> <code>mv --interactive</code> will caus
 </span></span><span class="line"><span class="cl"><span class="cp"># copies file to another directory with different name.</span></span></span></code></pre></div>
   </figure>
 </div>
-<p>A directory and all its contents are copied by using recursive option <code>-r</code>  <br />
+<p>A directory and all its contents are copied by using recursive option <code>-r</code><br>
 (like backing up directory)</p>
 
 
@@ -739,7 +739,7 @@ An additional option, <code>mv -i</code> <code>mv --interactive</code> will caus
 <p><code>-r</code> is used to copy the directory, if it is not included, the directory will be omitted.</p>
 <h2 id="operation-with-multiple-files-and-directories">Operation with multiple files and directories<a href="#operation-with-multiple-files-and-directories" class="anchor" aria-hidden="true">#</a> </h2>
 <p>Copying or moving several files can be done by giving multiple files,</p>
-<p>If given more than one file names followed by a directory name(directory as last argument) <br />
+<p>If given more than one file names followed by a directory name(directory as last argument)<br>
 <code>cp</code> copies the files to the named directory</p>
 
 
@@ -759,14 +759,14 @@ An additional option, <code>mv -i</code> <code>mv --interactive</code> will caus
 </div>
 <h2 id="wild-cards">Wild Cards<a href="#wild-cards" class="anchor" aria-hidden="true">#</a> </h2>
 <p>&lsquo;wildcards&rsquo; are special characters that can be used to represent unknown characters or sets of characters when navigating the Unix system.</p>
-<p><code>ethane.pdb   methane.pdb   propane.pdb   pentane.pdb</code>      <br />
-<code>*</code> is a wild card which represents 0 or more characters.   <br />
-<code>*.pdb</code>  represents every file that ends with <code>.pdb</code>        <br />
-<code>*ethane.pdb</code> represents ethane and methane.                <br />
-<code>p*.pdb</code> represents files that begin with <code>p</code> and has <code>.pdb</code>  <br /></p>
-<p><code>?</code> is also a wildcard, but represents exactly one character.   <br />
+<p><code>ethane.pdb   methane.pdb   propane.pdb   pentane.pdb</code><br>
+<code>*</code> is a wild card which represents 0 or more characters.<br>
+<code>*.pdb</code>  represents every file that ends with <code>.pdb</code><br>
+<code>*ethane.pdb</code> represents ethane and methane.<br>
+<code>p*.pdb</code> represents files that begin with <code>p</code> and has <code>.pdb</code></p>
+<p><code>?</code> is also a wildcard, but represents exactly one character.<br>
 <code>?ethane.pdb</code>  represents only <code>methane.pdb</code></p>
-<p>Wild cards can be used in combination with one another.     <br />
+<p>Wild cards can be used in combination with one another.<br>
 <code>???ane.pde</code>   is any three characters followed by <code>---ane.pde</code></p>
 
 

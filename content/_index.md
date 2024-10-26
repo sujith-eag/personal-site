@@ -6,8 +6,8 @@ date: 2024-10-07T16:33:54+02:00
 lastmod: 2024-10-07T16:33:54+02:00
 draft: false
 seo:
-  title: "Notes reference Library" # custom title (optional)
-  description: "" # custom description (recommended)
+  title: "Sujith's Library" # custom title (optional)
+  description: "A reference guide to all the previous studies and projects" # custom description (recommended)
   canonical: "" # custom canonical URL (optional)
   robots: "" # custom robot tags (optional)
 ---

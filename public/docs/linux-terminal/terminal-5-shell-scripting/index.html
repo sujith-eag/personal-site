@@ -45,10 +45,10 @@
 <link rel="manifest" href="/personal-site/manifest.webmanifest">
 
 <meta property="og:title" content="Terminal - 5 Shell Scripting">
-<meta property="og:description" content="Objective     
-Shell script that runs a command or a series of commands for a fixed set of files.    
-Run a shell script from the command line.   
-Using a shell script that operates on a set of fines defines by the user on the command line.   
+<meta property="og:description" content="Objective
+Shell script that runs a command or a series of commands for a fixed set of files.
+Run a shell script from the command line.
+Using a shell script that operates on a set of fines defines by the user on the command line.
 Creating a pipeline that included shell scripts.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://localhost:1313/personal-site/docs/linux-terminal/terminal-5-shell-scripting/"><meta property="og:image" content="http://localhost:1313/personal-site/cover.png"><meta property="article:section" content="docs">
@@ -57,10 +57,10 @@ Creating a pipeline that included shell scripts.">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://localhost:1313/personal-site/cover.png"><meta name="twitter:title" content="Terminal - 5 Shell Scripting">
-<meta name="twitter:description" content="Objective     
-Shell script that runs a command or a series of commands for a fixed set of files.    
-Run a shell script from the command line.   
-Using a shell script that operates on a set of fines defines by the user on the command line.   
+<meta name="twitter:description" content="Objective
+Shell script that runs a command or a series of commands for a fixed set of files.
+Run a shell script from the command line.
+Using a shell script that operates on a set of fines defines by the user on the command line.
 Creating a pipeline that included shell scripts.">
 
     
@@ -567,13 +567,13 @@ Creating a pipeline that included shell scripts.">
   </details>
 
 			</nav>
-			<p><em><strong>Objective</strong></em>     <br />
-Shell script that runs a command or a series of commands for a fixed set of files.    <br />
-Run a shell script from the command line.   <br />
-Using a shell script that operates on a set of fines defines by the user on the command line.   <br />
+			<p><em><strong>Objective</strong></em><br>
+Shell script that runs a command or a series of commands for a fixed set of files.<br>
+Run a shell script from the command line.<br>
+Using a shell script that operates on a set of fines defines by the user on the command line.<br>
 Creating a pipeline that included shell scripts.</p>
 <h2 id="shell-script">Shell Script<a href="#shell-script" class="anchor" aria-hidden="true">#</a> </h2>
-<p>We are going to take the commands we have repeat frequently and save them in files so that we can re-run all those operations again later by typing a single command.   <br />
+<p>We are going to take the commands we have repeat frequently and save them in files so that we can re-run all those operations again later by typing a single command.<br>
 So <em><strong>Shell Scripts</strong></em> are actually small programs.</p>
 
 
@@ -592,7 +592,7 @@ So <em><strong>Shell Scripts</strong></em> are actually small programs.</p>
   </figure>
 </div>
 <p>This collects the lines 11-15 of the file <code>octane.pdb</code></p>
-<p>Once the file is saved in the directory, we can ask the shell(bash) to execute it.    <br />
+<p>Once the file is saved in the directory, we can ask the shell(bash) to execute it.<br>
 <em><strong>bash [filename]</strong></em> runs the commands saved in a file.</p>
 
 
@@ -618,7 +618,7 @@ Which means the first file name(or other argument) on the command line.</p>
   <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">head</span> <span class="o">-</span><span class="n">n</span> <span class="mi">15</span> <span class="s">&#34;$1&#34;</span> <span class="o">|</span> <span class="n">tail</span> <span class="o">-</span><span class="n">n</span> <span class="mi">5</span></span></span></code></pre></div>
   </figure>
 </div>
-<p>In case filename happens to contain space, <code>$1</code> is put in <code>&quot;&quot;</code> quotes.    <br />
+<p>In case filename happens to contain space, <code>$1</code> is put in <code>&quot;&quot;</code> quotes.<br>
 Now we can provide different arguments to the script.</p>
 
 
@@ -632,8 +632,8 @@ Now we can provide different arguments to the script.</p>
 </span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">bash</span> <span class="n">middle</span><span class="p">.</span><span class="n">sh</span> <span class="n">pentane</span><span class="p">.</span><span class="n">pdb</span></span></span></code></pre></div>
   </figure>
 </div>
-<p>The text editors <code>ms word, libreoffice</code> are not just basic text editors, the files are <code>.docx</code>.   <br />
-The files also contain also contain formatting information about fonts, headings etc.     <br />
+<p>The text editors <code>ms word, libreoffice</code> are not just basic text editors, the files are <code>.docx</code>.<br>
+The files also contain also contain formatting information about fonts, headings etc.<br>
 Commands like head expect only character to be provided so it is better to save script files using plain text editor as plain text.</p>
 <p>To make sure the numbers for head and tail can be altered by arguments, they can also be taken as <code>$1 $2 $3</code> in <code>middle.sh</code>.</p>
 
@@ -680,10 +680,10 @@ Commands like head expect only character to be provided so it is better to save 
   <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="err">$</span> <span class="n">wc</span> <span class="o">-</span><span class="n">l</span> <span class="o">*</span><span class="p">.</span><span class="n">pdb</span> <span class="o">|</span> <span class="n">sort</span> <span class="o">-</span><span class="n">n</span></span></span></code></pre></div>
   </figure>
 </div>
-<p>Used to sort based on number of lines in the <code>.pdb</code> files,      <br />
+<p>Used to sort based on number of lines in the <code>.pdb</code> files,<br>
 but it only sorts <code>.pdb</code> files and <code>sort -n</code> only sorts numerically.</p>
-<p>We can use <code>$1 $2</code> but we might not know how many files there are.    <br />
-Instead we can use <code>$@</code> which means <em><strong>All of the command-line arguments to the shell script</strong></em>.    <br />
+<p>We can use <code>$1 $2</code> but we might not know how many files there are.<br>
+Instead we can use <code>$@</code> which means <em><strong>All of the command-line arguments to the shell script</strong></em>.<br>
 We should also put it in double quotes to handle spaces in argument <code>&quot;$@&quot;</code></p>
 
 
@@ -704,8 +704,8 @@ We should also put it in double quotes to handle spaces in argument <code>&quot;
   </figure>
 </div>
 <h3 id="for-sorting-unique">For sorting unique<a href="#for-sorting-unique" class="anchor" aria-hidden="true">#</a> </h3>
-<p>Script to find unique species in <code>scv</code> files where species is the second data field.    <br />
-This script accepts any number of file names as a command line arguments.   <br />
+<p>Script to find unique species in <code>scv</code> files where species is the second data field.<br>
+This script accepts any number of file names as a command line arguments.<br>
 Loops over all files</p>
 
 

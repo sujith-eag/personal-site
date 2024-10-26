@@ -45,10 +45,10 @@
 <link rel="manifest" href="/personal-site/manifest.webmanifest">
 
 <meta property="og:title" content="Terminal - 6 Searching Wildcards">
-<meta property="og:description" content="Overview      
-Use grep to select lines from text files that match simple patterns.          
-Use find to find files and directories whose names match simple patterns.     
-Use the output of one command as the command-line argument to another command.  
+<meta property="og:description" content="Overview
+Use grep to select lines from text files that match simple patterns.
+Use find to find files and directories whose names match simple patterns.
+Use the output of one command as the command-line argument to another command.
 Understanding &rsquo;text&rsquo; &amp; &lsquo;binary&rsquo; files, and why many common tools don&rsquo;t handle the latter well.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://localhost:1313/personal-site/docs/linux-terminal/terminal-6-searching-wildcards/"><meta property="og:image" content="http://localhost:1313/personal-site/cover.png"><meta property="article:section" content="docs">
@@ -57,10 +57,10 @@ Understanding &rsquo;text&rsquo; &amp; &lsquo;binary&rsquo; files, and why many 
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://localhost:1313/personal-site/cover.png"><meta name="twitter:title" content="Terminal - 6 Searching Wildcards">
-<meta name="twitter:description" content="Overview      
-Use grep to select lines from text files that match simple patterns.          
-Use find to find files and directories whose names match simple patterns.     
-Use the output of one command as the command-line argument to another command.  
+<meta name="twitter:description" content="Overview
+Use grep to select lines from text files that match simple patterns.
+Use find to find files and directories whose names match simple patterns.
+Use the output of one command as the command-line argument to another command.
 Understanding &rsquo;text&rsquo; &amp; &lsquo;binary&rsquo; files, and why many common tools don&rsquo;t handle the latter well.">
 
     
@@ -569,14 +569,14 @@ Understanding &rsquo;text&rsquo; &amp; &lsquo;binary&rsquo; files, and why many 
   </details>
 
 			</nav>
-			<p><em><strong>Overview</strong></em>      <br />
-Use <code>grep</code> to select lines from text files that match simple patterns.          <br />
-Use <code>find</code> to find files and directories whose names match simple patterns.     <br />
-Use the output of one command as the command-line argument to another command.  <br />
+			<p><em><strong>Overview</strong></em><br>
+Use <code>grep</code> to select lines from text files that match simple patterns.<br>
+Use <code>find</code> to find files and directories whose names match simple patterns.<br>
+Use the output of one command as the command-line argument to another command.<br>
 Understanding &rsquo;text&rsquo; &amp; &lsquo;binary&rsquo; files, and why many common tools don&rsquo;t handle the latter well.</p>
 <h2 id="grep"><em>grep</em><a href="#grep" class="anchor" aria-hidden="true">#</a> </h2>
-<p><code>grep</code> is short form of &lsquo;global/regular expression/print&rsquo;.    <br />
-A common sequence of operations in Unix text editors.         <br />
+<p><code>grep</code> is short form of &lsquo;global/regular expression/print&rsquo;.<br>
+A common sequence of operations in Unix text editors.<br>
 <code>grep</code> finds and prints lines in files that match a pattern.</p>
 
 
@@ -683,18 +683,18 @@ A common sequence of operations in Unix text editors.         <br />
   <div class="highlight" fame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ grep -E <span class="s2">&#34;^.o&#34;</span> haiku.txt</span></span></code></pre></div>
   </figure>
 </div>
-<p><code>^</code>  in the pattern anchors the match to the start of the line.   <br />
-the <code>.</code> matches a single character (just like <code>?</code> in the shell),   <br />
-o matches the o   <br />
+<p><code>^</code>  in the pattern anchors the match to the start of the line.<br>
+the <code>.</code> matches a single character (just like <code>?</code> in the shell),<br>
+o matches the o<br>
 using <code>-E</code> allows using the pattern without being interpreted, like if it had <code>*</code></p>
-<p>so <code>^.o</code> is  <code>^</code> from beginning,  <br />
-<code>.</code> after any single character,   <br />
+<p>so <code>^.o</code> is  <code>^</code> from beginning,<br>
+<code>.</code> after any single character,<br>
 <code>o</code> and o&hellip;. so o in second place.</p>
 <h2 id="find"><em>find</em><a href="#find" class="anchor" aria-hidden="true">#</a> </h2>
 <p>While <code>grep</code> finds lines in files <code>find</code> command finds themselves.</p>
 <p><code>$ find .</code>   finds and lists all the files and directories under the current directory.</p>
-<p>Finding and filtering using the options,
-<code>-type d</code> means &rsquo;things that are directories&rsquo;. So lists only directories.
+<p>Finding and filtering using the options,<br>
+<code>-type d</code> means &rsquo;things that are directories&rsquo;. So lists only directories.<br>
 <code>-type f</code> lists all the files only under the current directory and its directories.</p>
 
 
@@ -734,7 +734,7 @@ using <code>-E</code> allows using the pattern without being interpreted, like i
   <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ find . -name numbers.txt</span></span></code></pre></div>
   </figure>
 </div>
-<p>So only that got listed.  <br />
+<p>So only that got listed.<br>
 Putting it in quotes will solve this issue.</p>
 
 
@@ -762,7 +762,7 @@ Putting it in quotes will solve this issue.</p>
   <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ wc -l <span class="k">$(</span>find . -name <span class="s2">&#34;*.txt&#34;</span><span class="k">)</span></span></span></code></pre></div>
   </figure>
 </div>
-<p><code>$([command])</code> inserts a command&rsquo;s output in place.   <br />
+<p><code>$([command])</code> inserts a command&rsquo;s output in place.<br>
 So the shell first executes what is inside the ( ) and does rest later.</p>
 
 
@@ -775,9 +775,9 @@ So the shell first executes what is inside the ( ) and does rest later.</p>
   <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wc -l <span class="k">$(</span>find . -name <span class="s2">&#34;*.dat&#34;</span><span class="k">)</span> <span class="p">|</span> sort -n</span></span></code></pre></div>
   </figure>
 </div>
-<p>Find all <code>.dat</code> files under and in the directory,  <br />
-get word counts for all those files,  <br />
-sort them numerically.  <br /></p>
+<p>Find all <code>.dat</code> files under and in the directory,<br>
+get word counts for all those files,<br>
+sort them numerically.</p>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				</div>
