@@ -45,9 +45,9 @@
 <link rel="manifest" href="/personal-site/manifest.webmanifest">
 
 <meta property="og:title" content="Bash - 2 Working With Files">
-<meta property="og:description" content="Creating Directories
+<meta property="og:description" content="mkdir Creating Directories
 Open where a directory has to be added.
-mkdir [name]  to &lsquo;make directory&rsquo; in the current directory.
+mkdir [name] to &lsquo;make directory&rsquo; in the current directory.
 Using relative path without leading slash.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://localhost:1313/personal-site/docs/bash-linux/bash-2-working-with-files/"><meta property="og:image" content="http://localhost:1313/personal-site/cover.png"><meta property="article:section" content="docs">
@@ -56,9 +56,9 @@ Using relative path without leading slash.">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://localhost:1313/personal-site/cover.png"><meta name="twitter:title" content="Bash - 2 Working With Files">
-<meta name="twitter:description" content="Creating Directories
+<meta name="twitter:description" content="mkdir Creating Directories
 Open where a directory has to be added.
-mkdir [name]  to &lsquo;make directory&rsquo; in the current directory.
+mkdir [name] to &lsquo;make directory&rsquo; in the current directory.
 Using relative path without leading slash.">
 
     
@@ -210,15 +210,15 @@ Using relative path without leading slash.">
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/command-docs/cat-concatination/">cat - Concatination</a>
-  </li>
-
-  <li>
-      <a href="/personal-site/docs/bash-linux/command-docs/cat-copy/">cat - Copy</a>
+      <a href="/personal-site/docs/bash-linux/command-docs/cat-concatenate/">cat - Concatenate</a>
   </li>
 
   <li>
       <a href="/personal-site/docs/bash-linux/command-docs/cd-change-directory/">cd - Change Directory</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/cp-copy/">cp - Copy</a>
   </li>
 
   <li>
@@ -238,7 +238,7 @@ Using relative path without leading slash.">
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/command-docs/la-list/">la - List</a>
+      <a href="/personal-site/docs/bash-linux/command-docs/ls-list/">ls - List</a>
   </li>
 
   <li>
@@ -514,15 +514,15 @@ Using relative path without leading slash.">
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/command-docs/cat-concatination/">cat - Concatination</a>
-  </li>
-
-  <li>
-      <a href="/personal-site/docs/bash-linux/command-docs/cat-copy/">cat - Copy</a>
+      <a href="/personal-site/docs/bash-linux/command-docs/cat-concatenate/">cat - Concatenate</a>
   </li>
 
   <li>
       <a href="/personal-site/docs/bash-linux/command-docs/cd-change-directory/">cd - Change Directory</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/cp-copy/">cp - Copy</a>
   </li>
 
   <li>
@@ -542,7 +542,7 @@ Using relative path without leading slash.">
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/command-docs/la-list/">la - List</a>
+      <a href="/personal-site/docs/bash-linux/command-docs/ls-list/">ls - List</a>
   </li>
 
   <li>
@@ -618,21 +618,21 @@ Using relative path without leading slash.">
   <h3>On this page</h3>
     <nav id="toc">
   <ul>
-    <li><a href="#creating-directories">Creating Directories</a></li>
+    <li><a href="#mkdirpersonal-sitedocsbash-linuxcommand-docsmkdir-creating-directories"><a href="/personal-site/docs/bash-linux/command-docs/mkdir"><em>mkdir</em></a> Creating Directories</a></li>
     <li><a href="#naming-conventions">Naming Conventions</a></li>
     <li><a href="#create-a-text-file">Create a text file</a>
       <ul>
         <li><a href="#using-nano-editor">Using nano editor</a></li>
-        <li><a href="#touch-command"><em>touch</em> command</a></li>
-        <li><a href="#rm-for-removing-a-file"><em>rm</em> for Removing a file</a></li>
+        <li><a href="#touchpersonal-sitedocsbash-linuxcommand-docstouch-command"><a href="/personal-site/docs/bash-linux/command-docs/touch"><em>touch</em></a> command</a></li>
+        <li><a href="#rmpersonal-sitedocsbash-linuxcommand-docsrm-remove-for-removing-a-file"><a href="/personal-site/docs/bash-linux/command-docs/rm-remove"><em>rm</em></a> for Removing a file</a></li>
       </ul>
     </li>
-    <li><a href="#moving-files-and-directories">Moving files and directories</a>
+    <li><a href="#moving-filespersonal-sitedocsbash-linuxcommand-docsmv-move-and-directories"><a href="/personal-site/docs/bash-linux/command-docs/mv-move">Moving files</a> and directories</a>
       <ul>
         <li><a href="#renaming-by-moving-a-file-to-new-name">Renaming by moving a file to new name!!</a></li>
       </ul>
     </li>
-    <li><a href="#copying-files-and-directories">Copying files and directories</a></li>
+    <li><a href="#copyingpersonal-sitedocsbash-linuxcommand-docscp-copy-files-and-directories"><a href="/personal-site/docs/bash-linux/command-docs/cp-copy">Copying</a> files and directories</a></li>
     <li><a href="#operation-with-multiple-files-and-directories">Operation with multiple files and directories</a></li>
     <li><a href="#wild-cards">Wild Cards</a>
       <ul>
@@ -654,21 +654,21 @@ Using relative path without leading slash.">
     <div class="page-links">
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#creating-directories">Creating Directories</a></li>
+    <li><a href="#mkdirpersonal-sitedocsbash-linuxcommand-docsmkdir-creating-directories"><a href="/personal-site/docs/bash-linux/command-docs/mkdir"><em>mkdir</em></a> Creating Directories</a></li>
     <li><a href="#naming-conventions">Naming Conventions</a></li>
     <li><a href="#create-a-text-file">Create a text file</a>
       <ul>
         <li><a href="#using-nano-editor">Using nano editor</a></li>
-        <li><a href="#touch-command"><em>touch</em> command</a></li>
-        <li><a href="#rm-for-removing-a-file"><em>rm</em> for Removing a file</a></li>
+        <li><a href="#touchpersonal-sitedocsbash-linuxcommand-docstouch-command"><a href="/personal-site/docs/bash-linux/command-docs/touch"><em>touch</em></a> command</a></li>
+        <li><a href="#rmpersonal-sitedocsbash-linuxcommand-docsrm-remove-for-removing-a-file"><a href="/personal-site/docs/bash-linux/command-docs/rm-remove"><em>rm</em></a> for Removing a file</a></li>
       </ul>
     </li>
-    <li><a href="#moving-files-and-directories">Moving files and directories</a>
+    <li><a href="#moving-filespersonal-sitedocsbash-linuxcommand-docsmv-move-and-directories"><a href="/personal-site/docs/bash-linux/command-docs/mv-move">Moving files</a> and directories</a>
       <ul>
         <li><a href="#renaming-by-moving-a-file-to-new-name">Renaming by moving a file to new name!!</a></li>
       </ul>
     </li>
-    <li><a href="#copying-files-and-directories">Copying files and directories</a></li>
+    <li><a href="#copyingpersonal-sitedocsbash-linuxcommand-docscp-copy-files-and-directories"><a href="/personal-site/docs/bash-linux/command-docs/cp-copy">Copying</a> files and directories</a></li>
     <li><a href="#operation-with-multiple-files-and-directories">Operation with multiple files and directories</a></li>
     <li><a href="#wild-cards">Wild Cards</a>
       <ul>
@@ -681,9 +681,9 @@ Using relative path without leading slash.">
   </details>
 
 			</nav>
-			<h2 id="creating-directories">Creating Directories<a href="#creating-directories" class="anchor" aria-hidden="true">#</a> </h2>
+			<h2 id="mkdirpersonal-sitedocsbash-linuxcommand-docsmkdir-creating-directories"><a href="/personal-site/docs/bash-linux/command-docs/mkdir"><em>mkdir</em></a> Creating Directories<a href="#mkdirpersonal-sitedocsbash-linuxcommand-docsmkdir-creating-directories" class="anchor" aria-hidden="true">#</a> </h2>
 <p>Open where a directory has to be added.<br>
-<code>mkdir [name]</code>  to &lsquo;make directory&rsquo; in the current directory.<br>
+<code>mkdir [name]</code> to &lsquo;make directory&rsquo; in the current directory.<br>
 Using relative path without leading slash.</p>
 <p><code>-p</code>  for multiple directories<br>
 <code>mkdir -p</code> creates a directory with nested sub-directories in a single operation.<br>
@@ -736,10 +736,10 @@ It preserves the literal value of the next character that follows, with exceptio
 <p>Programmers use <code>Emacs</code> or <code>Vim</code>.
 Graphical editors such as <code>Gedit</code> or <code>VScode</code>.<br>
 On windows there are <code>Notecode++</code>.  <code>notepad</code> can run like <code>nano</code></p>
-<h3 id="touch-command"><em>touch</em> command<a href="#touch-command" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="touchpersonal-sitedocsbash-linuxcommand-docstouch-command"><a href="/personal-site/docs/bash-linux/command-docs/touch"><em>touch</em></a> command<a href="#touchpersonal-sitedocsbash-linuxcommand-docstouch-command" class="anchor" aria-hidden="true">#</a> </h3>
 <p><code>touch my_file.txt</code> creates a blank text file.<br>
 <code>touch  &lt;name.txt&gt;</code>  to make a file.</p>
-<h3 id="rm-for-removing-a-file"><em>rm</em> for Removing a file<a href="#rm-for-removing-a-file" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="rmpersonal-sitedocsbash-linuxcommand-docsrm-remove-for-removing-a-file"><a href="/personal-site/docs/bash-linux/command-docs/rm-remove"><em>rm</em></a> for Removing a file<a href="#rmpersonal-sitedocsbash-linuxcommand-docsrm-remove-for-removing-a-file" class="anchor" aria-hidden="true">#</a> </h3>
 <p><code>rm my_file.txt</code>    file gets removed.<br>
 <code>rm -i</code>  will ask for confirmation before the deletion.<br>
 <code>rm</code> works only on files, not on directories.  <code>rm thesis</code>  raises an error.<br>
@@ -748,9 +748,9 @@ On windows there are <code>Notecode++</code>.  <code>notepad</code> can run like
 <code>rm -r thesis</code>   <code>rm -r -i</code></p>
 <p><code>rm -i *.txt</code>  removing all <code>.txt</code> file in directory with permission needed for each.</p>
 <p>Shell does not have any trash bin so any file deleted is actually deleted.</p>
-<h2 id="moving-files-and-directories">Moving files and directories<a href="#moving-files-and-directories" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="moving-filespersonal-sitedocsbash-linuxcommand-docsmv-move-and-directories"><a href="/personal-site/docs/bash-linux/command-docs/mv-move">Moving files</a> and directories<a href="#moving-filespersonal-sitedocsbash-linuxcommand-docsmv-move-and-directories" class="anchor" aria-hidden="true">#</a> </h2>
 <h3 id="renaming-by-moving-a-file-to-new-name">Renaming by moving a file to new name!!<a href="#renaming-by-moving-a-file-to-new-name" class="anchor" aria-hidden="true">#</a> </h3>
-<p><code>mv [old] [new]</code>  moves or renames a file or directory.</p>
+<p><code>mv [old] [new]</code> moves or renames a file or directory.</p>
 <p>While in directory behind the directory with file.</p>
 
 
@@ -795,7 +795,7 @@ An additional option, <code>mv -i</code> <code>mv --interactive</code> will caus
 </span></span><span class="line"><span class="cl"><span class="cp"># moving two files to raw file in the parent directory</span></span></span></code></pre></div>
   </figure>
 </div>
-<h2 id="copying-files-and-directories">Copying files and directories<a href="#copying-files-and-directories" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="copyingpersonal-sitedocsbash-linuxcommand-docscp-copy-files-and-directories"><a href="/personal-site/docs/bash-linux/command-docs/cp-copy">Copying</a> files and directories<a href="#copyingpersonal-sitedocsbash-linuxcommand-docscp-copy-files-and-directories" class="anchor" aria-hidden="true">#</a> </h2>
 <p><code>cp</code> works similar to <code>mv</code>, but copies the file.</p>
 
 

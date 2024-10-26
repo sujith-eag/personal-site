@@ -20,7 +20,7 @@ Linking commands with pipes and filters.
 Combining sequences of commands to get output.    
 Redirecting commands output to a file.
 
-## Word count
+## [Word count](/personal-site/docs/bash-linux/command-docs/wc-word-count)
 
 `wc` gives word count of a file.
 ```bash {frame="none"}
@@ -55,7 +55,7 @@ It will create it if doesn't exist or replaces if it does. so caution.
 
 *echo* command to print strings.
 
-### *cat* for concatenation.
+### [*cat*](/personal-site/docs/bash-linux/command-docs/cat-concatenate) for concatenation.
 
 Joins together and prints all the contents of the file one after the other.
 ```bash {frame="none"}
@@ -70,7 +70,7 @@ This displays only screen full of the file and stops.
 `b` and `space` can be used to go for next page, `q` for quit.
 
 
-## *sort* Filtering output
+## [*sort*](/personal-site/docs/bash-linux/command-docs/sort) Filtering output
 
 Will do alphanumerical sort by default
 ```bash {frame="none"}
@@ -88,7 +88,7 @@ $ sort -n lengths.txt > sorted-lengths.txt
 ```
 
 
-### *head* to get first few lines in sorted file
+### [*head*](/personal-site/docs/bash-linux/command-docs/head-tail) to get first few lines in sorted file
 
 By default head and tail create the first 10 lines of its input.        
 `$ head -n 1 sorted-lengths.txt`   gives the first line of the file.    
@@ -155,7 +155,7 @@ Here `-d ,` is used as `delimiter` character.
 ```bash {frame="none"}
 $ cut -d , -f 2 animals.csv | sort | uniq
 ```
-removing the duplicates using `uniq`
+removing the duplicates using [`uniq`](/docs/bash-linux/command-docs/uniq.md)
 
 `uniq -c` option gives the count of the number of times a line occurs in its input.
 

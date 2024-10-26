@@ -127,9 +127,9 @@ Doc tab      O tab     f tab     j tab    cal  tab
 * `code` in terminal launches VS code
 
 
-### *pwd* Print Working Directory
+### [*pwd*](/personal-site/docs/bash-linux/command-docs/pwd) Print Working Directory
 
-`pwd`  print working directory, shows current working directory(shows where we are)		  
+`pwd` print working directory, shows current working directory(shows where we are)		  
 `/` indicates the root directory,  `/Users/sujith`  it is the slash before the user.
 
 
@@ -147,7 +147,7 @@ This tells the computer to follow the path from the root of file system so it al
 	( `~/data`  is equal to   `/Users/sujith/data`     useful for absolute path typing)
 
 
-### *cd* change directory
+### [*cd*](/personal-site/docs/bash-linux/command-docs/cd-change-directory) change directory
 
 `cd  <name>`    Change directory(changes the shells current working directory)  
 	(can only move into directories like this, but not out of it with relative paths)
@@ -165,7 +165,7 @@ This tells the computer to follow the path from the root of file system so it al
 ( `cd ../..`  goes up by two level, parent of parent)
 
 
-### *ls* listing
+### [*ls*](/personal-site/docs/bash-linux/command-docs/ls-list) listing
 
 `ls` listing to check files and directories in the directory.  
 All these options/flags can be combined like `ls -Fal  -lF  -aF`

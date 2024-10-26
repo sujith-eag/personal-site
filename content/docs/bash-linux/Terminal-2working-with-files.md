@@ -15,10 +15,10 @@ seo:
 ---
 
 
-## Creating Directories
+## [*mkdir*](/personal-site/docs/bash-linux/command-docs/mkdir) Creating Directories
 
 Open where a directory has to be added.     
-`mkdir [name]`  to 'make directory' in the current directory.     
+`mkdir [name]` to 'make directory' in the current directory.     
 	Using relative path without leading slash.
 
 `-p`  for multiple directories      
@@ -79,13 +79,13 @@ Graphical editors such as `Gedit` or `VScode`.
 On windows there are `Notecode++`.  `notepad` can run like `nano`
 
 
-### *touch* command
+### [*touch*](/personal-site/docs/bash-linux/command-docs/touch) command
 
 `touch my_file.txt` creates a blank text file.      
 `touch  <name.txt>`  to make a file.
 
 
-### *rm* for Removing a file
+### [*rm*](/personal-site/docs/bash-linux/command-docs/rm-remove) for Removing a file
 
 `rm my_file.txt`    file gets removed.        
 `rm -i`  will ask for confirmation before the deletion.       
@@ -100,11 +100,11 @@ We can remove a directory and all its contents by using the recursive `-r`
 Shell does not have any trash bin so any file deleted is actually deleted.
 
 
-## Moving files and directories
+## [Moving files](/personal-site/docs/bash-linux/command-docs/mv-move) and directories
 
 ### Renaming by moving a file to new name!!
 
-`mv [old] [new]`  moves or renames a file or directory.
+`mv [old] [new]` moves or renames a file or directory.
 
 While in directory behind the directory with file.     
 ```c
@@ -131,7 +131,7 @@ $ mv sucrose.dat maltase.dat ../raw
 # moving two files to raw file in the parent directory
 ```
 
-## Copying files and directories
+## [Copying](/personal-site/docs/bash-linux/command-docs/cp-copy) files and directories
 
 `cp` works similar to `mv`, but copies the file.
 

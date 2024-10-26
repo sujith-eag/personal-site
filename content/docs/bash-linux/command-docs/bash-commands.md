@@ -17,18 +17,18 @@ seo:
 
 Most commonly used Bash commands:
 
-1. **ls** - List directory contents.  
-2. **cd** - Change the current directory.  
-3. **pwd** - Print the current working directory.  
-4. **cp** - Copy files and directories.  
-5. **mv** - Move or rename files and directories.  
-6. **rm** - Remove files or directories.  
-7. **touch** - Create an empty file or update the timestamp of an existing file.  
-8. **mkdir** - Create a new directory.  
+1. [**ls**](/personal-site/docs/bash-linux/command-docs/ls-list) - List directory contents.  
+2. [**cd**](/personal-site/docs/bash-linux/command-docs/cd-change-directory) - Change the current directory.  
+3. [**pwd**](/personal-site/docs/bash-linux/command-docs/pwd) - Print the current working directory.  
+4. [**cp**](/personal-site/docs/bash-linux/command-docs/cp-copy) - Copy files and directories.  
+5. [**mv**](/personal-site/docs/bash-linux/command-docs/mv-move) - Move or rename files and directories.  
+6. [**rm**](/personal-site/docs/bash-linux/command-docs/rm-remove) - Remove files or directories.  
+7. [**touch**](/personal-site/docs/bash-linux/command-docs/touch) - Create an empty file or update the timestamp of an existing file.  
+8. [**mkdir**](/personal-site/docs/bash-linux/command-docs/mkdir) - Create a new directory.  
 9. **rmdir** - Remove an empty directory.  
-10. **cat** - Concatenate and display file contents.  
-11. **echo** - Display a line of text or variables.  
-12. **grep** - Search for patterns in files.  
+10. [**cat**](/personal-site/docs/bash-linux/command-docs/cat-concatenate) - Concatenate and display file contents.  
+11. [**echo**](/personal-site/docs/bash-linux/command-docs/echo) - Display a line of text or variables.  
+12. [**grep**](/personal-site/docs/bash-linux/command-docs/grep) - Search for patterns in files.  
 13. **find** - Search for files and directories in a directory hierarchy.  
 14. **chmod** - Change file permissions.  
 15. **chown** - Change file owner and group.  

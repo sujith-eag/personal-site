@@ -21,7 +21,7 @@
       <link>http://localhost:1313/personal-site/docs/bash-linux/bash-2-working-with-files/</link>
       <pubDate>Tue, 22 Oct 2024 09:33:16 +0530</pubDate>
       <guid>http://localhost:1313/personal-site/docs/bash-linux/bash-2-working-with-files/</guid>
-      <description>&lt;h2 id=&#34;creating-directories&#34;&gt;Creating Directories&lt;/h2&gt;&#xA;&lt;p&gt;Open where a directory has to be added.&lt;br&gt;&#xA;&lt;code&gt;mkdir [name]&lt;/code&gt;  to &amp;lsquo;make directory&amp;rsquo; in the current directory.&lt;br&gt;&#xA;Using relative path without leading slash.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;mkdirpersonal-sitedocsbash-linuxcommand-docsmkdir-creating-directories&#34;&gt;&lt;a href=&#34;http://localhost:1313/personal-site/personal-site/docs/bash-linux/command-docs/mkdir&#34;&gt;&lt;em&gt;mkdir&lt;/em&gt;&lt;/a&gt; Creating Directories&lt;/h2&gt;&#xA;&lt;p&gt;Open where a directory has to be added.&lt;br&gt;&#xA;&lt;code&gt;mkdir [name]&lt;/code&gt; to &amp;lsquo;make directory&amp;rsquo; in the current directory.&lt;br&gt;&#xA;Using relative path without leading slash.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Bash - 3 Pipes Filters</title>

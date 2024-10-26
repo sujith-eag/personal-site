@@ -24,7 +24,7 @@ Use the output of one command as the command-line argument to another command.
 Understanding 'text' & 'binary' files, and why many common tools don't handle the latter well.
 
 
-## *grep*
+## [*grep*](/personal-site/docs/bash-linux/command-docs/grep)
 
 `grep` is short form of 'global/regular expression/print'.      
 A common sequence of operations in Unix text editors.           
