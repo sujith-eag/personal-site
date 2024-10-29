@@ -15,162 +15,146 @@ seo:
 ---
 
 
-***Objective***    
-Linking commands with pipes and filters.      
-Combining sequences of commands to get output.    
-Redirecting commands output to a file.
+**Objective:**  
+* Link commands with pipes and filters. 
+* Combine sequences of commands to produce output.
+* Redirect command output to a file.
 
 ## [Word count](/personal-site/docs/bash-linux/command-docs/wc-word-count)
 
-`wc` gives word count of a file.
+The `wc` (word count) command provides the number of lines, words, and characters in a file:
+
 ```bash {frame="none"}
 $ wc cubane.pdb
 ```
-gives output `(20 156 1158)` which is 'number of lines', 'words' and 'characters' in a file.      
+Output format: `(lines words characters)`.
+
+To get the word count for all `.pdb` files in the current directory:
 
 ```bash {frame="none"}
 $ wc *.pdb
 ```
-returns word count of all `.pdb` files individually and also total.
+Returns the word count of all `.pdb` files individually and also total.
 
-```bash {frame="none"}
-wc -l   # shows only the number of lines per file
-wc -m   # shows number of characters only
-wc -w  # shows number of words only
-```
+### Options:
+- `wc -l`  # Shows only the number of lines per file.
+- `wc -m`  # Shows the number of characters only.
+- `wc -w`  # Shows the number of words only.
 
-`$ wc -l` which doesn't have any filename, so it assumes the input will come from the command prompt so it will keep waiting for input without doing anything.
+If `wc -l` is run without specifying a filename, it waits for input from the command prompt. You can exit this mode using `Ctrl + C`.
 
-`Ctrl + C` can be used to come out of such mistakes.
+## Capturing Output from Commands
 
-
-## Capturing output from commands
+To redirect the output of a command to a file:
 
 ```bash {frame="none"}
 $ wc -l *.pdb > lengths.txt
 ```
-reads all `.pbs` lines in directory.      
-The `>` symbol redirect's the command's output to a file called `lengths.txt`.    
-It will create it if doesn't exist or replaces if it does. so caution.
+This command reads all `.pdb` files and writes the line counts to `lengths.txt`. If the file doesn't exist, it will be created; if it does exist, it will be overwritten, so caution is advised.
 
-*echo* command to print strings.
+*Note:* The `echo` command can be used to print strings.
 
-### [*cat*](/personal-site/docs/bash-linux/command-docs/cat-concatenate) for concatenation.
+### Using [*cat*](/personal-site/docs/bash-linux/command-docs/cat-concatenate) for Concatenation
 
-Joins together and prints all the contents of the file one after the other.
+The `cat` command joins together and prints the contents of files:
+
 ```bash {frame="none"}
 $ cat lengths.txt
 ```
-Disadvantage of `cat` is it always dumps the whole file onto the screen.    
-Using `less` is more safe approach in practice.
+*Disadvantage:* `cat` dumps the entire file to the screen. A more user-friendly approach is to use `less`:
+
 ```bash {frame="none"}
-$ less lengths.pbd
+$ less lengths.txt
 ```
-This displays only screen full of the file and stops.       
-`b` and `space` can be used to go for next page, `q` for quit.
+`less` displays the file one screen at a time. Use `b` and `space` to navigate pages, and `q` to quit.
 
+## Sorting Output [*sort*](/personal-site/docs/bash-linux/command-docs/sort)
 
-## [*sort*](/personal-site/docs/bash-linux/command-docs/sort) Filtering output
+The `sort` command sorts lines of text files:
 
-Will do alphanumerical sort by default
 ```bash {frame="none"}
-sort -n   # for numerical sort
-sort -r   # sorts in reverse order
-```
-```bash {frame="none"}
-$ sort -n lengths.txt
-# this does not change the file, just sends results to screen
+$ sort lengths.txt  # Sorts alphanumerically by default
+sort -n             # Sorts numerically
+sort -r             # Sorts in reverse order
 ```
 
-Shifting sorted results to new file
+`$ sort -n lengths.txt` doesn't change the file, but sends results to screen.
+
+To sort and redirect the results to a new file:
 ```bash {frame="none"}
 $ sort -n lengths.txt > sorted-lengths.txt
 ```
 
+### Using [*head and tail*](/personal-site/docs/bash-linux/command-docs/head-tail)
 
-### [*head*](/personal-site/docs/bash-linux/command-docs/head-tail) to get first few lines in sorted file
+By default, `head` and `tail` display the first and last 10 lines, respectively:
 
-By default head and tail create the first 10 lines of its input.        
-`$ head -n 1 sorted-lengths.txt`   gives the first line of the file.    
-`head -n 20` would give the first 20 lines.                             
-`tail -n 2` gives the last 2 lines.                   
-
-
-### *>>* for appending values in file
-
-Redirecting results to the same file is not good, causes errors or deletes the file.
-```bash {frame="none"}
-$ sort -n lengths.txt > lengths.txt
+```bash {frame="none"} 
+$ head -n 1 sorted-lengths.txt  # Displays the first line
+$ head -n 20                     # Displays the first 20 lines
+$ tail -n 2                      # Displays the last 2 lines
 ```
+
+### Appending Values to a File ***>>***
+
+To append results to an existing file without overwriting it, use `>>`:
+
+`$ sort -n lengths.txt > lengths.txt`
+Redirecting results to the same file is not good, causes errors or deletes the file.
+
 `>`  creates and recreates the same file,     
 `>>` appends the values sequentially again and again like append, so can be run multiple times to enter into a file.
-
 ```bash {frame="none"}
-$ head -n 3 animal.csv > animals-subset.csv
-# creates the file for first value.
-
-$ tail -n 2 animals.csv >> animals-subsets.csv
-# appends the second value.
+$ head -n 3 animal.csv > animals-subset.csv  # Creates the file for the first 3 lines
+$ tail -n 2 animals.csv >> animals-subset.csv  # Appends the last 2 lines
 ```
 
+## Pipes for Passing Output to Another Command
 
-## *pipes* for passing output to another command
+The pipe operator `|` allows you to pass the output of one command as input to another:
 
 ```bash {frame="none"}
 $ sort -n lengths.txt | head -n 1
 ```
-The `|` vector bar between the two commands is called the ***pipe***.     
-It tells the shell that we want to use the output of the command on the left as input to the command on the right.
+This command sorts `lengths.txt` and then retrieves the first line (smallest value).
 
+You can chain multiple commands together:
 Piping removes the need for other files to hold values.
 
 we can pass `wc` values directly to `sort` and then send resulting output to `head`.
 
 ```bash {frame="none"}
-$ wc -l *.pdb | sort -n | head -n 1
-gives the first element which is the shortest.
+$ wc -l *.pdb | sort -n | head -n 1  # Gets the shortest .pdb file
 ```
-
 
 ## Filters
 
-A filter is a program like `wc` and `sort` that transforms a stream of input into a stream output.      
-All standard Unix tools work like this, they read from standard input, do something with what they have read and write to standard output.      
-This programming model is called `pipes and filters`
+A filter is a program (like `wc` or `sort`) that processes input data and produces output. Most standard Unix tools operate this way, reading from standard input and writing to standard output. This model is known as **pipes and filters**.
 
+## Pipe Construction
 
-## Pipe construction
+The `cut` command is used to remove or extract specific sections of each line in a file:
 
-`cut` command is used to ***remove*** or ***cut out*** certain section of each line in the file.
 ```bash {frame="none"}
 $ cut -d , -f 2 animals.csv
 ```
+- `-d ,` specifies the delimiter (in this case, a comma).
+- `-f` specifies the field (column) to extract.
 
-`cut` expects the lines to be separated into columns by a `tab` character,   
-these are called **delimiter**.       
-Here `-d ,` is used as `delimiter` character.
-
-`-f` option specifies that we want to extract the second field (column).
+To remove duplicates from the output, you can pipe `cut` into `sort` and `uniq`:
 
 ```bash {frame="none"}
 $ cut -d , -f 2 animals.csv | sort | uniq
 ```
-removing the duplicates using [`uniq`](/docs/bash-linux/command-docs/uniq.md)
+Removing the duplicates using `uniq`
+Using `uniq -c` gives the count of occurrences for each line in input.
 
-`uniq -c` option gives the count of the number of times a line occurs in its input.
+---
 
-__________
-
+### Example Workflow
 ```bash {frame="none"}
-$ cd nart-pacific-gyre
-    # move into directory
-
-$ wc -l *.txt
-    # get the word count of all `txt` files.
-
-$ wc -l *.txt | sort -n | head -n 5
-    # checking the first five.
-
-$ wc -l *.txt | sort -n | tail -n 5
-    # checking the last five, can be reversed if needed.
+$ cd nart-pacific-gyre       # Move into the directory
+$ wc -l *.txt                # Get the word count of all .txt files
+$ wc -l *.txt | sort -n | head -n 5  # Display the first five line counts
+$ wc -l *.txt | sort -n | tail -n 5  # Display the last five line counts
 ```

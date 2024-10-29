@@ -15,176 +15,160 @@ seo:
 ---
 
 
-Bash - `Bourne Again SHell`
-(git Bash - for windows interaction with git )
+# Bash - Bourne Again SHell
+*(Git Bash - for Windows interaction with Git)*
 
-
-## Bash
+## Bash Shortcuts
 
 ```bash {frame="none"}
-Ctrl + Alt + T  # Launch terminal  
-Ctrl + Shift + C  # for copying from terminal  
-Ctrl + Shift + V  # for pasting in terminal  
-clear      # to clear the terminal
+Ctrl + Alt + T      # Launch terminal  
+Ctrl + Shift + C    # Copy from terminal  
+Ctrl + Shift + V    # Paste in terminal  
+clear                # Clear the terminal
 ```
 
-The grammar of a shell allows to combine existing tools into powerful pipelines and handle large volumes of data automatically.
-Sequence of commands written in a 'script', improves the reproduciblity of workflows.
-
+The grammar of a shell allows combining existing tools into powerful pipelines and handling large volumes of data automatically. Writing a sequence of commands in a script improves the reproducibility of workflows.
 
 ## Terminal Basics
 
-`su`  -  super user  
-`sudo`  -   getting the super user permission  
-`apt `  -  the installer
+- **`su`** - Switch user to super user  
+- **`sudo`** - Execute a command with super user permissions  
+- **`apt`** - Package installer for Debian-based systems
 
-```c
-sudo apt install update
-sudo apt upgrade
+```bash {frame="none"}
+sudo apt update      # Update package index
+sudo apt upgrade     # Upgrade installed packages
 ```
 
-`$`  is the prompt for typing, followed by a blinking text cursor.  
-`$ whoami`
+- **`$`** is the prompt for typing, followed by a blinking text cursor.   
+  Example: `$ whoami` - Displays the current user.
 
-
-`--help` can be passed to any command  to see what option a command accepts
-```c
+- **`--help`** can be passed to any command to see what options a command accepts:
+```bash {frame="none"}
 cd --help
 ls --help
 mkdir --help
 ```
 
-```c
+- **`help`** provides help for built-in shell commands:
+```bash {frame="none"}
 help cd
-help echo  # works
+help echo  # Works for built-in commands only
 ```
-If there are long `--` and short `-` versions of a command,  
-use short when typing command in the terminal, use long in scripts when it is written once and read many times.
 
-`man` is manual for a command if it exists.
-```c
+If a command has both long (`--option`) and short (`-o`) versions, use the short version for typing in the terminal and the long version in scripts for clarity.
+
+- **`man`** is the manual for a command if it exists:
+```bash {frame="none"}
 man ls
 man mkdir
 ```
 
-`space` and `B` used to travel in manual,  
-`/` is used to search for a term,  
-`N` is used to move between the hits,  
-`N+Shift` for moving backwards.
+In the manual:
+- **Space** and **B** to scroll down.
+- **N** to navigate between search hits.
+- **Shift + N** to navigate backwards.
 
-`man cd` doesn't exist as it is a built is function `--help` can be used.
+Note: **`man cd`** doesn't exist since `cd` is a built-in shell function; use `--help` instead.
 
+## General Syntax of a Shell Command
 
-## General Syntax of a Shell command
-
-```c
+```bash {frame="none"}
 $ ls -F /
 ```
-Listing of files & directories in Root directory /  
-`$` is the prompt  
-`ls` is the command  
-`-F` is the option/flag/switches  
-`/` is the argument
+- **`$`** is the prompt  
+- **`ls`** is the command  
+- **`-F`** is the option/flag  
+- **`/`** is the argument (the root directory)
 
-'Command' doesn't always require argument or option.  
-'Command' can be called with more than one 'options' & 'arguments'.  
-( 'options' and 'arguments' are referred to as 'parameters')
+A command does not always require arguments or options; it can be called with multiple options and arguments (collectively referred to as parameters).
 
-'Options' change the behavior of a 'command'		  
-'short options' start with single dash ' - ',   `-r`   `-a`		  
-'long options' start with double dash '--'   `--reverse`    `--all`
+- **Options** change the command's behavior:   
+  Short options start with a single dash (`-`), e.g., `-r`, `-a`.   
+  Long options start with double dashes (`--`), e.g., `--reverse`, `--all`.
 
-'Arguments' tell the command what to operate on (files and directories)
+- **Arguments** tell the command what to operate on (files and directories).
 
-{{< callout >}} Each parts are separated by spaces, if space is omitted, the difference between command, option and argument will not be known to the terminal.	  
-    (  `ls-F`   searches for a command called `ls-F`  which doesn't exist)
+{{< callout >}} Each part is separated by spaces; omitting spaces causes confusion about commands, options, and arguments.  
+(e.g., `ls-F` searches for a command called `ls-F`, which does not exist)  
 {{< /callout >}}
 
-Capital and Small are also important			  
-`ls -s`   displays size of listed files.		  
-`ls -S`  sorts the displayed files.
+Note that case sensitivity matters:  
+- **`ls -s`** displays the size of files.  
+- **`ls -S`** sorts files by size.
 
-
-____________
+---
 
 ## Navigating Files and Directories
 
-Directory names in a path are separated by `/` in unix, `\` in windows
+- **Directory names** in a path are separated by `/` in Unix, while Windows uses `\`.
 
+### Tab Completion
 
-### Tab completion
+When typing a directory name, pressing `Tab` will auto-complete if there’s only one option. Double pressing `Tab` shows multiple options.
 
-When there is only one option, like Document or Download, hitting `tab` on D will show both Document/ Download.     (Double tab will show if there are more than one)	  
-Doc + Tab will bring **Documents**
+Example: Typing `Doc` + `Tab` may complete to **Documents**.
 
-```c
+```bash {frame="none"}
 ~/Documents/Odin-Project/foundations/java-script/calculator/
-Doc tab      O tab     f tab     j tab    cal  tab
+Doc tab      O tab     f tab     j tab    cal tab
 ```
-*  `.`  for opening everything in a project directory
-*  `git add .`  to add all files in a directory to Git staging area
-* In VS code, opening `cd` in project directory and typing   `code .`    opens project folder
-* `code` in terminal launches VS code
 
+- Use `.` to refer to the current directory.  
+- `git add .` stages all files in the current directory for Git.  
+- In VS Code, navigate to your project directory and use `code .` to open it.  
+- Simply typing `code` in the terminal launches VS Code.
 
-### [*pwd*](/personal-site/docs/bash-linux/command-docs/pwd) Print Working Directory
+### [*pwd*](/personal-site/docs/bash-linux/command-docs/pwd) - Print Working Directory
 
-`pwd` print working directory, shows current working directory(shows where we are)		  
-`/` indicates the root directory,  `/Users/sujith`  it is the slash before the user.
-
+- **`pwd`** shows the current working directory (where you are).  
+Example: `/Users/sujith` indicates the user directory.
 
 ### Relative and Absolute Paths
 
-When '***Relative paths***' are used with commands `ls` and `cd`, it tries to find that location   
-'from where we are' rather than from the root of the file system.   
-So it can only look at files within that directory and the `..` parent directory
+- **Relative paths** are used with commands like `ls` and `cd` to find locations based on the current directory location.  'from where we are' rather than from the root of the file system.  So it can only look at files within that directory and the `..` parent directory
 
-***Absolute paths*** can be specified by including its entire entire path from the root directory indicated by a leading slash  `/`		  
-This tells the computer to follow the path from the root of file system so it always refers to one directory.
+- **Absolute paths** specify the complete path from the root directory, starting with `/`.  
 
 (Using `pwd` to see the route and typing the absolute path to wherever we want to go)  
-`~`  tilde character at the start of a path mean **the current users home directory**  
-	( `~/data`  is equal to   `/Users/sujith/data`     useful for absolute path typing)
+`~`  tilde character at the start of a path mean **the current users home directory**
+Example: `~/data` refers to `/Users/sujith/data`, useful for absolute path typing.
 
+### [*cd*](/personal-site/docs/bash-linux/command-docs/cd-change-directory) - Change Directory
 
-### [*cd*](/personal-site/docs/bash-linux/command-docs/cd-change-directory) change directory
+- **`cd <name>`** changes the shell's current working directory.   
+  Can only move into directories using this command.
 
-`cd  <name>`    Change directory(changes the shells current working directory)  
-	(can only move into directories like this, but not out of it with relative paths)
+- **`cd ~`** navigates to the home directory (e.g., `/home/sujith`).
 
-`cd ~`    going to the home directory at once ( `home/sujith`)
+- **`cd ..`** moves back to the parent directory (the directory containing the current one).  
+- **`.`** means the current directory.
 
-`cd ..`   moves back to parent directory  
-	( `..` is a special directory meaning "the directory containing this one" i.e parent directory)  
-	(`.` by itself means current directory)
+- **`cd -`** switches to the previous directory we were in.  
+Repeating `cd -` toggles between the current and previous directories.
 
-`cd -`   the `-` in front moves to the previous directory we were in,  
-`cd -`   again will bring us back ( it is switching between current and previous directories only )
+- **`cd /`** goes to the root directory.  
+- **`cd ../..`** goes up two levels (parent of parent).
 
-( `cd /`  goes to root directory,  `cd ~` goes to home directory  )  
-( `cd ../..`  goes up by two level, parent of parent)
+### [*ls*](/personal-site/docs/bash-linux/command-docs/ls-list) - Listing Files and Directories
 
+- **`ls`** lists files and directories in the current directory.  
+Options can be combined:
+```bash {frame="none"}
+ls -Fal      # Example of combined options
+```
 
-### [*ls*](/personal-site/docs/bash-linux/command-docs/ls-list) listing
+#### Common Flags for `ls`:
+- **`-l`** - Long format (detailed view).
+- **`-h`** - Human-readable sizes (with `-l`).
+- **`-a`** - Show all files, including hidden files (those starting with `.`).
+- **`-F`** - Adds a marker (e.g., `/` for directories) to distinguish file types.
+- **`-R`** - Lists all nested subdirectories within directories.
 
-`ls` listing to check files and directories in the directory.  
-All these options/flags can be combined like `ls -Fal  -lF  -aF`
+### Looking at Other Directories' Contents Without Moving
 
-flags for `ls`  
-  `-l`  crates a list of things  
-  `-h`  does something i couldn't figure  
-  `-a`  'show all' shows hidden directories with `.` also `..` directory.  
-  ( there will be other directories which start with `.` like `.bash_profile` these contain shell config settings, these are hidden to prevent cluttering )
-
-  `-F`  gives an output separated with `/` marker to show what they are, (ones with no marker are files)
-
-`ls -R` to list all nested sub directories within a directories
-
-
-#### Looking at other directories contents without moving out
-
-```c
-ls ~/Desktop/trial
-ls /User/sujith/Desktop/trial
-ls -F Desktop
+```bash {frame="none"}
+ls ~/Desktop/trial              # Using absolute path
+ls /Users/sujith/Desktop/trial   # Another way using absolute path
+ls -F Desktop                    # List contents of Desktop directory
 ```

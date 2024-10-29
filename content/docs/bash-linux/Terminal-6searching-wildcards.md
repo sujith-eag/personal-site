@@ -14,104 +14,99 @@ seo:
   noindex: false # false (default) or true
 ---
 
+### Overview
+- Use `grep` to select lines from text files that match specific patterns.
+- Use `find` to locate files and directories whose names match simple patterns.
+- Use the output of one command as the command-line argument to another command.
+- Understand the difference between text and binary files, and why many common tools may not handle binary files well.
 
-
-
-***Overview***        
-Use `grep` to select lines from text files that match simple patterns.            
-Use `find` to find files and directories whose names match simple patterns.       
-Use the output of one command as the command-line argument to another command.    
-Understanding 'text' & 'binary' files, and why many common tools don't handle the latter well.
-
+---
 
 ## [*grep*](/personal-site/docs/bash-linux/command-docs/grep)
 
-`grep` is short form of 'global/regular expression/print'.      
-A common sequence of operations in Unix text editors.           
-`grep` finds and prints lines in files that match a pattern.
+`grep` stands for "global/regular expression/print." It is a powerful tool for searching text and is commonly used in Unix text editors. `grep` finds and prints lines in files that match a specified pattern.
+
+### Basic Usage
+To search for a word in a file:
 ```bash {frame="none"}
 $ grep not haiku.txt
-# gets all lines with `not` in it, doesn't have to be just this word.
+# This retrieves all lines containing 'not' in it.
 ```
 
-Searching for a phrase
+### Searching for Phrases
+To search for a specific phrase:
 ```bash {frame="none"}
 $ grep "is not" haiku.txt
-
+```
+Using quotes makes it easier to search for phrases or single words:
+```bash {frame="none"}
 $ grep "not" haiku.txt
-# using " " for single word also like for double word makes it easier.
 ```
 
-
-`-w` option will limit matches to the word boundaries.
+### Options
+- **Word Boundary (`-w`)**: Limits matches to whole words only.
 ```bash {frame="none"}
 $ grep -w "The" haiku.txt
-# nothing else like `Thesis` will be result.
 ```
 
-
-`-n` numbers the results with the line numbers.
+- **Line Numbers (`-n`)**: Numbers the results with the line numbers.
 ```bash {frame="none"}
 $ grep -n "it" haiku.txt
-
-$ grep -n -w "the" haiku.txt
-# combining options.
 ```
 
-`-i` makes the search case sensitive, the, The, THE
+- **Case Insensitivity (`-i`)**: Makes the search case insensitive.
 ```bash {frame="none"}
 $ grep -n -w -i "the" haiku.txt
 ```
 
-
-`-v` inverts the search, getting all lines without THE
+- **Invert Match (`-v`)**: Inverts the search to get all lines without the specified pattern.
 ```bash {frame="none"}
 $ grep -v -n -w "the" haiku.txt
 ```
 
-
-`-r` searches recursively through all the files in the directory
+- **Recursive Search (`-r`)**: Searches through all files in the directory and subdirectories.
 ```bash {frame="none"}
 $ grep -r "Yesterday"
 ```
 
+### Wildcards in `grep` Searches
+Regular expressions (regex) allow for more complex pattern matching. 
 
-
-## Wildcards in *grep* searches
-
-The technical term for these are ***regular expressions*** which is the `re` in `grep`.
-
-Finding the lines with words having o in second position.
-```bash {fame="none"}
+To find lines with words having 'o' in the second position:
+```bash {frame="none"}
 $ grep -E "^.o" haiku.txt
 ```
-`^`  in the pattern anchors the match to the start of the line.     
-the `.` matches a single character (just like `?` in the shell),     
-o matches the o     
-using `-E` allows using the pattern without being interpreted, like if it had `*`
+- `^` anchors the match to the start of the line.
+- `.` matches any single character.
+- `o` matches the letter 'o'.
 
-so `^.o` is  `^` from beginning,    
-`.` after any single character,     
-`o` and o.... so o in second place.
+### Example Breakdown
+- `^.o`: Matches any line starting with any character followed by 'o'.
 
+---
 
 ## *find*
 
-While `grep` finds lines in files `find` command finds themselves.
+The `find` command is used to locate files and directories based on specific criteria.
 
-`$ find .`   finds and lists all the files and directories under the current directory.
+### Basic Usage
+To find and list all files and directories under the current directory:
+```bash {frame="none"}
+$ find .
+```
 
-Finding and filtering using the options,  
-`-type d` means 'things that are directories'. So lists only directories.  
-`-type f` lists all the files only under the current directory and its directories.  
+### Filtering by Type
+- **Directories (`-type d`)**: Lists only directories.
 ```bash {frame="none"}
 $ find . -type d
-
+```
+- **Files (`-type f`)**: Lists only files.
+```bash {frame="none"}
 $ find . -type f
 ```
 
-
-### Finding by name using *-name*
+### Finding by Name Using `-name`
+To find files by name:
 
 ```bash {frame="none"}
 $ find . -name *.txt
@@ -126,26 +121,30 @@ Putting it in quotes will solve this issue.
 ```bash {frame="none"}
 $ find . -name "*.txt"
 ```
-now `find` will get all `.txt` files in all directories
+now `find` will get all `.txt` files in all directories.
 
+**Note**: Enclose the pattern in quotes to prevent shell expansion of `*`. Otherwise, it will only search for files named literally `*.txt`.
+
+---
 
 ## *ls* vs *find*
 
-`ls` lists everything it can, while `find` searches for things with certain properties.
+- **`ls`**: Lists everything within a directory.
+- **`find`**: Searches for files and directories with specified properties.
 
-Doing the word count for all the files under the directories by using `$()`
+### Using Command Substitution
+You can combine commands using `$()` to insert the output of one command into another. For example, to count lines in all `.txt` files:
 ```bash {frame="none"}
 $ wc -l $(find . -name "*.txt")
 ```
 `$([command])` inserts a command's output in place.     
 So the shell first executes what is inside the ( ) and does rest later.
 
-
+### Example
+To count lines in all `.dat` files and sort the results numerically:
 ```bash {frame="none"}
-wc -l $(find . -name "*.dat") | sort -n
+$ wc -l $(find . -name "*.dat") | sort -n
 ```
+This command finds all `.dat` files, counts their lines, and sorts the results.
 
-Find all `.dat` files under and in the directory,    
-get word counts for all those files,    
-sort them numerically.    
 

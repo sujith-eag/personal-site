@@ -45,11 +45,16 @@
 <link rel="manifest" href="/personal-site/manifest.webmanifest">
 
 <meta property="og:title" content="Bash - 5 Shell Scripting">
-<meta property="og:description" content="Objective
-Shell script that runs a command or a series of commands for a fixed set of files.
+<meta property="og:description" content="Objectives
+
+Write a shell script that runs a command or a series of commands for a fixed set of files.
 Run a shell script from the command line.
-Using a shell script that operates on a set of fines defines by the user on the command line.
-Creating a pipeline that included shell scripts.">
+Create a shell script that operates on a set of files defined by the user on the command line.
+Build a pipeline that includes shell scripts.
+
+
+Shell Script
+Shell scripts allow us to automate frequently used commands by saving them in a file, enabling us to execute them later with a single command. In essence, shell scripts are small programs.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://localhost:1313/personal-site/docs/bash-linux/bash-5-shell-scripting/"><meta property="og:image" content="http://localhost:1313/personal-site/cover.png"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2024-10-22T09:34:28+05:30">
@@ -57,11 +62,16 @@ Creating a pipeline that included shell scripts.">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://localhost:1313/personal-site/cover.png"><meta name="twitter:title" content="Bash - 5 Shell Scripting">
-<meta name="twitter:description" content="Objective
-Shell script that runs a command or a series of commands for a fixed set of files.
+<meta name="twitter:description" content="Objectives
+
+Write a shell script that runs a command or a series of commands for a fixed set of files.
 Run a shell script from the command line.
-Using a shell script that operates on a set of fines defines by the user on the command line.
-Creating a pipeline that included shell scripts.">
+Create a shell script that operates on a set of files defined by the user on the command line.
+Build a pipeline that includes shell scripts.
+
+
+Shell Script
+Shell scripts allow us to automate frequently used commands by saving them in a file, enabling us to execute them later with a single command. In essence, shell scripts are small programs.">
 
     
     
@@ -287,19 +297,39 @@ Creating a pipeline that included shell scripts.">
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/personal-site/docs/tools/git-github/">Git Github</a>
+    <details open>
+      <summary>Git Github</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/tools/git-github/git-github/">Git &amp; Github</a>
+  </li>
+      </ul>
+    </details>
   </li>
 
   <li>
-      <a href="/personal-site/docs/tools/vscode/">Vscode</a>
+    <details open>
+      <summary>Vscode</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/tools/vscode/vscode/">VScode</a>
+  </li>
+      </ul>
+    </details>
   </li>
 
   <li>
-      <a href="/personal-site/docs/tools/obsidian/">Obsidian</a>
-  </li>
+    <details open>
+      <summary>Obsidian</summary>
+      <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/personal-site/docs/tools/chrome/">Chrome</a>
+      <a href="/personal-site/docs/tools/obsidian/obsidian/">Obsidian</a>
+  </li>
+      </ul>
+    </details>
   </li>
       </ul>
     </details>
@@ -591,19 +621,39 @@ Creating a pipeline that included shell scripts.">
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/personal-site/docs/tools/git-github/">Git Github</a>
+    <details open>
+      <summary>Git Github</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/tools/git-github/git-github/">Git &amp; Github</a>
+  </li>
+      </ul>
+    </details>
   </li>
 
   <li>
-      <a href="/personal-site/docs/tools/vscode/">Vscode</a>
+    <details open>
+      <summary>Vscode</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/tools/vscode/vscode/">VScode</a>
+  </li>
+      </ul>
+    </details>
   </li>
 
   <li>
-      <a href="/personal-site/docs/tools/obsidian/">Obsidian</a>
-  </li>
+    <details open>
+      <summary>Obsidian</summary>
+      <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/personal-site/docs/tools/chrome/">Chrome</a>
+      <a href="/personal-site/docs/tools/obsidian/obsidian/">Obsidian</a>
+  </li>
+      </ul>
+    </details>
   </li>
       </ul>
     </details>
@@ -620,11 +670,24 @@ Creating a pipeline that included shell scripts.">
   <h3>On this page</h3>
     <nav id="toc">
   <ul>
-    <li><a href="#shell-script">Shell Script</a></li>
-    <li><a href="#comments">Comments</a></li>
-    <li><a href="#-to-process-many-types-of-files">$@ To process many types of files</a>
+    <li>
       <ul>
-        <li><a href="#for-sorting-unique">For sorting unique</a></li>
+        <li><a href="#objectives">Objectives</a></li>
+      </ul>
+    </li>
+    <li><a href="#shell-script">Shell Script</a>
+      <ul>
+        <li><a href="#creating-a-shell-script">Creating a Shell Script</a></li>
+        <li><a href="#executing-the-script">Executing the Script</a></li>
+        <li><a href="#making-the-script-flexible">Making the Script Flexible</a></li>
+        <li><a href="#handling-spaces-in-filenames">Handling Spaces in Filenames</a></li>
+        <li><a href="#using-additional-arguments">Using Additional Arguments</a></li>
+      </ul>
+    </li>
+    <li><a href="#adding-comments">Adding Comments</a></li>
+    <li><a href="#using--to-process-multiple-files">Using <code>$@</code> to Process Multiple Files</a>
+      <ul>
+        <li><a href="#finding-unique-entries">Finding Unique Entries</a></li>
       </ul>
     </li>
   </ul>
@@ -642,11 +705,24 @@ Creating a pipeline that included shell scripts.">
     <div class="page-links">
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#shell-script">Shell Script</a></li>
-    <li><a href="#comments">Comments</a></li>
-    <li><a href="#-to-process-many-types-of-files">$@ To process many types of files</a>
+    <li>
       <ul>
-        <li><a href="#for-sorting-unique">For sorting unique</a></li>
+        <li><a href="#objectives">Objectives</a></li>
+      </ul>
+    </li>
+    <li><a href="#shell-script">Shell Script</a>
+      <ul>
+        <li><a href="#creating-a-shell-script">Creating a Shell Script</a></li>
+        <li><a href="#executing-the-script">Executing the Script</a></li>
+        <li><a href="#making-the-script-flexible">Making the Script Flexible</a></li>
+        <li><a href="#handling-spaces-in-filenames">Handling Spaces in Filenames</a></li>
+        <li><a href="#using-additional-arguments">Using Additional Arguments</a></li>
+      </ul>
+    </li>
+    <li><a href="#adding-comments">Adding Comments</a></li>
+    <li><a href="#using--to-process-multiple-files">Using <code>$@</code> to Process Multiple Files</a>
+      <ul>
+        <li><a href="#finding-unique-entries">Finding Unique Entries</a></li>
       </ul>
     </li>
   </ul>
@@ -655,14 +731,20 @@ Creating a pipeline that included shell scripts.">
   </details>
 
 			</nav>
-			<p><em><strong>Objective</strong></em><br>
-Shell script that runs a command or a series of commands for a fixed set of files.<br>
-Run a shell script from the command line.<br>
-Using a shell script that operates on a set of fines defines by the user on the command line.<br>
-Creating a pipeline that included shell scripts.</p>
+			<h3 id="objectives">Objectives<a href="#objectives" class="anchor" aria-hidden="true">#</a> </h3>
+<ul>
+<li>Write a shell script that runs a command or a series of commands for a fixed set of files.</li>
+<li>Run a shell script from the command line.</li>
+<li>Create a shell script that operates on a set of files defined by the user on the command line.</li>
+<li>Build a pipeline that includes shell scripts.</li>
+</ul>
+<hr>
 <h2 id="shell-script">Shell Script<a href="#shell-script" class="anchor" aria-hidden="true">#</a> </h2>
-<p>We are going to take the commands we have repeat frequently and save them in files so that we can re-run all those operations again later by typing a single command.<br>
-So <em><strong>Shell Scripts</strong></em> are actually small programs.</p>
+<p>Shell scripts allow us to automate frequently used commands by saving them in a file, enabling us to execute them later with a single command. In essence, <strong>shell scripts</strong> are small programs.</p>
+<h3 id="creating-a-shell-script">Creating a Shell Script<a href="#creating-a-shell-script" class="anchor" aria-hidden="true">#</a> </h3>
+<ol>
+<li>
+<p>Navigate to the desired directory:</p>
 
 
 
@@ -671,17 +753,12 @@ So <em><strong>Shell Scripts</strong></em> are actually small programs.</p>
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="err">$</span> <span class="n">cd</span> <span class="n">alkanes</span>
-</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">nano</span> <span class="n">middle</span><span class="p">.</span><span class="n">sh</span>
-</span></span><span class="line"><span class="cl"><span class="cp"># creates a file that will contain the command to be run.
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
-</span></span><span class="line"><span class="cl"><span class="n">head</span> <span class="o">-</span><span class="n">n</span> <span class="mi">15</span> <span class="n">octane</span><span class="p">.</span><span class="n">pdb</span> <span class="o">|</span> <span class="n">tail</span> <span class="o">-</span><span class="n">n</span> <span class="mi">5</span>
-</span></span><span class="line"><span class="cl"><span class="cp"># is typed into the file, saved and closed.</span></span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nb">cd</span> alkanes</span></span></code></pre></div>
   </figure>
 </div>
-<p>This collects the lines 11-15 of the file <code>octane.pdb</code></p>
-<p>Once the file is saved in the directory, we can ask the shell(bash) to execute it.<br>
-<em><strong>bash [filename]</strong></em> runs the commands saved in a file.</p>
+</li>
+<li>
+<p>Create a new shell script file:</p>
 
 
 
@@ -690,11 +767,13 @@ So <em><strong>Shell Scripts</strong></em> are actually small programs.</p>
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="err">$</span> <span class="n">bash</span> <span class="n">middle</span><span class="p">.</span><span class="n">sh</span></span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ nano middle.sh</span></span></code></pre></div>
   </figure>
 </div>
-<p>To make the script more versatile we can remove octane and replace it with <code>$1</code>.
-Which means the first file name(or other argument) on the command line.</p>
+<p>This opens a file where you can write your commands.</p>
+</li>
+<li>
+<p>Add the following command to the file to extract specific lines:</p>
 
 
 
@@ -703,11 +782,17 @@ Which means the first file name(or other argument) on the command line.</p>
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">head</span> <span class="o">-</span><span class="n">n</span> <span class="mi">15</span> <span class="s">&#34;$1&#34;</span> <span class="o">|</span> <span class="n">tail</span> <span class="o">-</span><span class="n">n</span> <span class="mi">5</span></span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">head -n <span class="m">15</span> octane.pdb <span class="p">|</span> tail -n <span class="m">5</span></span></span></code></pre></div>
   </figure>
 </div>
-<p>In case filename happens to contain space, <code>$1</code> is put in <code>&quot;&quot;</code> quotes.<br>
-Now we can provide different arguments to the script.</p>
+<p>This command collects lines 11-15 of the file <code>octane.pdb</code>.</p>
+</li>
+<li>
+<p>Save and close the file.</p>
+</li>
+</ol>
+<h3 id="executing-the-script">Executing the Script<a href="#executing-the-script" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Once the script is saved, you can execute it using:</p>
 
 
 
@@ -716,14 +801,11 @@ Now we can provide different arguments to the script.</p>
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="err">$</span> <span class="n">bash</span> <span class="n">middle</span><span class="p">.</span><span class="n">sh</span> <span class="n">octane</span><span class="p">.</span><span class="n">pdb</span>
-</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">bash</span> <span class="n">middle</span><span class="p">.</span><span class="n">sh</span> <span class="n">pentane</span><span class="p">.</span><span class="n">pdb</span></span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ bash middle.sh</span></span></code></pre></div>
   </figure>
 </div>
-<p>The text editors <code>ms word, libreoffice</code> are not just basic text editors, the files are <code>.docx</code>.<br>
-The files also contain also contain formatting information about fonts, headings etc.<br>
-Commands like head expect only character to be provided so it is better to save script files using plain text editor as plain text.</p>
-<p>To make sure the numbers for head and tail can be altered by arguments, they can also be taken as <code>$1 $2 $3</code> in <code>middle.sh</code>.</p>
+<h3 id="making-the-script-flexible">Making the Script Flexible<a href="#making-the-script-flexible" class="anchor" aria-hidden="true">#</a> </h3>
+<p>To make the script more versatile, replace the specific file name with <code>$1</code>, which represents the first argument passed to the script:</p>
 
 
 
@@ -732,16 +814,10 @@ Commands like head expect only character to be provided so it is better to save 
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">head</span> <span class="o">-</span><span class="n">n</span> <span class="s">&#34;$2&#34;</span> <span class="s">&#34;$1&#34;</span> <span class="o">|</span> <span class="n">tail</span> <span class="o">-</span><span class="n">n</span> <span class="s">&#34;$3&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">bash</span> <span class="n">middle</span><span class="p">.</span><span class="n">sh</span> <span class="n">pentane</span><span class="p">.</span><span class="n">pdb</span> <span class="mi">15</span> <span class="mi">5</span><span class="err">`</span>
-</span></span><span class="line"><span class="cl"><span class="cp"># now 15 and 5 are arguments for head and tail
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
-</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">bash</span> <span class="n">middle</span><span class="p">.</span><span class="n">sh</span> <span class="n">pentane</span><span class="p">.</span><span class="n">pdb</span> <span class="mi">20</span> <span class="mi">5</span></span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">head -n <span class="m">15</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> <span class="p">|</span> tail -n <span class="m">5</span></span></span></code></pre></div>
   </figure>
 </div>
-<h2 id="comments">Comments<a href="#comments" class="anchor" aria-hidden="true">#</a> </h2>
-<p>To make sure <code>middle.sh</code> is understandable to others on what it does we can add comments which starts with <code>#</code> character and runs to the end of the line which is ignored.</p>
+<p>Now, you can provide different file names as arguments when executing the script:</p>
 
 
 
@@ -750,13 +826,12 @@ Commands like head expect only character to be provided so it is better to save 
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp"># Select lines from the middle of a file.
-</span></span></span><span class="line"><span class="cl"><span class="cp"># Usage: bash middle.sh filename end_line num_lines.
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
-</span></span><span class="line"><span class="cl"><span class="n">head</span> <span class="o">-</span><span class="n">n</span> <span class="s">&#34;$2&#34;</span> <span class="s">&#34;$1&#34;</span> <span class="o">|</span> <span class="n">tail</span> <span class="o">-</span><span class="n">n</span> <span class="s">&#34;$3&#34;</span></span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ bash middle.sh octane.pdb
+</span></span><span class="line"><span class="cl">$ bash middle.sh pentane.pdb</span></span></code></pre></div>
   </figure>
 </div>
-<h2 id="-to-process-many-types-of-files">$@ To process many types of files<a href="#-to-process-many-types-of-files" class="anchor" aria-hidden="true">#</a> </h2>
+<h3 id="handling-spaces-in-filenames">Handling Spaces in Filenames<a href="#handling-spaces-in-filenames" class="anchor" aria-hidden="true">#</a> </h3>
+<p>To ensure the script works with filenames that contain spaces, always enclose <code>$1</code> in double quotes:</p>
 
 
 
@@ -765,14 +840,12 @@ Commands like head expect only character to be provided so it is better to save 
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="err">$</span> <span class="n">wc</span> <span class="o">-</span><span class="n">l</span> <span class="o">*</span><span class="p">.</span><span class="n">pdb</span> <span class="o">|</span> <span class="n">sort</span> <span class="o">-</span><span class="n">n</span></span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">head -n <span class="m">15</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> <span class="p">|</span> tail -n <span class="m">5</span></span></span></code></pre></div>
   </figure>
 </div>
-<p>Used to sort based on number of lines in the <code>.pdb</code> files,<br>
-but it only sorts <code>.pdb</code> files and <code>sort -n</code> only sorts numerically.</p>
-<p>We can use <code>$1 $2</code> but we might not know how many files there are.<br>
-Instead we can use <code>$@</code> which means <em><strong>All of the command-line arguments to the shell script</strong></em>.<br>
-We should also put it in double quotes to handle spaces in argument <code>&quot;$@&quot;</code></p>
+<h3 id="using-additional-arguments">Using Additional Arguments<a href="#using-additional-arguments" class="anchor" aria-hidden="true">#</a> </h3>
+<p>You can also modify the script to accept line numbers as arguments:
+To make sure the numbers for head and tail can be altered by arguments, they can also be taken as <code>$1 $2 $3</code> in <code>middle.sh</code>.</p>
 
 
 
@@ -781,20 +854,10 @@ We should also put it in double quotes to handle spaces in argument <code>&quot;
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="err">$</span> <span class="n">nano</span> <span class="n">sorted</span><span class="p">.</span><span class="n">sh</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="cp"># sort files by their length.
-</span></span></span><span class="line"><span class="cl"><span class="cp"># Usage: bash sorted.sh one_or_more_filenames
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="n">wc</span> <span class="o">-</span><span class="n">l</span> <span class="s">&#34;$@&#34;</span> <span class="o">|</span> <span class="n">sort</span> <span class="o">-</span><span class="n">n</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">bash</span> <span class="n">sorted</span><span class="p">.</span><span class="n">sh</span> <span class="o">*</span><span class="p">.</span><span class="n">pdb</span> <span class="p">..</span><span class="o">/</span><span class="n">creatures</span><span class="cm">/*.dat
-</span></span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">head -n <span class="s2">&#34;</span><span class="nv">$2</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> <span class="p">|</span> tail -n <span class="s2">&#34;</span><span class="nv">$3</span><span class="s2">&#34;</span></span></span></code></pre></div>
   </figure>
 </div>
-<h3 id="for-sorting-unique">For sorting unique<a href="#for-sorting-unique" class="anchor" aria-hidden="true">#</a> </h3>
-<p>Script to find unique species in <code>scv</code> files where species is the second data field.<br>
-This script accepts any number of file names as a command line arguments.<br>
-Loops over all files</p>
+<p>Now you can specify the number of lines for <code>head</code> and <code>tail</code>:</p>
 
 
 
@@ -803,14 +866,85 @@ Loops over all files</p>
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">for</span> <span class="n">file</span> <span class="n">in</span> <span class="err">$@</span>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ bash middle.sh pentane.pdb <span class="m">15</span> <span class="m">5</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 15 and 5 arguments for head and tail</span>
+</span></span><span class="line"><span class="cl">$ bash middle.sh pentane.pdb <span class="m">20</span> <span class="m">5</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h2 id="adding-comments">Adding Comments<a href="#adding-comments" class="anchor" aria-hidden="true">#</a> </h2>
+<p>To make the script understandable, add comments using the <code>#</code> character:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Select lines from the middle of a file.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Usage: bash middle.sh filename end_line num_lines.</span>
+</span></span><span class="line"><span class="cl">head -n <span class="s2">&#34;</span><span class="nv">$2</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> <span class="p">|</span> tail -n <span class="s2">&#34;</span><span class="nv">$3</span><span class="s2">&#34;</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Comments are ignored by the shell but provide clarity for users.</p>
+<h2 id="using--to-process-multiple-files">Using <code>$@</code> to Process Multiple Files<a href="#using--to-process-multiple-files" class="anchor" aria-hidden="true">#</a> </h2>
+<p>To handle multiple files, use <code>$@</code>, which represents all command-line arguments:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ nano sorted.sh</span></span></code></pre></div>
+  </figure>
+</div>
+<p>Add the following script to sort files by their length:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Sort files by their length.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Usage: bash sorted.sh one_or_more_filenames</span>
+</span></span><span class="line"><span class="cl">wc -l <span class="s2">&#34;</span><span class="nv">$@</span><span class="s2">&#34;</span> <span class="p">|</span> sort -n</span></span></code></pre></div>
+  </figure>
+</div>
+<p>Execute the script with multiple files:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ bash sorted.sh *.pdb ../creatures/*.dat</span></span></code></pre></div>
+  </figure>
+</div>
+<h3 id="finding-unique-entries">Finding Unique Entries<a href="#finding-unique-entries" class="anchor" aria-hidden="true">#</a> </h3>
+<p>To find unique species in CSV files, where the species is the second data field, use a loop to process each file:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="k">for</span> file in <span class="s2">&#34;</span><span class="nv">$@</span><span class="s2">&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="k">do</span>
-</span></span><span class="line"><span class="cl">  <span class="n">echo</span> <span class="s">&#34;Unique species in $file:&#34;</span>
-</span></span><span class="line"><span class="cl">	<span class="cp"># Extract species names
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>	<span class="n">cut</span> <span class="o">-</span><span class="n">d</span> <span class="p">,</span> <span class="o">-</span><span class="n">f</span> <span class="mi">2</span> <span class="err">$</span><span class="n">file</span> <span class="o">|</span> <span class="n">sort</span> <span class="o">|</span> <span class="n">uniq</span>
-</span></span><span class="line"><span class="cl"><span class="n">done</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Unique species in </span><span class="nv">$file</span><span class="s2">:&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Extract species names</span>
+</span></span><span class="line"><span class="cl">    cut -d , -f <span class="m">2</span> <span class="s2">&#34;</span><span class="nv">$file</span><span class="s2">&#34;</span> <span class="p">|</span> sort <span class="p">|</span> uniq
+</span></span><span class="line"><span class="cl"><span class="k">done</span></span></span></code></pre></div>
   </figure>
 </div>
+<p>This script loops through all provided filenames and extracts unique species from each.</p>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				</div>

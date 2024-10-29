@@ -17,147 +17,164 @@ seo:
 
 ## [*mkdir*](/personal-site/docs/bash-linux/command-docs/mkdir) Creating Directories
 
-Open where a directory has to be added.     
-`mkdir [name]` to 'make directory' in the current directory.     
-	Using relative path without leading slash.
+To create a directory in the current location, use:
 
-`-p`  for multiple directories      
-`mkdir -p` creates a directory with nested sub-directories in a single operation.     
-`mkdir -p ../project/data ../project/results`.      
-
-`ls -R` to list all nested sub directories within a directories.
-
-To make a directory `2016` which has `data` and that has 2 directory `processed` and `raw`
-```c
-# method one                     # method two
-mkdir 2016                        mkdir 2016
-mkdir 2016/data                   cd 2016
-mkdir 2016/data/processed         mkdir data
-mkdir 2016/data/raw               cd data
-.                                 mkdir raw processed
-
-# method three
-mkdir -p 2016/data/raw
-mkdir -p 2016/data/processed
-# `-p` is creating any intermediate directory
-
-mkdir north south pacific
-# will create 3 different directories.
+```bash {frame="none"}
+mkdir [name]  # Make directory
 ```
 
+`-p` option is used to make Multiple directories.
 
+```bash {frame="none"}
+mkdir -p [path/to/nested/directories]  # Creates nested directories
 
+mkdir -p ../project/data ../project/results
+```
+`ls -R` to list all nested sub directories within a directories.
+
+### Example:
+To create a directory `2016` with a subdirectory `data` that contains two directories, `processed` and `raw`:
+
+#### Method 1: Step-by-Step Creation
+```bash {frame="none"}
+mkdir 2016
+mkdir 2016/data
+mkdir 2016/data/processed
+mkdir 2016/data/raw
+```
+
+#### Method 2: Navigating and Creating
+```bash {frame="none"}
+mkdir 2016
+cd 2016
+mkdir data
+cd data
+mkdir processed raw
+```
+
+#### Method 3: Using `-p`
+```bash {frame="none"}
+mkdir -p 2016/data/{processed,raw}  # Creates the full structure in one command
+```
+
+To create multiple directories at once:
+```bash {frame="none"}
+mkdir north south pacific  # Creates three separate directories
+```
 
 ## Naming Conventions
 
-* Don't use spaces as arguments need space separation in command line.
-* Use `_` or `-` instead of space.
-* Don't start with `-` as it will be considered as option/flag.
-* Stick with `0-9, a-z . - _`  as other symbols have different meaning.
-* To refer to names with spaces or other special characters, surround the name in single quotes ' '.
+- Avoid spaces; use `_` or `-` instead.
+- Do not start names with `-` to prevent confusion with options/flags.
+- Stick to characters: `0-9`, `a-z`, `.`, `-`, `_`. Special characters can have different meanings.
+- Use single quotes `' '` for names with spaces or special characters.
 
-***Single Quotes*** -     
-Enclosing characters in single quotes ' ' preserves the literal value of each character within the quotes.
+### Special Characters:
+- **Single Quotes:** Enclosing in single quotes preserves the literal value.
+- **Escape Character:** Use `\` to escape special characters, allowing them to be treated literally. It preserves the literal value of the next character that follows, with exception of newline.
 
-***Escape Character*** -      
-A non-quoted backslash `\` is the escape character.     
-It preserves the literal value of the next character that follows, with exception of newline.
+## Creating a Text File
 
+### Using the Nano Editor
+To create a text file with the `nano` editor:
 
-## Create a text file
-
-### Using nano editor
-
-`nano` text editor is used to create a `txt` file.      
-`nano draft.txt` will open nano text editor, data can be typed and then saved(many more options) commands are accessed by holding down `Ctr`.
-
-`nano` can only work with plain character data, no tables or images.      
-`nano` can do only this basic operation.
-
-Programmers use `Emacs` or `Vim`.
-Graphical editors such as `Gedit` or `VScode`.      
-On windows there are `Notecode++`.  `notepad` can run like `nano`
-
-
-### [*touch*](/personal-site/docs/bash-linux/command-docs/touch) command
-
-`touch my_file.txt` creates a blank text file.      
-`touch  <name.txt>`  to make a file.
-
-
-### [*rm*](/personal-site/docs/bash-linux/command-docs/rm-remove) for Removing a file
-
-`rm my_file.txt`    file gets removed.        
-`rm -i`  will ask for confirmation before the deletion.       
-`rm` works only on files, not on directories.  `rm thesis`  raises an error.    
-`rm -i thesis/quote.txt` will work after confirmation.
-
-We can remove a directory and all its contents by using the recursive `-r`      
-`rm -r thesis`   `rm -r -i`
-
-`rm -i *.txt`  removing all `.txt` file in directory with permission needed for each.
-
-Shell does not have any trash bin so any file deleted is actually deleted.
-
-
-## [Moving files](/personal-site/docs/bash-linux/command-docs/mv-move) and directories
-
-### Renaming by moving a file to new name!!
-
-`mv [old] [new]` moves or renames a file or directory.
-
-While in directory behind the directory with file.     
-```c
-$ mv trial/draft.txt  trial/quotes.txt
-```
-The `draft.txt` file is moved to `quotes.txt`  which is similar to renaming the file.     
-
-While in the same directory     
-```c
-$ mv draft.txt quotes.txt
+```bash {frame="none"}
+nano draft.txt  # Opens nano for editing
 ```
 
-When it is moved to a a directory with same file name, it will delete the previous file silently.
-`mv` will not ask for confirmation by default.
-An additional option, `mv -i` `mv --interactive` will cause `mv` to request such confirmation.
+Type your content, then save using `Ctrl + O` and exit with `Ctrl + X`. 
 
-File can be moved to directory also
+*Note:* `nano` is a simple text editor suitable for plain text files. For more complex editing, consider `Emacs`, `Vim`, or graphical editors like `Gedit` or `VS Code`. On Windows, alternatives include `Notepad++` or `Notepad`.
 
-```c
-$ mv trial/quotes.txt`
-# this will move it from that directory to current one.
+### Using the [*touch*](/personal-site/docs/bash-linux/command-docs/touch) Command
+To create an empty file:
 
-$ mv sucrose.dat maltase.dat ../raw
-# moving two files to raw file in the parent directory
+```bash {frame="none"}
+touch my_file.txt  # Creates a blank text file
 ```
 
-## [Copying](/personal-site/docs/bash-linux/command-docs/cp-copy) files and directories
+## Removing Files [*rm*](/personal-site/docs/bash-linux/command-docs/rm-remove)
 
-`cp` works similar to `mv`, but copies the file.
+To remove a file:
 
-```c
-cp [old] [new]   # copies a file
-
-$ cp quotes.txt thesis/quotation.txt
-# copies file to another directory with different name.
+```bash {frame="none"}
+rm my_file.txt  # Deletes the specified file
 ```
 
-A directory and all its contents are copied by using recursive option `-r`    
-(like backing up directory)
-```c
-$ cp -r thesis thesis_backup
+- Use `rm -i` to prompt for confirmation before deletion.
+- `rm` cannot remove directories directly. To remove a directory and its contents, use the recursive `-r` option:
+
+```bash {frame="none"}
+rm -r directory_name  # Deletes the directory and all its contents
 ```
 
-`-r` is used to copy the directory, if it is not included, the directory will be omitted.
+- To remove files matching a pattern (e.g., all `.txt` files) with confirmation:
 
+```bash {frame="none"}
+rm -i *.txt  # Prompts for each .txt file
+```
 
-## Operation with multiple files and directories
+*Note:* Shell does not have a trash bin; deleted files are permanently removed.
 
-Copying or moving several files can be done by giving multiple files,
+## Moving Files and Directories [Moving files](/personal-site/docs/bash-linux/command-docs/mv-move)
 
-If given more than one file names followed by a directory name(directory as last argument)   
-`cp` copies the files to the named directory
-```c
+### Renaming Files
+To rename a file or move it to a new location:
+
+```bash {frame="none"}
+mv [old] [new]  # Moves or renames a file
+```
+
+Examples:
+```bash {frame="none"}
+mv trial/draft.txt trial/quotes.txt  # Renames draft.txt to quotes.txt
+mv draft.txt quotes.txt              # While in Same directory rename
+```
+
+*Note:* Moving a file to a directory with the same name will silently overwrite the original. Use `mv -i` to prompt for confirmation.
+
+To move files to a different directory:
+```bash {frame="none"}
+mv trial/quotes.txt .  # Moves to the current directory
+mv sucrose.dat maltase.dat ../raw  # Moves files to the parent directory's raw folder
+```
+
+## Copying Files and Directories [cp](/personal-site/docs/bash-linux/command-docs/cp-copy)
+
+To copy a file:
+
+```bash {frame="none"}
+cp [old] [new]  # Copies a file
+```
+
+Example:
+```bash {frame="none"}
+cp quotes.txt thesis/quotation.txt  # Copies to a new location
+```
+
+To copy a directory and all its contents, use `-r`:
+
+```bash {frame="none"}
+cp -r thesis thesis_backup  # Copies the entire directory
+```
+
+## Operations with Multiple Files and Directories
+
+To copy or move multiple files, list the files followed by the target directory:
+If given more than one file names followed by a directory name(directory as last argument)
+
+```bash {frame="none"}
+cp file1.txt file2.txt target_directory/  # Copy multiple files
+mv file1.txt file2.txt target_directory/   # Move multiple files
+```
+
+Using wildcards can simplify this process:
+
+```bash {frame="none"}
+cp *.txt backup/  # Copies all .txt files to backup/
+```
+
+```bash {frame="none"}
 $ mkdir backup
 
 $ cd cretures/minotaur.dat creatures/unicorn.dat backup/
@@ -166,36 +183,42 @@ $ cd minotaur.dat unicorn.dat basilisk.dat
 #all three are file names, makes a error, this can be handled by using wildcards.
 ```
 
+## Wildcards
 
-## Wild Cards
+Wildcards represent unknown characters in commands. 
 
-'wildcards' are special characters that can be used to represent unknown characters or sets of characters when navigating the Unix system.
+Common wildcards include:
 
-`ethane.pdb   methane.pdb   propane.pdb   pentane.pdb`        
-`*` is a wild card which represents 0 or more characters.     
-`*.pdb`  represents every file that ends with `.pdb`          
-`*ethane.pdb` represents ethane and methane.                  
-`p*.pdb` represents files that begin with `p` and has `.pdb`    
+- **`*`**: Represents zero or more characters.
+  - `*.pdb` matches all files ending with `.pdb`.
+    `*ethane.pdb` represents ethane and methane.
+  - `p*.pdb` matches files starting with `p` and has `.pdb`.
+  
+- **`?`**: Represents exactly one character.
+  - `?ethane.pdb` matches only `methane.pdb`.
 
-`?` is also a wildcard, but represents exactly one character.     
-`?ethane.pdb`  represents only `methane.pdb`
+### Using Wildcards
+When executing commands with wildcards:
+```bash {frame="none"}
+ls *t*ane.pdb   # Lists files with 't' and 'ane' in their names
+cp *dataset* backup/datasets  # Copies all files with 'dataset' in the name
 
-Wild cards can be used in combination with one another.       
-`???ane.pde`   is any three characters followed by `---ane.pde`
-
-```c
-ls *t*ane.pdb   # gives most of names
 ls *t?ne.*     # gives octane pentane
 ls *t??ne.pdb  # ethane methane
 ls ethane.*    #only ethane
+
+```
+
+Wildcards can be combined for more specific patterns:
+```bash {frame="none"}
+ls ???ane.pdb  # Matches any three characters followed by 'ane.pdb'
 ```
 When a shell sees a wildcard it expands the wildcard to create a list of matching filenames before running the preceding command.
-
-`*.pdf` in directory with `*.pdb` will throw error
+*Note:* Be cautious; using wildcards can result in errors if not handled properly (e.g., `*.pdf` in a directory with `.pdb` files).
 
 
 ### Using wildcards for copying
-```c
+```bash {frame="none"}
 $ cp *dataset* backup/datasets
 # copy anything having dataset as name to datasets directory inside backups
 
@@ -208,5 +231,3 @@ $ cp 2015-11-* send_to_bob/all_november_files/
 $ cp *-23-dataset* send_to_bob/all_datasets_created_on_23rd/
 # just 23rd files
 ```
-
-

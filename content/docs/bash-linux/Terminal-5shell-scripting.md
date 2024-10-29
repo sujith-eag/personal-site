@@ -16,112 +16,109 @@ seo:
 
 
 
-***Objective***       
-Shell script that runs a command or a series of commands for a fixed set of files.      
-Run a shell script from the command line.     
-Using a shell script that operates on a set of fines defines by the user on the command line.     
-Creating a pipeline that included shell scripts.
+### Objectives
+- Write a shell script that runs a command or a series of commands for a fixed set of files.
+- Run a shell script from the command line.
+- Create a shell script that operates on a set of files defined by the user on the command line.
+- Build a pipeline that includes shell scripts.
 
+---
 
 ## Shell Script
 
-We are going to take the commands we have repeat frequently and save them in files so that we can re-run all those operations again later by typing a single command.     
-So ***Shell Scripts*** are actually small programs.
-```c
-$ cd alkanes
-$ nano middle.sh
-# creates a file that will contain the command to be run.
+Shell scripts allow us to automate frequently used commands by saving them in a file, enabling us to execute them later with a single command. In essence, **shell scripts** are small programs.
 
-head -n 15 octane.pdb | tail -n 5
-# is typed into the file, saved and closed.
-```
-This collects the lines 11-15 of the file `octane.pdb`
+### Creating a Shell Script
+1. Navigate to the desired directory:
+   ```bash {frame="none"}
+   $ cd alkanes
+   ```
+2. Create a new shell script file:
+   ```bash {frame="none"}
+   $ nano middle.sh
+   ```
+   This opens a file where you can write your commands.
 
-Once the file is saved in the directory, we can ask the shell(bash) to execute it.      
-***bash [filename]*** runs the commands saved in a file.
-```c
+3. Add the following command to the file to extract specific lines:
+   ```bash {frame="none"}
+   head -n 15 octane.pdb | tail -n 5
+   ```
+   This command collects lines 11-15 of the file `octane.pdb`.
+
+4. Save and close the file.
+
+### Executing the Script
+Once the script is saved, you can execute it using:
+```bash {frame="none"}
 $ bash middle.sh
 ```
 
-To make the script more versatile we can remove octane and replace it with `$1`.
-Which means the first file name(or other argument) on the command line.
-```c
+### Making the Script Flexible
+To make the script more versatile, replace the specific file name with `$1`, which represents the first argument passed to the script:
+```bash {frame="none"}
 head -n 15 "$1" | tail -n 5
 ```
-
-In case filename happens to contain space, `$1` is put in `""` quotes.      
-Now we can provide different arguments to the script.
-```c
+Now, you can provide different file names as arguments when executing the script:
+```bash {frame="none"}
 $ bash middle.sh octane.pdb
 $ bash middle.sh pentane.pdb
 ```
 
+### Handling Spaces in Filenames
+To ensure the script works with filenames that contain spaces, always enclose `$1` in double quotes:
+```bash {frame="none"}
+head -n 15 "$1" | tail -n 5
+```
 
-The text editors `ms word, libreoffice` are not just basic text editors, the files are `.docx`.     
-The files also contain also contain formatting information about fonts, headings etc.       
-Commands like head expect only character to be provided so it is better to save script files using plain text editor as plain text.
-
-
+### Using Additional Arguments
+You can also modify the script to accept line numbers as arguments:
 To make sure the numbers for head and tail can be altered by arguments, they can also be taken as `$1 $2 $3` in `middle.sh`.
 
-```c
+
+```bash {frame="none"}
 head -n "$2" "$1" | tail -n "$3"
-
-$ bash middle.sh pentane.pdb 15 5`
-# now 15 and 5 are arguments for head and tail
-
+```
+Now you can specify the number of lines for `head` and `tail`:
+```bash {frame="none"}
+$ bash middle.sh pentane.pdb 15 5
+# 15 and 5 arguments for head and tail
 $ bash middle.sh pentane.pdb 20 5
 ```
 
-
-## Comments
-
-To make sure `middle.sh` is understandable to others on what it does we can add comments which starts with `#` character and runs to the end of the line which is ignored.
-
-```c
+## Adding Comments
+To make the script understandable, add comments using the `#` character:
+```bash {frame="none"}
 # Select lines from the middle of a file.
 # Usage: bash middle.sh filename end_line num_lines.
-
 head -n "$2" "$1" | tail -n "$3"
 ```
+Comments are ignored by the shell but provide clarity for users.
 
-
-
-## $@ To process many types of files
-
-```c
-$ wc -l *.pdb | sort -n
-```
-Used to sort based on number of lines in the `.pdb` files,        
-but it only sorts `.pdb` files and `sort -n` only sorts numerically.
-
-We can use `$1 $2` but we might not know how many files there are.      
-Instead we can use `$@` which means ***All of the command-line arguments to the shell script***.      
-We should also put it in double quotes to handle spaces in argument `"$@"`
-```c
+## Using `$@` to Process Multiple Files
+To handle multiple files, use `$@`, which represents all command-line arguments:
+```bash {frame="none"}
 $ nano sorted.sh
-
-# sort files by their length.
+```
+Add the following script to sort files by their length:
+```bash {frame="none"}
+# Sort files by their length.
 # Usage: bash sorted.sh one_or_more_filenames
 wc -l "$@" | sort -n
-
+```
+Execute the script with multiple files:
+```bash {frame="none"}
 $ bash sorted.sh *.pdb ../creatures/*.dat
 ```
 
-
-### For sorting unique
-
-Script to find unique species in `scv` files where species is the second data field.      
-This script accepts any number of file names as a command line arguments.     
-Loops over all files
-```c
-for file in $@
+### Finding Unique Entries
+To find unique species in CSV files, where the species is the second data field, use a loop to process each file:
+```bash {frame="none"}
+for file in "$@"
 do
-  echo "Unique species in $file:"
-	# Extract species names
-	cut -d , -f 2 $file | sort | uniq
+    echo "Unique species in $file:"
+    # Extract species names
+    cut -d , -f 2 "$file" | sort | uniq
 done
 ```
-
-
+This script loops through all provided filenames and extracts unique species from each.
 

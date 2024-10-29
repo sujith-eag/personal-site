@@ -46,12 +46,17 @@
 
 <meta property="og:title" content="Bash - 4 Loops Scripting">
 <meta property="og:description" content="Objectives
-Writing a loop that applies to one or more commands separately to each file in a set of files.
+
+Write a loop that applies to one or more commands separately to each file in a set of files.
 Trace the values taken by a loop variable during the execution of the loop.
-Explain the difference between variable&rsquo;s name and its value.
-Explain why spaces and some punctuation characters should&rsquo;t be used in the file name.
+Explain the difference between a variable&rsquo;s name and its value.
+Explain why spaces and some punctuation characters shouldn&rsquo;t be used in filenames.
 Demonstrate how to see what commands have recently been executed.
-Run recently executed commands without retyping them.">
+Run recently executed commands without retyping them.
+
+
+Loops
+Loops are programming constructs that allow us to repeat a command or set of commands for each item in a list.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://localhost:1313/personal-site/docs/bash-linux/bash-4-loops-scripting/"><meta property="og:image" content="http://localhost:1313/personal-site/cover.png"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2024-10-22T09:34:02+05:30">
@@ -60,12 +65,17 @@ Run recently executed commands without retyping them.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://localhost:1313/personal-site/cover.png"><meta name="twitter:title" content="Bash - 4 Loops Scripting">
 <meta name="twitter:description" content="Objectives
-Writing a loop that applies to one or more commands separately to each file in a set of files.
+
+Write a loop that applies to one or more commands separately to each file in a set of files.
 Trace the values taken by a loop variable during the execution of the loop.
-Explain the difference between variable&rsquo;s name and its value.
-Explain why spaces and some punctuation characters should&rsquo;t be used in the file name.
+Explain the difference between a variable&rsquo;s name and its value.
+Explain why spaces and some punctuation characters shouldn&rsquo;t be used in filenames.
 Demonstrate how to see what commands have recently been executed.
-Run recently executed commands without retyping them.">
+Run recently executed commands without retyping them.
+
+
+Loops
+Loops are programming constructs that allow us to repeat a command or set of commands for each item in a list.">
 
     
     
@@ -291,19 +301,39 @@ Run recently executed commands without retyping them.">
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/personal-site/docs/tools/git-github/">Git Github</a>
+    <details open>
+      <summary>Git Github</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/tools/git-github/git-github/">Git &amp; Github</a>
+  </li>
+      </ul>
+    </details>
   </li>
 
   <li>
-      <a href="/personal-site/docs/tools/vscode/">Vscode</a>
+    <details open>
+      <summary>Vscode</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/tools/vscode/vscode/">VScode</a>
+  </li>
+      </ul>
+    </details>
   </li>
 
   <li>
-      <a href="/personal-site/docs/tools/obsidian/">Obsidian</a>
-  </li>
+    <details open>
+      <summary>Obsidian</summary>
+      <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/personal-site/docs/tools/chrome/">Chrome</a>
+      <a href="/personal-site/docs/tools/obsidian/obsidian/">Obsidian</a>
+  </li>
+      </ul>
+    </details>
   </li>
       </ul>
     </details>
@@ -595,19 +625,39 @@ Run recently executed commands without retyping them.">
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/personal-site/docs/tools/git-github/">Git Github</a>
+    <details open>
+      <summary>Git Github</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/tools/git-github/git-github/">Git &amp; Github</a>
+  </li>
+      </ul>
+    </details>
   </li>
 
   <li>
-      <a href="/personal-site/docs/tools/vscode/">Vscode</a>
+    <details open>
+      <summary>Vscode</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/tools/vscode/vscode/">VScode</a>
+  </li>
+      </ul>
+    </details>
   </li>
 
   <li>
-      <a href="/personal-site/docs/tools/obsidian/">Obsidian</a>
-  </li>
+    <details open>
+      <summary>Obsidian</summary>
+      <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/personal-site/docs/tools/chrome/">Chrome</a>
+      <a href="/personal-site/docs/tools/obsidian/obsidian/">Obsidian</a>
+  </li>
+      </ul>
+    </details>
   </li>
       </ul>
     </details>
@@ -624,13 +674,25 @@ Run recently executed commands without retyping them.">
   <h3>On this page</h3>
     <nav id="toc">
   <ul>
-    <li><a href="#loops">Loops</a></li>
-    <li><a href="#saving-to-a-file-in-a-loop">Saving to a file in a loop</a></li>
+    <li>
+      <ul>
+        <li><a href="#objectives">Objectives</a></li>
+      </ul>
+    </li>
+    <li><a href="#loops">Loops</a>
+      <ul>
+        <li><a href="#basic-loop-structure">Basic Loop Structure</a></li>
+        <li><a href="#example-echoing-numbers">Example: Echoing Numbers</a></li>
+        <li><a href="#common-mistakes">Common Mistakes</a></li>
+        <li><a href="#filtering-files">Filtering Files</a></li>
+      </ul>
+    </li>
+    <li><a href="#saving-output-to-a-file-in-a-loop">Saving Output to a File in a Loop</a></li>
     <li><a href="#piping">Piping</a></li>
-    <li><a href="#spaces-in-names">Spaces in names</a></li>
-    <li><a href="#copying-a-file-into-multiple-files">Copying a file into multiple files</a></li>
+    <li><a href="#handling-spaces-in-filenames">Handling Spaces in Filenames</a></li>
+    <li><a href="#copying-files-into-multiple-files">Copying Files into Multiple Files</a></li>
     <li><a href="#scripting">Scripting</a></li>
-    <li><a href="#nested-loop">Nested loop</a></li>
+    <li><a href="#nested-loops">Nested Loops</a></li>
   </ul>
 </nav>
 </div>
@@ -646,28 +708,44 @@ Run recently executed commands without retyping them.">
     <div class="page-links">
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#loops">Loops</a></li>
-    <li><a href="#saving-to-a-file-in-a-loop">Saving to a file in a loop</a></li>
+    <li>
+      <ul>
+        <li><a href="#objectives">Objectives</a></li>
+      </ul>
+    </li>
+    <li><a href="#loops">Loops</a>
+      <ul>
+        <li><a href="#basic-loop-structure">Basic Loop Structure</a></li>
+        <li><a href="#example-echoing-numbers">Example: Echoing Numbers</a></li>
+        <li><a href="#common-mistakes">Common Mistakes</a></li>
+        <li><a href="#filtering-files">Filtering Files</a></li>
+      </ul>
+    </li>
+    <li><a href="#saving-output-to-a-file-in-a-loop">Saving Output to a File in a Loop</a></li>
     <li><a href="#piping">Piping</a></li>
-    <li><a href="#spaces-in-names">Spaces in names</a></li>
-    <li><a href="#copying-a-file-into-multiple-files">Copying a file into multiple files</a></li>
+    <li><a href="#handling-spaces-in-filenames">Handling Spaces in Filenames</a></li>
+    <li><a href="#copying-files-into-multiple-files">Copying Files into Multiple Files</a></li>
     <li><a href="#scripting">Scripting</a></li>
-    <li><a href="#nested-loop">Nested loop</a></li>
+    <li><a href="#nested-loops">Nested Loops</a></li>
   </ul>
 </nav>
     </div>
   </details>
 
 			</nav>
-			<p><em><strong>Objectives</strong></em><br>
-Writing a loop that applies to one or more commands separately to each file in a set of files.<br>
-Trace the values taken by a loop variable during the execution of the loop.<br>
-Explain the difference between variable&rsquo;s name and its value.<br>
-Explain why spaces and some punctuation characters should&rsquo;t be used in the file name.<br>
-Demonstrate how to see what commands have recently been executed.<br>
-Run recently executed commands without retyping them.</p>
+			<h3 id="objectives">Objectives<a href="#objectives" class="anchor" aria-hidden="true">#</a> </h3>
+<ul>
+<li>Write a loop that applies to one or more commands separately to each file in a set of files.</li>
+<li>Trace the values taken by a loop variable during the execution of the loop.</li>
+<li>Explain the difference between a variable&rsquo;s name and its value.</li>
+<li>Explain why spaces and some punctuation characters shouldn&rsquo;t be used in filenames.</li>
+<li>Demonstrate how to see what commands have recently been executed.</li>
+<li>Run recently executed commands without retyping them.</li>
+</ul>
+<hr>
 <h2 id="loops">Loops<a href="#loops" class="anchor" aria-hidden="true">#</a> </h2>
 <p>Loops are programming constructs that allow us to repeat a command or set of commands for each item in a list.</p>
+<h3 id="basic-loop-structure">Basic Loop Structure<a href="#basic-loop-structure" class="anchor" aria-hidden="true">#</a> </h3>
 
 
 
@@ -676,18 +754,20 @@ Run recently executed commands without retyping them.</p>
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="err">$</span> <span class="k">for</span> <span class="n">filename</span> <span class="n">is</span> <span class="n">basilisk</span><span class="p">.</span><span class="n">dat</span> <span class="n">minotaur</span><span class="p">.</span><span class="n">dat</span> <span class="n">unicorn</span><span class="p">.</span><span class="n">dat</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="k">do</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> 	<span class="n">echo</span> <span class="err">$</span><span class="n">filename</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> 	<span class="n">head</span> <span class="o">-</span><span class="n">n</span> <span class="mi">2</span> <span class="err">$</span><span class="n">filename</span> <span class="o">|</span> <span class="n">tail</span> <span class="o">-</span><span class="n">n</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="n">done</span></span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="k">for</span> filename in basilisk.dat minotaur.dat unicorn.dat
+</span></span><span class="line"><span class="cl"><span class="k">do</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="nv">$filename</span>
+</span></span><span class="line"><span class="cl">    head -n <span class="m">2</span> <span class="nv">$filename</span> <span class="p">|</span> tail -n <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span></span></span></code></pre></div>
   </figure>
 </div>
-<p><code>for</code> indicates the start of for-loop.<br>
-<code>do</code> indicates the start of job execution list.<br>
-<code>done</code> indicates the end of a loop.<br>
-<code>$</code> is used to indicate it as a variable that has to be replaced by its value.</p>
-<p><code>echo</code> all 10 numbers using loop</p>
+<ul>
+<li><code>for</code> indicates the start of the loop.</li>
+<li><code>do</code> begins the block of commands to execute.</li>
+<li><code>done</code> marks the end of the loop.</li>
+<li><code>$</code> is used to denote a variable that will be replaced by its value.</li>
+</ul>
+<h3 id="example-echoing-numbers">Example: Echoing Numbers<a href="#example-echoing-numbers" class="anchor" aria-hidden="true">#</a> </h3>
 
 
 
@@ -696,13 +776,14 @@ Run recently executed commands without retyping them.</p>
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="err">$</span> <span class="k">for</span> <span class="n">number</span> <span class="n">in</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="k">do</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> 	<span class="n">echo</span> <span class="err">$</span><span class="n">number</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="n">done</span></span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="k">for</span> number in <span class="m">0</span> <span class="m">1</span> <span class="m">2</span> <span class="m">3</span> <span class="m">4</span> <span class="m">5</span> <span class="m">6</span> <span class="m">7</span> <span class="m">8</span> <span class="m">9</span>
+</span></span><span class="line"><span class="cl"><span class="k">do</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="nv">$number</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span></span></span></code></pre></div>
   </figure>
 </div>
-<p><em>Wrong method</em></p>
+<h3 id="common-mistakes">Common Mistakes<a href="#common-mistakes" class="anchor" aria-hidden="true">#</a> </h3>
+<p><strong>Incorrect Method:</strong></p>
 
 
 
@@ -711,14 +792,14 @@ Run recently executed commands without retyping them.</p>
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="err">$</span> <span class="k">for</span> <span class="n">data</span> <span class="n">in</span> <span class="o">*</span><span class="p">.</span><span class="n">pdb</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="k">do</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> 	<span class="n">ls</span> <span class="o">*</span><span class="p">.</span><span class="n">pdb</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="n">done</span>
-</span></span><span class="line"><span class="cl"><span class="cp"># here all values are printed every time, not one at a time</span></span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="k">for</span> data in *.pdb
+</span></span><span class="line"><span class="cl"><span class="k">do</span>
+</span></span><span class="line"><span class="cl">    ls *.pdb
+</span></span><span class="line"><span class="cl"><span class="k">done</span></span></span></code></pre></div>
   </figure>
 </div>
-<p>Right way, prints each one of the values individually.</p>
+<p><em>This prints all <code>.pdb</code> files repeatedly.</em></p>
+<p><strong>Correct Method:</strong></p>
 
 
 
@@ -727,13 +808,15 @@ Run recently executed commands without retyping them.</p>
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="err">$</span> <span class="k">for</span> <span class="n">data</span> <span class="n">in</span> <span class="o">*</span><span class="p">.</span><span class="n">pdb</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="k">do</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> 	<span class="n">ls</span> <span class="err">$</span><span class="n">data</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="n">done</span></span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="k">for</span> data in *.pdb
+</span></span><span class="line"><span class="cl"><span class="k">do</span>
+</span></span><span class="line"><span class="cl">    ls <span class="nv">$data</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span></span></span></code></pre></div>
   </figure>
 </div>
-<p>Prints only cubane.pdb</p>
+<p><em>This prints each file individually.</em></p>
+<h3 id="filtering-files">Filtering Files<a href="#filtering-files" class="anchor" aria-hidden="true">#</a> </h3>
+<p>To print only specific files:</p>
 
 
 
@@ -742,13 +825,14 @@ Run recently executed commands without retyping them.</p>
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="err">$</span> <span class="k">for</span> <span class="n">filename</span> <span class="n">in</span> <span class="n">c</span><span class="o">*</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="k">do</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> 	<span class="n">ls</span> <span class="err">$</span><span class="n">filename</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="n">done</span></span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="k">for</span> filename in c*   <span class="c1"># to print cubane.pdb</span>
+</span></span><span class="line"><span class="cl"><span class="k">do</span>
+</span></span><span class="line"><span class="cl">    ls <span class="nv">$filename</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span></span></span></code></pre></div>
   </figure>
 </div>
-<p>prints only cubane.pdb and octane.pdb</p>
+<p><em>This prints files starting with &lsquo;c&rsquo;.</em></p>
+<p>To print files that contain &lsquo;c&rsquo;:</p>
 
 
 
@@ -757,13 +841,13 @@ Run recently executed commands without retyping them.</p>
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="err">$</span> <span class="k">for</span> <span class="n">filename</span> <span class="n">in</span> <span class="o">*</span><span class="n">c</span><span class="o">*</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="k">do</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> 	<span class="n">ls</span> <span class="err">$</span><span class="n">filename</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="n">done</span></span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="k">for</span> filename in *c*
+</span></span><span class="line"><span class="cl"><span class="k">do</span>
+</span></span><span class="line"><span class="cl">    ls <span class="nv">$filename</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span></span></span></code></pre></div>
   </figure>
 </div>
-<h2 id="saving-to-a-file-in-a-loop">Saving to a file in a loop<a href="#saving-to-a-file-in-a-loop" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="saving-output-to-a-file-in-a-loop">Saving Output to a File in a Loop<a href="#saving-output-to-a-file-in-a-loop" class="anchor" aria-hidden="true">#</a> </h2>
 
 
 
@@ -772,16 +856,16 @@ Run recently executed commands without retyping them.</p>
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="err">$</span> <span class="k">for</span> <span class="n">alkanes</span> <span class="n">in</span> <span class="o">*</span><span class="p">.</span><span class="n">pdb</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="k">do</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> 	<span class="n">echo</span> <span class="err">$</span><span class="n">alkanes</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> 	<span class="n">cat</span> <span class="err">$</span><span class="n">alkanes</span> <span class="o">&gt;&gt;</span> <span class="n">alkanes</span><span class="p">.</span><span class="n">pdb</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="n">done</span></span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="k">for</span> alkanes in *.pdb
+</span></span><span class="line"><span class="cl"><span class="k">do</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="nv">$alkanes</span>
+</span></span><span class="line"><span class="cl">    cat <span class="nv">$alkanes</span> &gt;&gt; alkanes.pdb
+</span></span><span class="line"><span class="cl"><span class="k">done</span></span></span></code></pre></div>
   </figure>
 </div>
-<p>prints all  <code>.pdb</code>  and appends all into <code>alkanes.pdb</code><br>
-using <code>&gt;</code> would have only one value in the file.</p>
+<p><em>This appends the contents of all <code>.pdb</code> files into <code>alkanes.pdb</code>. Using <code>&gt;</code> would overwrite the file each time.</em></p>
 <h2 id="piping">Piping<a href="#piping" class="anchor" aria-hidden="true">#</a> </h2>
+<p>You can combine commands using a pipe (<code>|</code>):</p>
 
 
 
@@ -790,19 +874,16 @@ using <code>&gt;</code> would have only one value in the file.</p>
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="err">$</span> <span class="k">for</span> <span class="n">filename</span> <span class="n">in</span> <span class="o">*</span><span class="p">.</span><span class="n">dat</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="k">do</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> 	<span class="n">echo</span> <span class="err">$</span><span class="n">filename</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> 	<span class="n">head</span> <span class="o">-</span><span class="n">n</span> <span class="mi">100</span> <span class="err">$</span><span class="n">filename</span> <span class="o">|</span> <span class="n">tail</span> <span class="o">-</span><span class="n">n</span> <span class="mi">20</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="n">done</span></span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="k">for</span> filename in *.dat
+</span></span><span class="line"><span class="cl"><span class="k">do</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="nv">$filename</span>
+</span></span><span class="line"><span class="cl">    head -n <span class="m">100</span> <span class="nv">$filename</span> <span class="p">|</span> tail -n <span class="m">20</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span></span></span></code></pre></div>
   </figure>
 </div>
-<p>echo all  <code>.dat</code><br>
-assuming each file has at least 100 lines,<br>
-take the first 100 lines and take the last 20 lines from that.<br>
-So gives lines from 81 to 100.</p>
-<p>what happens to the lines??</p>
-<h2 id="spaces-in-names">Spaces in names<a href="#spaces-in-names" class="anchor" aria-hidden="true">#</a> </h2>
+<p><em>This outputs the last 20 lines from the first 100 lines of each <code>.dat</code> file.</em> So gives lines from 81 to 100.</p>
+<h2 id="handling-spaces-in-filenames">Handling Spaces in Filenames<a href="#handling-spaces-in-filenames" class="anchor" aria-hidden="true">#</a> </h2>
+<p>When dealing with filenames that contain spaces, enclose them in quotes:</p>
 
 
 
@@ -811,14 +892,15 @@ So gives lines from 81 to 100.</p>
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="err">$</span> <span class="k">for</span> <span class="n">filename</span> <span class="n">in</span> <span class="s">&#34;red dragon.dat&#34;</span> <span class="s">&#34;purple unicorn.dat&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="k">do</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> 	<span class="n">head</span> <span class="o">-</span><span class="n">n</span> <span class="mi">100</span> <span class="err">$</span><span class="n">filename</span> <span class="o">|</span> <span class="n">tail</span> <span class="o">-</span><span class="n">n</span> <span class="mi">20</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="n">done</span></span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="k">for</span> filename in <span class="s2">&#34;red dragon.dat&#34;</span> <span class="s2">&#34;purple unicorn.dat&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">do</span>
+</span></span><span class="line"><span class="cl">    head -n <span class="m">100</span> <span class="s2">&#34;</span><span class="nv">$filename</span><span class="s2">&#34;</span> <span class="p">|</span> tail -n <span class="m">20</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span></span></span></code></pre></div>
   </figure>
 </div>
-<p>Enclosing the file with &quot; &quot; around the filename but it should not be around $filename.</p>
-<h2 id="copying-a-file-into-multiple-files">Copying a file into multiple files<a href="#copying-a-file-into-multiple-files" class="anchor" aria-hidden="true">#</a> </h2>
+<p><em>Note: Do not enclose <code>$filename</code> in quotes inside the loop.</em></p>
+<h2 id="copying-files-into-multiple-files">Copying Files into Multiple Files<a href="#copying-files-into-multiple-files" class="anchor" aria-hidden="true">#</a> </h2>
+<p>Using a wildcard directly with <code>cp</code> may raise errors:</p>
 
 
 
@@ -827,12 +909,11 @@ So gives lines from 81 to 100.</p>
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="err">$</span> <span class="n">cp</span> <span class="o">*</span><span class="p">.</span><span class="n">dat</span> <span class="n">original</span><span class="o">-*</span><span class="p">.</span><span class="n">dat</span></span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cp *.dat original-*.dat</span></span></code></pre></div>
   </figure>
 </div>
-<p>To create a new file with original<code>-</code> as prefix.<br>
-But raises error as the last argument is not a directory and there are multiple files,<br>
-When <code>*.dat</code>  is expanded.</p>
+<p><em>This fails if there are multiple files or last argument is not a directory.</em></p>
+<p>Using a loop:</p>
 
 
 
@@ -841,15 +922,17 @@ When <code>*.dat</code>  is expanded.</p>
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="err">$</span> <span class="k">for</span> <span class="n">filename</span> <span class="n">in</span> <span class="o">*</span><span class="p">.</span><span class="n">dat</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="k">do</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> 	<span class="n">cp</span> <span class="err">$</span><span class="n">filename</span> <span class="n">original</span><span class="o">-</span><span class="err">$</span><span class="n">filename</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="n">done</span></span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="k">for</span> filename in *.dat
+</span></span><span class="line"><span class="cl"><span class="k">do</span>
+</span></span><span class="line"><span class="cl">    cp <span class="s2">&#34;</span><span class="nv">$filename</span><span class="s2">&#34;</span> <span class="s2">&#34;original-</span><span class="nv">$filename</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span></span></span></code></pre></div>
   </figure>
 </div>
-<p>Now each of <code>.dat</code> file come one by one and in the cp there will be only two files,<br>
+<p><em>This copies each <code>.dat</code> file with a prefix of <code>original-</code>.</em>
+Now each of <code>.dat</code> file come one by one and in the cp there will be only two files,<br>
 so will be copied into the other.</p>
 <h2 id="scripting">Scripting<a href="#scripting" class="anchor" aria-hidden="true">#</a> </h2>
+<p>Example of a loop in a script:</p>
 
 
 
@@ -858,13 +941,14 @@ so will be copied into the other.</p>
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="err">$</span> <span class="k">for</span> <span class="n">datafile</span> <span class="n">in</span> <span class="n">NENE</span><span class="o">*</span><span class="n">A</span><span class="p">.</span><span class="n">txt</span> <span class="n">NENE</span><span class="o">*</span><span class="n">B</span><span class="p">.</span><span class="n">txt</span><span class="p">;</span> <span class="k">do</span> <span class="n">bash</span> <span class="n">goostat</span><span class="p">.</span><span class="n">sh</span> <span class="err">$</span><span class="n">datafile</span> <span class="n">stats</span><span class="o">-</span><span class="err">$</span><span class="n">datfile</span><span class="p">;</span> <span class="n">done</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="k">for</span> <span class="n">datafile</span> <span class="n">in</span> <span class="n">NENE</span><span class="o">*</span><span class="n">A</span><span class="p">.</span><span class="n">txt</span> <span class="n">NENE</span><span class="o">*</span><span class="n">B</span><span class="p">.</span><span class="n">txt</span><span class="p">;</span> <span class="k">do</span> <span class="n">echo</span> <span class="err">$</span><span class="n">datafile</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="n">bash</span> <span class="n">goostats</span><span class="p">.</span><span class="n">sh</span> <span class="err">$</span><span class="n">datfile</span> <span class="n">stats</span><span class="o">-</span><span class="err">$</span><span class="n">datfile</span><span class="p">;</span> <span class="n">done</span></span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="k">for</span> datafile in NENE*A.txt NENE*B.txt
+</span></span><span class="line"><span class="cl"><span class="k">do</span>
+</span></span><span class="line"><span class="cl">    bash goostat.sh <span class="s2">&#34;</span><span class="nv">$datafile</span><span class="s2">&#34;</span> <span class="s2">&#34;stats-</span><span class="nv">$datafile</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span></span></span></code></pre></div>
   </figure>
 </div>
+<p><em>This runs a script for each specified file.</em></p>
+<p>To echo commands without executing them:</p>
 
 
 
@@ -873,14 +957,15 @@ so will be copied into the other.</p>
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="err">$</span> <span class="k">for</span> <span class="n">datafile</span> <span class="n">in</span> <span class="o">*</span><span class="p">.</span><span class="n">dat</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="k">do</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> 	<span class="n">echo</span> <span class="s">&#34;cat $datafile &gt;&gt; all.pdb&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="n">done</span></span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="k">for</span> datafile in *.dat
+</span></span><span class="line"><span class="cl"><span class="k">do</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;cat </span><span class="nv">$datafile</span><span class="s2"> &gt;&gt; all.pdb&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span></span></span></code></pre></div>
   </figure>
 </div>
-<p>Without the &quot; &quot; , each entry would have cat cat</p>
-<h2 id="nested-loop">Nested loop<a href="#nested-loop" class="anchor" aria-hidden="true">#</a> </h2>
+<p><em>Using quotes here prevents the command from executing immediately.</em></p>
+<h2 id="nested-loops">Nested Loops<a href="#nested-loops" class="anchor" aria-hidden="true">#</a> </h2>
+<p>You can nest loops to perform more complex tasks:</p>
 
 
 
@@ -889,15 +974,16 @@ so will be copied into the other.</p>
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="err">$</span> <span class="k">for</span> <span class="n">species</span> <span class="n">in</span> <span class="n">cubane</span> <span class="n">ethane</span> <span class="n">methane</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="k">do</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> 	<span class="k">for</span> <span class="n">temp</span> <span class="n">in</span> <span class="mi">25</span> <span class="mi">30</span> <span class="mi">37</span> <span class="mi">40</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> 	<span class="k">do</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> 		<span class="n">mkdir</span> <span class="err">$</span><span class="n">species</span><span class="o">-</span><span class="err">$</span><span class="n">temp</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> 	<span class="n">done</span>
-</span></span><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="n">done</span></span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="k">for</span> species in cubane ethane methane
+</span></span><span class="line"><span class="cl"><span class="k">do</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> temp in <span class="m">25</span> <span class="m">30</span> <span class="m">37</span> <span class="m">40</span>
+</span></span><span class="line"><span class="cl">    <span class="k">do</span>
+</span></span><span class="line"><span class="cl">        mkdir <span class="s2">&#34;</span><span class="nv">$species</span><span class="s2">-</span><span class="nv">$temp</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">done</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span></span></span></code></pre></div>
   </figure>
 </div>
+<p><em>This creates directories named after each species combined with the temperature.</em></p>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				</div>
