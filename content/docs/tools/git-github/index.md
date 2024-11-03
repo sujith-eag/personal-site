@@ -2,10 +2,10 @@
 title: "Git & Github"
 description: ""
 summary: ""
-date: 2024-10-29T11:26:07+05:30
-lastmod: 2024-10-29T11:26:07+05:30
+date: 2024-10-22T14:47:02+05:30
+lastmod: 2024-10-22T14:47:02+05:30
 draft: false
-weight: 999
+weight: 10
 toc: true
 seo:
   title: "" # custom title (optional)
@@ -13,7 +13,6 @@ seo:
   canonical: "" # custom canonical URL (optional)
   noindex: false # false (default) or true
 ---
-
 
 ## Introduction to Git
 - **[Pro Git Book](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)**: A comprehensive guide to Git.

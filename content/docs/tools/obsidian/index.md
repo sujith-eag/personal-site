@@ -2,10 +2,10 @@
 title: "Obsidian"
 description: ""
 summary: ""
-date: 2024-10-29T11:28:27+05:30
-lastmod: 2024-10-29T11:28:27+05:30
+date: 2024-10-22T14:47:43+05:30
+lastmod: 2024-10-22T14:47:43+05:30
 draft: false
-weight: 999
+weight: 30
 toc: true
 seo:
   title: "" # custom title (optional)
