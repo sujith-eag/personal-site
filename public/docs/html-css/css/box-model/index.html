@@ -1,0 +1,1159 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="/personal-site/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=personal-site/livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preload" href="http://localhost:1313/personal-site/fonts/vendor/jost/jost-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/personal-site/fonts/vendor/jost/jost-v4-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/personal-site/fonts/vendor/jost/jost-v4-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<script 
+  src="/personal-site/js/color-mode.f14b3e296de1d0b69e75af684b62a4a912a2cadab04e36123407cd8388204f1d.js"
+  integrity="sha256-8Us&#43;KW3h0Laeda9oS2KkqRKiytqwTjYSNAfNg4ggTx0=">
+</script>
+
+
+<link rel="stylesheet" href="/personal-site/main.01b0834d5af51b24812d02878d09c8d7677d6b8af13164fb50215889dc19aaefd0e9366c13b45a9a57ae481dfd1836bce46b5ebfe461d56e3498b9443d8c5e27.css" integrity="sha512-AbCDTVr1GySBLQKHjQnI12d9a4rxMWT7UCFYidwZqu/Q6TZsE7RamleuSB39GDa85Gtev&#43;Rh1W40mLlEPYxeJw==" crossorigin="anonymous">
+
+<noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/personal-site/docs/html-css/css/box-model/">
+  <link rel="canonical" href="http://localhost:1313/personal-site/docs/html-css/css/box-model/">
+<title>Box Model  |  Sujith&#39;s Library</title>
+<meta name="description" content="A reference site with summary of various coding topics">
+
+    
+    <link rel="icon" href="/personal-site/favicon.ico" sizes="32x32">
+    
+      <link rel="icon" href="/personal-site/favicon.svg" type="image/svg+xml">
+    
+      <link
+        rel="apple-touch-icon"
+        href="/personal-site/personal-site/apple-touch-icon.png"
+        sizes="180x180"
+        type="image/png"
+      >
+      <link
+        rel="icon"
+        href="/personal-site/favicon-192x192.png"
+        sizes="192x192"
+        type="image/png"
+      >
+      <link
+        rel="icon"
+        href="/personal-site/favicon-512x512.png"
+        sizes="512x512"
+        type="image/png"
+      >
+<link rel="manifest" href="/personal-site/manifest.webmanifest">
+
+<meta property="og:title" content="Box Model">
+<meta property="og:description" content="MDN’s lesson on the box model. Inline boxes !
+Every element on a webpage is essentially a rectangular box, and the Box Model describes the structure of these boxes.
+Margin, Border, Padding and Content is what is called box model. * {outline: 2px solid red} marking boxes.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://localhost:1313/personal-site/docs/html-css/css/box-model/"><meta property="og:image" content="http://localhost:1313/personal-site/cover.png"><meta property="article:section" content="docs">
+<meta property="article:published_time" content="2024-11-06T15:00:25+05:30">
+<meta property="article:modified_time" content="2024-11-06T15:00:25+05:30"><meta property="og:site_name" content="Sujith&#39;s Notes">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://localhost:1313/personal-site/cover.png"><meta name="twitter:title" content="Box Model">
+<meta name="twitter:description" content="MDN’s lesson on the box model. Inline boxes !
+Every element on a webpage is essentially a rectangular box, and the Box Model describes the structure of these boxes.
+Margin, Border, Padding and Content is what is called box model. * {outline: 2px solid red} marking boxes.">
+
+    
+    
+    
+    <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/personal-site/",
+       "name": "Sujith's Library",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/personal-site/docs/",
+       "name": "All Notes Articles",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/personal-site/docs/html-css/",
+       "name": "HTML \u0026 Css",
+       "position": 3
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/personal-site/docs/html-css/css/",
+       "name": "Css",
+       "position": 4
+     },
+     {
+       "@type": "ListItem",
+       "name": "Box Model",
+       "position": 5
+     }
+   ]
+ }
+</script>
+
+
+
+
+
+</head>
+
+  
+  <body class="single section docs" data-bs-spy="scroll" data-bs-target="#toc" data-bs-root-margin="0px 0px -60%" data-bs-smooth-scroll="true" tabindex="0">
+    <div class="sticky-top">
+<header class="navbar navbar-expand-lg">
+  <div class="container-lg">
+  
+    <a class="navbar-brand me-auto me-lg-3" href="/personal-site/">Sujith&#39;s Library</a>
+
+    
+    
+    <button type="button" id="searchToggleMobile" class="btn btn-link nav-link mx-2 d-lg-none" aria-label="Search website">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <circle cx="10" cy="10" r="7"></circle>
+        <line x1="21" y1="21" x2="15" y2="15"></line>
+      </svg>
+    </button>
+    
+    <button class="btn btn-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavSection" aria-controls="offcanvasNavSection" aria-label="Open section navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+      </svg>
+    </button>
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavSection" aria-labelledby="offcanvasNavSectionLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavSectionLabel">Docs</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <aside class="doks-sidebar mt-n3">
+          <nav id="doks-docs-nav" aria-label="Tertiary navigation">
+            
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+      <a href="/personal-site/docs/python/">Python</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/">JavaScript</a>
+  </li>
+
+  <li>
+    <details open open>
+      <summary>HTML &amp; CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>HTML</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/boiler-plate/">Boiler Plate</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/texts-lists/">Texts &amp; Lists</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/links-images/">Links &amp; Images</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/input-types/">Input Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/button/">Button</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/dom-events/">DOM Events</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open open>
+      <summary>CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-selectors/">CSS Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-multiple-selecors/">CSS Multiple Selecors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/declaration/">Declaration</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/adding-css/">Adding CSS</a>
+  </li>
+
+  <li class="active" >
+      <a aria-current="page" href="/personal-site/docs/html-css/css/box-model/">Box Model</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/flexbox/">Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/flex-flexibility/">Flex Flexibility</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/axes-in-flexbox/">Axes in Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/utility-class-inheritance/">Utility Class &amp; Inheritance</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Tools &amp; Accesories</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/tools/git-github/">Git &amp; Github</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/vs-code/">VS Code</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/obsidian/">Obsidian</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Bash - Linux Terminal</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/bash-1-basics/">Bash - 1 Basics</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/bash-2-working-with-files/">Bash - 2 Working With Files</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/bash-3-pipes-filters/">Bash - 3 Pipes Filters</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/bash-4-loops-scripting/">Bash - 4 Loops Scripting</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/bash-5-shell-scripting/">Bash - 5 Shell Scripting</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/bash-6-searching-wildcards/">Bash - 6 Searching Wildcards</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Bash Commands</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/bash-commands/">Bash Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/cat-concatenate/">cat - Concatenate</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/cd-change-directory/">cd - Change Directory</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/cp-copy/">cp - Copy</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/cut-with-deliminator/">cut - with deliminator</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/echo/">echo</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/grep/">grep</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/head-tail/">head tail</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/ls-list/">ls - List</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/mkdir/">mkdir</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/mv-move/">mv - Move</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/pwd/">pwd</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/rm-remove/">rm - Remove</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/sort/">sort</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/touch/">touch</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/uniq/">uniq</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/wc-word-count/">wc - Word Count</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+          </nav>
+        </aside>
+      </div>
+    </div>
+    
+    <button class="btn btn-link nav-link mx-2 order-3 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavMain" aria-controls="offcanvasNavMain" aria-label="Open main navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <line x1="4" y1="8" x2="20" y2="8"></line>
+        <line x1="4" y1="16" x2="20" y2="16"></line>
+      </svg>
+    </button>
+
+    
+    <div class="offcanvas offcanvas-end h-auto" tabindex="-1" id="offcanvasNavMain" aria-labelledby="offcanvasNavMainLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavMainLabel">Sujith&#39;s Library</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+         </svg>
+        </button>
+      </div>
+      
+      <div class="offcanvas-body d-flex flex-column flex-lg-row justify-content-between">
+        <ul class="navbar-nav flex-grow-1"><li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/python/">Python</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/java-script/">JavaScript</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/html-css/">HTML/CSS</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/bash-linux/">Bash</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/tools/">Tools</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/blog/">Blog</a>
+              </li>
+            </ul>
+
+        
+        
+        <button type="button" id="searchToggleDesktop" class="btn btn-link nav-link p-2 d-none d-lg-block" aria-label="Search website">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <circle cx="10" cy="10" r="7"></circle>
+            <line x1="21" y1="21" x2="15" y2="15"></line>
+          </svg>
+        </button>
+        
+        
+        
+        <button id="buttonColorMode" class="btn btn-link mx-auto nav-link p-0 ms-lg-2 me-lg-1" type="button" aria-label="Toggle theme">
+          <svg data-bs-theme-value="dark" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+          </svg>
+          <svg data-bs-theme-value="light" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0m-5 0h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+          </svg>
+        </button>
+        
+        <ul id="socialMenu" class="nav mx-auto flex-row order-lg-4">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/sujith-eag"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg><small class="ms-2 visually-hidden">GitHub</small></a>
+            </li>
+          </ul>
+        
+        </div>
+    </div>
+
+    
+    </div>
+</header>
+</div>
+
+<div class="modal" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-md-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 visually-hidden" id="searchModalLabel">Search</h1>
+        <button type="button" class="btn-close visually-hidden" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="search-input flex-grow-1 d-none">
+          <form id="search-form" class="search-form" action="#" method="post" accept-charset="UTF-8" role="search">
+            <label for="query" class="visually-hidden">Search</label>
+            <div class="d-flex">
+              <input type="search" id="query" name="query" class="search-text form-control form-control-lg" placeholder="Search" aria-label="Search" maxlength="128" autocomplete="off">
+              <button type="button" class="btn btn-link text-decoration-none px-0 ms-3 d-md-none" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-body">
+        <p class="search-loading status message d-none mt-3 text-center">Loading search index…</p>
+        <p class="search-no-recent message d-none mt-3 text-center">No recent searches</p>
+        <p class="search-no-results message d-none mt-3 text-center">No results for "<strong><span class="query-no-results">Query here</span></strong>"</p>
+        <div id="searchResults" class="search-results"></div>
+        <template>
+          <article class="search-result list-view">
+            <div class="card my-3">
+              <div class="card-body">
+                <header>
+                  <h2 class="h5 title title-submitted mb-0"><a class="stretched-link text-decoration-none text-reset" href="#">Title here</a></h2>
+                  <div class="submitted d-none"><time class="created-date">Date here</time></div>
+                </header>
+                <div class="content">Summary here</div>
+              </div>
+            </div>
+          </article>
+        </template>
+      </div>
+      <div class="modal-footer">
+        <ul class="list-inline me-auto d-none d-md-block">
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Enter key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M12 3.53088v3c0 1-1 2-2 2H4M7 11.53088l-3-3 3-3"></path></g></svg></kbd><span class="DocSearch-Label">to select</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow down" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 3.5v8M10.5 8.5l-3 3-3-3"></path></g></svg></kbd><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow up" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 11.5v-8M10.5 6.5l-3-3-3 3"></path></g></svg></kbd><span class="DocSearch-Label">to navigate</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Escape key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M13.6167 8.936c-.1065.3583-.6883.962-1.4875.962-.7993 0-1.653-.9165-1.653-2.1258v-.5678c0-1.2548.7896-2.1016 1.653-2.1016.8634 0 1.3601.4778 1.4875 1.0724M9 6c-.1352-.4735-.7506-.9219-1.46-.8972-.7092.0246-1.344.57-1.344 1.2166s.4198.8812 1.3445.9805C8.465 7.3992 8.968 7.9337 9 8.5c.032.5663-.454 1.398-1.4595 1.398C6.6593 9.898 6 9 5.963 8.4851m-1.4748.5368c-.2635.5941-.8099.876-1.5443.876s-1.7073-.6248-1.7073-2.204v-.4603c0-1.0416.721-2.131 1.7073-2.131.9864 0 1.6425 1.031 1.5443 2.2492h-2.956"></path></g></svg></kbd><span class="DocSearch-Label">to close</span></li>
+        </ul>
+        <p class="d-md-none">Search by <a class="text-decoration-none" href="https://github.com/nextapps-de/flexsearch">FlexSearch</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="wrap container-lg" role="document">
+      <div class="content">
+      
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+      <a href="/personal-site/docs/python/">Python</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/">JavaScript</a>
+  </li>
+
+  <li>
+    <details open open>
+      <summary>HTML &amp; CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>HTML</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/boiler-plate/">Boiler Plate</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/texts-lists/">Texts &amp; Lists</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/links-images/">Links &amp; Images</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/input-types/">Input Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/button/">Button</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/dom-events/">DOM Events</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open open>
+      <summary>CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-selectors/">CSS Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-multiple-selecors/">CSS Multiple Selecors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/declaration/">Declaration</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/adding-css/">Adding CSS</a>
+  </li>
+
+  <li class="active" >
+      <a aria-current="page" href="/personal-site/docs/html-css/css/box-model/">Box Model</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/flexbox/">Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/flex-flexibility/">Flex Flexibility</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/axes-in-flexbox/">Axes in Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/utility-class-inheritance/">Utility Class &amp; Inheritance</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Tools &amp; Accesories</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/tools/git-github/">Git &amp; Github</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/vs-code/">VS Code</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/obsidian/">Obsidian</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Bash - Linux Terminal</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/bash-1-basics/">Bash - 1 Basics</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/bash-2-working-with-files/">Bash - 2 Working With Files</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/bash-3-pipes-filters/">Bash - 3 Pipes Filters</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/bash-4-loops-scripting/">Bash - 4 Loops Scripting</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/bash-5-shell-scripting/">Bash - 5 Shell Scripting</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/bash-6-searching-wildcards/">Bash - 6 Searching Wildcards</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Bash Commands</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/bash-commands/">Bash Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/cat-concatenate/">cat - Concatenate</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/cd-change-directory/">cd - Change Directory</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/cp-copy/">cp - Copy</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/cut-with-deliminator/">cut - with deliminator</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/echo/">echo</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/grep/">grep</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/head-tail/">head tail</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/ls-list/">ls - List</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/mkdir/">mkdir</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/mv-move/">mv - Move</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/pwd/">pwd</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/rm-remove/">rm - Remove</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/sort/">sort</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/touch/">touch</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/uniq/">uniq</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/wc-word-count/">wc - Word Count</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+		</div>
+		
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="page-links">
+  <h3>On this page</h3>
+    <nav id="toc">
+  <ul>
+    <li><a href="#1-margin"><strong>1. Margin</strong></a>
+      <ul>
+        <li><a href="#collapsing-margins"><strong>Collapsing Margins</strong></a></li>
+        <li><a href="#centering-elements-horizontally-using-margins"><strong>Centering Elements Horizontally Using Margins</strong></a></li>
+        <li><a href="#margin-shorthand"><strong>Margin Shorthand</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#2-padding"><strong>2. Padding</strong></a>
+      <ul>
+        <li><a href="#padding-shorthand"><strong>Padding Shorthand</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#3-border-and-border-radius"><strong>3. Border and Border Radius</strong></a>
+      <ul>
+        <li><a href="#border-radius"><strong>Border Radius</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#4-content"><strong>4. Content</strong></a></li>
+    <li><a href="#box-sizing"><strong>Box Sizing</strong></a>
+      <ul>
+        <li><a href="#content-box-default"><strong>content-box (default)</strong></a></li>
+        <li><a href="#border-box"><strong>border-box</strong></a></li>
+        <li><a href="#best-practice"><strong>Best Practice</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#summary-of-the-box-model-properties"><strong>Summary of the Box Model Properties</strong></a>
+      <ul>
+        <li><a href="#additional-resources">Additional resources</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+			<h1>Box Model</h1>
+			
+			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
+				<details>
+    <summary>On this page</summary>
+    <div class="page-links">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-margin"><strong>1. Margin</strong></a>
+      <ul>
+        <li><a href="#collapsing-margins"><strong>Collapsing Margins</strong></a></li>
+        <li><a href="#centering-elements-horizontally-using-margins"><strong>Centering Elements Horizontally Using Margins</strong></a></li>
+        <li><a href="#margin-shorthand"><strong>Margin Shorthand</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#2-padding"><strong>2. Padding</strong></a>
+      <ul>
+        <li><a href="#padding-shorthand"><strong>Padding Shorthand</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#3-border-and-border-radius"><strong>3. Border and Border Radius</strong></a>
+      <ul>
+        <li><a href="#border-radius"><strong>Border Radius</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#4-content"><strong>4. Content</strong></a></li>
+    <li><a href="#box-sizing"><strong>Box Sizing</strong></a>
+      <ul>
+        <li><a href="#content-box-default"><strong>content-box (default)</strong></a></li>
+        <li><a href="#border-box"><strong>border-box</strong></a></li>
+        <li><a href="#best-practice"><strong>Best Practice</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#summary-of-the-box-model-properties"><strong>Summary of the Box Model Properties</strong></a>
+      <ul>
+        <li><a href="#additional-resources">Additional resources</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  </details>
+
+			</nav>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model">MDN’s lesson on the box model</a>. Inline boxes !</p>
+<p>Every element on a webpage is essentially a rectangular box, and the <strong>Box Model</strong> describes the structure of these boxes.
+Margin, Border, Padding and Content is what is called box model.<code> * {outline: 2px solid red}</code> marking boxes.</p>
+<p>The model consists of the following components:</p>
+<ol>
+<li><strong>Content</strong>: The actual content of the element, such as text or images.</li>
+<li><strong>Padding</strong>: The space between the content and the border.</li>
+<li><strong>Border</strong>: Surrounds the padding (if any) and content.</li>
+<li><strong>Margin</strong>: The space outside the border, separating elements from each other.</li>
+</ol>
+<h2 id="1-margin"><strong>1. Margin</strong><a href="#1-margin" class="anchor" aria-hidden="true">#</a> </h2>
+<p>The margin is the space outside the element’s border, separating it from other elements.
+<a href="https://css-tricks.com/almanac/properties/m/margin/">CSS Tricks page on margins</a></p>
+<p><strong>Default Margin</strong>
+The default margin for most elements (especially block-level elements) is usually <code>8px</code>, but it can be removed by setting it to <code>0</code>.</p>
+<h3 id="collapsing-margins"><strong>Collapsing Margins</strong><a href="#collapsing-margins" class="anchor" aria-hidden="true">#</a> </h3>
+<p>If two elements have adjacent margins (i.e., one is directly above or below the other), the larger margin will &ldquo;collapse&rdquo; and be applied instead of combining the two. For example:</p>
+<ul>
+<li>If the bottom margin of the first element is <code>15px</code> and the top margin of the second element is <code>20px</code>, the space between the two elements will be <code>20px</code> (not <code>35px</code>).</li>
+</ul>
+<h3 id="centering-elements-horizontally-using-margins"><strong>Centering Elements Horizontally Using Margins</strong><a href="#centering-elements-horizontally-using-margins" class="anchor" aria-hidden="true">#</a> </h3>
+<p>To horizontally center a block element:</p>
+<ol>
+<li>Set <code>display: block;</code> to the element (block elements are naturally placed on their own line).</li>
+<li>The element must have a defined width.</li>
+<li>Set <code>margin-left: auto;</code> and <code>margin-right: auto;</code>.</li>
+</ol>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">element</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">width</span><span class="p">:</span> <span class="mi">300</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">margin-left</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">margin-right</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+  </figure>
+</div>
+<ul>
+<li><code>margin-left: auto;</code> pushes the element to the left.</li>
+<li><code>margin-right: auto;</code> pushes it to the right, dividing the remaining space equally on both sides, thus centering the element.</li>
+</ul>
+<h3 id="margin-shorthand"><strong>Margin Shorthand</strong><a href="#margin-shorthand" class="anchor" aria-hidden="true">#</a> </h3>
+<p>The margin can be set using shorthand notation:</p>
+<ul>
+<li><code>margin: 10px;</code> — applies <code>10px</code> to all four sides.</li>
+<li><code>margin: 10px 20px 30px 40px;</code> — follows the &ldquo;clock method&rdquo;:
+<ul>
+<li>Top: <code>10px</code></li>
+<li>Right: <code>20px</code></li>
+<li>Bottom: <code>30px</code></li>
+<li>Left: <code>40px</code></li>
+</ul>
+</li>
+</ul>
+<p>If only two values are given:</p>
+<ul>
+<li><code>margin: 20px auto;</code> — <code>20px</code> for top and bottom, and <code>auto</code> for left and right (centers horizontally).</li>
+</ul>
+<hr>
+<h2 id="2-padding"><strong>2. Padding</strong><a href="#2-padding" class="anchor" aria-hidden="true">#</a> </h2>
+<p>Padding is the space between the content of an element and its border. It increases the internal space within a box.</p>
+<h3 id="padding-shorthand"><strong>Padding Shorthand</strong><a href="#padding-shorthand" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Padding can be applied to all four sides at once using shorthand:</p>
+<ul>
+<li><code>padding: 10px;</code> — applies <code>10px</code> padding to all sides.</li>
+<li><code>padding: 10px 20px 30px 40px;</code> — follows the same &ldquo;clock method&rdquo; as margin:
+<ul>
+<li>Top: <code>10px</code></li>
+<li>Right: <code>20px</code></li>
+<li>Bottom: <code>30px</code></li>
+<li>Left: <code>40px</code></li>
+</ul>
+</li>
+</ul>
+<p>If two values are provided:</p>
+<ul>
+<li><code>padding: 20px 10px;</code> — <code>20px</code> for top and bottom, <code>10px</code> for left and right.</li>
+</ul>
+<hr>
+<h2 id="3-border-and-border-radius"><strong>3. Border and Border Radius</strong><a href="#3-border-and-border-radius" class="anchor" aria-hidden="true">#</a> </h2>
+<p>The border is the area between the content/padding and the margin. It is often used to visually separate elements.</p>
+<p>The border can be set with:</p>
+<ul>
+<li><strong>Width</strong>: The thickness of the border.</li>
+<li><strong>Style</strong>: The type of border (solid, dashed, dotted, etc.).</li>
+<li><strong>Color</strong>: The color of the border.</li>
+</ul>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">element</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">border</span><span class="p">:</span> <span class="mi">8</span><span class="kt">px</span> <span class="kc">solid</span> <span class="kc">blue</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h3 id="border-radius"><strong>Border Radius</strong><a href="#border-radius" class="anchor" aria-hidden="true">#</a> </h3>
+<p>The <code>border-radius</code> property is used to round the corners of an element’s border.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">element</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">border-radius</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+  </figure>
+</div>
+<hr>
+<h2 id="4-content"><strong>4. Content</strong><a href="#4-content" class="anchor" aria-hidden="true">#</a> </h2>
+<p>The <strong>content</strong> of a box refers to the actual text, images, or other elements inside it.</p>
+<ul>
+<li><strong>Height and Line Height</strong>:
+<ul>
+<li><code>height: 24px;</code> — this sets the height of the content area (excluding padding and borders).</li>
+<li><code>line-height: 24px;</code> — this sets the height of a line of text, which can affect vertical alignment.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="box-sizing"><strong>Box Sizing</strong><a href="#box-sizing" class="anchor" aria-hidden="true">#</a> </h2>
+<p>The <code>box-sizing</code> property controls how the width and height of an element are calculated.</p>
+<h3 id="content-box-default"><strong>content-box (default)</strong><a href="#content-box-default" class="anchor" aria-hidden="true">#</a> </h3>
+<p>In the <code>content-box</code> model, the width and height of the box are applied to the content only. The padding and border are added on top of the content width and height, making the total size of the element larger than the declared width and height.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">box-sizing</span><span class="o">:</span> <span class="nt">content-box</span><span class="o">;</span></span></span></code></pre></div>
+  </figure>
+</div>
+<ul>
+<li>if you set <code>width: 300px;</code> and the element has padding and borders, the total width will be larger than <code>300px</code>.
+Here the size of the box will be <code>width + paddig + border</code>
+so if width is <code>300px</code> it is the width of the content of the box but not the box.</li>
+</ul>
+<h3 id="border-box"><strong>border-box</strong><a href="#border-box" class="anchor" aria-hidden="true">#</a> </h3>
+<p>In the <code>border-box</code> model, the width and height include the padding and border. This means the total width or height is exactly what you set, with padding and borders inside the defined dimensions.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">box-sizing</span><span class="o">:</span> <span class="nt">border-box</span><span class="o">;</span></span></span></code></pre></div>
+  </figure>
+</div>
+<ul>
+<li>if <code>width: 300px;</code>, the padding and border will be included inside this <code>300px</code> width.</li>
+</ul>
+<h3 id="best-practice"><strong>Best Practice</strong><a href="#best-practice" class="anchor" aria-hidden="true">#</a> </h3>
+<p>To apply <code>border-box</code> globally (for all elements), you can use the following rule:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="o">*</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">border</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">box-sizing</span><span class="p">:</span> <span class="kc">border-box</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>This resets the box model for all elements, making layout calculations easier.</p>
+<hr>
+<h2 id="summary-of-the-box-model-properties"><strong>Summary of the Box Model Properties</strong><a href="#summary-of-the-box-model-properties" class="anchor" aria-hidden="true">#</a> </h2>
+<table>
+  <thead>
+      <tr>
+          <th>Property</th>
+          <th>Description</th>
+          <th>Shorthand Example</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Margin</strong></td>
+          <td>Space outside the border of an element.</td>
+          <td><code>margin: 10px 20px 30px 40px;</code></td>
+      </tr>
+      <tr>
+          <td><strong>Padding</strong></td>
+          <td>Space between the content and the border.</td>
+          <td><code>padding: 10px 20px;</code></td>
+      </tr>
+      <tr>
+          <td><strong>Border</strong></td>
+          <td>A line surrounding the padding and content.</td>
+          <td><code>border: 8px solid blue;</code></td>
+      </tr>
+      <tr>
+          <td><strong>Content</strong></td>
+          <td>The actual content of the box (text, images, etc.).</td>
+          <td><code>height: 24px;</code> or <code>line-height: 24px;</code></td>
+      </tr>
+      <tr>
+          <td><strong>Box-sizing</strong></td>
+          <td>Defines how the total width and height of the box are calculated.</td>
+          <td><code>box-sizing: border-box;</code> or <code>content-box;</code></td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h3 id="additional-resources">Additional resources<a href="#additional-resources" class="anchor" aria-hidden="true">#</a> </h3>
+<ol>
+<li><a href="https://www.youtube.com/watch?v=rIO5326FgPE">Learn CSS Box Model</a></li>
+<li><a href="https://www.youtube.com/watch?v=HdZHcFWcAd8">box-sizing: border-box</a></li>
+</ol>
+<ul>
+<li><a href="https://scrimba.com/scrim/cof3d488184abe24ec6258ab4">Scrim on the box model</a>.</li>
+<li><a href="https://youtu.be/nSst4-WbEZk?si=HbgcEB7UyLdNbE6n">Slaying The Dragon</a>  for understanding the box model.</li>
+</ul>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="page-nav d-flex flex-column flex-sm-row">
+	
+	<div class="card w-100">
+			<div class="card-body d-flex">
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M5 12l6 6"></path>
+						<path d="M5 12l6 -6"></path>
+				 	</svg>
+				</div>
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Prev</div>
+					<a href="/personal-site/docs/html-css/css/adding-css/" class="stretched-link text-reset text-decoration-none">Adding CSS</a>
+				</div>
+			</div>
+		</div>
+	<div class="m-2"></div>
+	<div class="card text-end w-100">
+			<div class="card-body d-flex justify-content-end">
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Next</div>
+					<a href="/personal-site/docs/html-css/css/flexbox/" class="stretched-link text-reset text-decoration-none">Flexbox</a>
+				</div>
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M13 18l6 -6"></path>
+						<path d="M13 6l6 6"></path>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</div>
+
+			
+		</main>
+		
+	</div>
+
+      
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-lg">
+    <div class="row">
+      <div class="col-lg-8 text-center text-lg-start">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a class="text-muted" href="/personal-site/privacy/">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 text-center text-lg-end">
+        <ul class="list-inline">
+          <li class="list-inline-item">Made by <a class="text-muted" href="https://sujith-eag.github.io/personal-site/">Sujith</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+<script async
+  src="/personal-site/js/app.4ca3b61e3452c943f4197457251b3551cb46579ecf58e675999fbc96411dcb0d.js"
+  integrity="sha256-TKO2HjRSyUP0GXRXJRs1UctGV57PWOZ1mZ&#43;8lkEdyw0=">
+</script>
+
+
+
+
+
+<script async
+  src="/personal-site/js/flexsearch.be33aab3067e96554f261851c25a593228b91154cd28ff5c7f8d52b2e7f306d2.js"
+  integrity="sha256-vjOqswZ&#43;llVPJhhRwlpZMii5EVTNKP9cf41SsufzBtI=">
+</script>
+<script async
+  src="/personal-site/js/search-modal.97d606e77f08deeb37876860d99c8f6813ef29263e73b6435c252de6be98d55e.js"
+  integrity="sha256-l9YG538I3us3h2hg2ZyPaBPvKSY&#43;c7ZDXCUt5r6Y1V4=">
+</script>
+
+    
+  </body>
+</html>

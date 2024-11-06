@@ -7,7 +7,70 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright (c) 2020-2024 Thulite</copyright>
-    <lastBuildDate></lastBuildDate>
+    <lastBuildDate>Wed, 06 Nov 2024 15:03:01 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/personal-site/docs/html-css/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CSS Selectors</title>
+      <link>http://localhost:1313/personal-site/docs/html-css/css/css-selectors/</link>
+      <pubDate>Wed, 06 Nov 2024 14:58:36 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/html-css/css/css-selectors/</guid>
+      <description>&lt;p&gt;CSS consists of rules, which are made up of:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Selector&lt;/strong&gt;: Points to a part of the HTML&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Declaration&lt;/strong&gt;: A &lt;strong&gt;property: value&lt;/strong&gt; pair (semicolon-separated list)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;ruleset&#34;&gt;&lt;strong&gt;Ruleset&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;A &lt;strong&gt;ruleset&lt;/strong&gt; (or &lt;strong&gt;rule&lt;/strong&gt;) consists of One or more &lt;strong&gt;selectors&lt;/strong&gt; and an associated &lt;strong&gt;declarations block&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CSS Multiple Selecors</title>
+      <link>http://localhost:1313/personal-site/docs/html-css/css/css-multiple-selecors/</link>
+      <pubDate>Wed, 06 Nov 2024 14:59:06 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/html-css/css/css-multiple-selecors/</guid>
+      <description>&lt;h2 id=&#34;1-grouping-selectors&#34;&gt;&lt;strong&gt;1. Grouping Selectors&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;p&gt;Grouping selectors allows for applying the same style rules to multiple elements. Instead of writing separate rules for similar selectors, they can be grouped together with a comma-separated list. This helps in reducing redundancy and makes your CSS more efficient.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Declaration</title>
+      <link>http://localhost:1313/personal-site/docs/html-css/css/declaration/</link>
+      <pubDate>Wed, 06 Nov 2024 14:59:30 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/html-css/css/declaration/</guid>
+      <description>&lt;p&gt;A &lt;strong&gt;Declaration&lt;/strong&gt; is a key-value pair that defines a style rule in CSS. It is composed of two parts:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Property&lt;/strong&gt;: An identifier (human-readable name) that specifies the feature to be styled.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Value&lt;/strong&gt;: Describes how the feature should be handled by the browser engine.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h3 id=&#34;declaration-block&#34;&gt;&lt;strong&gt;Declaration Block&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;A declaration block is a group of one or more declarations enclosed in curly braces (&lt;code&gt;{}&lt;/code&gt;), and each declaration is separated by a semicolon (&lt;code&gt;;&lt;/code&gt;).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Adding CSS</title>
+      <link>http://localhost:1313/personal-site/docs/html-css/css/adding-css/</link>
+      <pubDate>Wed, 06 Nov 2024 15:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/html-css/css/adding-css/</guid>
+      <description>&lt;p&gt;There are three primary methods to add CSS to an HTML document: &lt;strong&gt;External CSS&lt;/strong&gt;, &lt;strong&gt;Internal CSS&lt;/strong&gt;, and &lt;strong&gt;Inline CSS&lt;/strong&gt;. Let’s break down each method:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Box Model</title>
+      <link>http://localhost:1313/personal-site/docs/html-css/css/box-model/</link>
+      <pubDate>Wed, 06 Nov 2024 15:00:25 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/html-css/css/box-model/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model&#34;&gt;MDN’s lesson on the box model&lt;/a&gt;. Inline boxes !&lt;/p&gt;&#xA;&lt;p&gt;Every element on a webpage is essentially a rectangular box, and the &lt;strong&gt;Box Model&lt;/strong&gt; describes the structure of these boxes.&#xA;Margin, Border, Padding and Content is what is called box model.&lt;code&gt; * {outline: 2px solid red}&lt;/code&gt; marking boxes.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Flexbox</title>
+      <link>http://localhost:1313/personal-site/docs/html-css/css/flexbox/</link>
+      <pubDate>Wed, 06 Nov 2024 15:01:00 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/html-css/css/flexbox/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox&#34;&gt;Flexbox Resource&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Flexbox is a layout model in CSS designed to arrange items into rows or columns. It allows items to &lt;strong&gt;flex&lt;/strong&gt; (grow or shrink) based on defined rules, giving us more control over the alignment, spacing, and distribution of elements in a container.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Flex Flexibility</title>
+      <link>http://localhost:1313/personal-site/docs/html-css/css/flex-flexibility/</link>
+      <pubDate>Wed, 06 Nov 2024 15:01:39 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/html-css/css/flex-flexibility/</guid>
+      <description>&lt;p&gt;Flexbox makes it easy to create responsive layouts, where flex items can grow, shrink, and adjust according to the available space in the flex container.&lt;br&gt;&#xA;By manipulating the &lt;strong&gt;flex-grow&lt;/strong&gt;, &lt;strong&gt;flex-shrink&lt;/strong&gt;, and &lt;strong&gt;flex-basis&lt;/strong&gt; properties, we can control how items behave in the layout.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Axes in Flexbox</title>
+      <link>http://localhost:1313/personal-site/docs/html-css/css/axes-in-flexbox/</link>
+      <pubDate>Wed, 06 Nov 2024 15:02:27 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/html-css/css/axes-in-flexbox/</guid>
+      <description>&lt;p&gt;Flexbox operates along two main axes: the &lt;strong&gt;main axis&lt;/strong&gt; and the &lt;strong&gt;cross axis&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;h3 id=&#34;key-flexbox-properties&#34;&gt;&lt;strong&gt;Key Flexbox Properties:&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;&lt;code&gt;justify-content&lt;/code&gt;&lt;/strong&gt;: Aligns items along the &lt;strong&gt;main axis&lt;/strong&gt;. (Row for row)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;&lt;code&gt;align-items&lt;/code&gt;&lt;/strong&gt;: Aligns items along the &lt;strong&gt;cross axis&lt;/strong&gt;. (Column for row)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;main-axis-and-cross-axis&#34;&gt;&lt;strong&gt;Main Axis and Cross Axis&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Main Axis&lt;/strong&gt;: This is the primary axis along which flex items are arranged. It is determined by the &lt;code&gt;flex-direction&lt;/code&gt; property.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Utility Class &amp; Inheritance</title>
+      <link>http://localhost:1313/personal-site/docs/html-css/css/utility-class-inheritance/</link>
+      <pubDate>Wed, 06 Nov 2024 15:03:01 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/html-css/css/utility-class-inheritance/</guid>
+      <description>&lt;p&gt;A &lt;strong&gt;utility class&lt;/strong&gt; in CSS is a class that is designed to apply a single, specific property to an element. Unlike traditional classes that might group together several properties to style an element, utility classes focus on applying a single CSS rule, which allows you to easily reuse it across different elements.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
