@@ -1,11 +1,11 @@
 ---
-title: "Js Syntax"
+title: "Data Types"
 description: ""
 summary: ""
-date: 2024-10-22T14:50:48+05:30
-lastmod: 2024-10-22T14:50:48+05:30
-draft: true
-weight: 999
+date: 2024-11-07T14:51:09+05:30
+lastmod: 2024-11-07T14:51:09+05:30
+draft: false
+weight: 600
 toc: true
 seo:
   title: "" # custom title (optional)

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/java-script/js-language/1-data-types/variables/</loc>
+      <lastmod>2024-11-07T14:42:23+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/java-script/js-language/1-data-types/values-and-types/</loc>
+      <lastmod>2024-11-07T14:43:05+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/java-script/js-language/1-data-types/number-types/</loc>
+      <lastmod>2024-11-07T14:43:35+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/java-script/js-language/1-data-types/number-methods/</loc>
+      <lastmod>2024-11-07T14:44:18+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/java-script/js-language/1-data-types/string-type/</loc>
+      <lastmod>2024-11-07T14:44:54+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/java-script/js-language/1-data-types/string-methods/</loc>
+      <lastmod>2024-11-07T14:45:28+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/java-script/js-language/1-data-types/modifying-string/</loc>
+      <lastmod>2024-11-07T14:46:14+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/java-script/js-language/1-data-types/boolean-type/</loc>
+      <lastmod>2024-11-07T14:46:45+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/java-script/js-language/1-data-types/operators/</loc>
+      <lastmod>2024-11-07T14:47:05+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/java-script/js-language/1-data-types/auto-type-conversions/</loc>
+      <lastmod>2024-11-07T14:47:36+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    </urlset>

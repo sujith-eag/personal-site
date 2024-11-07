@@ -1,0 +1,1254 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="/personal-site/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=personal-site/livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preload" href="http://localhost:1313/personal-site/fonts/vendor/jost/jost-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/personal-site/fonts/vendor/jost/jost-v4-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/personal-site/fonts/vendor/jost/jost-v4-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<script 
+  src="/personal-site/js/color-mode.f14b3e296de1d0b69e75af684b62a4a912a2cadab04e36123407cd8388204f1d.js"
+  integrity="sha256-8Us&#43;KW3h0Laeda9oS2KkqRKiytqwTjYSNAfNg4ggTx0=">
+</script>
+
+
+<link rel="stylesheet" href="/personal-site/main.01b0834d5af51b24812d02878d09c8d7677d6b8af13164fb50215889dc19aaefd0e9366c13b45a9a57ae481dfd1836bce46b5ebfe461d56e3498b9443d8c5e27.css" integrity="sha512-AbCDTVr1GySBLQKHjQnI12d9a4rxMWT7UCFYidwZqu/Q6TZsE7RamleuSB39GDa85Gtev&#43;Rh1W40mLlEPYxeJw==" crossorigin="anonymous">
+
+<noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/personal-site/docs/java-script/js-language/1-data-types/variables/">
+  <link rel="canonical" href="http://localhost:1313/personal-site/docs/java-script/js-language/1-data-types/variables/">
+<title>Variables  |  Sujith&#39;s Library</title>
+<meta name="description" content="A reference site with summary of various coding topics">
+
+    
+    <link rel="icon" href="/personal-site/favicon.ico" sizes="32x32">
+    
+      <link rel="icon" href="/personal-site/favicon.svg" type="image/svg+xml">
+    
+      <link
+        rel="apple-touch-icon"
+        href="/personal-site/personal-site/apple-touch-icon.png"
+        sizes="180x180"
+        type="image/png"
+      >
+      <link
+        rel="icon"
+        href="/personal-site/favicon-192x192.png"
+        sizes="192x192"
+        type="image/png"
+      >
+      <link
+        rel="icon"
+        href="/personal-site/favicon-512x512.png"
+        sizes="512x512"
+        type="image/png"
+      >
+<link rel="manifest" href="/personal-site/manifest.webmanifest">
+
+<meta property="og:title" content="Variables">
+<meta property="og:description" content="In JavaScript, bindings (also known as variables) are used to maintain the internal state and store values.
+Rules for naming variables:
+
+No keywords or reserved words (e.g., if, for, function, etc.).
+Cannot start with a number (e.g., 123variable is invalid).
+No spaces or hyphens (-).
+No special characters, except for $ and _.
+
+
+Naming Variables Properly
+A good variable name should be descriptive and easy to understand. It should clearly represent the value or data that it holds.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://localhost:1313/personal-site/docs/java-script/js-language/1-data-types/variables/"><meta property="og:image" content="http://localhost:1313/personal-site/cover.png"><meta property="article:section" content="docs">
+<meta property="article:published_time" content="2024-11-07T14:42:23+05:30">
+<meta property="article:modified_time" content="2024-11-07T14:42:23+05:30"><meta property="og:site_name" content="Sujith&#39;s Notes">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://localhost:1313/personal-site/cover.png"><meta name="twitter:title" content="Variables">
+<meta name="twitter:description" content="In JavaScript, bindings (also known as variables) are used to maintain the internal state and store values.
+Rules for naming variables:
+
+No keywords or reserved words (e.g., if, for, function, etc.).
+Cannot start with a number (e.g., 123variable is invalid).
+No spaces or hyphens (-).
+No special characters, except for $ and _.
+
+
+Naming Variables Properly
+A good variable name should be descriptive and easy to understand. It should clearly represent the value or data that it holds.">
+
+    
+    
+    
+    
+    <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/personal-site/",
+       "name": "Sujith's Library",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/personal-site/docs/",
+       "name": "All Notes Articles",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/personal-site/docs/java-script/",
+       "name": "Java Script",
+       "position": 3
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/personal-site/docs/java-script/js-language/",
+       "name": "Js Language",
+       "position": 4
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/personal-site/docs/java-script/js-language/1-data-types/",
+       "name": "Data Types",
+       "position": 5
+     },
+     {
+       "@type": "ListItem",
+       "name": "Variables",
+       "position": 6
+     }
+   ]
+ }
+</script>
+
+
+
+
+
+</head>
+
+  
+  <body class="single section docs" data-bs-spy="scroll" data-bs-target="#toc" data-bs-root-margin="0px 0px -60%" data-bs-smooth-scroll="true" tabindex="0">
+    <div class="sticky-top">
+<header class="navbar navbar-expand-lg">
+  <div class="container-lg">
+  
+    <a class="navbar-brand me-auto me-lg-3" href="/personal-site/">Sujith&#39;s Library</a>
+
+    
+    
+    <button type="button" id="searchToggleMobile" class="btn btn-link nav-link mx-2 d-lg-none" aria-label="Search website">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <circle cx="10" cy="10" r="7"></circle>
+        <line x1="21" y1="21" x2="15" y2="15"></line>
+      </svg>
+    </button>
+    
+    <button class="btn btn-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavSection" aria-controls="offcanvasNavSection" aria-label="Open section navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+      </svg>
+    </button>
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavSection" aria-labelledby="offcanvasNavSectionLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavSectionLabel">Docs</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <aside class="doks-sidebar mt-n3">
+          <nav id="doks-docs-nav" aria-label="Tertiary navigation">
+            
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+      <a href="/personal-site/docs/python/">Python</a>
+  </li>
+
+  <li>
+    <details open open>
+      <summary>JavaScript</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open open>
+      <summary>JS Language</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open open>
+      <summary>Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li class="active" >
+      <a aria-current="page" href="/personal-site/docs/java-script/js-language/1-data-types/variables/">Variables</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/values-and-types/">Values and Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/number-types/">Number Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/number-methods/">Number Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/string-type/">String Type</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/string-methods/">String Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/modifying-string/">Modifying String</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/boolean-type/">Boolean Type</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/operators/">Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/auto-type-conversions/">Auto Type Conversions</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/dom-manipulation/">DOM Manipulation</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>HTML &amp; CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>HTML</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/boiler-plate/">Boiler Plate</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/texts-lists/">Texts &amp; Lists</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/links-images/">Links &amp; Images</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/input-types/">Input Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/button/">Button</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/dom-events/">DOM Events</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-selectors/">CSS Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-multiple-selecors/">CSS Multiple Selecors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/declaration/">Declaration</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/adding-css/">Adding CSS</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/box-model/">Box Model</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/flexbox/">Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/flex-flexibility/">Flex Flexibility</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/axes-in-flexbox/">Axes in Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/utility-class-inheritance/">Utility Class &amp; Inheritance</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>CSS Reference</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css_resource/css-size-units/">CSS Size Units</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css_resource/css-color-values/">CSS Color Values</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Tools &amp; Accesories</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/tools/git-github/">Git &amp; Github</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/vs-code/">VS Code</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/obsidian/">Obsidian</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Bash - Linux Terminal</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/bash-1-basics/">Bash - 1 Basics</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/bash-2-working-with-files/">Bash - 2 Working With Files</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/bash-3-pipes-filters/">Bash - 3 Pipes Filters</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/bash-4-loops-scripting/">Bash - 4 Loops Scripting</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/bash-5-shell-scripting/">Bash - 5 Shell Scripting</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/bash-6-searching-wildcards/">Bash - 6 Searching Wildcards</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Bash Commands</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/bash-commands/">Bash Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/cat-concatenate/">cat - Concatenate</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/cd-change-directory/">cd - Change Directory</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/cp-copy/">cp - Copy</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/cut-with-deliminator/">cut - with deliminator</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/echo/">echo</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/grep/">grep</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/head-tail/">head tail</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/ls-list/">ls - List</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/mkdir/">mkdir</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/mv-move/">mv - Move</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/pwd/">pwd</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/rm-remove/">rm - Remove</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/sort/">sort</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/touch/">touch</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/uniq/">uniq</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/wc-word-count/">wc - Word Count</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+          </nav>
+        </aside>
+      </div>
+    </div>
+    
+    <button class="btn btn-link nav-link mx-2 order-3 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavMain" aria-controls="offcanvasNavMain" aria-label="Open main navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <line x1="4" y1="8" x2="20" y2="8"></line>
+        <line x1="4" y1="16" x2="20" y2="16"></line>
+      </svg>
+    </button>
+
+    
+    <div class="offcanvas offcanvas-end h-auto" tabindex="-1" id="offcanvasNavMain" aria-labelledby="offcanvasNavMainLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavMainLabel">Sujith&#39;s Library</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+         </svg>
+        </button>
+      </div>
+      
+      <div class="offcanvas-body d-flex flex-column flex-lg-row justify-content-between">
+        <ul class="navbar-nav flex-grow-1"><li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/python/">Python</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/java-script/">JavaScript</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/html-css/">HTML/CSS</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/bash-linux/">Bash</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/tools/">Tools</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/blog/">Blog</a>
+              </li>
+            </ul>
+
+        
+        
+        <button type="button" id="searchToggleDesktop" class="btn btn-link nav-link p-2 d-none d-lg-block" aria-label="Search website">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <circle cx="10" cy="10" r="7"></circle>
+            <line x1="21" y1="21" x2="15" y2="15"></line>
+          </svg>
+        </button>
+        
+        
+        
+        <button id="buttonColorMode" class="btn btn-link mx-auto nav-link p-0 ms-lg-2 me-lg-1" type="button" aria-label="Toggle theme">
+          <svg data-bs-theme-value="dark" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+          </svg>
+          <svg data-bs-theme-value="light" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0m-5 0h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+          </svg>
+        </button>
+        
+        <ul id="socialMenu" class="nav mx-auto flex-row order-lg-4">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/sujith-eag"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg><small class="ms-2 visually-hidden">GitHub</small></a>
+            </li>
+          </ul>
+        
+        </div>
+    </div>
+
+    
+    </div>
+</header>
+</div>
+
+<div class="modal" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-md-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 visually-hidden" id="searchModalLabel">Search</h1>
+        <button type="button" class="btn-close visually-hidden" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="search-input flex-grow-1 d-none">
+          <form id="search-form" class="search-form" action="#" method="post" accept-charset="UTF-8" role="search">
+            <label for="query" class="visually-hidden">Search</label>
+            <div class="d-flex">
+              <input type="search" id="query" name="query" class="search-text form-control form-control-lg" placeholder="Search" aria-label="Search" maxlength="128" autocomplete="off">
+              <button type="button" class="btn btn-link text-decoration-none px-0 ms-3 d-md-none" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-body">
+        <p class="search-loading status message d-none mt-3 text-center">Loading search index…</p>
+        <p class="search-no-recent message d-none mt-3 text-center">No recent searches</p>
+        <p class="search-no-results message d-none mt-3 text-center">No results for "<strong><span class="query-no-results">Query here</span></strong>"</p>
+        <div id="searchResults" class="search-results"></div>
+        <template>
+          <article class="search-result list-view">
+            <div class="card my-3">
+              <div class="card-body">
+                <header>
+                  <h2 class="h5 title title-submitted mb-0"><a class="stretched-link text-decoration-none text-reset" href="#">Title here</a></h2>
+                  <div class="submitted d-none"><time class="created-date">Date here</time></div>
+                </header>
+                <div class="content">Summary here</div>
+              </div>
+            </div>
+          </article>
+        </template>
+      </div>
+      <div class="modal-footer">
+        <ul class="list-inline me-auto d-none d-md-block">
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Enter key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M12 3.53088v3c0 1-1 2-2 2H4M7 11.53088l-3-3 3-3"></path></g></svg></kbd><span class="DocSearch-Label">to select</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow down" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 3.5v8M10.5 8.5l-3 3-3-3"></path></g></svg></kbd><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow up" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 11.5v-8M10.5 6.5l-3-3-3 3"></path></g></svg></kbd><span class="DocSearch-Label">to navigate</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Escape key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M13.6167 8.936c-.1065.3583-.6883.962-1.4875.962-.7993 0-1.653-.9165-1.653-2.1258v-.5678c0-1.2548.7896-2.1016 1.653-2.1016.8634 0 1.3601.4778 1.4875 1.0724M9 6c-.1352-.4735-.7506-.9219-1.46-.8972-.7092.0246-1.344.57-1.344 1.2166s.4198.8812 1.3445.9805C8.465 7.3992 8.968 7.9337 9 8.5c.032.5663-.454 1.398-1.4595 1.398C6.6593 9.898 6 9 5.963 8.4851m-1.4748.5368c-.2635.5941-.8099.876-1.5443.876s-1.7073-.6248-1.7073-2.204v-.4603c0-1.0416.721-2.131 1.7073-2.131.9864 0 1.6425 1.031 1.5443 2.2492h-2.956"></path></g></svg></kbd><span class="DocSearch-Label">to close</span></li>
+        </ul>
+        <p class="d-md-none">Search by <a class="text-decoration-none" href="https://github.com/nextapps-de/flexsearch">FlexSearch</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="wrap container-lg" role="document">
+      <div class="content">
+      
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+      <a href="/personal-site/docs/python/">Python</a>
+  </li>
+
+  <li>
+    <details open open>
+      <summary>JavaScript</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open open>
+      <summary>JS Language</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open open>
+      <summary>Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li class="active" >
+      <a aria-current="page" href="/personal-site/docs/java-script/js-language/1-data-types/variables/">Variables</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/values-and-types/">Values and Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/number-types/">Number Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/number-methods/">Number Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/string-type/">String Type</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/string-methods/">String Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/modifying-string/">Modifying String</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/boolean-type/">Boolean Type</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/operators/">Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/auto-type-conversions/">Auto Type Conversions</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/dom-manipulation/">DOM Manipulation</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>HTML &amp; CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>HTML</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/boiler-plate/">Boiler Plate</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/texts-lists/">Texts &amp; Lists</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/links-images/">Links &amp; Images</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/input-types/">Input Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/button/">Button</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/dom-events/">DOM Events</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-selectors/">CSS Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-multiple-selecors/">CSS Multiple Selecors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/declaration/">Declaration</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/adding-css/">Adding CSS</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/box-model/">Box Model</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/flexbox/">Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/flex-flexibility/">Flex Flexibility</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/axes-in-flexbox/">Axes in Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/utility-class-inheritance/">Utility Class &amp; Inheritance</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>CSS Reference</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css_resource/css-size-units/">CSS Size Units</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css_resource/css-color-values/">CSS Color Values</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Tools &amp; Accesories</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/tools/git-github/">Git &amp; Github</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/vs-code/">VS Code</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/obsidian/">Obsidian</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Bash - Linux Terminal</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/bash-1-basics/">Bash - 1 Basics</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/bash-2-working-with-files/">Bash - 2 Working With Files</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/bash-3-pipes-filters/">Bash - 3 Pipes Filters</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/bash-4-loops-scripting/">Bash - 4 Loops Scripting</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/bash-5-shell-scripting/">Bash - 5 Shell Scripting</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/bash-6-searching-wildcards/">Bash - 6 Searching Wildcards</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Bash Commands</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/bash-commands/">Bash Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/cat-concatenate/">cat - Concatenate</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/cd-change-directory/">cd - Change Directory</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/cp-copy/">cp - Copy</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/cut-with-deliminator/">cut - with deliminator</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/echo/">echo</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/grep/">grep</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/head-tail/">head tail</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/ls-list/">ls - List</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/mkdir/">mkdir</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/mv-move/">mv - Move</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/pwd/">pwd</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/rm-remove/">rm - Remove</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/sort/">sort</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/touch/">touch</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/uniq/">uniq</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/wc-word-count/">wc - Word Count</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+		</div>
+		
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="page-links">
+  <h3>On this page</h3>
+    <nav id="toc">
+  <ul>
+    <li><a href="#rules-for-naming-variables">Rules for naming variables:</a></li>
+    <li><a href="#naming-variables-properly">Naming Variables Properly</a></li>
+    <li><a href="#comments-in-javascript">Comments in JavaScript</a></li>
+    <li><a href="#var-old-way-of-declaring-variables"><code>var</code> (Old Way of Declaring Variables)</a></li>
+    <li><a href="#let-for-declaring-variables"><code>let</code> for Declaring Variables</a>
+      <ul>
+        <li><a href="#reassigning-variables">Reassigning Variables:</a></li>
+        <li><a href="#defining-multiple-variables">Defining Multiple Variables:</a></li>
+      </ul>
+    </li>
+    <li><a href="#const-for-constants"><code>const</code> for Constants</a>
+      <ul>
+        <li><a href="#constants-and-runtime-values">Constants and Runtime Values:</a></li>
+      </ul>
+    </li>
+    <li><a href="#uppercase-constants">Uppercase Constants</a></li>
+  </ul>
+</nav>
+</div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+			<h1>Variables</h1>
+			
+			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
+				<details>
+    <summary>On this page</summary>
+    <div class="page-links">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#rules-for-naming-variables">Rules for naming variables:</a></li>
+    <li><a href="#naming-variables-properly">Naming Variables Properly</a></li>
+    <li><a href="#comments-in-javascript">Comments in JavaScript</a></li>
+    <li><a href="#var-old-way-of-declaring-variables"><code>var</code> (Old Way of Declaring Variables)</a></li>
+    <li><a href="#let-for-declaring-variables"><code>let</code> for Declaring Variables</a>
+      <ul>
+        <li><a href="#reassigning-variables">Reassigning Variables:</a></li>
+        <li><a href="#defining-multiple-variables">Defining Multiple Variables:</a></li>
+      </ul>
+    </li>
+    <li><a href="#const-for-constants"><code>const</code> for Constants</a>
+      <ul>
+        <li><a href="#constants-and-runtime-values">Constants and Runtime Values:</a></li>
+      </ul>
+    </li>
+    <li><a href="#uppercase-constants">Uppercase Constants</a></li>
+  </ul>
+</nav>
+    </div>
+  </details>
+
+			</nav>
+			<p>In JavaScript, <em>bindings</em> (also known as <em>variables</em>) are used to maintain the internal state and store values.</p>
+<h2 id="rules-for-naming-variables">Rules for naming variables:<a href="#rules-for-naming-variables" class="anchor" aria-hidden="true">#</a> </h2>
+<ul>
+<li><strong>No keywords or reserved words</strong> (e.g., <code>if</code>, <code>for</code>, <code>function</code>, etc.).</li>
+<li><strong>Cannot start with a number</strong> (e.g., <code>123variable</code> is invalid).</li>
+<li><strong>No spaces or hyphens (<code>-</code>)</strong>.</li>
+<li><strong>No special characters</strong>, except for <code>$</code> and <code>_</code>.</li>
+</ul>
+<hr>
+<h2 id="naming-variables-properly">Naming Variables Properly<a href="#naming-variables-properly" class="anchor" aria-hidden="true">#</a> </h2>
+<p>A good variable name should be <strong>descriptive</strong> and <strong>easy to understand</strong>. It should clearly represent the value or data that it holds.</p>
+<ul>
+<li><strong>Use <code>camelCase</code></strong> for variable names (e.g., <code>userName</code>, <code>squareRoot</code>).</li>
+<li>Choose <strong>human-readable names</strong> that describe the purpose of the variable (e.g., <code>currentUser</code>, <code>shoppingCart</code>).</li>
+<li><strong>Avoid abbreviations or short names</strong> like <code>a</code>, <code>b</code>, and <code>c</code>, unless it&rsquo;s clear what they represent.</li>
+<li><strong>Be descriptive</strong> but also <strong>concise</strong>. For example, avoid overly generic names like <code>data</code> or <code>value</code>.</li>
+<li>If referring to a user in your application, use names like <code>currentUser</code> or <code>newUser</code> instead of vague terms like <code>currentVisitor</code> or <code>newManInTown</code>.</li>
+<li>lazy programmers who, instead of declaring new variables, tend to reuse existing ones. like boxes into which people throw different things without changing their stickers. What’s inside the box now? Who knows?. Such programmers save a little bit on variable declaration but lose ten times more on debugging.</li>
+</ul>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// Descriptive variable names
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">let</span> <span class="nx">userName</span> <span class="o">=</span> <span class="s1">&#39;Jane Doe&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">totalPrice</span> <span class="o">=</span> <span class="mf">100.50</span><span class="p">;</span></span></span></code></pre></div>
+  </figure>
+</div>
+<hr>
+<h2 id="comments-in-javascript">Comments in JavaScript<a href="#comments-in-javascript" class="anchor" aria-hidden="true">#</a> </h2>
+<ul>
+<li><strong>Single-line comment</strong> <code>//</code></li>
+<li><strong>Multi-line comment</strong> <code>/* ... */</code>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// This is a single-line comment
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span> <span class="c1">// Inline comment
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="cm">/* This is a multi-line comment
+</span></span></span><span class="line"><span class="cl"><span class="cm">   that spans across multiple lines */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">y</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span></span></span></code></pre></div>
+  </figure>
+</div>
+</li>
+</ul>
+<hr>
+<h2 id="var-old-way-of-declaring-variables"><code>var</code> (Old Way of Declaring Variables)<a href="#var-old-way-of-declaring-variables" class="anchor" aria-hidden="true">#</a> </h2>
+<p>The <code>var</code> keyword was previously used to declare variables in JavaScript, but it is now considered outdated due to some issues with variable scoping. As such, its usage is discouraged in favor of <code>let</code> and <code>const</code>.</p>
+<hr>
+<h2 id="let-for-declaring-variables"><code>let</code> for Declaring Variables<a href="#let-for-declaring-variables" class="anchor" aria-hidden="true">#</a> </h2>
+<p>The <code>let</code> keyword is used to declare variables that can be <strong>reassigned</strong> later.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">message</span><span class="p">;</span> <span class="c1">// Declaring a variable
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">message</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span><span class="p">;</span> <span class="c1">// Assigning a value
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">caught</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">5</span><span class="p">;</span> <span class="c1">// Declaring and assigning a value in one line
+</span></span></span></code></pre></div>
+  </figure>
+</div>
+<ul>
+<li>The <code>let</code> keyword indicates that a new variable is being defined.</li>
+<li>A variable declared with <code>let</code> can be reassigned to a different value after its initial assignment.</li>
+</ul>
+<h3 id="reassigning-variables">Reassigning Variables:<a href="#reassigning-variables" class="anchor" aria-hidden="true">#</a> </h3>
+<p>The binding is not tied to that value, it can be disconnected from current value and have them point to a new one;</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">mood</span> <span class="o">=</span> <span class="s1">&#39;light&#39;</span><span class="p">;</span>  <span class="c1">// Initial assignment
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">mood</span> <span class="o">=</span> <span class="s1">&#39;dark&#39;</span><span class="p">;</span>       <span class="c1">// Reassigning the value
+</span></span></span></code></pre></div>
+  </figure>
+</div>
+<ul>
+<li><strong>Important</strong>: Once a variable is declared with <code>let</code>, it can be reassigned, but it does <strong>not</strong> need <code>let</code> for the reassignment. You only use <code>let</code> when declaring the variable for the first time.</li>
+</ul>
+<h3 id="defining-multiple-variables">Defining Multiple Variables:<a href="#defining-multiple-variables" class="anchor" aria-hidden="true">#</a> </h3>
+<p>You can define multiple variables in a single <code>let</code> declaration, separating them with commas.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">one</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">two</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>  <span class="c1">// Multiple variables in one line
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">user</span> <span class="o">=</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="nx">age</span> <span class="o">=</span> <span class="mi">25</span><span class="p">,</span> <span class="nx">message</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span><span class="p">;</span>  <span class="c1">// Another example
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Alternatively, you can split the declarations across multiple lines:
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">let</span> <span class="nx">user</span> <span class="o">=</span> <span class="s1">&#39;John&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span> <span class="nx">age</span> <span class="o">=</span> <span class="mi">25</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span> <span class="nx">message</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span><span class="p">;</span></span></span></code></pre></div>
+  </figure>
+</div>
+<hr>
+<h2 id="const-for-constants"><code>const</code> for Constants<a href="#const-for-constants" class="anchor" aria-hidden="true">#</a> </h2>
+<p>The <code>const</code> keyword is used to declare <strong>constants</strong>. Once a value is assigned to a <code>const</code> variable, it <strong>cannot be reassigned</strong>. Attempting to change the value of a constant results in an error.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">pi</span> <span class="o">=</span> <span class="mf">3.142</span><span class="p">;</span>          <span class="c1">// Constant value
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">myBirthday</span> <span class="o">=</span> <span class="s1">&#39;18.04.1999&#39;</span><span class="p">;</span>  <span class="c1">// Another constant
+</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>A constant binding points to the same value as long as it lives. <strong>Constants cannot be reassigned</strong> once their initial value is set.</p>
+<h3 id="constants-and-runtime-values">Constants and Runtime Values:<a href="#constants-and-runtime-values" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Some constants may be known beforehand (e.g., <code>pi</code>), while others are calculated at runtime but remain unchanged after their initial assignment.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">pageLoadTime</span> <span class="o">=</span> <span class="cm">/* Time taken for a webpage to load */</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">age</span> <span class="o">=</span> <span class="nx">calculateAge</span><span class="p">(</span><span class="nx">myBirthday</span><span class="p">);</span> <span class="c1">// Value computed at runtime
+</span></span></span></code></pre></div>
+  </figure>
+</div>
+<hr>
+<h2 id="uppercase-constants">Uppercase Constants<a href="#uppercase-constants" class="anchor" aria-hidden="true">#</a> </h2>
+<p>A common convention for constants that represent values known before execution is to use <strong>uppercase letters</strong> with underscores (<code>_</code>) to separate words. This makes them easier to identify in your code.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">COLOR_RED</span> <span class="o">=</span> <span class="s2">&#34;#F00&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">COLOR_GREEN</span> <span class="o">=</span> <span class="s2">&#34;#0F0&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">COLOR_BLUE</span> <span class="o">=</span> <span class="s2">&#34;#00F&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">COLOR_ORANGE</span> <span class="o">=</span> <span class="s2">&#34;#FF7F00&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Using the constant to set a variable
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">let</span> <span class="nx">color</span> <span class="o">=</span> <span class="nx">COLOR_ORANGE</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">alert</span><span class="p">(</span><span class="nx">color</span><span class="p">);</span>  <span class="c1">// Outputs the color value
+</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Redone on #07oct24</p>
+<hr>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="page-nav d-flex flex-column flex-sm-row">
+	
+	<div class="card w-100">
+			<div class="card-body d-flex">
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M5 12l6 6"></path>
+						<path d="M5 12l6 -6"></path>
+				 	</svg>
+				</div>
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Prev</div>
+					<a href="/personal-site/docs/tools/obsidian/" class="stretched-link text-reset text-decoration-none">Obsidian</a>
+				</div>
+			</div>
+		</div>
+	<div class="m-2"></div>
+	<div class="card text-end w-100">
+			<div class="card-body d-flex justify-content-end">
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Next</div>
+					<a href="/personal-site/docs/java-script/js-language/1-data-types/values-and-types/" class="stretched-link text-reset text-decoration-none">Values and Types</a>
+				</div>
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M13 18l6 -6"></path>
+						<path d="M13 6l6 6"></path>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</div>
+
+			
+		</main>
+		
+	</div>
+
+      
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-lg">
+    <div class="row">
+      <div class="col-lg-8 text-center text-lg-start">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a class="text-muted" href="/personal-site/privacy/">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 text-center text-lg-end">
+        <ul class="list-inline">
+          <li class="list-inline-item">Made by <a class="text-muted" href="https://sujith-eag.github.io/personal-site/">Sujith</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+<script async
+  src="/personal-site/js/app.4ca3b61e3452c943f4197457251b3551cb46579ecf58e675999fbc96411dcb0d.js"
+  integrity="sha256-TKO2HjRSyUP0GXRXJRs1UctGV57PWOZ1mZ&#43;8lkEdyw0=">
+</script>
+
+
+
+
+
+<script async
+  src="/personal-site/js/flexsearch.be33aab3067e96554f261851c25a593228b91154cd28ff5c7f8d52b2e7f306d2.js"
+  integrity="sha256-vjOqswZ&#43;llVPJhhRwlpZMii5EVTNKP9cf41SsufzBtI=">
+</script>
+<script async
+  src="/personal-site/js/search-modal.97d606e77f08deeb37876860d99c8f6813ef29263e73b6435c252de6be98d55e.js"
+  integrity="sha256-l9YG538I3us3h2hg2ZyPaBPvKSY&#43;c7ZDXCUt5r6Y1V4=">
+</script>
+
+    
+  </body>
+</html>
