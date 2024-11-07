@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Loops on Sujith&#39;s Library</title>
+    <link>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/loops/</link>
+    <description>Recent content in Loops on Sujith&#39;s Library</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2020-2024 Thulite</copyright>
+    <lastBuildDate>Thu, 07 Nov 2024 20:52:20 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/loops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>do-while Loop</title>
+      <link>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/loops/do-while-loop/</link>
+      <pubDate>Thu, 07 Nov 2024 20:50:37 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/loops/do-while-loop/</guid>
+      <description>&lt;h2 id=&#34;while-and-dowhile-loops&#34;&gt;&lt;strong&gt;&lt;code&gt;while&lt;/code&gt; and &lt;code&gt;do...while&lt;/code&gt; Loops&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-while-loop&#34;&gt;&lt;strong&gt;1. &lt;code&gt;while&lt;/code&gt; Loop&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;The &lt;code&gt;while&lt;/code&gt; loop executes the code inside its body &lt;strong&gt;as long as&lt;/strong&gt; the condition evaluates to &lt;strong&gt;truthy&lt;/strong&gt;. The condition is checked &lt;strong&gt;before&lt;/strong&gt; each iteration.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>for Loop</title>
+      <link>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/loops/for-loop/</link>
+      <pubDate>Thu, 07 Nov 2024 20:50:52 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/loops/for-loop/</guid>
+      <description>&lt;h2 id=&#34;for-loop&#34;&gt;&lt;strong&gt;&lt;code&gt;for&lt;/code&gt; Loop&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;p&gt;The &lt;code&gt;for&lt;/code&gt; loop is typically used when you know in advance how many times you need to repeat an action. It provides a concise way to initialize, check the condition, and update the loop counter in one line.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>for-of Loop</title>
+      <link>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/loops/for-of-loop/</link>
+      <pubDate>Thu, 07 Nov 2024 20:51:24 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/loops/for-of-loop/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://javascript.info/array#loops&#34;&gt;for…of&lt;/a&gt; and &lt;a href=&#34;https://javascript.info/iterable&#34;&gt;iterables&lt;/a&gt; for looping over arrays and iterable objects.&#xA;[[6_Iterables|Iterable]]&lt;/p&gt;&#xA;&lt;h2 id=&#34;forof-loop&#34;&gt;&lt;strong&gt;&lt;code&gt;for...of&lt;/code&gt; Loop&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;p&gt;The &lt;code&gt;for...of&lt;/code&gt; loop is a convenient and modern syntax for iterating over &lt;strong&gt;iterable objects&lt;/strong&gt; (e.g., arrays, strings, maps, sets). It&amp;rsquo;s a simpler way to loop through elements in a collection, without needing to manually handle indices.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>for-in Loop</title>
+      <link>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/loops/for-in-loop/</link>
+      <pubDate>Thu, 07 Nov 2024 20:51:38 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/loops/for-in-loop/</guid>
+      <description>&lt;p&gt;The &lt;a href=&#34;https://javascript.info/object#forin&#34;&gt;for…in&lt;/a&gt; loop is used to iterate over the &lt;strong&gt;keys/properties&lt;/strong&gt; of an object. It allows us to walk through the keys (or property names) in an object.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>break-continue-label</title>
+      <link>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/loops/break-continue-label/</link>
+      <pubDate>Thu, 07 Nov 2024 20:52:03 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/loops/break-continue-label/</guid>
+      <description>&lt;h2 id=&#34;break-statement&#34;&gt;&lt;strong&gt;&lt;code&gt;break&lt;/code&gt; Statement&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;p&gt;The &lt;code&gt;break&lt;/code&gt; statement is used to &lt;strong&gt;immediately exit&lt;/strong&gt; from a loop, switch statement, or even a &lt;code&gt;try...catch&lt;/code&gt; block. When encountered, the loop or block is terminated, and execution continues with the code after the loop.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Iterables</title>
+      <link>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/loops/iterables/</link>
+      <pubDate>Thu, 07 Nov 2024 20:52:20 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/loops/iterables/</guid>
+      <description>&lt;h2 id=&#34;iterablehttpsjavascriptinfoiterable&#34;&gt;&lt;a href=&#34;https://javascript.info/iterable&#34;&gt;&lt;strong&gt;Iterable&lt;/strong&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;Objects that can be used in &lt;code&gt;for..of&lt;/code&gt; are called &lt;em&gt;iterable&lt;/em&gt;.&#xA;To be considered iterable, an object must implement the method &lt;code&gt;Symbol.iterator&lt;/code&gt;, which returns an &lt;strong&gt;iterator&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
