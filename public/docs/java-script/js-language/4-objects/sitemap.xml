@@ -1,3 +1,45 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  </urlset>
+  
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/java-script/js-language/4-objects/object/</loc>
+      <lastmod>2024-11-09T17:05:46+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/java-script/js-language/4-objects/object-properties/</loc>
+      <lastmod>2024-11-09T17:06:12+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/java-script/js-language/4-objects/cloning-object/</loc>
+      <lastmod>2024-11-09T17:06:36+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/java-script/js-language/4-objects/object.keys/</loc>
+      <lastmod>2024-11-09T17:07:07+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/java-script/js-language/4-objects/methods-this-chaining/</loc>
+      <lastmod>2024-11-09T17:07:30+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/java-script/js-language/4-objects/constructor-new/</loc>
+      <lastmod>2024-11-09T17:07:54+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    </urlset>

@@ -60,8 +60,8 @@
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/personal-site/docs/tools/git-github/</loc>
-        <lastmod>2024-10-22T14:47:02+05:30</lastmod>
+        <loc>http://localhost:1313/personal-site/docs/tools/obsidian/</loc>
+        <lastmod>2024-10-22T14:47:43+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
@@ -72,8 +72,8 @@
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/personal-site/docs/tools/obsidian/</loc>
-        <lastmod>2024-10-22T14:47:43+05:30</lastmod>
+        <loc>http://localhost:1313/personal-site/docs/tools/git-github/</loc>
+        <lastmod>2024-10-22T14:47:02+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
