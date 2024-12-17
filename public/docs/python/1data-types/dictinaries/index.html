@@ -1,0 +1,2094 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="/personal-site/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=personal-site/livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preload" href="http://localhost:1313/personal-site/fonts/vendor/jost/jost-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/personal-site/fonts/vendor/jost/jost-v4-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/personal-site/fonts/vendor/jost/jost-v4-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<script 
+  src="/personal-site/js/color-mode.f14b3e296de1d0b69e75af684b62a4a912a2cadab04e36123407cd8388204f1d.js"
+  integrity="sha256-8Us&#43;KW3h0Laeda9oS2KkqRKiytqwTjYSNAfNg4ggTx0=">
+</script>
+
+
+<link rel="stylesheet" href="/personal-site/main.01b0834d5af51b24812d02878d09c8d7677d6b8af13164fb50215889dc19aaefd0e9366c13b45a9a57ae481dfd1836bce46b5ebfe461d56e3498b9443d8c5e27.css" integrity="sha512-AbCDTVr1GySBLQKHjQnI12d9a4rxMWT7UCFYidwZqu/Q6TZsE7RamleuSB39GDa85Gtev&#43;Rh1W40mLlEPYxeJw==" crossorigin="anonymous">
+
+<noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/personal-site/docs/python/1data-types/dictinaries/">
+  <link rel="canonical" href="http://localhost:1313/personal-site/docs/python/1data-types/dictinaries/">
+<title>Dictinaries  |  Sujith&#39;s Library</title>
+<meta name="description" content="A reference site with summary of various coding topics">
+
+    
+    <link rel="icon" href="/personal-site/favicon.ico" sizes="32x32">
+    
+      <link rel="icon" href="/personal-site/favicon.svg" type="image/svg+xml">
+    
+      <link
+        rel="apple-touch-icon"
+        href="/personal-site/personal-site/apple-touch-icon.png"
+        sizes="180x180"
+        type="image/png"
+      >
+      <link
+        rel="icon"
+        href="/personal-site/favicon-192x192.png"
+        sizes="192x192"
+        type="image/png"
+      >
+      <link
+        rel="icon"
+        href="/personal-site/favicon-512x512.png"
+        sizes="512x512"
+        type="image/png"
+      >
+<link rel="manifest" href="/personal-site/manifest.webmanifest">
+
+<meta property="og:title" content="Dictinaries">
+<meta property="og:description" content="Dictionary is a collection of key-value pairs. each key is connected to a value, and key can be used to access a value.
+It is wrapped in {} ,  key connected to value by : , and each key-value pair is separated by ,
+a = {&quot;colour&quot; : &quot;green&quot;, &quot;points&quot; : 5 }">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://localhost:1313/personal-site/docs/python/1data-types/dictinaries/"><meta property="og:image" content="http://localhost:1313/personal-site/cover.png"><meta property="article:section" content="docs">
+<meta property="article:published_time" content="2024-12-17T22:47:04+05:30">
+<meta property="article:modified_time" content="2024-12-17T22:47:04+05:30"><meta property="og:site_name" content="Sujith&#39;s Notes">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://localhost:1313/personal-site/cover.png"><meta name="twitter:title" content="Dictinaries">
+<meta name="twitter:description" content="Dictionary is a collection of key-value pairs. each key is connected to a value, and key can be used to access a value.
+It is wrapped in {} ,  key connected to value by : , and each key-value pair is separated by ,
+a = {&quot;colour&quot; : &quot;green&quot;, &quot;points&quot; : 5 }">
+
+    
+    
+    
+    <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/personal-site/",
+       "name": "Sujith's Library",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/personal-site/docs/",
+       "name": "All Notes Articles",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/personal-site/docs/python/",
+       "name": "Python",
+       "position": 3
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/personal-site/docs/python/1data-types/",
+       "name": "Data Types",
+       "position": 4
+     },
+     {
+       "@type": "ListItem",
+       "name": "Dictinaries",
+       "position": 5
+     }
+   ]
+ }
+</script>
+
+
+
+
+
+</head>
+
+  
+  <body class="single section docs" data-bs-spy="scroll" data-bs-target="#toc" data-bs-root-margin="0px 0px -60%" data-bs-smooth-scroll="true" tabindex="0">
+    <div class="sticky-top">
+<header class="navbar navbar-expand-lg">
+  <div class="container-lg">
+  
+    <a class="navbar-brand me-auto me-lg-3" href="/personal-site/">Sujith&#39;s Library</a>
+
+    
+    
+    <button type="button" id="searchToggleMobile" class="btn btn-link nav-link mx-2 d-lg-none" aria-label="Search website">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <circle cx="10" cy="10" r="7"></circle>
+        <line x1="21" y1="21" x2="15" y2="15"></line>
+      </svg>
+    </button>
+    
+    <button class="btn btn-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavSection" aria-controls="offcanvasNavSection" aria-label="Open section navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+      </svg>
+    </button>
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavSection" aria-labelledby="offcanvasNavSectionLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavSectionLabel">Docs</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <aside class="doks-sidebar mt-n3">
+          <nav id="doks-docs-nav" aria-label="Tertiary navigation">
+            
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+    <details open open>
+      <summary>Python</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open open>
+      <summary>Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Complex Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/lists/">Lists</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/list-methods/">List Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/list-operators/">List Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/arrays/">Arrays</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li class="active" >
+      <a aria-current="page" href="/personal-site/docs/python/1data-types/dictinaries/">Dictinaries</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Primitive Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/variables/">Variables</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/int-float/">int &amp; float</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/string/">String</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/string-manipulation/">String Manipulation</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/string-methods/">String Methods</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>JavaScript</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>JS Language</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/variables/">Variables</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/values-and-types/">Values and Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/number-types/">Number Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/number-methods/">Number Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/string-type/">String Type</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/string-methods/">String Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/modifying-string/">Modifying String</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/boolean-type/">Boolean Type</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/operators/">Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/auto-type-conversions/">Auto Type Conversions</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Control Flow</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Conditionals</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/if-else/">if, else</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/switch-case/">switch-case</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/ternary-operator/">Ternary Operator</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/logical-operators/">Logical Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/short-circuiting/">Short Circuiting</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Loops</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/do-while-loop/">do-while Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/for-loop/">for Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/for-of-loop/">for-of Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/for-in-loop/">for-in Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/break-continue-label/">break-continue-label</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/iterables/">Iterables</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Functions</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/function/">Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/defining-function/">Defining Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/arrow-function/">Arrow Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/scope-of-variable/">Scope of Variable</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/parameters-arguments/">Parameters &amp; Arguments</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/return-recursion-call-stack/">Return, Recursion, Call Stack</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/scheduling/">Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/decorators/">Decorators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/function-object/">Function Object</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Objects</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/object/">Object</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/object-properties/">Object Properties</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/cloning-object/">Cloning Object</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/object.keys/">Object.keys()</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/methods-this-chaining/">Methods, this, Chaining</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/constructor-new/">Constructor new</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Arrays</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/array/">Array</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/array-methods/">Array Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/filter-method/">Filter Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/map-method/">Map Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/reduce-method/">Reduce Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/sort-method/">Sort Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/rest-spread/">Rest &amp; Spread</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/dom-manipulation/">DOM Manipulation</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>HTML &amp; CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>HTML</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/boiler-plate/">Boiler Plate</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/texts-lists/">Texts &amp; Lists</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/links-images/">Links &amp; Images</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/input-types/">Input Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/button/">Button</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/dom-events/">DOM Events</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-selectors/">CSS Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-multiple-selecors/">CSS Multiple Selecors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/declaration/">Declaration</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/adding-css/">Adding CSS</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/box-model/">Box Model</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/flexbox/">Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/flex-flexibility/">Flex Flexibility</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/axes-in-flexbox/">Axes in Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/utility-class-inheritance/">Utility Class &amp; Inheritance</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>CSS Reference</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css_resource/css-size-units/">CSS Size Units</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css_resource/css-color-values/">CSS Color Values</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Tools &amp; Accesories</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/tools/obsidian/">Obsidian</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/vs-code/">VS Code</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/git-github/">Git &amp; Github</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Bash - Linux Terminal</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/bash-1-basics/">Bash - 1 Basics</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/bash-2-working-with-files/">Bash - 2 Working With Files</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/bash-3-pipes-filters/">Bash - 3 Pipes Filters</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/bash-4-loops-scripting/">Bash - 4 Loops Scripting</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/bash-5-shell-scripting/">Bash - 5 Shell Scripting</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/bash-6-searching-wildcards/">Bash - 6 Searching Wildcards</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Bash Commands</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/bash-commands/">Bash Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/cat-concatenate/">cat - Concatenate</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/cd-change-directory/">cd - Change Directory</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/cp-copy/">cp - Copy</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/cut-with-deliminator/">cut - with deliminator</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/echo/">echo</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/grep/">grep</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/head-tail/">head tail</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/ls-list/">ls - List</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/mkdir/">mkdir</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/mv-move/">mv - Move</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/pwd/">pwd</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/rm-remove/">rm - Remove</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/sort/">sort</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/touch/">touch</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/uniq/">uniq</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/wc-word-count/">wc - Word Count</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+          </nav>
+        </aside>
+      </div>
+    </div>
+    
+    <button class="btn btn-link nav-link mx-2 order-3 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavMain" aria-controls="offcanvasNavMain" aria-label="Open main navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <line x1="4" y1="8" x2="20" y2="8"></line>
+        <line x1="4" y1="16" x2="20" y2="16"></line>
+      </svg>
+    </button>
+
+    
+    <div class="offcanvas offcanvas-end h-auto" tabindex="-1" id="offcanvasNavMain" aria-labelledby="offcanvasNavMainLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavMainLabel">Sujith&#39;s Library</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+         </svg>
+        </button>
+      </div>
+      
+      <div class="offcanvas-body d-flex flex-column flex-lg-row justify-content-between">
+        <ul class="navbar-nav flex-grow-1"><li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/python/">Python</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/java-script/">JavaScript</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/html-css/">HTML/CSS</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/bash-linux/">Bash</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/tools/">Tools</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/blog/">Blog</a>
+              </li>
+            </ul>
+
+        
+        
+        <button type="button" id="searchToggleDesktop" class="btn btn-link nav-link p-2 d-none d-lg-block" aria-label="Search website">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <circle cx="10" cy="10" r="7"></circle>
+            <line x1="21" y1="21" x2="15" y2="15"></line>
+          </svg>
+        </button>
+        
+        
+        
+        <button id="buttonColorMode" class="btn btn-link mx-auto nav-link p-0 ms-lg-2 me-lg-1" type="button" aria-label="Toggle theme">
+          <svg data-bs-theme-value="dark" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+          </svg>
+          <svg data-bs-theme-value="light" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0m-5 0h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+          </svg>
+        </button>
+        
+        <ul id="socialMenu" class="nav mx-auto flex-row order-lg-4">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/sujith-eag"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg><small class="ms-2 visually-hidden">GitHub</small></a>
+            </li>
+          </ul>
+        
+        </div>
+    </div>
+
+    
+    </div>
+</header>
+</div>
+
+<div class="modal" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-md-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 visually-hidden" id="searchModalLabel">Search</h1>
+        <button type="button" class="btn-close visually-hidden" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="search-input flex-grow-1 d-none">
+          <form id="search-form" class="search-form" action="#" method="post" accept-charset="UTF-8" role="search">
+            <label for="query" class="visually-hidden">Search</label>
+            <div class="d-flex">
+              <input type="search" id="query" name="query" class="search-text form-control form-control-lg" placeholder="Search" aria-label="Search" maxlength="128" autocomplete="off">
+              <button type="button" class="btn btn-link text-decoration-none px-0 ms-3 d-md-none" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-body">
+        <p class="search-loading status message d-none mt-3 text-center">Loading search index…</p>
+        <p class="search-no-recent message d-none mt-3 text-center">No recent searches</p>
+        <p class="search-no-results message d-none mt-3 text-center">No results for "<strong><span class="query-no-results">Query here</span></strong>"</p>
+        <div id="searchResults" class="search-results"></div>
+        <template>
+          <article class="search-result list-view">
+            <div class="card my-3">
+              <div class="card-body">
+                <header>
+                  <h2 class="h5 title title-submitted mb-0"><a class="stretched-link text-decoration-none text-reset" href="#">Title here</a></h2>
+                  <div class="submitted d-none"><time class="created-date">Date here</time></div>
+                </header>
+                <div class="content">Summary here</div>
+              </div>
+            </div>
+          </article>
+        </template>
+      </div>
+      <div class="modal-footer">
+        <ul class="list-inline me-auto d-none d-md-block">
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Enter key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M12 3.53088v3c0 1-1 2-2 2H4M7 11.53088l-3-3 3-3"></path></g></svg></kbd><span class="DocSearch-Label">to select</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow down" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 3.5v8M10.5 8.5l-3 3-3-3"></path></g></svg></kbd><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow up" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 11.5v-8M10.5 6.5l-3-3-3 3"></path></g></svg></kbd><span class="DocSearch-Label">to navigate</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Escape key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M13.6167 8.936c-.1065.3583-.6883.962-1.4875.962-.7993 0-1.653-.9165-1.653-2.1258v-.5678c0-1.2548.7896-2.1016 1.653-2.1016.8634 0 1.3601.4778 1.4875 1.0724M9 6c-.1352-.4735-.7506-.9219-1.46-.8972-.7092.0246-1.344.57-1.344 1.2166s.4198.8812 1.3445.9805C8.465 7.3992 8.968 7.9337 9 8.5c.032.5663-.454 1.398-1.4595 1.398C6.6593 9.898 6 9 5.963 8.4851m-1.4748.5368c-.2635.5941-.8099.876-1.5443.876s-1.7073-.6248-1.7073-2.204v-.4603c0-1.0416.721-2.131 1.7073-2.131.9864 0 1.6425 1.031 1.5443 2.2492h-2.956"></path></g></svg></kbd><span class="DocSearch-Label">to close</span></li>
+        </ul>
+        <p class="d-md-none">Search by <a class="text-decoration-none" href="https://github.com/nextapps-de/flexsearch">FlexSearch</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="wrap container-lg" role="document">
+      <div class="content">
+      
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+    <details open open>
+      <summary>Python</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open open>
+      <summary>Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Complex Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/lists/">Lists</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/list-methods/">List Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/list-operators/">List Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/arrays/">Arrays</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li class="active" >
+      <a aria-current="page" href="/personal-site/docs/python/1data-types/dictinaries/">Dictinaries</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Primitive Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/variables/">Variables</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/int-float/">int &amp; float</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/string/">String</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/string-manipulation/">String Manipulation</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/string-methods/">String Methods</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>JavaScript</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>JS Language</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/variables/">Variables</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/values-and-types/">Values and Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/number-types/">Number Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/number-methods/">Number Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/string-type/">String Type</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/string-methods/">String Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/modifying-string/">Modifying String</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/boolean-type/">Boolean Type</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/operators/">Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/auto-type-conversions/">Auto Type Conversions</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Control Flow</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Conditionals</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/if-else/">if, else</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/switch-case/">switch-case</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/ternary-operator/">Ternary Operator</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/logical-operators/">Logical Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/short-circuiting/">Short Circuiting</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Loops</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/do-while-loop/">do-while Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/for-loop/">for Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/for-of-loop/">for-of Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/for-in-loop/">for-in Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/break-continue-label/">break-continue-label</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/iterables/">Iterables</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Functions</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/function/">Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/defining-function/">Defining Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/arrow-function/">Arrow Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/scope-of-variable/">Scope of Variable</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/parameters-arguments/">Parameters &amp; Arguments</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/return-recursion-call-stack/">Return, Recursion, Call Stack</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/scheduling/">Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/decorators/">Decorators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/function-object/">Function Object</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Objects</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/object/">Object</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/object-properties/">Object Properties</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/cloning-object/">Cloning Object</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/object.keys/">Object.keys()</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/methods-this-chaining/">Methods, this, Chaining</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/constructor-new/">Constructor new</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Arrays</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/array/">Array</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/array-methods/">Array Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/filter-method/">Filter Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/map-method/">Map Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/reduce-method/">Reduce Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/sort-method/">Sort Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/rest-spread/">Rest &amp; Spread</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/dom-manipulation/">DOM Manipulation</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>HTML &amp; CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>HTML</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/boiler-plate/">Boiler Plate</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/texts-lists/">Texts &amp; Lists</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/links-images/">Links &amp; Images</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/input-types/">Input Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/button/">Button</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/dom-events/">DOM Events</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-selectors/">CSS Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-multiple-selecors/">CSS Multiple Selecors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/declaration/">Declaration</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/adding-css/">Adding CSS</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/box-model/">Box Model</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/flexbox/">Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/flex-flexibility/">Flex Flexibility</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/axes-in-flexbox/">Axes in Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/utility-class-inheritance/">Utility Class &amp; Inheritance</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>CSS Reference</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css_resource/css-size-units/">CSS Size Units</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css_resource/css-color-values/">CSS Color Values</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Tools &amp; Accesories</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/tools/obsidian/">Obsidian</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/vs-code/">VS Code</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/git-github/">Git &amp; Github</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Bash - Linux Terminal</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/bash-1-basics/">Bash - 1 Basics</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/bash-2-working-with-files/">Bash - 2 Working With Files</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/bash-3-pipes-filters/">Bash - 3 Pipes Filters</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/bash-4-loops-scripting/">Bash - 4 Loops Scripting</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/bash-5-shell-scripting/">Bash - 5 Shell Scripting</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/bash-6-searching-wildcards/">Bash - 6 Searching Wildcards</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Bash Commands</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/bash-commands/">Bash Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/cat-concatenate/">cat - Concatenate</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/cd-change-directory/">cd - Change Directory</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/cp-copy/">cp - Copy</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/cut-with-deliminator/">cut - with deliminator</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/echo/">echo</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/grep/">grep</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/head-tail/">head tail</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/ls-list/">ls - List</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/mkdir/">mkdir</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/mv-move/">mv - Move</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/pwd/">pwd</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/rm-remove/">rm - Remove</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/sort/">sort</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/touch/">touch</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/uniq/">uniq</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/command-docs/wc-word-count/">wc - Word Count</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+		</div>
+		
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="page-links">
+  <h3>On this page</h3>
+    <nav id="toc">
+  <ul>
+    <li><a href="#dictionary">Dictionary</a></li>
+    <li><a href="#looping-through-a-dictionary">Looping through a Dictionary</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#items-looping-through-all-key-value-pairs"><code>items()</code> Looping through all key-value pairs</a></li>
+          </ul>
+        </li>
+        <li><a href="#keys-looping-through-all-keys"><code>keys()</code> Looping through all keys</a></li>
+        <li><a href="#looping-through-keys-in-a-particular-order">Looping through keys in a particular order</a></li>
+      </ul>
+    </li>
+    <li><a href="#nesting">Nesting</a></li>
+    <li><a href="#making-a-empty-list-and-populating-it">Making a empty list and populating it</a></li>
+    <li><a href="#a-list-in-a-dictionary">A list in a dictionary</a></li>
+    <li><a href="#refining-the-singular-plural-grammar-issue">Refining the singular plural grammar issue</a></li>
+    <li><a href="#a-dictionary-in-dictionary">A dictionary in dictionary</a></li>
+    <li><a href="#cs50">CS50</a></li>
+    <li><a href="#list-of-dict">List of Dict</a></li>
+    <li><a href="#processing-a-dictionary">Processing a Dictionary</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#implementing-a-dictionary">Implementing a dictionary</a></li>
+  </ul>
+</nav>
+</div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+			<h1>Dictinaries</h1>
+			
+			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
+				<details>
+    <summary>On this page</summary>
+    <div class="page-links">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#dictionary">Dictionary</a></li>
+    <li><a href="#looping-through-a-dictionary">Looping through a Dictionary</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#items-looping-through-all-key-value-pairs"><code>items()</code> Looping through all key-value pairs</a></li>
+          </ul>
+        </li>
+        <li><a href="#keys-looping-through-all-keys"><code>keys()</code> Looping through all keys</a></li>
+        <li><a href="#looping-through-keys-in-a-particular-order">Looping through keys in a particular order</a></li>
+      </ul>
+    </li>
+    <li><a href="#nesting">Nesting</a></li>
+    <li><a href="#making-a-empty-list-and-populating-it">Making a empty list and populating it</a></li>
+    <li><a href="#a-list-in-a-dictionary">A list in a dictionary</a></li>
+    <li><a href="#refining-the-singular-plural-grammar-issue">Refining the singular plural grammar issue</a></li>
+    <li><a href="#a-dictionary-in-dictionary">A dictionary in dictionary</a></li>
+    <li><a href="#cs50">CS50</a></li>
+    <li><a href="#list-of-dict">List of Dict</a></li>
+    <li><a href="#processing-a-dictionary">Processing a Dictionary</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#implementing-a-dictionary">Implementing a dictionary</a></li>
+  </ul>
+</nav>
+    </div>
+  </details>
+
+			</nav>
+			<p>Dictionary is a collection of key-value pairs. each key is connected to a value, and key can be used to access a value.
+It is wrapped in <code>{}</code> ,  key connected to value by <code>:</code> , and each key-value pair is separated by <code>,</code>
+<code>a = {&quot;colour&quot; : &quot;green&quot;, &quot;points&quot; : 5 }</code></p>
+<h2 id="dictionary">Dictionary<a href="#dictionary" class="anchor" aria-hidden="true">#</a> </h2>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">A</span> <span class="nb">list</span> <span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">33</span><span class="p">]</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Values are associated to positions {0,1,2,3,4}, so 0,1,2,3,4 are keys which can be used to access corresponding values. But no specific key can be defined other than these, which are auto assigned.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">test1</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl"><span class="n">test1</span> <span class="p">[</span><span class="s2">&#34;dhawan&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">84</span>
+</span></span><span class="line"><span class="cl"><span class="n">test1</span> <span class="p">[</span><span class="s2">&#34;Pujara&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">16</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Dictionaries, allows keys other than <code>range(0,n)</code>,	Key could be any immutable values (int, float, bool, string, tuple),  it cannot be (list, dict), they can be updated in place like lists.
+(called dictionaries in python,  associative array in other languages)</p>
+<p>Empty dictionary is <code>{}</code>, not <code>[]</code> which is a list,  <code>test1 = ()</code> is empty tuple</p>
+<p>Adding new key-value pairs.
+To add a new key-value pair,  give the name of the dict folowed by new key in [] along with new value.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span><span class="p">[</span><span class="s2">&#34;x&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="p">[</span><span class="s2">&#34;y&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">25</span>        
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;colour&#34;</span><span class="p">:</span><span class="s2">&#34;green&#34;</span><span class="p">,</span> <span class="s2">&#34;points&#34;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="s2">&#34;x&#34;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&#34;y&#34;</span><span class="p">:</span><span class="mi">25</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># starting with an empty dictionary and then adding each new item to it   a = {}</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Nested dictionaries</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># there can be multiple keys for a given value</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">score</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl"><span class="n">score</span><span class="p">[</span><span class="s2">&#34;Test1&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl"><span class="n">score</span><span class="p">[</span><span class="s2">&#34;Test2&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl"><span class="n">score</span><span class="p">[</span><span class="s2">&#34;Test1&#34;</span><span class="p">][</span><span class="s2">&#34;Dhawan&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">84</span>
+</span></span><span class="line"><span class="cl"><span class="n">score</span><span class="p">[</span><span class="s2">&#34;Test1&#34;</span><span class="p">][</span><span class="s2">&#34;Kohli&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">200</span>
+</span></span><span class="line"><span class="cl"><span class="n">score</span><span class="p">[</span><span class="s2">&#34;Test2&#34;</span><span class="p">][</span><span class="s2">&#34;Dhawan&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">50</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">score</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># simplified</span>
+</span></span><span class="line"><span class="cl"><span class="n">score</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&#34;Test1&#34;</span><span class="p">:</span> <span class="p">{</span> <span class="s2">&#34;Dhawan&#34;</span><span class="p">:</span><span class="mi">84</span><span class="p">,</span> <span class="s2">&#34;Kohli&#34;</span><span class="p">:</span><span class="mi">200</span><span class="p">},</span>  <span class="s2">&#34;Test2&#34;</span><span class="p">:{</span> <span class="s2">&#34;Dhawan&#34;</span><span class="p">:</span> <span class="mi">50</span> <span class="p">}</span> <span class="p">}</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Using <code>get()</code> to Access Value</p>
+<p><code>get()</code> method can be used to set a default value if the requested key doesn&rsquo;t exist.
+It requires a key as first argument, a second optional argument if key doesn&rsquo;t exist.</p>
+<p>If there is a chance that the value you might be asking doesn&rsquo;t exist, use get()
+Even if second value is left blank, &ldquo;None&rdquo; will be returned, indicating absence of value</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">point</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;points&#39;</span><span class="p">,</span> <span class="s1">&#39;No point value assigned&#39;</span><span class="p">)</span>      </span></span></code></pre></div>
+  </figure>
+</div>
+<h2 id="looping-through-a-dictionary">Looping through a Dictionary<a href="#looping-through-a-dictionary" class="anchor" aria-hidden="true">#</a> </h2>
+<h4 id="items-looping-through-all-key-value-pairs"><code>items()</code> Looping through all key-value pairs<a href="#items-looping-through-all-key-value-pairs" class="anchor" aria-hidden="true">#</a> </h4>
+<p>We can loop through all the dict key-value pairs through its keys or values.
+using <code>for</code> loop for dict, create two variables to store keys and values. with dict name followed by method <code>items()</code></p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">user</span> <span class="o">=</span> <span class="p">{</span> <span class="n">k</span><span class="p">:</span><span class="n">v</span><span class="p">,</span> <span class="n">k1</span><span class="p">:</span><span class="n">v1</span>  <span class="p">}</span>  
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">user</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>              </span></span></code></pre></div>
+  </figure>
+</div>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">user_0</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&#34;username&#34;</span><span class="p">:</span> <span class="s2">&#34;efron&#34;</span><span class="p">,</span> <span class="s2">&#34;first&#34;</span><span class="p">:</span> <span class="s2">&#34;enric&#34;</span><span class="p">,</span> <span class="s2">&#34;Last&#34;</span><span class="p">:</span> <span class="s2">&#34;fermi&#34;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">user_0</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">Key: </span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Value: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fav_lang</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&#34;jen&#34;</span><span class="p">:</span> <span class="s2">&#34;Python&#34;</span><span class="p">,</span> <span class="s2">&#34;sarah&#34;</span><span class="p">:</span> <span class="s2">&#34;C&#34;</span><span class="p">,</span> <span class="s2">&#34;edward&#34;</span><span class="p">:</span><span class="s2">&#34;rust&#34;</span><span class="p">,</span> <span class="s2">&#34;phil&#34;</span><span class="p">:</span> <span class="s2">&#34;python&#34;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">lang</span> <span class="ow">in</span> <span class="n">fav_lang</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&#39;s favorite language is </span><span class="si">{</span><span class="n">lang</span><span class="si">}</span><span class="s2">.&#34;</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h3 id="keys-looping-through-all-keys"><code>keys()</code> Looping through all keys<a href="#keys-looping-through-all-keys" class="anchor" aria-hidden="true">#</a> </h3>
+<p><code>for name in fav_lang.keys():</code> is same as <code>for name in fav_lang:</code> because looping through keys is default when for is applied to a dict.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fav_lang</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&#34;jen&#34;</span><span class="p">:</span> <span class="s2">&#34;Python&#34;</span><span class="p">,</span> <span class="s2">&#34;sarah&#34;</span><span class="p">:</span> <span class="s2">&#34;C&#34;</span><span class="p">,</span> <span class="s2">&#34;edward&#34;</span><span class="p">:</span><span class="s2">&#34;rust&#34;</span><span class="p">,</span> <span class="s2">&#34;phil&#34;</span><span class="p">:</span> <span class="s2">&#34;python&#34;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">fav_lang</span><span class="p">:</span>   <span class="c1"># for name in fav_lang.keys():  does same</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> took our survey.&#34;</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fav_lang</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&#34;jen&#34;</span><span class="p">:</span> <span class="s2">&#34;Python&#34;</span><span class="p">,</span> <span class="s2">&#34;sarah&#34;</span><span class="p">:</span> <span class="s2">&#34;C&#34;</span><span class="p">,</span> <span class="s2">&#34;edward&#34;</span><span class="p">:</span><span class="s2">&#34;rust&#34;</span><span class="p">,</span> <span class="s2">&#34;phil&#34;</span><span class="p">:</span> <span class="s2">&#34;python&#34;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">friends</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;phil&#34;</span><span class="p">,</span> <span class="s2">&#34;jen&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">fav_lang</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Hi, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">friends</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">lang</span> <span class="o">=</span> <span class="n">fav_lang</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>   <span class="c1"># print(f&#34;{name}, I see you love {fav_lang[name]}&#34;)</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">, I see you love </span><span class="si">{</span><span class="n">lang</span><span class="si">}</span><span class="s2">&#34;</span> <span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h3 id="looping-through-keys-in-a-particular-order">Looping through keys in a particular order<a href="#looping-through-keys-in-a-particular-order" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Getting all the keys sorted by passing list to sorted.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">fav_lang</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>  </span></span></code></pre></div>
+  </figure>
+</div>
+<p>Looping through values in dict &raquo;&gt; <code>for lang in fav_lang.values():</code></p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fav_lang</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&#34;jen&#34;</span><span class="p">:</span> <span class="s2">&#34;python&#34;</span><span class="p">,</span> <span class="s2">&#34;sarah&#34;</span><span class="p">:</span> <span class="s2">&#34;C&#34;</span><span class="p">,</span> <span class="s2">&#34;edward&#34;</span><span class="p">:</span><span class="s2">&#34;rust&#34;</span><span class="p">,</span> <span class="s2">&#34;phil&#34;</span><span class="p">:</span> <span class="s2">&#34;python&#34;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;The following languages have been mentioned&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">lang</span> <span class="ow">in</span> <span class="n">fav_lang</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">lang</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p><code>set()</code> is a collection in which each item must be unique,
+wrapping <code>set()</code> around a collection of values, python takes the unique items and forms a set.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fav_lang</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&#34;jen&#34;</span><span class="p">:</span> <span class="s2">&#34;python&#34;</span><span class="p">,</span> <span class="s2">&#34;sarah&#34;</span><span class="p">:</span> <span class="s2">&#34;C&#34;</span><span class="p">,</span> <span class="s2">&#34;edward&#34;</span><span class="p">:</span> <span class="s2">&#34;rust&#34;</span><span class="p">,</span> <span class="s2">&#34;phil&#34;</span><span class="p">:</span> <span class="s2">&#34;python&#34;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;The following languages have been mentioned&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">lang</span> <span class="ow">in</span> <span class="nb">set</span><span class="p">(</span><span class="n">fav_lang</span><span class="o">.</span><span class="n">values</span><span class="p">()):</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">lang</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># wrapping set() around fav_lang.values() to get only uniqu values</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h2 id="nesting">Nesting<a href="#nesting" class="anchor" aria-hidden="true">#</a> </h2>
+<p>Nesting is storing multiple dictionaries in a list, or list of items in dictionary, or dicts in dict.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ali_0</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl"><span class="n">ali_1</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl"><span class="n">ali_2</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl"><span class="n">alie</span> <span class="o">=</span> <span class="p">[</span><span class="n">ali_0</span><span class="p">,</span> <span class="n">ali_1</span><span class="p">,</span> <span class="n">ali_2</span><span class="p">]</span>  
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">ali</span> <span class="ow">in</span> <span class="n">alie</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">ali</span><span class="p">)</span>     <span class="c1"># will print each dictionary </span></span></span></code></pre></div>
+  </figure>
+</div>
+<h2 id="making-a-empty-list-and-populating-it">Making a empty list and populating it<a href="#making-a-empty-list-and-populating-it" class="anchor" aria-hidden="true">#</a> </h2>
+<p>Using <code>range()</code> to create a fleet of 30 aliens</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">aliens</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">ali</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">new_alien</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;colour&#34;</span><span class="p">:</span><span class="s2">&#34;green&#34;</span><span class="p">,</span> <span class="s2">&#34;points&#34;</span><span class="p">:</span> <span class="s2">&#34;5&#34;</span><span class="p">,</span> <span class="s2">&#34;speed&#34;</span><span class="p">:</span><span class="s2">&#34;slow&#34;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">aliens</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_alien</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Making 3 alien in the list change color, speed and points.
+Looping through only 3 and then changing all values for the keys</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">aliens</span><span class="p">[:</span><span class="mi">3</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">a</span><span class="p">[</span><span class="s2">&#34;colour&#34;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&#34;green&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">a</span><span class="p">[</span><span class="s2">&#34;colour&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&#34;yellow&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">a</span><span class="p">[</span><span class="s2">&#34;speed&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&#34;medium&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">a</span><span class="p">[</span><span class="s2">&#34;points&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># to make any yellow aliens to red,</span>
+</span></span><span class="line"><span class="cl">    <span class="k">elif</span> <span class="n">a</span><span class="p">[</span><span class="s2">&#34;colour&#34;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&#34;yelow&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">a</span><span class="p">[</span><span class="s2">&#34;colour&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&#34;red&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">a</span><span class="p">[</span><span class="s2">&#34;speed&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&#34;fast&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">a</span><span class="p">[</span><span class="s2">&#34;points&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">15</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">ali</span> <span class="ow">in</span> <span class="n">aliens</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">ali</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h2 id="a-list-in-a-dictionary">A list in a dictionary<a href="#a-list-in-a-dictionary" class="anchor" aria-hidden="true">#</a> </h2>
+<p>Pizza order</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pizza</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&#34;crust&#34;</span><span class="p">:</span><span class="s2">&#34;thick&#34;</span><span class="p">,</span> <span class="s2">&#34;toppings&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;mushroom&#34;</span><span class="p">,</span> <span class="s2">&#34;extra cheese&#34;</span><span class="p">]</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;You have ordered a </span><span class="si">{</span><span class="n">pizza</span><span class="p">[</span><span class="s1">&#39;crust&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> crust pizza. </span><span class="se">\n</span><span class="s2">With the following toppings &#34;</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">top</span> <span class="ow">in</span> <span class="n">pizza</span><span class="p">[</span><span class="s2">&#34;toppings&#34;</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="se">\t</span><span class="si">{</span><span class="n">top</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>           
+</span></span><span class="line"><span class="cl">    <span class="c1"># print(top) would have worked but adding tab with \t needs f string</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Favorite language</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fav_lang</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;jen&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="s1">&#39;rust&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;sarah&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;edward&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;rust&#39;</span><span class="p">,</span> <span class="s1">&#39;go&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;phil&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="s1">&#39;haskell&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># i just divided getting the value</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">fav_lang</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&#39;s favorite languages are:&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">lang</span> <span class="ow">in</span> <span class="n">fav_lang</span><span class="p">[</span><span class="n">name</span><span class="p">]:</span>        
+</span></span><span class="line"><span class="cl">    <span class="c1"># i used fav_lang.values, but it is a list there are no values or keys</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="se">\t</span><span class="si">{</span><span class="n">lang</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># it could have been just at a time process</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">lang</span> <span class="ow">in</span> <span class="n">fav_lang</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&#39;s favorite values are:&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">lang</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="se">\t</span><span class="si">{</span><span class="n">l</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h2 id="refining-the-singular-plural-grammar-issue">Refining the singular plural grammar issue<a href="#refining-the-singular-plural-grammar-issue" class="anchor" aria-hidden="true">#</a> </h2>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fav_lang</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;jen&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="s1">&#39;rust&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;sarah&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;edward&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;rust&#39;</span><span class="p">,</span> <span class="s1">&#39;go&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;phil&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="s1">&#39;haskell&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">lang</span> <span class="ow">in</span> <span class="n">fav_lang</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">lang</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span> <span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">name</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="si">}</span><span class="s2">&#39;s favorite language is:&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="se">\t</span><span class="si">{</span><span class="n">lang</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">name</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="si">}</span><span class="s2">&#39;s favorite languages are:&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">lang</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="se">\t</span><span class="si">{</span><span class="n">l</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h2 id="a-dictionary-in-dictionary">A dictionary in dictionary<a href="#a-dictionary-in-dictionary" class="anchor" aria-hidden="true">#</a> </h2>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">users</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;aeinstein&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;first&#39;</span><span class="p">:</span> <span class="s1">&#39;albert&#39;</span><span class="p">,</span>  <span class="s1">&#39;last&#39;</span><span class="p">:</span> <span class="s1">&#39;einstein&#39;</span><span class="p">,</span> <span class="s1">&#39;location&#39;</span><span class="p">:</span> <span class="s1">&#39;princeton&#39;</span><span class="p">,}</span> <span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;mcurie&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;first&#39;</span><span class="p">:</span> <span class="s1">&#39;marie&#39;</span><span class="p">,</span> <span class="s1">&#39;last&#39;</span><span class="p">:</span> <span class="s1">&#39;curie&#39;</span><span class="p">,</span> <span class="s1">&#39;location&#39;</span><span class="p">:</span> <span class="s1">&#39;paris&#39;</span><span class="p">,}</span> <span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">user</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">users</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>        
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span> <span class="p">(</span> <span class="sa">f</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">Username: </span><span class="si">{</span><span class="n">user</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span> <span class="p">(</span> <span class="sa">f</span><span class="s2">&#34;</span><span class="se">\t</span><span class="s2">Full Name: </span><span class="si">{</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;first&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;last&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span> <span class="p">(</span> <span class="sa">f</span><span class="s2">&#34;</span><span class="se">\t</span><span class="s2">Location: </span><span class="si">{</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;location&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># just another way</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">user</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">users</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>        
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span> <span class="p">(</span> <span class="sa">f</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">Username: </span><span class="si">{</span><span class="n">user</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">full_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">data</span><span class="p">[</span><span class="s2">&#34;first&#34;</span><span class="p">]</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;last&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">location</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;location&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="se">\t</span><span class="s2">Full Name: </span><span class="si">{</span><span class="n">full_name</span><span class="si">}</span><span class="se">\n\t</span><span class="s2">Location: </span><span class="si">{</span><span class="n">location</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h2 id="cs50">CS50<a href="#cs50" class="anchor" aria-hidden="true">#</a> </h2>
+<p>Associates a value with another value,  like words and meanings in a dictionary.
+having multiple lists <code>[]</code> isn&rsquo;t practical.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">students</span> <span class="o">=</span> <span class="p">{</span> <span class="p">}</span>  
+</span></span><span class="line"><span class="cl"><span class="c1"># empty dictionary</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">keys</span> <span class="p">:</span> <span class="n">values</span> <span class="c1"># : is the separator</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p><code>list[]</code> have numbers to index into them, but <code>dict{}</code> allows the actual words to be used as Indies to get their values. To get Draco values, we can use Draco as the key</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">students</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;Harry&#34;</span> <span class="p">:</span> <span class="s2">&#34;Gryffindor&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;Hermione&#34;</span> <span class="p">:</span> <span class="s2">&#34;gryffindor&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;Draco&#34;</span> <span class="p">:</span> <span class="s2">&#34;Slytherin&#34;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">students</span><span class="p">[</span><span class="s2">&#34;Hermione&#34;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">students</span><span class="p">[</span><span class="s2">&#34;Draco&#34;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">student</span> <span class="ow">in</span> <span class="n">students</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">student</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># by default the dic{} only the keys are read so only names are displayed</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">student</span> <span class="ow">in</span> <span class="n">students</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">student</span><span class="p">,</span> <span class="n">students</span><span class="p">[</span><span class="n">student</span><span class="p">],</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&#34;, &#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># students[student] is using the name as key to get the associated value</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h2 id="list-of-dict">List of Dict<a href="#list-of-dict" class="anchor" aria-hidden="true">#</a> </h2>
+<p>Keyword &ldquo;None&rdquo; with capital N, which represents absence of value,
+All <code>dict{}</code> are given same key words but different values, by design keys are standardized to find things easily.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">students</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="s2">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;Hermione&#34;</span><span class="p">,</span> <span class="s2">&#34;house&#34;</span><span class="p">:</span> <span class="s2">&#34;Gryffindor&#34;</span><span class="p">,</span> <span class="s2">&#34;patronus&#34;</span><span class="p">:</span><span class="s2">&#34;Otter&#34;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="s2">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;Harry&#34;</span><span class="p">,</span> <span class="s2">&#34;house&#34;</span><span class="p">:</span> <span class="s2">&#34;Gryffindor&#34;</span><span class="p">,</span> <span class="s2">&#34;patronus&#34;</span><span class="p">:</span> <span class="s2">&#34;Stag&#34;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="s2">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;Ron&#34;</span><span class="p">,</span> <span class="s2">&#34;house&#34;</span><span class="p">:</span> <span class="s2">&#34;Gryffindor&#34;</span><span class="p">,</span> <span class="s2">&#34;patronus&#34;</span><span class="p">:</span> <span class="s2">&#34;Terrier&#34;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="s2">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;Draco&#34;</span><span class="p">,</span> <span class="s2">&#34;house&#34;</span><span class="p">:</span> <span class="s2">&#34;Slytherin&#34;</span><span class="p">,</span> <span class="s2">&#34;patronus&#34;</span><span class="p">:</span> <span class="kc">None</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">student</span> <span class="ow">in</span> <span class="n">students</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">student</span><span class="p">[</span><span class="s2">&#34;name&#34;</span><span class="p">],</span> <span class="n">student</span><span class="p">[</span><span class="s2">&#34;house&#34;</span><span class="p">],</span> <span class="n">student</span><span class="p">[</span><span class="s2">&#34;patronus&#34;</span><span class="p">],</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&#34;, &#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"><span class="c1"># using print(students[&#34;name&#34;]) will give a str, but it must be int</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># &#34;for&#34; will get first value which is dict{} 0, to student</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># print(student[&#34;name&#34;]) will get the value of key word &#34;name&#34;</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h2 id="processing-a-dictionary">Processing a Dictionary<a href="#processing-a-dictionary" class="anchor" aria-hidden="true">#</a> </h2>
+<p>Extracting keys using <code>d.keys()</code>
+It returns sequence of keys in dictionary d ( in random order). <code>d.key</code> is not a list, it is similar to range. To make a list of keys, <code>list(d.keys())</code></p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># some process d[k]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># d.keys() will not be in any perticular order</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>  <span class="c1"># returns in predictible order</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># process d[k]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">sorted</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>  <span class="c1"># returns a sorted copy of l,  so doesnt modify l</span>
+</span></span><span class="line"><span class="cl"><span class="n">l</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>   <span class="c1"># sorts l in place</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Extracting Values from dictionary</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">d</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>  
+</span></span><span class="line"><span class="cl"><span class="c1"># is a sequence of values in d  </span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">test1</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">	<span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">s</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Testing if value is in dict uising &ldquo;in&rdquo; function.
+Assigning to an unknown key inserts an entry or updates if key already exists.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl"><span class="n">d</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">7</span>  <span class="c1"># then  d == {0:7}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">l</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">7</span>  <span class="c1"># causes IndexError</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>   </p>
+<h1 id="course">Course</h1>
+<h2 id="implementing-a-dictionary">Implementing a dictionary<a href="#implementing-a-dictionary" class="anchor" aria-hidden="true">#</a> </h2>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">A</span> <span class="n">dictionary</span> <span class="ow">is</span> <span class="n">implimented</span> <span class="k">as</span> <span class="n">a</span> <span class="nb">hash</span> <span class="n">table</span>
+</span></span><span class="line"><span class="cl">	<span class="n">an</span> <span class="n">array</span> <span class="n">plus</span> <span class="n">a</span> <span class="nb">hash</span> <span class="n">function</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">The</span> <span class="n">underlying</span> <span class="n">storage</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">array</span>
+</span></span><span class="line"><span class="cl"> <span class="n">given</span> <span class="n">an</span> <span class="n">offset</span> <span class="n">i</span><span class="p">,</span> <span class="n">find</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">in</span> <span class="n">constant</span> <span class="n">time</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">keys</span> <span class="n">have</span> <span class="n">to</span> <span class="n">be</span> <span class="n">mapped</span> <span class="n">to</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="o">.</span> <span class="o">.</span> <span class="o">.</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="n">given</span> <span class="n">an</span> <span class="n">key</span> <span class="n">k</span><span class="p">,</span> <span class="n">convert</span> <span class="n">it</span> <span class="n">to</span> <span class="n">an</span> <span class="n">offset</span> <span class="n">i</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Hash</span> <span class="n">function</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="n">h</span><span class="p">:</span> <span class="n">S</span><span class="o">--&gt;</span> <span class="n">X</span> <span class="n">maps</span> <span class="n">a</span> <span class="nb">set</span> <span class="n">of</span> <span class="n">values</span> <span class="n">S</span> <span class="n">to</span> <span class="n">a</span> <span class="n">small</span> <span class="nb">range</span> <span class="n">of</span> <span class="n">integers</span> <span class="n">X</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="o">..</span><span class="p">,</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="n">typically</span> <span class="o">|</span><span class="n">X</span><span class="o">|&lt;&lt;|</span><span class="n">S</span><span class="o">|</span><span class="p">,</span> <span class="n">so</span> <span class="n">there</span> <span class="n">will</span> <span class="n">be</span> <span class="n">collisions</span><span class="p">,</span> <span class="n">h</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">=</span> <span class="n">h</span><span class="p">(</span><span class="n">s</span><span class="s1">&#39;), s != s&#39;</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	<span class="n">a</span> <span class="n">good</span> <span class="nb">hash</span> <span class="n">function</span> <span class="n">will</span> <span class="n">minimize</span> <span class="n">collisions</span>
+</span></span><span class="line"><span class="cl">	<span class="n">SHA</span><span class="o">-</span><span class="mi">256</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">industry</span> <span class="n">standatd</span> <span class="n">hashing</span> <span class="n">function</span> <span class="n">whose</span> <span class="nb">range</span> <span class="ow">is</span> <span class="mi">256</span> <span class="n">bits</span>
+</span></span><span class="line"><span class="cl">		<span class="n">use</span> <span class="n">to</span> <span class="nb">hash</span> <span class="n">large</span> <span class="n">files</span> </span></span></code></pre></div>
+  </figure>
+</div>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="page-nav d-flex flex-column flex-sm-row">
+	
+	<div class="card w-100">
+			<div class="card-body d-flex">
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M5 12l6 6"></path>
+						<path d="M5 12l6 -6"></path>
+				 	</svg>
+				</div>
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Prev</div>
+					<a href="/personal-site/docs/python/1data-types/complex-types/arrays/" class="stretched-link text-reset text-decoration-none">Arrays</a>
+				</div>
+			</div>
+		</div>
+	<div class="m-2"></div>
+	<div class="card text-end w-100">
+			<div class="card-body d-flex justify-content-end">
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Next</div>
+					<a href="/personal-site/docs/java-script/js-language/1-data-types/variables/" class="stretched-link text-reset text-decoration-none">Variables</a>
+				</div>
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M13 18l6 -6"></path>
+						<path d="M13 6l6 6"></path>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</div>
+
+			
+		</main>
+		
+	</div>
+
+      
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-lg">
+    <div class="row">
+      <div class="col-lg-8 text-center text-lg-start">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a class="text-muted" href="/personal-site/privacy/">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 text-center text-lg-end">
+        <ul class="list-inline">
+          <li class="list-inline-item">Made by <a class="text-muted" href="https://sujith-eag.github.io/personal-site/">Sujith</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+<script async
+  src="/personal-site/js/app.4ca3b61e3452c943f4197457251b3551cb46579ecf58e675999fbc96411dcb0d.js"
+  integrity="sha256-TKO2HjRSyUP0GXRXJRs1UctGV57PWOZ1mZ&#43;8lkEdyw0=">
+</script>
+
+
+
+
+
+<script async
+  src="/personal-site/js/flexsearch.be33aab3067e96554f261851c25a593228b91154cd28ff5c7f8d52b2e7f306d2.js"
+  integrity="sha256-vjOqswZ&#43;llVPJhhRwlpZMii5EVTNKP9cf41SsufzBtI=">
+</script>
+<script async
+  src="/personal-site/js/search-modal.97d606e77f08deeb37876860d99c8f6813ef29263e73b6435c252de6be98d55e.js"
+  integrity="sha256-l9YG538I3us3h2hg2ZyPaBPvKSY&#43;c7ZDXCUt5r6Y1V4=">
+</script>
+
+    
+  </body>
+</html>
