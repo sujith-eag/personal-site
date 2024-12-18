@@ -49,14 +49,19 @@
   weight = 30
 
 [[main]]
+  name = "C"
+  url = "docs/c/"
+  weight = 40
+  
+[[main]]
   name = "Bash"
   url = "/docs/bash-linux/"
-  weight = 40
+  weight = 50
 
 [[main]]
   name = "Tools"
   url = "/docs/tools/"
-  weight = 50
+  weight = 60
 
 [[main]]
   name = "Blog"
