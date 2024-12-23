@@ -15,11 +15,13 @@ seo:
 ---
 
 
+
 **Objective:**  
 * Link commands with pipes and filters. 
 * Combine sequences of commands to produce output.
 * Redirect command output to a file.
 
+  
 ## [Word count](/personal-site/docs/bash-linux/command-docs/wc-word-count)
 
 The `wc` (word count) command provides the number of lines, words, and characters in a file:
@@ -43,6 +45,9 @@ Returns the word count of all `.pdb` files individually and also total.
 
 If `wc -l` is run without specifying a filename, it waits for input from the command prompt. You can exit this mode using `Ctrl + C`.
 
+   
+____
+
 ## Capturing Output from Commands
 
 To redirect the output of a command to a file:
@@ -53,6 +58,8 @@ $ wc -l *.pdb > lengths.txt
 This command reads all `.pdb` files and writes the line counts to `lengths.txt`. If the file doesn't exist, it will be created; if it does exist, it will be overwritten, so caution is advised.
 
 *Note:* The `echo` command can be used to print strings.
+
+___
 
 ### Using [*cat*](/personal-site/docs/bash-linux/command-docs/cat-concatenate) for Concatenation
 
@@ -67,6 +74,8 @@ $ cat lengths.txt
 $ less lengths.txt
 ```
 `less` displays the file one screen at a time. Use `b` and `space` to navigate pages, and `q` to quit.
+
+___
 
 ## Sorting Output [*sort*](/personal-site/docs/bash-linux/command-docs/sort)
 
@@ -85,29 +94,43 @@ To sort and redirect the results to a new file:
 $ sort -n lengths.txt > sorted-lengths.txt
 ```
 
+____
+
 ### Using [*head and tail*](/personal-site/docs/bash-linux/command-docs/head-tail)
 
 By default, `head` and `tail` display the first and last 10 lines, respectively:
 
 ```bash {frame="none"} 
-$ head -n 1 sorted-lengths.txt  # Displays the first line
-$ head -n 20                     # Displays the first 20 lines
-$ tail -n 2                      # Displays the last 2 lines
+$ head -n 1 sorted-lengths.txt  
+# Displays the first line
+
+$ head -n 20        
+# Displays the first 20 lines
+
+$ tail -n 2      
+# Displays the last 2 lines
 ```
+
+___
 
 ### Appending Values to a File ***>>***
 
 To append results to an existing file without overwriting it, use `>>`:
 
-`$ sort -n lengths.txt > lengths.txt`
-Redirecting results to the same file is not good, causes errors or deletes the file.
-
 `>`  creates and recreates the same file,     
 `>>` appends the values sequentially again and again like append, so can be run multiple times to enter into a file.
 ```bash {frame="none"}
-$ head -n 3 animal.csv > animals-subset.csv  # Creates the file for the first 3 lines
-$ tail -n 2 animals.csv >> animals-subset.csv  # Appends the last 2 lines
+$ head -n 3 animal.csv > animals-subset.csv
+# Creates the file for the first 3 lines
+
+$ tail -n 2 animals.csv >> animals-subset.csv  
+# Appends the last 2 lines
 ```
+
+Redirecting results to the same file is not good, causes errors or deletes the file.
+`$ sort -n lengths.txt > lengths.txt`
+
+___
 
 ## Pipes for Passing Output to Another Command
 
@@ -124,12 +147,17 @@ Piping removes the need for other files to hold values.
 we can pass `wc` values directly to `sort` and then send resulting output to `head`.
 
 ```bash {frame="none"}
-$ wc -l *.pdb | sort -n | head -n 1  # Gets the shortest .pdb file
+$ wc -l *.pdb | sort -n | head -n 1  
+
+# Gets the shortest .pdb file
 ```
+
+____
 
 ## Filters
 
-A filter is a program (like `wc` or `sort`) that processes input data and produces output. Most standard Unix tools operate this way, reading from standard input and writing to standard output. This model is known as **pipes and filters**.
+A filter is a program (like `wc` or `sort`) that processes input data and produces output. 
+Most standard Unix tools operate this way, reading from standard input and writing to standard output. This model is known as **pipes and filters**.
 
 ## Pipe Construction
 
@@ -153,8 +181,11 @@ Using `uniq -c` gives the count of occurrences for each line in input.
 
 ### Example Workflow
 ```bash {frame="none"}
-$ cd nart-pacific-gyre       # Move into the directory
-$ wc -l *.txt                # Get the word count of all .txt files
-$ wc -l *.txt | sort -n | head -n 5  # Display the first five line counts
-$ wc -l *.txt | sort -n | tail -n 5  # Display the last five line counts
+$ cd nart-pacific-gyre
+$ wc -l *.txt           # Get the word count of all .txt files
+$ wc -l *.txt | sort -n | head -n 5  
+# Display the first five line counts
+
+$ wc -l *.txt | sort -n | tail -n 5  
+# Display the last five line counts
 ```

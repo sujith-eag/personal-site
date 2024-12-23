@@ -15,7 +15,8 @@ seo:
 ---
 
 
-# Bash - Bourne Again SHell
+
+# Bash - `Bourne Again SHell`
 *(Git Bash - for Windows interaction with Git)*
 
 ## Bash Shortcuts
@@ -36,8 +37,8 @@ The grammar of a shell allows combining existing tools into powerful pipelines a
 - **`apt`** - Package installer for Debian-based systems
 
 ```bash {frame="none"}
-sudo apt update      # Update package index
-sudo apt upgrade     # Upgrade installed packages
+sudo apt update     # Update package index
+sudo apt upgrade    # Upgrade installed packages
 ```
 
 - **`$`** is the prompt for typing, followed by a blinking text cursor.   
@@ -53,7 +54,8 @@ mkdir --help
 - **`help`** provides help for built-in shell commands:
 ```bash {frame="none"}
 help cd
-help echo  # Works for built-in commands only
+help echo  
+# Works for built-in commands only
 ```
 
 If a command has both long (`--option`) and short (`-o`) versions, use the short version for typing in the terminal and the long version in scripts for clarity.
@@ -155,7 +157,7 @@ Repeating `cd -` toggles between the current and previous directories.
 - **`ls`** lists files and directories in the current directory.  
 Options can be combined:
 ```bash {frame="none"}
-ls -Fal      # Example of combined options
+ls -Fal   # combined options
 ```
 
 #### Common Flags for `ls`:
@@ -168,7 +170,12 @@ ls -Fal      # Example of combined options
 ### Looking at Other Directories' Contents Without Moving
 
 ```bash {frame="none"}
-ls ~/Desktop/trial              # Using absolute path
-ls /Users/sujith/Desktop/trial   # Another way using absolute path
-ls -F Desktop                    # List contents of Desktop directory
+ls ~/Desktop/trial
+# Using absolute path
+
+ls /Users/sujith/Desktop/trial
+# Another way using absolute path
+
+ls -F Desktop
+# List contents of Desktop directory
 ```
