@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@tabler/icons": "^3.19.0",
-    "@sujith-eag/doks-core": "^1.7.0",
+    "@sujith-eag/doks-core": "https://github.com/sujith-eag/doks-core.git",
     "@thulite/images": "^3.3.0",
     "@thulite/inline-svg": "^1.2.0",
     "@thulite/seo": "^2.4.0",
