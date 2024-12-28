@@ -13,11 +13,11 @@
   },
   "dependencies": {
     "@tabler/icons": "^3.19.0",
-    "@sujith-eag/doks-core": "https://github.com/sujith-eag/doks-core.git",
+    "@thulite/doks-core": "^1.7.0",
     "@thulite/images": "^3.3.0",
     "@thulite/inline-svg": "^1.2.0",
     "@thulite/seo": "^2.4.0",
-    "thulite": "https://github.com/sujith-eag/thulite.git"
+    "thulite": "^2.5.0"
   },
   "devDependencies": {
     "prettier": "^3.3.3",
