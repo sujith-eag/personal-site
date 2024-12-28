@@ -245,11 +245,11 @@ The wc (word count) command provides the number of lines, words, and characters 
   </li>
 
   <li>
-      <a href="/personal-site/docs/c/chapter-1-basic-syntax/">Chapter 1 - Basic Syntax</a>
+      <a href="/personal-site/docs/c/chapter-0-introduction-using-python-part-2/">Chapter 0 - Introduction using Python (Part 2)</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/c/chapter-0-introduction-using-python-part-2/">Chapter 0 - Introduction using Python (Part 2)</a>
+      <a href="/personal-site/docs/c/chapter-1-basic-syntax/">Chapter 1 - Basic Syntax</a>
   </li>
 
   <li>
@@ -1004,11 +1004,11 @@ The wc (word count) command provides the number of lines, words, and characters 
   </li>
 
   <li>
-      <a href="/personal-site/docs/c/chapter-1-basic-syntax/">Chapter 1 - Basic Syntax</a>
+      <a href="/personal-site/docs/c/chapter-0-introduction-using-python-part-2/">Chapter 0 - Introduction using Python (Part 2)</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/c/chapter-0-introduction-using-python-part-2/">Chapter 0 - Introduction using Python (Part 2)</a>
+      <a href="/personal-site/docs/c/chapter-1-basic-syntax/">Chapter 1 - Basic Syntax</a>
   </li>
 
   <li>
@@ -1640,6 +1640,7 @@ The wc (word count) command provides the number of lines, words, and characters 
 <li><code>wc -w</code>  # Shows the number of words only.</li>
 </ul>
 <p>If <code>wc -l</code> is run without specifying a filename, it waits for input from the command prompt. You can exit this mode using <code>Ctrl + C</code>.</p>
+<hr>
 <h2 id="capturing-output-from-commands">Capturing Output from Commands<a href="#capturing-output-from-commands" class="anchor" aria-hidden="true">#</a> </h2>
 <p>To redirect the output of a command to a file:</p>
 
@@ -1655,6 +1656,7 @@ The wc (word count) command provides the number of lines, words, and characters 
 </div>
 <p>This command reads all <code>.pdb</code> files and writes the line counts to <code>lengths.txt</code>. If the file doesn&rsquo;t exist, it will be created; if it does exist, it will be overwritten, so caution is advised.</p>
 <p><em>Note:</em> The <code>echo</code> command can be used to print strings.</p>
+<hr>
 <h3 id="using-catpersonal-sitedocsbash-linuxcommand-docscat-concatenate-for-concatenation">Using <a href="/personal-site/docs/bash-linux/command-docs/cat-concatenate"><em>cat</em></a> for Concatenation<a href="#using-catpersonal-sitedocsbash-linuxcommand-docscat-concatenate-for-concatenation" class="anchor" aria-hidden="true">#</a> </h3>
 <p>The <code>cat</code> command joins together and prints the contents of files:</p>
 
@@ -1681,6 +1683,7 @@ The wc (word count) command provides the number of lines, words, and characters 
   </figure>
 </div>
 <p><code>less</code> displays the file one screen at a time. Use <code>b</code> and <code>space</code> to navigate pages, and <code>q</code> to quit.</p>
+<hr>
 <h2 id="sorting-output-sortpersonal-sitedocsbash-linuxcommand-docssort">Sorting Output <a href="/personal-site/docs/bash-linux/command-docs/sort"><em>sort</em></a><a href="#sorting-output-sortpersonal-sitedocsbash-linuxcommand-docssort" class="anchor" aria-hidden="true">#</a> </h2>
 <p>The <code>sort</code> command sorts lines of text files:</p>
 
@@ -1709,6 +1712,7 @@ The wc (word count) command provides the number of lines, words, and characters 
   <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sort -n lengths.txt &gt; sorted-lengths.txt</span></span></code></pre></div>
   </figure>
 </div>
+<hr>
 <h3 id="using-head-and-tailpersonal-sitedocsbash-linuxcommand-docshead-tail">Using <a href="/personal-site/docs/bash-linux/command-docs/head-tail"><em>head and tail</em></a><a href="#using-head-and-tailpersonal-sitedocsbash-linuxcommand-docshead-tail" class="anchor" aria-hidden="true">#</a> </h3>
 <p>By default, <code>head</code> and <code>tail</code> display the first and last 10 lines, respectively:</p>
 
@@ -1719,15 +1723,19 @@ The wc (word count) command provides the number of lines, words, and characters 
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ head -n <span class="m">1</span> sorted-lengths.txt  <span class="c1"># Displays the first line</span>
-</span></span><span class="line"><span class="cl">$ head -n <span class="m">20</span>                     <span class="c1"># Displays the first 20 lines</span>
-</span></span><span class="line"><span class="cl">$ tail -n <span class="m">2</span>                      <span class="c1"># Displays the last 2 lines</span></span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ head -n <span class="m">1</span> sorted-lengths.txt  
+</span></span><span class="line"><span class="cl"><span class="c1"># Displays the first line</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ head -n <span class="m">20</span>        
+</span></span><span class="line"><span class="cl"><span class="c1"># Displays the first 20 lines</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ tail -n <span class="m">2</span>      
+</span></span><span class="line"><span class="cl"><span class="c1"># Displays the last 2 lines</span></span></span></code></pre></div>
   </figure>
 </div>
+<hr>
 <h3 id="appending-values-to-a-file-">Appending Values to a File <em><strong>&raquo;</strong></em><a href="#appending-values-to-a-file-" class="anchor" aria-hidden="true">#</a> </h3>
 <p>To append results to an existing file without overwriting it, use <code>&gt;&gt;</code>:</p>
-<p><code>$ sort -n lengths.txt &gt; lengths.txt</code>
-Redirecting results to the same file is not good, causes errors or deletes the file.</p>
 <p><code>&gt;</code>  creates and recreates the same file,<br>
 <code>&gt;&gt;</code> appends the values sequentially again and again like append, so can be run multiple times to enter into a file.</p>
 
@@ -1738,10 +1746,16 @@ Redirecting results to the same file is not good, causes errors or deletes the f
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ head -n <span class="m">3</span> animal.csv &gt; animals-subset.csv  <span class="c1"># Creates the file for the first 3 lines</span>
-</span></span><span class="line"><span class="cl">$ tail -n <span class="m">2</span> animals.csv &gt;&gt; animals-subset.csv  <span class="c1"># Appends the last 2 lines</span></span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ head -n <span class="m">3</span> animal.csv &gt; animals-subset.csv
+</span></span><span class="line"><span class="cl"><span class="c1"># Creates the file for the first 3 lines</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ tail -n <span class="m">2</span> animals.csv &gt;&gt; animals-subset.csv  
+</span></span><span class="line"><span class="cl"><span class="c1"># Appends the last 2 lines</span></span></span></code></pre></div>
   </figure>
 </div>
+<p>Redirecting results to the same file is not good, causes errors or deletes the file.
+<code>$ sort -n lengths.txt &gt; lengths.txt</code></p>
+<hr>
 <h2 id="pipes-for-passing-output-to-another-command">Pipes for Passing Output to Another Command<a href="#pipes-for-passing-output-to-another-command" class="anchor" aria-hidden="true">#</a> </h2>
 <p>The pipe operator <code>|</code> allows you to pass the output of one command as input to another:</p>
 
@@ -1767,11 +1781,15 @@ Piping removes the need for other files to hold values.</p>
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ wc -l *.pdb <span class="p">|</span> sort -n <span class="p">|</span> head -n <span class="m">1</span>  <span class="c1"># Gets the shortest .pdb file</span></span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ wc -l *.pdb <span class="p">|</span> sort -n <span class="p">|</span> head -n <span class="m">1</span>  
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Gets the shortest .pdb file</span></span></span></code></pre></div>
   </figure>
 </div>
+<hr>
 <h2 id="filters">Filters<a href="#filters" class="anchor" aria-hidden="true">#</a> </h2>
-<p>A filter is a program (like <code>wc</code> or <code>sort</code>) that processes input data and produces output. Most standard Unix tools operate this way, reading from standard input and writing to standard output. This model is known as <strong>pipes and filters</strong>.</p>
+<p>A filter is a program (like <code>wc</code> or <code>sort</code>) that processes input data and produces output.
+Most standard Unix tools operate this way, reading from standard input and writing to standard output. This model is known as <strong>pipes and filters</strong>.</p>
 <h2 id="pipe-construction">Pipe Construction<a href="#pipe-construction" class="anchor" aria-hidden="true">#</a> </h2>
 <p>The <code>cut</code> command is used to remove or extract specific sections of each line in a file:</p>
 
@@ -1813,10 +1831,13 @@ Using <code>uniq -c</code> gives the count of occurrences for each line in input
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nb">cd</span> nart-pacific-gyre       <span class="c1"># Move into the directory</span>
-</span></span><span class="line"><span class="cl">$ wc -l *.txt                <span class="c1"># Get the word count of all .txt files</span>
-</span></span><span class="line"><span class="cl">$ wc -l *.txt <span class="p">|</span> sort -n <span class="p">|</span> head -n <span class="m">5</span>  <span class="c1"># Display the first five line counts</span>
-</span></span><span class="line"><span class="cl">$ wc -l *.txt <span class="p">|</span> sort -n <span class="p">|</span> tail -n <span class="m">5</span>  <span class="c1"># Display the last five line counts</span></span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nb">cd</span> nart-pacific-gyre
+</span></span><span class="line"><span class="cl">$ wc -l *.txt           <span class="c1"># Get the word count of all .txt files</span>
+</span></span><span class="line"><span class="cl">$ wc -l *.txt <span class="p">|</span> sort -n <span class="p">|</span> head -n <span class="m">5</span>  
+</span></span><span class="line"><span class="cl"><span class="c1"># Display the first five line counts</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ wc -l *.txt <span class="p">|</span> sort -n <span class="p">|</span> tail -n <span class="m">5</span>  
+</span></span><span class="line"><span class="cl"><span class="c1"># Display the last five line counts</span></span></span></code></pre></div>
   </figure>
 </div>
 
