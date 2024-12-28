@@ -91,9 +91,8 @@ A command does not always require arguments or options; it can be called with mu
 
 - **Arguments** tell the command what to operate on (files and directories).
 
-{{< callout >}} Each part is separated by spaces; omitting spaces causes confusion about commands, options, and arguments.  
-(e.g., `ls-F` searches for a command called `ls-F`, which does not exist)  
-{{< /callout >}}
+> Each part is separated by spaces; omitting spaces causes confusion about commands, options, and arguments.  
+(e.g., `ls-F` searches for a command called `ls-F`, which does not exist)
 
 Note that case sensitivity matters:  
 - **`ls -s`** displays the size of files.  
