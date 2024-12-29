@@ -1,11 +1,11 @@
 ---
-title: "Bash - 4 Loops Scripting"
+title: "Bash - loop"
 description: ""
 summary: ""
-date: 2024-10-22T09:34:02+05:30
-lastmod: 2024-10-22T09:34:02+05:30
+date: 2024-12-29T16:52:30+05:30
+lastmod: 2024-12-29T16:52:30+05:30
 draft: false
-weight: 953
+weight: 999
 toc: true
 seo:
   title: "" # custom title (optional)

@@ -1,11 +1,11 @@
 ---
-title: "Bash - 5 Shell Scripting"
+title: "Bash - Shell Scripting"
 description: ""
 summary: ""
-date: 2024-10-22T09:34:28+05:30
-lastmod: 2024-10-22T09:34:28+05:30
+date: 2024-12-29T16:53:05+05:30
+lastmod: 2024-12-29T16:53:05+05:30
 draft: false
-weight: 954
+weight: 999
 toc: true
 seo:
   title: "" # custom title (optional)
@@ -13,7 +13,6 @@ seo:
   canonical: "" # custom canonical URL (optional)
   noindex: false # false (default) or true
 ---
-
 
 
 ### Objectives
