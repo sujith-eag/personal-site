@@ -1,5 +1,5 @@
 ---
-title: "Bash - 2 - Features"
+title: "Bash - 02 - Features"
 description: ""
 summary: ""
 date: 2024-10-22T09:33:16+05:30

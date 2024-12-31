@@ -1,5 +1,5 @@
 ---
-title: "Bash - 5 - Listing Files"
+title: "Bash - 05 - Listing Files"
 description: ""
 summary: ""
 date: 2024-10-22T09:34:28+05:30

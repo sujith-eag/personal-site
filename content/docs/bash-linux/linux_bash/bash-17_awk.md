@@ -1,5 +1,5 @@
 ---
-title: "Bash - 16 - awk"
+title: "Bash - awk"
 description: ""
 summary: ""
 date: 2024-12-29T16:51:59+05:30

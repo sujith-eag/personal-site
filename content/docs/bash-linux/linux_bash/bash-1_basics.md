@@ -1,5 +1,5 @@
 ---
-title: "Bash - 1 - Basics"
+title: "Bash - 01 - Basics"
 description: ""
 summary: ""
 date: 2024-10-22T09:32:39+05:30

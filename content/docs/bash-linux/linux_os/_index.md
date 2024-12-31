@@ -1,11 +1,11 @@
 ---
-title: "Linux_os"
+title: "Linux OS"
 description: ""
 summary: ""
 date: 2024-12-29T16:26:28+05:30
 lastmod: 2024-12-29T16:26:28+05:30
 draft: false
-weight: 999
+weight: 950
 toc: true
 seo:
   title: "" # custom title (optional)

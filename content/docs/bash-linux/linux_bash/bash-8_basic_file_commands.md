@@ -1,5 +1,5 @@
 ---
-title: "Bash - 8 - Basic File Commands"
+title: "Bash - 08 - Basic File Commands"
 description: ""
 summary: ""
 date: 2024-12-29T16:48:46+05:30

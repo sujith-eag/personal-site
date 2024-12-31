@@ -1,5 +1,5 @@
 ---
-title: "Bash - 7 - Storage Terminology in Linux"
+title: "Bash - 07 - Storage Terminology in Linux"
 description: ""
 summary: ""
 date: 2024-12-29T16:48:21+05:30

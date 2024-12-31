@@ -1,5 +1,5 @@
 ---
-title: "Bash - 3 - help pages"
+title: "Bash - 03 - help pages"
 description: ""
 summary: ""
 date: 2024-10-22T09:33:44+05:30

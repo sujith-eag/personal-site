@@ -1,5 +1,5 @@
 ---
-title: "Bash - 6 - Environment and Subshell"
+title: "Bash - 06 - Environment and Subshell"
 description: ""
 summary: ""
 date: 2024-10-22T09:34:55+05:30

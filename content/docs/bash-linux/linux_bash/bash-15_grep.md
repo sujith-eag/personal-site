@@ -1,5 +1,5 @@
 ---
-title: "Bash - 15 - grep"
+title: "Bash - grep"
 description: ""
 summary: ""
 date: 2024-12-29T16:51:37+05:30

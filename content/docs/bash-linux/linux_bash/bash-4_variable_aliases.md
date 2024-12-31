@@ -1,5 +1,5 @@
 ---
-title: "Bash - 4 - Variables and Aliases"
+title: "Bash - 04 - Variables and Aliases"
 description: ""
 summary: ""
 date: 2024-10-22T09:34:02+05:30

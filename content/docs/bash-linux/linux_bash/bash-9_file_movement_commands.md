@@ -1,5 +1,5 @@
 ---
-title: "Bash - 9 - File Movement and Copy Commands"
+title: "Bash - 09 - File Movement and Copy Commands"
 description: ""
 summary: ""
 date: 2024-12-29T16:49:18+05:30
