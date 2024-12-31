@@ -1,5 +1,5 @@
 ---
-title: "cd - Change Directory"
+title: "man - cd"
 description: ""
 summary: ""
 date: 2024-10-22T09:32:39+05:30
