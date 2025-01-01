@@ -1,0 +1,2863 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="/personal-site/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=personal-site/livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preload" href="http://localhost:1313/personal-site/fonts/vendor/jost/jost-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/personal-site/fonts/vendor/jost/jost-v4-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/personal-site/fonts/vendor/jost/jost-v4-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<script 
+  src="/personal-site/js/color-mode.f14b3e296de1d0b69e75af684b62a4a912a2cadab04e36123407cd8388204f1d.js"
+  integrity="sha256-8Us&#43;KW3h0Laeda9oS2KkqRKiytqwTjYSNAfNg4ggTx0=">
+</script>
+
+
+<link rel="stylesheet" href="/personal-site/main.c0e24d0bb4526375ef42a8fffa4eb23f8f782cb58ac9f07c6886fe943a0ed00e176b284d9d1a5b8e9d68a3f2f5918367e18fe55f5fde9451a8c6d3fe85342b7b.css" integrity="sha512-wOJNC7RSY3XvQqj/&#43;k6yP494LLWKyfB8aIb&#43;lDoO0A4XayhNnRpbjp1oo/L1kYNn4Y/lX1/elFGoxtP&#43;hTQrew==" crossorigin="anonymous">
+
+<noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/personal-site/docs/bash-linux/command-docs/man-ls/">
+  <link rel="canonical" href="http://localhost:1313/personal-site/docs/bash-linux/command-docs/man-ls/">
+<title>man - ls  |  Sujith&#39;s Library</title>
+<meta name="description" content="A reference site with summary of various coding topics">
+
+    
+    <link rel="icon" href="/personal-site/favicon.ico" sizes="32x32">
+    
+      <link rel="icon" href="/personal-site/favicon.svg" type="image/svg+xml">
+    
+      <link
+        rel="apple-touch-icon"
+        href="/personal-site/personal-site/apple-touch-icon.png"
+        sizes="180x180"
+        type="image/png"
+      >
+      <link
+        rel="icon"
+        href="/personal-site/favicon-192x192.png"
+        sizes="192x192"
+        type="image/png"
+      >
+      <link
+        rel="icon"
+        href="/personal-site/favicon-512x512.png"
+        sizes="512x512"
+        type="image/png"
+      >
+<link rel="manifest" href="/personal-site/manifest.webmanifest">
+
+<meta property="og:title" content="man - ls">
+<meta property="og:description" content="ls &ndash;help
+
+
+
+
+  
+  
+    
+  
+  Usage: ls [OPTION]... [FILE]...
+List information about the FILEs (the current directory by default).
+Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
+
+Mandatory arguments to long options are mandatory for short options too.
+  -a, --all                  do not ignore entries starting with .
+  -A, --almost-all           do not list implied . and ..
+      --author               with -l, print the author of each file
+  -b, --escape               print C-style escapes for nongraphic characters
+      --block-size=SIZE      with -l, scale sizes by SIZE when printing them;
+                             e.g., &#39;--block-size=M&#39;; see SIZE format below
+
+  -B, --ignore-backups       do not list implied entries ending with ~
+  -c                         with -lt: sort by, and show, ctime (time of last
+                             change of file status information);
+                             with -l: show ctime and sort by name;
+                             otherwise: sort by ctime, newest first
+
+  -C                         list entries by columns
+      --color[=WHEN]         color the output WHEN; more info below
+  -d, --directory            list directories themselves, not their contents
+  -D, --dired                generate output designed for Emacs&#39; dired mode
+  -f                         list all entries in directory order
+  -F, --classify[=WHEN]      append indicator (one of */=&gt;@|) to entries WHEN
+      --file-type            likewise, except do not append &#39;*&#39;
+      --format=WORD          across -x, commas -m, horizontal -x, long -l,
+                             single-column -1, verbose -l, vertical -C
+
+      --full-time            like -l --time-style=full-iso
+  -g                         like -l, but do not list owner
+      --group-directories-first
+                             group directories before files;
+                             can be augmented with a --sort option, but any
+                             use of --sort=none (-U) disables grouping
+
+  -G, --no-group             in a long listing, don&#39;t print group names
+  -h, --human-readable       with -l and -s, print sizes like 1K 234M 2G etc.
+      --si                   likewise, but use powers of 1000 not 1024
+  -H, --dereference-command-line
+                             follow symbolic links listed on the command line
+      --dereference-command-line-symlink-to-dir
+                             follow each command line symbolic link
+                             that points to a directory
+
+      --hide=PATTERN         do not list implied entries matching shell PATTERN
+                             (overridden by -a or -A)
+
+      --hyperlink[=WHEN]     hyperlink file names WHEN
+      --indicator-style=WORD
+                             append indicator with style WORD to entry names:
+                             none (default), slash (-p),
+                             file-type (--file-type), classify (-F)
+
+  -i, --inode                print the index number of each file
+  -I, --ignore=PATTERN       do not list implied entries matching shell PATTERN
+  -k, --kibibytes            default to 1024-byte blocks for file system usage;
+                             used only with -s and per directory totals
+
+  -l                         use a long listing format
+  -L, --dereference          when showing file information for a symbolic
+                             link, show information for the file the link
+                             references rather than for the link itself
+
+  -m                         fill width with a comma separated list of entries
+  -n, --numeric-uid-gid      like -l, but list numeric user and group IDs
+  -N, --literal              print entry names without quoting
+  -o                         like -l, but do not list group information
+  -p, --indicator-style=slash
+                             append / indicator to directories
+  -q, --hide-control-chars   print ? instead of nongraphic characters
+      --show-control-chars   show nongraphic characters as-is (the default,
+                             unless program is &#39;ls&#39; and output is a terminal)
+
+  -Q, --quote-name           enclose entry names in double quotes
+      --quoting-style=WORD   use quoting style WORD for entry names:
+                             literal, locale, shell, shell-always,
+                             shell-escape, shell-escape-always, c, escape
+                             (overrides QUOTING_STYLE environment variable)
+
+  -r, --reverse              reverse order while sorting
+  -R, --recursive            list subdirectories recursively
+  -s, --size                 print the allocated size of each file, in blocks
+  -S                         sort by file size, largest first
+      --sort=WORD            sort by WORD instead of name: none (-U), size (-S),
+                             time (-t), version (-v), extension (-X), width
+
+      --time=WORD            select which timestamp used to display or sort;
+                               access time (-u): atime, access, use;
+                               metadata change time (-c): ctime, status;
+                               modified time (default): mtime, modification;
+                               birth time: birth, creation;
+                             with -l, WORD determines which time to show;
+                             with --sort=time, sort by WORD (newest first)
+
+      --time-style=TIME_STYLE
+                             time/date format with -l; see TIME_STYLE below
+  -t                         sort by time, newest first; see --time
+  -T, --tabsize=COLS         assume tab stops at each COLS instead of 8
+  -u                         with -lt: sort by, and show, access time;
+                             with -l: show access time and sort by name;
+                             otherwise: sort by access time, newest first
+
+  -U                         do not sort; list entries in directory order
+  -v                         natural sort of (version) numbers within text
+  -w, --width=COLS           set output width to COLS.  0 means no limit
+  -x                         list entries by lines instead of by columns
+  -X                         sort alphabetically by entry extension
+  -Z, --context              print any security context of each file
+      --zero                 end each output line with NUL, not newline
+  -1                         list one file per line
+      --help        display this help and exit
+      --version     output version information and exit
+
+The SIZE argument is an integer and optional unit (example: 10K is 10*1024).
+Units are K,M,G,T,P,E,Z,Y,R,Q (powers of 1024) or KB,MB,... (powers of 1000).
+Binary prefixes can be used, too: KiB=K, MiB=M, and so on.
+
+The TIME_STYLE argument can be full-iso, long-iso, iso, locale, or &#43;FORMAT.
+FORMAT is interpreted like in date(1).  If FORMAT is FORMAT1&lt;newline&gt;FORMAT2,
+then FORMAT1 applies to non-recent files and FORMAT2 to recent files.
+TIME_STYLE prefixed with &#39;posix-&#39; takes effect only outside the POSIX locale.
+Also the TIME_STYLE environment variable sets the default style to use.
+
+The WHEN argument defaults to &#39;always&#39; and can also be &#39;auto&#39; or &#39;never&#39;.
+
+Using color to distinguish file types is disabled both by default and
+with --color=never.  With --color=auto, ls emits color codes only when
+standard output is connected to a terminal.  The LS_COLORS environment
+variable can change the settings.  Use the dircolors(1) command to set it.
+
+Exit status:
+ 0  if OK,
+ 1  if minor problems (e.g., cannot access subdirectory),
+ 2  if serious trouble (e.g., cannot access command-line argument).
+
+GNU coreutils online help: &lt;https://www.gnu.org/software/coreutils/&gt;
+Full documentation &lt;https://www.gnu.org/software/coreutils/ls&gt;
+or available locally via: info &#39;(coreutils) ls invocation&#39;
+  
+
+man ls
+
+
+
+
+  
+  
+    
+  
+  NAME
+       ls - list directory contents
+
+SYNOPSIS
+       ls [OPTION]... [FILE]...
+
+DESCRIPTION
+       List  information  about the FILEs (the current directory by default).  Sort en‐
+       tries alphabetically if none of -cftuvSUX nor --sort is specified.
+
+       Mandatory arguments to long options are mandatory for short options too.
+
+       -a, --all
+              do not ignore entries starting with .
+
+       -A, --almost-all
+              do not list implied . and ..
+
+       --author
+              with -l, print the author of each file
+
+       -b, --escape
+              print C-style escapes for nongraphic characters
+
+       --block-size=SIZE
+              with -l, scale sizes by SIZE when printing them; e.g.,  &#39;--block-size=M&#39;;
+              see SIZE format below
+
+       -B, --ignore-backups
+              do not list implied entries ending with ~
+
+       -c     with  -lt:  sort  by, and show, ctime (time of last change of file status
+              information); with -l: show ctime and sort by name;  otherwise:  sort  by
+              ctime, newest first
+
+       -C     list entries by columns
+
+       --color[=WHEN]
+              color the output WHEN; more info below
+
+       -d, --directory
+              list directories themselves, not their contents
+
+       -D, --dired
+              generate output designed for Emacs&#39; dired mode
+
+       -f     list all entries in directory order
+
+       -F, --classify[=WHEN]
+              append indicator (one of */=&gt;@|) to entries WHEN
+
+       --file-type
+              likewise, except do not append &#39;*&#39;
+
+       --format=WORD
+              across  -x,  commas -m, horizontal -x, long -l, single-column -1, verbose
+              -l, vertical -C
+
+       --full-time
+              like -l --time-style=full-iso
+
+       -g     like -l, but do not list owner
+
+       --group-directories-first
+              group directories before files; can be augmented with  a  --sort  option,
+              but any use of --sort=none (-U) disables grouping
+
+       -G, --no-group
+              in a long listing, don&#39;t print group names
+
+       -h, --human-readable
+              with -l and -s, print sizes like 1K 234M 2G etc.
+
+       --si   likewise, but use powers of 1000 not 1024
+
+       -H, --dereference-command-line
+              follow symbolic links listed on the command line
+
+       --dereference-command-line-symlink-to-dir
+              follow each command line symbolic link that points to a directory
+
+       --hide=PATTERN
+              do  not  list implied entries matching shell PATTERN (overridden by -a or -A)
+
+       --hyperlink[=WHEN]
+              hyperlink file names WHEN
+
+       --indicator-style=WORD
+              append indicator with style WORD to entry names:  none  (default),  slash
+              (-p), file-type (--file-type), classify (-F)
+
+       -i, --inode
+              print the index number of each file
+
+       -I, --ignore=PATTERN
+              do not list implied entries matching shell PATTERN
+
+       -k, --kibibytes
+              default  to 1024-byte blocks for file system usage; used only with -s and
+              per directory totals
+
+       -l     use a long listing format
+
+       -L, --dereference
+              when showing file information for a symbolic link, show  information  for
+              the file the link references rather than for the link itself
+
+       -m     fill width with a comma separated list of entries
+
+       -n, --numeric-uid-gid
+              like -l, but list numeric user and group IDs
+
+       -N, --literal
+              print entry names without quoting
+
+       -o     like -l, but do not list group information
+
+       -p, --indicator-style=slash
+              append / indicator to directories
+
+       -q, --hide-control-chars
+              print ? instead of nongraphic characters
+
+       --show-control-chars
+              show nongraphic characters as-is (the default, unless program is &#39;ls&#39; and
+              output is a terminal)
+
+       -Q, --quote-name
+              enclose entry names in double quotes
+
+       --quoting-style=WORD
+              use quoting style WORD for entry names: literal, locale, shell, shell-al‐
+              ways,  shell-escape,  shell-escape-always,  c,  escape  (overrides  QUOT‐
+              ING_STYLE environment variable)
+
+       -r, --reverse
+              reverse order while sorting
+
+       -R, --recursive
+              list subdirectories recursively
+
+       -s, --size
+              print the allocated size of each file, in blocks
+
+       -S     sort by file size, largest first
+
+       --sort=WORD
+              sort by WORD instead of name: none (-U), size (-S),  time  (-t),  version
+              (-v), extension (-X), width
+
+       --time=WORD
+              select  which timestamp used to display or sort; access time (-u): atime,
+              access, use; metadata change time (-c): ctime, status; modified time (de‐
+              fault): mtime, modification; birth time: birth, creation;
+
+              with -l, WORD determines which time to show; with  --sort=time,  sort  by
+              WORD (newest first)
+
+       --time-style=TIME_STYLE
+              time/date format with -l; see TIME_STYLE below
+
+       -t     sort by time, newest first; see --time
+
+       -T, --tabsize=COLS
+              assume tab stops at each COLS instead of 8
+
+       -u     with  -lt:  sort by, and show, access time; with -l: show access time and
+              sort by name; otherwise: sort by access time, newest first
+
+       -U     do not sort; list entries in directory order
+
+       -v     natural sort of (version) numbers within text
+
+       -w, --width=COLS
+              set output width to COLS.  0 means no limit
+
+       -x     list entries by lines instead of by columns
+
+       -X     sort alphabetically by entry extension
+
+       -Z, --context
+              print any security context of each file
+
+       --zero end each output line with NUL, not newline
+
+       -1     list one file per line
+
+       --help display this help and exit
+
+       --version
+              output version information and exit
+
+       The SIZE argument is an integer and optional unit  (example:  10K  is  10*1024).
+       Units  are  K,M,G,T,P,E,Z,Y,R,Q  (powers of 1024) or KB,MB,... (powers of 1000).
+       Binary prefixes can be used, too: KiB=K, MiB=M, and so on.
+
+       The TIME_STYLE argument can be full-iso,  long-iso,  iso,  locale,  or  &#43;FORMAT.
+       FORMAT  is  interpreted  like in date(1).  If FORMAT is FORMAT1&lt;newline&gt;FORMAT2,
+       then  FORMAT1  applies  to  non-recent  files  and  FORMAT2  to  recent   files.
+       TIME_STYLE  prefixed  with  &#39;posix-&#39; takes effect only outside the POSIX locale.
+       Also the TIME_STYLE environment variable sets the default style to use.
+
+       The WHEN argument defaults to &#39;always&#39; and can also be &#39;auto&#39; or &#39;never&#39;.
+
+       Using color to distinguish file types is  disabled  both  by  default  and  with
+       --color=never.   With --color=auto, ls emits color codes only when standard out‐
+       put is connected to a terminal.  The LS_COLORS environment variable  can  change
+       the settings.  Use the dircolors(1) command to set it.
+
+   Exit status:
+       0      if OK,
+
+       1      if minor problems (e.g., cannot access subdirectory),
+
+       2      if serious trouble (e.g., cannot access command-line argument).
+
+AUTHOR
+       Written by Richard M. Stallman and David MacKenzie.
+
+REPORTING BUGS
+       GNU coreutils online help: &lt;https://www.gnu.org/software/coreutils/&gt;
+       Report any translation bugs to &lt;https://translationproject.org/team/&gt;
+
+COPYRIGHT
+       Copyright © 2023 Free Software Foundation, Inc.  License GPLv3&#43;: GNU GPL version
+       3 or later &lt;https://gnu.org/licenses/gpl.html&gt;.
+       This  is free software: you are free to change and redistribute it.  There is NO
+       WARRANTY, to the extent permitted by law.
+
+SEE ALSO
+       dircolors(1)
+
+       Full documentation &lt;https://www.gnu.org/software/coreutils/ls&gt;
+       or available locally via: info &#39;(coreutils) ls invocation&#39;
+  
+">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://localhost:1313/personal-site/docs/bash-linux/command-docs/man-ls/"><meta property="og:image" content="http://localhost:1313/personal-site/cover.png"><meta property="article:section" content="docs">
+<meta property="article:published_time" content="2024-10-22T09:32:39+05:30">
+<meta property="article:modified_time" content="2024-10-22T09:32:39+05:30"><meta property="og:site_name" content="Sujith&#39;s Notes">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://localhost:1313/personal-site/cover.png"><meta name="twitter:title" content="man - ls">
+<meta name="twitter:description" content="ls &ndash;help
+
+
+
+
+  
+  
+    
+  
+  Usage: ls [OPTION]... [FILE]...
+List information about the FILEs (the current directory by default).
+Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
+
+Mandatory arguments to long options are mandatory for short options too.
+  -a, --all                  do not ignore entries starting with .
+  -A, --almost-all           do not list implied . and ..
+      --author               with -l, print the author of each file
+  -b, --escape               print C-style escapes for nongraphic characters
+      --block-size=SIZE      with -l, scale sizes by SIZE when printing them;
+                             e.g., &#39;--block-size=M&#39;; see SIZE format below
+
+  -B, --ignore-backups       do not list implied entries ending with ~
+  -c                         with -lt: sort by, and show, ctime (time of last
+                             change of file status information);
+                             with -l: show ctime and sort by name;
+                             otherwise: sort by ctime, newest first
+
+  -C                         list entries by columns
+      --color[=WHEN]         color the output WHEN; more info below
+  -d, --directory            list directories themselves, not their contents
+  -D, --dired                generate output designed for Emacs&#39; dired mode
+  -f                         list all entries in directory order
+  -F, --classify[=WHEN]      append indicator (one of */=&gt;@|) to entries WHEN
+      --file-type            likewise, except do not append &#39;*&#39;
+      --format=WORD          across -x, commas -m, horizontal -x, long -l,
+                             single-column -1, verbose -l, vertical -C
+
+      --full-time            like -l --time-style=full-iso
+  -g                         like -l, but do not list owner
+      --group-directories-first
+                             group directories before files;
+                             can be augmented with a --sort option, but any
+                             use of --sort=none (-U) disables grouping
+
+  -G, --no-group             in a long listing, don&#39;t print group names
+  -h, --human-readable       with -l and -s, print sizes like 1K 234M 2G etc.
+      --si                   likewise, but use powers of 1000 not 1024
+  -H, --dereference-command-line
+                             follow symbolic links listed on the command line
+      --dereference-command-line-symlink-to-dir
+                             follow each command line symbolic link
+                             that points to a directory
+
+      --hide=PATTERN         do not list implied entries matching shell PATTERN
+                             (overridden by -a or -A)
+
+      --hyperlink[=WHEN]     hyperlink file names WHEN
+      --indicator-style=WORD
+                             append indicator with style WORD to entry names:
+                             none (default), slash (-p),
+                             file-type (--file-type), classify (-F)
+
+  -i, --inode                print the index number of each file
+  -I, --ignore=PATTERN       do not list implied entries matching shell PATTERN
+  -k, --kibibytes            default to 1024-byte blocks for file system usage;
+                             used only with -s and per directory totals
+
+  -l                         use a long listing format
+  -L, --dereference          when showing file information for a symbolic
+                             link, show information for the file the link
+                             references rather than for the link itself
+
+  -m                         fill width with a comma separated list of entries
+  -n, --numeric-uid-gid      like -l, but list numeric user and group IDs
+  -N, --literal              print entry names without quoting
+  -o                         like -l, but do not list group information
+  -p, --indicator-style=slash
+                             append / indicator to directories
+  -q, --hide-control-chars   print ? instead of nongraphic characters
+      --show-control-chars   show nongraphic characters as-is (the default,
+                             unless program is &#39;ls&#39; and output is a terminal)
+
+  -Q, --quote-name           enclose entry names in double quotes
+      --quoting-style=WORD   use quoting style WORD for entry names:
+                             literal, locale, shell, shell-always,
+                             shell-escape, shell-escape-always, c, escape
+                             (overrides QUOTING_STYLE environment variable)
+
+  -r, --reverse              reverse order while sorting
+  -R, --recursive            list subdirectories recursively
+  -s, --size                 print the allocated size of each file, in blocks
+  -S                         sort by file size, largest first
+      --sort=WORD            sort by WORD instead of name: none (-U), size (-S),
+                             time (-t), version (-v), extension (-X), width
+
+      --time=WORD            select which timestamp used to display or sort;
+                               access time (-u): atime, access, use;
+                               metadata change time (-c): ctime, status;
+                               modified time (default): mtime, modification;
+                               birth time: birth, creation;
+                             with -l, WORD determines which time to show;
+                             with --sort=time, sort by WORD (newest first)
+
+      --time-style=TIME_STYLE
+                             time/date format with -l; see TIME_STYLE below
+  -t                         sort by time, newest first; see --time
+  -T, --tabsize=COLS         assume tab stops at each COLS instead of 8
+  -u                         with -lt: sort by, and show, access time;
+                             with -l: show access time and sort by name;
+                             otherwise: sort by access time, newest first
+
+  -U                         do not sort; list entries in directory order
+  -v                         natural sort of (version) numbers within text
+  -w, --width=COLS           set output width to COLS.  0 means no limit
+  -x                         list entries by lines instead of by columns
+  -X                         sort alphabetically by entry extension
+  -Z, --context              print any security context of each file
+      --zero                 end each output line with NUL, not newline
+  -1                         list one file per line
+      --help        display this help and exit
+      --version     output version information and exit
+
+The SIZE argument is an integer and optional unit (example: 10K is 10*1024).
+Units are K,M,G,T,P,E,Z,Y,R,Q (powers of 1024) or KB,MB,... (powers of 1000).
+Binary prefixes can be used, too: KiB=K, MiB=M, and so on.
+
+The TIME_STYLE argument can be full-iso, long-iso, iso, locale, or &#43;FORMAT.
+FORMAT is interpreted like in date(1).  If FORMAT is FORMAT1&lt;newline&gt;FORMAT2,
+then FORMAT1 applies to non-recent files and FORMAT2 to recent files.
+TIME_STYLE prefixed with &#39;posix-&#39; takes effect only outside the POSIX locale.
+Also the TIME_STYLE environment variable sets the default style to use.
+
+The WHEN argument defaults to &#39;always&#39; and can also be &#39;auto&#39; or &#39;never&#39;.
+
+Using color to distinguish file types is disabled both by default and
+with --color=never.  With --color=auto, ls emits color codes only when
+standard output is connected to a terminal.  The LS_COLORS environment
+variable can change the settings.  Use the dircolors(1) command to set it.
+
+Exit status:
+ 0  if OK,
+ 1  if minor problems (e.g., cannot access subdirectory),
+ 2  if serious trouble (e.g., cannot access command-line argument).
+
+GNU coreutils online help: &lt;https://www.gnu.org/software/coreutils/&gt;
+Full documentation &lt;https://www.gnu.org/software/coreutils/ls&gt;
+or available locally via: info &#39;(coreutils) ls invocation&#39;
+  
+
+man ls
+
+
+
+
+  
+  
+    
+  
+  NAME
+       ls - list directory contents
+
+SYNOPSIS
+       ls [OPTION]... [FILE]...
+
+DESCRIPTION
+       List  information  about the FILEs (the current directory by default).  Sort en‐
+       tries alphabetically if none of -cftuvSUX nor --sort is specified.
+
+       Mandatory arguments to long options are mandatory for short options too.
+
+       -a, --all
+              do not ignore entries starting with .
+
+       -A, --almost-all
+              do not list implied . and ..
+
+       --author
+              with -l, print the author of each file
+
+       -b, --escape
+              print C-style escapes for nongraphic characters
+
+       --block-size=SIZE
+              with -l, scale sizes by SIZE when printing them; e.g.,  &#39;--block-size=M&#39;;
+              see SIZE format below
+
+       -B, --ignore-backups
+              do not list implied entries ending with ~
+
+       -c     with  -lt:  sort  by, and show, ctime (time of last change of file status
+              information); with -l: show ctime and sort by name;  otherwise:  sort  by
+              ctime, newest first
+
+       -C     list entries by columns
+
+       --color[=WHEN]
+              color the output WHEN; more info below
+
+       -d, --directory
+              list directories themselves, not their contents
+
+       -D, --dired
+              generate output designed for Emacs&#39; dired mode
+
+       -f     list all entries in directory order
+
+       -F, --classify[=WHEN]
+              append indicator (one of */=&gt;@|) to entries WHEN
+
+       --file-type
+              likewise, except do not append &#39;*&#39;
+
+       --format=WORD
+              across  -x,  commas -m, horizontal -x, long -l, single-column -1, verbose
+              -l, vertical -C
+
+       --full-time
+              like -l --time-style=full-iso
+
+       -g     like -l, but do not list owner
+
+       --group-directories-first
+              group directories before files; can be augmented with  a  --sort  option,
+              but any use of --sort=none (-U) disables grouping
+
+       -G, --no-group
+              in a long listing, don&#39;t print group names
+
+       -h, --human-readable
+              with -l and -s, print sizes like 1K 234M 2G etc.
+
+       --si   likewise, but use powers of 1000 not 1024
+
+       -H, --dereference-command-line
+              follow symbolic links listed on the command line
+
+       --dereference-command-line-symlink-to-dir
+              follow each command line symbolic link that points to a directory
+
+       --hide=PATTERN
+              do  not  list implied entries matching shell PATTERN (overridden by -a or -A)
+
+       --hyperlink[=WHEN]
+              hyperlink file names WHEN
+
+       --indicator-style=WORD
+              append indicator with style WORD to entry names:  none  (default),  slash
+              (-p), file-type (--file-type), classify (-F)
+
+       -i, --inode
+              print the index number of each file
+
+       -I, --ignore=PATTERN
+              do not list implied entries matching shell PATTERN
+
+       -k, --kibibytes
+              default  to 1024-byte blocks for file system usage; used only with -s and
+              per directory totals
+
+       -l     use a long listing format
+
+       -L, --dereference
+              when showing file information for a symbolic link, show  information  for
+              the file the link references rather than for the link itself
+
+       -m     fill width with a comma separated list of entries
+
+       -n, --numeric-uid-gid
+              like -l, but list numeric user and group IDs
+
+       -N, --literal
+              print entry names without quoting
+
+       -o     like -l, but do not list group information
+
+       -p, --indicator-style=slash
+              append / indicator to directories
+
+       -q, --hide-control-chars
+              print ? instead of nongraphic characters
+
+       --show-control-chars
+              show nongraphic characters as-is (the default, unless program is &#39;ls&#39; and
+              output is a terminal)
+
+       -Q, --quote-name
+              enclose entry names in double quotes
+
+       --quoting-style=WORD
+              use quoting style WORD for entry names: literal, locale, shell, shell-al‐
+              ways,  shell-escape,  shell-escape-always,  c,  escape  (overrides  QUOT‐
+              ING_STYLE environment variable)
+
+       -r, --reverse
+              reverse order while sorting
+
+       -R, --recursive
+              list subdirectories recursively
+
+       -s, --size
+              print the allocated size of each file, in blocks
+
+       -S     sort by file size, largest first
+
+       --sort=WORD
+              sort by WORD instead of name: none (-U), size (-S),  time  (-t),  version
+              (-v), extension (-X), width
+
+       --time=WORD
+              select  which timestamp used to display or sort; access time (-u): atime,
+              access, use; metadata change time (-c): ctime, status; modified time (de‐
+              fault): mtime, modification; birth time: birth, creation;
+
+              with -l, WORD determines which time to show; with  --sort=time,  sort  by
+              WORD (newest first)
+
+       --time-style=TIME_STYLE
+              time/date format with -l; see TIME_STYLE below
+
+       -t     sort by time, newest first; see --time
+
+       -T, --tabsize=COLS
+              assume tab stops at each COLS instead of 8
+
+       -u     with  -lt:  sort by, and show, access time; with -l: show access time and
+              sort by name; otherwise: sort by access time, newest first
+
+       -U     do not sort; list entries in directory order
+
+       -v     natural sort of (version) numbers within text
+
+       -w, --width=COLS
+              set output width to COLS.  0 means no limit
+
+       -x     list entries by lines instead of by columns
+
+       -X     sort alphabetically by entry extension
+
+       -Z, --context
+              print any security context of each file
+
+       --zero end each output line with NUL, not newline
+
+       -1     list one file per line
+
+       --help display this help and exit
+
+       --version
+              output version information and exit
+
+       The SIZE argument is an integer and optional unit  (example:  10K  is  10*1024).
+       Units  are  K,M,G,T,P,E,Z,Y,R,Q  (powers of 1024) or KB,MB,... (powers of 1000).
+       Binary prefixes can be used, too: KiB=K, MiB=M, and so on.
+
+       The TIME_STYLE argument can be full-iso,  long-iso,  iso,  locale,  or  &#43;FORMAT.
+       FORMAT  is  interpreted  like in date(1).  If FORMAT is FORMAT1&lt;newline&gt;FORMAT2,
+       then  FORMAT1  applies  to  non-recent  files  and  FORMAT2  to  recent   files.
+       TIME_STYLE  prefixed  with  &#39;posix-&#39; takes effect only outside the POSIX locale.
+       Also the TIME_STYLE environment variable sets the default style to use.
+
+       The WHEN argument defaults to &#39;always&#39; and can also be &#39;auto&#39; or &#39;never&#39;.
+
+       Using color to distinguish file types is  disabled  both  by  default  and  with
+       --color=never.   With --color=auto, ls emits color codes only when standard out‐
+       put is connected to a terminal.  The LS_COLORS environment variable  can  change
+       the settings.  Use the dircolors(1) command to set it.
+
+   Exit status:
+       0      if OK,
+
+       1      if minor problems (e.g., cannot access subdirectory),
+
+       2      if serious trouble (e.g., cannot access command-line argument).
+
+AUTHOR
+       Written by Richard M. Stallman and David MacKenzie.
+
+REPORTING BUGS
+       GNU coreutils online help: &lt;https://www.gnu.org/software/coreutils/&gt;
+       Report any translation bugs to &lt;https://translationproject.org/team/&gt;
+
+COPYRIGHT
+       Copyright © 2023 Free Software Foundation, Inc.  License GPLv3&#43;: GNU GPL version
+       3 or later &lt;https://gnu.org/licenses/gpl.html&gt;.
+       This  is free software: you are free to change and redistribute it.  There is NO
+       WARRANTY, to the extent permitted by law.
+
+SEE ALSO
+       dircolors(1)
+
+       Full documentation &lt;https://www.gnu.org/software/coreutils/ls&gt;
+       or available locally via: info &#39;(coreutils) ls invocation&#39;
+  
+">
+
+    
+    
+    
+    <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/personal-site/",
+       "name": "Sujith's Library",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/personal-site/docs/",
+       "name": "All Notes Articles",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/personal-site/docs/bash-linux/",
+       "name": "Bash Linux Terminal",
+       "position": 3
+     },
+     {
+       "@type": "ListItem",
+       "item": "",
+       "name": "Bash Commands",
+       "position": 4
+     },
+     {
+       "@type": "ListItem",
+       "name": "Man Ls",
+       "position": 5
+     }
+   ]
+ }
+</script>
+
+
+
+
+
+</head>
+
+  
+  <body class="single section docs" data-bs-spy="scroll" data-bs-target="#toc" data-bs-root-margin="0px 0px -60%" data-bs-smooth-scroll="true" tabindex="0">
+    <div class="sticky-top">
+<header class="navbar navbar-expand-lg">
+  <div class="container-lg">
+  
+    <a class="navbar-brand me-auto me-lg-3" href="/personal-site/">Sujith&#39;s Library</a>
+
+    
+    
+    <button type="button" id="searchToggleMobile" class="btn btn-link nav-link mx-2 d-lg-none" aria-label="Search website">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <circle cx="10" cy="10" r="7"></circle>
+        <line x1="21" y1="21" x2="15" y2="15"></line>
+      </svg>
+    </button>
+    
+    <button class="btn btn-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavSection" aria-controls="offcanvasNavSection" aria-label="Open section navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+      </svg>
+    </button>
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavSection" aria-labelledby="offcanvasNavSectionLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavSectionLabel">Docs</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <aside class="doks-sidebar mt-n3">
+          <nav id="doks-docs-nav" aria-label="Tertiary navigation">
+            
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+    <details open>
+      <summary>Python</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Primitive Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/variables/">Variables</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/int-float/">int &amp; float</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/string/">String</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/string-manipulation/">String Manipulation</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/string-methods/">String Methods</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Complex Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/lists/">Lists</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/list-methods/">List Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/list-operators/">List Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/arrays/">Arrays</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/tuples/">Tuples</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/dictinaries/">Dictinaries</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>C Language</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/c/chapter-0-introduction-to-c-language/">Chapter 0 - Introduction to C language</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/chapter-0-introduction-using-python-part-1/">Chapter 0 - Introduction using Python (Part 1)</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/chapter-0-introduction-using-python-part-2/">Chapter 0 - Introduction using Python (Part 2)</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/chapter-1-basic-syntax/">Chapter 1 - Basic Syntax</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/chapter-2-types-operators-expressions/">Chapter 2 - Types, Operators, Expressions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/chapter-3-control-flow/">Chapter 3 - Control Flow</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/chapter-4-function-program-structure/">Chapter 4 - Function, Program Structure</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/chapter-5-pointers-arrays/">Chapter 5 - Pointers, Arrays</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/chapter-6-structures/">Chapter 6 - Structures</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/chapter-6.1-structures/">Chapter 6.1 - Structures</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/chapter-7-input-output/">Chapter 7 - Input &amp; Output</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/chapter-8-unix-interface/">Chapter 8 - Unix Interface</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>JavaScript</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>JS Language</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/variables/">Variables</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/values-and-types/">Values and Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/number-types/">Number Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/number-methods/">Number Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/string-type/">String Type</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/string-methods/">String Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/modifying-string/">Modifying String</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/boolean-type/">Boolean Type</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/operators/">Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/auto-type-conversions/">Auto Type Conversions</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Control Flow</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Conditionals</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/if-else/">if, else</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/switch-case/">switch-case</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/ternary-operator/">Ternary Operator</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/logical-operators/">Logical Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/short-circuiting/">Short Circuiting</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Loops</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/do-while-loop/">do-while Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/for-loop/">for Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/for-of-loop/">for-of Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/for-in-loop/">for-in Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/break-continue-label/">break-continue-label</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/iterables/">Iterables</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Functions</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/function/">Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/defining-function/">Defining Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/arrow-function/">Arrow Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/scope-of-variable/">Scope of Variable</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/parameters-arguments/">Parameters &amp; Arguments</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/return-recursion-call-stack/">Return, Recursion, Call Stack</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/scheduling/">Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/decorators/">Decorators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/function-object/">Function Object</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Objects</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/object/">Object</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/object-properties/">Object Properties</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/cloning-object/">Cloning Object</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/object.keys/">Object.keys()</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/methods-this-chaining/">Methods, this, Chaining</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/constructor-new/">Constructor new</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Arrays</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/array/">Array</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/array-methods/">Array Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/filter-method/">Filter Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/map-method/">Map Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/reduce-method/">Reduce Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/sort-method/">Sort Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/rest-spread/">Rest &amp; Spread</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/dom-manipulation/">DOM Manipulation</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>HTML &amp; CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>HTML</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/boiler-plate/">Boiler Plate</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/texts-lists/">Texts &amp; Lists</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/links-images/">Links &amp; Images</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/input-types/">Input Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/button/">Button</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/dom-events/">DOM Events</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-selectors/">CSS Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-multiple-selecors/">CSS Multiple Selecors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/declaration/">Declaration</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/adding-css/">Adding CSS</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/box-model/">Box Model</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/flexbox/">Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/flex-flexibility/">Flex Flexibility</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/axes-in-flexbox/">Axes in Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/utility-class-inheritance/">Utility Class &amp; Inheritance</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>CSS Reference</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css_resource/css-size-units/">CSS Size Units</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css_resource/css-color-values/">CSS Color Values</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Tools &amp; Accesories</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/tools/obsidian/">Obsidian</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/vs-code/">VS Code</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/git-github/">Git &amp; Github</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open open>
+      <summary>Bash - Linux Terminal</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Linux OS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-01-linux-kernel/">Linux OS - 01 - Linux Kernel</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-02-forms-of-process-management/">Linux OS - 02 - Forms of Process Management</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-03-system-resources/">Linux OS - 03 System Resources</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Linx Bash</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-01-basics/">Bash - 01 - Basics</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-02-features/">Bash - 02 - Features</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-03-help-pages/">Bash - 03 - help pages</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-04-variables-and-aliases/">Bash - 04 - Variables and Aliases</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-05-listing-files/">Bash - 05 - Listing Files</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-06-environment-and-subshell/">Bash - 06 - Environment and Subshell</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-07-storage-terminology-in-linux/">Bash - 07 - Storage Terminology in Linux</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-08.1-bc-and-date/">Bash - 08.1 - bc and date</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-08-basic-file-commands/">Bash - 08 - Basic File Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-09-file-movement-and-copy-commands/">Bash - 09 - File Movement and Copy Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-10-file-viewing-and-editing-commands/">Bash - 10 - File Viewing and Editing Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-11-file-permissions/">Bash - 11 - File Permissions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-12-hard-and-soft-links/">Bash - 12 - Hard and Soft Links</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13-regular-expressions/">Bash - 13 - Regular Expressions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13.1-regex-expanded/">Bash - 13.1 - regex Expanded</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-14-file-searching/">Bash - 14 - File Searching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13.2-regex-matching/">Bash - 13.2 - regex Matching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-15-neovim/">Bash - 15 - Neovim</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-16-grep/">Bash - 16 - grep</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-17-sed/">Bash - 17 - sed</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-19-shell-scripting/">Bash - 19 - Shell Scripting</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-awk/">Bash - 18 - awk</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-20-loop/">Bash - 20 - loop</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+          </nav>
+        </aside>
+      </div>
+    </div>
+    
+    <button class="btn btn-link nav-link mx-2 order-3 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavMain" aria-controls="offcanvasNavMain" aria-label="Open main navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <line x1="4" y1="8" x2="20" y2="8"></line>
+        <line x1="4" y1="16" x2="20" y2="16"></line>
+      </svg>
+    </button>
+
+    
+    <div class="offcanvas offcanvas-end h-auto" tabindex="-1" id="offcanvasNavMain" aria-labelledby="offcanvasNavMainLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavMainLabel">Sujith&#39;s Library</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+         </svg>
+        </button>
+      </div>
+      
+      <div class="offcanvas-body d-flex flex-column flex-lg-row justify-content-between">
+        <ul class="navbar-nav flex-grow-1"><li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/python/">Python</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/java-script/">JavaScript</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/html-css/">HTML/CSS</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/c/">C</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/bash-linux/">Bash</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/tools/">Tools</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/blog/">Blog</a>
+              </li>
+            </ul>
+
+        
+        
+        <button type="button" id="searchToggleDesktop" class="btn btn-link nav-link p-2 d-none d-lg-block" aria-label="Search website">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <circle cx="10" cy="10" r="7"></circle>
+            <line x1="21" y1="21" x2="15" y2="15"></line>
+          </svg>
+        </button>
+        
+        
+        
+        <button id="buttonColorMode" class="btn btn-link mx-auto nav-link p-0 ms-lg-2 me-lg-1" type="button" aria-label="Toggle theme">
+          <svg data-bs-theme-value="dark" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+          </svg>
+          <svg data-bs-theme-value="light" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0m-5 0h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+          </svg>
+        </button>
+        
+        <ul id="socialMenu" class="nav mx-auto flex-row order-lg-4">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/sujith-eag"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg><small class="ms-2 visually-hidden">GitHub</small></a>
+            </li>
+          </ul>
+        
+        </div>
+    </div>
+
+    
+    </div>
+</header>
+</div>
+
+<div class="modal" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-md-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 visually-hidden" id="searchModalLabel">Search</h1>
+        <button type="button" class="btn-close visually-hidden" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="search-input flex-grow-1 d-none">
+          <form id="search-form" class="search-form" action="#" method="post" accept-charset="UTF-8" role="search">
+            <label for="query" class="visually-hidden">Search</label>
+            <div class="d-flex">
+              <input type="search" id="query" name="query" class="search-text form-control form-control-lg" placeholder="Search" aria-label="Search" maxlength="128" autocomplete="off">
+              <button type="button" class="btn btn-link text-decoration-none px-0 ms-3 d-md-none" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-body">
+        <p class="search-loading status message d-none mt-3 text-center">Loading search index…</p>
+        <p class="search-no-recent message d-none mt-3 text-center">No recent searches</p>
+        <p class="search-no-results message d-none mt-3 text-center">No results for "<strong><span class="query-no-results">Query here</span></strong>"</p>
+        <div id="searchResults" class="search-results"></div>
+        <template>
+          <article class="search-result list-view">
+            <div class="card my-3">
+              <div class="card-body">
+                <header>
+                  <h2 class="h5 title title-submitted mb-0"><a class="stretched-link text-decoration-none text-reset" href="#">Title here</a></h2>
+                  <div class="submitted d-none"><time class="created-date">Date here</time></div>
+                </header>
+                <div class="content">Summary here</div>
+              </div>
+            </div>
+          </article>
+        </template>
+      </div>
+      <div class="modal-footer">
+        <ul class="list-inline me-auto d-none d-md-block">
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Enter key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M12 3.53088v3c0 1-1 2-2 2H4M7 11.53088l-3-3 3-3"></path></g></svg></kbd><span class="DocSearch-Label">to select</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow down" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 3.5v8M10.5 8.5l-3 3-3-3"></path></g></svg></kbd><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow up" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 11.5v-8M10.5 6.5l-3-3-3 3"></path></g></svg></kbd><span class="DocSearch-Label">to navigate</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Escape key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M13.6167 8.936c-.1065.3583-.6883.962-1.4875.962-.7993 0-1.653-.9165-1.653-2.1258v-.5678c0-1.2548.7896-2.1016 1.653-2.1016.8634 0 1.3601.4778 1.4875 1.0724M9 6c-.1352-.4735-.7506-.9219-1.46-.8972-.7092.0246-1.344.57-1.344 1.2166s.4198.8812 1.3445.9805C8.465 7.3992 8.968 7.9337 9 8.5c.032.5663-.454 1.398-1.4595 1.398C6.6593 9.898 6 9 5.963 8.4851m-1.4748.5368c-.2635.5941-.8099.876-1.5443.876s-1.7073-.6248-1.7073-2.204v-.4603c0-1.0416.721-2.131 1.7073-2.131.9864 0 1.6425 1.031 1.5443 2.2492h-2.956"></path></g></svg></kbd><span class="DocSearch-Label">to close</span></li>
+        </ul>
+        <p class="d-md-none">Search by <a class="text-decoration-none" href="https://github.com/nextapps-de/flexsearch">FlexSearch</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="wrap container-lg" role="document">
+      <div class="content">
+      
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+    <details open>
+      <summary>Python</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Primitive Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/variables/">Variables</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/int-float/">int &amp; float</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/string/">String</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/string-manipulation/">String Manipulation</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/string-methods/">String Methods</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Complex Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/lists/">Lists</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/list-methods/">List Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/list-operators/">List Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/arrays/">Arrays</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/tuples/">Tuples</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/dictinaries/">Dictinaries</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>C Language</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/c/chapter-0-introduction-to-c-language/">Chapter 0 - Introduction to C language</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/chapter-0-introduction-using-python-part-1/">Chapter 0 - Introduction using Python (Part 1)</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/chapter-0-introduction-using-python-part-2/">Chapter 0 - Introduction using Python (Part 2)</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/chapter-1-basic-syntax/">Chapter 1 - Basic Syntax</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/chapter-2-types-operators-expressions/">Chapter 2 - Types, Operators, Expressions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/chapter-3-control-flow/">Chapter 3 - Control Flow</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/chapter-4-function-program-structure/">Chapter 4 - Function, Program Structure</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/chapter-5-pointers-arrays/">Chapter 5 - Pointers, Arrays</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/chapter-6-structures/">Chapter 6 - Structures</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/chapter-6.1-structures/">Chapter 6.1 - Structures</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/chapter-7-input-output/">Chapter 7 - Input &amp; Output</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/chapter-8-unix-interface/">Chapter 8 - Unix Interface</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>JavaScript</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>JS Language</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/variables/">Variables</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/values-and-types/">Values and Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/number-types/">Number Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/number-methods/">Number Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/string-type/">String Type</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/string-methods/">String Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/modifying-string/">Modifying String</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/boolean-type/">Boolean Type</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/operators/">Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/auto-type-conversions/">Auto Type Conversions</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Control Flow</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Conditionals</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/if-else/">if, else</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/switch-case/">switch-case</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/ternary-operator/">Ternary Operator</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/logical-operators/">Logical Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/short-circuiting/">Short Circuiting</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Loops</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/do-while-loop/">do-while Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/for-loop/">for Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/for-of-loop/">for-of Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/for-in-loop/">for-in Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/break-continue-label/">break-continue-label</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/iterables/">Iterables</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Functions</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/function/">Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/defining-function/">Defining Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/arrow-function/">Arrow Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/scope-of-variable/">Scope of Variable</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/parameters-arguments/">Parameters &amp; Arguments</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/return-recursion-call-stack/">Return, Recursion, Call Stack</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/scheduling/">Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/decorators/">Decorators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/function-object/">Function Object</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Objects</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/object/">Object</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/object-properties/">Object Properties</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/cloning-object/">Cloning Object</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/object.keys/">Object.keys()</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/methods-this-chaining/">Methods, this, Chaining</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/constructor-new/">Constructor new</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Arrays</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/array/">Array</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/array-methods/">Array Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/filter-method/">Filter Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/map-method/">Map Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/reduce-method/">Reduce Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/sort-method/">Sort Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/rest-spread/">Rest &amp; Spread</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/dom-manipulation/">DOM Manipulation</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>HTML &amp; CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>HTML</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/boiler-plate/">Boiler Plate</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/texts-lists/">Texts &amp; Lists</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/links-images/">Links &amp; Images</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/input-types/">Input Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/button/">Button</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/dom-events/">DOM Events</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-selectors/">CSS Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-multiple-selecors/">CSS Multiple Selecors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/declaration/">Declaration</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/adding-css/">Adding CSS</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/box-model/">Box Model</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/flexbox/">Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/flex-flexibility/">Flex Flexibility</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/axes-in-flexbox/">Axes in Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/utility-class-inheritance/">Utility Class &amp; Inheritance</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>CSS Reference</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css_resource/css-size-units/">CSS Size Units</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css_resource/css-color-values/">CSS Color Values</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Tools &amp; Accesories</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/tools/obsidian/">Obsidian</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/vs-code/">VS Code</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/git-github/">Git &amp; Github</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open open>
+      <summary>Bash - Linux Terminal</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Linux OS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-01-linux-kernel/">Linux OS - 01 - Linux Kernel</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-02-forms-of-process-management/">Linux OS - 02 - Forms of Process Management</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-03-system-resources/">Linux OS - 03 System Resources</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Linx Bash</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-01-basics/">Bash - 01 - Basics</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-02-features/">Bash - 02 - Features</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-03-help-pages/">Bash - 03 - help pages</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-04-variables-and-aliases/">Bash - 04 - Variables and Aliases</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-05-listing-files/">Bash - 05 - Listing Files</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-06-environment-and-subshell/">Bash - 06 - Environment and Subshell</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-07-storage-terminology-in-linux/">Bash - 07 - Storage Terminology in Linux</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-08.1-bc-and-date/">Bash - 08.1 - bc and date</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-08-basic-file-commands/">Bash - 08 - Basic File Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-09-file-movement-and-copy-commands/">Bash - 09 - File Movement and Copy Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-10-file-viewing-and-editing-commands/">Bash - 10 - File Viewing and Editing Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-11-file-permissions/">Bash - 11 - File Permissions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-12-hard-and-soft-links/">Bash - 12 - Hard and Soft Links</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13-regular-expressions/">Bash - 13 - Regular Expressions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13.1-regex-expanded/">Bash - 13.1 - regex Expanded</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-14-file-searching/">Bash - 14 - File Searching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13.2-regex-matching/">Bash - 13.2 - regex Matching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-15-neovim/">Bash - 15 - Neovim</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-16-grep/">Bash - 16 - grep</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-17-sed/">Bash - 17 - sed</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-19-shell-scripting/">Bash - 19 - Shell Scripting</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-awk/">Bash - 18 - awk</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-20-loop/">Bash - 20 - loop</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+		</div>
+		
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="page-links">
+  <h3>On this page</h3>
+    <nav id="toc">
+  <ul>
+    <li><a href="#ls---help">ls &ndash;help</a></li>
+    <li><a href="#man-ls">man ls</a></li>
+  </ul>
+</nav>
+</div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+			<h1>man - ls</h1>
+			
+			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
+				<details>
+    <summary>On this page</summary>
+    <div class="page-links">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#ls---help">ls &ndash;help</a></li>
+    <li><a href="#man-ls">man ls</a></li>
+  </ul>
+</nav>
+    </div>
+  </details>
+
+			</nav>
+			<h2 id="ls---help">ls &ndash;help<a href="#ls---help" class="anchor" aria-hidden="true">#</a> </h2>
+
+
+
+<div class="expressive-code">
+  <figure class="frame is-terminal not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Usage: ls <span class="o">[</span>OPTION<span class="o">]</span>... <span class="o">[</span>FILE<span class="o">]</span>...
+</span></span><span class="line"><span class="cl">List information about the FILEs <span class="o">(</span>the current directory by default<span class="o">)</span>.
+</span></span><span class="line"><span class="cl">Sort entries alphabetically <span class="k">if</span> none of -cftuvSUX nor --sort is specified.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Mandatory arguments to long options are mandatory <span class="k">for</span> short options too.
+</span></span><span class="line"><span class="cl">  -a, --all                  <span class="k">do</span> not ignore entries starting with .
+</span></span><span class="line"><span class="cl">  -A, --almost-all           <span class="k">do</span> not list implied . and ..
+</span></span><span class="line"><span class="cl">      --author               with -l, print the author of each file
+</span></span><span class="line"><span class="cl">  -b, --escape               print C-style escapes <span class="k">for</span> nongraphic characters
+</span></span><span class="line"><span class="cl">      --block-size<span class="o">=</span>SIZE      with -l, scale sizes by SIZE when printing them<span class="p">;</span>
+</span></span><span class="line"><span class="cl">                             e.g., <span class="s1">&#39;--block-size=M&#39;</span><span class="p">;</span> see SIZE format below
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  -B, --ignore-backups       <span class="k">do</span> not list implied entries ending with ~
+</span></span><span class="line"><span class="cl">  -c                         with -lt: sort by, and show, ctime <span class="o">(</span><span class="nb">time</span> of last
+</span></span><span class="line"><span class="cl">                             change of file status information<span class="o">)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                             with -l: show ctime and sort by name<span class="p">;</span>
+</span></span><span class="line"><span class="cl">                             otherwise: sort by ctime, newest first
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  -C                         list entries by columns
+</span></span><span class="line"><span class="cl">      --color<span class="o">[=</span>WHEN<span class="o">]</span>         color the output WHEN<span class="p">;</span> more info below
+</span></span><span class="line"><span class="cl">  -d, --directory            list directories themselves, not their contents
+</span></span><span class="line"><span class="cl">  -D, --dired                generate output designed <span class="k">for</span> Emacs<span class="s1">&#39; dired mode
+</span></span></span><span class="line"><span class="cl"><span class="s1">  -f                         list all entries in directory order
+</span></span></span><span class="line"><span class="cl"><span class="s1">  -F, --classify[=WHEN]      append indicator (one of */=&gt;@|) to entries WHEN
+</span></span></span><span class="line"><span class="cl"><span class="s1">      --file-type            likewise, except do not append &#39;</span>*<span class="s1">&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s1">      --format=WORD          across -x, commas -m, horizontal -x, long -l,
+</span></span></span><span class="line"><span class="cl"><span class="s1">                             single-column -1, verbose -l, vertical -C
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">      --full-time            like -l --time-style=full-iso
+</span></span></span><span class="line"><span class="cl"><span class="s1">  -g                         like -l, but do not list owner
+</span></span></span><span class="line"><span class="cl"><span class="s1">      --group-directories-first
+</span></span></span><span class="line"><span class="cl"><span class="s1">                             group directories before files;
+</span></span></span><span class="line"><span class="cl"><span class="s1">                             can be augmented with a --sort option, but any
+</span></span></span><span class="line"><span class="cl"><span class="s1">                             use of --sort=none (-U) disables grouping
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">  -G, --no-group             in a long listing, don&#39;</span>t print group names
+</span></span><span class="line"><span class="cl">  -h, --human-readable       with -l and -s, print sizes like 1K 234M 2G etc.
+</span></span><span class="line"><span class="cl">      --si                   likewise, but use powers of <span class="m">1000</span> not <span class="m">1024</span>
+</span></span><span class="line"><span class="cl">  -H, --dereference-command-line
+</span></span><span class="line"><span class="cl">                             follow symbolic links listed on the <span class="nb">command</span> line
+</span></span><span class="line"><span class="cl">      --dereference-command-line-symlink-to-dir
+</span></span><span class="line"><span class="cl">                             follow each <span class="nb">command</span> line symbolic link
+</span></span><span class="line"><span class="cl">                             that points to a directory
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      --hide<span class="o">=</span>PATTERN         <span class="k">do</span> not list implied entries matching shell PATTERN
+</span></span><span class="line"><span class="cl">                             <span class="o">(</span>overridden by -a or -A<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      --hyperlink<span class="o">[=</span>WHEN<span class="o">]</span>     hyperlink file names WHEN
+</span></span><span class="line"><span class="cl">      --indicator-style<span class="o">=</span>WORD
+</span></span><span class="line"><span class="cl">                             append indicator with style WORD to entry names:
+</span></span><span class="line"><span class="cl">                             none <span class="o">(</span>default<span class="o">)</span>, slash <span class="o">(</span>-p<span class="o">)</span>,
+</span></span><span class="line"><span class="cl">                             file-type <span class="o">(</span>--file-type<span class="o">)</span>, classify <span class="o">(</span>-F<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  -i, --inode                print the index number of each file
+</span></span><span class="line"><span class="cl">  -I, --ignore<span class="o">=</span>PATTERN       <span class="k">do</span> not list implied entries matching shell PATTERN
+</span></span><span class="line"><span class="cl">  -k, --kibibytes            default to 1024-byte blocks <span class="k">for</span> file system usage<span class="p">;</span>
+</span></span><span class="line"><span class="cl">                             used only with -s and per directory totals
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  -l                         use a long listing format
+</span></span><span class="line"><span class="cl">  -L, --dereference          when showing file information <span class="k">for</span> a symbolic
+</span></span><span class="line"><span class="cl">                             link, show information <span class="k">for</span> the file the link
+</span></span><span class="line"><span class="cl">                             references rather than <span class="k">for</span> the link itself
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  -m                         fill width with a comma separated list of entries
+</span></span><span class="line"><span class="cl">  -n, --numeric-uid-gid      like -l, but list numeric user and group IDs
+</span></span><span class="line"><span class="cl">  -N, --literal              print entry names without quoting
+</span></span><span class="line"><span class="cl">  -o                         like -l, but <span class="k">do</span> not list group information
+</span></span><span class="line"><span class="cl">  -p, --indicator-style<span class="o">=</span>slash
+</span></span><span class="line"><span class="cl">                             append / indicator to directories
+</span></span><span class="line"><span class="cl">  -q, --hide-control-chars   print ? instead of nongraphic characters
+</span></span><span class="line"><span class="cl">      --show-control-chars   show nongraphic characters as-is <span class="o">(</span>the default,
+</span></span><span class="line"><span class="cl">                             unless program is <span class="s1">&#39;ls&#39;</span> and output is a terminal<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  -Q, --quote-name           enclose entry names in double quotes
+</span></span><span class="line"><span class="cl">      --quoting-style<span class="o">=</span>WORD   use quoting style WORD <span class="k">for</span> entry names:
+</span></span><span class="line"><span class="cl">                             literal, locale, shell, shell-always,
+</span></span><span class="line"><span class="cl">                             shell-escape, shell-escape-always, c, escape
+</span></span><span class="line"><span class="cl">                             <span class="o">(</span>overrides QUOTING_STYLE environment variable<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  -r, --reverse              reverse order <span class="k">while</span> sorting
+</span></span><span class="line"><span class="cl">  -R, --recursive            list subdirectories recursively
+</span></span><span class="line"><span class="cl">  -s, --size                 print the allocated size of each file, in blocks
+</span></span><span class="line"><span class="cl">  -S                         sort by file size, largest first
+</span></span><span class="line"><span class="cl">      --sort<span class="o">=</span>WORD            sort by WORD instead of name: none <span class="o">(</span>-U<span class="o">)</span>, size <span class="o">(</span>-S<span class="o">)</span>,
+</span></span><span class="line"><span class="cl">                             <span class="nb">time</span> <span class="o">(</span>-t<span class="o">)</span>, version <span class="o">(</span>-v<span class="o">)</span>, extension <span class="o">(</span>-X<span class="o">)</span>, width
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      --time<span class="o">=</span>WORD            <span class="k">select</span> which timestamp used to display or sort<span class="p">;</span>
+</span></span><span class="line"><span class="cl">                               access <span class="nb">time</span> <span class="o">(</span>-u<span class="o">)</span>: atime, access, use<span class="p">;</span>
+</span></span><span class="line"><span class="cl">                               metadata change <span class="nb">time</span> <span class="o">(</span>-c<span class="o">)</span>: ctime, status<span class="p">;</span>
+</span></span><span class="line"><span class="cl">                               modified <span class="nb">time</span> <span class="o">(</span>default<span class="o">)</span>: mtime, modification<span class="p">;</span>
+</span></span><span class="line"><span class="cl">                               birth time: birth, creation<span class="p">;</span>
+</span></span><span class="line"><span class="cl">                             with -l, WORD determines which <span class="nb">time</span> to show<span class="p">;</span>
+</span></span><span class="line"><span class="cl">                             with --sort<span class="o">=</span>time, sort by WORD <span class="o">(</span>newest first<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      --time-style<span class="o">=</span>TIME_STYLE
+</span></span><span class="line"><span class="cl">                             time/date format with -l<span class="p">;</span> see TIME_STYLE below
+</span></span><span class="line"><span class="cl">  -t                         sort by time, newest first<span class="p">;</span> see --time
+</span></span><span class="line"><span class="cl">  -T, --tabsize<span class="o">=</span>COLS         assume tab stops at each COLS instead of <span class="m">8</span>
+</span></span><span class="line"><span class="cl">  -u                         with -lt: sort by, and show, access time<span class="p">;</span>
+</span></span><span class="line"><span class="cl">                             with -l: show access <span class="nb">time</span> and sort by name<span class="p">;</span>
+</span></span><span class="line"><span class="cl">                             otherwise: sort by access time, newest first
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  -U                         <span class="k">do</span> not sort<span class="p">;</span> list entries in directory order
+</span></span><span class="line"><span class="cl">  -v                         natural sort of <span class="o">(</span>version<span class="o">)</span> numbers within text
+</span></span><span class="line"><span class="cl">  -w, --width<span class="o">=</span>COLS           <span class="nb">set</span> output width to COLS.  <span class="m">0</span> means no limit
+</span></span><span class="line"><span class="cl">  -x                         list entries by lines instead of by columns
+</span></span><span class="line"><span class="cl">  -X                         sort alphabetically by entry extension
+</span></span><span class="line"><span class="cl">  -Z, --context              print any security context of each file
+</span></span><span class="line"><span class="cl">      --zero                 end each output line with NUL, not newline
+</span></span><span class="line"><span class="cl">  -1                         list one file per line
+</span></span><span class="line"><span class="cl">      --help        display this <span class="nb">help</span> and <span class="nb">exit</span>
+</span></span><span class="line"><span class="cl">      --version     output version information and <span class="nb">exit</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">The SIZE argument is an integer and optional unit <span class="o">(</span>example: 10K is 10*1024<span class="o">)</span>.
+</span></span><span class="line"><span class="cl">Units are K,M,G,T,P,E,Z,Y,R,Q <span class="o">(</span>powers of 1024<span class="o">)</span> or KB,MB,... <span class="o">(</span>powers of 1000<span class="o">)</span>.
+</span></span><span class="line"><span class="cl">Binary prefixes can be used, too: <span class="nv">KiB</span><span class="o">=</span>K, <span class="nv">MiB</span><span class="o">=</span>M, and so on.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">The TIME_STYLE argument can be full-iso, long-iso, iso, locale, or +FORMAT.
+</span></span><span class="line"><span class="cl">FORMAT is interpreted like in date<span class="o">(</span>1<span class="o">)</span>.  If FORMAT is FORMAT1&lt;newline&gt;FORMAT2,
+</span></span><span class="line"><span class="cl"><span class="k">then</span> FORMAT1 applies to non-recent files and FORMAT2 to recent files.
+</span></span><span class="line"><span class="cl">TIME_STYLE prefixed with <span class="s1">&#39;posix-&#39;</span> takes effect only outside the POSIX locale.
+</span></span><span class="line"><span class="cl">Also the TIME_STYLE environment variable sets the default style to use.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">The WHEN argument defaults to <span class="s1">&#39;always&#39;</span> and can also be <span class="s1">&#39;auto&#39;</span> or <span class="s1">&#39;never&#39;</span>.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Using color to distinguish file types is disabled both by default and
+</span></span><span class="line"><span class="cl">with --color<span class="o">=</span>never.  With --color<span class="o">=</span>auto, ls emits color codes only when
+</span></span><span class="line"><span class="cl">standard output is connected to a terminal.  The LS_COLORS environment
+</span></span><span class="line"><span class="cl">variable can change the settings.  Use the dircolors<span class="o">(</span>1<span class="o">)</span> <span class="nb">command</span> to <span class="nb">set</span> it.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Exit status:
+</span></span><span class="line"><span class="cl"> <span class="m">0</span>  <span class="k">if</span> OK,
+</span></span><span class="line"><span class="cl"> <span class="m">1</span>  <span class="k">if</span> minor problems <span class="o">(</span>e.g., cannot access subdirectory<span class="o">)</span>,
+</span></span><span class="line"><span class="cl"> <span class="m">2</span>  <span class="k">if</span> serious trouble <span class="o">(</span>e.g., cannot access command-line argument<span class="o">)</span>.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">GNU coreutils online help: &lt;https://www.gnu.org/software/coreutils/&gt;
+</span></span><span class="line"><span class="cl">Full documentation &lt;https://www.gnu.org/software/coreutils/ls&gt;
+</span></span><span class="line"><span class="cl">or available locally via: info <span class="s1">&#39;(coreutils) ls invocation&#39;</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h2 id="man-ls">man ls<a href="#man-ls" class="anchor" aria-hidden="true">#</a> </h2>
+
+
+
+<div class="expressive-code">
+  <figure class="frame is-terminal not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">NAME
+</span></span><span class="line"><span class="cl">       ls - list directory contents
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">SYNOPSIS
+</span></span><span class="line"><span class="cl">       ls <span class="o">[</span>OPTION<span class="o">]</span>... <span class="o">[</span>FILE<span class="o">]</span>...
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">DESCRIPTION
+</span></span><span class="line"><span class="cl">       List  information  about the FILEs <span class="o">(</span>the current directory by default<span class="o">)</span>.  Sort en‐
+</span></span><span class="line"><span class="cl">       tries alphabetically <span class="k">if</span> none of -cftuvSUX nor --sort is specified.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       Mandatory arguments to long options are mandatory <span class="k">for</span> short options too.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       -a, --all
+</span></span><span class="line"><span class="cl">              <span class="k">do</span> not ignore entries starting with .
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       -A, --almost-all
+</span></span><span class="line"><span class="cl">              <span class="k">do</span> not list implied . and ..
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       --author
+</span></span><span class="line"><span class="cl">              with -l, print the author of each file
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       -b, --escape
+</span></span><span class="line"><span class="cl">              print C-style escapes <span class="k">for</span> nongraphic characters
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       --block-size<span class="o">=</span>SIZE
+</span></span><span class="line"><span class="cl">              with -l, scale sizes by SIZE when printing them<span class="p">;</span> e.g.,  <span class="s1">&#39;--block-size=M&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">              see SIZE format below
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       -B, --ignore-backups
+</span></span><span class="line"><span class="cl">              <span class="k">do</span> not list implied entries ending with ~
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       -c     with  -lt:  sort  by, and show, ctime <span class="o">(</span><span class="nb">time</span> of last change of file status
+</span></span><span class="line"><span class="cl">              information<span class="o">)</span><span class="p">;</span> with -l: show ctime and sort by name<span class="p">;</span>  otherwise:  sort  by
+</span></span><span class="line"><span class="cl">              ctime, newest first
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       -C     list entries by columns
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       --color<span class="o">[=</span>WHEN<span class="o">]</span>
+</span></span><span class="line"><span class="cl">              color the output WHEN<span class="p">;</span> more info below
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       -d, --directory
+</span></span><span class="line"><span class="cl">              list directories themselves, not their contents
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       -D, --dired
+</span></span><span class="line"><span class="cl">              generate output designed <span class="k">for</span> Emacs<span class="s1">&#39; dired mode
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">       -f     list all entries in directory order
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">       -F, --classify[=WHEN]
+</span></span></span><span class="line"><span class="cl"><span class="s1">              append indicator (one of */=&gt;@|) to entries WHEN
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">       --file-type
+</span></span></span><span class="line"><span class="cl"><span class="s1">              likewise, except do not append &#39;</span>*<span class="s1">&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">       --format=WORD
+</span></span></span><span class="line"><span class="cl"><span class="s1">              across  -x,  commas -m, horizontal -x, long -l, single-column -1, verbose
+</span></span></span><span class="line"><span class="cl"><span class="s1">              -l, vertical -C
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">       --full-time
+</span></span></span><span class="line"><span class="cl"><span class="s1">              like -l --time-style=full-iso
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">       -g     like -l, but do not list owner
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">       --group-directories-first
+</span></span></span><span class="line"><span class="cl"><span class="s1">              group directories before files; can be augmented with  a  --sort  option,
+</span></span></span><span class="line"><span class="cl"><span class="s1">              but any use of --sort=none (-U) disables grouping
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">       -G, --no-group
+</span></span></span><span class="line"><span class="cl"><span class="s1">              in a long listing, don&#39;</span>t print group names
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       -h, --human-readable
+</span></span><span class="line"><span class="cl">              with -l and -s, print sizes like 1K 234M 2G etc.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       --si   likewise, but use powers of <span class="m">1000</span> not <span class="m">1024</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       -H, --dereference-command-line
+</span></span><span class="line"><span class="cl">              follow symbolic links listed on the <span class="nb">command</span> line
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       --dereference-command-line-symlink-to-dir
+</span></span><span class="line"><span class="cl">              follow each <span class="nb">command</span> line symbolic link that points to a directory
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       --hide<span class="o">=</span>PATTERN
+</span></span><span class="line"><span class="cl">              <span class="k">do</span>  not  list implied entries matching shell PATTERN <span class="o">(</span>overridden by -a or -A<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       --hyperlink<span class="o">[=</span>WHEN<span class="o">]</span>
+</span></span><span class="line"><span class="cl">              hyperlink file names WHEN
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       --indicator-style<span class="o">=</span>WORD
+</span></span><span class="line"><span class="cl">              append indicator with style WORD to entry names:  none  <span class="o">(</span>default<span class="o">)</span>,  slash
+</span></span><span class="line"><span class="cl">              <span class="o">(</span>-p<span class="o">)</span>, file-type <span class="o">(</span>--file-type<span class="o">)</span>, classify <span class="o">(</span>-F<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       -i, --inode
+</span></span><span class="line"><span class="cl">              print the index number of each file
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       -I, --ignore<span class="o">=</span>PATTERN
+</span></span><span class="line"><span class="cl">              <span class="k">do</span> not list implied entries matching shell PATTERN
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       -k, --kibibytes
+</span></span><span class="line"><span class="cl">              default  to 1024-byte blocks <span class="k">for</span> file system usage<span class="p">;</span> used only with -s and
+</span></span><span class="line"><span class="cl">              per directory totals
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       -l     use a long listing format
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       -L, --dereference
+</span></span><span class="line"><span class="cl">              when showing file information <span class="k">for</span> a symbolic link, show  information  <span class="k">for</span>
+</span></span><span class="line"><span class="cl">              the file the link references rather than <span class="k">for</span> the link itself
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       -m     fill width with a comma separated list of entries
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       -n, --numeric-uid-gid
+</span></span><span class="line"><span class="cl">              like -l, but list numeric user and group IDs
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       -N, --literal
+</span></span><span class="line"><span class="cl">              print entry names without quoting
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       -o     like -l, but <span class="k">do</span> not list group information
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       -p, --indicator-style<span class="o">=</span>slash
+</span></span><span class="line"><span class="cl">              append / indicator to directories
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       -q, --hide-control-chars
+</span></span><span class="line"><span class="cl">              print ? instead of nongraphic characters
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       --show-control-chars
+</span></span><span class="line"><span class="cl">              show nongraphic characters as-is <span class="o">(</span>the default, unless program is <span class="s1">&#39;ls&#39;</span> and
+</span></span><span class="line"><span class="cl">              output is a terminal<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       -Q, --quote-name
+</span></span><span class="line"><span class="cl">              enclose entry names in double quotes
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       --quoting-style<span class="o">=</span>WORD
+</span></span><span class="line"><span class="cl">              use quoting style WORD <span class="k">for</span> entry names: literal, locale, shell, shell-al‐
+</span></span><span class="line"><span class="cl">              ways,  shell-escape,  shell-escape-always,  c,  escape  <span class="o">(</span>overrides  QUOT‐
+</span></span><span class="line"><span class="cl">              ING_STYLE environment variable<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       -r, --reverse
+</span></span><span class="line"><span class="cl">              reverse order <span class="k">while</span> sorting
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       -R, --recursive
+</span></span><span class="line"><span class="cl">              list subdirectories recursively
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       -s, --size
+</span></span><span class="line"><span class="cl">              print the allocated size of each file, in blocks
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       -S     sort by file size, largest first
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       --sort<span class="o">=</span>WORD
+</span></span><span class="line"><span class="cl">              sort by WORD instead of name: none <span class="o">(</span>-U<span class="o">)</span>, size <span class="o">(</span>-S<span class="o">)</span>,  <span class="nb">time</span>  <span class="o">(</span>-t<span class="o">)</span>,  version
+</span></span><span class="line"><span class="cl">              <span class="o">(</span>-v<span class="o">)</span>, extension <span class="o">(</span>-X<span class="o">)</span>, width
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       --time<span class="o">=</span>WORD
+</span></span><span class="line"><span class="cl">              <span class="k">select</span>  which timestamp used to display or sort<span class="p">;</span> access <span class="nb">time</span> <span class="o">(</span>-u<span class="o">)</span>: atime,
+</span></span><span class="line"><span class="cl">              access, use<span class="p">;</span> metadata change <span class="nb">time</span> <span class="o">(</span>-c<span class="o">)</span>: ctime, status<span class="p">;</span> modified <span class="nb">time</span> <span class="o">(</span>de‐
+</span></span><span class="line"><span class="cl">              fault<span class="o">)</span>: mtime, modification<span class="p">;</span> birth time: birth, creation<span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">              with -l, WORD determines which <span class="nb">time</span> to show<span class="p">;</span> with  --sort<span class="o">=</span>time,  sort  by
+</span></span><span class="line"><span class="cl">              WORD <span class="o">(</span>newest first<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       --time-style<span class="o">=</span>TIME_STYLE
+</span></span><span class="line"><span class="cl">              time/date format with -l<span class="p">;</span> see TIME_STYLE below
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       -t     sort by time, newest first<span class="p">;</span> see --time
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       -T, --tabsize<span class="o">=</span>COLS
+</span></span><span class="line"><span class="cl">              assume tab stops at each COLS instead of <span class="m">8</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       -u     with  -lt:  sort by, and show, access time<span class="p">;</span> with -l: show access <span class="nb">time</span> and
+</span></span><span class="line"><span class="cl">              sort by name<span class="p">;</span> otherwise: sort by access time, newest first
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       -U     <span class="k">do</span> not sort<span class="p">;</span> list entries in directory order
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       -v     natural sort of <span class="o">(</span>version<span class="o">)</span> numbers within text
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       -w, --width<span class="o">=</span>COLS
+</span></span><span class="line"><span class="cl">              <span class="nb">set</span> output width to COLS.  <span class="m">0</span> means no limit
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       -x     list entries by lines instead of by columns
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       -X     sort alphabetically by entry extension
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       -Z, --context
+</span></span><span class="line"><span class="cl">              print any security context of each file
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       --zero end each output line with NUL, not newline
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       -1     list one file per line
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       --help display this <span class="nb">help</span> and <span class="nb">exit</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       --version
+</span></span><span class="line"><span class="cl">              output version information and <span class="nb">exit</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       The SIZE argument is an integer and optional unit  <span class="o">(</span>example:  10K  is  10*1024<span class="o">)</span>.
+</span></span><span class="line"><span class="cl">       Units  are  K,M,G,T,P,E,Z,Y,R,Q  <span class="o">(</span>powers of 1024<span class="o">)</span> or KB,MB,... <span class="o">(</span>powers of 1000<span class="o">)</span>.
+</span></span><span class="line"><span class="cl">       Binary prefixes can be used, too: <span class="nv">KiB</span><span class="o">=</span>K, <span class="nv">MiB</span><span class="o">=</span>M, and so on.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       The TIME_STYLE argument can be full-iso,  long-iso,  iso,  locale,  or  +FORMAT.
+</span></span><span class="line"><span class="cl">       FORMAT  is  interpreted  like in date<span class="o">(</span>1<span class="o">)</span>.  If FORMAT is FORMAT1&lt;newline&gt;FORMAT2,
+</span></span><span class="line"><span class="cl">       <span class="k">then</span>  FORMAT1  applies  to  non-recent  files  and  FORMAT2  to  recent   files.
+</span></span><span class="line"><span class="cl">       TIME_STYLE  prefixed  with  <span class="s1">&#39;posix-&#39;</span> takes effect only outside the POSIX locale.
+</span></span><span class="line"><span class="cl">       Also the TIME_STYLE environment variable sets the default style to use.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       The WHEN argument defaults to <span class="s1">&#39;always&#39;</span> and can also be <span class="s1">&#39;auto&#39;</span> or <span class="s1">&#39;never&#39;</span>.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       Using color to distinguish file types is  disabled  both  by  default  and  with
+</span></span><span class="line"><span class="cl">       --color<span class="o">=</span>never.   With --color<span class="o">=</span>auto, ls emits color codes only when standard out‐
+</span></span><span class="line"><span class="cl">       put is connected to a terminal.  The LS_COLORS environment variable  can  change
+</span></span><span class="line"><span class="cl">       the settings.  Use the dircolors<span class="o">(</span>1<span class="o">)</span> <span class="nb">command</span> to <span class="nb">set</span> it.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   Exit status:
+</span></span><span class="line"><span class="cl">       <span class="m">0</span>      <span class="k">if</span> OK,
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       <span class="m">1</span>      <span class="k">if</span> minor problems <span class="o">(</span>e.g., cannot access subdirectory<span class="o">)</span>,
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       <span class="m">2</span>      <span class="k">if</span> serious trouble <span class="o">(</span>e.g., cannot access command-line argument<span class="o">)</span>.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">AUTHOR
+</span></span><span class="line"><span class="cl">       Written by Richard M. Stallman and David MacKenzie.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">REPORTING BUGS
+</span></span><span class="line"><span class="cl">       GNU coreutils online help: &lt;https://www.gnu.org/software/coreutils/&gt;
+</span></span><span class="line"><span class="cl">       Report any translation bugs to &lt;https://translationproject.org/team/&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">COPYRIGHT
+</span></span><span class="line"><span class="cl">       Copyright © <span class="m">2023</span> Free Software Foundation, Inc.  License GPLv3+: GNU GPL version
+</span></span><span class="line"><span class="cl">       <span class="m">3</span> or later &lt;https://gnu.org/licenses/gpl.html&gt;.
+</span></span><span class="line"><span class="cl">       This  is free software: you are free to change and redistribute it.  There is NO
+</span></span><span class="line"><span class="cl">       WARRANTY, to the extent permitted by law.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">SEE ALSO
+</span></span><span class="line"><span class="cl">       dircolors<span class="o">(</span>1<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       Full documentation &lt;https://www.gnu.org/software/coreutils/ls&gt;
+</span></span><span class="line"><span class="cl">       or available locally via: info <span class="s1">&#39;(coreutils) ls invocation&#39;</span></span></span></code></pre></div>
+  </figure>
+</div>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="page-nav d-flex flex-column flex-sm-row">
+	
+	<div class="card w-100">
+			<div class="card-body d-flex">
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M5 12l6 6"></path>
+						<path d="M5 12l6 -6"></path>
+				 	</svg>
+				</div>
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Prev</div>
+					<a href="/personal-site/docs/bash-linux/command-docs/bash-commands/" class="stretched-link text-reset text-decoration-none">Bash Commands</a>
+				</div>
+			</div>
+		</div>
+	<div class="m-2"></div>
+	<div class="card text-end w-100">
+			<div class="card-body d-flex justify-content-end">
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Next</div>
+					<a href="/personal-site/docs/bash-linux/command-docs/man-mkdir/" class="stretched-link text-reset text-decoration-none">man - mkdir</a>
+				</div>
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M13 18l6 -6"></path>
+						<path d="M13 6l6 6"></path>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</div>
+
+			
+		</main>
+		
+	</div>
+
+      
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-lg">
+    <div class="row">
+      <div class="col-lg-8 text-center text-lg-start">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a class="text-muted" href="/personal-site/privacy/">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 text-center text-lg-end">
+        <ul class="list-inline">
+          <li class="list-inline-item">Made by <a class="text-muted" href="https://sujith-eag.github.io/personal-site/">Sujith</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+<script async
+  src="/personal-site/js/app.ec98ea736af7f8f531281a21224330da682d1dc9973423443b3d5ce8c45c6ea1.js"
+  integrity="sha256-7Jjqc2r3&#43;PUxKBohIkMw2mgtHcmXNCNEOz1c6MRcbqE=">
+</script>
+
+
+
+
+
+<script async
+  src="/personal-site/js/flexsearch.8350d2f520e131f8552ed57c1eadd05c50eccf0427267781442dd8ddf8fdcdf7.js"
+  integrity="sha256-g1DS9SDhMfhVLtV8Hq3QXFDszwQnJneBRC3Y3fj9zfc=">
+</script>
+<script async
+  src="/personal-site/js/search-modal.877cece5b6bc789456f89fa1955ccfcd8a5acdb2179e7882e292a6caa49efe68.js"
+  integrity="sha256-h3zs5ba8eJRW&#43;J&#43;hlVzPzYpazbIXnniC4pKmyqSe/mg=">
+</script>
+
+    
+  </body>
+</html>

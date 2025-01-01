@@ -1,5 +1,5 @@
 ---
-title: "Bash - loop"
+title: "Bash - 20 - loop"
 description: ""
 summary: ""
 date: 2024-12-29T16:52:30+05:30
