@@ -30,20 +30,20 @@ date [-u|--utc|--universal] [MMDDhhmm[[CC]YY][]]
 
 ### Commonly Used `date` Format Specifiers
 
-`$ date +%a` : Abbreviated weekday name (e.g., `Sun`, `Mon`)
-`$ date +%A` : Full weekday name (e.g., `Sunday`, `Monday`)
-`$ date +%b` : Abbreviated month name (e.g., `Jan`, `Feb`)
-`$ date +%B` : Full month name (e.g., `January`, `February`)
-`$ date +%m` : Month as a number (01 to 12)
-`$ date +%d`: Day of the month (01 to 31)
-`$ date +%H`: Hour in 24-hour format (00 to 23)
-`$ date +%I`: Hour in 12-hour format (01 to 12)
-`$ date +%r`: 12-hour clock time (hh:mm:ss AM/PM)
-`$ date +%R`: 24-hour format time without seconds (hh:mm)
-`$ date +%T`: Time in 24-hour format with seconds (hh:mm:ss).
-`$ date +%Y` : Year with century (e.g., `2024`)
-`$ date +%j` : Day of the year (001 to 366)
-`$ date +%s` : Seconds since the Unix epoch (January 1, 1970)
+* `$ date +%a` : Abbreviated weekday name (e.g., `Sun`, `Mon`)
+* `$ date +%A` : Full weekday name (e.g., `Sunday`, `Monday`)
+* `$ date +%b` : Abbreviated month name (e.g., `Jan`, `Feb`)
+* `$ date +%B` : Full month name (e.g., `January`, `February`)
+* `$ date +%m` : Month as a number (01 to 12)
+* `$ date +%d`: Day of the month (01 to 31)
+* `$ date +%H`: Hour in 24-hour format (00 to 23)
+* `$ date +%I`: Hour in 12-hour format (01 to 12)
+* `$ date +%r`: 12-hour clock time (hh:mm:ss AM/PM)
+* `$ date +%R`: 24-hour format time without seconds (hh:mm)
+* `$ date +%T`: Time in 24-hour format with seconds (hh:mm:ss).
+* `$ date +%Y` : Year with century (e.g., `2024`)
+* `$ date +%j` : Day of the year (001 to 366)
+* `$ date +%s` : Seconds since the Unix epoch (January 1, 1970)
 
 
 #### Customizing Date Output
