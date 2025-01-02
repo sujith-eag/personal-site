@@ -127,7 +127,7 @@ Some common shell commands and their functions include:
 - **`pwd`**: Display the current directory path
 
 - **`vi`** or **`emacs`**: Text editors for editing files
-- 
+
 - **`who`**: Show who is logged in
 - **`whoami`**: Display the current username
 - **`hostname`**: Display the computer’s hostname

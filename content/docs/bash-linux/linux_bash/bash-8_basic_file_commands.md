@@ -5,7 +5,7 @@ summary: ""
 date: 2024-12-29T16:48:46+05:30
 lastmod: 2024-12-29T16:48:46+05:30
 draft: false
-weight: 977
+weight: 976
 toc: true
 seo:
   title: "" # custom title (optional)
@@ -22,7 +22,7 @@ Linux treats various entities such as regular files, directories, symbolic links
 
 ---
 
-### **`file` Command**
+### **file Command**
 
 The `file` command is used to determine the type of a file. It analyzes the contents of a file and returns a description of its type.
 

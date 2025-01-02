@@ -16,7 +16,6 @@ seo:
 
 
 
-
 The **[*ls*](/personal-site/docs/bash-linux/command-docs/ls-list)** command is used to list files and directories in the current directory.
 
 #### **Basic Usage**
@@ -103,25 +102,25 @@ drwxrwxr-x 8 sujith sujith 4096 Oct 26 09:04  websites
 
 Options combined with `ls` to modify its output:
 
-`-a` Show hidden files (those starting with `.`) and the `.` (current directory) and `..` (parent directory).
+`-a` Show hidden files (those starting with `.`) and the `.` (current directory) and `..` (parent directory).     
 `-A` Similar to `-a` but excludes `.` and `..`
 
-`-g` Similar to `-l` but the owner is not shown
+`-g` Similar to `-l` but the owner is not shown.     
 `-G` Group owner is hidden (along with `-l`)
 
-`-h` Displays file sizes in human readable format (KB, MB) (along with `-l`)
+`-h` Displays file sizes in human readable format (KB, MB) (along with `-l`).    
 `-i` Shows inode numbers for the files
 
-`-r` Reverse alphabetical order of file listing
+`-r` Reverse alphabetical order of file listing.    
 `-R` Recursive listing (listing all contents of all sub directories)
 
-`-s` Size shown in blocks instead of bytes (along with `-l`)
+`-s` Size shown in blocks instead of bytes (along with `-l`).    
 `-S` Sort files by size (used with `-l`)
 
-`-t` Sorts files by modification time (along with `-l`)
+`-t` Sorts files by modification time (along with `-l`).    
 `-X` Extension based sorting (along with `-l`)
 
-`-C` Displays the output in columns (default behavior).
+`-C` Displays the output in columns (default behavior).    
 `-1` Displays 1 file per line (not to use columns)
 
 

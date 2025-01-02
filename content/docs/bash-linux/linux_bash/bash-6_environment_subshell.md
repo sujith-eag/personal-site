@@ -27,7 +27,7 @@ A **subshell** allows you to create a new environment for performing tasks witho
 A item defined in a shell can be made to persist in the subshell by using `export`.
 exporting variables from the parent shell to the subshell, ensuring that they are available within the subshell. However, changes made to variables within the subshell will not affect the parent shell.
 
-```bash
+```bash {frame="none"}
 export VAR=value   # Exports the variable to the subshell
 ```
 
@@ -47,8 +47,9 @@ When we login to Linux and open a window, we are running an interactive shell. T
 
 #### For System Administrators:
 
-**`/etc/profile`**: This file is executed for all users when they log in. It defines a function called `pathmunge`. 
-It sets up environment variables such as `USER`, `LOGNAME`, `MAIL`, `HOSTNAME`, `PATH`, and other system-wide variables. It is primarily used for system-wide settings.
+**`/etc/profile`**: This file is executed for all users when they log in.     
+It defines a function called `pathmunge`.     
+It sets up environment variables such as `USER`, `LOGNAME`, `MAIL`, `HOSTNAME`, `PATH`, and other system-wide variables. It is primarily used for system-wide settings.     
 All defined variables are exported. A `umask` instruction is executed.
 
 **`/etc/bashrc`**: This file is executed for interactive non-login shells. It sets additional environment variables, defines system-wide aliases, and modifies the `PATH` variable. It is a good place to define system-wide functions and aliases.
@@ -89,11 +90,6 @@ Changes made to these configuration files do not take effect until a new session
 source ~/.bashrc
 ```
 
----
-
-### **Text Editors: `vi` and `vim`**
-
-**`vi`** (or its improved version **`vim`**) is the default text editor found in most Linux distributions. It is used for editing text files from the command line. `vim` (Vi IMproved) offers additional features like syntax highlighting, better search functionalities, and more. While `vi` is still widely used, `vim` is recommended due to its enhanced capabilities.
 
 ---
 

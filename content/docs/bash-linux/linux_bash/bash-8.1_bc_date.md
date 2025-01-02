@@ -15,7 +15,7 @@ seo:
 ---
 
 
-### `date` Command
+### date Command
 
 The `date` command in Unix-like operating systems is used to display or set the system date and time. 
 ```bash
@@ -83,11 +83,9 @@ Tue Dec 31 23:59:59 UTC 2024
 
 
 ___
-### `bc`
 
-Basic Calculator 
 
-### `bc` (Basic Calculator)
+### bc (Basic Calculator)
 
 `bc` is an arbitrary precision calculator language. It's used for performing arithmetic operations, and it supports a variety of functions and operations, including basic math, variable assignments, and more.
 

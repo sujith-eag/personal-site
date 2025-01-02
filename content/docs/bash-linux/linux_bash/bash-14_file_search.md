@@ -5,7 +5,7 @@ summary: ""
 date: 2024-12-29T16:50:54+05:30
 lastmod: 2024-12-29T16:50:54+05:30
 draft: false
-weight: 983
+weight: 985
 toc: true
 seo:
   title: "" # custom title (optional)
@@ -13,6 +13,7 @@ seo:
   canonical: "" # custom canonical URL (optional)
   noindex: false # false (default) or true
 ---
+
 
 
 
@@ -115,29 +116,29 @@ There are three categories of options
 
 
 
-***The search criteria options***
-Most but not all search expression require a parameter.
-`n` indicates an integer (time, size or `UID/GID`)
-`file` indicates filename.
-`test` indicates a set of permissions
-`type` represents file type or file system type.
-`name` is user or group name
-`pattern` is regular expression.
+***The search criteria options***       
+Most but not all search expression require a parameter.      
+`n` indicates an integer (time, size or `UID/GID`)      
+`file` indicates filename.      
+`test` indicates a set of permissions.     
+`type` represents file type or file system type.      
+`name` is user or group name.     
+`pattern` is regular expression.      
 
 
-`[+-]n` for time and size, if the number is by itself then it tries to find an exact match.
-If the integer is preceded by `+` then `find` looks for matches where the property is greater than the integer.
+`[+-]n` for time and size, if the number is by itself then it tries to find an exact match.      
+If the integer is preceded by `+` then `find` looks for matches where the property is greater than the integer.     
 `-5` looks for property values less than 5.
 
 
 ___
 
 ### **Search Criteria Options**
-`find` offers many search criteria to refine searches, including time-based, size-based, and type-based options.
+`find` offers many search criteria to refine searches, including time-based, size-based, and type-based options.     
 
 #### **Time-Based Options**
 
-These options let you search for files based on when they were last accessed or modified:
+These options let you search for files based on when they were last accessed or modified: 
 
 - **`-amin [+-]n`**: Files accessed `n` minutes ago (use `+` for older, `-` for more recent).
 ```bash

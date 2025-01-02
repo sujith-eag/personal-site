@@ -15,12 +15,11 @@ seo:
 ---
 
 
-
 ### **Command-Line Editing**
 
 Bash supports several special keystrokes for command-line editing. These keystrokes are combinations of the **Control** key, **Escape** key, or other keys and are based on the `emacs` text editor.
 
-**Control Key (`Ctrl`)** : Hold the Control key and press the other key.
+**Control Key (`Ctrl`)** : Hold the Control key and press the other key.     
 **Escape Key (`Esc`)** : Press the Escape key, release it, and then press the other key.
 
 **Navigation and Editing Keystrokes**
@@ -55,30 +54,30 @@ Redirection is the process of using operators to control where input or output f
 ##### **Writing to a File / Capturing Output**
 
 **`>`** : Redirects output to a file, overwriting its contents.
-```bash
+```bash {frame="none"}
 $ cat *.txt > newfile.txt
 ```
 This command combines all `.txt` files in the directory and writes them to `newfile.txt`. If the file already exists, it will be overwritten.
 
 **`>>`** : Appends output to a file if it already exists.
-```bash
+```bash {frame="none"}
 $ cat *.txt >> newfile.txt
 ```
 This command appends the content of all `.txt` files to `newfile.txt`.
 
 **`<`** : Redirect input to a command.
-```bash
+```bash {frame="none"}
 $ cat < *.txt
 ```
 This will feed the content of all `.txt` files as input to the `cat` command.
 
 **Here Documents (`<<`)** : Accepts input until a specified delimiter is reached.
-```bash
+```bash {frame="none"}
 $ cat << quit
 ```
 This will take input until the word `quit` is typed.
 
-```bash
+```bash {frame="none"}
 $ cat << done > fruit.txt
 ```
 This will take input until `done` is typed and save it into `fruit.txt`.
@@ -86,28 +85,28 @@ This will take input until `done` is typed and save it into `fruit.txt`.
 
 ___
 
-**List and redirect output to a file:**
+**List and redirect output to a file:**     
 This command lists the contents of `/home/sujith` and writes it to `user_entries.txt`.
-```bash
+```bash {frame="none"}
 $ ls -l /home/sujith > user_entries.txt
 ```
 
 
-**Count lines of `.pdb` files and redirect to a new file:**
+**Count lines of `.pdb` files and redirect to a new file:**     
 This command counts the number of lines in each `.pdb` file and writes the result to `lengths.txt`.
-```bash
+```bash {frame="none"}
 $ wc -l *.pdb > lengths.txt
 ```
 
 
-**Read and write specific lines from a file:**
+**Read and write specific lines from a file:**     
 This creates `animals-subset.csv` containing the first 3 lines of `animal.csv`.
-```bash
+```bash {frame="none"}
 $ head -n 3 animal.csv > animals-subset.csv
 ```
 
 This appends the last 2 lines of `animals.csv` to `animals-subset.csv`.
-```bash
+```bash {frame="none"}
 $ tail -n 2 animals.csv >> animals-subset.csv
 ```
 
@@ -121,21 +120,21 @@ Pipes (`|`) allow the output of one command to be used as input for another comm
 #### **Basic Pipe Usage**
 
 Sort a file and display the smallest value.
-```bash
+```bash {frame="none"}
 $ sort -n lengths.txt | head -n 1
 ```
 This command sorts `lengths.txt` numerically and then displays the first line (smallest value).
 
 
 Chain `wc` with `sort` and `head`.
-```bash
+```bash {frame="none"}
 $ wc -l *.pdb | sort -n | head -n 1
 ```
 This command counts the lines in all `.pdb` files, sorts them, and then displays the shortest file.
 
 
 Pipe output to a new file.    
-```bash
+```bash {frame="none"}
 $ cat *.txt | sort > newfile.txt
 ```
 This command concatenates all `.txt` files, sorts their contents, and writes the sorted output to `newfile.txt`.
@@ -148,12 +147,12 @@ This command concatenates all `.txt` files, sorts their contents, and writes the
 In Bash, **tilde expansion** allows the `~` symbol to represent the home directory, eliminating the need to type the full path `/home/username/`.
 
 Change to the home directory:
-```bash
+```bash {frame="none"}
 $ cd ~
 ```
 
 List `.txt` files in the home directory:    
-```bash
+```bash {frame="none"}
 $ ls ~/*.txt
 ```
 `*` is a wildcard that replaces everything found and there are more.
@@ -167,7 +166,7 @@ it is termed as `filename` expansion.
 Brace expansion allows for grouping file names or directories that share the same path. It’s useful for creating multiple files or directories in one go.
 
 List specific files or directories:
-```bash
+```bash {frame="none"}
 $ ls -l /home/{one,two/{.,stuff},underwood,overwood/{.,lyrics,music}}
 ```
 Here the `.` are used to include the current directories also.
@@ -192,7 +191,7 @@ ____
 
 All entered commands are stored in a history list. Can be viewed by typing `history`.
 
-```bash
+```bash {frame="none"}
 sujith@sujith-Latitude-7490:~/Desktop$ cd Desktop/; history > comm.txt;
 ```
 
@@ -217,7 +216,7 @@ Using `!100` recalls the command at position 100 in the history list.
 - **`command !$`** : Issues the command and uses the last parameter/option from the last instruction.
 - **`command !*`** : Issues the command and uses all parameters/options from the last instruction.
 
-```bash
+```bash {frame="none"}
 ls -l !^
 ls -l !$
 ls !*
