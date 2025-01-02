@@ -138,11 +138,26 @@ ___
 
 #### 1. **Regular Expressions for Numbers**
 
+**Match a number** : 
+`[0-9]+`  -  Matches a string that contains at least one number.
+
+**Match a string that consists only numbers** : 
+`^[0-9]+$`  -  Matching the entire string.
+
 **Match a 5-digit zip code** : 
 `[0-9]{5}`  -  Matches: 12345,   Does not match: 1234, 123456
 
+**Match a string that consists of a number which may include a single decimal point** : 
+`^[0-9]+\.?[0-9]*$`  -  Matches: 0.123,   Does not match: 123.4
+
+**Match a string that contains No digits** : 
+`^[^0-9]+$`  -  Matches every single character is a non digit.
+
 **Match a phone number in the format `XXX-XXX-XXXX`** : 
 `[0-9]{3}-[0-9]{3}-[0-9]{4}`  -  Matches: `123-456-7890`,  Does not match: `1234567890`, `123-45-6789`
+
+**Match a number with optional decimal point which must be followed by at least one digit** :  
+`^[0-9]+(\.[0-9]+)?$`  -  Matches: `123`, `123.45`
 
 **Match a number with optional decimal point and 2 digits after it** :  
 `^\d+(\.\d{2})?$`  -  Matches: `123`, `123.45`,  Does not match: `123.456`, `abc`
@@ -155,6 +170,9 @@ ___
 
 #### 2. **Regular Expressions for Words**
 
+**Match a string that consists of any sequence of upper lower** :  
+`^[A-Za-z]+$`  -  Matches: `Hello`, `world`, `hello`  Does not match: `world123`
+
 **Match a word that starts with a capital letter** :  
 `^[A-Z][a-z]+$`  -  Matches: `Hello`, `World`,  Does not match: `hello`, `world123`
 
@@ -166,6 +184,18 @@ ___
 
 **Match a name with first letter uppercase and remaining lowercase** : 
 `^[A-Z][a-z]+$`  -  Matches: `John`, `Alice`,  Does not match: `john`, `JOHN`
+
+**Match words containing some consonants, single vowel and some consonants** : 
+`^[b-df-hj-np-tv-z]+[aeiou][b-df-hj-np-tv-z]+$`  -  taking all as lower case
+
+**Match several (at least two) words with blank space between them** : 
+`^([A-Za-z]+ )+[A-Za-z]+$`  -  words separated by blank space.
+
+**Match several (at least two) words where a punctuation mark may follow any word** : 
+`^([A-Za-z]+[[:punct:]]? )+[A-Za-z]+[[:punct:]]?$` 
+
+**Same as above but allows for words with hyphens and apostrophes `' -`** : 
+`^([A-Za-z'-]+[[:punct:]]? )+[A-Za-z'-]+[[:punct:]]?$`  -  Matches: `play-by-play`, `y'all's` (Care needed when placing hyphen in braces)
 
 
 ---
@@ -184,4 +214,12 @@ ___
 **Match common spam email subject lines containing "urgent"**:
 `\burgent\b.*\b(action|reply)\b`  -  Matches: `URGENT action required`, `urgent reply needed`.   Does not match: `urgent request`, `action taken`
 
+`[Aa]ct n[oO]w!?`  - `Act now!`  `act nOw`
 
+`[Cc]lick h[e3]`  - `Click here`  `click h3r3`
+
+`[Ll][oO][t4][t4][e3]ry`  -  `lo44ry` `Lott3ry`
+
+`[Oo]rder [nN]ow!?`  - `Order Now` `order now!`
+
+`[Yy]ou (may already be|are) a winner!?`  -  `You are a winner!` `you may already be a winner`
