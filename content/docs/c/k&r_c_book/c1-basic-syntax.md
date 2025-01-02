@@ -17,14 +17,15 @@ seo:
 
 The C Programming Language by Kernighan and Ritchie
 
-Chapter 1-4 - Mostly syntax, Arrays, Strings (Character arrays)
-Chapter 5 - Pointers and Arrays
-Chapter 6 - Structures
-Chapter 7-8 - Detailed C features
+Chapter 1-4 - Mostly syntax, Arrays, Strings (Character arrays)     
+Chapter 5 - Pointers and Arrays     
+Chapter 6 - Structures     
+Chapter 7-8 - Detailed C features    
 
 _____
 
 ### Character Arrays
+
 We must carefully understand the 'size' of the character array and not exceed it. In C nothing is 'auto extended'.
 
 ```python
@@ -49,16 +50,16 @@ $ a.out
 
 Segmentation falult: 11
 ```
-The size of the string has been exceeded.
-This is the reason why C is not used to write programs.
+The size of the string has been exceeded.      
+This is the reason why C is not used to write programs.     
 
-"Buffer Overrun Errors"
-90% all security holes are due to C code
+"Buffer Overrun Errors"      
+90% all security holes are due to C code.
 
 
 ### String / Character Constants
 
-In C single quotes `''` are a character and double quotes `""` are a character array (neither are string) with a 0 character at the end of it.
+In C single quotes `''` are a character and double quotes `""` are a character array (neither are string) with a 0 character at the end of it.       
 A `""` with one character in it is actually 2 bytes.
 
 A Character is a byte - a short(8-bit) integer.
@@ -85,9 +86,10 @@ Hi
 Hi
 ```
 
+
 ### Character Sets
 
-The C char type is just a number (8-bits long) usually ASCII.
+The C char type is just a number (8-bits long) usually ASCII.      
 Modern characters include multi-byte sequences using Unicode and `UTF-8`
 
 ```python
@@ -133,16 +135,24 @@ HeLlo
 HeL
 ```
 
-There are no strings, they are "arrays of characters", there is no length.
-The size of the "string" stored in C array is not the length of the array.
-C Uses a special character `\0` that marks the string end by convention.
-So character arrays need to allocate extra byte to store the line end character.
+There are no strings, they are "arrays of characters", there is no length.      
+The size of the "string" stored in C array is not the length of the array.      
+C Uses a special character `\0` that marks the string end by convention.     
+So character arrays need to allocate extra byte to store the line end character.    
 
 Terminating a string is very important to think before creating a new string and scanning through a string, if something is appended to a "character array" then the end character has to be moved.
 
+**Manipulation**: String manipulation in C involves careful management of the null terminator, where the null terminator is moved or altered.
+```c
+char x[6];
+x[0] = 'H'; x[1] = 'e'; x[2] = 'l'; x[3] = 'l'; x[4] = 'o'; x[5] = '\0';
+printf("%s\n", x);  // prints "Hello"
+```
+
+
 #### String length
 
-In C string "length" must be computed in a loop that scans for a zero character.
+In C string "length" must be computed in a loop that scans for a zero character.     
 There the `strlen()` function in `string.h` computes string length.
 
 ```python
@@ -165,17 +175,27 @@ int py_len(self)
 	char self();
 {
 	int i;
-	for(i=0; self[i]; i++);    /* when string gets over it turns false */
+	for(i=0; self[i]; i++);    
+	/* when string gets over it turns false */
 	return i;
 }
 // a.out
 // Hello 5
 ```
 
+```c
+int py_len(char self[]) {
+    int i;
+    for (i = 0; self[i]; i++);
+    return i;
+}
+```
+
 
 #### Reverse a String in place in C
-Exercise 1-19 in K&R
 
+Exercise 1-19 in K&R     
+Reversing a string in place involves swapping characters from the start and end of the string until the middle is reached.
 ```c
 #include <stdio.h>
 int main() {
@@ -191,17 +211,17 @@ ________
 ## Chapter 1
 
 ### 1.1 Getting started
-`int main() {}`
-`printf()`
-`\n` is the only way of adding a new line.
+`int main() {}`     
+`printf()`      
+`\n` is the only way of adding a new line.      
 `\t` for tab, `\b` for backspace, `\"` for double quotes, `\\` for back slash itself.
 
 ### 1.2 Variables and Arithmetic
 
-Comments
-Declaring variables
-(when there is an error a Diagnostic message containing type and list of variables will be shown.)
-Int and float have size difference. 16bit signed number, 32 bit quantity with 7 significant bits. 
+Comments     
+Declaring variables     
+(when there is an error a Diagnostic message containing type and list of variables will be shown.)     
+Int and float have size difference. 16bit signed number, 32 bit quantity with 7 significant bits.     
 
 Other basic data types,
 ```
@@ -212,7 +232,7 @@ short - short integer,
 long - long integer,
 double - double-precision floating point
 ```
-assignment operator to assign values `=`
+assignment operator to assign values `=`     
 terminating statements using `;`
 ```c
 #include <stdio.h>
@@ -237,27 +257,34 @@ int main() {
 }
 ```
 
-while loop `while (fahr<= upper) {...}`
+while loop `while (fahr<= upper) {...}`     
 Indentation and white space is for readability, any position is permissible.
 
 Using `(5.0/9.0)` instead of `5/9` to prevent truncating of numbers and additional numbers are discarded. i.e `5/9 will be 0` which means everything will be zero.
 
-`printf()` is a general purpose format conversion function. It is not part of C, but the standard library.
-`printf("%4.0f %6.1f\n", fahr, celsius);`
-`%4.0f` states that a floating point number is to be printed in a space at least four character wide, with no digits after the decimal point.
+`printf()` is a general purpose format conversion function. It is not part of C, but the standard library.      
+`printf("%4.0f %6.1f\n", fahr, celsius);`     
+`%4.0f` states that a floating point number is to be printed in a space at least four character wide, with no digits after the decimal point.     
 `%6.1f` describes a floating point number in 6 character space, with one digit after the decimal.
 
-Parts of a specification may be omitted, `%6f` at least six characters wide.
-`%.2f` requests two place after the decimal place, but width is not constrained.
-`%f` says print the number as a floating point number.
+Parts of a specification may be omitted, `%6f` at least six characters wide.     
+`%.2f` requests two place after the decimal place, but width is not constrained.     
+`%f` says print the number as a floating point number.     
 
-`printf` also recognizes `%d` for decimal integer, `%o` for octal, `%x` for hexadecimal, `%c` for character, `%s` for character string and `%%` for `%` itself.
+`printf` also recognizes `%d` for decimal integer, `%o` for octal, `%x` for hexadecimal, `%c` for character, `%s` for character string and `%%` for `%` itself. 
 
-Each `%` constraint in first argument should pair with its corresponding second, third arguments, they must line up properly by number and type.
+Each `%` constraint in first argument should pair with its corresponding second, third arguments, they must line up properly by number and type.      
 
 If you have to input numbers, then consider function `scanf` which reads input instead of writing output like `printf`
 
 ### 1.3 The For Statement
+
+
+```c
+for (initialization; condition; increment) {
+    // loop body
+}
+```
 
 ```c
 #include <stdio.h>
@@ -270,16 +297,16 @@ main() {
 }
 ```
 
-first part is done once, second part is the condition that is checked each iteration, and last is re-initialization step.
+First part is done once, second part is the condition that is checked each iteration, and last is re-initialization step.
 
-while and for loops are in-determinant loops structure because they must be read closely to make sure they are properly constructed and not unintentionally a "infinite loop".
+While and for loops are in-determinant loops structure because they must be read closely to make sure they are properly constructed and not unintentionally a "infinite loop".
 
 `for` loop in python and `foreach` in PHP are determinant loops. They iterate over all of the elements in a collection which is not finite.
 
 ### 1.4 Symbolic Constants
 
-To avoid magic numbers like 300, 20 which are buried inside the code which might not convey any information while reading as to what they are.
-With `#define` construction, at the beginning of the program a _symbolic name_ or _symbolic constant_ to be a particular string of characters.
+To avoid magic numbers like 300, 20 which are buried inside the code which might not convey any information while reading as to what they are.      
+With `#define` construction, at the beginning of the program a _symbolic name_ or _symbolic constant_ to be a particular string of characters.      
 The compiler will replace the unquoted occurrences of the name by corresponding string.
 
 ```c
@@ -297,8 +324,8 @@ main()
 		printf("%4d %6.1f\n", fahr, (5.0/9.0)*(fahr-32));
 }
 ```
-The LOWER, UPPER, STEP are constants so they do not appear in declarations.
-To separate them from lower case variable names they are made Fully upper.
+The LOWER, UPPER, STEP are constants so they do not appear in declarations.     
+To separate them from lower case variable names they are made Fully upper.     
 There are no `;` after the definition because the whole line after the define will be copied, so to avoid too many semicolons in the `for`.
 
 
@@ -334,7 +361,7 @@ main() {
 		putchar(c);
 }
 ```
-The program gets a character, assigns it to c and tests whether the character was the end of file signal. If it was not, the body of the while is executed, printing the character.
+The program gets a character, assigns it to c and tests whether the character was the end of file signal. If it was not, the body of the while is executed, printing the character.      
 When end input is reached, while terminates.
 
 ***Character Counting***
@@ -351,10 +378,10 @@ main()
 	printf("%ld\n", nc);
 }
 ```
-`++nc` means increment by one. also `--nc`
-similar to `nc = nc + 1`
-Prefix operators `++nc` and `postfix` operators `nc++` both increment but have different values in expressions.
-`%ld` signals that corresponding argument is a long integer.
+`++nc` means increment by one. also `--nc`     
+similar to `nc = nc + 1`     
+Prefix operators `++nc` and `postfix` operators `nc++` both increment but have different values in expressions.     
+`%ld` signals that corresponding argument is a long integer.     
 
 To cope with even bigger numbers `double`(double length float) can be used.
 ```c
@@ -389,11 +416,11 @@ main() {
 	printf("%d\n", nl);
 }
 ```
-If statement inside the while controls the increment if line is found.
-Any character written between a `''` to produce a value equal to numerical value of the character.
+If statement inside the while controls the increment if line is found.      
+Any character written between a `''` to produce a value equal to numerical value of the character.     
 `'A' is 65` 
 
-`'\n'` is a single character and is equivalent to a single integer,
+`'\n'` is a single character and is equivalent to a single integer,      
 on the other hand `"\n"` is a character string which happens only one character.
 
 
@@ -436,6 +463,7 @@ else
 
 One and only one of the two statements associated with `if-else` is done, not both.
 
+
 ### 1.6 Arrays
 
 The number of elements in an array declaration must be constant at compile time, and the size of the array cannot be adjusted using an array declaration while program is running.
@@ -470,9 +498,9 @@ main()   /*count digits, white space and other*/
 }
 ```
 
-`int ndigit[10];` is an array of 10 integers.
-`if (c >= '0' && c<= '9')` checks if the character in c is a digit.
-If it is, then `c-'0'` is the digit.
+`int ndigit[10];` is an array of 10 integers.     
+`if (c >= '0' && c<= '9')` checks if the character in c is a digit.     
+If it is, then `c-'0'` is the digit.     
 
 By definition, arithmetic involving char and int converts everything to int before proceeding.
 so `c-'0'` is an integer expression.
@@ -515,8 +543,8 @@ int x, n;
 
 ### 1.8 Arguments - Call by Value
 
-In C, function arguments are passed by value. This means the function is given the value of it's arguments in temporary variables (on a stack) rather than on their address.
-Passing 'by value' has become the norm after C as it doesn't allow the called code to mess with the arguments and create side effects.
+In C, function arguments are passed by value. This means the function is given the value of it's arguments in temporary variables (on a stack) rather than on their address.      
+Passing 'by value' has become the norm after C as it doesn't allow the called code to mess with the arguments and create side effects.      
 
 The call stack that made it possible to pass by value also made it possible for the function to call itself recursively.
 
@@ -589,10 +617,10 @@ char s1[], s2[];
 
 ### 1.10 Scope; External Variable
 
-The variables in main(line, save) are private or local to main as they are declared within main. No other functions have direct access to them.
-The variable in a routine comes to life only if the function is called and disappears when the function exists.
+The variables in main(line, save) are private or local to main as they are declared within main. No other functions have direct access to them.      
+The variable in a routine comes to life only if the function is called and disappears when the function exists.      
 
-Global variables which are declared outside can be accessed by any function. They retain their value as they do not disappear.
+Global variables which are declared outside can be accessed by any function. They retain their value as they do not disappear.     
 
 The variable must also be declared in each function that wants to access it. this maybe done wither by explicit `extern` declaration or implicitly by context. 
 

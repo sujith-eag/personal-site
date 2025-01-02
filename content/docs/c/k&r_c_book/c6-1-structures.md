@@ -15,14 +15,14 @@ seo:
 ---
 
 
-Mid Chapter Surprise
-Structures 6.1 - 6.4 - New type
+Mid Chapter Surprise     
+Structures 6.1 - 6.4 - New type      
 Data Structures 6.5, 6.6 - Applications of structures
 
 
-___6.1 Structures___
-A structure is a user defined `type` that contain one or more types that can be treated as a unit.
-The elements or variables mentioned in a structure are called `members`
+___6.1 Structures___      
+A structure is a user defined `type` that contain one or more types that can be treated as a unit.     
+The elements or variables mentioned in a structure are called `members`     
 The dot operator allows us to access the members of the structure.
 ```c
 # include <stdio.h>
@@ -79,7 +79,7 @@ func 9.000000  8.000000
 back 3.000000  4.000000
 */ 
 ```
-Defining a new type called point, then making objects of that type and initializing its members.
+Defining a new type called point, then making objects of that type and initializing its members.      
 The passed `struct` to function is also accepted as `struct`
 
 
@@ -142,12 +142,12 @@ func 9.000000  8.000000
 back 9.000000  8.000000
 */ 
 ```
-`func(&pm);` passes the address of `pm` to the function,
-The type in `func` is defined as `struct point *pp` means we are getting as parameter an address, not the value, The value will be struct.
+`func(&pm);` passes the address of `pm` to the function,      
+The type in `func` is defined as `struct point *pp` means we are getting as parameter an address, not the value, The value will be struct.     
 Now `pp` points to `pm` and members are changed.
 
 
-___6.2 Storage Allocation___
+___6.2 Storage Allocation___     
 `sizeof()` operator to find the size of something in characters.
 ```c
 #include <stdio.h>
@@ -196,13 +196,13 @@ int main() {
 
 //  0x600002a   3.000000   4.000000
 ```
-`stdlib.h` has to be included to use `malloc`
-`*pp` represents the 8 character address, not the struct two doubles of 16 bits.
-`malloc(sizeof(struct point)` will find free memory of character size 16.
-`(struct point *)` casting the returned address from `malloc`, pointer to a point ????
+`stdlib.h` has to be included to use `malloc`     
+`*pp` represents the 8 character address, not the struct two doubles of 16 bits.     
+`malloc(sizeof(struct point)` will find free memory of character size 16.      
+`(struct point *)` casting the returned address from `malloc`, pointer to a point ????    
 
 
-___6.5.1 A list of Strings___
+___6.5.1 A list of Strings___     
 Combining Dynamic memory and Structures to create lists
 
 Printing out lines in a file using lists in python.
@@ -218,9 +218,9 @@ for line in lines:
 ```
 
 
-___6.5.1 Self Referential Structures___
-In C we need to create build a `list()` structure before we can use it.
-The entries in the list will be stored in dynamically allocated memory.
+___6.5.1 Self Referential Structures___     
+In C we need to create build a `list()` structure before we can use it.     
+The entries in the list will be stored in dynamically allocated memory.     
 Each list entry contains some data and links to other members of the list using pointers.
 ```c
 struct lnode {
@@ -239,7 +239,7 @@ struct lnode {
 struct lnode *head;
 struct londe *tall;
 ```
-Head points to the first item in the list, there is text and next in it, next is the address to the next thing.
+Head points to the first item in the list, there is text and next in it, next is the address to the next thing.     
 Tail has text and the next will be Null, which is indicator of end of list.
 
 ```c
@@ -258,39 +258,39 @@ while(fgets(line, MAXLINE, stdin) != NULL) {
 }
 ```
 
-`while(fgets(line, MAXLINE, stdin) != NULL) {`
+`while(fgets(line, MAXLINE, stdin) != NULL) {`      
 reads a value into (line) automatic character array variable (max 1000 characters).
 
-`char *save = (char *) malloc(strlen(line)+1 );`
-`strcpy(save, line);`
-Allocate memory for the new line and copy the contents from line to save.
+`char *save = (char *) malloc(strlen(line)+1 );`     
+`strcpy(save, line);`      
+Allocate memory for the new line and copy the contents from line to save.       
 Allocating memory for a new string using `malloc`, which is given the length of string plus one extra line end character. The address is cast to a `char *`, it is assigned to `save`.
 
-Allocating memory for a new `sruct lnode`.
-`struct lnode *new = (struct lnode *)`
-	`malloc (sizeof(struct lnode));`
+Allocating memory for a new `sruct lnode`.       
+`struct lnode *new = (struct lnode *)`    
+	`malloc (sizeof(struct lnode));`     
 
-`if ( tail != NULL ) tail->next = new;`
+`if ( tail != NULL ) tail->next = new;`     
 Append the new node to the end of the linked list.
 
-`new->text = save;`
+`new->text = save;`     
 Point to text pointer in the `lnode` to the recently allocated copy of line. 
 
-`new->next = NULL;`
+`new->next = NULL;`     
 Mark the newly allocated `struct lnode` as the last item in the list using `NULL`
 
-`tail = new;`
+`tail = new;`     
 Update tail to point to the newly allocated the `last item` in the list.
 
 
 > Draw a Picture and arrows
 
-Walking the list
+Walking the list     
 Deleting the node (First, middle, last)
 
 
-___6.5.1 Doubly Linked list___
-Doubly linked list allows for reversing a string easy.
+___6.5.1 Doubly Linked list___     
+Doubly linked list allows for reversing a string easy.      
 To scan a linked list in reverse, we need a "previous" entry in addition to the "next" entry.
 Since it has links to both, it is called doubly linked list pointing to front and back.
 
@@ -330,7 +330,7 @@ int main()
 ```
 
 
-___6.8 Unions___
+___6.8 Unions___      
 A union is like a structure but all of the elements of the union overlap and allow you to view the same area of memory as multiple types.
 
 

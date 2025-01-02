@@ -15,12 +15,12 @@ seo:
 ---
 
 
-__Section 4.1 - Automatic variables, parameters and stack__
-Stack - last in first out implementation
-Call by value says within a function, parameter can be changed but doesn't affect the variable in main. Parameters are "isolated" within the function. This is accomplished using stack.
+__Section 4.1 - Automatic variables, parameters and stack__     
+Stack - last in first out implementation     
+Call by value says within a function, parameter can be changed but doesn't affect the variable in main. Parameters are "isolated" within the function. This is accomplished using stack.      
 stack frames were used to the variables of function and removed when it is exited.
 
-__Section 4.3 - Why arrays pass by reference__
+__Section 4.3 - Why arrays pass by reference__      
 A string in python passed as argument to function acts like a cal by value, not changing things outside of function.
 ```python
 def zap(y):
@@ -38,9 +38,9 @@ print('X after  zap:', x)
 # Y end    zap: CHANGED
 # X after  zap: ORIGINAL
 ```
-This happens as value `Y` was a pointer to it, when it changed in `zap` it did not affect the pointer of `X` in main.
+This happens as value `Y` was a pointer to it, when it changed in `zap` it did not affect the pointer of `X` in main.     
 
-In C, string is a character array, where array passes by reference.
+In C, string is a character array, where array passes by reference.      
 Similar code as above will result in
 ```c
 // X before zap: ORIGINAL
@@ -48,26 +48,26 @@ Similar code as above will result in
 // Y end    zap: CHANGED
 // X after  zap: CHANGED
 ```
-The array 'location' is passed by 'value' ( a copy made into the stack frame of location) but no copy is made of the data in the array.  (so it is pass by location)
+The array 'location' is passed by 'value' ( a copy made into the stack frame of location) but no copy is made of the data in the array.  (so it is pass by location)      
 Since function knows where the data is, it can change the data.
 
-__Section 4.7 - Register variables__
-Register variables are from assembly language which was necessary for performance.
-There is no way to get the "memory address" of a variable declared as register.
-Likely completely ignored in modern compilers.
-`register int x;` 
-`register char c;`
+__Section 4.7 - Register variables__     
+Register variables are from assembly language which was necessary for performance.    
+There is no way to get the "memory address" of a variable declared as register.    
+Likely completely ignored in modern compilers.    
+`register int x;`     
+`register char c;`     
 
-__Section 4.10 - Recursion__
-When a function calls itself it is called "recursion"
-Used for writing good code in special situations like parsing expressions like 
+__Section 4.10 - Recursion__     
+When a function calls itself it is called "recursion"     
+Used for writing good code in special situations like parsing expressions like      
 `(5 * 2) + ( (6 + 5) * 9)` or traversing tree like structures. Uses call stack which can be inefficient as new stack frames get added to the stack with variables and automatic variables.
 
-__Section 4.11 - Pre-processor - Compiler architecture__
+__Section 4.11 - Pre-processor - Compiler architecture__     
 There has been many evolution in language, library, hardware and operating system.
 C always operates in an environment, even though the language has changed
 
-The Pre-processor allowed for adjusting to these changes without breaking backwards compatibility.
+The Pre-processor allowed for adjusting to these changes without breaking backwards compatibility.     
 It is not a compiler, it is a C source code to C source code translator. It expands the include files, also many `#` sign.
 ```c
 #include <stdio.h>
@@ -97,28 +97,29 @@ return-type function-name (argument-declarations)
 ```
 If the return type is omitted, `int` is assumed.
 
-Communication between the function is through arguments and and values returned by the functions, and through external variables.
+Communication between the function is through arguments and and values returned by the functions, and through external variables.      
 Function can be in any order and in multiple files.
 
-`return expression`, the expression will be converted to the return-type if necessary.
+`return expression`, the expression will be converted to the return-type if necessary.      
 Control returns to the caller even when there is no expression.
 
-***Compiling and Running***
-`cc` command compiles the mentioned file or files.
-`cc main.c getline.c strindex.c` , this compiles the source files into object files `main.o getline.o strindex.o` and loads them all into an executable file called `a.out`
+***Compiling and Running***     
+`cc` command compiles the mentioned file or files.     
+`cc main.c getline.c strindex.c` , this compiles the source files into object files      
+`main.o getline.o strindex.o` and loads them all into an executable file called `a.out`
 
 
 ### 4.2 Functions Returning Non-integers
 
-If a name which has not been previously declared occurs in an expression and followed by a left parenthesis, it is declared by context to be a function name.
+If a name which has not been previously declared occurs in an expression and followed by a left parenthesis, it is declared by context to be a function name.     
 `while (get_line(line, MAXLINE) > 0)`
 
-A type has to be declared to a function as to what it returns,
-`void` type was invented to show a function which returns nothing.
+A type has to be declared to a function as to what it returns,      
+`void` type was invented to show a function which returns nothing.    
 
-To convert a string to a double precision floating point number using `atof`, it should be preceded by the type of it.
-`double atof (char s[]) {}`
-`double sum, atof (char s[])`  multiple declarations.
+To convert a string to a double precision floating point number using `atof`, it should be preceded by the type of it.     
+`double atof (char s[]) {}`     
+`double sum, atof (char s[])`  multiple declarations.     
 Second, the calling routine must know that `atof` returns a non-int value by declaring `atof` explicitly. 
 
 If the function takes arguments, declare them; If it takes no arguments, use `void`
@@ -137,25 +138,25 @@ Here the the return of `atof` which is a double is converted to `int` and return
 Internal which describes the arguments and automatic variables defined inside functions.
 External variables are globally accessible, they provide an alternative to function arguments and returned values for communicating data between functions. Any function can access this by referring to its name.
 
-C does not allow functions to be defined inside other functions, so functions are always external.
+C does not allow functions to be defined inside other functions, so functions are always external.      
 Any function may access an eternal variable by referring to it by name.
 
 If a large number of variables have to be shared between functions, then external variables are more convenient than a long argument lists.
 
-External variables are also more useful because of their greater scope and lifetime.
+External variables are also more useful because of their greater scope and lifetime.     
 Automatic variables are internal to a function which come into existence when the function is entered and disappears when it is left.
 
 
 ### 4.4 Scope Rules
 
-The scope of a name is the part of the program over which the name is defined.
-For an automatic variable declared at the beginning of a function, the scope is the function in which the name is declared.
-Variables of the same name in different functions are unrelated. Same is true for the arguments of a function.
+The scope of a name is the part of the program over which the name is defined.      
+For an automatic variable declared at the beginning of a function, the scope is the function in which the name is declared.     
+Variables of the same name in different functions are unrelated. Same is true for the arguments of a function.     
 
 If an external variable is to be referred before it is defined, or if it is defined in a different source file from the one where it is being used, then an `extern` declaration is mandatory.
 
-A declaration announces the property of a variable (primarily its type, size);
-A definition also cases storage to be set aside.
+A declaration announces the property of a variable (primarily its type, size);     
+A definition also cases storage to be set aside.    
 
 ```c
 int sp;
@@ -169,9 +170,9 @@ extern double val[];
 ```
 declare for the rest of the source file that `sp` is an `int` and `val` is a `double` array (size to be determined and allocated elsewhere) but they do not create the variables or reserve storage for them.
 
-There must be only one `definition` of an external variable among all files that make up the source program;
-other files must contain `extern` declaration to access it.
-There maybe a `extern` declaration within the file having the definition.
+There must be only one `definition` of an external variable among all files that make up the source program;     
+other files must contain `extern` declaration to access it.     
+There maybe a `extern` declaration within the file having the definition.      
 Any initialization of an external variable goes only with the definition. Array size must be specified with the definition, but are optional with `extern` declaration.
 
 ```c
@@ -223,7 +224,7 @@ main() {
 
 ### 4.6 Static Variables
 
-The `static` declaration, applied to an external variable or function, limits the scope of that object to the rest of the source file being compiled only.
+The `static` declaration, applied to an external variable or function, limits the scope of that object to the rest of the source file being compiled only.     
 So it provides a way to hide names which must be external but yet should not be visible to users of other files.
 
 ```c
@@ -244,7 +245,7 @@ This means that the internal `static` variables provide private, permanent stora
 
 ### 4.7 Register Variables
 
-`register` variables are to be placed in the machine registers which may result in faster programs. Which means `register` declaration advises the compiler that the variable will be heavily used.
+`register` variables are to be placed in the machine registers which may result in faster programs. Which means `register` declaration advises the compiler that the variable will be heavily used.     
 But compilers are free to ignore the advice.
 
 ```c
@@ -261,13 +262,13 @@ f(register unsigned m, register long n)
 }
 ```
 
-Due to hardware imitation, only few variables in each function may be kept in registers and only certain types are allowed.
+Due to hardware imitation, only few variables in each function may be kept in registers and only certain types are allowed.      
 It is not possible to take address of a register variable, regardless of it is placed in a register or not.
 
 
 ### 4.8 Block Structure
 
-Function cannot be defined within a function but a variable can be defined in a block-structured fashion within a function.
+Function cannot be defined within a function but a variable can be defined in a block-structured fashion within a function.      
 variables declared in this way hide any identically named variable in outer block, and remain in existence until the matching right brace.
 
 ```c
@@ -284,7 +285,7 @@ Automatic variables and formal parameters also hide eternal variables and functi
 
 ### 4.9 Initialization
 
-In the absence of explicit initialization, external and static variables are guaranteed to be initialized to zero;
+In the absence of explicit initialization, external and static variables are guaranteed to be initialized to zero;      
 automatic and register variables have undefined (garbage) initial values.
 
 ***Scalar variables***, may be initialized when they are defined, by following the name with an equal sign and an expression.
@@ -298,18 +299,18 @@ long day = 100L * 60L * 60L * 24L  // milliseconds in a day
 
 ***automatic and register variables***, the initializer is not restricted to being a constant; it can even be a previously defined value, even function calls.
 
-Initializing a array of int, supplying initializer less than specified length adds zero, supplying more causes errors.
-There is no way to initialize an element in the middle of an array without supplying all preceding values.
+Initializing a array of int, supplying initializer less than specified length adds zero, supplying more causes errors.     
+There is no way to initialize an element in the middle of an array without supplying all preceding values.     
 `int days[] = {31, 28, 31, ...}`
 
-Character arrays are a special case of initialization; a string may be used instead of the braces and commas notation.
-`char pattern = "ould";`
+Character arrays are a special case of initialization; a string may be used instead of the braces and commas notation.     
+`char pattern = "ould";`     
 `char patter[] = { 'o', 'u', 'l', 'd', '\0' };`
 
 
 ### 4.10 Recursion
 
-A function may call itself directly or indirectly.
+A function may call itself directly or indirectly.     
 When a function calls itself recursively, each invocation gets a fresh set of all the sutomatic variables independent of the previous set.
 
 Quick sort using the middle of array for partitioning.
@@ -349,20 +350,20 @@ The standard library includes a version of `qsort` that can sort objects of any 
 
 ### 4.11 The C Preprocessor
 
-Preprocessor is a separate first step in compilation.
-examples, `#include` to include the contents of a file during compilation,
+Preprocessor is a separate first step in compilation.     
+examples, `#include` to include the contents of a file during compilation,      
 `#define` to replace a token by an arbitrary sequence of characters.
 
 #### 4.11.1 File Inclusion
 
 `#include "filename"` or `#include <filename>` is replaced by the contents of the file name.
 
-If the file name is quoted, searching for the file typically begins where the source program was found; if it is not there, or file name has `<>`, searching follows an implementation defined rule to find the file.
+If the file name is quoted, searching for the file typically begins where the source program was found; if it is not there, or file name has `<>`, searching follows an implementation defined rule to find the file.     
 An included file may itself contain `#include` lines.
 
 #### 4.11.2 Macro Substitution
 
-`#define name replacement text`
+`#define name replacement text`      
 subsequent occurrences of the token `name` will be replaced by the `replacement text`.
 
 #### 4.11.3 Conditional Inclusion

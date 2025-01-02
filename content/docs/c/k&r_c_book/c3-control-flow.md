@@ -15,20 +15,20 @@ seo:
 ---
 
 
-__Section 3.1 - Semicolon across languages__
-C, JAVA, PHP use `;` as terminator for every statement.
+__Section 3.1 - Semicolon across languages__      
+C, JAVA, PHP use `;` as terminator for every statement.     
 Python, JavaScript, Shell script use `;` as separator, `:` is terminator.
 
-__Section 3.3 - else if across languages__
+__Section 3.3 - else if across languages__     
 In python `elif` is a real keyword, while in C, `else if` is just bad indentation.
 
-__Section 3.4 - Never use the switch statement__
-In exceedingly a rare situation, we might use a "jump table" where a small integer was used to look up an address "Where to go next".
+__Section 3.4 - Never use the switch statement__     
+In exceedingly a rare situation, we might use a "jump table" where a small integer was used to look up an address "Where to go next".      
 This could save a few repeating "else if" evaluation when computers were slow.
 
-__Section 3.5 - Using comma__
-In C, `,` is like light version of `;`
-We use it when we are already using a semicolon for something but need two or more statements.
+__Section 3.5 - Using comma__     
+In C, `,` is like light version of `;`      
+We use it when we are already using a semicolon for something but need two or more statements.     
 `for ( i = 0, j = strlen(s)-1; i< j; i++, j++)`
 
 __Section 3.5 - Excessive Succinctness / brevity__
@@ -36,8 +36,8 @@ __Section 3.5 - Excessive Succinctness / brevity__
 while ( (c = getchar()) == ' ' || c == '\n' || c == '\t')
 	;
 ```
-Here Value is accessed, stored in a variable c, compared to see if it is `' '`,
-also compared to see if it is `\n or \t`.
+Here Value is accessed, stored in a variable c, compared to see if it is `' '`,     
+also compared to see if it is `\n or \t`.     
 All the work has been done in the loop termination test. There is nothing to do in the body of the loop so just a `;`
 
 
@@ -97,7 +97,7 @@ else
 	statement
 ```
 
-Binary search
+Binary search       
 To find x in a sorted array v with increasing order. Returns position of number in array 
 ```c
 int binarysearch (int x, int v[],  int n)
@@ -133,12 +133,12 @@ switch (expression) {
 
 The `switch` statement is a multi-way decision that tests whether an expression matches one of a number of `constatnt` integer values, and branches accordingly.
 
-The execution starts from the case that matches. default executes if nothing matches, its optional like the else.
+The execution starts from the case that matches. default executes if nothing matches, its optional like the else.      
 `break` causes an immediate exit from the `switch`.
 
 If there is no explicit `break`, or `return` the execution `falls through` to the next level.
 
-`fall through` can be used by attaching multiple cases to a single action. which should be used sparingly.
+`fall through` can be used by attaching multiple cases to a single action. which should be used sparingly.      
 Its best defensive programming to add break to each case and include default.
 
  
@@ -148,7 +148,7 @@ Its best defensive programming to add break to each case and include default.
 while (expression)
 	statement
 ```
-if expression evaluation gives non-zero value, the statement is evaluated.
+if expression evaluation gives non-zero value, the statement is evaluated.      
 This continues till the expression evaluates to zero.
 
 ```c
@@ -167,7 +167,7 @@ while (expre2) {
 }
 ```
 
-Any three part can be omitted but the semicolon must remain.
+Any three part can be omitted but the semicolon must remain.     
 Dropping the second one makes it forever true so break and return can be used.
 
 It is better to use while when there is no re-initialization and increment.
@@ -247,7 +247,7 @@ int trim(char s[])
 ```
 `strlen` returns the length of the string. The `for` loop starts at the end and scans backwards looking for the first character that is not a blank or tab or newline.
 
-`continue` causes next iteration of the enclosing loop to begin.
+`continue` causes next iteration of the enclosing loop to begin.      
 It doesn't apply to switch. 
 ```c
 for (i = 0; i < n; i++)
@@ -259,7 +259,7 @@ for (i = 0; i < n; i++)
 
 ### 3.8 Goto and Labels
 
-`goto` is used sometime to break out of multiple deeply nested loops at once.
+`goto` is used sometime to break out of multiple deeply nested loops at once.      
 `break` only exists from the inner most loop. ( `goto` is never used, exceptions, throw catch is preferred )
 
 ```c
@@ -274,8 +274,8 @@ error:
 	/* clean up the mess */
 ```
 
-A label has same form as a variable name and is followed by a colon.
-It can be attached to any statement in the same function as the `goto`.
+A label has same form as a variable name and is followed by a colon.     
+It can be attached to any statement in the same function as the `goto`.     
 The scope of the label is the entire function.
 
 

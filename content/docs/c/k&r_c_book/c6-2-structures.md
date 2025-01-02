@@ -14,18 +14,17 @@ seo:
   noindex: false # false (default) or true
 ---
 
-
 ## Chapter 6 - Structures
 
-A structure is a collection of one or more variables, possibly of different types, grouped together under a single name for convenient handling.
-Structures help to organize complicated data, allowing a group of related variables to be treated as a unit instead of separate entities.
+A structure is a collection of one or more variables, possibly of different types, grouped together under a single name for convenient handling.      
+Structures help to organize complicated data, allowing a group of related variables to be treated as a unit instead of separate entities.      
 Employee has many attributes, a point is a pair of co ordinates etc.
 
 
 ### 6.1 Basics of Structures
 
-The keyword `struct` introduces a structure declaration, which is a list of declarations enclosed in braces. 
-An optional name called `structure tag` may follow the `struct` keyword. (here `point`) which can be used as shorthand.
+The keyword `struct` introduces a structure declaration, which is a list of declarations enclosed in braces.        
+An optional name called `structure tag` may follow the `struct` keyword. (here `point`) which can be used as shorthand.       
 The variables names in it are called `members`.
 
 Basic object is a point which has x and y co-ordinate, both integers.
@@ -36,17 +35,17 @@ struct point {
 };
 ```
 
-A structure member or tag and an ordinary variable can have the same name without conflict, since they can always be distinguished by context.
-The same member name may occur in closely related objects.
+A structure member or tag and an ordinary variable can have the same name without conflict, since they can always be distinguished by context.      
+The same member name may occur in closely related objects.    
 
 A `struct` declaration defines a type. The right brace that terminates the list of members may be followed by a list of variables, just as any basic types.
 
-`struct { ... } x, y, z;`  is similar to `int x, y, z;`
+`struct { ... } x, y, z;`  is similar to `int x, y, z;`     
 in a sense, it declares `x, y, z` to be variables of the named type and sets aside space for them.
 
 A structure declaration that is not followed by a list of variables reserves no storage; it merely describes a template or shape of a structure.
 
-`struct point pt;`
+`struct point pt;`     
 defines a variable `pt` which is a structure of type `struct point`.
 
 ```c
@@ -64,9 +63,9 @@ struct date d = { 14, 7, 1776, 186, "JUl" };
 `struct date d;`  template without without list of variables.
 
 
-Operator `.` connects the structure name and member name.
+Operator `.` connects the structure name and member name.     
 A member of a structure is accessed / referred to in an expression by a construction of form,
-`structure-name.member`
+`structure-name.member`      
 `printf("%d, %d", pt.x, pt.y)`  to print co-ordinates of the point `pt`
 
 To set `leap` from the date in `structure d`
@@ -102,24 +101,24 @@ struct person {
 	struct date hiredate;
 };
 ```
-The person structure contains two date structures.
-`struct person emp;`  declaring `emp`;
-`emp.birthday.month` refers to month of birth.
+The person structure contains two date structures.     
+`struct person emp;`  declaring `emp`;      
+`emp.birthday.month` refers to month of birth.     
 `.` associates from left to right.
 
-If declared `screen` as  `struct rect screen;`, then
+If declared `screen` as  `struct rect screen;`, then     
 `screen.pt1.x` refers to x co ordinate of `pt1` member of `screen`
 
 
 ### 6.2 Structures and Functions
 
-There are number of restrictions on C structures.
-The only legal operations on a structure are taking its address with `&` and accessing its members, copying it, or assigning to it as a unit (as arguments),
+There are number of restrictions on C structures.      
+The only legal operations on a structure are taking its address with `&` and accessing its members, copying it, or assigning to it as a unit (as arguments),     
 (copying structures make a shallow copy, pointers are copied but does not make copy of the data to which the pointers point to. Structures in structures are also shallow copied)
 
-Structures may not be compared.
-A structure may be initialized by a list of constant member values;
-an automatic structure may be initialized by an assignment.
+Structures may not be compared.     
+A structure may be initialized by a list of constant member values;    
+an automatic structure may be initialized by an assignment.     
 
 `makepoint` will take two integers and return a `point` structure:
 ```c
@@ -132,7 +131,7 @@ struct point makepoint(int x, int y)
 	return temp;
 }
 ```
-Argument name and member names are same but there is no conflict.
+Argument name and member names are same but there is no conflict.      
 `makepoint` can be used to make any structure dynamically or provide structure arguments to a function.
 
 ```c
@@ -160,9 +159,9 @@ Here both arguments and the return value are structures.
 .
 .
 
-Passing structures to a function as a pointer is more efficient than to copy the whole structure.
-`struct point *pp;` says,
-`pp` is a pointer to a structure of type `strcut point`.
+Passing structures to a function as a pointer is more efficient than to copy the whole structure.      
+`struct point *pp;` says,     
+`pp` is a pointer to a structure of type `strcut point`.      
 If `pp` points to a `point` structure, `*pp` is the structure, and `(*pp).x`  and `(*pp).y` are the members.
 ```c
 struct point origin, *pp;
@@ -186,20 +185,20 @@ rp->pt1.x
 ```
 
 
-`++p->len` increments `len`, not p because it means`++(p->len)`.
-`(++p)->len` increments p before accessing `len`
-`(p++)->len` increments p afterwards.
+`++p->len` increments `len`, not p because it means`++(p->len)`.      
+`(++p)->len` increments p before accessing `len`      
+`(p++)->len` increments p afterwards.      
 
 Similarly
-`*p->str` fetches whatever `str` points to;
-`*p->str++` increments `str` after accessing whatever it points to;
-`(*p->str)++` increments whatever `str` points to;
-`*p++->str` increments `p` after accessing whatever `str` points to.
+`*p->str` fetches whatever `str` points to;      
+`*p->str++` increments `str` after accessing whatever it points to;     
+`(*p->str)++` increments whatever `str` points to;     
+`*p++->str` increments `p` after accessing whatever `str` points to.     
 
 
 ### 6.3 Arrays of Structures
 
-To count the occurrences of each keyword in C.
+To count the occurrences of each keyword in C.     
 Each keyword is a pair of word and its count:
 ```c
 char *word;
@@ -214,7 +213,7 @@ struct key {
 	int count;
 } keytab[NKEYS];
 ```
-The structure declaration declares a structure of type `key`, defies an array `keytab` of structures in this type and sets aside storage for them.
+The structure declaration declares a structure of type `key`, defies an array `keytab` of structures in this type and sets aside storage for them.     
 Each element of the array is a structure. also written as.
 ```c
 struct key {
@@ -316,7 +315,7 @@ int getword(char *word, int lim)
 	return word[0];
 }
 ```
-`getword` uses `getch` and `ungetch` from chapter 4.
+`getword` uses `getch` and `ungetch` from chapter 4.     
 `isspace` to skip space and `isalpha` to identify letters, `isalnum` to identify letters and digits;
 all are from `<ctype.h>`
 
@@ -371,11 +370,11 @@ struct key *binsearch(char *word, struct key tab[], int n)
 	return NULL;
 }
 ```
-The declaration of `binsearch` indicates that it return a pointer to `struct key` instead of an integer. this is declared both in function prototype and in `binsearch`.
-If it finds a word, it return a `pointer` to it otherwise `NULL`.
+The declaration of `binsearch` indicates that it return a pointer to `struct key` instead of an integer. this is declared both in function prototype and in `binsearch`.     
+If it finds a word, it return a `pointer` to it otherwise `NULL`.     
 
 The elements of `keytab` are now accessed by pointers. which changes `binsearch`.
-`high low` are pointers.
+`high low` are pointers.     
 computation of `mid` has to change as it is illegal to to add pointers. but subtraction is legal.
 `high-low` is number of elements so `mid = low + (high-low) / 2` sets `mid` to element halfway between `high and low`.
 
@@ -410,7 +409,7 @@ int getword(char *word, int lim)
 ### 6.5 Self-referential Structures
 
 
-When wanting to handle data where the words are not known beforehand and searching through the seen words everytime in a list is not time efficient.
+When wanting to handle data where the words are not known beforehand and searching through the seen words everytime in a list is not time efficient.     
 Solution is to keep a set of seen words in a sorted order all the time and placing the words in proper position as they arrive. This can be done by `binary tree`.
 
 The `binary tree` node, with four components.
@@ -422,10 +421,10 @@ struct tnode {
 	struct tnode *right;  // points to right child
 };
 ```
-It is illegal for a structure to contain an instance of itself.
+It is illegal for a structure to contain an instance of itself.     
 `struct tnode *left;` declares `left` to be a pointer to a `tnode`, not `tnode` itself.
 
-No node may contain more than two children.
+No node may contain more than two children.     
 It is maintained in such a way that the left node always contains only the words which are lexicographically less than the word at that node, and right node contains the words that are greater.
 
 ```c
@@ -452,9 +451,9 @@ main()
 	return 0;
 }
 ```
-The function `addtree` is recursive.
-A word is presented by `main` to top level of the tree. At each stage the word is comapred to word in the node; and percolated down by recursive call to `addtree`.
-Eventually, the word either match something or null pointer is encountered, indicating that a node must be created and added to the tree.
+The function `addtree` is recursive.     
+A word is presented by `main` to top level of the tree. At each stage the word is comapred to word in the node; and percolated down by recursive call to `addtree`.     
+Eventually, the word either match something or null pointer is encountered, indicating that a node must be created and added to the tree.     
 `addtree` returns a pointer to new node.
 
 .
