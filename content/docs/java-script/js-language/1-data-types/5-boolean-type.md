@@ -1,5 +1,5 @@
 ---
-title: "Boolean Type"
+title: "JS - 01.08 - Boolean Type"
 description: ""
 summary: ""
 date: 2024-11-07T14:46:45+05:30

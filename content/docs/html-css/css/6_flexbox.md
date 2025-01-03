@@ -1,5 +1,5 @@
 ---
-title: "Flexbox"
+title: "CSS - 06 - Flexbox"
 description: ""
 summary: ""
 date: 2024-11-06T15:01:00+05:30

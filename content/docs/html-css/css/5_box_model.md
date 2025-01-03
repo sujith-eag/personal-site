@@ -1,5 +1,5 @@
 ---
-title: "Box Model"
+title: "CSS - 05 - Box Model"
 description: ""
 summary: ""
 date: 2024-11-06T15:00:25+05:30

@@ -1,5 +1,5 @@
 ---
-title: "Boiler Plate"
+title: "HTML - 01 - Boiler Plate"
 description: ""
 summary: ""
 date: 2024-11-04T19:50:38+05:30

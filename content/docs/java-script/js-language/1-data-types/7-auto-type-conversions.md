@@ -1,5 +1,5 @@
 ---
-title: "Auto Type Conversions"
+title: "JS - 01.10 - Auto Type Conversions"
 description: ""
 summary: ""
 date: 2024-11-07T14:47:36+05:30

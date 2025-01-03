@@ -32,36 +32,41 @@
 
 
 
-
 [[main]]
   name = "Python"
   url = "/docs/python/"
   weight = 10
 
 [[main]]
-  name = "JavaScript"
-  url = "/docs/java-script/"
-  weight = 20
-
-[[main]]
   name = "HTML/CSS"
   url = "/docs/html-css/"
+  weight = 20
+  
+  
+[[main]]
+  name = "JavaScript"
+  url = "/docs/java-script/"
   weight = 30
+
+[[main]]
+  name = "JS DOM"
+  url = "/docs/java-script-dom/"
+  weight = 40
 
 [[main]]
   name = "C"
   url = "docs/c/"
-  weight = 40
+  weight = 50
   
 [[main]]
-  name = "Bash"
+  name = "Linux"
   url = "/docs/bash-linux/"
-  weight = 50
+  weight = 60
 
 [[main]]
   name = "Tools"
   url = "/docs/tools/"
-  weight = 60
+  weight = 70
 
 [[main]]
   name = "Blog"

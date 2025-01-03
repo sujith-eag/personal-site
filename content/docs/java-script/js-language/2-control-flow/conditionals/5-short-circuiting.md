@@ -1,5 +1,5 @@
 ---
-title: "Short Circuiting"
+title: "JS - 02.05 - Short Circuiting"
 description: ""
 summary: ""
 date: 2024-11-07T20:48:55+05:30

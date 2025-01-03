@@ -1,5 +1,5 @@
 ---
-title: "for Loop"
+title: "JS - 02.12 - for Loop"
 description: ""
 summary: ""
 date: 2024-11-07T20:50:52+05:30

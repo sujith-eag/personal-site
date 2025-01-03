@@ -1,5 +1,5 @@
 ---
-title: "Links & Images"
+title: "HTML - 03 - Links & Images"
 description: ""
 summary: ""
 date: 2024-11-04T19:52:36+05:30

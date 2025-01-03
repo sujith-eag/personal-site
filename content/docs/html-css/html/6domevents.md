@@ -1,5 +1,5 @@
 ---
-title: "DOM Events"
+title: "HTML - 06 - DOM Events"
 description: ""
 summary: ""
 date: 2024-11-04T19:54:06+05:30

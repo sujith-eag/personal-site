@@ -23,6 +23,13 @@
     </url>
     
     <url>
+      <loc>http://localhost:1313/personal-site/docs/java-script-dom/</loc>
+      <lastmod>2024-10-22T14:51:02+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
       <loc>http://localhost:1313/personal-site/docs/html-css/</loc>
       <lastmod>2024-10-22T14:27:55+05:30</lastmod>
       <changefreq>monthly</changefreq>
@@ -63,12 +70,6 @@
       <url>
         <loc>http://localhost:1313/personal-site/docs/java-script/js-language/</loc>
         <lastmod>2024-10-22T14:50:48+05:30</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-      </url>
-      <url>
-        <loc>http://localhost:1313/personal-site/docs/java-script/dom-manipulation/</loc>
-        <lastmod>2024-10-22T14:51:02+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>

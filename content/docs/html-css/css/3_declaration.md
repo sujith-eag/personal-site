@@ -1,5 +1,5 @@
 ---
-title: "Declaration"
+title: "CSS - 03 - Declaration"
 description: ""
 summary: ""
 date: 2024-11-06T14:59:30+05:30

@@ -1,5 +1,5 @@
 ---
-title: "for-of Loop"
+title: "JS - 02.13 - for-of Loop"
 description: ""
 summary: ""
 date: 2024-11-07T20:51:24+05:30

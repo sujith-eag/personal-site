@@ -10,17 +10,17 @@
     <lastBuildDate>Thu, 07 Nov 2024 10:54:56 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/personal-site/docs/html-css/css/css_resource/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>CSS Size Units</title>
-      <link>http://localhost:1313/personal-site/docs/html-css/css/css_resource/css-size-units/</link>
+      <title>CSS - 04.1 - Size Units</title>
+      <link>http://localhost:1313/personal-site/docs/html-css/css/css_resource/css-04.1-size-units/</link>
       <pubDate>Thu, 07 Nov 2024 10:54:56 +0530</pubDate>
-      <guid>http://localhost:1313/personal-site/docs/html-css/css/css_resource/css-size-units/</guid>
+      <guid>http://localhost:1313/personal-site/docs/html-css/css/css_resource/css-04.1-size-units/</guid>
       <description>&lt;p&gt;CSS offers various units for defining sizes in styles.&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-absolute-units&#34;&gt;1. Absolute Units&lt;/h2&gt;&#xA;&lt;p&gt;These units are fixed and do not change based on other elements.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>CSS Color Values</title>
-      <link>http://localhost:1313/personal-site/docs/html-css/css/css_resource/css-color-values/</link>
+      <title>CSS - 04.2 - Color Values</title>
+      <link>http://localhost:1313/personal-site/docs/html-css/css/css_resource/css-04.2-color-values/</link>
       <pubDate>Thu, 07 Nov 2024 10:54:40 +0530</pubDate>
-      <guid>http://localhost:1313/personal-site/docs/html-css/css/css_resource/css-color-values/</guid>
+      <guid>http://localhost:1313/personal-site/docs/html-css/css/css_resource/css-04.2-color-values/</guid>
       <description>&lt;p&gt;Colors in CSS can be specified by the following methods:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Predefined/Cross-browser color names&lt;/li&gt;&#xA;&lt;li&gt;With the &lt;code&gt;currentcolor&lt;/code&gt; keyword&lt;/li&gt;&#xA;&lt;li&gt;Hexadecimal colors&lt;/li&gt;&#xA;&lt;li&gt;Hexadecimal colors with transparency&lt;/li&gt;&#xA;&lt;li&gt;RGB colors&lt;/li&gt;&#xA;&lt;li&gt;RGBA colors&lt;/li&gt;&#xA;&lt;li&gt;HSL colors&lt;/li&gt;&#xA;&lt;li&gt;HSLA colors&lt;/li&gt;&#xA;&lt;li&gt;CSS Custom Variable&lt;/li&gt;&#xA;&lt;li&gt;Gradients&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h1 id=&#34;css-color-values-overview&#34;&gt;CSS Color Values Overview&lt;/h1&gt;&#xA;&lt;p&gt;Colors in CSS can be specified using various methods, allowing designers flexibility and precision in styling elements. Here’s a breakdown of these methods:&lt;/p&gt;</description>
     </item>
   </channel>

@@ -172,52 +172,52 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/1-data-types/variables/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/1-data-types/js-01.01-variables/</loc>
     <lastmod>2024-11-07T14:42:23+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/1-data-types/values-and-types/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/1-data-types/js-01.02-values-and-types/</loc>
     <lastmod>2024-11-07T14:43:05+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/1-data-types/number-types/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/1-data-types/js-01.03-number-types/</loc>
     <lastmod>2024-11-07T14:43:35+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/1-data-types/number-methods/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/1-data-types/js-01.04-number-methods/</loc>
     <lastmod>2024-11-07T14:44:18+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/1-data-types/string-type/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/1-data-types/js-01.05-string-type/</loc>
     <lastmod>2024-11-07T14:44:54+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/1-data-types/string-methods/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/1-data-types/js-01.06-string-methods/</loc>
     <lastmod>2024-11-07T14:45:28+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/1-data-types/modifying-string/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/1-data-types/js-01.07-modifying-string/</loc>
     <lastmod>2024-11-07T14:46:14+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/1-data-types/boolean-type/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/1-data-types/js-01.08-boolean-type/</loc>
     <lastmod>2024-11-07T14:46:45+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/1-data-types/operators/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/1-data-types/js-01.09-operators/</loc>
     <lastmod>2024-11-07T14:47:05+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/1-data-types/auto-type-conversions/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/1-data-types/js-01.10-auto-type-conversions/</loc>
     <lastmod>2024-11-07T14:47:36+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -232,32 +232,32 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/conditionals/if-else/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.01-if-else/</loc>
     <lastmod>2024-11-07T20:46:23+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/conditionals/switch-case/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.02-switch-case/</loc>
     <lastmod>2024-11-07T20:47:19+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/conditionals/ternary-operator/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.03-ternary-operator/</loc>
     <lastmod>2024-11-07T20:47:52+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/conditionals/logical-operators/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.04-logical-operators/</loc>
     <lastmod>2024-11-07T20:48:21+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/conditionals/short-circuiting/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.05-short-circuiting/</loc>
     <lastmod>2024-11-07T20:48:55+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/loops/do-while-loop/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.11-do-while-loop/</loc>
     <lastmod>2024-11-07T20:50:37+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -267,32 +267,32 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/loops/for-loop/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.12-for-loop/</loc>
     <lastmod>2024-11-07T20:50:52+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/loops/for-of-loop/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.13-for-of-loop/</loc>
     <lastmod>2024-11-07T20:51:24+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/loops/for-in-loop/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.14-for-in-loop/</loc>
     <lastmod>2024-11-07T20:51:38+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/loops/break-continue-label/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.15-break-continue-label/</loc>
     <lastmod>2024-11-07T20:52:03+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/loops/iterables/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.16-iterables/</loc>
     <lastmod>2024-11-07T20:52:20+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/function/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/js-03.01-function/</loc>
     <lastmod>2024-11-09T17:00:29+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -302,47 +302,47 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/defining-function/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/js-03.02-defining-function/</loc>
     <lastmod>2024-11-09T17:01:00+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/arrow-function/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/js-03.03-arrow-function/</loc>
     <lastmod>2024-11-09T17:01:33+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/scope-of-variable/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/js-03.04-scope-of-variable/</loc>
     <lastmod>2024-11-09T17:01:58+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/parameters-arguments/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/js-03.05-parameters-arguments/</loc>
     <lastmod>2024-11-09T17:02:48+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/return-recursion-call-stack/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/js-03.06-return-recursion-call-stack/</loc>
     <lastmod>2024-11-09T17:03:17+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/scheduling/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/js-03.07-scheduling/</loc>
     <lastmod>2024-11-09T17:03:35+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/decorators/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/js-03.08-decorators/</loc>
     <lastmod>2024-11-09T17:03:48+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/function-object/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/js-03.09-function-object/</loc>
     <lastmod>2024-11-09T17:04:09+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/4-objects/object/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/4-objects/js-04.01-object/</loc>
     <lastmod>2024-11-09T17:05:46+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -352,32 +352,32 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/4-objects/object-properties/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/4-objects/js-04.02-object-properties/</loc>
     <lastmod>2024-11-09T17:06:12+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/4-objects/cloning-object/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/4-objects/js-04.03-cloning-object/</loc>
     <lastmod>2024-11-09T17:06:36+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/4-objects/object.keys/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/4-objects/js-04.04-object.keys/</loc>
     <lastmod>2024-11-09T17:07:07+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/4-objects/methods-this-chaining/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/4-objects/js-04.05-methods-this-chaining/</loc>
     <lastmod>2024-11-09T17:07:30+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/4-objects/constructor-new/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/4-objects/js-04.06-constructor-new/</loc>
     <lastmod>2024-11-09T17:07:54+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/array/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/js-05.01-array/</loc>
     <lastmod>2024-11-09T17:08:28+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -387,38 +387,63 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/array-methods/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/js-05.02-array-methods/</loc>
     <lastmod>2024-11-09T17:08:52+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/filter-method/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/js-05.03-filter-method/</loc>
     <lastmod>2024-11-09T17:09:14+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/map-method/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/js-05.04-map-method/</loc>
     <lastmod>2024-11-09T17:09:29+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/reduce-method/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/js-05.05-reduce-method/</loc>
     <lastmod>2024-11-09T17:09:41+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/sort-method/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/js-05.06-sort-method/</loc>
     <lastmod>2024-11-09T17:09:53+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/rest-spread/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/js-05.07-rest-spread/</loc>
     <lastmod>2024-11-09T17:10:12+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/java-script/dom-manipulation/</loc>
+    <loc>http://localhost:1313/personal-site/docs/java-script-dom/</loc>
     <lastmod>2024-10-22T14:51:02+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/</loc>
+    <lastmod>2024-11-09T17:13:17+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/</loc>
+    <lastmod>2024-11-09T17:13:52+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/</loc>
+    <lastmod>2024-11-09T17:14:26+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/</loc>
+    <lastmod>2024-11-09T17:14:43+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/</loc>
+    <lastmod>2024-11-09T17:15:01+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -432,37 +457,37 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/html-css/html/boiler-plate/</loc>
+    <loc>http://localhost:1313/personal-site/docs/html-css/html/html-01-boiler-plate/</loc>
     <lastmod>2024-11-04T19:50:38+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/html-css/html/texts-lists/</loc>
+    <loc>http://localhost:1313/personal-site/docs/html-css/html/html-02-texts-lists/</loc>
     <lastmod>2024-11-04T19:52:11+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/html-css/html/links-images/</loc>
+    <loc>http://localhost:1313/personal-site/docs/html-css/html/html-03-links-images/</loc>
     <lastmod>2024-11-04T19:52:36+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/html-css/html/input-types/</loc>
+    <loc>http://localhost:1313/personal-site/docs/html-css/html/html-04-input-types/</loc>
     <lastmod>2024-11-04T19:53:10+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/html-css/html/button/</loc>
+    <loc>http://localhost:1313/personal-site/docs/html-css/html/html-05-button/</loc>
     <lastmod>2024-11-04T19:53:44+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/html-css/html/dom-events/</loc>
+    <loc>http://localhost:1313/personal-site/docs/html-css/html/html-06-dom-events/</loc>
     <lastmod>2024-11-04T19:54:06+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/html-css/css/css-selectors/</loc>
+    <loc>http://localhost:1313/personal-site/docs/html-css/css/css-01-selectors/</loc>
     <lastmod>2024-11-06T14:58:36+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -472,52 +497,52 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/html-css/css/css-multiple-selecors/</loc>
+    <loc>http://localhost:1313/personal-site/docs/html-css/css/css-02-multiple-selecors/</loc>
     <lastmod>2024-11-06T14:59:06+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/html-css/css/declaration/</loc>
+    <loc>http://localhost:1313/personal-site/docs/html-css/css/css-03-declaration/</loc>
     <lastmod>2024-11-06T14:59:30+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/html-css/css/adding-css/</loc>
+    <loc>http://localhost:1313/personal-site/docs/html-css/css/css-04-adding-css/</loc>
     <lastmod>2024-11-06T15:00:00+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/html-css/css/box-model/</loc>
+    <loc>http://localhost:1313/personal-site/docs/html-css/css/css-05-box-model/</loc>
     <lastmod>2024-11-06T15:00:25+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/html-css/css/flexbox/</loc>
+    <loc>http://localhost:1313/personal-site/docs/html-css/css/css-06-flexbox/</loc>
     <lastmod>2024-11-06T15:01:00+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/html-css/css/flex-flexibility/</loc>
+    <loc>http://localhost:1313/personal-site/docs/html-css/css/css-07-flex-flexibility/</loc>
     <lastmod>2024-11-06T15:01:39+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/html-css/css/axes-in-flexbox/</loc>
+    <loc>http://localhost:1313/personal-site/docs/html-css/css/css-08-axes-in-flexbox/</loc>
     <lastmod>2024-11-06T15:02:27+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/html-css/css/utility-class-inheritance/</loc>
+    <loc>http://localhost:1313/personal-site/docs/html-css/css/css-09-utility-class-inheritance/</loc>
     <lastmod>2024-11-06T15:03:01+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/html-css/css/css_resource/css-size-units/</loc>
+    <loc>http://localhost:1313/personal-site/docs/html-css/css/css_resource/css-04.1-size-units/</loc>
     <lastmod>2024-11-07T10:54:56+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/html-css/css/css_resource/css-color-values/</loc>
+    <loc>http://localhost:1313/personal-site/docs/html-css/css/css_resource/css-04.2-color-values/</loc>
     <lastmod>2024-11-07T10:54:40+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -607,6 +632,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-08-basic-file-commands/</loc>
+    <lastmod>2024-12-29T16:48:46+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-07-storage-terminology-in-linux/</loc>
     <lastmod>2024-12-29T16:48:21+05:30</lastmod>
     <changefreq>monthly</changefreq>
@@ -614,11 +644,6 @@
   </url><url>
     <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-08.1-bc-and-date/</loc>
     <lastmod>2025-01-01T15:23:35+05:30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-08-basic-file-commands/</loc>
-    <lastmod>2024-12-29T16:48:46+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -652,13 +677,13 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-14-file-searching/</loc>
-    <lastmod>2024-12-29T16:50:54+05:30</lastmod>
+    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-13.2-regex-matching/</loc>
+    <lastmod>2025-01-01T15:24:34+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-13.2-regex-matching/</loc>
-    <lastmod>2025-01-01T15:24:34+05:30</lastmod>
+    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-14-file-searching/</loc>
+    <lastmod>2024-12-29T16:50:54+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -667,7 +692,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-16-grep/</loc>
+    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-16-egrep/</loc>
     <lastmod>2024-12-29T16:51:37+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

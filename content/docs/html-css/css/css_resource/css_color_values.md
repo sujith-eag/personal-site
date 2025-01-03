@@ -1,5 +1,5 @@
 ---
-title: "CSS Color Values"
+title: "CSS - 04.2 - Color Values"
 description: ""
 summary: ""
 date: 2024-11-07T10:54:40+05:30

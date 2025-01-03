@@ -1,5 +1,5 @@
 ---
-title: "CSS Multiple Selecors"
+title: "CSS - 02 - Multiple Selecors"
 description: ""
 summary: ""
 date: 2024-11-06T14:59:06+05:30

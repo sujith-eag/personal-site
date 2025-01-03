@@ -1,5 +1,5 @@
 ---
-title: "Iterables"
+title: "JS - 02.16 - Iterables"
 description: ""
 summary: ""
 date: 2024-11-07T20:52:20+05:30

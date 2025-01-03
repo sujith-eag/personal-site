@@ -1,5 +1,5 @@
 ---
-title: "Operators"
+title: "JS - 01.09 - Operators"
 description: ""
 summary: ""
 date: 2024-11-07T14:47:05+05:30

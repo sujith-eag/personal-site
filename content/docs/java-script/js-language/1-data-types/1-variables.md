@@ -1,5 +1,5 @@
 ---
-title: "Variables"
+title: "JS - 01.01 - Variables"
 description: ""
 summary: ""
 date: 2024-11-07T14:42:23+05:30

@@ -1,5 +1,5 @@
 ---
-title: "Ternary Operator"
+title: "JS - 02.03 - Ternary Operator"
 description: ""
 summary: ""
 date: 2024-11-07T20:47:52+05:30

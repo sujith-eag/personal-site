@@ -1,5 +1,5 @@
 ---
-title: "Array"
+title: "JS - 05.01 - Array"
 description: ""
 summary: ""
 date: 2024-11-09T17:08:28+05:30

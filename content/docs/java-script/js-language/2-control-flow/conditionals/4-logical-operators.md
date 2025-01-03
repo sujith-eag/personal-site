@@ -1,5 +1,5 @@
 ---
-title: "Logical Operators"
+title: "JS - 02.04 - Logical Operators"
 description: ""
 summary: ""
 date: 2024-11-07T20:48:21+05:30

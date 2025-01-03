@@ -1,5 +1,5 @@
 ---
-title: "String Type"
+title: "JS - 01.05 - String Type"
 description: ""
 summary: ""
 date: 2024-11-07T14:44:54+05:30

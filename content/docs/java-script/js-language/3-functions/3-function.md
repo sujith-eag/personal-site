@@ -1,5 +1,5 @@
 ---
-title: "Function"
+title: "JS - 03.01 - Function"
 description: ""
 summary: ""
 date: 2024-11-09T17:00:29+05:30

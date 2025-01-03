@@ -1,5 +1,5 @@
 ---
-title: "Utility Class & Inheritance"
+title: "CSS - 09 - Utility Class & Inheritance"
 description: ""
 summary: ""
 date: 2024-11-06T15:03:01+05:30

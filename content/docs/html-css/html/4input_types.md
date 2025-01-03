@@ -1,5 +1,5 @@
 ---
-title: "Input Types"
+title: "HTML - 04 - Input Types"
 description: ""
 summary: ""
 date: 2024-11-04T19:53:10+05:30

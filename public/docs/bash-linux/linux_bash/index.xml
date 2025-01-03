@@ -52,6 +52,13 @@
       <description>&lt;p&gt;A shell session consists of an environment that includes all the variables, functions, and other entities defined during the session.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Bash - 08 - Basic File Commands</title>
+      <link>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-08-basic-file-commands/</link>
+      <pubDate>Sun, 29 Dec 2024 16:48:46 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-08-basic-file-commands/</guid>
+      <description>&lt;p&gt;Many file commands can operate on many different types of items because Linux treats them all as files.&#xA;Linux treats various entities such as regular files, directories, symbolic links, pipes, sockets, and device files as files.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Bash - 07 - Storage Terminology in Linux</title>
       <link>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-07-storage-terminology-in-linux/</link>
       <pubDate>Sun, 29 Dec 2024 16:48:21 +0530</pubDate>
@@ -63,14 +70,7 @@
       <link>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-08.1-bc-and-date/</link>
       <pubDate>Wed, 01 Jan 2025 15:23:35 +0530</pubDate>
       <guid>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-08.1-bc-and-date/</guid>
-      <description>&lt;h3 id=&#34;date-command&#34;&gt;&lt;code&gt;date&lt;/code&gt; Command&lt;/h3&gt;&#xA;&lt;p&gt;The &lt;code&gt;date&lt;/code&gt; command in Unix-like operating systems is used to display or set the system date and time.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Bash - 08 - Basic File Commands</title>
-      <link>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-08-basic-file-commands/</link>
-      <pubDate>Sun, 29 Dec 2024 16:48:46 +0530</pubDate>
-      <guid>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-08-basic-file-commands/</guid>
-      <description>&lt;p&gt;Many file commands can operate on many different types of items because Linux treats them all as files.&#xA;Linux treats various entities such as regular files, directories, symbolic links, pipes, sockets, and device files as files.&lt;/p&gt;</description>
+      <description>&lt;h3 id=&#34;date-command&#34;&gt;date Command&lt;/h3&gt;&#xA;&lt;p&gt;The &lt;code&gt;date&lt;/code&gt; command in Unix-like operating systems is used to display or set the system date and time.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Bash - 09 - File Movement and Copy Commands</title>

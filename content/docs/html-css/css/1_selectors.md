@@ -1,5 +1,5 @@
 ---
-title: "CSS Selectors"
+title: "CSS - 01 -Selectors"
 description: ""
 summary: ""
 date: 2024-11-06T14:58:36+05:30

@@ -2,42 +2,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>http://localhost:1313/personal-site/docs/java-script/js-language/4-objects/object/</loc>
+      <loc>http://localhost:1313/personal-site/docs/java-script/js-language/4-objects/js-04.01-object/</loc>
       <lastmod>2024-11-09T17:05:46+05:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/personal-site/docs/java-script/js-language/4-objects/object-properties/</loc>
+      <loc>http://localhost:1313/personal-site/docs/java-script/js-language/4-objects/js-04.02-object-properties/</loc>
       <lastmod>2024-11-09T17:06:12+05:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/personal-site/docs/java-script/js-language/4-objects/cloning-object/</loc>
+      <loc>http://localhost:1313/personal-site/docs/java-script/js-language/4-objects/js-04.03-cloning-object/</loc>
       <lastmod>2024-11-09T17:06:36+05:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/personal-site/docs/java-script/js-language/4-objects/object.keys/</loc>
+      <loc>http://localhost:1313/personal-site/docs/java-script/js-language/4-objects/js-04.04-object.keys/</loc>
       <lastmod>2024-11-09T17:07:07+05:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/personal-site/docs/java-script/js-language/4-objects/methods-this-chaining/</loc>
+      <loc>http://localhost:1313/personal-site/docs/java-script/js-language/4-objects/js-04.05-methods-this-chaining/</loc>
       <lastmod>2024-11-09T17:07:30+05:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/personal-site/docs/java-script/js-language/4-objects/constructor-new/</loc>
+      <loc>http://localhost:1313/personal-site/docs/java-script/js-language/4-objects/js-04.06-constructor-new/</loc>
       <lastmod>2024-11-09T17:07:54+05:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>

@@ -1,5 +1,5 @@
 ---
-title: "Flex Flexibility"
+title: "CSS - 07 - Flex Flexibility"
 description: ""
 summary: ""
 date: 2024-11-06T15:01:39+05:30

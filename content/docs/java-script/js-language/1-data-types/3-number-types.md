@@ -1,5 +1,5 @@
 ---
-title: "Number Types"
+title: "JS - 01.03 - Number Types"
 description: ""
 summary: ""
 date: 2024-11-07T14:43:35+05:30

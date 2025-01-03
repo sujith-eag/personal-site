@@ -1,5 +1,5 @@
 ---
-title: "if, else"
+title: "JS - 02.01 - if, else"
 description: ""
 summary: ""
 date: 2024-11-07T20:46:23+05:30

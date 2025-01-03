@@ -2,63 +2,63 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>http://localhost:1313/personal-site/docs/html-css/css/css-selectors/</loc>
+      <loc>http://localhost:1313/personal-site/docs/html-css/css/css-01-selectors/</loc>
       <lastmod>2024-11-06T14:58:36+05:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/personal-site/docs/html-css/css/css-multiple-selecors/</loc>
+      <loc>http://localhost:1313/personal-site/docs/html-css/css/css-02-multiple-selecors/</loc>
       <lastmod>2024-11-06T14:59:06+05:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/personal-site/docs/html-css/css/declaration/</loc>
+      <loc>http://localhost:1313/personal-site/docs/html-css/css/css-03-declaration/</loc>
       <lastmod>2024-11-06T14:59:30+05:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/personal-site/docs/html-css/css/adding-css/</loc>
+      <loc>http://localhost:1313/personal-site/docs/html-css/css/css-04-adding-css/</loc>
       <lastmod>2024-11-06T15:00:00+05:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/personal-site/docs/html-css/css/box-model/</loc>
+      <loc>http://localhost:1313/personal-site/docs/html-css/css/css-05-box-model/</loc>
       <lastmod>2024-11-06T15:00:25+05:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/personal-site/docs/html-css/css/flexbox/</loc>
+      <loc>http://localhost:1313/personal-site/docs/html-css/css/css-06-flexbox/</loc>
       <lastmod>2024-11-06T15:01:00+05:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/personal-site/docs/html-css/css/flex-flexibility/</loc>
+      <loc>http://localhost:1313/personal-site/docs/html-css/css/css-07-flex-flexibility/</loc>
       <lastmod>2024-11-06T15:01:39+05:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/personal-site/docs/html-css/css/axes-in-flexbox/</loc>
+      <loc>http://localhost:1313/personal-site/docs/html-css/css/css-08-axes-in-flexbox/</loc>
       <lastmod>2024-11-06T15:02:27+05:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/personal-site/docs/html-css/css/utility-class-inheritance/</loc>
+      <loc>http://localhost:1313/personal-site/docs/html-css/css/css-09-utility-class-inheritance/</loc>
       <lastmod>2024-11-06T15:03:01+05:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
@@ -71,13 +71,13 @@
       <priority>0.5</priority>
     </url>
     <url>
-        <loc>http://localhost:1313/personal-site/docs/html-css/css/css_resource/css-size-units/</loc>
+        <loc>http://localhost:1313/personal-site/docs/html-css/css/css_resource/css-04.1-size-units/</loc>
         <lastmod>2024-11-07T10:54:56+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/personal-site/docs/html-css/css/css_resource/css-color-values/</loc>
+        <loc>http://localhost:1313/personal-site/docs/html-css/css/css_resource/css-04.2-color-values/</loc>
         <lastmod>2024-11-07T10:54:40+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>

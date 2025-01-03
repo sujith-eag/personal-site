@@ -1,5 +1,5 @@
 ---
-title: "do-while Loop"
+title: "JS - 02.11 - do-while Loop"
 description: ""
 summary: ""
 date: 2024-11-07T20:50:37+05:30

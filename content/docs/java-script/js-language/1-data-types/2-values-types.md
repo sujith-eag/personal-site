@@ -1,5 +1,5 @@
 ---
-title: "Values and Types"
+title: "JS - 01.02 - Values and Types"
 description: ""
 summary: ""
 date: 2024-11-07T14:43:05+05:30

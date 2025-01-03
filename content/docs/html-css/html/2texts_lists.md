@@ -1,5 +1,5 @@
 ---
-title: "Texts & Lists"
+title: "HTML - 02 - Texts & Lists"
 description: ""
 summary: ""
 date: 2024-11-04T19:52:11+05:30

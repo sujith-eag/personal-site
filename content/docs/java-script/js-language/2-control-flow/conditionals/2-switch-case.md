@@ -1,5 +1,5 @@
 ---
-title: "switch-case"
+title: "JS - 02.02 - switch-case"
 description: ""
 summary: ""
 date: 2024-11-07T20:47:19+05:30

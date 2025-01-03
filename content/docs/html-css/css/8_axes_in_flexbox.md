@@ -1,5 +1,5 @@
 ---
-title: "Axes in Flexbox"
+title: "CSS - 08 - Axes in Flexbox"
 description: ""
 summary: ""
 date: 2024-11-06T15:02:27+05:30
