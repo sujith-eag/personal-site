@@ -15,13 +15,15 @@ seo:
 ---
 
 
+
 A **regular expression (regex)** is a string that defines a search pattern.     
-It consists of a combination of **literal characters** and **meta-characters**. The meta-characters modify the literal characters to introduce flexibility and variability in pattern matching.
+It consists of a combination of **literal characters** and **meta-characters**.     
+The meta-characters modify the literal characters to introduce flexibility and variability in pattern matching.
 
 regex can **match more than just a literal string**. It can match a wide range of text patterns, allowing for flexible search, validation, and manipulation of strings.     
 Regular expressions are commonly used to search for strings that follow a **pattern of interest**.
 
-`"aeiou"` will match **exactly** the string `"aeiou"`. It does not allow for any variation.    
+`"aeiou"` will match **exactly** the string `"aeiou"`. It does not allow for any variation.      
 `"[aeiou]{5}"` will match any string that consists of **five consecutive vowels** (in lowercase). characters must appear consecutively. It will match strings like `"aeiou"`, `"aaaee"`, but not `"abcde"`.
 
 

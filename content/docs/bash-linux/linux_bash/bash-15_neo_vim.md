@@ -43,24 +43,38 @@ ___
 ___
 
 #### Cursor Movement Commands:
-`HJKL` for moving around.     
-`H--L` for left and right.      
-`-JK-` for down and up.      
 
-`0` just zero to move to left end (beginning) of the line in command mode.     
-`$` (shift+4) to move to end of line in command mode.      
-`w, b` to move forward or backwards to the next/previous word or punctuation mark.      
-	`3w` to move 3 word.     
+`hjkl` for moving around.     
+`h--l` for left and right.      
+`-jk-` for down and up.      
+These can be prefixed with numbers to move certain distance. `2k, 10j, 13h`.    
+
+***Moving to Line Extremes :***    
+`0` just zero to move to left end (beginning) of the line.      
+`$` (shift+4) to move to end of line.     
+
+***Moving Over words :***     
+`b` is beginning of current word, `e` is end of current word, `w` is jumping to next words.
+
+`w, b` to move forward or backwards to the next/previous word or punctuation mark. (`3w` to move 3 word).     
 `W, B` moves one word      
 `E, e` similar but takes to end of current word or to next punctuation mark.      
 
-`G` moves to the end of the file. `nG` can be given to move to a particular line. `6G`      
 
-Page Motion        
+***Page Motion :***    
 `Ctrl + b` and `Ctrl + d` to move up and down by half page.       
 `Ctrl + u` and `Ctrl + f` to move up down by one full screen.      
 
 `H, M, L` Head, Middle, Last moves to these points in the file.     
+
+***Absolute movement :***
+`Ctrl + G` gives the current line number.
+(Capital G)
+
+`nG` can be given to move to a particular line as if needed when it mentioned in an error.     
+`40G` moves to the 40th line
+`1G` to the first line
+`G` moves to the end of the file.
 
 ___
 
@@ -68,30 +82,45 @@ ___
 
 Which allows for cut copy an paste.     
 
+***Deleting Text :***    
 There are various forms of Cut (deletion) commands.     
 `x` deletes the current character.       
 `D` deletes from cursor to end of the line.     
 `dd` deletes the current line (`5dd` to delete multiple lines below it)      
 `dw` to delete current word or from cursor till next word (`d5w` to delete 5 words)    
 `db` deletes the previous word or to the left of cursor till end of word.     
-`d` ??    
 
+***Moving Text :***    
 Deleted items are moved into buffer, can be recalled or pasted anywhere.     
-`p` to paste before the cursor    
-`P` to paste after the cursor     
+`p` to paste/put before the cursor    
+`P` to paste/put after the cursor     
 
-`yy` to copy the current line and `yw` to copy the current word to buffer.     
+***Copying Text:***    
+yanking is used to copy the file.    
+`yy` to copy the current line and `yw` to copy the current word to buffer.      
 `6yy` copies the 6 lines from cursor.      
 
-Buffer space: adding any letter from a to z to command allows to select 26 additional buffers.     
+***Buffer space :*** adding any letter from a to z to command allows to select 26 additional buffers.     
 `a6yy` copies 6 lines from the cursor into buffer `a`, then typing `ap` will paste those 6 lines after the cursor.     
 
+***Joining Lines :***   
 `J` to join two consecutive lines into one,      
-`xp` transposes the current character with next character (cut paste)       
+`4J` joins the following four lines with the current one.    
 
-`u` undoes the last changes made     
-`U` undoes all changes made to the current line.     
-`Ctrl + r` to redo the last command     
+
+***Undoing Last Editing Instructions :***
+`u` undoes the last changes made.     
+`u` can be combined with number also so undo multiple steps. `10u`.
+
+
+`U` undoes all changes made to the current line after the cursor moved to that line.
+If the cursor moved to another line then it won't work.
+
+`Ctrl + r` to redo the last command    
+`10[Ctrl + r]` also redoes multiple undoes.
+
+`xp` transposes the current character with next character (similar to cut paste)       
+ 
 
 ___
 
@@ -112,13 +141,33 @@ ___
 
 `/string` or `?string` to search for a string      
 
+#### ***Substitution - Search and replace (:s/ /) :***
+
+`:address/source_pattern/target_pattern/flags`
+
+The source pattern will be replaced by the target pattern in all lines specified by the address.    
+The address can be 1 or many numbers separated by a comma.    
+`1,$` represents all lines in a file, from 1 to the end. `%` can be used instead.    
+`:1,$s/director/member/g` or `:%s/director/member/g`    
+
+Leaving out the `g`, the substitution will be carried out for the `first` occurrence in each address line, but not all in the line.
+
+Target pattern is also optional, if left out then all the occurrences will deleted.     
+`:1,50s/unsigned//g` will delete unsigned from everywhere in lines 1 to 50.    
+
+`$./director/member/g`  works on the current line.    
+`$s/director/member/g`  works on only the last line.    
+
+To Make the substitution interactive, one by one with commands, using `c` as a flag.     
+`:1,$s/director/member/gc`     
+`y` to confirm and `n` to cancel. `q` to quit.
+
+
+___
+
 `%` to match the current section closing braces     
 
 `v` to start selection(visual) and moving any direction. (`gU` to Uppercase everything selected)      
-
-Search and replace a string using `%s`        
-`:%s/,/.`
-
 
 
 ____
@@ -145,12 +194,6 @@ ___
 `:terminal` for a terminal session inside editor
 
 ___________
-___________
-____
-
-No Caps Lock
-
-`<Esc>+u`  To undo the last changes
 
 `:index`  for all the `:` commands
 
@@ -158,41 +201,5 @@ Links are opened by moving on it and pressing enter.
 Capital K which is `Shift+K` on any item will search for documentation ( `Ctrl+]` searches for tags of the word) 
 
 Pressing `<Esc>` will put in Command mode (or will cancel the partially typed command), which allows to retype a command.
-
-`:q! <Enter>` quits the editor, Discarding any changes made.
-
-____
-
-#### Text Editing
-
-`nvim filename` to start editing a file in vim.
-
-`:wq` for writing a file and quitting `:q!` will not save.
-
-***Deletion***
-`x` deletes any character under the cursor. `delete` key does the same. (not in insert mode)
-
-`dw` delete word erases the word the cursor is on, (for clearly deleting a word, the cursor should be on the first character of the word)
-
-`d$` deletes from cursor till end of the line.
-
-
-***Insertion***
-Pressing `i` starts insert mode, with insert starting just before the cursor.
-
-`I`, Capital `I` : starts insert from the beginning of the line the cursor is on currently.
-
-`<Esc>` will bring to Command mode so movement and deletion can happen.
-
-
-***Append***
-`A` Capital A : To append after the line, which is `<shift>+A` pressed in any line will move to the End of that line and starts insert mode.
-
-`a` is similar to `i`, it starts the insert / append after the cursor. `i` starts before the cursor.
-
-(inserting / Insert mode commands for these letters) `i, I, a, A, gI, gi, o, O` 
-
-`gI, gi, o, O` need to be looked up.
-
 
 

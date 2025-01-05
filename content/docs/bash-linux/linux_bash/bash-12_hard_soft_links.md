@@ -16,9 +16,11 @@ seo:
 
 
 
-In a filesystem, directories store links to files and subdirectories. 
+In a file system, directories store links to files and subdirectories. 
 
 These links are primarily categorized into **hard links** and **symbolic links** (also called soft links). Both types of links allow files to have multiple names or references, but they function in different ways.
+
+___
 
 ### **Hard Links**
 
@@ -37,7 +39,7 @@ An **inode** is a data structure that stores information about a file, including
 
 - Hard links are efficient because they don’t require additional storage for the content of the file, only another directory entry pointing to the same inode.
 - Hard links can only be created within the **same partition**. For example, a hard link in `/home` cannot point to a file in `/etc`, as these are typically separate partitions.
-- Deleting one hard link does not delete the file. The file will remain in the filesystem until all hard links to it are removed.
+- Deleting one hard link does not delete the file. The file will remain in the filesystem until all hard links to it are removed.     
     Example: If a file has two hard links, the link count will be 2. Deleting one link reduces the count to 1, but the file still exists. Only when the last link is deleted does the file get removed from the filesystem.
 
 #### **Permissions with Hard Links**
@@ -73,7 +75,7 @@ A **symbolic link** (also known as a **soft link**) is a special type of file th
 ## **Creating Hard and Symbolic Links**
 
 The **`ln`** command is used to create both hard and symbolic links.
-```bash
+```bash {frame="none"}
 ln [-s] existingfile newfile
 ```
 
@@ -83,14 +85,14 @@ ln [-s] existingfile newfile
 
 
 **Creating a Hard Link**:
-```bash
+```bash {frame="none"}
 ln file1.txt file2.txt
 ```
 
 This creates a hard link `file2.txt` that points to the same inode as `file1.txt`.
 
 **Creating a Symbolic Link**:
-```bash
+```bash {frame="none"}
 ln -s /path/to/original/file /path/to/link
 ```
 

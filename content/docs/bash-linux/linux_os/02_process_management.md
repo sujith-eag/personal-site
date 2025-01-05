@@ -15,31 +15,40 @@ seo:
 ---
 
 
-Program is a static entity.
+Two simplest entities support the UNIX System - *file* and *process*.     
+A File is just an array of bytes that can virtually contain anything. It is also related to other files by being part of a single hierarchical structure. File is located with reference to a predetermined place.
+
+Process is the name given to a file when it is executed as a program.    
+Process is simply the "time image" of an executable file. It also belongs to a separate hierarchical structure with parents, children and grandchildren.
+
+
+___
+
+Program is a static entity.     
 A process is a running program, it has a `state` which changes over time.
 The programs are identical but the processes all differ because each will have its own unique state. 
 
-A process is described in many ways,
-Is it currently being run by the CPU or waiting?
-if waiting, where?
-What are the values of its variables? where in memory is it stored?
-If in memory, what resources does it have assigned to it?
-The answers to these questions are just some of the ways we describe a process.
+A process is described in many ways,     
+Is it currently being run by the CPU or waiting?      
+if waiting, where?      
+What are the values of its variables? where in memory is it stored?      
+If in memory, what resources does it have assigned to it?     
+The answers to these questions are just some of the ways we describe a process.      
 
-Whenever a process runs, Linux kernel keeps track of it through process ID (PID).
-The first process the kernel starts after it is loaded is `systemd`.
-`systemd` is responsible for for starting the run-time environment and then monitering the environment.
+Whenever a process runs, Linux kernel keeps track of it through process ID (PID).       
+The first process the kernel starts after it is loaded is `systemd`.      
+`systemd` is responsible for for starting the run-time environment and then monitering the environment.      
 `systemd` is given PID of 1, each new process gets the next available PID.
 
 In Linux, a process can only be created by another process (except `systemd`).
 
-Creating process is referred to as `parent` and created process is `child` where parent process spawns the child process.
+Creating process is referred to as `parent` and created process is `child` where parent process spawns the child process.     
 Spawning of a process utilizes the system call of the parent process to the Linux kernel.
 
 ____
 
 
-***Several forms of child process creation system calls.***
+***Several forms of child process creation system calls. ***      
 * `fork()`  Creates a duplicate process of the parent but with its own PID, own memory and its own resources. Parent and child an run concurrently.
 
 * `vfork()` Same as `fork` except parent is temporarily suspended and child might be permitted to use the parent's memory space.
@@ -50,15 +59,15 @@ ____
 
 * `wait()` Suspended parent process to wait for an event of a child process.
 
-The current process (parent) invokes one of the system call function like `fork()` `clone()`. There are several different clone systems `clone() clone2() clone3()`
+The current process (parent) invokes one of the system call function like `fork()` `clone()`. There are several different clone systems `clone() clone2() clone3()`         
 The difference between `clone fork vfork` is how much will be shared between the parent and the child.
 
-`vfork()` suspends the parent process while the child runs.
+`vfork()` suspends the parent process while the child runs.      
 Another option is to create a child with `clone or fork` and then have the parent `wait`
 
-There are several wait systems,
-with `wait()` the parent is suspended till one child terminates.
-with `waitid()`  `waitpid()` the parent suspends until the child with the specified PID terminates.
+There are several wait systems,      
+with `wait()` the parent is suspended till one child terminates.       
+with `waitid()`  `waitpid()` the parent suspends until the child with the specified PID terminates.       
 These can be modified to make the parent resume under different circumstances also. This makes `wait()` more flexible than `vfork()`
 
 
@@ -221,7 +230,7 @@ This can be altered using `-d s.t`  s is seconds and t is tenth of second
 `-d 1` update every second 
 `-d 0.5` `-d 0.0001`
 
-```bash
+```bash {frame="none"}
 sujith@sujith-Latitude-7490:~$ top -d 5
 
 top - 18:37:00 up  2:35,  1 user,  load average: 0.15, 0.25, 0.25

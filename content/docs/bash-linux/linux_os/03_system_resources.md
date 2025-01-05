@@ -71,7 +71,7 @@ If not installed, then can be got by `-get install sysstat` when in `sudo`
 is used to display multiprocessor statistics.
 It gives a snapshot of processor load.
 
-```bash
+```bash {frame="none"}
 sujith@sujith-Latitude-7490:~$ mpstat
 Linux 6.8.0-51-generic (sujith-Latitude-7490) 	12/27/2024 	_x86_64_	(8 CPU)
 

@@ -1,5 +1,5 @@
 ---
-title: "Bash - 20 - loop"
+title: "Bash - 18.2 - Shell Scripts - Loops"
 description: ""
 summary: ""
 date: 2024-12-29T16:52:30+05:30
@@ -13,7 +13,6 @@ seo:
   canonical: "" # custom canonical URL (optional)
   noindex: false # false (default) or true
 ---
-
 
 ### Objectives
 - Write a loop that applies to one or more commands separately to each file in a set of files.
@@ -168,3 +167,17 @@ do
 done
 ```
 *This creates directories named after each species combined with the temperature.*
+
+___
+### Finding Unique Entries
+To find unique species in CSV files, where the species is the second data field, use a loop to process each file:
+```bash {frame="none"}
+for file in "$@"
+do
+    echo "Unique species in $file:"
+    # Extract species names
+    cut -d , -f 2 "$file" | sort | uniq
+done
+```
+This script loops through all provided filenames and extracts unique species from each.
+

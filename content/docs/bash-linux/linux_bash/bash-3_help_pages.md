@@ -19,14 +19,14 @@ seo:
 Linux provides several forms of support, with the most commonly used being the **man (manual)** pages.
 
 **`--help`** : Pass this option to any command to see the available options.
-```bash
+```bash {frame="none"}
 cd --help
 ls --help
 mkdir --help
 ```
 
 **`help`** : Provides help for built-in shell commands.
-```bash
+```bash {frame="none"}
 help cd
 help echo  
 # Works for built-in commands only
@@ -37,12 +37,12 @@ For commands with both long (`--option`) and short (`-o`) versions, use the shor
 
 ---
 
-### **`man` Pages**
+### **man Pages**
 
 `man` is the manual for a command (if it exists). 
 It expects the name of the command as its argument and displays the corresponding **man page**.
 
-```bash
+```bash {frame="none"}
 man ls
 man mkdir
 ```
@@ -70,11 +70,11 @@ A man page typically contains sections like:
 
 ### **Other Command Line Help**
 
-#### `whatis`
+#### whatis
 
 **`whatis`** : Provides a brief description of a command.
 
-```bash
+```bash {frame="none"}
 sujith@sujith-Latitude-7490:~$ whatis ls pwd rm rmdir mkdir touch echo
 ls (1)               - list directory contents
 pwd (1)              - print name of current/working directory
@@ -89,7 +89,7 @@ echo (1)             - display a line of text
 
 **`whatis`** also supports the `-w` option for wildcards.
 
-```bash
+```bash {frame="none"}
 sujith@sujith-Latitude-7490:~$ whatis -w mkd*
 mkdir (1)            - make directories
 mkdir (2)            - create a directory
@@ -100,36 +100,34 @@ mkdtemp (3)          - create a unique temporary directory
 
 ---
 
-### **Searching in `/usr/bin`**
-
-To see all available commands which are present in contents of `/usr/bin`.
+**Searching in `/usr/bin`** To see all available commands which are present in contents of `/usr/bin`.
 
 ---
 
-### **Using `apropos`**
+### **Using apropos**
 
-`apropos` allows finding commands using a description. 
+`apropos` allows finding commands using a description.     
 It takes a string and searches for commands that has description that match the string provided as an argument.
 
-```bash
+```bash {frame="none"}
 apropos delete
 apropos delete directory
 ```
 
 Using `" "` can help narrow down the search to specific phrases:
 
-```bash
+```bash {frame="none"}
 apropos "remove directory"
 ```
 
 Using regular expressions (e.g., `.*`) to match anything between words:
-```bash
+```bash {frame="none"}
 apropos "remove .* directory"
 apropos "delete .* directory"
 ```
 
 
-```bash
+```bash {frame="none"}
 sujith@sujith-Latitude-7490:~$ apropos "virtual memory"
 mremap (2)           - remap a virtual memory address
 proc_sys_vm (5)      - virtual memory subsystem
@@ -139,10 +137,11 @@ vmstat (8)           - Report virtual memory statistics
 rmdir (2)            - delete a directory
 ```
 
-```bash
+```bash {frame="none"}
 sujith@sujith-Latitude-7490:~$ apropos "user account"
 userdel (8)          - delete a user account and related files
 usermod (8)          - modify a user account
 ```
+
 
 ---

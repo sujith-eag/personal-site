@@ -16,7 +16,7 @@ seo:
 
 
 
-#### Naming Conventions
+***Naming Conventions***
 - Avoid spaces; use `_` or `-` instead.
 - Do not start names with `-` to prevent confusion with options/flags.
 - Stick to characters: `0-9`, `a-z`, `.`, `-`, `_`. Special characters can have different meanings.
@@ -25,10 +25,16 @@ seo:
 ____
 
 
-#### File Movement and Copy Command
+### File Movement and Copy Command
 
-Moving (`mv`), renaming (`mv`), copying (`cp`), creating, deleting (`rm`) files and directories.
+Moving / Renaming (`mv`), copying (`cp`), creating, deleting (`rm`) files and directories.    
+These work by modifying the directory entries of the files they access.
+* `cp` adds an entry to the directory with the name of destination file and inode number that is allotted by the kernel.
+* `mv` replaces the name of an existing directory entry without disturbing its inode number. 
+* `rm` removes an entry from the directory.
 
+
+___
 
 ### [mv](/personal-site/docs/bash-linux/command-docs/mv-move)
 
@@ -40,7 +46,7 @@ mv [options] source destination
 
 To rename a file, `source` is the old name and `destination` is the new name. Otherwise, both need to be in different directories. If `destination` is a directory without a file name, the file's name is not changed.
 
-```bash
+```bash {frame="none"}
 mv fo1.txt ~/temp
 # moves to temp
 
@@ -55,11 +61,11 @@ To move a file into the current directory, `.` can be used as the destination.
 
 **Renaming Files**
 To rename a file or move it to a new location:
-```bash
+```bash {frame="none"}
 mv [old] [new]  # Moves or renames a file
 ```
 
-```bash
+```bash {frame="none"}
 mv trial/draft.txt trial/quotes.txt  
 # Renames draft.txt to quotes.txt
 
@@ -71,7 +77,7 @@ _Note:_ Moving a file to a directory with the same name will silently overwrite 
 
 To move files to a different directory:
 
-```bash
+```bash {frame="none"}
 mv trial/quotes.txt .  
 # Moves to the current directory
 
@@ -83,6 +89,7 @@ We are not allowed to rename multiple files using a single `mv` command as it ha
 
 `-i` and `-f` are interactive and force modes. The difference occurs when a file being moved has the same name at the destination. If not interactive, the destination file is overwritten.
 
+____
 
 ### [cp](/personal-site/docs/bash-linux/command-docs/cp-copy)
 
@@ -92,7 +99,7 @@ The format is the same as `mv`:
 cp [options] source destination
 ```
 
-```bash
+```bash {frame="none"}
 cp [old] [new]  # Copies a file
 
 cp quotes.txt thesis/quotation.txt  
@@ -105,7 +112,7 @@ There are three combinations that can be used:
 - Destination is a directory and a file name, then the file is copied with a new name.
 - Destination is a filename, then the file is copied into the current directory with a new name.
 
-```bash
+```bash {frame="none"}
 cp fo.txt ~zap/fo1.txt
 cp *.txt ~
 cp ~zapp/foo.txt .
@@ -123,17 +130,18 @@ cp ~zapp/foo.txt .
 
 To copy a directory and all its contents, use `-r`:
 
-```bash
+```bash {frame="none"}
 cp -r thesis thesis_backup  
 # Copies the entire directory
 ```
 
+___
 
 ### Operations with Multiple Files and Directories
 
 To copy or move multiple files, list the files followed by the target directory. If given more than one file name followed by a directory name, the directory must be the last argument.
 
-```bash
+```bash {frame="none"}
 cp file1.txt file2.txt target_directory/  
 # Copy multiple files
 
@@ -143,11 +151,11 @@ mv file1.txt file2.txt target_directory/
 
 Using wildcards simplifies this process:
 
-```bash
+```bash {frame="none"}
 cp *.txt backup/  # Copies all .txt files to backup/
 ```
 
-```bash
+```bash {frame="none"}
 $ mkdir backup
 
 $ cp cretures/minotaur.dat creatures/unicorn.dat backup/
@@ -155,6 +163,8 @@ $ cp cretures/minotaur.dat creatures/unicorn.dat backup/
 $ cp minotaur.dat unicorn.dat basilisk.dat
 # Error occurs with multiple files; use wildcards instead
 ```
+
+___
 
 ## Wildcards
 
@@ -173,7 +183,7 @@ Common wildcards include:
 
 #### Using Wildcards in Commands
 
-```bash
+```bash {frame="none"}
 ls *t*ane.pdb   
 # Lists files with 't' and 'ane' in their names
 
@@ -187,7 +197,7 @@ ls ethane.*    # only ethane
 
 Wildcards can be combined for more specific patterns:
 
-```bash
+```bash {frame="none"}
 ls ???ane.pdb  
 # Matches any three characters followed by 'ane.pdb'
 ```
@@ -198,7 +208,7 @@ _Note:_ Be cautious when using wildcards, as errors can occur if not handled pro
 
 ### Using Wildcards for Copying
 
-```bash
+```bash {frame="none"}
 $ cp *dataset* backup/datasets
 # Copy anything with 'dataset' in the name to the datasets directory inside backups
 
@@ -225,7 +235,7 @@ rm [options] file(s)
 
 It can work on multiple files by listing, using wildcards, or both.
 
-```bash
+```bash {frame="none"}
 rm my_file.txt  
 # Deletes the specified file
 ```
@@ -237,7 +247,7 @@ If too many files are being deleted and you want to override the prompts, use `-
 
 `rm` cannot remove directories directly. To remove a directory and its contents, use the recursive `-r` option:
 
-```bash
+```bash {frame="none"}
 rm -r directory_name  
 # Deletes the directory and all its contents
 ```
@@ -246,7 +256,7 @@ To delete a complete sub-hierarchy and override the prompts, use `rm -fr *`.
 
 - To remove files matching a pattern (e.g., all `.txt` files) with confirmation:
 
-```bash
+```bash {frame="none"}
 rm -i *.txt  # Prompts for each .txt file
 ```
 
@@ -254,6 +264,7 @@ _Note:_ The shell does not have a trash bin, so deleted files are permanently re
 
 
 `rmdir` is the only way to delete an empty directory. Use `rmdir -p` to recursively delete parent and current directories.
+
 
 ___
 
@@ -264,13 +275,26 @@ Used to create a directory, in the current directory or a specified path.
 - `-m` `--mode`: Specify the initial permissions of the directory.
 - `-z` `--context`: Specify the SELinux context.
 
-```bash
+```bash {frame="none"}
 mkdir [name]  # Create a directory
 ```
 
-The `-p` option is used to create multiple directories:
 
-```bash
+To create multiple directories at once:
+```bash {frame="none"}
+mkdir north south pacific  
+# Creates three separate directories
+```
+
+
+Creating a Directory Tree, by creating the main directory first, then child directories inside.
+```bash {frame="none"}
+mkdir place place/one place/two
+```
+
+
+The `-p` option is used to create multiple directories at once:
+```bash {frame="none"}
 mkdir -p [path/to/nested/directories]  
 # Creates nested directories
 
@@ -279,19 +303,14 @@ mkdir -p ../project/data ../project/results
 
 To list all nested subdirectories within a directory, use `ls -R`.
 
-To create multiple directories at once:
 
-```bash
-mkdir north south pacific  
-# Creates three separate directories
-```
 
 #### Example:
 To create a directory `2016` with a sub-directory `data` that contains two directories, `processed` and `raw`:
 
 **Method 1: Step-by-Step Creation**
 
-```bash
+```bash {frame="none"}
 mkdir 2016
 mkdir 2016/data
 mkdir 2016/data/processed
@@ -300,7 +319,7 @@ mkdir 2016/data/raw
 
 **Method 2: Navigating and Creating**
 
-```bash
+```bash {frame="none"}
 mkdir 2016
 cd 2016
 mkdir data
@@ -310,7 +329,7 @@ mkdir processed raw
 
 **Method 3: Using `-p`**
 
-```bash
+```bash {frame="none"}
 mkdir -p 2016/data/{processed,raw}  
 # Creates the full structure in one command
 ```

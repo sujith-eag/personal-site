@@ -16,7 +16,6 @@ seo:
 
 
 
-
 File permissions are a mechanism that supports operating system protection, ensuring that users do not misuse system resources like CPU, memory, or the network. 
 
 Since users primarily interact with files, the resources that we protect with permissions are **files** and **directories**.
@@ -59,7 +58,7 @@ In Linux, file permissions are defined for **three categories**:
 
 `chmod` (change mode) is used to alter the permissions of a file or directory.
 
-```bash
+```bash {frame="none"}
 chmod permissions file(s)
 ```
 **`file(s)`** refers to the file(s) or directories to which you want to apply the permissions.
@@ -72,17 +71,17 @@ using symbols (`+`, `-`, `=`), or numeric values (3-digit numbers).
 This approach adds (`+`) or removes (`-`) specific permissions for the **user (`u`)**, **group (`g`)**, or **others (`o`)** along with `r, w, x`
 
 To **remove** write permission for the **group** and **read** permission for **others**:
-```bash
+```bash {frame="none"}
 chmod g-w,o-r file.txt
 ```
 
 To **add** execute permission for the **owner** and **group**:
-```bash
+```bash {frame="none"}
 chmod u+x,g+x file.txt
 ```
 
 To apply changes to **all** categories (owner, group, others) at once using `a`:
-```bash
+```bash {frame="none"}
 chmod a+x file.txt
 ```
 
@@ -92,18 +91,18 @@ chmod a+x file.txt
 Instead of adding or removing permissions, you can **assign** permissions directly using `=`.
 
 To **assign** `rwx` (read, write, and execute) permissions to the **owner**, `r` (read) to the **group**, and **no permissions** to **others**:
-```bash
+```bash {frame="none"}
 chmod u=rwx,g=r,o= file.txt
 ```
 
 If you do not specify a category (like `u=`), it will **not change** the permissions for that category:
-```bash
+```bash {frame="none"}
 chmod g=,o= file.txt  
 # Does not change owner permissions
 ```
 
 You can combine `=` with `+` or `-`:
-```bash
+```bash {frame="none"}
 chmod u=rwx,g-w,o-r file
 chmod u=rwx,g-w,o= file
 chmod u+x,g=r,o-r file
@@ -120,7 +119,7 @@ The numbers are calculated by adding:
 - `1` for **execute (x)**
 
 To set `rwx` (7), `r-x` (5), and no permissions (0) for owner, group, and others respectively:
-```bash
+```bash {frame="none"}
 chmod 750 file.txt  # rwx (7) for owner, r-x (5) for group, no permissions (0) for others
 ```
 
@@ -156,17 +155,17 @@ So, `750` represents the permissions `rwx r-x ---`.
 #### **Commands to Change Ownership**
 
 **`chown`** is used to change both **owner** and **group** of a file or directory.
-```bash
+```bash {frame="none"}
 chown newowner file(s)
 chown newowner:newgroup file(s)
 ```
 
 **`chgrp`** is used to change only the **group** of a file.
-```bash
+```bash {frame="none"}
 chgrp newgroup file(s)
 ```
 
-```bash
+```bash {frame="none"}
 chown fox /home/fox/*.txt
 chown www:www /usr/local/apache/htdocs/*
 
@@ -199,7 +198,7 @@ SELinux provides a more complex and granular mechanism for defining access polic
 The **sticky bit** is used for directories. When set on a directory, it restricts the deletion of files within the directory so that only the **owner** of a file can delete or modify it, even if other users have write permissions for the directory.
 
 - Setting the sticky bit on a directory:
-```bash
+```bash {frame="none"}
 chmod +t /some/directory
 ```
 

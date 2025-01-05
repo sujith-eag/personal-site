@@ -29,8 +29,8 @@ Bash supports several special keystrokes for command-line editing. These keystro
 - **`Ctrl + a`** : Move the cursor to the beginning of the line.
 - **`Ctrl + e`** : Move the cursor to the end of the line.
 
-- **`Ctrl + d`** or **`Delete`** : Delete the character at the cursor.
-- **`Backspace`** : Delete the character before the cursor.
+- **`Ctrl + d`** or **`Delete`** : Delete the character the cursor is on.
+- **`Backspace`** or **`Ctrl + h`** : Delete the character before the cursor.
 - **`Ctrl + w`** : Delete one word, removing characters from the cursor to the beginning of the word.
 
 - **`Ctrl + k`** : Delete everything from the cursor to the end of the line.
@@ -44,6 +44,12 @@ Bash supports several special keystrokes for command-line editing. These keystro
 - **`Esc + l`** : Lowercase the word from the cursor position to the next space.
 - **`Esc + c`** : Capitalize the first letter of the word at the cursor position.
 
+___
+`Crtl + c` : or `Delete` to interrupt a command (Interrupt character).     
+
+`Ctrl + s` : and `Ctrl + q` to Freeze and Release the terminal.    
+
+`Ctrl + j` or `Ctrl + m` : Alternative to Enter Key
 
 ---
 
@@ -113,6 +119,11 @@ $ tail -n 2 animals.csv >> animals-subset.csv
 
 ---
 
+Two Special files are `/dev/null` and `dev/tty`.    
+These files always have zero size and will incinerate any output written to it. This facility is useful to redirecting error messages away from terminal. Or to check the program running successfully without seeing the output. 
+
+
+____
 ### **Pipes**
 
 Pipes (`|`) allow the output of one command to be used as input for another command, enabling efficient chaining of multiple commands.
@@ -140,6 +151,19 @@ $ cat *.txt | sort > newfile.txt
 This command concatenates all `.txt` files, sorts their contents, and writes the sorted output to `newfile.txt`.
 
 
+***When a Command Needs to be Ignorant of Its Source***     
+If `wc *.c`   would give the individual count of all the files and also the total count.      
+By passing the input to `wc` using pipe when the command does not know the source, it outputs just the total of the stream from pipe.
+
+```bash {frame="none"}
+cat *.c | wc -c
+# 9636
+
+if [`cat *c | wc -c` -lt 1474560] ; then
+	echo 'These files will fit into a single 3.5" diskette'
+fi
+```
+
 ---
 
 #### **Using Tilde Expansion**
@@ -156,7 +180,7 @@ List `.txt` files in the home directory:
 $ ls ~/*.txt
 ```
 `*` is a wildcard that replaces everything found and there are more.
-it is termed as `filename` expansion.
+it is termed as `filename` expansion.      
 `ls -l *.txt`    the `.*txt` is replaced by all the files before execution.
 
 ---
@@ -199,7 +223,7 @@ Creates a file (`comm.txt`) containing all the commands typed, which can have th
 
 The history list can store a maximum of 1000 commands. Older commands are discarded when the list exceeds this limit. 
 
-The number preceding the command in the history list can be used to recall it.
+The number preceding the command in the history list can be used to recall it.       
 Using `!100` recalls the command at position 100 in the history list.
 
 ---

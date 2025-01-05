@@ -17,21 +17,23 @@ seo:
 
 
 [*grep*](/personal-site/docs/bash-linux/command-docs/grep) stands for "global/regular expression/print."       
-It is a powerful tool for searching text and is commonly used in Unix text editors.      
+It is a powerful tool for searching text and is commonly used in UNIX text editors.    
+
 `grep` program searches one or more files by line to match against a specified regular expression. Each line is treated as the string and `grep` searches for any substring of the line that matches the regex. If found, by default `grep` outputs the matching lines.
 
 `grep` only applies the POSIX basic regular expression set and extended regular expressions set `egrep` is used.      
 `egrep` can do everything `grep` can do, there is no need to use anything other than `egrep`.
 
 ```bash {frame="none"}
-egrep [options] regex file(s)
+egrep [options] regex filename(s)
 ```
 regex is a string that can but does not have to include metacharacters.     
 Files can be listed with space or wildcards.     
 
 >[!important]
->The regex is placed in single quotes ' ' to avoid metacharacters being interpreted as wildcards and doing filename expansion (globbing) on wildcards `* ? []`. For `|` sets up pipes instead of performing OR action. 
->Items Found in " " are interpreted, they are not treated literally like in ' '
+>The regex is placed in single quotes `' '` to avoid metacharacters being interpreted as wildcards and doing filename expansion (globbing) on wildcards `* ? []`.     
+>`|` will sets up pipes instead of performing OR action. 
+>Items Found in `" "` are interpreted, they are not treated literally like in `' '`
 
 
 
@@ -113,6 +115,7 @@ $ grep -v -n -w "the" haiku.txt
 
 Regex can be placed in a file and `-f` option can be used to reference the file.    
 
+`-e` and `-f` ???
 
 _______
 
@@ -120,7 +123,7 @@ The outputs of `ls` are piped to `egrep`, Outputs are all regular files whose ow
 ```bash {frame="none"}
 ls -l /etc | egrep '^-rwx'
 ```
-    
+
 ???
 ```bash {frame="none"}
 ls -l /etc | egrep '.{13}[^1]'

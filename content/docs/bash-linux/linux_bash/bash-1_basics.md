@@ -15,7 +15,7 @@ seo:
 ---
 
 
-## **Bash: A User Interface**
+### **Bash: A User Interface**
 
 A **shell** is a user interface that runs an interpreter. 
 The *interpreter* is a program that accepts user input, determines how to execute that input, converts it into executable statements, and executes them.
@@ -25,13 +25,13 @@ The development of shells has evolved over time, with major milestones including
 
 ---
 
-## Bash - `Bourne Again SHell`
+### Bash - `Bourne Again SHell`
 *(Git Bash - for Windows interaction with Git)*
 
 The grammar of a shell allows combining existing tools into powerful pipelines and handling large volumes of data automatically. Writing a sequence of commands in a script improves the reproducibility of workflows.
 
 
-## Terminal Basics
+### Terminal Basics
 
 **`$`** is the prompt for typing, followed by a blinking text cursor.   
 
@@ -74,7 +74,7 @@ root   @sujith-Latitude-7490   :home/sujith   #
 
 ---
 
-## General Syntax of a Shell Command
+### General Syntax of a Shell Command
 
 The general structure for a Linux command is:
 ```bash {frame="none"}
@@ -89,16 +89,16 @@ $ ls -F /
 - **`-F`** is the option/flag  
 - **`/`** is the parameter (the root directory)
 
-**Commands, Options, and Parameters**
-A command does not always require arguments or options; 
+**Commands, Options, and Parameters**     
+A command does not always require arguments or options;      
 it can be called with multiple options and arguments (collectively referred to as parameters).
 
-**Options** change the command's behavior:   
-Options typically follow a hyphen `-`.
-Short options start with a single dash (`-`), e.g., `-r`, `-a`.   
-Long options start with double dashes (`--`), e.g., `--reverse`, `--all`.
+**Options** change the command's behavior:        
+Options typically follow a hyphen `-`.     
+Short options start with a single dash (`-`), e.g., `-r`, `-a`.       
+Long options start with double dashes (`--`), e.g., `--reverse`, `--all`.     
 
-Some options may act differently in different commands or same way across multiple commands.
+Some options may act differently in different commands or same way across multiple commands.      
 * `-f / --force` for force and `-i / --interactive` is in `cp, mv, rm`
 * `-r / --recursive` perform recursive operation for `cp` `rm`
 * `-a` for all and `-h / --help`  are common in most commands
@@ -106,17 +106,20 @@ Some options may act differently in different commands or same way across multip
 **Parameters** or **Arguments** are often required or optional, depending on the command. These specify the target of the command, such as file names or directories.
 
 
-{{< callout >}} Each part is separated by spaces; omitting spaces causes confusion about commands, options, and arguments.  
-(e.g., `ls-F` searches for a command called `ls-F`, which does not exist)  
+{{< callout >}} 
+Command options arguments have to be separated by spaces or tabs for the system to interpret them as *words*.
+Omitting spaces causes confusion about commands, options, and arguments.    
+(e.g., `ls-F` searches for a command called `ls-F`, which does not exist)
 {{< /callout >}}
 
-Note that case sensitivity matters:  
+> A contiguous string of spaces and tabs together form *whitespace*. Systems permits the use of one white space which can be many tabs and spaces. Which gets compressed to single space. 
+
+
+Case sensitivity matters:    
 - **`ls -s`** displays the size of files.  
 - **`ls -S`** sorts files by size.
 
 ---
-
-
 
 ### **Common Shell Commands**
 
@@ -124,11 +127,11 @@ Some common shell commands and their functions include:
 
 - **`cd`**: Change the directory
 - **`ls`**: List files in the current directory
-- **`pwd`**: Display the current directory path
+- **`pwd`**: Display the current directory path      
 
-- **`vi`** or **`emacs`**: Text editors for editing files
+- **`vi`** or **`emacs`**: Text editors for editing files     
 
-- **`who`**: Show who is logged in
+- **`who`**: Show who is logged in     
 - **`whoami`**: Display the current username
 - **`hostname`**: Display the computer’s hostname
 - **`uname`**: Show system information (e.g., `uname -o` for the operating system)
@@ -138,12 +141,14 @@ Some common shell commands and their functions include:
 - **`bash`**: Start a new Bash session within the current session
 - **`exit`**: Exit the current Bash session (If it is the outermost one, it will close the window)
 - **`passwd`**: Change the user password
+- **`ps`** : Report a snapshot of the current processes.
+- **`stty`** : Change and prints Terminal Settings (`-a` to show all settings)
 
 ---
 
 ### **Executing Multiple Commands**
 
-Multiple commands can be executed on a single line by separating them with a semicolon `;`. This allows you to run multiple commands consecutively, one after the other.
+Multiple commands can be executed on a single line by separating them with a semicolon `;`. This allows to run multiple commands consecutively, one after the other. The white space between two commands is just for readability purpose.
 
 ```bash {frame="none"}
 $ uname -o; echo $SHELL; who; whoami;
@@ -160,9 +165,16 @@ sujith
 - `who` lists logged-in users.
 - `whoami` displays the current username.
 
+Grouping together commands within parentheses:
+```bash {frmae="none"}
+(wc note ; ls -l note) > newlist
+
+(wc note;ls -l note)>newlist
+```
+
 ---
 
-## **Tab Completion**
+### **Tab Completion**
 
 When typing a directory or command name, pressing **`Tab`** will auto-complete the name if there is only one option. Double pressing **`Tab`** will show all possible options.
 
@@ -177,3 +189,25 @@ Doc tab      O tab     f tab     j tab    cal tab
 - `git add .` stages all files in the current directory for Git.
 - In VS Code, navigate to your project directory and use `code .` to open it.
 - Simply typing `code` in the terminal launches **VS Code**.
+
+
+____
+
+### Command Substitution
+
+Shell enables connecting commands in yet another way, shell enables one or more command argument to be obtained from the standard output of another command. Which is called as Command substitution.     
+
+```bash {frame="none"}
+echo "The date today is `date` "
+
+echo The date today is `date`
+
+echo The date today is $(date)
+
+# The date today is Sat Jan 4 11:33:27 AM IST 2025
+```
+
+The last part represents the output of the `date` command.    
+The date is put inside `backquotes` which are not single quotes.    
+Using single quotes will not execute the command but treats it literally and prints whatever was inside.     
+In Bash it is recommended to use of the form `$(command)` rather than the `backquotes`.  

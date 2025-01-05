@@ -16,7 +16,6 @@ seo:
 
 
 
-
 Linux offers several methods to search for files or directories, with the `find` command being one of the most powerful and versatile tools. 
 
 ### **File Browser**
@@ -33,14 +32,16 @@ _____
 
 The `find` command is used to search for files and directories based on specific criteria. It’s a flexible and powerful tool with many options and actions.
 
-#### **Basic Usage**
 To start using `find`, specify the directory in which to search and the search criteria:
-```bash
+```bash {frame="none"}
 find [directory] [expression]
+
+find path_list selection_criteria action
 ```
 
+
 To list all files and directories under the current directory:
-```bash
+```bash {frame="none"}
 $ find .
 ```
 This command will recursively list all files and directories starting from the current directory.
@@ -51,12 +52,12 @@ ___
 You can filter the search results by file type using the `-type` option:
 
 **`-type d`**: Lists only directories.
-```bash
+```bash {frame="none"}
 $ find . -type d
 ```
 
 **`-type f`**: Lists only files.
-```bash
+```bash {frame="none"}
 $ find . -type f
 ```
 
@@ -65,7 +66,7 @@ ___
 
 #### **Searching by Name**
 To search for files based on their name, use the `-name` option with the string or pattern you're looking for. 
-```bash
+```bash {frame="none"}
 $ find . -name "*.txt"
 ```
 
@@ -73,14 +74,14 @@ This finds all `.txt` files in the current directory and all its subdirectories.
 
 **Note**: Enclose the pattern in quotes to prevent shell expansion of `*`. Otherwise, it will only search for files named literally `*.txt`.
 
-```bash
+```bash {frame="none"}
 find /etc -name "*.conf"
 ```
  to locate files ending in `.conf` in the `/etc` directory.
 
 
 To search case-insensitively, use `-iname`:
-```bash
+```bash {frame="none"}
 $ find . -iname "*.txt"
 ```
 
@@ -91,7 +92,7 @@ ____
 
 You can use `find` with other commands. For example, to count the lines in all `.txt` files found by `find`, use command substitution:
 
-```bash
+```bash {frame="none"}
 $ wc -l $(find . -name "*.txt")
 ```
 
@@ -141,19 +142,19 @@ ___
 These options let you search for files based on when they were last accessed or modified: 
 
 - **`-amin [+-]n`**: Files accessed `n` minutes ago (use `+` for older, `-` for more recent).
-```bash
+```bash {frame="none"}
 $ find . -amin -5  # Files accessed in the last 5 minutes
 ```
 
 - **`-mmin [+-]n`**: Files modified `n` minutes ago.
-```bash
+```bash {frame="none"}
 $ find . -mmin -100  # Files modified in the last 100 minutes
 ```
 
 - **`-atime [+-]n`**: Files accessed `n` days ago.
 - **`-mtime [+-]n`**: Files modified `n` days ago.
 
-```bash
+```bash {frame="none"}
 $ find . -mtime +10  # Files modified more than 10 days ago
 ```
 
@@ -163,15 +164,15 @@ $ find . -mtime +10  # Files modified more than 10 days ago
 You can search for files based on their size:
 - **`-size [+-]n`**: Files of a specific size. Use suffixes like `c` (bytes), `k` (kilobytes), `M` (megabytes), etc.
 
-```bash
+```bash {frame="none"}
 $ find . -size +1M  # Files larger than 1MB
 ```
 
 `n` can be followed by b (512-byte blocks), c (byte), w (2-word bytes), 
-k (kilobytes), M (megabytes) and G (Gigabytes)
-`-size +1024c`  `-size +1k`
-`-size 1000c` means exactly 1000 bytes in size.
-`-size -1000c` means less than 1000 bytes in size.
+k (kilobytes), M (megabytes) and G (Gigabytes)      
+`-size +1024c`  `-size +1k`       
+`-size 1000c` means exactly 1000 bytes in size.      
+`-size -1000c` means less than 1000 bytes in size.     
 
 
 #### **File Type Options**
@@ -182,7 +183,7 @@ You can filter by file type:
 - **`-type l`**: Symbolic links
 -  (s - socket, p - pipe, c - characters, b - block)
 
-```bash
+```bash {frame="none"}
 $ find . -type f  # Regular files
 ```
 
@@ -191,7 +192,7 @@ $ find . -type f  # Regular files
 
 Search for files based on their permissions:
 - **`-perm`**: Files with specific permissions. For example, to find files with `755` permissions:
-```bash
+```bash {frame="none"}
 $ find . -perm 755
 ```
 
@@ -201,13 +202,13 @@ $ find . -perm 755
 Search for files based on their owner or group:
 - **`-user username`**: Files owned by a specific user.
 
-```bash
+```bash {frame="none"}
 $ find . -user alice  # Files owned by 'alice'
 ```
 
 - **`-group groupname`**: Files belonging to a specific group.
 
-```bash
+```bash {frame="none"}
 $ find . -group staff  # Files belonging to the 'staff' group
 ```
 
@@ -220,7 +221,7 @@ _____
 You can combine multiple conditions using logical operators:
 
 **`-and`** or **`-a`**: Represents ANDed conditions.
-```bash
+```bash {frame="none"}
 $ find . -size +100c -and -size -200c
 $ find . -size +100c -size -200c
 $ find . -size +100c -a -200c
@@ -230,19 +231,19 @@ $ find . -size +100c -a -200c
 
 
 **`-or`** or **`-o`**: Represents ORed conditions.
-```bash
+```bash {frame="none"}
 $ find . -size +100c -o -name "*.txt"  
 # Files larger than 100 bytes OR .txt files
 ```
 
 
 **`-not`** or **`!`**: Negates a condition.
-```bash
+```bash {frame="none"}
 $ find . -not -type d  
 # Files that are not directories
 ```
 
-```bash
+```bash {frame="none"}
 find /dev ! -type c
 find /dev -not -type c
 # All files that are not character type.
@@ -257,13 +258,13 @@ ____
 
 - **`-maxdepth`**: Limit the search to a certain depth.
 
-```bash
+```bash {frame="none"}
 $ find . -maxdepth 2  # Search only two levels deep
 ```
 
 - **`-mount`**: Prevents `find` from descending into other mounted filesystems.
 
-```bash
+```bash {frame="none"}
 $ find . -mount -name "*.txt"  # Only search the current filesystem
 ```
 
@@ -278,37 +279,37 @@ You can specify actions to take on the found files using options like `-exec`, `
 
 - **`-delete`**: Deletes all files that match the criteria.
 
-```bash
+```bash {frame="none"}
 $ find . -empty -delete  # Delete all empty files and directories
 ```
 
 - **`-exec`**: Executes a command on each found file. For example, to count lines in each file:
 
-```bash
+```bash {frame="none"}
 $ find . -type f -exec wc -l {} \;  # Count lines in each file
 ```
 
 - **`-ok`**: Similar to `-exec`, but asks for confirmation before executing the command on each file.
 
-```bash
+```bash {frame="none"}
 $ find . -type f -exec chmod 755 {} \;  # Change permissions, with confirmation
 ```
 
 - **`-ls`**: Lists the files using `ls -l` format.
 
-```bash
+```bash {frame="none"}
 $ find . -name "*.txt" -ls
 ```
 
 - **`-prune`**: Prevents `find` from descending into directories.
 
-```bash
+```bash {frame="none"}
 $ find . -name "*.txt" -prune  # Skip directories
 ```
 
 - **`-quit`**: Stops the search after finding the first match.
 
-```bash
+```bash {frame="none"}
 $ find . -name "*.txt" -quit  # Stop after finding the first .txt file
 ```
 
@@ -322,7 +323,7 @@ $ find . -name "*.txt" -quit  # Stop after finding the first .txt file
 
 **`which`**: Finds the path of an executable file which is present in `PATH`.
 
-```bash
+```bash {frame="none"}
 $ which name
 
 $ which ls  
@@ -332,13 +333,13 @@ $ which ls
 
 **`whereis`**: Locates binary, source, and man pages for a command (not reliant on `PATH`).
 
-```bash
+```bash {frame="none"}
 $ whereis man  # Locate the 'man' command and its files
 ```
 
 
 **`locate`**: Uses a database to quickly find files. The database must be updated with `updatedb`.
-```bash
+```bash {frame="none"}
 $ locate man  # Locate files related to 'man'
 ```
 

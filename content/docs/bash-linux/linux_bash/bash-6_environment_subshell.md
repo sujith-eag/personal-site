@@ -16,6 +16,13 @@ seo:
 
 
 
+Computer's don't have the ability to translating the commands into action, it requires a ***Command Interpreter***, which is handled by the outer part of the Operating system called ***Shell*** .    
+It is actually the interface between the user and the kernel.
+
+___
+
+### Shell
+
 A shell session consists of an environment that includes all the variables, functions, and other entities defined during the session. 
 
 When a session ends (using `exit`), or when a new session is started within a session (e.g., using `bash`), the entities defined in that session are no longer available. 
@@ -86,13 +93,25 @@ Then, **`~/.bash_profile`** executes:
 
 Changes made to these configuration files do not take effect until a new session is started. To apply changes immediately within the current session, the **`source`** command can be used to reload a script:
 
-```bash
+```bash {frame="none"}
 source ~/.bashrc
 ```
 
 
 ---
 
+### Internal and External Commands
+
+`$ type echo`     
+`echo is a shell builtin`    
+
+`echo` is not an external command, Shell won't look for it in the PATH variable to locate it when it is called. Rather it will execute it from its own set of built in commands that are not stored as separate files. These Built-in commands are called as Internal commands.
+
+Certain commands are built into the shell because it is difficult or impossible to implement them as separate external commands.    
+The child process inherits the current working directory from its parent as one of the environmental parameters. It is important for the `cd` command to not spawn any children to achieve a change of directory. If it did so through a separate process then after `cd` had completed its run, control would revert to the parent and the original directory would be restored. Then it would be impossible to change directory.  
+
+
+___
 ### **Compiler vs Interpreter**
 
 - **Compiler**: A compiler translates the entire source code of a program into machine code (binary code) that can be executed by the computer. It produces an independent executable file.

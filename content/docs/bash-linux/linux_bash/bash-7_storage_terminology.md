@@ -15,8 +15,6 @@ seo:
 ---
 
 
-
-
 Key concepts related to storage and file management in Linux.
 
 #### **File Space**
@@ -28,15 +26,37 @@ File space is the physical collection of storage devices (like hard drives or SS
 
 OS have commands to show both views but we prefer to see logical view.
 
+___
 
-#### **Files and Directories**
+## **Files and Directories**
 
-**Files**: A file is the smallest logical unit within the file space. It has properties like name, type, and data. Files are stored as a collection of disk blocks. These blocks might not be stored contiguously on the disk and can be scattered.
+### **Files**:     
+A File is the smallest logical unit within the file space. It is a container for storing information or a sequence of characters. It has properties like name, type, and data.     
+The file will contain only what is written in it, there is no end-of-file (eof) mark. A file's size, nor even it's name is not stored in the file itself. It is all kept separately in the disk which is only accessible to the kernel.    
 
-**Directories**: Directories are used to organize files in a hierarchical structure. Subdirectories can be created within a directory to form a deeper organizational structure.
+Files are stored as a collection of disk blocks. These blocks might not be stored contiguously on the disk and can be scattered.    
 
+UNIX treats directories and devices also as files only, so is the shell and kernel.  
 
-#### **Partitioning**
+***Ordinary file (Regular files)*** :     
+Contains only data as a stream of characters. Text files and Binary files.   
+**Text file** contains printable characters which makes up viewable contents.
+**Binary files** contain both printable and unprintable characters that cover the entire ASCII range.  Most of UNIX commands are Binary files. Executable files, Pictures, sound and video files are all binary files.
+
+***Directory files*** :    
+A directory contains no data but keeps the names of files / directories it contains and a number associated with them called the inode number.
+
+***Device files*** :    
+All devices and peripherals are represented by files. To read or write a device, operations has to be performed on its associated file.    
+Device file names are usually found within the `/dev` directory.
+
+### **Directories**:     
+Directories are a folder to store filenames and other directories.    
+Directories are used to organize files in a hierarchical structure. Sub-directories can be created within a directory to form a deeper organizational structure.
+
+___
+
+### **Partitioning**
 
 A **partition** is a physical division of storage on a device. Linux allows partitions to be mounted into specific locations (directories) in the filesystem. Partitions can be used to separate system files, user files, and virtual memory (swap space).
 
@@ -48,18 +68,21 @@ For backing up, we can `unmount` a specific partition containing that content an
 Linux offers three separate partitions: `/boot`, `LVM` and `swap`
 `/boot` must be separated from `LVM` and also `swap` as swap space (virtual memory) is treated differently from rest of the file space and not directly accessed by the user.
 
+___
 
-#### **Inode**
-An **inode** is additional part of Linux file space, it is a data structure that stores metadata about a file, such as:
-
+### **Inode**
+An **inode** is additional part of Linux file space, it is a data structure that doesn't contain the name and contents but stores all metadata about a file, such as:
 - File type (regular file, directory, symbolic link, etc.)
-- File owner and group
-- Permissions
+- File owner UID and group GID
+- File Permissions (nine permissions and three more)
 - Timestamps (creation, modification, access times)
-- Pointers to the data blocks on disk that store the file's content
+- An Array of Pointers to the data blocks on disk that store the file's content
+- Number of links (number of aliases the file has)
+- File size in bytes
 
 Each file, directory, and symbolic link has an associated inode. The inode does not contain the file's name, but the name is associated with the inode through directory entries.
 
+___
 
 #### **Links**
 `link` is a pointer which points from a file in a directory to its `inode` which contains pointers to point at the files's physical blocks.
@@ -69,23 +92,9 @@ Each file, directory, and symbolic link has an associated inode. The inode does 
 - **Symbolic (Soft) Link**:  Points at a hard link. A symbolic link is a reference to another file or directory by its path. A symbolic link can point to a file in another directory and is distinguishable from regular files by the leading `l` in the file permissions (`lrwxrwxrwx`).
 - The name is indicated as `link -> file` where `link` is the symbolic link and the `file` is the item being pointed at. The file will be in another directory.
 
+___
 
-#### **The Top-Level Directory Structure**
-
-Every Linux distribution has a standard set of top-level directories. Some of the common top-level directories include:
-
-- **`/boot`**: Contains files required to boot the system, such as the Linux kernel.
-- **`/dev`**: Contains device files, which represent hardware devices.
-- **`/etc`**: Contains system configuration files.
-- **`/home`**: The home directory for users.
-- **`/proc`**: A virtual filesystem providing information about processes and kernel parameters.
-- **`/var`**: Contains variable data such as log files and databases.
-- **`/usr`**: Contains user binaries, libraries, and documentation.
-
-[image of top-level directory structure of Linux]
-
-
-#### **Relative and Absolute Paths**
+### **Relative and Absolute Paths**
 
 We will be in `current working directory` and accessing files in another directory needs specifying a directory path.
 
@@ -101,23 +110,25 @@ There are two primary ways to access files:
 - `..`  : Represents the parent directory.
 - The path can be omitted for executable files if the file is stored in our `PATH` variable.
 
+___
 
 #### **`PATH` Variable**
 
 The `PATH` environment variable holds a list of directories where executable files are located. When you type a command like `ls` or `cat`, the system checks these directories to find the corresponding executable.
 
-```bash
+```bash {frame="none"}
 /home/sujith/.nvm/versions/node/v20.17.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
 ```
 
 `PATH` variable  can be modified, to add new directories:
 
-```bash
+```bash {frame="none"}
 PATH=$PATH:/new/directory
 
 PATH=new_directory:$PATH
 ```
 
+___
 
 #### **Filename Arguments and Wildcards**
 
@@ -138,4 +149,38 @@ PATH=new_directory:$PATH
 
 `ls file?.{dat,txt}`: Lists files like `file1.dat`, `file2.txt`, etc.
 
----
+
+___
+
+#### **The Top-Level Directory Structure**
+
+[image of top-level directory structure of Linux]
+
+Every Linux distribution has a standard set of top-level directories. Some of the common top-level directories include:
+
+**`/boot`**: Contains files required to boot the system, such as the Linux kernel.
+
+**`/dev`**: Contains all device files, which represent hardware devices. These files do not occupy space on the disk.
+
+**`/etc`**: Contains system configuration files.
+
+**`/proc`**: A virtual filesystem providing information about processes and kernel parameters.
+
+**`/usr`**: Contains user binaries, libraries, and documentation.
+
+`/usr/share/man` : Contains the man pages.
+
+`/bin` and `/usr/bin` : Contains all commonly used UNIX commands (Binaries, hence the name bin).
+
+`/sbin` and `/usr/sbin` : Commands a system administrator can execute would be in these directories.
+
+___
+
+Users work with their own files, write programs and create files. These are available in `/tmp, /var, /home`.   
+
+**`/home`**: The home directory for all the users.
+
+**`/tmp`** : Where a user is allowed to create temporary files which are wiped away regularly by the system.
+
+
+**`/var`**: Contains variable data such as log files and databases of the file system.

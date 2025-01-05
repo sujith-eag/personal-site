@@ -97,6 +97,23 @@ ___
 - **No commercial support**: Organizations might face challenges without guaranteed support.
 - **Lagging behind on features and security**: Sometimes updates and fixes may be slower compared to proprietary systems.
 
+UNIX systems have the same system calls which are described in the POSIX specification.
+
+___
+
+#### Features of UNIX
+
+Multiuser System:    
+Multitasking Sytem:    
+Building block Approach : Hundreds of command which perform one simple job. Commands can be connected with pipe to manipulate data which are called as filters.    
+It is through Pipes UNIX implements the "small is beautiful" philosophy.
+UNIX tools are designed with a requirement that the output of one tool be used as input to another. That's why the architecture of UNIX had to make commands that throw out excessive verbiage and clutter the output - which is the reason why UNIX Programs are not interactive.     
+If the output of `ls` contained headers or prompted users for a specific information, this output couldn't have been used as useful input to any other commands.
+
+By interconnecting various tools, there can be a large combination of usages.
+
+
+
 ---
 
 ### Roles of OS Kernel

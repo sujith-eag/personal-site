@@ -15,7 +15,7 @@ seo:
 ---
 
 
-### Combined [] with  *  +  ?
+### Combining [] with  *  +  ?
 
 `[abc]+`     
 : Matches one or more occurrences of `a`, `b`, or `c`. The sequence must contain at least one character from the set.

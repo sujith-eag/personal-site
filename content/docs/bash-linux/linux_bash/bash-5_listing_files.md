@@ -18,8 +18,7 @@ seo:
 
 The **[*ls*](/personal-site/docs/bash-linux/command-docs/ls-list)** command is used to list files and directories in the current directory.
 
-#### **Basic Usage**
-```bash
+```bash {frame="none"}
 ls ~/Desktop/trial
 # Using absolute path
 
@@ -30,19 +29,19 @@ ls -F Desktop
 # List contents of Desktop directory
 ```
 
-These commands display the contents of the `Desktop` directory (or any specified directory). 
+These commands display the contents of the `Desktop` directory (or any specified directory).    
 The `-F` option appends a character to each file to indicate its type (e.g., `/` for directories, `*` for executables).
 
 
-#### **Using `ls` with Multiple Directories**
+#### **ls with Multiple Directories**
 
-```bash
+```bash {frame="none"}
 sujith@sujith-Latitude-7490:~$ ls ./ Desktop/ Documents/ Downloads/
 ```
 
-In this example, the `ls` command lists the contents of multiple directories. However, using semicolons `;` between the commands might not work as intended because semicolons separate commands rather than options.
+In this example, the `ls` command lists the contents of multiple directories.      However, using semicolons `;` between the commands might not work as intended because semicolons separate commands rather than options.
 
-```bash
+```bash {frame="none"}
 sujith@sujith-Latitude-7490:~$ ls .; Desktop/; Documents/; Downloads/;
 
 Desktop    Downloads  Music     Public  snap       Videos
@@ -60,11 +59,11 @@ The `ls` command should be executed separately for each directory or with valid 
 
 `-l` option to get a more detailed view of files and directories:
 
-```bash
+```bash {frame="none"}
 sujith@sujith-Latitude-7490:~/Desktop$ ls -l
 ```
 
-```bash
+```bash {frame="none"}
 total 24
 drwxrwxr-x 4 sujith sujith 4096 Sep  3 15:29  courses
 drwxr-xr-x 2 sujith sujith 4096 Dec 22 16:11 'MCA Sem1 Text Books'
@@ -126,7 +125,7 @@ Options combined with `ls` to modify its output:
 
 These options an be combined in any order:
 
-```bash
+```bash {frame="none"}
 ls -Fal    # Combined options (file types, human-readable sizes, and long listing)
 ls -la     # Long listing with hidden files
 ls -al     # Another variation
