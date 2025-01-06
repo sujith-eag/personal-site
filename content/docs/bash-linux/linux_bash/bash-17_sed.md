@@ -51,7 +51,7 @@ Both work the same way they do in `grep`
 
 ____
 
-```bash {frame"none"}
+```bash {frame="none"}
 sed '3q' emp.lst
 ```
 `3q` can be broken down to the address `3` and the action `q (quit)`.      
@@ -179,4 +179,6 @@ It is similar to the vi command `i` for insert, `a` for append, `c` to change, `
 .
 .
 .
+
+____
 
