@@ -63,13 +63,13 @@ When it is enclosed in quotes and followed by  a file name, then it simulates th
 
 
 To select first two lines similar to head command.
-```bash {frame"none"}
+```bash {frame="none"}
 sed -n '1,2p' emp.lst
 ```
 
 
 `$` to select the last line. which is simulating the tail command.
-```bash {frame"none"}
+```bash {frame="none"}
 sed -n '$p' emp.lst
 ```
 
