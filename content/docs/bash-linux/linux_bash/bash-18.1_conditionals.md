@@ -223,7 +223,7 @@ case "$choice" in
 esac
 ```
 
-To handle multiple patterns using same case by using `|` to delimit multiple patterns like when input can be `y` or `Y`
+To handle ***multiple patterns*** using same case by using `|` to delimit multiple patterns like when input can be `y` or `Y`
 ```bash {frame="none"}
 echo "Do you want to continue? (y/n): \c"
 read answer
@@ -235,4 +235,12 @@ esac
 
 
 ___
+
+
+#### expr : Computation and String Handling
+
+Not needed for Korn or Bash shell
+
+___
+
 
