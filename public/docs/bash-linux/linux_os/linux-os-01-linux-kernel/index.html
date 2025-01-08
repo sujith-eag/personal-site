@@ -771,15 +771,15 @@
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-19-shell-scripting/">Bash - 19 - Shell Scripting</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-awk/">Bash - 18 - awk</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-20-loop/">Bash - 20 - loop</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
   </li>
       </ul>
     </details>
@@ -1565,15 +1565,15 @@
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-19-shell-scripting/">Bash - 19 - Shell Scripting</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-awk/">Bash - 18 - awk</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-20-loop/">Bash - 20 - loop</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
   </li>
       </ul>
     </details>
@@ -1603,7 +1603,11 @@
           </ul>
         </li>
         <li><a href="#linux-kernel">Linux Kernel:</a></li>
-        <li><a href="#why-linux">Why Linux?</a></li>
+        <li><a href="#why-linux">Why Linux?</a>
+          <ul>
+            <li><a href="#features-of-unix">Features of UNIX</a></li>
+          </ul>
+        </li>
         <li><a href="#roles-of-os-kernel">Roles of OS Kernel</a></li>
       </ul>
     </li>
@@ -1632,7 +1636,11 @@
           </ul>
         </li>
         <li><a href="#linux-kernel">Linux Kernel:</a></li>
-        <li><a href="#why-linux">Why Linux?</a></li>
+        <li><a href="#why-linux">Why Linux?</a>
+          <ul>
+            <li><a href="#features-of-unix">Features of UNIX</a></li>
+          </ul>
+        </li>
         <li><a href="#roles-of-os-kernel">Roles of OS Kernel</a></li>
       </ul>
     </li>
@@ -1718,6 +1726,16 @@ The kernel is kept small, but additional server-like components are added:</p>
 <li><strong>No commercial support</strong>: Organizations might face challenges without guaranteed support.</li>
 <li><strong>Lagging behind on features and security</strong>: Sometimes updates and fixes may be slower compared to proprietary systems.</li>
 </ul>
+<p>UNIX systems have the same system calls which are described in the POSIX specification.</p>
+<hr>
+<h4 id="features-of-unix">Features of UNIX<a href="#features-of-unix" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Multiuser System:<br>
+Multitasking Sytem:<br>
+Building block Approach : Hundreds of command which perform one simple job. Commands can be connected with pipe to manipulate data which are called as filters.<br>
+It is through Pipes UNIX implements the &ldquo;small is beautiful&rdquo; philosophy.
+UNIX tools are designed with a requirement that the output of one tool be used as input to another. That&rsquo;s why the architecture of UNIX had to make commands that throw out excessive verbiage and clutter the output - which is the reason why UNIX Programs are not interactive.<br>
+If the output of <code>ls</code> contained headers or prompted users for a specific information, this output couldn&rsquo;t have been used as useful input to any other commands.</p>
+<p>By interconnecting various tools, there can be a large combination of usages.</p>
 <hr>
 <h3 id="roles-of-os-kernel">Roles of OS Kernel<a href="#roles-of-os-kernel" class="anchor" aria-hidden="true">#</a> </h3>
 <table>

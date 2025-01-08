@@ -46,7 +46,6 @@
 
 <meta property="og:title" content="Bash - 05 - Listing Files">
 <meta property="og:description" content="The ls command is used to list files and directories in the current directory.
-Basic Usage
 
 
 
@@ -75,7 +74,6 @@ The -F option appends a character to each file to indicate its type (e.g., / for
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://localhost:1313/personal-site/cover.png"><meta name="twitter:title" content="Bash - 05 - Listing Files">
 <meta name="twitter:description" content="The ls command is used to list files and directories in the current directory.
-Basic Usage
 
 
 
@@ -813,15 +811,15 @@ The -F option appends a character to each file to indicate its type (e.g., / for
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-19-shell-scripting/">Bash - 19 - Shell Scripting</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-awk/">Bash - 18 - awk</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-20-loop/">Bash - 20 - loop</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
   </li>
       </ul>
     </details>
@@ -1607,15 +1605,15 @@ The -F option appends a character to each file to indicate its type (e.g., / for
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-19-shell-scripting/">Bash - 19 - Shell Scripting</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-awk/">Bash - 18 - awk</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-20-loop/">Bash - 20 - loop</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
   </li>
       </ul>
     </details>
@@ -1639,8 +1637,7 @@ The -F option appends a character to each file to indicate its type (e.g., / for
       <ul>
         <li>
           <ul>
-            <li><a href="#basic-usage"><strong>Basic Usage</strong></a></li>
-            <li><a href="#using-ls-with-multiple-directories"><strong>Using <code>ls</code> with Multiple Directories</strong></a></li>
+            <li><a href="#ls-with-multiple-directories"><strong>ls with Multiple Directories</strong></a></li>
           </ul>
         </li>
         <li><a href="#long-listing-format"><strong>Long Listing Format</strong></a>
@@ -1670,8 +1667,7 @@ The -F option appends a character to each file to indicate its type (e.g., / for
       <ul>
         <li>
           <ul>
-            <li><a href="#basic-usage"><strong>Basic Usage</strong></a></li>
-            <li><a href="#using-ls-with-multiple-directories"><strong>Using <code>ls</code> with Multiple Directories</strong></a></li>
+            <li><a href="#ls-with-multiple-directories"><strong>ls with Multiple Directories</strong></a></li>
           </ul>
         </li>
         <li><a href="#long-listing-format"><strong>Long Listing Format</strong></a>
@@ -1689,16 +1685,15 @@ The -F option appends a character to each file to indicate its type (e.g., / for
 
 			</nav>
 			<p>The <strong><a href="/personal-site/docs/bash-linux/command-docs/ls-list"><em>ls</em></a></strong> command is used to list files and directories in the current directory.</p>
-<h4 id="basic-usage"><strong>Basic Usage</strong><a href="#basic-usage" class="anchor" aria-hidden="true">#</a> </h4>
 
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls ~/Desktop/trial
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls ~/Desktop/trial
 </span></span><span class="line"><span class="cl"><span class="c1"># Using absolute path</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">ls /Users/sujith/Desktop/trial
@@ -1708,30 +1703,30 @@ The -F option appends a character to each file to indicate its type (e.g., / for
 </span></span><span class="line"><span class="cl"><span class="c1"># List contents of Desktop directory</span></span></span></code></pre></div>
   </figure>
 </div>
-<p>These commands display the contents of the <code>Desktop</code> directory (or any specified directory).
+<p>These commands display the contents of the <code>Desktop</code> directory (or any specified directory).<br>
 The <code>-F</code> option appends a character to each file to indicate its type (e.g., <code>/</code> for directories, <code>*</code> for executables).</p>
-<h4 id="using-ls-with-multiple-directories"><strong>Using <code>ls</code> with Multiple Directories</strong><a href="#using-ls-with-multiple-directories" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="ls-with-multiple-directories"><strong>ls with Multiple Directories</strong><a href="#ls-with-multiple-directories" class="anchor" aria-hidden="true">#</a> </h4>
 
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sujith@sujith-Latitude-7490:~$ ls ./ Desktop/ Documents/ Downloads/</span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sujith@sujith-Latitude-7490:~$ ls ./ Desktop/ Documents/ Downloads/</span></span></code></pre></div>
   </figure>
 </div>
-<p>In this example, the <code>ls</code> command lists the contents of multiple directories. However, using semicolons <code>;</code> between the commands might not work as intended because semicolons separate commands rather than options.</p>
+<p>In this example, the <code>ls</code> command lists the contents of multiple directories.      However, using semicolons <code>;</code> between the commands might not work as intended because semicolons separate commands rather than options.</p>
 
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sujith@sujith-Latitude-7490:~$ ls .<span class="p">;</span> Desktop/<span class="p">;</span> Documents/<span class="p">;</span> Downloads/<span class="p">;</span>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sujith@sujith-Latitude-7490:~$ ls .<span class="p">;</span> Desktop/<span class="p">;</span> Documents/<span class="p">;</span> Downloads/<span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">Desktop    Downloads  Music     Public  snap       Videos
 </span></span><span class="line"><span class="cl">Documents  grep.txt   Pictures  repos   Templates
@@ -1748,22 +1743,22 @@ The <code>-F</code> option appends a character to each file to indicate its type
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sujith@sujith-Latitude-7490:~/Desktop$ ls -l</span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sujith@sujith-Latitude-7490:~/Desktop$ ls -l</span></span></code></pre></div>
   </figure>
 </div>
 
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">total <span class="m">24</span>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">total <span class="m">24</span>
 </span></span><span class="line"><span class="cl">drwxrwxr-x <span class="m">4</span> sujith sujith <span class="m">4096</span> Sep  <span class="m">3</span> 15:29  courses
 </span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">2</span> sujith sujith <span class="m">4096</span> Dec <span class="m">22</span> 16:11 <span class="s1">&#39;MCA Sem1 Text Books&#39;</span>
 </span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">4</span> sujith sujith <span class="m">4096</span> Dec <span class="m">18</span> 19:56  obsidian-vaults
@@ -1823,11 +1818,11 @@ The <code>-F</code> option appends a character to each file to indicate its type
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls -Fal    <span class="c1"># Combined options (file types, human-readable sizes, and long listing)</span>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls -Fal    <span class="c1"># Combined options (file types, human-readable sizes, and long listing)</span>
 </span></span><span class="line"><span class="cl">ls -la     <span class="c1"># Long listing with hidden files</span>
 </span></span><span class="line"><span class="cl">ls -al     <span class="c1"># Another variation</span></span></span></code></pre></div>
   </figure>

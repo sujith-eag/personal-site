@@ -777,15 +777,15 @@ The environment&rsquo;s role is to capture definitions and previous commands fro
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-19-shell-scripting/">Bash - 19 - Shell Scripting</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-awk/">Bash - 18 - awk</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-20-loop/">Bash - 20 - loop</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
   </li>
       </ul>
     </details>
@@ -1571,15 +1571,15 @@ The environment&rsquo;s role is to capture definitions and previous commands fro
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-19-shell-scripting/">Bash - 19 - Shell Scripting</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-awk/">Bash - 18 - awk</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-20-loop/">Bash - 20 - loop</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
   </li>
       </ul>
     </details>
@@ -1599,20 +1599,19 @@ The environment&rsquo;s role is to capture definitions and previous commands fro
   <h3>On this page</h3>
     <nav id="toc">
   <ul>
-    <li><a href="#bash-a-user-interface"><strong>Bash: A User Interface</strong></a></li>
-    <li><a href="#bash---bourne-again-shell">Bash - <code>Bourne Again SHell</code></a></li>
-    <li><a href="#terminal-basics">Terminal Basics</a>
+    <li>
       <ul>
+        <li><a href="#bash-a-user-interface"><strong>Bash: A User Interface</strong></a></li>
+        <li><a href="#bash---bourne-again-shell">Bash - <code>Bourne Again SHell</code></a></li>
+        <li><a href="#terminal-basics">Terminal Basics</a></li>
         <li><a href="#shell-command-prompt"><strong>Shell Command Prompt</strong></a></li>
-      </ul>
-    </li>
-    <li><a href="#general-syntax-of-a-shell-command">General Syntax of a Shell Command</a>
-      <ul>
+        <li><a href="#general-syntax-of-a-shell-command">General Syntax of a Shell Command</a></li>
         <li><a href="#common-shell-commands"><strong>Common Shell Commands</strong></a></li>
         <li><a href="#executing-multiple-commands"><strong>Executing Multiple Commands</strong></a></li>
+        <li><a href="#tab-completion"><strong>Tab Completion</strong></a></li>
+        <li><a href="#command-substitution">Command Substitution</a></li>
       </ul>
     </li>
-    <li><a href="#tab-completion"><strong>Tab Completion</strong></a></li>
   </ul>
 </nav>
 </div>
@@ -1628,36 +1627,35 @@ The environment&rsquo;s role is to capture definitions and previous commands fro
     <div class="page-links">
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#bash-a-user-interface"><strong>Bash: A User Interface</strong></a></li>
-    <li><a href="#bash---bourne-again-shell">Bash - <code>Bourne Again SHell</code></a></li>
-    <li><a href="#terminal-basics">Terminal Basics</a>
+    <li>
       <ul>
+        <li><a href="#bash-a-user-interface"><strong>Bash: A User Interface</strong></a></li>
+        <li><a href="#bash---bourne-again-shell">Bash - <code>Bourne Again SHell</code></a></li>
+        <li><a href="#terminal-basics">Terminal Basics</a></li>
         <li><a href="#shell-command-prompt"><strong>Shell Command Prompt</strong></a></li>
-      </ul>
-    </li>
-    <li><a href="#general-syntax-of-a-shell-command">General Syntax of a Shell Command</a>
-      <ul>
+        <li><a href="#general-syntax-of-a-shell-command">General Syntax of a Shell Command</a></li>
         <li><a href="#common-shell-commands"><strong>Common Shell Commands</strong></a></li>
         <li><a href="#executing-multiple-commands"><strong>Executing Multiple Commands</strong></a></li>
+        <li><a href="#tab-completion"><strong>Tab Completion</strong></a></li>
+        <li><a href="#command-substitution">Command Substitution</a></li>
       </ul>
     </li>
-    <li><a href="#tab-completion"><strong>Tab Completion</strong></a></li>
   </ul>
 </nav>
     </div>
   </details>
 
 			</nav>
-			<h2 id="bash-a-user-interface"><strong>Bash: A User Interface</strong><a href="#bash-a-user-interface" class="anchor" aria-hidden="true">#</a> </h2>
+			<h3 id="bash-a-user-interface"><strong>Bash: A User Interface</strong><a href="#bash-a-user-interface" class="anchor" aria-hidden="true">#</a> </h3>
 <p>A <strong>shell</strong> is a user interface that runs an interpreter.
 The <em>interpreter</em> is a program that accepts user input, determines how to execute that input, converts it into executable statements, and executes them.
 The <strong>environment</strong>&rsquo;s role is to capture definitions and previous commands from the current session, allowing users to easily recall them and simplify their interaction with the system.</p>
 <p>The development of shells has evolved over time, with major milestones including the <strong>Thompson Shell</strong> (1971), <strong>Mashey Shell</strong>, <strong>Bourne Shell</strong> (1977), <strong>C-shell</strong> (1978), and <strong>TC-Shell</strong> (1983). The <strong>Bourne Again Shell (Bash)</strong>, released in 1989, is one of the most popular shells used today.</p>
 <hr>
-<h2 id="bash---bourne-again-shell">Bash - <code>Bourne Again SHell</code><a href="#bash---bourne-again-shell" class="anchor" aria-hidden="true">#</a> </h2>
+<h3 id="bash---bourne-again-shell">Bash - <code>Bourne Again SHell</code><a href="#bash---bourne-again-shell" class="anchor" aria-hidden="true">#</a> </h3>
 <p><em>(Git Bash - for Windows interaction with Git)</em></p>
 <p>The grammar of a shell allows combining existing tools into powerful pipelines and handling large volumes of data automatically. Writing a sequence of commands in a script improves the reproducibility of workflows.</p>
-<h2 id="terminal-basics">Terminal Basics<a href="#terminal-basics" class="anchor" aria-hidden="true">#</a> </h2>
+<h3 id="terminal-basics">Terminal Basics<a href="#terminal-basics" class="anchor" aria-hidden="true">#</a> </h3>
 <p><strong><code>$</code></strong> is the prompt for typing, followed by a blinking text cursor.</p>
 
 
@@ -1720,7 +1718,7 @@ The <code>#</code> symbol signifies that the user has root (administrator) privi
   </figure>
 </div>
 <hr>
-<h2 id="general-syntax-of-a-shell-command">General Syntax of a Shell Command<a href="#general-syntax-of-a-shell-command" class="anchor" aria-hidden="true">#</a> </h2>
+<h3 id="general-syntax-of-a-shell-command">General Syntax of a Shell Command<a href="#general-syntax-of-a-shell-command" class="anchor" aria-hidden="true">#</a> </h3>
 <p>The general structure for a Linux command is:</p>
 
 
@@ -1750,11 +1748,11 @@ The <code>#</code> symbol signifies that the user has root (administrator) privi
 <li><strong><code>-F</code></strong> is the option/flag</li>
 <li><strong><code>/</code></strong> is the parameter (the root directory)</li>
 </ul>
-<p><strong>Commands, Options, and Parameters</strong>
-A command does not always require arguments or options;
+<p><strong>Commands, Options, and Parameters</strong><br>
+A command does not always require arguments or options;<br>
 it can be called with multiple options and arguments (collectively referred to as parameters).</p>
 <p><strong>Options</strong> change the command&rsquo;s behavior:<br>
-Options typically follow a hyphen <code>-</code>.
+Options typically follow a hyphen <code>-</code>.<br>
 Short options start with a single dash (<code>-</code>), e.g., <code>-r</code>, <code>-a</code>.<br>
 Long options start with double dashes (<code>--</code>), e.g., <code>--reverse</code>, <code>--all</code>.</p>
 <p>Some options may act differently in different commands or same way across multiple commands.</p>
@@ -1769,14 +1767,18 @@ Long options start with double dashes (<code>--</code>), e.g., <code>--reverse</
   <div class="callout-content">
     
     <div class="callout-body">
-      <p>Each part is separated by spaces; omitting spaces causes confusion about commands, options, and arguments.<br>
+      <p>Command options arguments have to be separated by spaces or tabs for the system to interpret them as <em>words</em>.
+Omitting spaces causes confusion about commands, options, and arguments.<br>
 (e.g., <code>ls-F</code> searches for a command called <code>ls-F</code>, which does not exist)</p>
 
     </div>
   </div>
 </div>
 
-<p>Note that case sensitivity matters:</p>
+<blockquote>
+<p>A contiguous string of spaces and tabs together form <em>whitespace</em>. Systems permits the use of one white space which can be many tabs and spaces. Which gets compressed to single space.</p>
+</blockquote>
+<p>Case sensitivity matters:</p>
 <ul>
 <li><strong><code>ls -s</code></strong> displays the size of files.</li>
 <li><strong><code>ls -S</code></strong> sorts files by size.</li>
@@ -1824,10 +1826,16 @@ Long options start with double dashes (<code>--</code>), e.g., <code>--reverse</
 <li>
 <p><strong><code>passwd</code></strong>: Change the user password</p>
 </li>
+<li>
+<p><strong><code>ps</code></strong> : Report a snapshot of the current processes.</p>
+</li>
+<li>
+<p><strong><code>stty</code></strong> : Change and prints Terminal Settings (<code>-a</code> to show all settings)</p>
+</li>
 </ul>
 <hr>
 <h3 id="executing-multiple-commands"><strong>Executing Multiple Commands</strong><a href="#executing-multiple-commands" class="anchor" aria-hidden="true">#</a> </h3>
-<p>Multiple commands can be executed on a single line by separating them with a semicolon <code>;</code>. This allows you to run multiple commands consecutively, one after the other.</p>
+<p>Multiple commands can be executed on a single line by separating them with a semicolon <code>;</code>. This allows to run multiple commands consecutively, one after the other. The white space between two commands is just for readability purpose.</p>
 
 
 
@@ -1851,8 +1859,22 @@ Long options start with double dashes (<code>--</code>), e.g., <code>--reverse</
 <li><code>who</code> lists logged-in users.</li>
 <li><code>whoami</code> displays the current username.</li>
 </ul>
+<p>Grouping together commands within parentheses:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame is-terminal not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frmae="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">(</span>wc note <span class="p">;</span> ls -l note<span class="o">)</span> &gt; newlist
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">(</span>wc note<span class="p">;</span>ls -l note<span class="o">)</span>&gt;newlist</span></span></code></pre></div>
+  </figure>
+</div>
 <hr>
-<h2 id="tab-completion"><strong>Tab Completion</strong><a href="#tab-completion" class="anchor" aria-hidden="true">#</a> </h2>
+<h3 id="tab-completion"><strong>Tab Completion</strong><a href="#tab-completion" class="anchor" aria-hidden="true">#</a> </h3>
 <p>When typing a directory or command name, pressing <strong><code>Tab</code></strong> will auto-complete the name if there is only one option. Double pressing <strong><code>Tab</code></strong> will show all possible options.</p>
 <p>Typing <code>Doc</code> + <strong><code>Tab</code></strong> may automatically complete to <strong>Documents</strong>.</p>
 
@@ -1873,6 +1895,30 @@ Long options start with double dashes (<code>--</code>), e.g., <code>--reverse</
 <li>In VS Code, navigate to your project directory and use <code>code .</code> to open it.</li>
 <li>Simply typing <code>code</code> in the terminal launches <strong>VS Code</strong>.</li>
 </ul>
+<hr>
+<h3 id="command-substitution">Command Substitution<a href="#command-substitution" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Shell enables connecting commands in yet another way, shell enables one or more command argument to be obtained from the standard output of another command. Which is called as Command substitution.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;The date today is `date` &#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> The date today is <span class="sb">`</span>date<span class="sb">`</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> The date today is <span class="k">$(</span>date<span class="k">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># The date today is Sat Jan 4 11:33:27 AM IST 2025</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>The last part represents the output of the <code>date</code> command.<br>
+The date is put inside <code>backquotes</code> which are not single quotes.<br>
+Using single quotes will not execute the command but treats it literally and prints whatever was inside.<br>
+In Bash it is recommended to use of the form <code>$(command)</code> rather than the <code>backquotes</code>.</p>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				</div>

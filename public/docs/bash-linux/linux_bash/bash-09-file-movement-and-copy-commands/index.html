@@ -54,7 +54,8 @@ Use single quotes &#39; &#39; for names with spaces or special characters.
 
 
 File Movement and Copy Command
-Moving (mv), renaming (mv), copying (cp), creating, deleting (rm) files and directories.">
+Moving / Renaming (mv), copying (cp), creating, deleting (rm) files and directories.
+These work by modifying the directory entries of the files they access.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-09-file-movement-and-copy-commands/"><meta property="og:image" content="http://localhost:1313/personal-site/cover.png"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2024-12-29T16:49:18+05:30">
@@ -71,7 +72,8 @@ Use single quotes &#39; &#39; for names with spaces or special characters.
 
 
 File Movement and Copy Command
-Moving (mv), renaming (mv), copying (cp), creating, deleting (rm) files and directories.">
+Moving / Renaming (mv), copying (cp), creating, deleting (rm) files and directories.
+These work by modifying the directory entries of the files they access.">
 
     
     
@@ -789,15 +791,15 @@ Moving (mv), renaming (mv), copying (cp), creating, deleting (rm) files and dire
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-19-shell-scripting/">Bash - 19 - Shell Scripting</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-awk/">Bash - 18 - awk</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-20-loop/">Bash - 20 - loop</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
   </li>
       </ul>
     </details>
@@ -1583,15 +1585,15 @@ Moving (mv), renaming (mv), copying (cp), creating, deleting (rm) files and dire
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-19-shell-scripting/">Bash - 19 - Shell Scripting</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-awk/">Bash - 18 - awk</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-20-loop/">Bash - 20 - loop</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
   </li>
       </ul>
     </details>
@@ -1613,12 +1615,7 @@ Moving (mv), renaming (mv), copying (cp), creating, deleting (rm) files and dire
   <ul>
     <li>
       <ul>
-        <li>
-          <ul>
-            <li><a href="#naming-conventions">Naming Conventions</a></li>
-            <li><a href="#file-movement-and-copy-command">File Movement and Copy Command</a></li>
-          </ul>
-        </li>
+        <li><a href="#file-movement-and-copy-command">File Movement and Copy Command</a></li>
         <li><a href="#mvpersonal-sitedocsbash-linuxcommand-docsmv-move"><a href="/personal-site/docs/bash-linux/command-docs/mv-move">mv</a></a></li>
         <li><a href="#cppersonal-sitedocsbash-linuxcommand-docscp-copy"><a href="/personal-site/docs/bash-linux/command-docs/cp-copy">cp</a></a></li>
         <li><a href="#operations-with-multiple-files-and-directories">Operations with Multiple Files and Directories</a></li>
@@ -1664,12 +1661,7 @@ Moving (mv), renaming (mv), copying (cp), creating, deleting (rm) files and dire
   <ul>
     <li>
       <ul>
-        <li>
-          <ul>
-            <li><a href="#naming-conventions">Naming Conventions</a></li>
-            <li><a href="#file-movement-and-copy-command">File Movement and Copy Command</a></li>
-          </ul>
-        </li>
+        <li><a href="#file-movement-and-copy-command">File Movement and Copy Command</a></li>
         <li><a href="#mvpersonal-sitedocsbash-linuxcommand-docsmv-move"><a href="/personal-site/docs/bash-linux/command-docs/mv-move">mv</a></a></li>
         <li><a href="#cppersonal-sitedocsbash-linuxcommand-docscp-copy"><a href="/personal-site/docs/bash-linux/command-docs/cp-copy">cp</a></a></li>
         <li><a href="#operations-with-multiple-files-and-directories">Operations with Multiple Files and Directories</a></li>
@@ -1704,7 +1696,7 @@ Moving (mv), renaming (mv), copying (cp), creating, deleting (rm) files and dire
   </details>
 
 			</nav>
-			<h4 id="naming-conventions">Naming Conventions<a href="#naming-conventions" class="anchor" aria-hidden="true">#</a> </h4>
+			<p><em><strong>Naming Conventions</strong></em></p>
 <ul>
 <li>Avoid spaces; use <code>_</code> or <code>-</code> instead.</li>
 <li>Do not start names with <code>-</code> to prevent confusion with options/flags.</li>
@@ -1712,8 +1704,15 @@ Moving (mv), renaming (mv), copying (cp), creating, deleting (rm) files and dire
 <li>Use single quotes <code>' '</code> for names with spaces or special characters.</li>
 </ul>
 <hr>
-<h4 id="file-movement-and-copy-command">File Movement and Copy Command<a href="#file-movement-and-copy-command" class="anchor" aria-hidden="true">#</a> </h4>
-<p>Moving (<code>mv</code>), renaming (<code>mv</code>), copying (<code>cp</code>), creating, deleting (<code>rm</code>) files and directories.</p>
+<h3 id="file-movement-and-copy-command">File Movement and Copy Command<a href="#file-movement-and-copy-command" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Moving / Renaming (<code>mv</code>), copying (<code>cp</code>), creating, deleting (<code>rm</code>) files and directories.<br>
+These work by modifying the directory entries of the files they access.</p>
+<ul>
+<li><code>cp</code> adds an entry to the directory with the name of destination file and inode number that is allotted by the kernel.</li>
+<li><code>mv</code> replaces the name of an existing directory entry without disturbing its inode number.</li>
+<li><code>rm</code> removes an entry from the directory.</li>
+</ul>
+<hr>
 <h3 id="mvpersonal-sitedocsbash-linuxcommand-docsmv-move"><a href="/personal-site/docs/bash-linux/command-docs/mv-move">mv</a><a href="#mvpersonal-sitedocsbash-linuxcommand-docsmv-move" class="anchor" aria-hidden="true">#</a> </h3>
 <p><code>mv</code> is used to move or rename both files and directories.</p>
 
@@ -1732,11 +1731,11 @@ Moving (mv), renaming (mv), copying (cp), creating, deleting (rm) files and dire
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mv fo1.txt ~/temp
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mv fo1.txt ~/temp
 </span></span><span class="line"><span class="cl"><span class="c1"># moves to temp</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">mv fo1.txt ~/temp/fo2.txt
@@ -1752,22 +1751,22 @@ To rename a file or move it to a new location:</p>
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mv <span class="o">[</span>old<span class="o">]</span> <span class="o">[</span>new<span class="o">]</span>  <span class="c1"># Moves or renames a file</span></span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mv <span class="o">[</span>old<span class="o">]</span> <span class="o">[</span>new<span class="o">]</span>  <span class="c1"># Moves or renames a file</span></span></span></code></pre></div>
   </figure>
 </div>
 
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mv trial/draft.txt trial/quotes.txt  
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mv trial/draft.txt trial/quotes.txt  
 </span></span><span class="line"><span class="cl"><span class="c1"># Renames draft.txt to quotes.txt</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">mv draft.txt quotes.txt
@@ -1780,11 +1779,11 @@ To rename a file or move it to a new location:</p>
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mv trial/quotes.txt .  
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mv trial/quotes.txt .  
 </span></span><span class="line"><span class="cl"><span class="c1"># Moves to the current directory</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">mv sucrose.dat maltase.dat ../raw  
@@ -1793,6 +1792,7 @@ To rename a file or move it to a new location:</p>
 </div>
 <p>We are not allowed to rename multiple files using a single <code>mv</code> command as it has only a single <code>destination</code> parameter. <code>mv *.txt *.dat</code> will cause an error because <code>*.dat</code> means multiple destinations, but it needs to be a single directory or file name.</p>
 <p><code>-i</code> and <code>-f</code> are interactive and force modes. The difference occurs when a file being moved has the same name at the destination. If not interactive, the destination file is overwritten.</p>
+<hr>
 <h3 id="cppersonal-sitedocsbash-linuxcommand-docscp-copy"><a href="/personal-site/docs/bash-linux/command-docs/cp-copy">cp</a><a href="#cppersonal-sitedocsbash-linuxcommand-docscp-copy" class="anchor" aria-hidden="true">#</a> </h3>
 <p>The format is the same as <code>mv</code>:</p>
 
@@ -1810,11 +1810,11 @@ To rename a file or move it to a new location:</p>
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cp <span class="o">[</span>old<span class="o">]</span> <span class="o">[</span>new<span class="o">]</span>  <span class="c1"># Copies a file</span>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cp <span class="o">[</span>old<span class="o">]</span> <span class="o">[</span>new<span class="o">]</span>  <span class="c1"># Copies a file</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">cp quotes.txt thesis/quotation.txt  
 </span></span><span class="line"><span class="cl"><span class="c1"># Copies to a new location</span></span></span></code></pre></div>
@@ -1830,11 +1830,11 @@ To rename a file or move it to a new location:</p>
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cp fo.txt ~zap/fo1.txt
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cp fo.txt ~zap/fo1.txt
 </span></span><span class="line"><span class="cl">cp *.txt ~
 </span></span><span class="line"><span class="cl">cp ~zapp/foo.txt .</span></span></code></pre></div>
   </figure>
@@ -1854,25 +1854,26 @@ To rename a file or move it to a new location:</p>
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cp -r thesis thesis_backup  
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cp -r thesis thesis_backup  
 </span></span><span class="line"><span class="cl"><span class="c1"># Copies the entire directory</span></span></span></code></pre></div>
   </figure>
 </div>
+<hr>
 <h3 id="operations-with-multiple-files-and-directories">Operations with Multiple Files and Directories<a href="#operations-with-multiple-files-and-directories" class="anchor" aria-hidden="true">#</a> </h3>
 <p>To copy or move multiple files, list the files followed by the target directory. If given more than one file name followed by a directory name, the directory must be the last argument.</p>
 
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cp file1.txt file2.txt target_directory/  
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cp file1.txt file2.txt target_directory/  
 </span></span><span class="line"><span class="cl"><span class="c1"># Copy multiple files</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">mv file1.txt file2.txt target_directory/   
@@ -1884,22 +1885,22 @@ To rename a file or move it to a new location:</p>
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cp *.txt backup/  <span class="c1"># Copies all .txt files to backup/</span></span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cp *.txt backup/  <span class="c1"># Copies all .txt files to backup/</span></span></span></code></pre></div>
   </figure>
 </div>
 
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ mkdir backup
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ mkdir backup
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">$ cp cretures/minotaur.dat creatures/unicorn.dat backup/
 </span></span><span class="line"><span class="cl">
@@ -1907,6 +1908,7 @@ To rename a file or move it to a new location:</p>
 </span></span><span class="line"><span class="cl"><span class="c1"># Error occurs with multiple files; use wildcards instead</span></span></span></code></pre></div>
   </figure>
 </div>
+<hr>
 <h2 id="wildcards">Wildcards<a href="#wildcards" class="anchor" aria-hidden="true">#</a> </h2>
 <p>Wildcards represent unknown characters in commands.</p>
 <p>Common wildcards include:</p>
@@ -1925,11 +1927,11 @@ To rename a file or move it to a new location:</p>
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls *t*ane.pdb   
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls *t*ane.pdb   
 </span></span><span class="line"><span class="cl"><span class="c1"># Lists files with &#39;t&#39; and &#39;ane&#39; in their names</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">cp *dataset* backup/datasets  
@@ -1945,11 +1947,11 @@ To rename a file or move it to a new location:</p>
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls ???ane.pdb  
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls ???ane.pdb  
 </span></span><span class="line"><span class="cl"><span class="c1"># Matches any three characters followed by &#39;ane.pdb&#39;</span></span></span></code></pre></div>
   </figure>
 </div>
@@ -1960,11 +1962,11 @@ To rename a file or move it to a new location:</p>
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ cp *dataset* backup/datasets
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ cp *dataset* backup/datasets
 </span></span><span class="line"><span class="cl"><span class="c1"># Copy anything with &#39;dataset&#39; in the name to the datasets directory inside backups</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">$ cp *calibration.txt backup/calibration
@@ -1996,11 +1998,11 @@ To rename a file or move it to a new location:</p>
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rm my_file.txt  
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rm my_file.txt  
 </span></span><span class="line"><span class="cl"><span class="c1"># Deletes the specified file</span></span></span></code></pre></div>
   </figure>
 </div>
@@ -2012,11 +2014,11 @@ The alias for <code>rm</code> can be set as <code>rm -i</code></p>
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rm -r directory_name  
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rm -r directory_name  
 </span></span><span class="line"><span class="cl"><span class="c1"># Deletes the directory and all its contents</span></span></span></code></pre></div>
   </figure>
 </div>
@@ -2028,11 +2030,11 @@ The alias for <code>rm</code> can be set as <code>rm -i</code></p>
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rm -i *.txt  <span class="c1"># Prompts for each .txt file</span></span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rm -i *.txt  <span class="c1"># Prompts for each .txt file</span></span></span></code></pre></div>
   </figure>
 </div>
 <p><em>Note:</em> The shell does not have a trash bin, so deleted files are permanently removed.</p>
@@ -2048,42 +2050,54 @@ The alias for <code>rm</code> can be set as <code>rm -i</code></p>
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir <span class="o">[</span>name<span class="o">]</span>  <span class="c1"># Create a directory</span></span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir <span class="o">[</span>name<span class="o">]</span>  <span class="c1"># Create a directory</span></span></span></code></pre></div>
   </figure>
 </div>
-<p>The <code>-p</code> option is used to create multiple directories:</p>
+<p>To create multiple directories at once:</p>
 
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir -p <span class="o">[</span>path/to/nested/directories<span class="o">]</span>  
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir north south pacific  
+</span></span><span class="line"><span class="cl"><span class="c1"># Creates three separate directories</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Creating a Directory Tree, by creating the main directory first, then child directories inside.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir place place/one place/two</span></span></code></pre></div>
+  </figure>
+</div>
+<p>The <code>-p</code> option is used to create multiple directories at once:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir -p <span class="o">[</span>path/to/nested/directories<span class="o">]</span>  
 </span></span><span class="line"><span class="cl"><span class="c1"># Creates nested directories</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">mkdir -p ../project/data ../project/results</span></span></code></pre></div>
   </figure>
 </div>
 <p>To list all nested subdirectories within a directory, use <code>ls -R</code>.</p>
-<p>To create multiple directories at once:</p>
-
-
-
-<div class="expressive-code">
-  <figure class="frame is-terminal not-content">
-  <figcaption class="header">
-    <span class="title"></span>
-  </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir north south pacific  
-</span></span><span class="line"><span class="cl"><span class="c1"># Creates three separate directories</span></span></span></code></pre></div>
-  </figure>
-</div>
 <h4 id="example">Example:<a href="#example" class="anchor" aria-hidden="true">#</a> </h4>
 <p>To create a directory <code>2016</code> with a sub-directory <code>data</code> that contains two directories, <code>processed</code> and <code>raw</code>:</p>
 <p><strong>Method 1: Step-by-Step Creation</strong></p>
@@ -2091,11 +2105,11 @@ The alias for <code>rm</code> can be set as <code>rm -i</code></p>
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir <span class="m">2016</span>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir <span class="m">2016</span>
 </span></span><span class="line"><span class="cl">mkdir 2016/data
 </span></span><span class="line"><span class="cl">mkdir 2016/data/processed
 </span></span><span class="line"><span class="cl">mkdir 2016/data/raw</span></span></code></pre></div>
@@ -2106,11 +2120,11 @@ The alias for <code>rm</code> can be set as <code>rm -i</code></p>
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir <span class="m">2016</span>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir <span class="m">2016</span>
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> <span class="m">2016</span>
 </span></span><span class="line"><span class="cl">mkdir data
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> data
@@ -2122,11 +2136,11 @@ The alias for <code>rm</code> can be set as <code>rm -i</code></p>
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir -p 2016/data/<span class="o">{</span>processed,raw<span class="o">}</span>  
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir -p 2016/data/<span class="o">{</span>processed,raw<span class="o">}</span>  
 </span></span><span class="line"><span class="cl"><span class="c1"># Creates the full structure in one command</span></span></span></code></pre></div>
   </figure>
 </div>

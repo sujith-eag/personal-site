@@ -45,7 +45,8 @@
 <link rel="manifest" href="/personal-site/manifest.webmanifest">
 
 <meta property="og:title" content="Bash - 17 - sed">
-<meta property="og:description" content="">
+<meta property="og:description" content="sed is stream-editor which a program that takes a stream of text and modifies it.
+It is a multipurpose tool that combines the work of several filters.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-17-sed/"><meta property="og:image" content="http://localhost:1313/personal-site/cover.png"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2024-12-29T16:51:47+05:30">
@@ -53,7 +54,8 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://localhost:1313/personal-site/cover.png"><meta name="twitter:title" content="Bash - 17 - sed">
-<meta name="twitter:description" content="">
+<meta name="twitter:description" content="sed is stream-editor which a program that takes a stream of text and modifies it.
+It is a multipurpose tool that combines the work of several filters.">
 
     
     
@@ -771,15 +773,15 @@
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-19-shell-scripting/">Bash - 19 - Shell Scripting</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-awk/">Bash - 18 - awk</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-20-loop/">Bash - 20 - loop</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
   </li>
       </ul>
     </details>
@@ -1565,15 +1567,15 @@
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-19-shell-scripting/">Bash - 19 - Shell Scripting</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-awk/">Bash - 18 - awk</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-20-loop/">Bash - 20 - loop</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
   </li>
       </ul>
     </details>
@@ -1590,7 +1592,25 @@
 		
 		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
 			<div class="page-links">
-  
+  <h3>On this page</h3>
+    <nav id="toc">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#options">Options</a></li>
+            <li><a href="#using--e-and--f-for-multiple-instructions">Using <code>-e</code> and <code>-f</code> for multiple instructions</a></li>
+            <li><a href="#context-addressing">Context Addressing</a></li>
+            <li><a href="#using-regular-expressions">Using Regular Expressions</a></li>
+          </ul>
+        </li>
+        <li><a href="#writing-selected-lines-to-a-file">Writing Selected lines to a file</a></li>
+        <li><a href="#text-editing">Text editing</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 </div>
 
 		</nav>
@@ -1599,9 +1619,281 @@
 			<h1>Bash - 17 - sed</h1>
 			
 			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
-				
+				<details>
+    <summary>On this page</summary>
+    <div class="page-links">
+      <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#options">Options</a></li>
+            <li><a href="#using--e-and--f-for-multiple-instructions">Using <code>-e</code> and <code>-f</code> for multiple instructions</a></li>
+            <li><a href="#context-addressing">Context Addressing</a></li>
+            <li><a href="#using-regular-expressions">Using Regular Expressions</a></li>
+          </ul>
+        </li>
+        <li><a href="#writing-selected-lines-to-a-file">Writing Selected lines to a file</a></li>
+        <li><a href="#text-editing">Text editing</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  </details>
+
 			</nav>
-			
+			<p><code>sed</code> is <strong>stream-editor</strong> which a program that takes a stream of text and modifies it.<br>
+It is a multipurpose tool that combines the work of several filters.</p>
+<p>A stream is a short for I/O stream meaning the stream of text characters that are being input from one source and output to another.<br>
+The role of <code>sed</code> is to manipulate the text in the stream en route from input to output.</p>
+<p>Like <code>diff</code> command, <code>sed</code> uses instructions to act on text.<br>
+An instruction combines an <strong>address</strong> for selecting lines, with an <strong>action</strong> to be taken on them.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sed <span class="o">[</span>options<span class="o">]</span> script file<span class="o">(</span>s<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sed <span class="o">[</span>options<span class="o">]</span> <span class="s1">&#39;address action&#39;</span> file<span class="o">(</span>s<span class="o">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<blockquote>
+<p>[!note]
+The address and action are enclosed within single quotes.
+Double quotes should be used only when variable evaluation or command substitution is embedded in the quoted string.</p>
+</blockquote>
+<p>Addressing in <code>sed</code> is done in two ways:</p>
+<ul>
+<li>One line number to select a single line or two line numbers (3,7), which specifies a group of contiguous lines.</li>
+<li>By specifying a <code>/</code> enclosed pattern which occurs in a line (<code>/From:/</code>)</li>
+</ul>
+<p>The action component is drawn from <code>sed</code>&rsquo;s internal commands.</p>
+<p><code>sed</code> processes several instruction in a sequential manner. each instruction operates on the previous instruction.</p>
+<hr>
+<h4 id="options">Options<a href="#options" class="anchor" aria-hidden="true">#</a> </h4>
+<p><code>-e</code>option that lets use multiple instructions<br>
+<code>-f</code> to take instructions from a file.<br>
+Both work the same way they do in <code>grep</code></p>
+<hr>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sed <span class="s1">&#39;3q&#39;</span> emp.lst</span></span></code></pre></div>
+  </figure>
+</div>
+<p><code>3q</code> can be broken down to the address <code>3</code> and the action <code>q (quit)</code>.<br>
+When it is enclosed in quotes and followed by  a file name, then it simulates the <code>head -n 3</code> which prints the first three lines.</p>
+<blockquote>
+<p>[!note]
+Generally <code>p</code> command is used for printing, it has a strange behavior to print the selected lines and also all the lines. So selected lines appear twice.<br>
+Using <code>-n</code> option with <code>p</code> command will suppress this.</p>
+</blockquote>
+<p>To select first two lines similar to head command.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sed -n <span class="s1">&#39;1,2p&#39;</span> emp.lst</span></span></code></pre></div>
+  </figure>
+</div>
+<p><code>$</code> to select the last line. which is simulating the tail command.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sed -n <span class="s1">&#39;$p&#39;</span> emp.lst</span></span></code></pre></div>
+  </figure>
+</div>
+<p>But <code>sed</code> can select a contiguous lines from anywhere <code>(9,11)</code>which is not possible with head and tail.<br>
+It can also select multiple groups of lines from many sections.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sed -n <span class="s1">&#39;1,2p 
+</span></span></span><span class="line"><span class="cl"><span class="s1">7,9p 
+</span></span></span><span class="line"><span class="cl"><span class="s1">$p&#39;</span> emp.lst</span></span></code></pre></div>
+  </figure>
+</div>
+<p>Negating the action using <code>!</code> negation operator which can be used with any action.<br>
+Selecting the first two lines by Not selecting the 3rd line till the last line.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sed -n <span class="s1">&#39;3,$!p&#39;</span> emp.lst</span></span></code></pre></div>
+  </figure>
+</div>
+<hr>
+<h4 id="using--e-and--f-for-multiple-instructions">Using <code>-e</code> and <code>-f</code> for multiple instructions<a href="#using--e-and--f-for-multiple-instructions" class="anchor" aria-hidden="true">#</a> </h4>
+<p><code>-e</code> allows for entering multiple instructions each preceded by the option.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sed -n -e <span class="s1">&#39;1,2p&#39;</span> -e <span class="s1">&#39;7,9p&#39;</span> -e <span class="s1">&#39;$p&#39;</span> emp.lst</span></span></code></pre></div>
+  </figure>
+</div>
+<p>When there are too many instruction it is better to store them in a file first and then load them in.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ cat inst.fil
+</span></span><span class="line"><span class="cl">1,2p
+</span></span><span class="line"><span class="cl">7,9p
+</span></span><span class="line"><span class="cl"><span class="nv">$p</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Now <code>-f</code> can be used to direct <code>sed</code> to take instructions from the file</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sed -n -f inst.fil emp.lst</span></span></code></pre></div>
+  </figure>
+</div>
+<p>Using multiple files and combining <code>-e -f</code></p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sed -n -f inst.fil1 -f inst.fil2 emp.lst
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sed -n -e <span class="s1">&#39;/sen/p&#39;</span> -f instr.fil1 -f inst.fil2 emp?.lst</span></span></code></pre></div>
+  </figure>
+</div>
+<hr>
+<h4 id="context-addressing">Context Addressing<a href="#context-addressing" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Context addressing allows for specifying one or two patterns to locate lines. Patterns must be bordered with <code>/</code> on either side.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sed -n <span class="s1">&#39;/director/p&#39;</span> emp.lst</span></span></code></pre></div>
+  </figure>
+</div>
+<p>A comma separated pair of context addresses to select a group of lines. Line and context address can also be mixed.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sed -n <span class="s1">&#39;/guptha/,/Sena/p&#39;</span> emp.lst
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sed -n <span class="s1">&#39;1,/guptha/p&#39;</span> emp.lst</span></span></code></pre></div>
+  </figure>
+</div>
+<hr>
+<h4 id="using-regular-expressions">Using Regular Expressions<a href="#using-regular-expressions" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Context addressing can also use Regular expressions.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sed -n <span class="s1">&#39;[aA]gg*[ar]wal/p&#39;</span> emp.lst
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sed -n <span class="s1">&#39;/sa[kx]s*ena/p
+</span></span></span><span class="line"><span class="cl"><span class="s1">		guptha/p&#39;</span> emp.lst</span></span></code></pre></div>
+  </figure>
+</div>
+<p>First to select all the Agarwals and second to select Saksena or guptha.</p>
+<hr>
+<h3 id="writing-selected-lines-to-a-file">Writing Selected lines to a file<a href="#writing-selected-lines-to-a-file" class="anchor" aria-hidden="true">#</a> </h3>
+<p><code>w</code> write command can be used to write the selected line to a separate file.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sed -n <span class="s1">&#39;/director/w dlist&#39;</span> emp.lst </span></span></code></pre></div>
+  </figure>
+</div>
+<p>Here when <code>-n</code> is used there will be no display of all the lines but it is not needed to write to file.</p>
+<p>Full file can be split up by giving multiple address.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sed -n <span class="s1">&#39;/director/w dlist
+</span></span></span><span class="line"><span class="cl"><span class="s1">		/manager/w mlist
+</span></span></span><span class="line"><span class="cl"><span class="s1">		/executive/w elist&#39;</span> emp.lst
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sed -n <span class="s1">&#39;1,500w file1
+</span></span></span><span class="line"><span class="cl"><span class="s1">	501,$w file2&#39;</span> file.main</span></span></code></pre></div>
+  </figure>
+</div>
+<hr>
+<h3 id="text-editing">Text editing<a href="#text-editing" class="anchor" aria-hidden="true">#</a> </h3>
+<p><code>sed</code> can insert and change existing text in a file.<br>
+It is similar to the vi command <code>i</code> for insert, <code>a</code> for append, <code>c</code> to change, <code>d</code> to delete.</p>
+<p>.
+.
+.
+.</p>
+<hr>
+
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				</div>
 			<div class="page-nav d-flex flex-column flex-sm-row">
@@ -1627,7 +1919,7 @@
 			<div class="card-body d-flex justify-content-end">
 				<div class="d-flex flex-column">
 					<div class="text-body-secondary">Next</div>
-					<a href="/personal-site/docs/bash-linux/linux_bash/bash-19-shell-scripting/" class="stretched-link text-reset text-decoration-none">Bash - 19 - Shell Scripting</a>
+					<a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/" class="stretched-link text-reset text-decoration-none">Bash - 18.1 - Shell Scripts - Conditionals</a>
 				</div>
 				<div class="d-flex flex-column justify-content-center">
 					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">

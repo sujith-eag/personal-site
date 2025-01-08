@@ -45,9 +45,8 @@
 <link rel="manifest" href="/personal-site/manifest.webmanifest">
 
 <meta property="og:title" content="Bash - 10 - File Viewing and Editing Commands">
-<meta property="og:description" content="1. File Creation and Editing
-Creating a Text File Using the Nano Editor
-To create a text file with the nano editor:">
+<meta property="og:description" content="Filters are Commands which accepts data from standard input, manipulates it and write the result to standard output.
+Each performs a simple function, these can be combined with other tools using redirection and piping.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-10-file-viewing-and-editing-commands/"><meta property="og:image" content="http://localhost:1313/personal-site/cover.png"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2024-12-29T16:49:46+05:30">
@@ -55,9 +54,8 @@ To create a text file with the nano editor:">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://localhost:1313/personal-site/cover.png"><meta name="twitter:title" content="Bash - 10 - File Viewing and Editing Commands">
-<meta name="twitter:description" content="1. File Creation and Editing
-Creating a Text File Using the Nano Editor
-To create a text file with the nano editor:">
+<meta name="twitter:description" content="Filters are Commands which accepts data from standard input, manipulates it and write the result to standard output.
+Each performs a simple function, these can be combined with other tools using redirection and piping.">
 
     
     
@@ -775,15 +773,15 @@ To create a text file with the nano editor:">
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-19-shell-scripting/">Bash - 19 - Shell Scripting</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-awk/">Bash - 18 - awk</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-20-loop/">Bash - 20 - loop</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
   </li>
       </ul>
     </details>
@@ -1569,15 +1567,15 @@ To create a text file with the nano editor:">
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-19-shell-scripting/">Bash - 19 - Shell Scripting</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-awk/">Bash - 18 - awk</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-20-loop/">Bash - 20 - loop</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
   </li>
       </ul>
     </details>
@@ -1622,11 +1620,11 @@ To create a text file with the nano editor:">
     </li>
     <li><a href="#5-file-comparison-and-difference-commands">5. <strong>File Comparison and Difference Commands</strong></a>
       <ul>
-        <li><a href="#comparing-files-with-cmp-comm-and-diff"><strong>Comparing Files with <code>cmp</code>, <code>comm</code>, and <code>diff</code></strong></a>
+        <li><a href="#comparing-files-with-cmp-comm-and-diff">Comparing Files with <em>cmp</em>, <em>comm</em>, and <em>diff</em></a>
           <ul>
-            <li><a href="#cmp"><code>cmp</code></a></li>
-            <li><a href="#comm"><code>comm</code></a></li>
-            <li><a href="#diff"><code>diff</code></a></li>
+            <li><a href="#cmp--comparing-two-files">cmp : Comparing two files</a></li>
+            <li><a href="#comm--what-is-common">comm : What is Common?</a></li>
+            <li><a href="#diff--converting-one-file-to-another">diff : Converting one file to another.</a></li>
           </ul>
         </li>
         <li><a href="#removing-duplicate-lines-with-uniq"><strong>Removing Duplicate Lines with <code>uniq</code></strong></a></li>
@@ -1639,6 +1637,7 @@ To create a text file with the nano editor:">
         <li><a href="#splitting-files-with-split"><strong>Splitting Files with <code>split</code></strong></a></li>
         <li><a href="#extracting-data-with-cut"><strong>Extracting Data with <code>cut</code></strong></a></li>
         <li><a href="#example-workflow"><strong>Example Workflow</strong></a></li>
+        <li><a href="#text-editors-vi-and-vim"><strong>Text Editors: <code>vi</code> and <code>vim</code></strong></a></li>
       </ul>
     </li>
   </ul>
@@ -1681,11 +1680,11 @@ To create a text file with the nano editor:">
     </li>
     <li><a href="#5-file-comparison-and-difference-commands">5. <strong>File Comparison and Difference Commands</strong></a>
       <ul>
-        <li><a href="#comparing-files-with-cmp-comm-and-diff"><strong>Comparing Files with <code>cmp</code>, <code>comm</code>, and <code>diff</code></strong></a>
+        <li><a href="#comparing-files-with-cmp-comm-and-diff">Comparing Files with <em>cmp</em>, <em>comm</em>, and <em>diff</em></a>
           <ul>
-            <li><a href="#cmp"><code>cmp</code></a></li>
-            <li><a href="#comm"><code>comm</code></a></li>
-            <li><a href="#diff"><code>diff</code></a></li>
+            <li><a href="#cmp--comparing-two-files">cmp : Comparing two files</a></li>
+            <li><a href="#comm--what-is-common">comm : What is Common?</a></li>
+            <li><a href="#diff--converting-one-file-to-another">diff : Converting one file to another.</a></li>
           </ul>
         </li>
         <li><a href="#removing-duplicate-lines-with-uniq"><strong>Removing Duplicate Lines with <code>uniq</code></strong></a></li>
@@ -1698,6 +1697,7 @@ To create a text file with the nano editor:">
         <li><a href="#splitting-files-with-split"><strong>Splitting Files with <code>split</code></strong></a></li>
         <li><a href="#extracting-data-with-cut"><strong>Extracting Data with <code>cut</code></strong></a></li>
         <li><a href="#example-workflow"><strong>Example Workflow</strong></a></li>
+        <li><a href="#text-editors-vi-and-vim"><strong>Text Editors: <code>vi</code> and <code>vim</code></strong></a></li>
       </ul>
     </li>
   </ul>
@@ -1706,18 +1706,21 @@ To create a text file with the nano editor:">
   </details>
 
 			</nav>
-			<h2 id="1-file-creation-and-editing">1. <strong>File Creation and Editing</strong><a href="#1-file-creation-and-editing" class="anchor" aria-hidden="true">#</a> </h2>
+			<p>Filters are Commands which accepts data from standard input, manipulates it and write the result to standard output.<br>
+Each performs a simple function, these can be combined with other tools using redirection and piping.</p>
+<hr>
+<h2 id="1-file-creation-and-editing">1. <strong>File Creation and Editing</strong><a href="#1-file-creation-and-editing" class="anchor" aria-hidden="true">#</a> </h2>
 <h3 id="creating-a-text-file-using-the-nano-editor"><strong>Creating a Text File Using the Nano Editor</strong><a href="#creating-a-text-file-using-the-nano-editor" class="anchor" aria-hidden="true">#</a> </h3>
 <p>To create a text file with the <code>nano</code> editor:</p>
 
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nano draft.txt  
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nano draft.txt  
 </span></span><span class="line"><span class="cl"><span class="c1"># Opens nano for editing</span></span></span></code></pre></div>
   </figure>
 </div>
@@ -1733,11 +1736,11 @@ To create a text file with the nano editor:">
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">touch my_file.txt  
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">touch my_file.txt  
 </span></span><span class="line"><span class="cl"><span class="c1"># Creates a blank text file</span></span></span></code></pre></div>
   </figure>
 </div>
@@ -1761,11 +1764,11 @@ To create a text file with the nano editor:">
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wc -l *.pdb  
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wc -l *.pdb  
 </span></span><span class="line"><span class="cl"><span class="c1"># Displays the word count for all .pdb files in the current directory</span></span></span></code></pre></div>
   </figure>
 </div>
@@ -1775,11 +1778,11 @@ Counts the number of lines in the output of <code>ls -l</code></p>
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls -l <span class="p">|</span> wc -l</span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls -l <span class="p">|</span> wc -l</span></span></code></pre></div>
   </figure>
 </div>
 <p>If  <code>wc -l</code> is run without specifying a filename, it waits for input,  can exit using <code>Ctrl + C</code>.</p>
@@ -1789,11 +1792,11 @@ Counts the number of lines in the output of <code>ls -l</code></p>
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">strings sujith.jpeg -n <span class="m">10</span></span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">strings sujith.jpeg -n <span class="m">10</span></span></span></code></pre></div>
   </figure>
 </div>
 <ul>
@@ -1804,11 +1807,11 @@ Counts the number of lines in the output of <code>ls -l</code></p>
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">6*<span class="o">&amp;&amp;</span>*6&gt;424&gt;LDDL_Z_<span class="o">||</span>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">6*<span class="o">&amp;&amp;</span>*6&gt;424&gt;LDDL_Z_<span class="o">||</span>
 </span></span><span class="line"><span class="cl">6*<span class="o">&amp;&amp;</span>*6&gt;424&gt;LDDL_Z_<span class="o">||</span>
 </span></span><span class="line"><span class="cl">Bm<span class="p">&amp;</span>EmvX<span class="o">{</span>2<span class="p">;</span>
 </span></span><span class="line"><span class="cl">!1 0AQ@Paq</span></span></code></pre></div>
@@ -1840,14 +1843,14 @@ Counts the number of lines in the output of <code>ls -l</code></p>
 <hr>
 <h3 id="viewing-specific-parts-of-a-file-with-head-and-tail"><strong>Viewing Specific Parts of a File with <code>head</code> and <code>tail</code></strong><a href="#viewing-specific-parts-of-a-file-with-head-and-tail" class="anchor" aria-hidden="true">#</a> </h3>
 <p><a href="/personal-site/docs/bash-linux/command-docs/head-tail"><em>head and tail</em></a>
-<strong><code>head</code></strong>: By default, shows the first 10 lines of a file.
+<strong><code>head</code></strong>: By default, shows the first 10 lines of a file.<br>
 We can precede the integer with a minus sign to indicate that the program should skip that number of bytes or lines.</p>
 <ul>
 <li><code>head -n 5 file.txt</code>: Displays the first 5 lines.</li>
 <li><code>head -n -3 file.txt</code>: Shows all but the last 3 lines.</li>
 <li><code>head -c -20 file.txt</code>: Stops at the 21st byte of the file.</li>
 </ul>
-<p><strong><code>tail</code></strong>: By default, shows the last 10 lines of a file.
+<p><strong><code>tail</code></strong>: By default, shows the last 10 lines of a file.<br>
 Precede the integer with plus to indicate the starting point within the file.</p>
 <ul>
 <li><code>tail -n 5 file.txt</code>: Displays the last 5 lines.</li>
@@ -1861,11 +1864,11 @@ Precede the integer with plus to indicate the starting point within the file.</p
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sort lengths.txt  <span class="c1"># Sorts alphanumerically by default</span>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sort lengths.txt  <span class="c1"># Sorts alphanumerically by default</span>
 </span></span><span class="line"><span class="cl">sort -n           <span class="c1"># Sorts numerically</span>
 </span></span><span class="line"><span class="cl">sort -r           <span class="c1"># Sorts in reverse order</span></span></span></code></pre></div>
   </figure>
@@ -1875,69 +1878,74 @@ Precede the integer with plus to indicate the starting point within the file.</p
 <li><code>-f</code>: Ignore case differences.</li>
 <li><code>-n</code>: Numeric sorting.</li>
 </ul>
-<p>Sort doesn&rsquo;t change the file, but sends results to screen.
+<p>Sort doesn&rsquo;t change the file, but sends results to screen.<br>
 To sort a file and redirect the output to a new file:</p>
 
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sort -n lengths.txt &gt; sorted-lengths.txt</span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sort -n lengths.txt &gt; sorted-lengths.txt</span></span></code></pre></div>
   </figure>
 </div>
 <hr>
 <h2 id="5-file-comparison-and-difference-commands">5. <strong>File Comparison and Difference Commands</strong><a href="#5-file-comparison-and-difference-commands" class="anchor" aria-hidden="true">#</a> </h2>
-<h3 id="comparing-files-with-cmp-comm-and-diff"><strong>Comparing Files with <code>cmp</code>, <code>comm</code>, and <code>diff</code></strong><a href="#comparing-files-with-cmp-comm-and-diff" class="anchor" aria-hidden="true">#</a> </h3>
-<h4 id="cmp"><code>cmp</code><a href="#cmp" class="anchor" aria-hidden="true">#</a> </h4>
+<h3 id="comparing-files-with-cmp-comm-and-diff">Comparing Files with <em>cmp</em>, <em>comm</em>, and <em>diff</em><a href="#comparing-files-with-cmp-comm-and-diff" class="anchor" aria-hidden="true">#</a> </h3>
+<h4 id="cmp--comparing-two-files">cmp : Comparing two files<a href="#cmp--comparing-two-files" class="anchor" aria-hidden="true">#</a> </h4>
 <p><strong><code>cmp</code></strong>: Compares two files byte by byte. It stops when the first difference is found, showing the byte and line number.</p>
 
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cmp file1 file2 -i 100:150 -n <span class="m">1024</span></span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cmp file1 file2 -i 100:150 -n <span class="m">1024</span></span></span></code></pre></div>
   </figure>
 </div>
-<p>Compares files one and two, starting at 101 of file1 and 151 of file2. Comparing 1024 bytes.</p>
+<p>Compares files one and two, starting at 101 of <code>file1</code> and 151 of <code>file2</code>. Comparing 1024 bytes.</p>
 <p><code>cmp</code> can be forced to skip over a specified number of bytes for each file or stop after reaching a specified limit. If no mismatch then no output.
 The default counting used with <code>cmp -i</code> (<code>--ignore-initial</code>) is a value in bytes (characters)</p>
-<h4 id="comm"><code>comm</code><a href="#comm" class="anchor" aria-hidden="true">#</a> </h4>
+<p>When the two files are identical, <code>cmp</code> returns a prompt without any message. This behavior is important as comparison return a <code>true</code> value which is used in shell script to control the flow of the program.</p>
+<hr>
+<h4 id="comm--what-is-common">comm : What is Common?<a href="#comm--what-is-common" class="anchor" aria-hidden="true">#</a> </h4>
 <p><strong><code>comm</code></strong>: Compares two sorted files and outputs three columns:</p>
 <ul>
 <li>Column 1: Lines only in the first file.</li>
 <li>Column 2: Lines common to both files.</li>
 <li>Column 3: Lines only in the second file.</li>
 </ul>
-<p><code>-1</code>: Suppress lines unique to the first file.
-<code>-2</code>: Suppress lines unique to the second file.
+<p>Options can be used to drop a particular column, they can also be combined.
+<code>-1</code>: Suppress lines unique to the first file.<br>
+<code>-2</code>: Suppress lines unique to the second file.<br>
 <code>-3</code>: Suppress lines common to both files.</p>
-<h4 id="diff"><code>diff</code><a href="#diff" class="anchor" aria-hidden="true">#</a> </h4>
-<p><strong><code>diff</code></strong>: Compares two files or directories and outputs differences. Useful for checking changes between files.</p>
-<p><code>-i</code>: Case-insensitive comparison.
-<code>-b</code>: Ignore differences in spaces.
+<hr>
+<h4 id="diff--converting-one-file-to-another">diff : Converting one file to another.<a href="#diff--converting-one-file-to-another" class="anchor" aria-hidden="true">#</a> </h4>
+<p><strong><code>diff</code></strong>: Compares two files or directories and outputs differences. Useful for checking changes between files.<br>
+It also tells which lines have to be changed to make the two files identical using special symbols and instructions to indicate the changes required.</p>
+<p><code>-i</code>: Case-insensitive comparison.<br>
+<code>-b</code>: Ignore differences in spaces.<br>
 <code>-y</code>: Output in columns for side-by-side comparison.</p>
 <hr>
 <h3 id="removing-duplicate-lines-with-uniq"><strong>Removing Duplicate Lines with <code>uniq</code></strong><a href="#removing-duplicate-lines-with-uniq" class="anchor" aria-hidden="true">#</a> </h3>
-<p>It operates on a single file, searching for consecutive duplicate lines. Parameters can be used to remove duplicate lines.
+<p>It operates on a single file, searching for consecutive duplicate lines.     Parameters can be used to remove duplicate lines.<br>
 It does not overwrite the file but the output can be can be moved to a new file.</p>
 
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">uniq file.txt &gt; file_without_duplicates.txt</span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">uniq file.txt &gt; file_without_duplicates.txt</span></span></code></pre></div>
   </figure>
 </div>
-<p><code>-c</code> for counting occurrences,
+<p><code>-c</code> for counting occurrences,<br>
 <code>-d</code> for displaying only duplicate lines.</p>
 <hr>
 <h2 id="6-file-manipulation-commands">6. <strong>File Manipulation Commands</strong><a href="#6-file-manipulation-commands" class="anchor" aria-hidden="true">#</a> </h2>
@@ -1947,19 +1955,19 @@ It does not overwrite the file but the output can be can be moved to a new file.
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">join file1.txt file2.txt</span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">join file1.txt file2.txt</span></span></code></pre></div>
   </figure>
 </div>
-<p>When the two files contain a row that contains that same value, then those two lines are joined together. Lines that do not contain a matching first field are not joined.
+<p>When the two files contain a row that contains that same value, then those two lines are joined together. Lines that do not contain a matching first field are not joined.<br>
 (Joining tables using a matching keys)</p>
-<p><code>-1 NUM</code>: Specifies which field to join on in the first file.
-<code>-2 NUM</code>: Specifies which field to join on in the second file.
-<code>-i</code>: Ignore case differences.
-<code>-e</code> uses <code>STRING</code> in place of an empty field
+<p><code>-1 NUM</code>: Specifies which field to join on in the first file.<br>
+<code>-2 NUM</code>: Specifies which field to join on in the second file.<br>
+<code>-i</code>: Ignore case differences.<br>
+<code>-e</code> uses <code>STRING</code> in place of an empty field<br>
 <code>-a 1</code> or <code>-a 2</code> outputs lines from the first or second file which did not contain a match to the other file.</p>
 <hr>
 <h3 id="merging-files-with-paste"><strong>Merging Files with <code>paste</code></strong><a href="#merging-files-with-paste" class="anchor" aria-hidden="true">#</a> </h3>
@@ -1967,11 +1975,11 @@ It does not overwrite the file but the output can be can be moved to a new file.
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">paste file1.txt file2.txt</span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">paste file1.txt file2.txt</span></span></code></pre></div>
   </figure>
 </div>
 <p><strong><code>paste</code></strong> merges files line by line without requiring a common field. The first line is appended to the first line of other file.</p>
@@ -1981,45 +1989,46 @@ It does not overwrite the file but the output can be can be moved to a new file.
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">split -b <span class="m">1000</span> file.txt prefix</span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">split -b <span class="m">1000</span> file.txt prefix</span></span></code></pre></div>
   </figure>
 </div>
-<p><strong><code>split</code></strong> divides a large file into smaller files. By default, each file is 1000 bytes.
+<p><strong><code>split</code></strong> divides a large file into smaller files. By default, each file is 1000 bytes.<br>
 We specify the file to split and a <code>prefix</code> which is name used for new files.</p>
-<p><code>-b value</code>: Specifies the byte size per file.
+<p><code>-b value</code>: Specifies the byte size per file.<br>
 <code>-d</code>: Use numeric suffixes (e.g., <code>00</code>, <code>01</code>).</p>
 <hr>
 <h3 id="extracting-data-with-cut"><strong>Extracting Data with <code>cut</code></strong><a href="#extracting-data-with-cut" class="anchor" aria-hidden="true">#</a> </h3>
-<p>The <code>cut</code> command is used to remove or extract specific sections of each line in a file:</p>
+<p>Slitting a file vertically.<br>
+The <code>cut</code> command is used to remove or extract specific sections of each line in a file:</p>
 
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cut -d , -f <span class="m">2</span> animals.csv
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cut -d , -f <span class="m">2</span> animals.csv
 </span></span><span class="line"><span class="cl"><span class="c1"># Extracts the second field from a comma-delimited file</span></span></span></code></pre></div>
   </figure>
 </div>
-<p><code>-d</code>: Specifies the delimiter (e.g., comma, space).
-<code>-f</code>: Specifies the field(s) to extract.
+<p><code>-d</code>: Specifies the delimiter (e.g., comma, space).<br>
+<code>-f</code>: Specifies the field(s) to extract.<br>
 <strong><code>--complement</code></strong>: Returns everything except the specified fields.</p>
 <p>To get the three (fields)columns of data within a table which are delimited by tab</p>
 
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cut -f 3,4,6 file</span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cut -f 3,4,6 file</span></span></code></pre></div>
   </figure>
 </div>
 <p>if the delimiter was space then it has to specified using <code>-d ' '</code></p>
@@ -2036,18 +2045,18 @@ We specify the file to split and a <code>prefix</code> which is name used for ne
   <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ cut -d , -f <span class="m">2</span> animals.csv <span class="p">|</span> sort <span class="p">|</span> uniq</span></span></code></pre></div>
   </figure>
 </div>
-<p>Removing the duplicates using <code>uniq</code>
+<p>Removing the duplicates using <code>uniq</code><br>
 Using <code>uniq -c</code> gives the count of occurrences for each line in input.</p>
 <p><code>ls -l | cut -c 2-10</code>  outputs only the permissions of the files which starts from 2nd character to 10th.</p>
 
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sujith@sujith-Latitude-7490:~/Desktop$ ls -l <span class="p">|</span> cut -c 2-10
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sujith@sujith-Latitude-7490:~/Desktop$ ls -l <span class="p">|</span> cut -c 2-10
 </span></span><span class="line"><span class="cl">otal <span class="m">56</span>
 </span></span><span class="line"><span class="cl">rw-rw-r--
 </span></span><span class="line"><span class="cl">rwxrwxr-x
@@ -2068,17 +2077,19 @@ Using <code>uniq -c</code> gives the count of occurrences for each line in input
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> nart-pacific-gyre
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> nart-pacific-gyre
 </span></span><span class="line"><span class="cl">wc -l *.txt           <span class="c1"># Get the word count for all .txt files</span>
 </span></span><span class="line"><span class="cl">wc -l *.txt <span class="p">|</span> sort -n <span class="p">|</span> head -n <span class="m">5</span>  <span class="c1"># Display the first five file line counts</span>
 </span></span><span class="line"><span class="cl">wc -l *.txt <span class="p">|</span> sort -n <span class="p">|</span> tail -n <span class="m">5</span>  <span class="c1"># Display the last five file line counts</span></span></span></code></pre></div>
   </figure>
 </div>
 <hr>
+<h3 id="text-editors-vi-and-vim"><strong>Text Editors: <code>vi</code> and <code>vim</code></strong><a href="#text-editors-vi-and-vim" class="anchor" aria-hidden="true">#</a> </h3>
+<p><strong><code>vi</code></strong> (or its improved version <strong><code>vim</code></strong>) is the default text editor found in most Linux distributions. It is used for editing text files from the command line. <code>vim</code> (Vi IMproved) offers additional features like syntax highlighting, better search functionalities, and more. While <code>vi</code> is still widely used, <code>vim</code> is recommended due to its enhanced capabilities.</p>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				</div>

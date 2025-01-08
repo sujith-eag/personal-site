@@ -775,15 +775,15 @@ File space is the physical collection of storage devices (like hard drives or SS
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-19-shell-scripting/">Bash - 19 - Shell Scripting</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-awk/">Bash - 18 - awk</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-20-loop/">Bash - 20 - loop</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
   </li>
       </ul>
     </details>
@@ -1569,15 +1569,15 @@ File space is the physical collection of storage devices (like hard drives or SS
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-19-shell-scripting/">Bash - 19 - Shell Scripting</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-awk/">Bash - 18 - awk</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-20-loop/">Bash - 20 - loop</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
   </li>
       </ul>
     </details>
@@ -1602,14 +1602,25 @@ File space is the physical collection of storage devices (like hard drives or SS
         <li>
           <ul>
             <li><a href="#file-space"><strong>File Space</strong></a></li>
-            <li><a href="#files-and-directories"><strong>Files and Directories</strong></a></li>
-            <li><a href="#partitioning"><strong>Partitioning</strong></a></li>
-            <li><a href="#inode"><strong>Inode</strong></a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#files-and-directories"><strong>Files and Directories</strong></a>
+      <ul>
+        <li><a href="#files"><strong>Files</strong>:</a></li>
+        <li><a href="#directories"><strong>Directories</strong>:</a></li>
+        <li><a href="#partitioning"><strong>Partitioning</strong></a></li>
+        <li><a href="#inode"><strong>Inode</strong></a>
+          <ul>
             <li><a href="#links"><strong>Links</strong></a></li>
-            <li><a href="#the-top-level-directory-structure"><strong>The Top-Level Directory Structure</strong></a></li>
-            <li><a href="#relative-and-absolute-paths"><strong>Relative and Absolute Paths</strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#relative-and-absolute-paths"><strong>Relative and Absolute Paths</strong></a>
+          <ul>
             <li><a href="#path-variable"><strong><code>PATH</code> Variable</strong></a></li>
             <li><a href="#filename-arguments-and-wildcards"><strong>Filename Arguments and Wildcards</strong></a></li>
+            <li><a href="#the-top-level-directory-structure"><strong>The Top-Level Directory Structure</strong></a></li>
           </ul>
         </li>
       </ul>
@@ -1634,14 +1645,25 @@ File space is the physical collection of storage devices (like hard drives or SS
         <li>
           <ul>
             <li><a href="#file-space"><strong>File Space</strong></a></li>
-            <li><a href="#files-and-directories"><strong>Files and Directories</strong></a></li>
-            <li><a href="#partitioning"><strong>Partitioning</strong></a></li>
-            <li><a href="#inode"><strong>Inode</strong></a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#files-and-directories"><strong>Files and Directories</strong></a>
+      <ul>
+        <li><a href="#files"><strong>Files</strong>:</a></li>
+        <li><a href="#directories"><strong>Directories</strong>:</a></li>
+        <li><a href="#partitioning"><strong>Partitioning</strong></a></li>
+        <li><a href="#inode"><strong>Inode</strong></a>
+          <ul>
             <li><a href="#links"><strong>Links</strong></a></li>
-            <li><a href="#the-top-level-directory-structure"><strong>The Top-Level Directory Structure</strong></a></li>
-            <li><a href="#relative-and-absolute-paths"><strong>Relative and Absolute Paths</strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#relative-and-absolute-paths"><strong>Relative and Absolute Paths</strong></a>
+          <ul>
             <li><a href="#path-variable"><strong><code>PATH</code> Variable</strong></a></li>
             <li><a href="#filename-arguments-and-wildcards"><strong>Filename Arguments and Wildcards</strong></a></li>
+            <li><a href="#the-top-level-directory-structure"><strong>The Top-Level Directory Structure</strong></a></li>
           </ul>
         </li>
       </ul>
@@ -1664,26 +1686,47 @@ File space is the physical collection of storage devices (like hard drives or SS
 </li>
 </ul>
 <p>OS have commands to show both views but we prefer to see logical view.</p>
-<h4 id="files-and-directories"><strong>Files and Directories</strong><a href="#files-and-directories" class="anchor" aria-hidden="true">#</a> </h4>
-<p><strong>Files</strong>: A file is the smallest logical unit within the file space. It has properties like name, type, and data. Files are stored as a collection of disk blocks. These blocks might not be stored contiguously on the disk and can be scattered.</p>
-<p><strong>Directories</strong>: Directories are used to organize files in a hierarchical structure. Subdirectories can be created within a directory to form a deeper organizational structure.</p>
-<h4 id="partitioning"><strong>Partitioning</strong><a href="#partitioning" class="anchor" aria-hidden="true">#</a> </h4>
+<hr>
+<h2 id="files-and-directories"><strong>Files and Directories</strong><a href="#files-and-directories" class="anchor" aria-hidden="true">#</a> </h2>
+<h3 id="files"><strong>Files</strong>:<a href="#files" class="anchor" aria-hidden="true">#</a> </h3>
+<p>A File is the smallest logical unit within the file space. It is a container for storing information or a sequence of characters. It has properties like name, type, and data.<br>
+The file will contain only what is written in it, there is no end-of-file (eof) mark. A file&rsquo;s size, nor even it&rsquo;s name is not stored in the file itself. It is all kept separately in the disk which is only accessible to the kernel.</p>
+<p>Files are stored as a collection of disk blocks. These blocks might not be stored contiguously on the disk and can be scattered.</p>
+<p>UNIX treats directories and devices also as files only, so is the shell and kernel.</p>
+<p><em><strong>Ordinary file (Regular files)</strong></em> :<br>
+Contains only data as a stream of characters. Text files and Binary files.<br>
+<strong>Text file</strong> contains printable characters which makes up viewable contents.
+<strong>Binary files</strong> contain both printable and unprintable characters that cover the entire ASCII range.  Most of UNIX commands are Binary files. Executable files, Pictures, sound and video files are all binary files.</p>
+<p><em><strong>Directory files</strong></em> :<br>
+A directory contains no data but keeps the names of files / directories it contains and a number associated with them called the inode number.</p>
+<p><em><strong>Device files</strong></em> :<br>
+All devices and peripherals are represented by files. To read or write a device, operations has to be performed on its associated file.<br>
+Device file names are usually found within the <code>/dev</code> directory.</p>
+<h3 id="directories"><strong>Directories</strong>:<a href="#directories" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Directories are a folder to store filenames and other directories.<br>
+Directories are used to organize files in a hierarchical structure. Sub-directories can be created within a directory to form a deeper organizational structure.</p>
+<hr>
+<h3 id="partitioning"><strong>Partitioning</strong><a href="#partitioning" class="anchor" aria-hidden="true">#</a> </h3>
 <p>A <strong>partition</strong> is a physical division of storage on a device. Linux allows partitions to be mounted into specific locations (directories) in the filesystem. Partitions can be used to separate system files, user files, and virtual memory (swap space).</p>
 <p><strong>Mounting</strong>: The process of associating a partition with a directory so that the files on the partition are accessible through that directory.
 For backing up, we can <code>unmount</code> a specific partition containing that content and while unmounted, no one can access it. Other partitions will not be affected.</p>
 <p><strong>Logical Volume Manager (LVM)</strong>: An alternative to physical partitioning that allows more flexible management of disk space so no restriction on partition growth. It can dynamically allocate disk space without the need for physical partitions, but it may introduce overhead to disk access and also problem loading <code>kernel</code> files.</p>
 <p>Linux offers three separate partitions: <code>/boot</code>, <code>LVM</code> and <code>swap</code>
 <code>/boot</code> must be separated from <code>LVM</code> and also <code>swap</code> as swap space (virtual memory) is treated differently from rest of the file space and not directly accessed by the user.</p>
-<h4 id="inode"><strong>Inode</strong><a href="#inode" class="anchor" aria-hidden="true">#</a> </h4>
-<p>An <strong>inode</strong> is additional part of Linux file space, it is a data structure that stores metadata about a file, such as:</p>
+<hr>
+<h3 id="inode"><strong>Inode</strong><a href="#inode" class="anchor" aria-hidden="true">#</a> </h3>
+<p>An <strong>inode</strong> is additional part of Linux file space, it is a data structure that doesn&rsquo;t contain the name and contents but stores all metadata about a file, such as:</p>
 <ul>
 <li>File type (regular file, directory, symbolic link, etc.)</li>
-<li>File owner and group</li>
-<li>Permissions</li>
+<li>File owner UID and group GID</li>
+<li>File Permissions (nine permissions and three more)</li>
 <li>Timestamps (creation, modification, access times)</li>
-<li>Pointers to the data blocks on disk that store the file&rsquo;s content</li>
+<li>An Array of Pointers to the data blocks on disk that store the file&rsquo;s content</li>
+<li>Number of links (number of aliases the file has)</li>
+<li>File size in bytes</li>
 </ul>
 <p>Each file, directory, and symbolic link has an associated inode. The inode does not contain the file&rsquo;s name, but the name is associated with the inode through directory entries.</p>
+<hr>
 <h4 id="links"><strong>Links</strong><a href="#links" class="anchor" aria-hidden="true">#</a> </h4>
 <p><code>link</code> is a pointer which points from a file in a directory to its <code>inode</code> which contains pointers to point at the files&rsquo;s physical blocks.</p>
 <ul>
@@ -1697,19 +1740,8 @@ For backing up, we can <code>unmount</code> a specific partition containing that
 <p>The name is indicated as <code>link -&gt; file</code> where <code>link</code> is the symbolic link and the <code>file</code> is the item being pointed at. The file will be in another directory.</p>
 </li>
 </ul>
-<h4 id="the-top-level-directory-structure"><strong>The Top-Level Directory Structure</strong><a href="#the-top-level-directory-structure" class="anchor" aria-hidden="true">#</a> </h4>
-<p>Every Linux distribution has a standard set of top-level directories. Some of the common top-level directories include:</p>
-<ul>
-<li><strong><code>/boot</code></strong>: Contains files required to boot the system, such as the Linux kernel.</li>
-<li><strong><code>/dev</code></strong>: Contains device files, which represent hardware devices.</li>
-<li><strong><code>/etc</code></strong>: Contains system configuration files.</li>
-<li><strong><code>/home</code></strong>: The home directory for users.</li>
-<li><strong><code>/proc</code></strong>: A virtual filesystem providing information about processes and kernel parameters.</li>
-<li><strong><code>/var</code></strong>: Contains variable data such as log files and databases.</li>
-<li><strong><code>/usr</code></strong>: Contains user binaries, libraries, and documentation.</li>
-</ul>
-<p>[image of top-level directory structure of Linux]</p>
-<h4 id="relative-and-absolute-paths"><strong>Relative and Absolute Paths</strong><a href="#relative-and-absolute-paths" class="anchor" aria-hidden="true">#</a> </h4>
+<hr>
+<h3 id="relative-and-absolute-paths"><strong>Relative and Absolute Paths</strong><a href="#relative-and-absolute-paths" class="anchor" aria-hidden="true">#</a> </h3>
 <p>We will be in <code>current working directory</code> and accessing files in another directory needs specifying a directory path.</p>
 <p>There are two primary ways to access files:</p>
 <ol>
@@ -1727,17 +1759,18 @@ For backing up, we can <code>unmount</code> a specific partition containing that
 <li><code>..</code>  : Represents the parent directory.</li>
 <li>The path can be omitted for executable files if the file is stored in our <code>PATH</code> variable.</li>
 </ul>
+<hr>
 <h4 id="path-variable"><strong><code>PATH</code> Variable</strong><a href="#path-variable" class="anchor" aria-hidden="true">#</a> </h4>
 <p>The <code>PATH</code> environment variable holds a list of directories where executable files are located. When you type a command like <code>ls</code> or <code>cat</code>, the system checks these directories to find the corresponding executable.</p>
 
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">/home/sujith/.nvm/versions/node/v20.17.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin</span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">/home/sujith/.nvm/versions/node/v20.17.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin</span></span></code></pre></div>
   </figure>
 </div>
 <p><code>PATH</code> variable  can be modified, to add new directories:</p>
@@ -1745,15 +1778,16 @@ For backing up, we can <code>unmount</code> a specific partition containing that
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/new/directory
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/new/directory
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nv">PATH</span><span class="o">=</span>new_directory:<span class="nv">$PATH</span></span></span></code></pre></div>
   </figure>
 </div>
+<hr>
 <h4 id="filename-arguments-and-wildcards"><strong>Filename Arguments and Wildcards</strong><a href="#filename-arguments-and-wildcards" class="anchor" aria-hidden="true">#</a> </h4>
 <ul>
 <li><strong>Wildcard Expansion (Globbing)</strong>: Bash allows the use of wildcards (also called globbing) to match multiple files.
@@ -1773,6 +1807,22 @@ For backing up, we can <code>unmount</code> a specific partition containing that
 <code>ls [abc][abc][abc]</code></p>
 <p><code>ls file?.{dat,txt}</code>: Lists files like <code>file1.dat</code>, <code>file2.txt</code>, etc.</p>
 <hr>
+<h4 id="the-top-level-directory-structure"><strong>The Top-Level Directory Structure</strong><a href="#the-top-level-directory-structure" class="anchor" aria-hidden="true">#</a> </h4>
+<p>[image of top-level directory structure of Linux]</p>
+<p>Every Linux distribution has a standard set of top-level directories. Some of the common top-level directories include:</p>
+<p><strong><code>/boot</code></strong>: Contains files required to boot the system, such as the Linux kernel.</p>
+<p><strong><code>/dev</code></strong>: Contains all device files, which represent hardware devices. These files do not occupy space on the disk.</p>
+<p><strong><code>/etc</code></strong>: Contains system configuration files.</p>
+<p><strong><code>/proc</code></strong>: A virtual filesystem providing information about processes and kernel parameters.</p>
+<p><strong><code>/usr</code></strong>: Contains user binaries, libraries, and documentation.</p>
+<p><code>/usr/share/man</code> : Contains the man pages.</p>
+<p><code>/bin</code> and <code>/usr/bin</code> : Contains all commonly used UNIX commands (Binaries, hence the name bin).</p>
+<p><code>/sbin</code> and <code>/usr/sbin</code> : Commands a system administrator can execute would be in these directories.</p>
+<hr>
+<p>Users work with their own files, write programs and create files. These are available in <code>/tmp, /var, /home</code>.</p>
+<p><strong><code>/home</code></strong>: The home directory for all the users.</p>
+<p><strong><code>/tmp</code></strong> : Where a user is allowed to create temporary files which are wiped away regularly by the system.</p>
+<p><strong><code>/var</code></strong>: Contains variable data such as log files and databases of the file system.</p>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				</div>

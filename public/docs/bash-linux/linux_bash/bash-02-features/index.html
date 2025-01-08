@@ -773,15 +773,15 @@ Bash supports several special keystrokes for command-line editing. These keystro
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-19-shell-scripting/">Bash - 19 - Shell Scripting</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-awk/">Bash - 18 - awk</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-20-loop/">Bash - 20 - loop</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
   </li>
       </ul>
     </details>
@@ -1567,15 +1567,15 @@ Bash supports several special keystrokes for command-line editing. These keystro
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-19-shell-scripting/">Bash - 19 - Shell Scripting</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-awk/">Bash - 18 - awk</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-20-loop/">Bash - 20 - loop</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
   </li>
       </ul>
     </details>
@@ -1683,10 +1683,10 @@ Bash supports several special keystrokes for command-line editing. These keystro
 <p><strong><code>Ctrl + e</code></strong> : Move the cursor to the end of the line.</p>
 </li>
 <li>
-<p><strong><code>Ctrl + d</code></strong> or <strong><code>Delete</code></strong> : Delete the character at the cursor.</p>
+<p><strong><code>Ctrl + d</code></strong> or <strong><code>Delete</code></strong> : Delete the character the cursor is on.</p>
 </li>
 <li>
-<p><strong><code>Backspace</code></strong> : Delete the character before the cursor.</p>
+<p><strong><code>Backspace</code></strong> or <strong><code>Ctrl + h</code></strong> : Delete the character before the cursor.</p>
 </li>
 <li>
 <p><strong><code>Ctrl + w</code></strong> : Delete one word, removing characters from the cursor to the beginning of the word.</p>
@@ -1708,6 +1708,10 @@ Bash supports several special keystrokes for command-line editing. These keystro
 <li><strong><code>Esc + l</code></strong> : Lowercase the word from the cursor position to the next space.</li>
 <li><strong><code>Esc + c</code></strong> : Capitalize the first letter of the word at the cursor position.</li>
 </ul>
+<hr>
+<p><code>Crtl + c</code> : or <code>Delete</code> to interrupt a command (Interrupt character).</p>
+<p><code>Ctrl + s</code> : and <code>Ctrl + q</code> to Freeze and Release the terminal.</p>
+<p><code>Ctrl + j</code> or <code>Ctrl + m</code> : Alternative to Enter Key</p>
 <hr>
 <h3 id="redirection"><strong>Redirection</strong><a href="#redirection" class="anchor" aria-hidden="true">#</a> </h3>
 <p>Redirection is the process of using operators to control where input or output from a command goes.</p>
@@ -1829,6 +1833,9 @@ This creates <code>animals-subset.csv</code> containing the first 3 lines of <co
   </figure>
 </div>
 <hr>
+<p>Two Special files are <code>/dev/null</code> and <code>dev/tty</code>.<br>
+These files always have zero size and will incinerate any output written to it. This facility is useful to redirecting error messages away from terminal. Or to check the program running successfully without seeing the output.</p>
+<hr>
 <h3 id="pipes"><strong>Pipes</strong><a href="#pipes" class="anchor" aria-hidden="true">#</a> </h3>
 <p>Pipes (<code>|</code>) allow the output of one command to be used as input for another command, enabling efficient chaining of multiple commands.</p>
 <h4 id="basic-pipe-usage"><strong>Basic Pipe Usage</strong><a href="#basic-pipe-usage" class="anchor" aria-hidden="true">#</a> </h4>
@@ -1871,6 +1878,25 @@ This creates <code>animals-subset.csv</code> containing the first 3 lines of <co
   </figure>
 </div>
 <p>This command concatenates all <code>.txt</code> files, sorts their contents, and writes the sorted output to <code>newfile.txt</code>.</p>
+<p><em><strong>When a Command Needs to be Ignorant of Its Source</strong></em><br>
+If <code>wc *.c</code>   would give the individual count of all the files and also the total count.<br>
+By passing the input to <code>wc</code> using pipe when the command does not know the source, it outputs just the total of the stream from pipe.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat *.c <span class="p">|</span> wc -c
+</span></span><span class="line"><span class="cl"><span class="c1"># 9636</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span><span class="sb">`</span>cat *c <span class="p">|</span> wc -c<span class="sb">`</span> -lt 1474560<span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">	<span class="nb">echo</span> <span class="s1">&#39;These files will fit into a single 3.5&#34; diskette&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span></span></span></code></pre></div>
+  </figure>
+</div>
 <hr>
 <h4 id="using-tilde-expansion"><strong>Using Tilde Expansion</strong><a href="#using-tilde-expansion" class="anchor" aria-hidden="true">#</a> </h4>
 <p>In Bash, <strong>tilde expansion</strong> allows the <code>~</code> symbol to represent the home directory, eliminating the need to type the full path <code>/home/username/</code>.</p>
@@ -1899,7 +1925,7 @@ This creates <code>animals-subset.csv</code> containing the first 3 lines of <co
   </figure>
 </div>
 <p><code>*</code> is a wildcard that replaces everything found and there are more.
-it is termed as <code>filename</code> expansion.
+it is termed as <code>filename</code> expansion.<br>
 <code>ls -l *.txt</code>    the <code>.*txt</code> is replaced by all the files before execution.</p>
 <hr>
 <h4 id="brace-expansion"><strong>Brace Expansion</strong><a href="#brace-expansion" class="anchor" aria-hidden="true">#</a> </h4>
@@ -1952,7 +1978,7 @@ it is termed as <code>filename</code> expansion.
 </div>
 <p>Creates a file (<code>comm.txt</code>) containing all the commands typed, which can have thousands of commands.</p>
 <p>The history list can store a maximum of 1000 commands. Older commands are discarded when the list exceeds this limit.</p>
-<p>The number preceding the command in the history list can be used to recall it.
+<p>The number preceding the command in the history list can be used to recall it.<br>
 Using <code>!100</code> recalls the command at position 100 in the history list.</p>
 <hr>
 <h4 id="recalling-instructions-from-the-history-list"><strong>Recalling Instructions from the History List</strong><a href="#recalling-instructions-from-the-history-list" class="anchor" aria-hidden="true">#</a> </h4>

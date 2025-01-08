@@ -773,15 +773,15 @@
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-19-shell-scripting/">Bash - 19 - Shell Scripting</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-awk/">Bash - 18 - awk</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-20-loop/">Bash - 20 - loop</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
   </li>
       </ul>
     </details>
@@ -1567,15 +1567,15 @@
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-19-shell-scripting/">Bash - 19 - Shell Scripting</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-awk/">Bash - 18 - awk</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-20-loop/">Bash - 20 - loop</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
   </li>
       </ul>
     </details>
@@ -1597,14 +1597,13 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#man-pages"><strong><code>man</code> Pages</strong></a></li>
+        <li><a href="#man-pages"><strong>man Pages</strong></a></li>
         <li><a href="#other-command-line-help"><strong>Other Command Line Help</strong></a>
           <ul>
-            <li><a href="#whatis"><code>whatis</code></a></li>
+            <li><a href="#whatis">whatis</a></li>
           </ul>
         </li>
-        <li><a href="#searching-in-usrbin"><strong>Searching in <code>/usr/bin</code></strong></a></li>
-        <li><a href="#using-apropos"><strong>Using <code>apropos</code></strong></a></li>
+        <li><a href="#using-apropos"><strong>Using apropos</strong></a></li>
       </ul>
     </li>
   </ul>
@@ -1624,14 +1623,13 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#man-pages"><strong><code>man</code> Pages</strong></a></li>
+        <li><a href="#man-pages"><strong>man Pages</strong></a></li>
         <li><a href="#other-command-line-help"><strong>Other Command Line Help</strong></a>
           <ul>
-            <li><a href="#whatis"><code>whatis</code></a></li>
+            <li><a href="#whatis">whatis</a></li>
           </ul>
         </li>
-        <li><a href="#searching-in-usrbin"><strong>Searching in <code>/usr/bin</code></strong></a></li>
-        <li><a href="#using-apropos"><strong>Using <code>apropos</code></strong></a></li>
+        <li><a href="#using-apropos"><strong>Using apropos</strong></a></li>
       </ul>
     </li>
   </ul>
@@ -1646,11 +1644,11 @@
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> --help
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> --help
 </span></span><span class="line"><span class="cl">ls --help
 </span></span><span class="line"><span class="cl">mkdir --help</span></span></code></pre></div>
   </figure>
@@ -1660,29 +1658,29 @@
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">help</span> <span class="nb">cd</span>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">help</span> <span class="nb">cd</span>
 </span></span><span class="line"><span class="cl"><span class="nb">help</span> <span class="nb">echo</span>  
 </span></span><span class="line"><span class="cl"><span class="c1"># Works for built-in commands only</span></span></span></code></pre></div>
   </figure>
 </div>
 <p>For commands with both long (<code>--option</code>) and short (<code>-o</code>) versions, use the short version in the terminal and the long version in scripts for clarity.</p>
 <hr>
-<h3 id="man-pages"><strong><code>man</code> Pages</strong><a href="#man-pages" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="man-pages"><strong>man Pages</strong><a href="#man-pages" class="anchor" aria-hidden="true">#</a> </h3>
 <p><code>man</code> is the manual for a command (if it exists).
 It expects the name of the command as its argument and displays the corresponding <strong>man page</strong>.</p>
 
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">man ls
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">man ls
 </span></span><span class="line"><span class="cl">man mkdir</span></span></code></pre></div>
   </figure>
 </div>
@@ -1707,17 +1705,17 @@ It expects the name of the command as its argument and displays the correspondin
 </ul>
 <hr>
 <h3 id="other-command-line-help"><strong>Other Command Line Help</strong><a href="#other-command-line-help" class="anchor" aria-hidden="true">#</a> </h3>
-<h4 id="whatis"><code>whatis</code><a href="#whatis" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="whatis">whatis<a href="#whatis" class="anchor" aria-hidden="true">#</a> </h4>
 <p><strong><code>whatis</code></strong> : Provides a brief description of a command.</p>
 
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sujith@sujith-Latitude-7490:~$ whatis ls <span class="nb">pwd</span> rm rmdir mkdir touch <span class="nb">echo</span>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sujith@sujith-Latitude-7490:~$ whatis ls <span class="nb">pwd</span> rm rmdir mkdir touch <span class="nb">echo</span>
 </span></span><span class="line"><span class="cl">ls <span class="o">(</span>1<span class="o">)</span>               - list directory contents
 </span></span><span class="line"><span class="cl"><span class="nb">pwd</span> <span class="o">(</span>1<span class="o">)</span>              - print name of current/working directory
 </span></span><span class="line"><span class="cl">rm <span class="o">(</span>1<span class="o">)</span>               - remove files or directories
@@ -1734,11 +1732,11 @@ It expects the name of the command as its argument and displays the correspondin
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sujith@sujith-Latitude-7490:~$ whatis -w mkd*
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sujith@sujith-Latitude-7490:~$ whatis -w mkd*
 </span></span><span class="line"><span class="cl">mkdir <span class="o">(</span>1<span class="o">)</span>            - make directories
 </span></span><span class="line"><span class="cl">mkdir <span class="o">(</span>2<span class="o">)</span>            - create a directory
 </span></span><span class="line"><span class="cl">mkdirat <span class="o">(</span>2<span class="o">)</span>          - create a directory
@@ -1747,21 +1745,20 @@ It expects the name of the command as its argument and displays the correspondin
   </figure>
 </div>
 <hr>
-<h3 id="searching-in-usrbin"><strong>Searching in <code>/usr/bin</code></strong><a href="#searching-in-usrbin" class="anchor" aria-hidden="true">#</a> </h3>
-<p>To see all available commands which are present in contents of <code>/usr/bin</code>.</p>
+<p><strong>Searching in <code>/usr/bin</code></strong> To see all available commands which are present in contents of <code>/usr/bin</code>.</p>
 <hr>
-<h3 id="using-apropos"><strong>Using <code>apropos</code></strong><a href="#using-apropos" class="anchor" aria-hidden="true">#</a> </h3>
-<p><code>apropos</code> allows finding commands using a description.
+<h3 id="using-apropos"><strong>Using apropos</strong><a href="#using-apropos" class="anchor" aria-hidden="true">#</a> </h3>
+<p><code>apropos</code> allows finding commands using a description.<br>
 It takes a string and searches for commands that has description that match the string provided as an argument.</p>
 
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">apropos delete
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">apropos delete
 </span></span><span class="line"><span class="cl">apropos delete directory</span></span></code></pre></div>
   </figure>
 </div>
@@ -1770,11 +1767,11 @@ It takes a string and searches for commands that has description that match the 
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">apropos <span class="s2">&#34;remove directory&#34;</span></span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">apropos <span class="s2">&#34;remove directory&#34;</span></span></span></code></pre></div>
   </figure>
 </div>
 <p>Using regular expressions (e.g., <code>.*</code>) to match anything between words:</p>
@@ -1782,11 +1779,11 @@ It takes a string and searches for commands that has description that match the 
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">apropos <span class="s2">&#34;remove .* directory&#34;</span>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">apropos <span class="s2">&#34;remove .* directory&#34;</span>
 </span></span><span class="line"><span class="cl">apropos <span class="s2">&#34;delete .* directory&#34;</span></span></span></code></pre></div>
   </figure>
 </div>
@@ -1794,11 +1791,11 @@ It takes a string and searches for commands that has description that match the 
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sujith@sujith-Latitude-7490:~$ apropos <span class="s2">&#34;virtual memory&#34;</span>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sujith@sujith-Latitude-7490:~$ apropos <span class="s2">&#34;virtual memory&#34;</span>
 </span></span><span class="line"><span class="cl">mremap <span class="o">(</span>2<span class="o">)</span>           - remap a virtual memory address
 </span></span><span class="line"><span class="cl">proc_sys_vm <span class="o">(</span>5<span class="o">)</span>      - virtual memory subsystem
 </span></span><span class="line"><span class="cl">proc_vmstat <span class="o">(</span>5<span class="o">)</span>      - virtual memory statistics
@@ -1811,11 +1808,11 @@ It takes a string and searches for commands that has description that match the 
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sujith@sujith-Latitude-7490:~$ apropos <span class="s2">&#34;user account&#34;</span>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sujith@sujith-Latitude-7490:~$ apropos <span class="s2">&#34;user account&#34;</span>
 </span></span><span class="line"><span class="cl">userdel <span class="o">(</span>8<span class="o">)</span>          - delete a user account and related files
 </span></span><span class="line"><span class="cl">usermod <span class="o">(</span>8<span class="o">)</span>          - modify a user account</span></span></code></pre></div>
   </figure>

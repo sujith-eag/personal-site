@@ -45,7 +45,8 @@
 <link rel="manifest" href="/personal-site/manifest.webmanifest">
 
 <meta property="og:title" content="Bash - 06 - Environment and Subshell">
-<meta property="og:description" content="A shell session consists of an environment that includes all the variables, functions, and other entities defined during the session.">
+<meta property="og:description" content="Computer&rsquo;s don&rsquo;t have the ability to translating the commands into action, it requires a Command Interpreter, which is handled by the outer part of the Operating system called Shell .
+It is actually the interface between the user and the kernel.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-06-environment-and-subshell/"><meta property="og:image" content="http://localhost:1313/personal-site/cover.png"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2024-10-22T09:34:55+05:30">
@@ -53,7 +54,8 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://localhost:1313/personal-site/cover.png"><meta name="twitter:title" content="Bash - 06 - Environment and Subshell">
-<meta name="twitter:description" content="A shell session consists of an environment that includes all the variables, functions, and other entities defined during the session.">
+<meta name="twitter:description" content="Computer&rsquo;s don&rsquo;t have the ability to translating the commands into action, it requires a Command Interpreter, which is handled by the outer part of the Operating system called Shell .
+It is actually the interface between the user and the kernel.">
 
     
     
@@ -771,15 +773,15 @@
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-19-shell-scripting/">Bash - 19 - Shell Scripting</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-awk/">Bash - 18 - awk</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-20-loop/">Bash - 20 - loop</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
   </li>
       </ul>
     </details>
@@ -1565,15 +1567,15 @@
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-19-shell-scripting/">Bash - 19 - Shell Scripting</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-awk/">Bash - 18 - awk</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-20-loop/">Bash - 20 - loop</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
   </li>
       </ul>
     </details>
@@ -1595,6 +1597,7 @@
   <ul>
     <li>
       <ul>
+        <li><a href="#shell">Shell</a></li>
         <li><a href="#configuration-files-for-shell-sessions"><strong>Configuration Files for Shell Sessions</strong></a>
           <ul>
             <li><a href="#for-system-administrators">For System Administrators:</a></li>
@@ -1603,6 +1606,7 @@
         </li>
         <li><a href="#how-shell-configuration-files-work"><strong>How Shell Configuration Files Work</strong></a></li>
         <li><a href="#logout-and-session-cleanup"><strong>Logout and Session Cleanup</strong></a></li>
+        <li><a href="#internal-and-external-commands">Internal and External Commands</a></li>
         <li><a href="#compiler-vs-interpreter"><strong>Compiler vs Interpreter</strong></a></li>
       </ul>
     </li>
@@ -1623,6 +1627,7 @@
   <ul>
     <li>
       <ul>
+        <li><a href="#shell">Shell</a></li>
         <li><a href="#configuration-files-for-shell-sessions"><strong>Configuration Files for Shell Sessions</strong></a>
           <ul>
             <li><a href="#for-system-administrators">For System Administrators:</a></li>
@@ -1631,6 +1636,7 @@
         </li>
         <li><a href="#how-shell-configuration-files-work"><strong>How Shell Configuration Files Work</strong></a></li>
         <li><a href="#logout-and-session-cleanup"><strong>Logout and Session Cleanup</strong></a></li>
+        <li><a href="#internal-and-external-commands">Internal and External Commands</a></li>
         <li><a href="#compiler-vs-interpreter"><strong>Compiler vs Interpreter</strong></a></li>
       </ul>
     </li>
@@ -1640,7 +1646,11 @@
   </details>
 
 			</nav>
-			<p>A shell session consists of an environment that includes all the variables, functions, and other entities defined during the session.</p>
+			<p>Computer&rsquo;s don&rsquo;t have the ability to translating the commands into action, it requires a <em><strong>Command Interpreter</strong></em>, which is handled by the outer part of the Operating system called <em><strong>Shell</strong></em> .<br>
+It is actually the interface between the user and the kernel.</p>
+<hr>
+<h3 id="shell">Shell<a href="#shell" class="anchor" aria-hidden="true">#</a> </h3>
+<p>A shell session consists of an environment that includes all the variables, functions, and other entities defined during the session.</p>
 <p>When a session ends (using <code>exit</code>), or when a new session is started within a session (e.g., using <code>bash</code>), the entities defined in that session are no longer available.</p>
 <p>However, it is possible to create a new session inside the current one, which is referred to as a <strong>subshell</strong> or a <strong>nested shell</strong>.</p>
 <p>A <strong>subshell</strong> allows you to create a new environment for performing tasks without affecting the parent shell. This is useful for executing commands or running scripts without modifying the original session.</p>
@@ -1702,13 +1712,20 @@ All defined variables are exported. A <code>umask</code> instruction is executed
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">source</span> ~/.bashrc</span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">source</span> ~/.bashrc</span></span></code></pre></div>
   </figure>
 </div>
+<hr>
+<h3 id="internal-and-external-commands">Internal and External Commands<a href="#internal-and-external-commands" class="anchor" aria-hidden="true">#</a> </h3>
+<p><code>$ type echo</code><br>
+<code>echo is a shell builtin</code></p>
+<p><code>echo</code> is not an external command, Shell won&rsquo;t look for it in the PATH variable to locate it when it is called. Rather it will execute it from its own set of built in commands that are not stored as separate files. These Built-in commands are called as Internal commands.</p>
+<p>Certain commands are built into the shell because it is difficult or impossible to implement them as separate external commands.<br>
+The child process inherits the current working directory from its parent as one of the environmental parameters. It is important for the <code>cd</code> command to not spawn any children to achieve a change of directory. If it did so through a separate process then after <code>cd</code> had completed its run, control would revert to the parent and the original directory would be restored. Then it would be impossible to change directory.</p>
 <hr>
 <h3 id="compiler-vs-interpreter"><strong>Compiler vs Interpreter</strong><a href="#compiler-vs-interpreter" class="anchor" aria-hidden="true">#</a> </h3>
 <ul>

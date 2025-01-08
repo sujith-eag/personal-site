@@ -771,15 +771,15 @@
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-19-shell-scripting/">Bash - 19 - Shell Scripting</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-awk/">Bash - 18 - awk</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-20-loop/">Bash - 20 - loop</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
   </li>
       </ul>
     </details>
@@ -1565,15 +1565,15 @@
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-19-shell-scripting/">Bash - 19 - Shell Scripting</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-awk/">Bash - 18 - awk</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-20-loop/">Bash - 20 - loop</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
   </li>
       </ul>
     </details>
@@ -1734,11 +1734,11 @@
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod permissions file<span class="o">(</span>s<span class="o">)</span></span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod permissions file<span class="o">(</span>s<span class="o">)</span></span></span></code></pre></div>
   </figure>
 </div>
 <p><strong><code>file(s)</code></strong> refers to the file(s) or directories to which you want to apply the permissions.</p>
@@ -1751,11 +1751,11 @@ using symbols (<code>+</code>, <code>-</code>, <code>=</code>), or numeric value
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod g-w,o-r file.txt</span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod g-w,o-r file.txt</span></span></code></pre></div>
   </figure>
 </div>
 <p>To <strong>add</strong> execute permission for the <strong>owner</strong> and <strong>group</strong>:</p>
@@ -1763,11 +1763,11 @@ using symbols (<code>+</code>, <code>-</code>, <code>=</code>), or numeric value
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod u+x,g+x file.txt</span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod u+x,g+x file.txt</span></span></code></pre></div>
   </figure>
 </div>
 <p>To apply changes to <strong>all</strong> categories (owner, group, others) at once using <code>a</code>:</p>
@@ -1775,11 +1775,11 @@ using symbols (<code>+</code>, <code>-</code>, <code>=</code>), or numeric value
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod a+x file.txt</span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod a+x file.txt</span></span></code></pre></div>
   </figure>
 </div>
 <h4 id="2-using--to-set-exact-permissions"><strong>2. Using <code>=</code> to Set Exact Permissions</strong><a href="#2-using--to-set-exact-permissions" class="anchor" aria-hidden="true">#</a> </h4>
@@ -1789,11 +1789,11 @@ using symbols (<code>+</code>, <code>-</code>, <code>=</code>), or numeric value
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod <span class="nv">u</span><span class="o">=</span>rwx,g<span class="o">=</span>r,o<span class="o">=</span> file.txt</span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod <span class="nv">u</span><span class="o">=</span>rwx,g<span class="o">=</span>r,o<span class="o">=</span> file.txt</span></span></code></pre></div>
   </figure>
 </div>
 <p>If you do not specify a category (like <code>u=</code>), it will <strong>not change</strong> the permissions for that category:</p>
@@ -1801,11 +1801,11 @@ using symbols (<code>+</code>, <code>-</code>, <code>=</code>), or numeric value
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod <span class="nv">g</span><span class="o">=</span>,o<span class="o">=</span> file.txt  
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod <span class="nv">g</span><span class="o">=</span>,o<span class="o">=</span> file.txt  
 </span></span><span class="line"><span class="cl"><span class="c1"># Does not change owner permissions</span></span></span></code></pre></div>
   </figure>
 </div>
@@ -1814,11 +1814,11 @@ using symbols (<code>+</code>, <code>-</code>, <code>=</code>), or numeric value
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod <span class="nv">u</span><span class="o">=</span>rwx,g-w,o-r file
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod <span class="nv">u</span><span class="o">=</span>rwx,g-w,o-r file
 </span></span><span class="line"><span class="cl">chmod <span class="nv">u</span><span class="o">=</span>rwx,g-w,o<span class="o">=</span> file
 </span></span><span class="line"><span class="cl">chmod u+x,g<span class="o">=</span>r,o-r file
 </span></span><span class="line"><span class="cl">chmod u+x,g-w,o<span class="o">=</span> file</span></span></code></pre></div>
@@ -1837,11 +1837,11 @@ using symbols (<code>+</code>, <code>-</code>, <code>=</code>), or numeric value
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod <span class="m">750</span> file.txt  <span class="c1"># rwx (7) for owner, r-x (5) for group, no permissions (0) for others</span></span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod <span class="m">750</span> file.txt  <span class="c1"># rwx (7) for owner, r-x (5) for group, no permissions (0) for others</span></span></span></code></pre></div>
   </figure>
 </div>
 <h5 id="breakdown-of-permission-calculation">Breakdown of Permission Calculation:<a href="#breakdown-of-permission-calculation" class="anchor" aria-hidden="true">#</a> </h5>
@@ -1900,11 +1900,11 @@ using symbols (<code>+</code>, <code>-</code>, <code>=</code>), or numeric value
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chown newowner file<span class="o">(</span>s<span class="o">)</span>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chown newowner file<span class="o">(</span>s<span class="o">)</span>
 </span></span><span class="line"><span class="cl">chown newowner:newgroup file<span class="o">(</span>s<span class="o">)</span></span></span></code></pre></div>
   </figure>
 </div>
@@ -1913,22 +1913,22 @@ using symbols (<code>+</code>, <code>-</code>, <code>=</code>), or numeric value
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chgrp newgroup file<span class="o">(</span>s<span class="o">)</span></span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chgrp newgroup file<span class="o">(</span>s<span class="o">)</span></span></span></code></pre></div>
   </figure>
 </div>
 
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chown fox /home/fox/*.txt
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chown fox /home/fox/*.txt
 </span></span><span class="line"><span class="cl">chown www:www /usr/local/apache/htdocs/*
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">chgrp citg /home/fox/citg/project-data.txt</span></span></code></pre></div>
@@ -1956,11 +1956,11 @@ using symbols (<code>+</code>, <code>-</code>, <code>=</code>), or numeric value
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod +t /some/directory</span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod +t /some/directory</span></span></code></pre></div>
   </figure>
 </div>
 <blockquote>

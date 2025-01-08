@@ -45,9 +45,8 @@
 <link rel="manifest" href="/personal-site/manifest.webmanifest">
 
 <meta property="og:title" content="Bash - 04 - Variables and Aliases">
-<meta property="og:description" content="Variables and Environment Variables
-In Bash, variables can be defined from the command line and used later in the same shell session or from within a script.
-All variables are typically capitalized.">
+<meta property="og:description" content="In Bash, variables can be defined from the command line and used later in the same shell session or from within a script.
+All variables are typically capitalized but not a requirement.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-04-variables-and-aliases/"><meta property="og:image" content="http://localhost:1313/personal-site/cover.png"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2024-10-22T09:34:02+05:30">
@@ -55,9 +54,8 @@ All variables are typically capitalized.">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://localhost:1313/personal-site/cover.png"><meta name="twitter:title" content="Bash - 04 - Variables and Aliases">
-<meta name="twitter:description" content="Variables and Environment Variables
-In Bash, variables can be defined from the command line and used later in the same shell session or from within a script.
-All variables are typically capitalized.">
+<meta name="twitter:description" content="In Bash, variables can be defined from the command line and used later in the same shell session or from within a script.
+All variables are typically capitalized but not a requirement.">
 
     
     
@@ -775,15 +773,15 @@ All variables are typically capitalized.">
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-19-shell-scripting/">Bash - 19 - Shell Scripting</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-awk/">Bash - 18 - awk</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-20-loop/">Bash - 20 - loop</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
   </li>
       </ul>
     </details>
@@ -1569,15 +1567,15 @@ All variables are typically capitalized.">
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-19-shell-scripting/">Bash - 19 - Shell Scripting</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-awk/">Bash - 18 - awk</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-20-loop/">Bash - 20 - loop</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
   </li>
       </ul>
     </details>
@@ -1599,9 +1597,9 @@ All variables are typically capitalized.">
   <ul>
     <li>
       <ul>
-        <li><a href="#variables-and-environment-variables"><strong>Variables and Environment Variables</strong></a>
+        <li>
           <ul>
-            <li></li>
+            <li><a href="#env"><strong>env</strong></a></li>
           </ul>
         </li>
         <li><a href="#common-bash-environment-variables"><strong>Common Bash Environment Variables</strong></a></li>
@@ -1626,9 +1624,9 @@ All variables are typically capitalized.">
   <ul>
     <li>
       <ul>
-        <li><a href="#variables-and-environment-variables"><strong>Variables and Environment Variables</strong></a>
+        <li>
           <ul>
-            <li></li>
+            <li><a href="#env"><strong>env</strong></a></li>
           </ul>
         </li>
         <li><a href="#common-bash-environment-variables"><strong>Common Bash Environment Variables</strong></a></li>
@@ -1642,21 +1640,20 @@ All variables are typically capitalized.">
   </details>
 
 			</nav>
-			<h3 id="variables-and-environment-variables"><strong>Variables and Environment Variables</strong><a href="#variables-and-environment-variables" class="anchor" aria-hidden="true">#</a> </h3>
-<p>In Bash, variables can be defined from the command line and used later in the same shell session or from within a script.<br>
-All variables are typically capitalized.</p>
+			<p>In Bash, variables can be defined from the command line and used later in the same shell session or from within a script.<br>
+All variables are typically capitalized but not a requirement.</p>
 <p>When a variable is available throughout the environment for use, not just one session or script, it is called an <strong>environment variable</strong>.</p>
-<h5 id="env"><strong><code>env</code></strong><a href="#env" class="anchor" aria-hidden="true">#</a> </h5>
+<h4 id="env"><strong>env</strong><a href="#env" class="anchor" aria-hidden="true">#</a> </h4>
 <p>The <code>env</code> command can be used to see all the environment variables defined (these can vary across distributions).</p>
 
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sujith@sujith-Latitude-7490:~/Desktop$ env
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sujith@sujith-Latitude-7490:~/Desktop$ env
 </span></span><span class="line"><span class="cl"><span class="nv">SHELL</span><span class="o">=</span>/bin/bash
 </span></span><span class="line"><span class="cl"><span class="nv">SESSION_MANAGER</span><span class="o">=</span>local/sujith-Latitude-7490:@/tmp/.ICE-unix/1537,unix/sujith-Latitude-7490:/tmp/.ICE-unix/1537
 </span></span><span class="line"><span class="cl"><span class="nv">QT_ACCESSIBILITY</span><span class="o">=</span><span class="m">1</span>
@@ -1683,11 +1680,11 @@ All variables are typically capitalized.</p>
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sujith@sujith-Latitude-7490:~/Desktop$ <span class="nb">echo</span> <span class="nv">$USER</span><span class="p">;</span> <span class="nb">echo</span> <span class="nv">$SHELL</span><span class="p">;</span> <span class="nb">echo</span> <span class="nv">$PWD</span><span class="p">;</span> <span class="nb">echo</span> <span class="nv">$OLDPWD</span><span class="p">;</span>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sujith@sujith-Latitude-7490:~/Desktop$ <span class="nb">echo</span> <span class="nv">$USER</span><span class="p">;</span> <span class="nb">echo</span> <span class="nv">$SHELL</span><span class="p">;</span> <span class="nb">echo</span> <span class="nv">$PWD</span><span class="p">;</span> <span class="nb">echo</span> <span class="nv">$OLDPWD</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">sujith
 </span></span><span class="line"><span class="cl">/bin/bash
 </span></span><span class="line"><span class="cl">/home/sujith/Desktop
@@ -1712,11 +1709,11 @@ Most are found in <code>/user/bin    /user/sbin</code></p>
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">PATH</span><span class="o">=</span>/home/sujith/.nvm/versions/node/v20.17.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin</span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">PATH</span><span class="o">=</span>/home/sujith/.nvm/versions/node/v20.17.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin</span></span></code></pre></div>
   </figure>
 </div>
 <p>Without the <code>PATH</code> variable, you would need to specify the full path to the executable before running any command.</p>
@@ -1729,49 +1726,78 @@ We can define new variables or redefine existing ones.</p>
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nv">FIRST</span><span class="o">=</span>Sujith
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nv">FIRST</span><span class="o">=</span>Sujith
 </span></span><span class="line"><span class="cl">$ <span class="nv">LAST</span><span class="o">=</span>kumar
 </span></span><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="nv">$FIRST</span> <span class="nv">$LAST</span>
 </span></span><span class="line"><span class="cl">Sujith Kumar</span></span></code></pre></div>
   </figure>
 </div>
 <p><strong>Using Single Quotes</strong>:<br>
-When using single quotes (<code>' '</code>), the Bash interpreter treats the content literally and does not expand the value of variables.
+When using single quotes (<code>' '</code>), the Bash interpreter treats the content literally and does not expand the value of variables.<br>
 So it will not apply <code>$</code> to retrieve the value from variables.</p>
 
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nv">FULL_NAME</span><span class="o">=</span><span class="s1">&#39;$FIRST $LAST&#39;</span>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nv">FULL_NAME</span><span class="o">=</span><span class="s1">&#39;$FIRST $LAST&#39;</span>
 </span></span><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="nv">$FULL_NAME</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$FIRST</span> <span class="nv">$LAST</span></span></span></code></pre></div>
   </figure>
 </div>
 <p><strong>Using Double Quotes</strong>:<br>
-If there is any blank space in the Value being assigned, then value has to be in <code>&quot; &quot;</code>
+If there is any blank space in the Value being assigned, then value has to be in <code>&quot; &quot;</code><br>
 When using double quotes (<code>&quot; &quot;</code>), the Bash interpreter will expand variables.</p>
 
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nv">FULL_NAME</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$FIRST</span><span class="s2"> </span><span class="nv">$LAST</span><span class="s2">&#34;</span>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nv">FULL_NAME</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$FIRST</span><span class="s2"> </span><span class="nv">$LAST</span><span class="s2">&#34;</span>
 </span></span><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="nv">$FULL_NAME</span>
 </span></span><span class="line"><span class="cl">Sujith Kumar</span></span></code></pre></div>
   </figure>
 </div>
 <p>If a command like <code>pwd</code> is stored in a variable and called, Bash will execute it.</p>
+<p><code>unset variable</code> will remove the variable from the list of variables.<br>
+<code>readonly variable</code> will not allow the variable to be reassigned.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nv">psit</span><span class="o">=</span>~/Desktop/website/site
+</span></span><span class="line"><span class="cl">$ <span class="nb">cd</span> <span class="nv">$psite</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ <span class="nv">pnote</span><span class="o">=</span>~/Desktop/obsid/notes
+</span></span><span class="line"><span class="cl">$ <span class="nb">cd</span> <span class="nv">$pnote</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ <span class="nv">size</span><span class="o">=</span><span class="sb">`</span>wc -c &lt; file.text<span class="sb">`</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>The Shell Order of Processing can be:</p>
+<ul>
+<li>Parsing : Breaking command into words with space or tab as delimiter.</li>
+<li>Variable evaluation : All <code>$</code> prefixed strings are evaluated as variables, unless quoted or escaped.</li>
+<li>Command Substitution : Any command surrounded by back quotes are executed by the shell which then replaces the standard output of the command into the command line.</li>
+<li>Redirection : Looks for <code>&lt; &gt; &gt;&gt;</code> to open files they point to.</li>
+<li>Wildcard Interpretation : Replacing with matching file names.</li>
+<li>PATH Evaluation : Searching for the command in directories.</li>
+</ul>
+<hr>
 <p><strong>Escape Character (<code>\</code>)</strong>:<br>
 The escape character is used to tell the Bash interpreter to treat the following character literally and not interpret it.<br>
 <code>\$$AMOUNT</code> escapes the first <code>$</code>, so it is not interpreted as a variable.</p>
@@ -1783,6 +1809,12 @@ The escape character is used to tell the Bash interpreter to treat the following
 <li><code>\t</code> : tab</li>
 <li><code>\!</code> , <code>\$</code> , <code>\&amp;</code> , <code>\;</code> , <code>\'</code> , <code>\&quot;</code> : escaping special symbols</li>
 </ul>
+<p>Putting a string of command in <code>' '</code> single quotes will also work as escaping all the characters in it.</p>
+<blockquote>
+<p>[!Important]
+All variables and aliases defined in the terminal in a session in that environment is temporary by default and will get erased after the terminal session ends.
+To make it permanent, they need to be defined in the configuration files that are loaded when the shell starts like <code>~/.bashrc</code>, for system wide environment variables like <code>/etc/environemnt</code>, <code>/etc/bash.bashrc</code></p>
+</blockquote>
 <hr>
 <h3 id="aliases"><strong>Aliases</strong><a href="#aliases" class="anchor" aria-hidden="true">#</a> </h3>
 <p>An <strong>alias</strong> is used to define a shortcut for a command.<br>
@@ -1794,11 +1826,11 @@ The name is the alias, and the command is the Linux command it represents.</p>
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">alias</span> ..<span class="o">=</span><span class="s2">&#34;cd ..&#34;</span>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">alias</span> ..<span class="o">=</span><span class="s2">&#34;cd ..&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="nb">alias</span> ~<span class="o">=</span><span class="s2">&#34;cd ~&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">lss</span><span class="o">=</span>less
 </span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">sl</span><span class="o">=</span>ls
@@ -1806,16 +1838,27 @@ The name is the alias, and the command is the Linux command it represents.</p>
   </figure>
 </div>
 <p><code>rm</code> is given in single quotes to input the interactive version.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">psite</span><span class="o">=</span><span class="s2">&#34;cd ~/Desktop/Sites/Personal&#34;</span></span></span></code></pre></div>
+  </figure>
+</div>
 <p>You can view all the predefined aliases by typing <code>alias</code>:</p>
 
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">egrep</span><span class="o">=</span><span class="s1">&#39;egrep --color=auto&#39;</span>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">egrep</span><span class="o">=</span><span class="s1">&#39;egrep --color=auto&#39;</span>
 </span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">fgrep</span><span class="o">=</span><span class="s1">&#39;fgrep --color=auto&#39;</span>
 </span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">grep</span><span class="o">=</span><span class="s1">&#39;grep --color=auto&#39;</span>
 </span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">l</span><span class="o">=</span><span class="s1">&#39;ls -CF&#39;</span>
@@ -1830,11 +1873,11 @@ The name is the alias, and the command is the Linux command it represents.</p>
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">unalias</span> ll</span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">unalias</span> ll</span></span></code></pre></div>
   </figure>
 </div>
 <hr>

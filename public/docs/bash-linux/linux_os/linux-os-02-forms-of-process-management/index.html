@@ -45,9 +45,8 @@
 <link rel="manifest" href="/personal-site/manifest.webmanifest">
 
 <meta property="og:title" content="Linux OS - 02 - Forms of Process Management">
-<meta property="og:description" content="Program is a static entity.
-A process is a running program, it has a state which changes over time.
-The programs are identical but the processes all differ because each will have its own unique state.">
+<meta property="og:description" content="Two simplest entities support the UNIX System - file and process.
+A File is just an array of bytes that can virtually contain anything. It is also related to other files by being part of a single hierarchical structure. File is located with reference to a predetermined place.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://localhost:1313/personal-site/docs/bash-linux/linux_os/linux-os-02-forms-of-process-management/"><meta property="og:image" content="http://localhost:1313/personal-site/cover.png"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2024-12-31T07:31:43+05:30">
@@ -55,9 +54,8 @@ The programs are identical but the processes all differ because each will have i
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://localhost:1313/personal-site/cover.png"><meta name="twitter:title" content="Linux OS - 02 - Forms of Process Management">
-<meta name="twitter:description" content="Program is a static entity.
-A process is a running program, it has a state which changes over time.
-The programs are identical but the processes all differ because each will have its own unique state.">
+<meta name="twitter:description" content="Two simplest entities support the UNIX System - file and process.
+A File is just an array of bytes that can virtually contain anything. It is also related to other files by being part of a single hierarchical structure. File is located with reference to a predetermined place.">
 
     
     
@@ -775,15 +773,15 @@ The programs are identical but the processes all differ because each will have i
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-19-shell-scripting/">Bash - 19 - Shell Scripting</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-awk/">Bash - 18 - awk</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-20-loop/">Bash - 20 - loop</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
   </li>
       </ul>
     </details>
@@ -1569,15 +1567,15 @@ The programs are identical but the processes all differ because each will have i
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-19-shell-scripting/">Bash - 19 - Shell Scripting</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-awk/">Bash - 18 - awk</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-20-loop/">Bash - 20 - loop</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
   </li>
       </ul>
     </details>
@@ -1660,24 +1658,29 @@ The programs are identical but the processes all differ because each will have i
   </details>
 
 			</nav>
-			<p>Program is a static entity.
+			<p>Two simplest entities support the UNIX System - <em>file</em> and <em>process</em>.<br>
+A File is just an array of bytes that can virtually contain anything. It is also related to other files by being part of a single hierarchical structure. File is located with reference to a predetermined place.</p>
+<p>Process is the name given to a file when it is executed as a program.<br>
+Process is simply the &ldquo;time image&rdquo; of an executable file. It also belongs to a separate hierarchical structure with parents, children and grandchildren.</p>
+<hr>
+<p>Program is a static entity.<br>
 A process is a running program, it has a <code>state</code> which changes over time.
 The programs are identical but the processes all differ because each will have its own unique state.</p>
-<p>A process is described in many ways,
-Is it currently being run by the CPU or waiting?
-if waiting, where?
-What are the values of its variables? where in memory is it stored?
-If in memory, what resources does it have assigned to it?
+<p>A process is described in many ways,<br>
+Is it currently being run by the CPU or waiting?<br>
+if waiting, where?<br>
+What are the values of its variables? where in memory is it stored?<br>
+If in memory, what resources does it have assigned to it?<br>
 The answers to these questions are just some of the ways we describe a process.</p>
-<p>Whenever a process runs, Linux kernel keeps track of it through process ID (PID).
-The first process the kernel starts after it is loaded is <code>systemd</code>.
-<code>systemd</code> is responsible for for starting the run-time environment and then monitering the environment.
+<p>Whenever a process runs, Linux kernel keeps track of it through process ID (PID).<br>
+The first process the kernel starts after it is loaded is <code>systemd</code>.<br>
+<code>systemd</code> is responsible for for starting the run-time environment and then monitering the environment.<br>
 <code>systemd</code> is given PID of 1, each new process gets the next available PID.</p>
 <p>In Linux, a process can only be created by another process (except <code>systemd</code>).</p>
-<p>Creating process is referred to as <code>parent</code> and created process is <code>child</code> where parent process spawns the child process.
+<p>Creating process is referred to as <code>parent</code> and created process is <code>child</code> where parent process spawns the child process.<br>
 Spawning of a process utilizes the system call of the parent process to the Linux kernel.</p>
 <hr>
-<p><em><strong>Several forms of child process creation system calls.</strong></em></p>
+<p>***Several forms of child process creation system calls. ***</p>
 <ul>
 <li>
 <p><code>fork()</code>  Creates a duplicate process of the parent but with its own PID, own memory and its own resources. Parent and child an run concurrently.</p>
@@ -1695,13 +1698,13 @@ Spawning of a process utilizes the system call of the parent process to the Linu
 <p><code>wait()</code> Suspended parent process to wait for an event of a child process.</p>
 </li>
 </ul>
-<p>The current process (parent) invokes one of the system call function like <code>fork()</code> <code>clone()</code>. There are several different clone systems <code>clone() clone2() clone3()</code>
+<p>The current process (parent) invokes one of the system call function like <code>fork()</code> <code>clone()</code>. There are several different clone systems <code>clone() clone2() clone3()</code><br>
 The difference between <code>clone fork vfork</code> is how much will be shared between the parent and the child.</p>
-<p><code>vfork()</code> suspends the parent process while the child runs.
+<p><code>vfork()</code> suspends the parent process while the child runs.<br>
 Another option is to create a child with <code>clone or fork</code> and then have the parent <code>wait</code></p>
-<p>There are several wait systems,
-with <code>wait()</code> the parent is suspended till one child terminates.
-with <code>waitid()</code>  <code>waitpid()</code> the parent suspends until the child with the specified PID terminates.
+<p>There are several wait systems,<br>
+with <code>wait()</code> the parent is suspended till one child terminates.<br>
+with <code>waitid()</code>  <code>waitpid()</code> the parent suspends until the child with the specified PID terminates.<br>
 These can be modified to make the parent resume under different circumstances also. This makes <code>wait()</code> more flexible than <code>vfork()</code></p>
 <p><code>exec()</code>
 <code>fork, clone, vfork</code> create a child that has the same executable code as the parent.
@@ -1806,11 +1809,11 @@ This can be altered using <code>-d s.t</code>  s is seconds and t is tenth of se
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sujith@sujith-Latitude-7490:~$ top -d <span class="m">5</span>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sujith@sujith-Latitude-7490:~$ top -d <span class="m">5</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">top - 18:37:00 up  2:35,  <span class="m">1</span> user,  load average: 0.15, 0.25, 0.25
 </span></span><span class="line"><span class="cl">Tasks: <span class="m">251</span> total,   <span class="m">1</span> running, <span class="m">250</span> sleeping,   <span class="m">0</span> stopped,   <span class="m">0</span> zombie

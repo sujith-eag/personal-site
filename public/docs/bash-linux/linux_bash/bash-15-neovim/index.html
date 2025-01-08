@@ -777,15 +777,15 @@ Replace mode the characters entered replaces the character at the cursor positio
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-19-shell-scripting/">Bash - 19 - Shell Scripting</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-awk/">Bash - 18 - awk</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-20-loop/">Bash - 20 - loop</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
   </li>
       </ul>
     </details>
@@ -1571,15 +1571,15 @@ Replace mode the characters entered replaces the character at the cursor positio
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-19-shell-scripting/">Bash - 19 - Shell Scripting</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-awk/">Bash - 18 - awk</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-20-loop/">Bash - 20 - loop</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
   </li>
       </ul>
     </details>
@@ -1608,7 +1608,7 @@ Replace mode the characters entered replaces the character at the cursor positio
             <li><a href="#editing-commands">Editing Commands</a></li>
             <li><a href="#file-commands">File Commands</a></li>
             <li><a href="#miscellany">Miscellany</a></li>
-            <li><a href="#text-editing">Text Editing</a></li>
+            <li><a href="#substitution---search-and-replace-s--"><em><strong>Substitution - Search and replace (:s/ /) :</strong></em></a></li>
           </ul>
         </li>
       </ul>
@@ -1637,7 +1637,7 @@ Replace mode the characters entered replaces the character at the cursor positio
             <li><a href="#editing-commands">Editing Commands</a></li>
             <li><a href="#file-commands">File Commands</a></li>
             <li><a href="#miscellany">Miscellany</a></li>
-            <li><a href="#text-editing">Text Editing</a></li>
+            <li><a href="#substitution---search-and-replace-s--"><em><strong>Substitution - Search and replace (:s/ /) :</strong></em></a></li>
           </ul>
         </li>
       </ul>
@@ -1671,42 +1671,60 @@ Replace mode the characters entered replaces the character at the cursor positio
 <code>R, r</code> to enter replace mode and staying there or replacing one character and moving out after that to command mode.</p>
 <hr>
 <h4 id="cursor-movement-commands">Cursor Movement Commands:<a href="#cursor-movement-commands" class="anchor" aria-hidden="true">#</a> </h4>
-<p><code>HJKL</code> for moving around.<br>
-<code>H--L</code> for left and right.<br>
-<code>-JK-</code> for down and up.</p>
-<p><code>0</code> just zero to move to left end (beginning) of the line in command mode.<br>
-<code>$</code> (shift+4) to move to end of line in command mode.<br>
-<code>w, b</code> to move forward or backwards to the next/previous word or punctuation mark.<br>
-<code>3w</code> to move 3 word.<br>
+<p><code>hjkl</code> for moving around.<br>
+<code>h--l</code> for left and right.<br>
+<code>-jk-</code> for down and up.<br>
+These can be prefixed with numbers to move certain distance. <code>2k, 10j, 13h</code>.</p>
+<p><em><strong>Moving to Line Extremes :</strong></em><br>
+<code>0</code> just zero to move to left end (beginning) of the line.<br>
+<code>$</code> (shift+4) to move to end of line.</p>
+<p><em><strong>Moving Over words :</strong></em><br>
+<code>b</code> is beginning of current word, <code>e</code> is end of current word, <code>w</code> is jumping to next words.</p>
+<p><code>w, b</code> to move forward or backwards to the next/previous word or punctuation mark. (<code>3w</code> to move 3 word).<br>
 <code>W, B</code> moves one word<br>
 <code>E, e</code> similar but takes to end of current word or to next punctuation mark.</p>
-<p><code>G</code> moves to the end of the file. <code>nG</code> can be given to move to a particular line. <code>6G</code></p>
-<p>Page Motion<br>
+<p><em><strong>Page Motion :</strong></em><br>
 <code>Ctrl + b</code> and <code>Ctrl + d</code> to move up and down by half page.<br>
 <code>Ctrl + u</code> and <code>Ctrl + f</code> to move up down by one full screen.</p>
 <p><code>H, M, L</code> Head, Middle, Last moves to these points in the file.</p>
+<p><em><strong>Absolute movement :</strong></em>
+<code>Ctrl + G</code> gives the current line number.
+(Capital G)</p>
+<p><code>nG</code> can be given to move to a particular line as if needed when it mentioned in an error.<br>
+<code>40G</code> moves to the 40th line
+<code>1G</code> to the first line
+<code>G</code> moves to the end of the file.</p>
 <hr>
 <h4 id="editing-commands">Editing Commands<a href="#editing-commands" class="anchor" aria-hidden="true">#</a> </h4>
 <p>Which allows for cut copy an paste.</p>
-<p>There are various forms of Cut (deletion) commands.<br>
+<p><em><strong>Deleting Text :</strong></em><br>
+There are various forms of Cut (deletion) commands.<br>
 <code>x</code> deletes the current character.<br>
 <code>D</code> deletes from cursor to end of the line.<br>
 <code>dd</code> deletes the current line (<code>5dd</code> to delete multiple lines below it)<br>
 <code>dw</code> to delete current word or from cursor till next word (<code>d5w</code> to delete 5 words)<br>
-<code>db</code> deletes the previous word or to the left of cursor till end of word.<br>
-<code>d</code> ??</p>
-<p>Deleted items are moved into buffer, can be recalled or pasted anywhere.<br>
-<code>p</code> to paste before the cursor<br>
-<code>P</code> to paste after the cursor</p>
-<p><code>yy</code> to copy the current line and <code>yw</code> to copy the current word to buffer.<br>
+<code>db</code> deletes the previous word or to the left of cursor till end of word.</p>
+<p><em><strong>Moving Text :</strong></em><br>
+Deleted items are moved into buffer, can be recalled or pasted anywhere.<br>
+<code>p</code> to paste/put before the cursor<br>
+<code>P</code> to paste/put after the cursor</p>
+<p><em><strong>Copying Text:</strong></em><br>
+yanking is used to copy the file.<br>
+<code>yy</code> to copy the current line and <code>yw</code> to copy the current word to buffer.<br>
 <code>6yy</code> copies the 6 lines from cursor.</p>
-<p>Buffer space: adding any letter from a to z to command allows to select 26 additional buffers.<br>
+<p><em><strong>Buffer space :</strong></em> adding any letter from a to z to command allows to select 26 additional buffers.<br>
 <code>a6yy</code> copies 6 lines from the cursor into buffer <code>a</code>, then typing <code>ap</code> will paste those 6 lines after the cursor.</p>
-<p><code>J</code> to join two consecutive lines into one,<br>
-<code>xp</code> transposes the current character with next character (cut paste)</p>
-<p><code>u</code> undoes the last changes made<br>
-<code>U</code> undoes all changes made to the current line.<br>
-<code>Ctrl + r</code> to redo the last command</p>
+<p><em><strong>Joining Lines :</strong></em><br>
+<code>J</code> to join two consecutive lines into one,<br>
+<code>4J</code> joins the following four lines with the current one.</p>
+<p><em><strong>Undoing Last Editing Instructions :</strong></em>
+<code>u</code> undoes the last changes made.<br>
+<code>u</code> can be combined with number also so undo multiple steps. <code>10u</code>.</p>
+<p><code>U</code> undoes all changes made to the current line after the cursor moved to that line.
+If the cursor moved to another line then it won&rsquo;t work.</p>
+<p><code>Ctrl + r</code> to redo the last command<br>
+<code>10[Ctrl + r]</code> also redoes multiple undoes.</p>
+<p><code>xp</code> transposes the current character with next character (similar to cut paste)</p>
 <hr>
 <h4 id="file-commands">File Commands<a href="#file-commands" class="anchor" aria-hidden="true">#</a> </h4>
 <p>File commands start with <code>:</code><br>
@@ -1721,10 +1739,23 @@ Replace mode the characters entered replaces the character at the cursor positio
 <hr>
 <h4 id="miscellany">Miscellany<a href="#miscellany" class="anchor" aria-hidden="true">#</a> </h4>
 <p><code>/string</code> or <code>?string</code> to search for a string</p>
+<h4 id="substitution---search-and-replace-s--"><em><strong>Substitution - Search and replace (:s/ /) :</strong></em><a href="#substitution---search-and-replace-s--" class="anchor" aria-hidden="true">#</a> </h4>
+<p><code>:address/source_pattern/target_pattern/flags</code></p>
+<p>The source pattern will be replaced by the target pattern in all lines specified by the address.<br>
+The address can be 1 or many numbers separated by a comma.<br>
+<code>1,$</code> represents all lines in a file, from 1 to the end. <code>%</code> can be used instead.<br>
+<code>:1,$s/director/member/g</code> or <code>:%s/director/member/g</code></p>
+<p>Leaving out the <code>g</code>, the substitution will be carried out for the <code>first</code> occurrence in each address line, but not all in the line.</p>
+<p>Target pattern is also optional, if left out then all the occurrences will deleted.<br>
+<code>:1,50s/unsigned//g</code> will delete unsigned from everywhere in lines 1 to 50.</p>
+<p><code>$./director/member/g</code>  works on the current line.<br>
+<code>$s/director/member/g</code>  works on only the last line.</p>
+<p>To Make the substitution interactive, one by one with commands, using <code>c</code> as a flag.<br>
+<code>:1,$s/director/member/gc</code><br>
+<code>y</code> to confirm and <code>n</code> to cancel. <code>q</code> to quit.</p>
+<hr>
 <p><code>%</code> to match the current section closing braces</p>
 <p><code>v</code> to start selection(visual) and moving any direction. (<code>gU</code> to Uppercase everything selected)</p>
-<p>Search and replace a string using <code>%s</code><br>
-<code>:%s/,/.</code></p>
 <hr>
 <hr>
 <hr>
@@ -1739,32 +1770,10 @@ Help can anything specific can be given as argument to <code>:help</code> comman
 <p><code>:help quickref</code>  for the reference of command shortcuts</p>
 <p><code>:terminal</code> for a terminal session inside editor</p>
 <hr>
-<hr>
-<hr>
-<p>No Caps Lock</p>
-<p><code>&lt;Esc&gt;+u</code>  To undo the last changes</p>
 <p><code>:index</code>  for all the <code>:</code> commands</p>
 <p>Links are opened by moving on it and pressing enter.
 Capital K which is <code>Shift+K</code> on any item will search for documentation ( <code>Ctrl+]</code> searches for tags of the word)</p>
 <p>Pressing <code>&lt;Esc&gt;</code> will put in Command mode (or will cancel the partially typed command), which allows to retype a command.</p>
-<p><code>:q! &lt;Enter&gt;</code> quits the editor, Discarding any changes made.</p>
-<hr>
-<h4 id="text-editing">Text Editing<a href="#text-editing" class="anchor" aria-hidden="true">#</a> </h4>
-<p><code>nvim filename</code> to start editing a file in vim.</p>
-<p><code>:wq</code> for writing a file and quitting <code>:q!</code> will not save.</p>
-<p><em><strong>Deletion</strong></em>
-<code>x</code> deletes any character under the cursor. <code>delete</code> key does the same. (not in insert mode)</p>
-<p><code>dw</code> delete word erases the word the cursor is on, (for clearly deleting a word, the cursor should be on the first character of the word)</p>
-<p><code>d$</code> deletes from cursor till end of the line.</p>
-<p><em><strong>Insertion</strong></em>
-Pressing <code>i</code> starts insert mode, with insert starting just before the cursor.</p>
-<p><code>I</code>, Capital <code>I</code> : starts insert from the beginning of the line the cursor is on currently.</p>
-<p><code>&lt;Esc&gt;</code> will bring to Command mode so movement and deletion can happen.</p>
-<p><em><strong>Append</strong></em>
-<code>A</code> Capital A : To append after the line, which is <code>&lt;shift&gt;+A</code> pressed in any line will move to the End of that line and starts insert mode.</p>
-<p><code>a</code> is similar to <code>i</code>, it starts the insert / append after the cursor. <code>i</code> starts before the cursor.</p>
-<p>(inserting / Insert mode commands for these letters) <code>i, I, a, A, gI, gi, o, O</code></p>
-<p><code>gI, gi, o, O</code> need to be looked up.</p>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				</div>

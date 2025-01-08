@@ -21,7 +21,7 @@
       <link>http://localhost:1313/personal-site/docs/bash-linux/linux_os/linux-os-02-forms-of-process-management/</link>
       <pubDate>Tue, 31 Dec 2024 07:31:43 +0530</pubDate>
       <guid>http://localhost:1313/personal-site/docs/bash-linux/linux_os/linux-os-02-forms-of-process-management/</guid>
-      <description>&lt;p&gt;Program is a static entity.&#xA;A process is a running program, it has a &lt;code&gt;state&lt;/code&gt; which changes over time.&#xA;The programs are identical but the processes all differ because each will have its own unique state.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Two simplest entities support the UNIX System - &lt;em&gt;file&lt;/em&gt; and &lt;em&gt;process&lt;/em&gt;.&lt;br&gt;&#xA;A File is just an array of bytes that can virtually contain anything. It is also related to other files by being part of a single hierarchical structure. File is located with reference to a predetermined place.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Linux OS - 03 System Resources</title>

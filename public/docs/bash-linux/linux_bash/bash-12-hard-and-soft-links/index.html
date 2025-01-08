@@ -45,7 +45,7 @@
 <link rel="manifest" href="/personal-site/manifest.webmanifest">
 
 <meta property="og:title" content="Bash - 12 - Hard and Soft Links">
-<meta property="og:description" content="In a filesystem, directories store links to files and subdirectories.
+<meta property="og:description" content="In a file system, directories store links to files and subdirectories.
 These links are primarily categorized into hard links and symbolic links (also called soft links). Both types of links allow files to have multiple names or references, but they function in different ways.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-12-hard-and-soft-links/"><meta property="og:image" content="http://localhost:1313/personal-site/cover.png"><meta property="article:section" content="docs">
@@ -54,7 +54,7 @@ These links are primarily categorized into hard links and symbolic links (also c
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://localhost:1313/personal-site/cover.png"><meta name="twitter:title" content="Bash - 12 - Hard and Soft Links">
-<meta name="twitter:description" content="In a filesystem, directories store links to files and subdirectories.
+<meta name="twitter:description" content="In a file system, directories store links to files and subdirectories.
 These links are primarily categorized into hard links and symbolic links (also called soft links). Both types of links allow files to have multiple names or references, but they function in different ways.">
 
     
@@ -773,15 +773,15 @@ These links are primarily categorized into hard links and symbolic links (also c
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-19-shell-scripting/">Bash - 19 - Shell Scripting</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-awk/">Bash - 18 - awk</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-20-loop/">Bash - 20 - loop</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
   </li>
       </ul>
     </details>
@@ -1567,15 +1567,15 @@ These links are primarily categorized into hard links and symbolic links (also c
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-19-shell-scripting/">Bash - 19 - Shell Scripting</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-awk/">Bash - 18 - awk</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-20-loop/">Bash - 20 - loop</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
   </li>
       </ul>
     </details>
@@ -1674,8 +1674,9 @@ These links are primarily categorized into hard links and symbolic links (also c
   </details>
 
 			</nav>
-			<p>In a filesystem, directories store links to files and subdirectories.</p>
+			<p>In a file system, directories store links to files and subdirectories.</p>
 <p>These links are primarily categorized into <strong>hard links</strong> and <strong>symbolic links</strong> (also called soft links). Both types of links allow files to have multiple names or references, but they function in different ways.</p>
+<hr>
 <h3 id="hard-links"><strong>Hard Links</strong><a href="#hard-links" class="anchor" aria-hidden="true">#</a> </h3>
 <p>A <strong>hard link</strong> is essentially an additional directory entry that associates a file name with the same inode number.</p>
 <p>An <strong>inode</strong> is a data structure that stores information about a file, including its physical location on the disk.</p>
@@ -1691,7 +1692,7 @@ These links are primarily categorized into hard links and symbolic links (also c
 <ul>
 <li>Hard links are efficient because they don’t require additional storage for the content of the file, only another directory entry pointing to the same inode.</li>
 <li>Hard links can only be created within the <strong>same partition</strong>. For example, a hard link in <code>/home</code> cannot point to a file in <code>/etc</code>, as these are typically separate partitions.</li>
-<li>Deleting one hard link does not delete the file. The file will remain in the filesystem until all hard links to it are removed.
+<li>Deleting one hard link does not delete the file. The file will remain in the filesystem until all hard links to it are removed.<br>
 Example: If a file has two hard links, the link count will be 2. Deleting one link reduces the count to 1, but the file still exists. Only when the last link is deleted does the file get removed from the filesystem.</li>
 </ul>
 <h4 id="permissions-with-hard-links"><strong>Permissions with Hard Links</strong><a href="#permissions-with-hard-links" class="anchor" aria-hidden="true">#</a> </h4>
@@ -1726,11 +1727,11 @@ Example: If a file has two hard links, the link count will be 2. Deleting one li
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ln <span class="o">[</span>-s<span class="o">]</span> existingfile newfile</span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ln <span class="o">[</span>-s<span class="o">]</span> existingfile newfile</span></span></code></pre></div>
   </figure>
 </div>
 <ul>
@@ -1743,11 +1744,11 @@ Example: If a file has two hard links, the link count will be 2. Deleting one li
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ln file1.txt file2.txt</span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ln file1.txt file2.txt</span></span></code></pre></div>
   </figure>
 </div>
 <p>This creates a hard link <code>file2.txt</code> that points to the same inode as <code>file1.txt</code>.</p>
@@ -1756,11 +1757,11 @@ Example: If a file has two hard links, the link count will be 2. Deleting one li
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ln -s /path/to/original/file /path/to/link</span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ln -s /path/to/original/file /path/to/link</span></span></code></pre></div>
   </figure>
 </div>
 <p>This creates a symbolic link pointing to <code>/path/to/original/file</code>.</p>

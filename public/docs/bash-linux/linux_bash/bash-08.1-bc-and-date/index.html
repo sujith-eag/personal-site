@@ -45,8 +45,22 @@
 <link rel="manifest" href="/personal-site/manifest.webmanifest">
 
 <meta property="og:title" content="Bash - 08.1 - bc and date">
-<meta property="og:description" content="date Command
-The date command in Unix-like operating systems is used to display or set the system date and time.">
+<meta property="og:description" content="The date command in Unix-like operating systems is used to display or set the system date and time.
+
+
+
+
+  
+  
+    
+  
+  date [OPTION]... [&#43;FORMAT]
+
+date [-u|--utc|--universal] [MMDDhhmm[[CC]YY][]]
+  
+
+OPTION : Various options to customize how the date is displayed.
+FORMAT : The format in which you want to display the date. (it has to follow &#43;)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-08.1-bc-and-date/"><meta property="og:image" content="http://localhost:1313/personal-site/cover.png"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2025-01-01T15:23:35+05:30">
@@ -54,8 +68,22 @@ The date command in Unix-like operating systems is used to display or set the sy
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://localhost:1313/personal-site/cover.png"><meta name="twitter:title" content="Bash - 08.1 - bc and date">
-<meta name="twitter:description" content="date Command
-The date command in Unix-like operating systems is used to display or set the system date and time.">
+<meta name="twitter:description" content="The date command in Unix-like operating systems is used to display or set the system date and time.
+
+
+
+
+  
+  
+    
+  
+  date [OPTION]... [&#43;FORMAT]
+
+date [-u|--utc|--universal] [MMDDhhmm[[CC]YY][]]
+  
+
+OPTION : Various options to customize how the date is displayed.
+FORMAT : The format in which you want to display the date. (it has to follow &#43;)">
 
     
     
@@ -773,15 +801,15 @@ The date command in Unix-like operating systems is used to display or set the sy
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-19-shell-scripting/">Bash - 19 - Shell Scripting</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-awk/">Bash - 18 - awk</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-20-loop/">Bash - 20 - loop</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
   </li>
       </ul>
     </details>
@@ -1567,15 +1595,15 @@ The date command in Unix-like operating systems is used to display or set the sy
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-19-shell-scripting/">Bash - 19 - Shell Scripting</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-awk/">Bash - 18 - awk</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-20-loop/">Bash - 20 - loop</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
   </li>
       </ul>
     </details>
@@ -1597,8 +1625,7 @@ The date command in Unix-like operating systems is used to display or set the sy
   <ul>
     <li>
       <ul>
-        <li><a href="#date-command">date Command</a></li>
-        <li><a href="#commonly-used-date-format-specifiers">Commonly Used <code>date</code> Format Specifiers</a>
+        <li><a href="#date-format-specifiers">date Format Specifiers</a>
           <ul>
             <li><a href="#customizing-date-output">Customizing Date Output</a></li>
           </ul>
@@ -1629,8 +1656,7 @@ The date command in Unix-like operating systems is used to display or set the sy
   <ul>
     <li>
       <ul>
-        <li><a href="#date-command">date Command</a></li>
-        <li><a href="#commonly-used-date-format-specifiers">Commonly Used <code>date</code> Format Specifiers</a>
+        <li><a href="#date-format-specifiers">date Format Specifiers</a>
           <ul>
             <li><a href="#customizing-date-output">Customizing Date Output</a></li>
           </ul>
@@ -1650,24 +1676,23 @@ The date command in Unix-like operating systems is used to display or set the sy
   </details>
 
 			</nav>
-			<h3 id="date-command">date Command<a href="#date-command" class="anchor" aria-hidden="true">#</a> </h3>
-<p>The <code>date</code> command in Unix-like operating systems is used to display or set the system date and time.</p>
+			<p>The <code>date</code> command in Unix-like operating systems is used to display or set the system date and time.</p>
 
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">date <span class="o">[</span>OPTION<span class="o">]</span>... <span class="o">[</span>+FORMAT<span class="o">]</span>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">date <span class="o">[</span>OPTION<span class="o">]</span>... <span class="o">[</span>+FORMAT<span class="o">]</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">date <span class="o">[</span>-u<span class="p">|</span>--utc<span class="p">|</span>--universal<span class="o">]</span> <span class="o">[</span>MMDDhhmm<span class="o">[[</span>CC<span class="o">]</span>YY<span class="o">][]]</span></span></span></code></pre></div>
   </figure>
 </div>
 <p><strong>OPTION</strong> : Various options to customize how the date is displayed.
 <strong>FORMAT</strong> : The format in which you want to display the date. (it has to follow <code>+</code>)</p>
-<h3 id="commonly-used-date-format-specifiers">Commonly Used <code>date</code> Format Specifiers<a href="#commonly-used-date-format-specifiers" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="date-format-specifiers">date Format Specifiers<a href="#date-format-specifiers" class="anchor" aria-hidden="true">#</a> </h3>
 <ul>
 <li><code>$ date +%a</code> : Abbreviated weekday name (e.g., <code>Sun</code>, <code>Mon</code>)</li>
 <li><code>$ date +%A</code> : Full weekday name (e.g., <code>Sunday</code>, <code>Monday</code>)</li>
@@ -1691,11 +1716,11 @@ The date command in Unix-like operating systems is used to display or set the sy
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ date +%a:%A
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ date +%a:%A
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">Sun:Sunday</span></span></code></pre></div>
   </figure>
@@ -1704,11 +1729,11 @@ The date command in Unix-like operating systems is used to display or set the sy
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ date <span class="s2">&#34;+%a, %b %d, %Y - %r&#34;</span>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ date <span class="s2">&#34;+%a, %b %d, %Y - %r&#34;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">Sun, Dec 31, <span class="m">2024</span> - 02:00:00 PM</span></span></code></pre></div>
   </figure>
@@ -1718,11 +1743,11 @@ The date command in Unix-like operating systems is used to display or set the sy
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ date --date<span class="o">=</span><span class="s1">&#39;@2147483647&#39;</span>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ date --date<span class="o">=</span><span class="s1">&#39;@2147483647&#39;</span>
 </span></span><span class="line"><span class="cl">Wed Feb <span class="m">16</span> 06:46:07 UTC <span class="m">2038</span></span></span></code></pre></div>
   </figure>
 </div>
@@ -1732,29 +1757,29 @@ The date command in Unix-like operating systems is used to display or set the sy
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ date -u
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ date -u
 </span></span><span class="line"><span class="cl">Tue Dec <span class="m">31</span> 23:59:59 UTC <span class="m">2024</span></span></span></code></pre></div>
   </figure>
 </div>
 <hr>
 <h3 id="bc-basic-calculator">bc (Basic Calculator)<a href="#bc-basic-calculator" class="anchor" aria-hidden="true">#</a> </h3>
 <p><code>bc</code> is an arbitrary precision calculator language. It&rsquo;s used for performing arithmetic operations, and it supports a variety of functions and operations, including basic math, variable assignments, and more.</p>
-<p><strong>Interactive Mode</strong> or <strong>Command-Line Usage</strong>
-Simply typing <code>bc</code> will start an interactive mode, where we can input mathematical expressions and get results.
+<p><strong>Interactive Mode</strong> or <strong>Command-Line Usage</strong><br>
+Simply typing <code>bc</code> will start an interactive mode, where we can input mathematical expressions and get results.<br>
 We can also use <code>bc</code> for calculations directly from the command line.</p>
 
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="s2">&#34;3 + 4&#34;</span> <span class="p">|</span> bc
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="s2">&#34;3 + 4&#34;</span> <span class="p">|</span> bc
 </span></span><span class="line"><span class="cl"><span class="m">7</span></span></span></code></pre></div>
   </figure>
 </div>
@@ -1771,11 +1796,11 @@ We can also use <code>bc</code> for calculations directly from the command line.
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="s2">&#34;scale=2; sqrt(2)&#34;</span> <span class="p">|</span> bc -l
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="s2">&#34;scale=2; sqrt(2)&#34;</span> <span class="p">|</span> bc -l
 </span></span><span class="line"><span class="cl">1.41</span></span></code></pre></div>
   </figure>
 </div>
@@ -1784,11 +1809,11 @@ We can also use <code>bc</code> for calculations directly from the command line.
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="s2">&#34;scale=3; 22/7&#34;</span> <span class="p">|</span> bc
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="s2">&#34;scale=3; 22/7&#34;</span> <span class="p">|</span> bc
 </span></span><span class="line"><span class="cl">3.142</span></span></code></pre></div>
   </figure>
 </div>
@@ -1797,11 +1822,11 @@ We can also use <code>bc</code> for calculations directly from the command line.
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ bc -q</span></span></code></pre></div>
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ bc -q</span></span></code></pre></div>
   </figure>
 </div>
 <p><code>-s</code> (Single Precision Mode) : Forces <code>bc</code> to use single precision for floating-point calculations (often leading to fewer decimal places).</p>
@@ -1809,11 +1834,11 @@ We can also use <code>bc</code> for calculations directly from the command line.
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="s2">&#34;scale=3; 1/3&#34;</span> <span class="p">|</span> bc -s
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="s2">&#34;scale=3; 1/3&#34;</span> <span class="p">|</span> bc -s
 </span></span><span class="line"><span class="cl">0.333</span></span></code></pre></div>
   </figure>
 </div>
@@ -1831,11 +1856,11 @@ We can also use <code>bc</code> for calculations directly from the command line.
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="s2">&#34;5 + 3&#34;</span> <span class="p">|</span> bc
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="s2">&#34;5 + 3&#34;</span> <span class="p">|</span> bc
 </span></span><span class="line"><span class="cl"><span class="m">8</span>
 </span></span><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="s2">&#34;10 / 4&#34;</span> <span class="p">|</span> bc
 </span></span><span class="line"><span class="cl"><span class="m">2</span></span></span></code></pre></div>
@@ -1848,11 +1873,11 @@ We can also use <code>bc</code> for calculations directly from the command line.
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="s2">&#34;scale=4; 7/3&#34;</span> <span class="p">|</span> bc
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="s2">&#34;scale=4; 7/3&#34;</span> <span class="p">|</span> bc
 </span></span><span class="line"><span class="cl">2.3333</span></span></code></pre></div>
   </figure>
 </div>
@@ -1863,11 +1888,11 @@ We can also use <code>bc</code> for calculations directly from the command line.
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="s2">&#34;scale=5; sqrt(100)&#34;</span> <span class="p">|</span> bc -l
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="s2">&#34;scale=5; sqrt(100)&#34;</span> <span class="p">|</span> bc -l
 </span></span><span class="line"><span class="cl">10.00000</span></span></code></pre></div>
   </figure>
 </div>
@@ -1878,11 +1903,11 @@ We can also use <code>bc</code> for calculations directly from the command line.
 
 
 <div class="expressive-code">
-  <figure class="frame is-terminal not-content">
+  <figure class="frame not-content">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="s2">&#34;a=5; b=3; a*b&#34;</span> <span class="p">|</span> bc
+  <div class="highlight" frame="none"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="s2">&#34;a=5; b=3; a*b&#34;</span> <span class="p">|</span> bc
 </span></span><span class="line"><span class="cl"><span class="m">15</span></span></span></code></pre></div>
   </figure>
 </div>
