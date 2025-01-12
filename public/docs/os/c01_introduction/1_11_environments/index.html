@@ -1,0 +1,2110 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="/personal-site/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=personal-site/livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preload" href="http://localhost:1313/personal-site/fonts/vendor/jost/jost-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/personal-site/fonts/vendor/jost/jost-v4-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/personal-site/fonts/vendor/jost/jost-v4-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<script 
+  src="/personal-site/js/color-mode.f14b3e296de1d0b69e75af684b62a4a912a2cadab04e36123407cd8388204f1d.js"
+  integrity="sha256-8Us&#43;KW3h0Laeda9oS2KkqRKiytqwTjYSNAfNg4ggTx0=">
+</script>
+
+
+<link rel="stylesheet" href="/personal-site/main.c0e24d0bb4526375ef42a8fffa4eb23f8f782cb58ac9f07c6886fe943a0ed00e176b284d9d1a5b8e9d68a3f2f5918367e18fe55f5fde9451a8c6d3fe85342b7b.css" integrity="sha512-wOJNC7RSY3XvQqj/&#43;k6yP494LLWKyfB8aIb&#43;lDoO0A4XayhNnRpbjp1oo/L1kYNn4Y/lX1/elFGoxtP&#43;hTQrew==" crossorigin="anonymous">
+
+<noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/personal-site/docs/os/c01_introduction/1_11_environments/">
+  <link rel="canonical" href="http://localhost:1313/personal-site/docs/os/c01_introduction/1_11_environments/">
+<title>1_11_environments  |  Sujith&#39;s Library</title>
+<meta name="description" content="A reference site with summary of various coding topics">
+
+    
+    <link rel="icon" href="/personal-site/favicon.ico" sizes="32x32">
+    
+      <link rel="icon" href="/personal-site/favicon.svg" type="image/svg+xml">
+    
+      <link
+        rel="apple-touch-icon"
+        href="/personal-site/personal-site/apple-touch-icon.png"
+        sizes="180x180"
+        type="image/png"
+      >
+      <link
+        rel="icon"
+        href="/personal-site/favicon-192x192.png"
+        sizes="192x192"
+        type="image/png"
+      >
+      <link
+        rel="icon"
+        href="/personal-site/favicon-512x512.png"
+        sizes="512x512"
+        type="image/png"
+      >
+<link rel="manifest" href="/personal-site/manifest.webmanifest">
+
+<meta property="og:title" content="1_11_environments">
+<meta property="og:description" content="1.11.1 Traditional Computing
+Traditional computing refers to the setup where computing resources, such as servers and workstations, are located locally in a company or institution. Web technologies and increasing WAN (Wide Area Network) bandwidth are expanding the boundaries of traditional computing.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://localhost:1313/personal-site/docs/os/c01_introduction/1_11_environments/"><meta property="og:image" content="http://localhost:1313/personal-site/cover.png"><meta property="article:section" content="docs">
+<meta property="article:published_time" content="2025-01-12T21:21:44+05:30">
+<meta property="article:modified_time" content="2025-01-12T21:21:44+05:30"><meta property="og:site_name" content="Sujith&#39;s Notes">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://localhost:1313/personal-site/cover.png"><meta name="twitter:title" content="1_11_environments">
+<meta name="twitter:description" content="1.11.1 Traditional Computing
+Traditional computing refers to the setup where computing resources, such as servers and workstations, are located locally in a company or institution. Web technologies and increasing WAN (Wide Area Network) bandwidth are expanding the boundaries of traditional computing.">
+
+    
+    
+    
+    <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/personal-site/",
+       "name": "Sujith's Library",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/personal-site/docs/",
+       "name": "All Notes Articles",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "item": "",
+       "name": "Os",
+       "position": 3
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/personal-site/docs/os/c01_introduction/",
+       "name": "Os 01 Operating Systems Introduction",
+       "position": 4
+     },
+     {
+       "@type": "ListItem",
+       "name": "1 11 Environments",
+       "position": 5
+     }
+   ]
+ }
+</script>
+
+
+
+
+
+</head>
+
+  
+  <body class="single section docs" data-bs-spy="scroll" data-bs-target="#toc" data-bs-root-margin="0px 0px -60%" data-bs-smooth-scroll="true" tabindex="0">
+    <div class="sticky-top">
+<header class="navbar navbar-expand-lg">
+  <div class="container-lg">
+  
+    <a class="navbar-brand me-auto me-lg-3" href="/personal-site/">Sujith&#39;s Library</a>
+
+    
+    
+    <button type="button" id="searchToggleMobile" class="btn btn-link nav-link mx-2 d-lg-none" aria-label="Search website">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <circle cx="10" cy="10" r="7"></circle>
+        <line x1="21" y1="21" x2="15" y2="15"></line>
+      </svg>
+    </button>
+    
+    <button class="btn btn-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavSection" aria-controls="offcanvasNavSection" aria-label="Open section navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+      </svg>
+    </button>
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavSection" aria-labelledby="offcanvasNavSectionLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavSectionLabel">Docs</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <aside class="doks-sidebar mt-n3">
+          <nav id="doks-docs-nav" aria-label="Tertiary navigation">
+            
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+    <details open>
+      <summary>Python</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Primitive Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/variables/">Variables</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/int-float/">int &amp; float</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/string/">String</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/string-manipulation/">String Manipulation</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/string-methods/">String Methods</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Complex Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/lists/">Lists</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/list-methods/">List Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/list-operators/">List Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/arrays/">Arrays</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/tuples/">Tuples</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/dictinaries/">Dictinaries</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>C Language</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>The C Programming Language by Kernighan and Ritchie</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-to-c-language/">K&amp;R - Chapter 0 - Introduction to C language</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-using-python-part-1/">K&amp;R - Chapter 0 - Introduction using Python (Part 1)</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-using-python-part-2/">K&amp;R - Chapter 0 - Introduction using Python (Part 2)</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-1-basic-syntax/">K&amp;R - Chapter 1 - Basic Syntax</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-2-types-operators-expressions/">K&amp;R - Chapter 2 - Types, Operators, Expressions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-3-control-flow/">K&amp;R - Chapter 3 - Control Flow</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-4-function-program-structure/">K&amp;R - Chapter 4 - Function, Program Structure</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-5-pointers-arrays/">K&amp;R - Chapter 5 - Pointers, Arrays</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-6-structures/">K&amp;R - Chapter 6 - Structures</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-6.1-structures/">K&amp;R - Chapter 6.1 - Structures</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-7-input-output/">K&amp;R - Chapter 7 - Input &amp; Output</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-8-unix-interface/">K&amp;R - Chapter 8 - Unix Interface</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_c/">Data Structures Using C</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>JavaScript</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>JS Language</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.01-variables/">JS - 01.01 - Variables</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.02-values-and-types/">JS - 01.02 - Values and Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.03-number-types/">JS - 01.03 - Number Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.04-number-methods/">JS - 01.04 - Number Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.05-string-type/">JS - 01.05 - String Type</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.06-string-methods/">JS - 01.06 - String Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.07-modifying-string/">JS - 01.07 - Modifying String</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.08-boolean-type/">JS - 01.08 - Boolean Type</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.09-operators/">JS - 01.09 - Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.10-auto-type-conversions/">JS - 01.10 - Auto Type Conversions</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Control Flow</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Conditionals</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.01-if-else/">JS - 02.01 - if, else</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.02-switch-case/">JS - 02.02 - switch-case</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.03-ternary-operator/">JS - 02.03 - Ternary Operator</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.04-logical-operators/">JS - 02.04 - Logical Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.05-short-circuiting/">JS - 02.05 - Short Circuiting</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Loops</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.11-do-while-loop/">JS - 02.11 - do-while Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.12-for-loop/">JS - 02.12 - for Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.13-for-of-loop/">JS - 02.13 - for-of Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.14-for-in-loop/">JS - 02.14 - for-in Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.15-break-continue-label/">JS - 02.15 - break-continue-label</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.16-iterables/">JS - 02.16 - Iterables</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Functions</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.01-function/">JS - 03.01 - Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.02-defining-function/">JS - 03.02 - Defining Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.03-arrow-function/">JS - 03.03 - Arrow Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.04-scope-of-variable/">JS - 03.04 - Scope of Variable</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.05-parameters-arguments/">JS - 03.05 - Parameters &amp; Arguments</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.06-return-recursion-call-stack/">JS - 03.06 - Return, Recursion, Call Stack</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.07-scheduling/">JS - 03.07 - Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.08-decorators/">JS - 03.08 - Decorators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.09-function-object/">JS - 03.09 - Function Object</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Objects</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.01-object/">JS - 04.01 - Object</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.02-object-properties/">JS - 04.02 - Object Properties</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.03-cloning-object/">JS - 04.03 - Cloning Object</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.04-object.keys/">JS - 04.04 - Object.keys()</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.05-methods-this-chaining/">JS - 04.05 - Methods, this, Chaining</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.06-constructor-new/">JS - 04.06 - Constructor new</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Arrays</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.01-array/">JS - 05.01 - Array</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.02-array-methods/">JS - 05.02 - Array Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.03-filter-method/">JS - 05.03 - Filter Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.04-map-method/">JS - 05.04 - Map Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.05-reduce-method/">JS - 05.05 - Reduce Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.06-sort-method/">JS - 05.06 - Sort Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.07-rest-spread/">JS - 05.07 - Rest &amp; Spread</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/">JavaScript DOM Manipulation</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>HTML &amp; CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>HTML</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-01-boiler-plate/">HTML - 01 - Boiler Plate</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-02-texts-lists/">HTML - 02 - Texts &amp; Lists</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-03-links-images/">HTML - 03 - Links &amp; Images</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-04-input-types/">HTML - 04 - Input Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-05-button/">HTML - 05 - Button</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-06-dom-events/">HTML - 06 - DOM Events</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-01-selectors/">CSS - 01 -Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-02-multiple-selecors/">CSS - 02 - Multiple Selecors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-03-declaration/">CSS - 03 - Declaration</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-04-adding-css/">CSS - 04 - Adding CSS</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-05-box-model/">CSS - 05 - Box Model</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-06-flexbox/">CSS - 06 - Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-07-flex-flexibility/">CSS - 07 - Flex Flexibility</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-08-axes-in-flexbox/">CSS - 08 - Axes in Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-09-utility-class-inheritance/">CSS - 09 - Utility Class &amp; Inheritance</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>CSS Reference</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css_resource/css-04.1-size-units/">CSS - 04.1 - Size Units</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css_resource/css-04.2-color-values/">CSS - 04.2 - Color Values</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Tools &amp; Accesories</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/tools/obsidian/">Obsidian</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/vs-code/">VS Code</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/git-github/">Git &amp; Github</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Linux - Bash &amp; OS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Linux OS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-01-linux-kernel/">Linux OS - 01 - Linux Kernel</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-02-forms-of-process-management/">Linux OS - 02 - Forms of Process Management</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-03-system-resources/">Linux OS - 03 System Resources</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Linx Bash</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-01-basics/">Bash - 01 - Basics</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-02-features/">Bash - 02 - Features</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-03-help-pages/">Bash - 03 - help pages</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-04-variables-and-aliases/">Bash - 04 - Variables and Aliases</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-05-listing-files/">Bash - 05 - Listing Files</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-06-environment-and-subshell/">Bash - 06 - Environment and Subshell</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-08-basic-file-commands/">Bash - 08 - Basic File Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-07-storage-terminology-in-linux/">Bash - 07 - Storage Terminology in Linux</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-08.1-bc-and-date/">Bash - 08.1 - bc and date</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-09-file-movement-and-copy-commands/">Bash - 09 - File Movement and Copy Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-10-file-viewing-and-editing-commands/">Bash - 10 - File Viewing and Editing Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-11-file-permissions/">Bash - 11 - File Permissions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-12-hard-and-soft-links/">Bash - 12 - Hard and Soft Links</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13-regular-expressions/">Bash - 13 - Regular Expressions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13.1-regex-expanded/">Bash - 13.1 - regex Expanded</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13.2-regex-matching/">Bash - 13.2 - regex Matching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-14-file-searching/">Bash - 14 - File Searching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-15-neovim/">Bash - 15 - Neovim</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-16-egrep/">Bash - 16 - egrep</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-17-sed/">Bash - 17 - sed</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+          </nav>
+        </aside>
+      </div>
+    </div>
+    
+    <button class="btn btn-link nav-link mx-2 order-3 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavMain" aria-controls="offcanvasNavMain" aria-label="Open main navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <line x1="4" y1="8" x2="20" y2="8"></line>
+        <line x1="4" y1="16" x2="20" y2="16"></line>
+      </svg>
+    </button>
+
+    
+    <div class="offcanvas offcanvas-end h-auto" tabindex="-1" id="offcanvasNavMain" aria-labelledby="offcanvasNavMainLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavMainLabel">Sujith&#39;s Library</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+         </svg>
+        </button>
+      </div>
+      
+      <div class="offcanvas-body d-flex flex-column flex-lg-row justify-content-between">
+        <ul class="navbar-nav flex-grow-1"><li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/python/">Python</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/html-css/">HTML/CSS</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/java-script/">JavaScript</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/java-script-dom/">JS DOM</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/c/">C</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/bash-linux/">Linux</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/tools/">Tools</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/blog/">Blog</a>
+              </li>
+            </ul>
+
+        
+        
+        <button type="button" id="searchToggleDesktop" class="btn btn-link nav-link p-2 d-none d-lg-block" aria-label="Search website">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <circle cx="10" cy="10" r="7"></circle>
+            <line x1="21" y1="21" x2="15" y2="15"></line>
+          </svg>
+        </button>
+        
+        
+        
+        <button id="buttonColorMode" class="btn btn-link mx-auto nav-link p-0 ms-lg-2 me-lg-1" type="button" aria-label="Toggle theme">
+          <svg data-bs-theme-value="dark" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+          </svg>
+          <svg data-bs-theme-value="light" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0m-5 0h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+          </svg>
+        </button>
+        
+        <ul id="socialMenu" class="nav mx-auto flex-row order-lg-4">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/sujith-eag"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg><small class="ms-2 visually-hidden">GitHub</small></a>
+            </li>
+          </ul>
+        
+        </div>
+    </div>
+
+    
+    </div>
+</header>
+</div>
+
+<div class="modal" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-md-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 visually-hidden" id="searchModalLabel">Search</h1>
+        <button type="button" class="btn-close visually-hidden" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="search-input flex-grow-1 d-none">
+          <form id="search-form" class="search-form" action="#" method="post" accept-charset="UTF-8" role="search">
+            <label for="query" class="visually-hidden">Search</label>
+            <div class="d-flex">
+              <input type="search" id="query" name="query" class="search-text form-control form-control-lg" placeholder="Search" aria-label="Search" maxlength="128" autocomplete="off">
+              <button type="button" class="btn btn-link text-decoration-none px-0 ms-3 d-md-none" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-body">
+        <p class="search-loading status message d-none mt-3 text-center">Loading search index…</p>
+        <p class="search-no-recent message d-none mt-3 text-center">No recent searches</p>
+        <p class="search-no-results message d-none mt-3 text-center">No results for "<strong><span class="query-no-results">Query here</span></strong>"</p>
+        <div id="searchResults" class="search-results"></div>
+        <template>
+          <article class="search-result list-view">
+            <div class="card my-3">
+              <div class="card-body">
+                <header>
+                  <h2 class="h5 title title-submitted mb-0"><a class="stretched-link text-decoration-none text-reset" href="#">Title here</a></h2>
+                  <div class="submitted d-none"><time class="created-date">Date here</time></div>
+                </header>
+                <div class="content">Summary here</div>
+              </div>
+            </div>
+          </article>
+        </template>
+      </div>
+      <div class="modal-footer">
+        <ul class="list-inline me-auto d-none d-md-block">
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Enter key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M12 3.53088v3c0 1-1 2-2 2H4M7 11.53088l-3-3 3-3"></path></g></svg></kbd><span class="DocSearch-Label">to select</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow down" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 3.5v8M10.5 8.5l-3 3-3-3"></path></g></svg></kbd><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow up" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 11.5v-8M10.5 6.5l-3-3-3 3"></path></g></svg></kbd><span class="DocSearch-Label">to navigate</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Escape key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M13.6167 8.936c-.1065.3583-.6883.962-1.4875.962-.7993 0-1.653-.9165-1.653-2.1258v-.5678c0-1.2548.7896-2.1016 1.653-2.1016.8634 0 1.3601.4778 1.4875 1.0724M9 6c-.1352-.4735-.7506-.9219-1.46-.8972-.7092.0246-1.344.57-1.344 1.2166s.4198.8812 1.3445.9805C8.465 7.3992 8.968 7.9337 9 8.5c.032.5663-.454 1.398-1.4595 1.398C6.6593 9.898 6 9 5.963 8.4851m-1.4748.5368c-.2635.5941-.8099.876-1.5443.876s-1.7073-.6248-1.7073-2.204v-.4603c0-1.0416.721-2.131 1.7073-2.131.9864 0 1.6425 1.031 1.5443 2.2492h-2.956"></path></g></svg></kbd><span class="DocSearch-Label">to close</span></li>
+        </ul>
+        <p class="d-md-none">Search by <a class="text-decoration-none" href="https://github.com/nextapps-de/flexsearch">FlexSearch</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="wrap container-lg" role="document">
+      <div class="content">
+      
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+    <details open>
+      <summary>Python</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Primitive Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/variables/">Variables</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/int-float/">int &amp; float</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/string/">String</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/string-manipulation/">String Manipulation</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/string-methods/">String Methods</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Complex Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/lists/">Lists</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/list-methods/">List Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/list-operators/">List Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/arrays/">Arrays</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/tuples/">Tuples</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/dictinaries/">Dictinaries</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>C Language</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>The C Programming Language by Kernighan and Ritchie</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-to-c-language/">K&amp;R - Chapter 0 - Introduction to C language</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-using-python-part-1/">K&amp;R - Chapter 0 - Introduction using Python (Part 1)</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-using-python-part-2/">K&amp;R - Chapter 0 - Introduction using Python (Part 2)</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-1-basic-syntax/">K&amp;R - Chapter 1 - Basic Syntax</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-2-types-operators-expressions/">K&amp;R - Chapter 2 - Types, Operators, Expressions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-3-control-flow/">K&amp;R - Chapter 3 - Control Flow</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-4-function-program-structure/">K&amp;R - Chapter 4 - Function, Program Structure</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-5-pointers-arrays/">K&amp;R - Chapter 5 - Pointers, Arrays</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-6-structures/">K&amp;R - Chapter 6 - Structures</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-6.1-structures/">K&amp;R - Chapter 6.1 - Structures</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-7-input-output/">K&amp;R - Chapter 7 - Input &amp; Output</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-8-unix-interface/">K&amp;R - Chapter 8 - Unix Interface</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_c/">Data Structures Using C</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>JavaScript</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>JS Language</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.01-variables/">JS - 01.01 - Variables</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.02-values-and-types/">JS - 01.02 - Values and Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.03-number-types/">JS - 01.03 - Number Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.04-number-methods/">JS - 01.04 - Number Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.05-string-type/">JS - 01.05 - String Type</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.06-string-methods/">JS - 01.06 - String Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.07-modifying-string/">JS - 01.07 - Modifying String</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.08-boolean-type/">JS - 01.08 - Boolean Type</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.09-operators/">JS - 01.09 - Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.10-auto-type-conversions/">JS - 01.10 - Auto Type Conversions</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Control Flow</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Conditionals</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.01-if-else/">JS - 02.01 - if, else</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.02-switch-case/">JS - 02.02 - switch-case</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.03-ternary-operator/">JS - 02.03 - Ternary Operator</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.04-logical-operators/">JS - 02.04 - Logical Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.05-short-circuiting/">JS - 02.05 - Short Circuiting</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Loops</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.11-do-while-loop/">JS - 02.11 - do-while Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.12-for-loop/">JS - 02.12 - for Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.13-for-of-loop/">JS - 02.13 - for-of Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.14-for-in-loop/">JS - 02.14 - for-in Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.15-break-continue-label/">JS - 02.15 - break-continue-label</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.16-iterables/">JS - 02.16 - Iterables</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Functions</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.01-function/">JS - 03.01 - Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.02-defining-function/">JS - 03.02 - Defining Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.03-arrow-function/">JS - 03.03 - Arrow Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.04-scope-of-variable/">JS - 03.04 - Scope of Variable</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.05-parameters-arguments/">JS - 03.05 - Parameters &amp; Arguments</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.06-return-recursion-call-stack/">JS - 03.06 - Return, Recursion, Call Stack</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.07-scheduling/">JS - 03.07 - Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.08-decorators/">JS - 03.08 - Decorators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.09-function-object/">JS - 03.09 - Function Object</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Objects</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.01-object/">JS - 04.01 - Object</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.02-object-properties/">JS - 04.02 - Object Properties</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.03-cloning-object/">JS - 04.03 - Cloning Object</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.04-object.keys/">JS - 04.04 - Object.keys()</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.05-methods-this-chaining/">JS - 04.05 - Methods, this, Chaining</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.06-constructor-new/">JS - 04.06 - Constructor new</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Arrays</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.01-array/">JS - 05.01 - Array</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.02-array-methods/">JS - 05.02 - Array Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.03-filter-method/">JS - 05.03 - Filter Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.04-map-method/">JS - 05.04 - Map Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.05-reduce-method/">JS - 05.05 - Reduce Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.06-sort-method/">JS - 05.06 - Sort Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.07-rest-spread/">JS - 05.07 - Rest &amp; Spread</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/">JavaScript DOM Manipulation</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>HTML &amp; CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>HTML</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-01-boiler-plate/">HTML - 01 - Boiler Plate</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-02-texts-lists/">HTML - 02 - Texts &amp; Lists</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-03-links-images/">HTML - 03 - Links &amp; Images</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-04-input-types/">HTML - 04 - Input Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-05-button/">HTML - 05 - Button</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-06-dom-events/">HTML - 06 - DOM Events</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-01-selectors/">CSS - 01 -Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-02-multiple-selecors/">CSS - 02 - Multiple Selecors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-03-declaration/">CSS - 03 - Declaration</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-04-adding-css/">CSS - 04 - Adding CSS</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-05-box-model/">CSS - 05 - Box Model</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-06-flexbox/">CSS - 06 - Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-07-flex-flexibility/">CSS - 07 - Flex Flexibility</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-08-axes-in-flexbox/">CSS - 08 - Axes in Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-09-utility-class-inheritance/">CSS - 09 - Utility Class &amp; Inheritance</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>CSS Reference</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css_resource/css-04.1-size-units/">CSS - 04.1 - Size Units</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css_resource/css-04.2-color-values/">CSS - 04.2 - Color Values</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Tools &amp; Accesories</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/tools/obsidian/">Obsidian</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/vs-code/">VS Code</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/git-github/">Git &amp; Github</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Linux - Bash &amp; OS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Linux OS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-01-linux-kernel/">Linux OS - 01 - Linux Kernel</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-02-forms-of-process-management/">Linux OS - 02 - Forms of Process Management</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-03-system-resources/">Linux OS - 03 System Resources</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Linx Bash</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-01-basics/">Bash - 01 - Basics</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-02-features/">Bash - 02 - Features</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-03-help-pages/">Bash - 03 - help pages</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-04-variables-and-aliases/">Bash - 04 - Variables and Aliases</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-05-listing-files/">Bash - 05 - Listing Files</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-06-environment-and-subshell/">Bash - 06 - Environment and Subshell</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-08-basic-file-commands/">Bash - 08 - Basic File Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-07-storage-terminology-in-linux/">Bash - 07 - Storage Terminology in Linux</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-08.1-bc-and-date/">Bash - 08.1 - bc and date</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-09-file-movement-and-copy-commands/">Bash - 09 - File Movement and Copy Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-10-file-viewing-and-editing-commands/">Bash - 10 - File Viewing and Editing Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-11-file-permissions/">Bash - 11 - File Permissions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-12-hard-and-soft-links/">Bash - 12 - Hard and Soft Links</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13-regular-expressions/">Bash - 13 - Regular Expressions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13.1-regex-expanded/">Bash - 13.1 - regex Expanded</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13.2-regex-matching/">Bash - 13.2 - regex Matching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-14-file-searching/">Bash - 14 - File Searching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-15-neovim/">Bash - 15 - Neovim</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-16-egrep/">Bash - 16 - egrep</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-17-sed/">Bash - 17 - sed</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+		</div>
+		
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="page-links">
+  <h3>On this page</h3>
+    <nav id="toc">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#1111-traditional-computing">1.11.1 Traditional Computing</a></li>
+            <li><a href="#1112-mobile-computing">1.11.2 Mobile Computing</a></li>
+            <li><a href="#1113-distributed-systems">1.11.3 Distributed Systems</a></li>
+            <li><a href="#1114-client-server-computing">1.11.4 Client-Server Computing</a></li>
+            <li><a href="#1115-peer-to-peer-computing">1.11.5 Peer-to-Peer Computing</a></li>
+            <li><a href="#1116-virtualization">1.11.6 Virtualization</a></li>
+            <li><a href="#1117-cloud-computing">1.11.7 Cloud Computing</a></li>
+            <li><a href="#1118-real-time-embedded-systems">1.11.8 Real-Time Embedded Systems</a></li>
+            <li><a href="#1-aerospace--defense">1. <strong>Aerospace &amp; Defense</strong></a></li>
+            <li><a href="#2-automotive">2. <strong>Automotive</strong></a></li>
+            <li><a href="#3-healthcare--medical-devices">3. <strong>Healthcare &amp; Medical Devices</strong></a></li>
+            <li><a href="#4-industrial-automation">4. <strong>Industrial Automation</strong></a></li>
+            <li><a href="#5-consumer-electronics">5. <strong>Consumer Electronics</strong></a></li>
+            <li><a href="#6-telecommunications">6. <strong>Telecommunications</strong></a></li>
+            <li><a href="#7-energy-management">7. <strong>Energy Management</strong></a></li>
+            <li><a href="#8-entertainment--media">8. <strong>Entertainment &amp; Media</strong></a></li>
+            <li><a href="#9-security--surveillance">9. <strong>Security &amp; Surveillance</strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#real-time-embedded-systems-in-home-appliances">Real-Time Embedded Systems in Home Appliances</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+			<h1>1_11_environments</h1>
+			
+			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
+				<details>
+    <summary>On this page</summary>
+    <div class="page-links">
+      <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#1111-traditional-computing">1.11.1 Traditional Computing</a></li>
+            <li><a href="#1112-mobile-computing">1.11.2 Mobile Computing</a></li>
+            <li><a href="#1113-distributed-systems">1.11.3 Distributed Systems</a></li>
+            <li><a href="#1114-client-server-computing">1.11.4 Client-Server Computing</a></li>
+            <li><a href="#1115-peer-to-peer-computing">1.11.5 Peer-to-Peer Computing</a></li>
+            <li><a href="#1116-virtualization">1.11.6 Virtualization</a></li>
+            <li><a href="#1117-cloud-computing">1.11.7 Cloud Computing</a></li>
+            <li><a href="#1118-real-time-embedded-systems">1.11.8 Real-Time Embedded Systems</a></li>
+            <li><a href="#1-aerospace--defense">1. <strong>Aerospace &amp; Defense</strong></a></li>
+            <li><a href="#2-automotive">2. <strong>Automotive</strong></a></li>
+            <li><a href="#3-healthcare--medical-devices">3. <strong>Healthcare &amp; Medical Devices</strong></a></li>
+            <li><a href="#4-industrial-automation">4. <strong>Industrial Automation</strong></a></li>
+            <li><a href="#5-consumer-electronics">5. <strong>Consumer Electronics</strong></a></li>
+            <li><a href="#6-telecommunications">6. <strong>Telecommunications</strong></a></li>
+            <li><a href="#7-energy-management">7. <strong>Energy Management</strong></a></li>
+            <li><a href="#8-entertainment--media">8. <strong>Entertainment &amp; Media</strong></a></li>
+            <li><a href="#9-security--surveillance">9. <strong>Security &amp; Surveillance</strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#real-time-embedded-systems-in-home-appliances">Real-Time Embedded Systems in Home Appliances</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  </details>
+
+			</nav>
+			<h4 id="1111-traditional-computing">1.11.1 Traditional Computing<a href="#1111-traditional-computing" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Traditional computing refers to the setup where computing resources, such as servers and workstations, are located locally in a company or institution. Web technologies and increasing WAN (Wide Area Network) bandwidth are expanding the boundaries of traditional computing.</p>
+<ul>
+<li>Companies establish <strong>portals</strong> to provide web access to their internal servers, improving accessibility and collaboration.</li>
+<li><strong>Network Computers (NCs)</strong> or <strong>Thin Clients</strong> are now used in place of traditional workstations. These terminals mainly handle web-based computing and have limited local processing power. NCs are ideal for environments where:
+<ul>
+<li>More security is required.</li>
+<li>Easier maintenance and management are desired.</li>
+</ul>
+</li>
+</ul>
+<p>This shift towards thin clients helps reduce the complexity and cost of maintaining individual workstations, as most tasks are handled on centralized servers.</p>
+<hr>
+<h4 id="1112-mobile-computing">1.11.2 Mobile Computing<a href="#1112-mobile-computing" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Mobile computing refers to the use of portable computing devices (like smartphones, tablets, and laptops) that can connect to networks wirelessly.</p>
+<ul>
+<li>OS for mobile devices is designed to be lightweight and optimized for touch interfaces.</li>
+<li>Examples: iOS, Android, Windows Mobile</li>
+<li>Key features:
+<ul>
+<li><strong>Portability</strong>: Devices are highly portable, allowing users to stay connected anytime, anywhere.</li>
+<li><strong>Battery Optimization</strong>: Mobile OSes are designed to conserve battery life while providing performance.</li>
+<li><strong>Wireless Networking</strong>: Mobile devices depend on wireless technologies like Wi-Fi, Bluetooth, and cellular networks for connectivity.</li>
+</ul>
+</li>
+</ul>
+<p>Mobile computing plays a crucial role in enabling personal and professional communication, productivity, and entertainment on the go.</p>
+<hr>
+<h4 id="1113-distributed-systems">1.11.3 Distributed Systems<a href="#1113-distributed-systems" class="anchor" aria-hidden="true">#</a> </h4>
+<p>A distributed system is a collection of independent computers that appear to the user as a single system. These systems are designed to distribute workloads across multiple machines, providing benefits in terms of reliability, scalability, and performance.</p>
+<ul>
+<li><strong>Examples</strong>: Cloud services, large-scale web applications</li>
+<li>Key Features:
+<ul>
+<li><strong>Fault Tolerance</strong>: If one node fails, others can continue the task.</li>
+<li><strong>Scalability</strong>: More machines can be added to increase computational power.</li>
+<li><strong>Resource Sharing</strong>: Multiple devices can share resources like storage, processing power, and data.</li>
+</ul>
+</li>
+</ul>
+<p>Distributed systems rely heavily on networked communication and require sophisticated OS management to ensure that the entire system functions efficiently.</p>
+<hr>
+<h4 id="1114-client-server-computing">1.11.4 Client-Server Computing<a href="#1114-client-server-computing" class="anchor" aria-hidden="true">#</a> </h4>
+<p>In client-server computing, tasks are divided between service providers (servers) and requesters (clients).</p>
+<ul>
+<li><strong>Clients</strong>: These are devices or programs that request services or resources from a server.</li>
+<li><strong>Servers</strong>: These are machines or applications that provide services, data, or resources to clients over a network.</li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li>A web browser (client) requesting a webpage from a web server.</li>
+<li>An email client (client) requesting and receiving emails from an email server.</li>
+</ul>
+<p>Key benefits of client-server architecture:</p>
+<ul>
+<li>Centralized data management and security.</li>
+<li>Efficient use of resources.</li>
+</ul>
+<p>The OS in client-server systems manages both the server-side and client-side processes, ensuring smooth communication and operation.</p>
+<hr>
+<h4 id="1115-peer-to-peer-computing">1.11.5 Peer-to-Peer Computing<a href="#1115-peer-to-peer-computing" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Peer-to-peer (P2P) computing refers to a network model in which each participant (node) acts both as a client and a server, sharing resources with other nodes.</p>
+<ul>
+<li><strong>Decentralization</strong>: There is no central server. All nodes are equal and share resources.</li>
+<li><strong>File Sharing</strong>: Popular for file-sharing systems like BitTorrent, where files are distributed across multiple peers.</li>
+</ul>
+<p>Key Advantages:</p>
+<ul>
+<li>Scalability and resilience due to the lack of a single point of failure.</li>
+<li>Direct communication between peers, reducing network congestion.</li>
+</ul>
+<p>However, P2P systems can be less secure compared to client-server models because data is directly exchanged between users.</p>
+<hr>
+<h4 id="1116-virtualization">1.11.6 Virtualization<a href="#1116-virtualization" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Virtualization refers to the technology that enables running multiple virtual operating systems (VMs) on a single physical machine.</p>
+<ul>
+<li><strong>Emulation</strong>: In emulation, the CPU architecture of the host machine is different from the guest machine. It allows programs written for one system to run on a completely different one (e.g., Apple&rsquo;s Rosetta emulator enabling software built for IBM architecture to run on Intel processors).</li>
+<li><strong>Interpretation</strong>: This involves running programs in a non-native format, often by translating high-level code into a language understood by the host machine (e.g., Java being interpreted by the Java Virtual Machine, or JVM). (Computer language is not compiled to native code but instead is either executed in its high-level form or translated to an intermediate form.)</li>
+</ul>
+<p>In contrast to full emulation, virtualization runs a guest OS natively on the host&rsquo;s hardware, allowing for efficient resource utilization.</p>
+<p>Key Benefits:</p>
+<ul>
+<li>Allows multiple OS environments on a single machine.</li>
+<li>Facilitates better resource management and isolation.</li>
+<li>Enables testing and development of different OS setups without needing separate hardware.</li>
+</ul>
+<p>[image for virtualization and VMware]</p>
+<blockquote>
+<p>Java is always interpreted. Interpretation is a form of emulation, the high level language code is translated to native CPU instructions, emulating a theoretical virtual machine on which that language could run natively.</p>
+<p>Java programs are run on &ldquo;Java virtual machines&rdquo;, but technically those virtual machines are Java emulators.</p>
+</blockquote>
+<hr>
+<h4 id="1117-cloud-computing">1.11.7 Cloud Computing<a href="#1117-cloud-computing" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Cloud computing refers to the delivery of computing services—including storage, networking, databases, software applications, and processing power—over the internet. Rather than owning and maintaining physical servers and infrastructure, organizations and individuals can rent computing resources from cloud service providers on-demand.</p>
+<p>Cloud computing allows users to access services remotely from any device with an internet connection, offering flexibility, scalability, and cost efficiency. Cloud services are typically offered under a subscription-based model.</p>
+<p><strong>Types of Clouds</strong>:</p>
+<p><strong>Public Cloud</strong>:<br>
+In a public cloud, the cloud resources (servers, storage, and applications) are owned and operated by a third-party provider and made available to the general public.</p>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li><strong>Amazon Web Services (AWS)</strong>: Offers cloud computing services, including EC2 (Elastic Compute Cloud) and S3 (Simple Storage Service), which provide virtual servers and scalable storage for businesses.</li>
+<li><strong>Microsoft Azure</strong>: Provides services such as virtual machines, storage solutions, and cloud databases. Azure is widely used by enterprises for hosting applications and services.</li>
+<li><strong>Google Cloud Platform (GCP)</strong>: Offers infrastructure services such as Compute Engine and Cloud Storage.</li>
+</ul>
+<p><strong>Pros</strong>:</p>
+<ul>
+<li>Lower upfront costs, pay-as-you-go pricing model.</li>
+<li>Scalable resources that can be adjusted based on demand.</li>
+<li>Reduced management and maintenance overhead.</li>
+</ul>
+<p><strong>Cons</strong>:</p>
+<ul>
+<li>Data security concerns, as the data is stored off-site with a third-party provider.</li>
+<li>Limited customization options compared to private clouds.</li>
+</ul>
+<hr>
+<p><strong>Private Cloud</strong>:<br>
+In a private cloud, the cloud infrastructure is used exclusively by a single organization. The resources may be hosted on-premises or by a third-party provider.</p>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li><strong>VMware vSphere</strong>: Offers virtualization technologies for building private clouds and managing virtual machines.</li>
+<li><strong>OpenStack</strong>: An open-source platform for building and managing private clouds.</li>
+</ul>
+<p><strong>Pros</strong>:</p>
+<ul>
+<li>Enhanced security and control over data.</li>
+<li>Customizable infrastructure to meet specific organizational needs.</li>
+<li>Typically better suited for businesses with compliance or regulatory requirements.</li>
+</ul>
+<p><strong>Cons</strong>:</p>
+<ul>
+<li>Higher upfront cost for hardware and management.</li>
+<li>Limited scalability compared to public cloud services.</li>
+</ul>
+<hr>
+<p><strong>Hybrid Cloud</strong>:<br>
+A hybrid cloud combines both public and private clouds, allowing data and applications to be shared between them. This provides businesses with greater flexibility and optimization of existing infrastructure.</p>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li>A company might run sensitive workloads (such as financial data) in a private cloud for security and compliance, while using a public cloud for less sensitive workloads (like customer relationship management or backup storage).</li>
+<li><strong>Microsoft Azure Hybrid Cloud</strong>: Allows seamless integration of on-premises infrastructure with Azure&rsquo;s cloud services.</li>
+</ul>
+<p><strong>Pros</strong>:</p>
+<ul>
+<li>Flexibility to scale and deploy workloads across multiple environments.</li>
+<li>Offers cost-efficiency by utilizing public cloud resources for less sensitive operations, while maintaining private cloud for more secure processes.</li>
+</ul>
+<p><strong>Cons</strong>:</p>
+<ul>
+<li>Complexity in managing both private and public clouds simultaneously.</li>
+<li>Potential integration challenges between different cloud environments.</li>
+</ul>
+<hr>
+<p><strong>Community Cloud</strong>:<br>
+A community cloud is shared by several organizations with similar interests or requirements, typically in a specific industry or regulatory domain. It allows for shared infrastructure and resources, yet still maintains a level of privacy and security for each organization.</p>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li>A healthcare provider network might use a community cloud to store and manage patient data while ensuring HIPAA compliance.</li>
+<li>Government agencies with shared security protocols may opt for a community cloud to meet regulatory standards while sharing resources.</li>
+</ul>
+<p><strong>Pros</strong>:</p>
+<ul>
+<li>Cost-effective for organizations with similar needs or regulatory requirements.</li>
+<li>Offers higher control and privacy compared to public clouds.</li>
+</ul>
+<p><strong>Cons</strong>:</p>
+<ul>
+<li>Limited customization compared to private clouds.</li>
+<li>May involve more complex governance compared to private or public clouds.</li>
+</ul>
+<hr>
+<p><strong>Cloud Service Models</strong>:</p>
+<p>Cloud services are typically categorized into three primary service models, which differ in the level of control and responsibility retained by the user:</p>
+<p><strong>Infrastructure as a Service (IaaS)</strong>:<br>
+IaaS provides virtualized computing resources over the internet, including virtual machines, storage, and networks. The user is responsible for managing the operating system, applications, and data, while the provider handles the physical infrastructure.</p>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li><strong>Amazon EC2 (Elastic Compute Cloud)</strong>: Offers scalable computing capacity and allows users to launch virtual servers to run applications.</li>
+<li><strong>Microsoft Azure Virtual Machines</strong>: Allows users to deploy and manage virtual machines on the Azure cloud.</li>
+<li><strong>Google Compute Engine</strong>: Provides virtual servers and storage solutions for building cloud applications.</li>
+</ul>
+<p><strong>Pros</strong>:</p>
+<ul>
+<li>Flexible and scalable infrastructure.</li>
+<li>Users can scale resources up or down based on demand.</li>
+<li>Ideal for hosting websites, applications, and testing environments.</li>
+</ul>
+<p><strong>Cons</strong>:</p>
+<ul>
+<li>Requires users to manage the operating system and applications, which may increase complexity.</li>
+<li>Security and compliance need to be managed by the user.</li>
+</ul>
+<hr>
+<p><strong>Platform as a Service (PaaS)</strong>:<br>
+PaaS provides a platform that allows developers to build, deploy, and manage applications without dealing with the underlying hardware or operating systems. The provider handles the infrastructure, operating systems, and runtime environments.</p>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li><strong>Google App Engine</strong>: Allows developers to build and deploy applications on Google&rsquo;s infrastructure without worrying about hardware or OS management.</li>
+<li><strong>Heroku</strong>: A cloud platform for building, running, and scaling applications, supporting several programming languages.</li>
+<li><strong>Microsoft Azure App Services</strong>: Provides a platform for building web applications, APIs, and mobile backends.</li>
+</ul>
+<p><strong>Pros</strong>:</p>
+<ul>
+<li>Simplifies development and deployment of applications.</li>
+<li>Scalable with built-in tools for monitoring and managing applications.</li>
+<li>Developers can focus on coding without worrying about infrastructure or hardware.</li>
+</ul>
+<p><strong>Cons</strong>:</p>
+<ul>
+<li>Limited flexibility compared to IaaS.</li>
+<li>Can lead to vendor lock-in if relying heavily on a specific platform.</li>
+</ul>
+<hr>
+<p><strong>Software as a Service (SaaS)</strong>:</p>
+<ul>
+<li>SaaS delivers software applications over the internet on a subscription basis. Users access applications through a web browser, and the provider manages the underlying infrastructure, platform, and software updates.</li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li><strong>Google Workspace (formerly G Suite)</strong>: A suite of productivity applications, including Gmail, Google Docs, Sheets, and Drive, all accessible via a web browser.</li>
+<li><strong>Salesforce</strong>: A CRM (Customer Relationship Management) software that is fully hosted on the cloud and accessible from anywhere.</li>
+<li><strong>Dropbox</strong>: A cloud-based file storage and sharing platform.</li>
+</ul>
+<p><strong>Pros</strong>:</p>
+<ul>
+<li>No need to manage infrastructure or software updates.</li>
+<li>Accessible from any device with an internet connection.</li>
+<li>Subscription-based, reducing upfront costs.</li>
+</ul>
+<p><strong>Cons</strong>:</p>
+<ul>
+<li>Limited customization options for software features.</li>
+<li>Data security concerns, as the data is hosted on third-party servers.</li>
+</ul>
+<hr>
+<p><strong>Function as a Service (FaaS)</strong>:<br>
+FaaS, or serverless computing, allows users to execute individual functions or code in response to events without managing the underlying infrastructure. The cloud provider automatically handles the scaling and resources needed for the execution.</p>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li><strong>AWS Lambda</strong>: Enables users to run code in response to events such as file uploads or API calls, without managing servers.</li>
+<li><strong>Azure Functions</strong>: Provides a serverless compute service for running event-driven functions.</li>
+</ul>
+<p><strong>Pros</strong>:</p>
+<ul>
+<li>No need to manage servers, reducing operational complexity.</li>
+<li>Cost-efficient, as users only pay for the execution time of the functions.</li>
+</ul>
+<p><strong>Cons</strong>:</p>
+<ul>
+<li>Limited control over infrastructure.</li>
+<li>May not be suitable for long-running or stateful applications.</li>
+</ul>
+<hr>
+<p><strong>Database as a Service (DBaaS)</strong>:<br>
+DBaaS allows users to host, manage, and scale databases without handling the underlying infrastructure. The cloud provider manages database performance, backups, and scalability.</p>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li><strong>Amazon RDS (Relational Database Service)</strong>: Allows users to host, manage, and scale relational databases such as MySQL, PostgreSQL, and Oracle.</li>
+<li><strong>Google Cloud SQL</strong>: A fully-managed relational database service for MySQL, PostgreSQL, and SQL Server.</li>
+</ul>
+<p><strong>Pros</strong>:</p>
+<ul>
+<li>Managed database services reduce administrative overhead.</li>
+<li>Automated backups, scaling, and performance optimization.</li>
+</ul>
+<p><strong>Cons</strong>:</p>
+<ul>
+<li>Limited customization compared to on-premises databases.</li>
+<li>May involve data security and compliance challenges.</li>
+</ul>
+<hr>
+<p><strong>Key Benefits of Cloud Computing</strong>:</p>
+<ul>
+<li><strong>Scalable Resources on Demand</strong>: Cloud services allow businesses to scale their computing resources up or down based on demand. For example, an e-commerce website might require more resources during a holiday sale and scale back afterward.</li>
+<li><strong>Pay-as-You-Go Pricing Models</strong>: With cloud computing, users only pay for the resources they use. This helps businesses avoid upfront infrastructure costs and scale efficiently.</li>
+<li><strong>Accessibility</strong>: Cloud services can be accessed from any device with an internet connection, allowing for greater flexibility and mobility. Remote work and collaboration become more efficient, as users can access their data and applications from anywhere.</li>
+</ul>
+<hr>
+<h4 id="1118-real-time-embedded-systems">1.11.8 Real-Time Embedded Systems<a href="#1118-real-time-embedded-systems" class="anchor" aria-hidden="true">#</a> </h4>
+<p>These are the most prevalent type of computers which are in all kinds of devices with very specific tasks. Their systems are limited, have little or no user interface. Mostly monitoring and managing hardware devices.</p>
+<p>Embedded systems are specialized computing systems designed to perform dedicated functions with specific requirements. Many embedded systems are real-time systems.</p>
+<ul>
+<li><strong>Real-Time Operating System (RTOS)</strong>: An OS designed to handle real-time tasks with strict timing constraints. These systems must process inputs and produce outputs within a defined time period, or they will fail.</li>
+</ul>
+<p><strong>Examples of Real-Time Systems</strong>:</p>
+<ul>
+<li><strong>Scientific Instruments</strong>: Used in laboratories to process experimental data in real-time.</li>
+<li><strong>Medical Devices</strong>: Devices like pacemakers or MRI machines that need to operate under strict time constraints.</li>
+<li><strong>Automobile Systems</strong>: Engine control units (ECUs) and safety systems that require immediate responses to sensor data.</li>
+<li>In home appliance controllers and weapon systems.</li>
+</ul>
+<p>Real-time embedded systems are commonly found in industries such as aerospace, healthcare, automotive, and industrial automation.</p>
+<p><strong>Key Features</strong>:</p>
+<ul>
+<li>Predictable response time.</li>
+<li>High reliability and uptime.</li>
+<li>Low latency for critical operations.</li>
+</ul>
+<p>There are embedded systems with OS and special purpose applications to implement the functionality.
+Others are devices with special purpose OS providing just the desired functionality.
+Others are (ASICs) application-specific Integrated circuits that perform the tasks without an operating system.</p>
+<hr>
+<h4 id="1-aerospace--defense">1. <strong>Aerospace &amp; Defense</strong><a href="#1-aerospace--defense" class="anchor" aria-hidden="true">#</a> </h4>
+<p><strong>Flight Control Systems</strong>: ensure that the flight control systems (e.g., autopilot, navigation, and thrust management) respond promptly to inputs like altitude changes, turns, or environmental factors.</p>
+<p><strong>Missile Guidance Systems</strong>: In missiles or drones perform real-time processing of sensor data (e.g., GPS, radar, infrared) to guide the missile to its target with precise timing for tracking and course corrections.</p>
+<p><strong>Radar Systems</strong>: processing of signals and data from radars ensures immediate response to changing environmental conditions or threats.</p>
+<ul>
+<li><strong>Air Traffic Control Radar Systems</strong>: Process the movement of aircraft in real-time to ensure safe air traffic management.</li>
+</ul>
+<hr>
+<h4 id="2-automotive">2. <strong>Automotive</strong><a href="#2-automotive" class="anchor" aria-hidden="true">#</a> </h4>
+<p><strong>Anti-lock Braking System (ABS)</strong>: Continuously monitors wheel speed sensors and adjusts brake pressure to prevent skidding during hard braking.</p>
+<p><strong>Autonomous Vehicles</strong>: Used to process data from sensors (LIDAR, cameras, radar) to make split-second decisions for autonomous driving and braking.</p>
+<p><strong>Engine Control Units (ECU)</strong>: Manage engine performance, including fuel injection, ignition timing, and exhaust controls, ensuring optimal engine behavior, fuel efficiency and emissions.</p>
+<hr>
+<h4 id="3-healthcare--medical-devices">3. <strong>Healthcare &amp; Medical Devices</strong><a href="#3-healthcare--medical-devices" class="anchor" aria-hidden="true">#</a> </h4>
+<p><strong>Pacemakers</strong>: Monitor heart activity and adjust pacing to maintain a regular heartbeat.</p>
+<p><strong>Infusion Pumps</strong>: Control the rate at which drugs or fluids are administered to patients, responding instantly to changes in dosage or medical parameters.</p>
+<p><strong>Medical Imaging Systems</strong>: Systems like MRI, CT scanners, and ultrasound machines rely on real-time embedded systems to process large amounts of imaging data in real-time.</p>
+<p><strong>Vital Signs Monitors</strong>: Embedded systems continuously monitor heart rate, oxygen saturation, and blood pressure in patients, providing immediate alerts for any abnormalities.</p>
+<hr>
+<h4 id="4-industrial-automation">4. <strong>Industrial Automation</strong><a href="#4-industrial-automation" class="anchor" aria-hidden="true">#</a> </h4>
+<p><strong>Robotic Arm Control</strong>:  Embedded systems control robotic arms used in manufacturing and assembly lines, ensuring real-time precision and accuracy.</p>
+<p><strong>Process Control Systems</strong>:  In industries like oil and gas, power generation, and chemicals, real-time embedded systems control and monitor critical processes (e.g., temperature, pressure, flow rate).</p>
+<ul>
+<li>Precise control of chemical reactions or energy generation, responding immediately to sensor data to maintain system stability.</li>
+</ul>
+<p><strong>Conveyor Systems</strong>:  Real-time embedded systems manage the speed and direction of conveyor belts used in sorting or assembly lines.</p>
+<hr>
+<h4 id="5-consumer-electronics">5. <strong>Consumer Electronics</strong><a href="#5-consumer-electronics" class="anchor" aria-hidden="true">#</a> </h4>
+<p><strong>Smartphones</strong>: rely on real-time embedded systems to handle various functions like touch screen input, GPS navigation, and camera operation.</p>
+<p><strong>Smart TVs</strong>: allow smart TVs to process streaming data, manage user interfaces, and synchronize audio and video streams.</p>
+<p><strong>Game Consoles</strong>: manage processing power, network connections, and gameplay responses in real-time.</p>
+<hr>
+<h4 id="6-telecommunications">6. <strong>Telecommunications</strong><a href="#6-telecommunications" class="anchor" aria-hidden="true">#</a> </h4>
+<p><strong>Network Routers and Switches</strong>: manage network traffic, ensuring that data packets are transmitted efficiently and with minimal delay.</p>
+<p><strong>Base Stations in Mobile Networks</strong>: cellular base stations process signals from mobile devices and handle real-time communication. Managing high-speed data transmission, adjusting frequencies and power levels for efficient communication.</p>
+<hr>
+<h4 id="7-energy-management">7. <strong>Energy Management</strong><a href="#7-energy-management" class="anchor" aria-hidden="true">#</a> </h4>
+<p><strong>Smart Grids</strong>:  Monitor and control energy distribution in smart grids, responding to changes in demand and grid conditions to prevent outages.</p>
+<p><strong>Wind Turbine Control Systems</strong>: Adjust blade angles and motor speed to maximize energy generation while maintaining safe operation.</p>
+<p><strong>Solar Panel Controllers</strong>: Manage the charging of batteries or the direct supply of power to the grid.</p>
+<hr>
+<h4 id="8-entertainment--media">8. <strong>Entertainment &amp; Media</strong><a href="#8-entertainment--media" class="anchor" aria-hidden="true">#</a> </h4>
+<p><strong>Digital Cameras</strong>:  Real-time embedded systems in digital cameras process images from sensors and adjust settings like exposure, focus, and white balance in real-time. Ensuring clear, high-quality photos are captured instantly.</p>
+<p><strong>Virtual Reality (VR) and Augmented Reality (AR)</strong>:  Devices process real-time inputs from motion sensors, cameras, and external controllers to create immersive experiences.</p>
+<hr>
+<h4 id="9-security--surveillance">9. <strong>Security &amp; Surveillance</strong><a href="#9-security--surveillance" class="anchor" aria-hidden="true">#</a> </h4>
+<p><strong>Surveillance Cameras</strong>: Process video feeds, detect motion, and trigger recording or alerts when necessary.</p>
+<p><strong>Biometric Systems</strong>: Process inputs like fingerprints, retina scans, or facial recognition for immediate authentication.</p>
+<hr>
+<h3 id="real-time-embedded-systems-in-home-appliances">Real-Time Embedded Systems in Home Appliances<a href="#real-time-embedded-systems-in-home-appliances" class="anchor" aria-hidden="true">#</a> </h3>
+<ol>
+<li><strong>Smart Thermostats</strong></li>
+<li><strong>Washing Machines</strong></li>
+<li><strong>Dishwashers</strong></li>
+<li><strong>Refrigerators</strong></li>
+<li><strong>Microwave Ovens</strong></li>
+<li><strong>Air Conditioners</strong></li>
+<li><strong>Smart Coffee Makers</strong></li>
+<li><strong>Smart Locks</strong></li>
+<li><strong>Smart Light Bulbs</strong></li>
+<li><strong>Vacuum Cleaners</strong></li>
+<li><strong>Smoke Detectors</strong></li>
+<li><strong>Electric Kettles</strong></li>
+</ol>
+<hr>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="page-nav d-flex flex-column flex-sm-row">
+	
+	<div class="card w-100">
+			<div class="card-body d-flex">
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M5 12l6 6"></path>
+						<path d="M5 12l6 -6"></path>
+				 	</svg>
+				</div>
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Prev</div>
+					<a href="/personal-site/docs/os/c01_introduction/os-1.05-os-operations/" class="stretched-link text-reset text-decoration-none">OS - 1.05 - OS Operations</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+			
+		</main>
+		
+	</div>
+
+      
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-lg">
+    <div class="row">
+      <div class="col-lg-8 text-center text-lg-start">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a class="text-muted" href="/personal-site/privacy/">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 text-center text-lg-end">
+        <ul class="list-inline">
+          <li class="list-inline-item">Made by <a class="text-muted" href="https://sujith-eag.github.io/personal-site/">Sujith</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+<script async
+  src="/personal-site/js/app.ec98ea736af7f8f531281a21224330da682d1dc9973423443b3d5ce8c45c6ea1.js"
+  integrity="sha256-7Jjqc2r3&#43;PUxKBohIkMw2mgtHcmXNCNEOz1c6MRcbqE=">
+</script>
+
+
+
+
+
+<script async
+  src="/personal-site/js/flexsearch.8350d2f520e131f8552ed57c1eadd05c50eccf0427267781442dd8ddf8fdcdf7.js"
+  integrity="sha256-g1DS9SDhMfhVLtV8Hq3QXFDszwQnJneBRC3Y3fj9zfc=">
+</script>
+<script async
+  src="/personal-site/js/search-modal.877cece5b6bc789456f89fa1955ccfcd8a5acdb2179e7882e292a6caa49efe68.js"
+  integrity="sha256-h3zs5ba8eJRW&#43;J&#43;hlVzPzYpazbIXnniC4pKmyqSe/mg=">
+</script>
+
+    
+  </body>
+</html>

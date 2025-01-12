@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/os/c02_system_structure/os-2.01-os-services/</loc>
+      <lastmod>2025-01-12T21:22:44+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/os/c02_system_structure/os-2.03-system-calls/</loc>
+      <lastmod>2025-01-12T21:23:06+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/os/c02_system_structure/os-2.04-types-of-system-calls/</loc>
+      <lastmod>2025-01-12T21:24:56+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/os/c02_system_structure/os-2.05-system-programs/</loc>
+      <lastmod>2025-01-12T21:27:13+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/os/c02_system_structure/os-2.07-os-structure/</loc>
+      <lastmod>2025-01-12T21:27:29+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/os/c02_system_structure/os-2.10-system-boot/</loc>
+      <lastmod>2025-01-12T21:27:49+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    </urlset>

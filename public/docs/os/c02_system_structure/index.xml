@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C02_system_structure on Sujith&#39;s Library</title>
+    <link>http://localhost:1313/personal-site/docs/os/c02_system_structure/</link>
+    <description>Recent content in C02_system_structure on Sujith&#39;s Library</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2020-2024 Thulite</copyright>
+    <lastBuildDate>Sun, 12 Jan 2025 21:27:49 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/personal-site/docs/os/c02_system_structure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OS 2.01 - OS Services</title>
+      <link>http://localhost:1313/personal-site/docs/os/c02_system_structure/os-2.01-os-services/</link>
+      <pubDate>Sun, 12 Jan 2025 21:22:44 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/os/c02_system_structure/os-2.01-os-services/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Operating System Services, Interface, and Components&lt;/strong&gt;&lt;br&gt;&#xA;The main three aspects of an OS are its &lt;strong&gt;services&lt;/strong&gt;, &lt;strong&gt;interfaces&lt;/strong&gt;, and &lt;strong&gt;components&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;[Image, A view of Operating System services]&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OS 2.03 - System Calls</title>
+      <link>http://localhost:1313/personal-site/docs/os/c02_system_structure/os-2.03-system-calls/</link>
+      <pubDate>Sun, 12 Jan 2025 21:23:06 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/os/c02_system_structure/os-2.03-system-calls/</guid>
+      <description>&lt;p&gt;System calls provide the essential interface between user-level programs and the operating system. They allow applications to request services, such as file manipulation, process control, and communication with I/O devices, from the OS kernel. The process of making a system call is essential for interaction between software and hardware components.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OS 2.04 - Types Of System Calls</title>
+      <link>http://localhost:1313/personal-site/docs/os/c02_system_structure/os-2.04-types-of-system-calls/</link>
+      <pubDate>Sun, 12 Jan 2025 21:24:56 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/os/c02_system_structure/os-2.04-types-of-system-calls/</guid>
+      <description>&lt;p&gt;System calls are typically grouped into six major categories, each providing different functions necessary for operating system tasks.&lt;/p&gt;&#xA;&lt;p&gt;These categories include &lt;strong&gt;process control&lt;/strong&gt;, &lt;strong&gt;file management&lt;/strong&gt;, &lt;strong&gt;device management&lt;/strong&gt;, &lt;strong&gt;information maintenance&lt;/strong&gt;, &lt;strong&gt;communications&lt;/strong&gt;, and &lt;strong&gt;protection&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OS 2.05 - System Programs</title>
+      <link>http://localhost:1313/personal-site/docs/os/c02_system_structure/os-2.05-system-programs/</link>
+      <pubDate>Sun, 12 Jan 2025 21:27:13 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/os/c02_system_structure/os-2.05-system-programs/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;System programs&lt;/strong&gt;, also known as &lt;strong&gt;system utilities&lt;/strong&gt;, are essential components of an operating system that provide a convenient environment for the development, execution, and management of programs.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OS 2.07 - OS Structure</title>
+      <link>http://localhost:1313/personal-site/docs/os/c02_system_structure/os-2.07-os-structure/</link>
+      <pubDate>Sun, 12 Jan 2025 21:27:29 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/os/c02_system_structure/os-2.07-os-structure/</guid>
+      <description>&lt;p&gt;Operating-system structure refers to the organization of an operating system&amp;rsquo;s components and how they interact with each other. Over the years, operating system structures have evolved from simple designs to more modular, complex ones, each with trade-offs regarding performance, maintainability, and flexibility.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OS 2.10 - System Boot</title>
+      <link>http://localhost:1313/personal-site/docs/os/c02_system_structure/os-2.10-system-boot/</link>
+      <pubDate>Sun, 12 Jan 2025 21:27:49 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/os/c02_system_structure/os-2.10-system-boot/</guid>
+      <description>&lt;p&gt;Booting a computer system refers to the process of starting it up by loading the kernel into memory and initiating its execution. This procedure is vital for initializing the operating system and setting up the system for user operations.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

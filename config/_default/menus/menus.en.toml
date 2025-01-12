@@ -62,11 +62,16 @@
   name = "Linux"
   url = "/docs/bash-linux/"
   weight = 60
-
+  
+[[main]]
+  name = "OS"
+  url = "/docs/os/"
+  weight = 70
+  
 [[main]]
   name = "Tools"
   url = "/docs/tools/"
-  weight = 70
+  weight = 80
 
 [[main]]
   name = "Blog"

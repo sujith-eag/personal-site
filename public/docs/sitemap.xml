@@ -49,6 +49,13 @@
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/os/</loc>
+      <lastmod>2025-01-12T21:11:03+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
     <url>
         <loc>http://localhost:1313/personal-site/docs/python/1data-types/</loc>
         <lastmod>2024-12-17T22:41:09+05:30</lastmod>
@@ -112,6 +119,18 @@
       <url>
         <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/</loc>
         <lastmod>2024-12-29T16:34:09+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/os/c01_introduction/</loc>
+        <lastmod>2025-01-12T21:13:14+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/os/c02_system_structure/</loc>
+        <lastmod>2025-01-12T21:13:47+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>

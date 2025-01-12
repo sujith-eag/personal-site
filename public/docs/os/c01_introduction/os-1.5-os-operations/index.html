@@ -1,0 +1,1998 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="/personal-site/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=personal-site/livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preload" href="http://localhost:1313/personal-site/fonts/vendor/jost/jost-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/personal-site/fonts/vendor/jost/jost-v4-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/personal-site/fonts/vendor/jost/jost-v4-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<script 
+  src="/personal-site/js/color-mode.f14b3e296de1d0b69e75af684b62a4a912a2cadab04e36123407cd8388204f1d.js"
+  integrity="sha256-8Us&#43;KW3h0Laeda9oS2KkqRKiytqwTjYSNAfNg4ggTx0=">
+</script>
+
+
+<link rel="stylesheet" href="/personal-site/main.c0e24d0bb4526375ef42a8fffa4eb23f8f782cb58ac9f07c6886fe943a0ed00e176b284d9d1a5b8e9d68a3f2f5918367e18fe55f5fde9451a8c6d3fe85342b7b.css" integrity="sha512-wOJNC7RSY3XvQqj/&#43;k6yP494LLWKyfB8aIb&#43;lDoO0A4XayhNnRpbjp1oo/L1kYNn4Y/lX1/elFGoxtP&#43;hTQrew==" crossorigin="anonymous">
+
+<noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/personal-site/docs/os/c01_introduction/os-1.5-os-operations/">
+  <link rel="canonical" href="http://localhost:1313/personal-site/docs/os/c01_introduction/os-1.5-os-operations/">
+<title>OS 1.5 - OS Operations  |  Sujith&#39;s Library</title>
+<meta name="description" content="A reference site with summary of various coding topics">
+
+    
+    <link rel="icon" href="/personal-site/favicon.ico" sizes="32x32">
+    
+      <link rel="icon" href="/personal-site/favicon.svg" type="image/svg+xml">
+    
+      <link
+        rel="apple-touch-icon"
+        href="/personal-site/personal-site/apple-touch-icon.png"
+        sizes="180x180"
+        type="image/png"
+      >
+      <link
+        rel="icon"
+        href="/personal-site/favicon-192x192.png"
+        sizes="192x192"
+        type="image/png"
+      >
+      <link
+        rel="icon"
+        href="/personal-site/favicon-512x512.png"
+        sizes="512x512"
+        type="image/png"
+      >
+<link rel="manifest" href="/personal-site/manifest.webmanifest">
+
+<meta property="og:title" content="OS 1.5 - OS Operations">
+<meta property="og:description" content="Interrupts, System Calls, and Modes of Operation
+Interrupt-Driven Systems
+Modern Operating Systems are interrupt-driven, meaning they rely on interrupts to perform tasks. If there are no I/O devices to service or no user requests, the OS remains idle, waiting for events to occur.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://localhost:1313/personal-site/docs/os/c01_introduction/os-1.5-os-operations/"><meta property="og:image" content="http://localhost:1313/personal-site/cover.png"><meta property="article:section" content="docs">
+<meta property="article:published_time" content="2025-01-12T21:21:19+05:30">
+<meta property="article:modified_time" content="2025-01-12T21:21:19+05:30"><meta property="og:site_name" content="Sujith&#39;s Notes">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://localhost:1313/personal-site/cover.png"><meta name="twitter:title" content="OS 1.5 - OS Operations">
+<meta name="twitter:description" content="Interrupts, System Calls, and Modes of Operation
+Interrupt-Driven Systems
+Modern Operating Systems are interrupt-driven, meaning they rely on interrupts to perform tasks. If there are no I/O devices to service or no user requests, the OS remains idle, waiting for events to occur.">
+
+    
+    
+    
+    <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/personal-site/",
+       "name": "Sujith's Library",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/personal-site/docs/",
+       "name": "All Notes Articles",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/personal-site/docs/os/",
+       "name": "Operating System Concepts",
+       "position": 3
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/personal-site/docs/os/c01_introduction/",
+       "name": "Os 01 Operating Systems Introduction",
+       "position": 4
+     },
+     {
+       "@type": "ListItem",
+       "name": "Os 1.5 Os Operations",
+       "position": 5
+     }
+   ]
+ }
+</script>
+
+
+
+
+
+</head>
+
+  
+  <body class="single section docs" data-bs-spy="scroll" data-bs-target="#toc" data-bs-root-margin="0px 0px -60%" data-bs-smooth-scroll="true" tabindex="0">
+    <div class="sticky-top">
+<header class="navbar navbar-expand-lg">
+  <div class="container-lg">
+  
+    <a class="navbar-brand me-auto me-lg-3" href="/personal-site/">Sujith&#39;s Library</a>
+
+    
+    
+    <button type="button" id="searchToggleMobile" class="btn btn-link nav-link mx-2 d-lg-none" aria-label="Search website">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <circle cx="10" cy="10" r="7"></circle>
+        <line x1="21" y1="21" x2="15" y2="15"></line>
+      </svg>
+    </button>
+    
+    <button class="btn btn-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavSection" aria-controls="offcanvasNavSection" aria-label="Open section navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+      </svg>
+    </button>
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavSection" aria-labelledby="offcanvasNavSectionLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavSectionLabel">Docs</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <aside class="doks-sidebar mt-n3">
+          <nav id="doks-docs-nav" aria-label="Tertiary navigation">
+            
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+    <details open>
+      <summary>Python</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Primitive Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/variables/">Variables</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/int-float/">int &amp; float</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/string/">String</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/string-manipulation/">String Manipulation</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/string-methods/">String Methods</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Complex Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/lists/">Lists</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/list-methods/">List Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/list-operators/">List Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/arrays/">Arrays</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/tuples/">Tuples</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/dictinaries/">Dictinaries</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>C Language</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>The C Programming Language by Kernighan and Ritchie</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-to-c-language/">K&amp;R - Chapter 0 - Introduction to C language</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-using-python-part-1/">K&amp;R - Chapter 0 - Introduction using Python (Part 1)</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-using-python-part-2/">K&amp;R - Chapter 0 - Introduction using Python (Part 2)</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-1-basic-syntax/">K&amp;R - Chapter 1 - Basic Syntax</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-2-types-operators-expressions/">K&amp;R - Chapter 2 - Types, Operators, Expressions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-3-control-flow/">K&amp;R - Chapter 3 - Control Flow</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-4-function-program-structure/">K&amp;R - Chapter 4 - Function, Program Structure</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-5-pointers-arrays/">K&amp;R - Chapter 5 - Pointers, Arrays</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-6-structures/">K&amp;R - Chapter 6 - Structures</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-6.1-structures/">K&amp;R - Chapter 6.1 - Structures</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-7-input-output/">K&amp;R - Chapter 7 - Input &amp; Output</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-8-unix-interface/">K&amp;R - Chapter 8 - Unix Interface</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_c/">Data Structures Using C</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>JavaScript</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>JS Language</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.01-variables/">JS - 01.01 - Variables</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.02-values-and-types/">JS - 01.02 - Values and Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.03-number-types/">JS - 01.03 - Number Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.04-number-methods/">JS - 01.04 - Number Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.05-string-type/">JS - 01.05 - String Type</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.06-string-methods/">JS - 01.06 - String Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.07-modifying-string/">JS - 01.07 - Modifying String</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.08-boolean-type/">JS - 01.08 - Boolean Type</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.09-operators/">JS - 01.09 - Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.10-auto-type-conversions/">JS - 01.10 - Auto Type Conversions</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Control Flow</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Conditionals</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.01-if-else/">JS - 02.01 - if, else</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.02-switch-case/">JS - 02.02 - switch-case</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.03-ternary-operator/">JS - 02.03 - Ternary Operator</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.04-logical-operators/">JS - 02.04 - Logical Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.05-short-circuiting/">JS - 02.05 - Short Circuiting</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Loops</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.11-do-while-loop/">JS - 02.11 - do-while Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.12-for-loop/">JS - 02.12 - for Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.13-for-of-loop/">JS - 02.13 - for-of Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.14-for-in-loop/">JS - 02.14 - for-in Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.15-break-continue-label/">JS - 02.15 - break-continue-label</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.16-iterables/">JS - 02.16 - Iterables</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Functions</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.01-function/">JS - 03.01 - Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.02-defining-function/">JS - 03.02 - Defining Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.03-arrow-function/">JS - 03.03 - Arrow Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.04-scope-of-variable/">JS - 03.04 - Scope of Variable</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.05-parameters-arguments/">JS - 03.05 - Parameters &amp; Arguments</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.06-return-recursion-call-stack/">JS - 03.06 - Return, Recursion, Call Stack</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.07-scheduling/">JS - 03.07 - Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.08-decorators/">JS - 03.08 - Decorators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.09-function-object/">JS - 03.09 - Function Object</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Objects</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.01-object/">JS - 04.01 - Object</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.02-object-properties/">JS - 04.02 - Object Properties</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.03-cloning-object/">JS - 04.03 - Cloning Object</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.04-object.keys/">JS - 04.04 - Object.keys()</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.05-methods-this-chaining/">JS - 04.05 - Methods, this, Chaining</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.06-constructor-new/">JS - 04.06 - Constructor new</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Arrays</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.01-array/">JS - 05.01 - Array</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.02-array-methods/">JS - 05.02 - Array Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.03-filter-method/">JS - 05.03 - Filter Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.04-map-method/">JS - 05.04 - Map Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.05-reduce-method/">JS - 05.05 - Reduce Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.06-sort-method/">JS - 05.06 - Sort Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.07-rest-spread/">JS - 05.07 - Rest &amp; Spread</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/">JavaScript DOM Manipulation</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>HTML &amp; CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>HTML</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-01-boiler-plate/">HTML - 01 - Boiler Plate</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-02-texts-lists/">HTML - 02 - Texts &amp; Lists</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-03-links-images/">HTML - 03 - Links &amp; Images</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-04-input-types/">HTML - 04 - Input Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-05-button/">HTML - 05 - Button</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-06-dom-events/">HTML - 06 - DOM Events</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-01-selectors/">CSS - 01 -Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-02-multiple-selecors/">CSS - 02 - Multiple Selecors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-03-declaration/">CSS - 03 - Declaration</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-04-adding-css/">CSS - 04 - Adding CSS</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-05-box-model/">CSS - 05 - Box Model</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-06-flexbox/">CSS - 06 - Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-07-flex-flexibility/">CSS - 07 - Flex Flexibility</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-08-axes-in-flexbox/">CSS - 08 - Axes in Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-09-utility-class-inheritance/">CSS - 09 - Utility Class &amp; Inheritance</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>CSS Reference</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css_resource/css-04.1-size-units/">CSS - 04.1 - Size Units</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css_resource/css-04.2-color-values/">CSS - 04.2 - Color Values</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Tools &amp; Accesories</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/tools/obsidian/">Obsidian</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/vs-code/">VS Code</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/git-github/">Git &amp; Github</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Linux - Bash &amp; OS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Linux OS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-01-linux-kernel/">Linux OS - 01 - Linux Kernel</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-02-forms-of-process-management/">Linux OS - 02 - Forms of Process Management</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-03-system-resources/">Linux OS - 03 System Resources</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Linx Bash</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-01-basics/">Bash - 01 - Basics</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-02-features/">Bash - 02 - Features</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-03-help-pages/">Bash - 03 - help pages</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-04-variables-and-aliases/">Bash - 04 - Variables and Aliases</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-05-listing-files/">Bash - 05 - Listing Files</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-06-environment-and-subshell/">Bash - 06 - Environment and Subshell</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-08-basic-file-commands/">Bash - 08 - Basic File Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-07-storage-terminology-in-linux/">Bash - 07 - Storage Terminology in Linux</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-08.1-bc-and-date/">Bash - 08.1 - bc and date</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-09-file-movement-and-copy-commands/">Bash - 09 - File Movement and Copy Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-10-file-viewing-and-editing-commands/">Bash - 10 - File Viewing and Editing Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-11-file-permissions/">Bash - 11 - File Permissions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-12-hard-and-soft-links/">Bash - 12 - Hard and Soft Links</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13-regular-expressions/">Bash - 13 - Regular Expressions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13.1-regex-expanded/">Bash - 13.1 - regex Expanded</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13.2-regex-matching/">Bash - 13.2 - regex Matching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-14-file-searching/">Bash - 14 - File Searching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-15-neovim/">Bash - 15 - Neovim</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-16-egrep/">Bash - 16 - egrep</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-17-sed/">Bash - 17 - sed</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open open>
+      <summary>Operating System Concepts</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open open>
+      <summary>OS - 01 - Operating Systems Introduction</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c01_introduction/os-1.1-operating-systems-introduction/">OS 1.1 - Operating Systems Introduction</a>
+  </li>
+
+  <li class="active" >
+      <a aria-current="page" href="/personal-site/docs/os/c01_introduction/os-1.5-os-operations/">OS 1.5 - OS Operations</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c01_introduction/os-1.11-computing-environments/">OS 1.11 - Computing Environments</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+          </nav>
+        </aside>
+      </div>
+    </div>
+    
+    <button class="btn btn-link nav-link mx-2 order-3 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavMain" aria-controls="offcanvasNavMain" aria-label="Open main navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <line x1="4" y1="8" x2="20" y2="8"></line>
+        <line x1="4" y1="16" x2="20" y2="16"></line>
+      </svg>
+    </button>
+
+    
+    <div class="offcanvas offcanvas-end h-auto" tabindex="-1" id="offcanvasNavMain" aria-labelledby="offcanvasNavMainLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavMainLabel">Sujith&#39;s Library</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+         </svg>
+        </button>
+      </div>
+      
+      <div class="offcanvas-body d-flex flex-column flex-lg-row justify-content-between">
+        <ul class="navbar-nav flex-grow-1"><li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/python/">Python</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/html-css/">HTML/CSS</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/java-script/">JavaScript</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/java-script-dom/">JS DOM</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/c/">C</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/bash-linux/">Linux</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/os/">OS</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/tools/">Tools</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/blog/">Blog</a>
+              </li>
+            </ul>
+
+        
+        
+        <button type="button" id="searchToggleDesktop" class="btn btn-link nav-link p-2 d-none d-lg-block" aria-label="Search website">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <circle cx="10" cy="10" r="7"></circle>
+            <line x1="21" y1="21" x2="15" y2="15"></line>
+          </svg>
+        </button>
+        
+        
+        
+        <button id="buttonColorMode" class="btn btn-link mx-auto nav-link p-0 ms-lg-2 me-lg-1" type="button" aria-label="Toggle theme">
+          <svg data-bs-theme-value="dark" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+          </svg>
+          <svg data-bs-theme-value="light" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0m-5 0h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+          </svg>
+        </button>
+        
+        <ul id="socialMenu" class="nav mx-auto flex-row order-lg-4">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/sujith-eag"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg><small class="ms-2 visually-hidden">GitHub</small></a>
+            </li>
+          </ul>
+        
+        </div>
+    </div>
+
+    
+    </div>
+</header>
+</div>
+
+<div class="modal" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-md-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 visually-hidden" id="searchModalLabel">Search</h1>
+        <button type="button" class="btn-close visually-hidden" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="search-input flex-grow-1 d-none">
+          <form id="search-form" class="search-form" action="#" method="post" accept-charset="UTF-8" role="search">
+            <label for="query" class="visually-hidden">Search</label>
+            <div class="d-flex">
+              <input type="search" id="query" name="query" class="search-text form-control form-control-lg" placeholder="Search" aria-label="Search" maxlength="128" autocomplete="off">
+              <button type="button" class="btn btn-link text-decoration-none px-0 ms-3 d-md-none" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-body">
+        <p class="search-loading status message d-none mt-3 text-center">Loading search index…</p>
+        <p class="search-no-recent message d-none mt-3 text-center">No recent searches</p>
+        <p class="search-no-results message d-none mt-3 text-center">No results for "<strong><span class="query-no-results">Query here</span></strong>"</p>
+        <div id="searchResults" class="search-results"></div>
+        <template>
+          <article class="search-result list-view">
+            <div class="card my-3">
+              <div class="card-body">
+                <header>
+                  <h2 class="h5 title title-submitted mb-0"><a class="stretched-link text-decoration-none text-reset" href="#">Title here</a></h2>
+                  <div class="submitted d-none"><time class="created-date">Date here</time></div>
+                </header>
+                <div class="content">Summary here</div>
+              </div>
+            </div>
+          </article>
+        </template>
+      </div>
+      <div class="modal-footer">
+        <ul class="list-inline me-auto d-none d-md-block">
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Enter key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M12 3.53088v3c0 1-1 2-2 2H4M7 11.53088l-3-3 3-3"></path></g></svg></kbd><span class="DocSearch-Label">to select</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow down" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 3.5v8M10.5 8.5l-3 3-3-3"></path></g></svg></kbd><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow up" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 11.5v-8M10.5 6.5l-3-3-3 3"></path></g></svg></kbd><span class="DocSearch-Label">to navigate</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Escape key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M13.6167 8.936c-.1065.3583-.6883.962-1.4875.962-.7993 0-1.653-.9165-1.653-2.1258v-.5678c0-1.2548.7896-2.1016 1.653-2.1016.8634 0 1.3601.4778 1.4875 1.0724M9 6c-.1352-.4735-.7506-.9219-1.46-.8972-.7092.0246-1.344.57-1.344 1.2166s.4198.8812 1.3445.9805C8.465 7.3992 8.968 7.9337 9 8.5c.032.5663-.454 1.398-1.4595 1.398C6.6593 9.898 6 9 5.963 8.4851m-1.4748.5368c-.2635.5941-.8099.876-1.5443.876s-1.7073-.6248-1.7073-2.204v-.4603c0-1.0416.721-2.131 1.7073-2.131.9864 0 1.6425 1.031 1.5443 2.2492h-2.956"></path></g></svg></kbd><span class="DocSearch-Label">to close</span></li>
+        </ul>
+        <p class="d-md-none">Search by <a class="text-decoration-none" href="https://github.com/nextapps-de/flexsearch">FlexSearch</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="wrap container-lg" role="document">
+      <div class="content">
+      
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+    <details open>
+      <summary>Python</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Primitive Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/variables/">Variables</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/int-float/">int &amp; float</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/string/">String</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/string-manipulation/">String Manipulation</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/string-methods/">String Methods</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Complex Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/lists/">Lists</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/list-methods/">List Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/list-operators/">List Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/arrays/">Arrays</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/tuples/">Tuples</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/dictinaries/">Dictinaries</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>C Language</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>The C Programming Language by Kernighan and Ritchie</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-to-c-language/">K&amp;R - Chapter 0 - Introduction to C language</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-using-python-part-1/">K&amp;R - Chapter 0 - Introduction using Python (Part 1)</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-using-python-part-2/">K&amp;R - Chapter 0 - Introduction using Python (Part 2)</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-1-basic-syntax/">K&amp;R - Chapter 1 - Basic Syntax</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-2-types-operators-expressions/">K&amp;R - Chapter 2 - Types, Operators, Expressions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-3-control-flow/">K&amp;R - Chapter 3 - Control Flow</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-4-function-program-structure/">K&amp;R - Chapter 4 - Function, Program Structure</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-5-pointers-arrays/">K&amp;R - Chapter 5 - Pointers, Arrays</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-6-structures/">K&amp;R - Chapter 6 - Structures</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-6.1-structures/">K&amp;R - Chapter 6.1 - Structures</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-7-input-output/">K&amp;R - Chapter 7 - Input &amp; Output</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-8-unix-interface/">K&amp;R - Chapter 8 - Unix Interface</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_c/">Data Structures Using C</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>JavaScript</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>JS Language</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.01-variables/">JS - 01.01 - Variables</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.02-values-and-types/">JS - 01.02 - Values and Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.03-number-types/">JS - 01.03 - Number Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.04-number-methods/">JS - 01.04 - Number Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.05-string-type/">JS - 01.05 - String Type</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.06-string-methods/">JS - 01.06 - String Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.07-modifying-string/">JS - 01.07 - Modifying String</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.08-boolean-type/">JS - 01.08 - Boolean Type</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.09-operators/">JS - 01.09 - Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.10-auto-type-conversions/">JS - 01.10 - Auto Type Conversions</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Control Flow</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Conditionals</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.01-if-else/">JS - 02.01 - if, else</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.02-switch-case/">JS - 02.02 - switch-case</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.03-ternary-operator/">JS - 02.03 - Ternary Operator</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.04-logical-operators/">JS - 02.04 - Logical Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.05-short-circuiting/">JS - 02.05 - Short Circuiting</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Loops</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.11-do-while-loop/">JS - 02.11 - do-while Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.12-for-loop/">JS - 02.12 - for Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.13-for-of-loop/">JS - 02.13 - for-of Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.14-for-in-loop/">JS - 02.14 - for-in Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.15-break-continue-label/">JS - 02.15 - break-continue-label</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.16-iterables/">JS - 02.16 - Iterables</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Functions</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.01-function/">JS - 03.01 - Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.02-defining-function/">JS - 03.02 - Defining Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.03-arrow-function/">JS - 03.03 - Arrow Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.04-scope-of-variable/">JS - 03.04 - Scope of Variable</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.05-parameters-arguments/">JS - 03.05 - Parameters &amp; Arguments</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.06-return-recursion-call-stack/">JS - 03.06 - Return, Recursion, Call Stack</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.07-scheduling/">JS - 03.07 - Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.08-decorators/">JS - 03.08 - Decorators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.09-function-object/">JS - 03.09 - Function Object</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Objects</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.01-object/">JS - 04.01 - Object</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.02-object-properties/">JS - 04.02 - Object Properties</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.03-cloning-object/">JS - 04.03 - Cloning Object</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.04-object.keys/">JS - 04.04 - Object.keys()</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.05-methods-this-chaining/">JS - 04.05 - Methods, this, Chaining</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.06-constructor-new/">JS - 04.06 - Constructor new</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Arrays</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.01-array/">JS - 05.01 - Array</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.02-array-methods/">JS - 05.02 - Array Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.03-filter-method/">JS - 05.03 - Filter Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.04-map-method/">JS - 05.04 - Map Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.05-reduce-method/">JS - 05.05 - Reduce Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.06-sort-method/">JS - 05.06 - Sort Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.07-rest-spread/">JS - 05.07 - Rest &amp; Spread</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/">JavaScript DOM Manipulation</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>HTML &amp; CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>HTML</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-01-boiler-plate/">HTML - 01 - Boiler Plate</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-02-texts-lists/">HTML - 02 - Texts &amp; Lists</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-03-links-images/">HTML - 03 - Links &amp; Images</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-04-input-types/">HTML - 04 - Input Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-05-button/">HTML - 05 - Button</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-06-dom-events/">HTML - 06 - DOM Events</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-01-selectors/">CSS - 01 -Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-02-multiple-selecors/">CSS - 02 - Multiple Selecors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-03-declaration/">CSS - 03 - Declaration</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-04-adding-css/">CSS - 04 - Adding CSS</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-05-box-model/">CSS - 05 - Box Model</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-06-flexbox/">CSS - 06 - Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-07-flex-flexibility/">CSS - 07 - Flex Flexibility</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-08-axes-in-flexbox/">CSS - 08 - Axes in Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-09-utility-class-inheritance/">CSS - 09 - Utility Class &amp; Inheritance</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>CSS Reference</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css_resource/css-04.1-size-units/">CSS - 04.1 - Size Units</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css_resource/css-04.2-color-values/">CSS - 04.2 - Color Values</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Tools &amp; Accesories</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/tools/obsidian/">Obsidian</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/vs-code/">VS Code</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/git-github/">Git &amp; Github</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Linux - Bash &amp; OS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Linux OS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-01-linux-kernel/">Linux OS - 01 - Linux Kernel</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-02-forms-of-process-management/">Linux OS - 02 - Forms of Process Management</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-03-system-resources/">Linux OS - 03 System Resources</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Linx Bash</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-01-basics/">Bash - 01 - Basics</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-02-features/">Bash - 02 - Features</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-03-help-pages/">Bash - 03 - help pages</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-04-variables-and-aliases/">Bash - 04 - Variables and Aliases</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-05-listing-files/">Bash - 05 - Listing Files</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-06-environment-and-subshell/">Bash - 06 - Environment and Subshell</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-08-basic-file-commands/">Bash - 08 - Basic File Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-07-storage-terminology-in-linux/">Bash - 07 - Storage Terminology in Linux</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-08.1-bc-and-date/">Bash - 08.1 - bc and date</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-09-file-movement-and-copy-commands/">Bash - 09 - File Movement and Copy Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-10-file-viewing-and-editing-commands/">Bash - 10 - File Viewing and Editing Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-11-file-permissions/">Bash - 11 - File Permissions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-12-hard-and-soft-links/">Bash - 12 - Hard and Soft Links</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13-regular-expressions/">Bash - 13 - Regular Expressions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13.1-regex-expanded/">Bash - 13.1 - regex Expanded</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13.2-regex-matching/">Bash - 13.2 - regex Matching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-14-file-searching/">Bash - 14 - File Searching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-15-neovim/">Bash - 15 - Neovim</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-16-egrep/">Bash - 16 - egrep</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-17-sed/">Bash - 17 - sed</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open open>
+      <summary>Operating System Concepts</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open open>
+      <summary>OS - 01 - Operating Systems Introduction</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c01_introduction/os-1.1-operating-systems-introduction/">OS 1.1 - Operating Systems Introduction</a>
+  </li>
+
+  <li class="active" >
+      <a aria-current="page" href="/personal-site/docs/os/c01_introduction/os-1.5-os-operations/">OS 1.5 - OS Operations</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c01_introduction/os-1.11-computing-environments/">OS 1.11 - Computing Environments</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+		</div>
+		
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="page-links">
+  <h3>On this page</h3>
+    <nav id="toc">
+  <ul>
+    <li><a href="#interrupt-driven-systems"><strong>Interrupt-Driven Systems</strong></a>
+      <ul>
+        <li><a href="#interrupts"><strong>Interrupts</strong></a></li>
+        <li><a href="#interrupt-service-routine"><strong>Interrupt Service Routine</strong></a></li>
+        <li><a href="#interrupt-vs-trap"><strong>Interrupt vs. Trap</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#151-dual-mode-and-multi-mode-operation"><strong>1.5.1 Dual-Mode and Multi-Mode Operation</strong></a>
+      <ul>
+        <li><a href="#user-mode-vs-kernel-mode"><strong>User Mode vs Kernel Mode</strong></a></li>
+        <li><a href="#multi-mode-operation"><strong>Multi-Mode Operation</strong></a>
+          <ul>
+            <li><a href="#mode-transition-and-control-flow"><strong>Mode Transition and Control Flow</strong></a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#system-calls"><strong>System Calls</strong></a>
+      <ul>
+        <li>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+        <li><a href="#preventing-illegal-execution"><strong>Preventing Illegal Execution</strong></a></li>
+        <li><a href="#152-timer"><strong>1.5.2 Timer</strong></a>
+          <ul>
+            <li><a href="#timer-usage-example"><strong>Timer Usage Example</strong></a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+			<h1>OS 1.5 - OS Operations</h1>
+			
+			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
+				<details>
+    <summary>On this page</summary>
+    <div class="page-links">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#interrupt-driven-systems"><strong>Interrupt-Driven Systems</strong></a>
+      <ul>
+        <li><a href="#interrupts"><strong>Interrupts</strong></a></li>
+        <li><a href="#interrupt-service-routine"><strong>Interrupt Service Routine</strong></a></li>
+        <li><a href="#interrupt-vs-trap"><strong>Interrupt vs. Trap</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#151-dual-mode-and-multi-mode-operation"><strong>1.5.1 Dual-Mode and Multi-Mode Operation</strong></a>
+      <ul>
+        <li><a href="#user-mode-vs-kernel-mode"><strong>User Mode vs Kernel Mode</strong></a></li>
+        <li><a href="#multi-mode-operation"><strong>Multi-Mode Operation</strong></a>
+          <ul>
+            <li><a href="#mode-transition-and-control-flow"><strong>Mode Transition and Control Flow</strong></a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#system-calls"><strong>System Calls</strong></a>
+      <ul>
+        <li>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+        <li><a href="#preventing-illegal-execution"><strong>Preventing Illegal Execution</strong></a></li>
+        <li><a href="#152-timer"><strong>1.5.2 Timer</strong></a>
+          <ul>
+            <li><a href="#timer-usage-example"><strong>Timer Usage Example</strong></a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  </details>
+
+			</nav>
+			<p><strong>Interrupts, System Calls, and Modes of Operation</strong></p>
+<h2 id="interrupt-driven-systems"><strong>Interrupt-Driven Systems</strong><a href="#interrupt-driven-systems" class="anchor" aria-hidden="true">#</a> </h2>
+<p>Modern Operating Systems are <strong>interrupt-driven</strong>, meaning they rely on <strong>interrupts</strong> to perform tasks. If there are no I/O devices to service or no user requests, the OS remains idle, waiting for events to occur.</p>
+<h3 id="interrupts"><strong>Interrupts</strong><a href="#interrupts" class="anchor" aria-hidden="true">#</a> </h3>
+<p>An <strong>interrupt</strong> is a signal to the processor indicating that an event has occurred, prompting the OS to take specific actions.<br>
+A <strong>trap</strong> (or <strong>exception</strong>) is a software-generated interrupt triggered by errors (e.g., division by zero, invalid memory access) or by a user program requesting an operating system service.</p>
+<h3 id="interrupt-service-routine"><strong>Interrupt Service Routine</strong><a href="#interrupt-service-routine" class="anchor" aria-hidden="true">#</a> </h3>
+<p>For each type of interrupt, the OS contains specific code that determines the appropriate action. The OS uses an <strong>Interrupt Service Routine (ISR)</strong> to handle interrupts when they occur.</p>
+<p>Since both the OS and users share the hardware and software resources, any error in a user program should only affect that particular program, not the entire system. However, issues such as infinite loops or erroneous programs modifying data from other programs can cause system-wide problems.</p>
+<blockquote>
+<p><strong>Note:</strong> A properly designed OS ensures that a faulty or malicious program does not negatively affect other running programs or the OS itself.</p>
+</blockquote>
+<hr>
+<h3 id="interrupt-vs-trap"><strong>Interrupt vs. Trap</strong><a href="#interrupt-vs-trap" class="anchor" aria-hidden="true">#</a> </h3>
+<blockquote>
+<p><strong>Question:</strong> What is the difference between a <strong>trap</strong> and an <strong>interrupt</strong>?</p>
+<p>Both <strong>traps</strong> and <strong>interrupts</strong> are mechanisms that allow the operating system to take control of the processor, but they are triggered in different ways and serve different purposes:</p>
+<p>A <strong>trap</strong> is a software-generated interrupt, typically triggered by a user program requesting a service or due to errors, while <strong>interrupts</strong> can be caused by external events, such as hardware I/O requests.</p>
+<p>While <strong>interrupts</strong> are typically hardware-driven and serve external events, <strong>traps</strong> are software-driven, usually related to program errors or service requests. Both mechanisms transfer control to the OS, but <strong>privileged instructions</strong> are used to prevent unauthorized programs from interfering with critical system operations.</p>
+</blockquote>
+<ol>
+<li>
+<p><strong>Interrupt</strong>:</p>
+<ul>
+<li><strong>Cause</strong>: Interrupts are typically <strong>hardware-driven</strong> events that occur asynchronously. These can be triggered by external hardware devices (such as I/O devices) that need the processor&rsquo;s attention (e.g., when input/output operations are completed, or a timer has expired).</li>
+<li><strong>Function</strong>: Interrupts notify the processor that it must temporarily stop executing the current instructions to handle an external event. After the interrupt is serviced, the processor resumes its previous task.</li>
+<li><strong>Example</strong>: A keyboard press, network packet arrival, or disk I/O completion.</li>
+</ul>
+</li>
+<li>
+<p><strong>Trap (or Exception)</strong>:</p>
+<ul>
+<li><strong>Cause</strong>: A <strong>trap</strong> (or <strong>exception</strong>) is <strong>software-generated</strong> and occurs synchronously. It is usually caused by an event that arises during program execution, such as an error or a system call (where a program requests an OS service).</li>
+<li><strong>Function</strong>: Traps are triggered by <strong>program execution</strong> and can indicate issues like errors or a specific request for operating system services. They often signal that a process needs special handling from the OS (e.g., an invalid memory access or division by zero).</li>
+<li><strong>Example</strong>: A program attempting to divide by zero or access invalid memory.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Interrupts</strong>: These are managed by the OS, which often includes <strong>privileged instructions</strong> for interrupt handling (e.g., enabling or disabling interrupts). Interrupts are generally not allowed to be triggered by user programs directly.</p>
+<p><strong>Traps</strong>: User programs can trigger a trap (e.g., by making a system call), but they cannot directly trigger interrupts. The OS provides specific instructions to handle these, and <strong>privileged instructions</strong> are restricted to the kernel to prevent misuse by user applications.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Feature</th>
+          <th><strong>Interrupt</strong></th>
+          <th><strong>Trap (Exception)</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Trigger</strong></td>
+          <td>Hardware event (asynchronous)</td>
+          <td>Software event (synchronous)</td>
+      </tr>
+      <tr>
+          <td><strong>Cause</strong></td>
+          <td>External devices (I/O, timer, etc.)</td>
+          <td>Program errors or system calls (e.g., divide by zero, invalid memory access)</td>
+      </tr>
+      <tr>
+          <td><strong>Control Flow</strong></td>
+          <td>Control is transferred to the OS immediately to handle the event</td>
+          <td>Control is transferred to the OS by the program itself (typically via a system call or error)</td>
+      </tr>
+      <tr>
+          <td><strong>Handling</strong></td>
+          <td>Typically involves service routines for external hardware management</td>
+          <td>Involves error handling or system service routines</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="151-dual-mode-and-multi-mode-operation"><strong>1.5.1 Dual-Mode and Multi-Mode Operation</strong><a href="#151-dual-mode-and-multi-mode-operation" class="anchor" aria-hidden="true">#</a> </h2>
+<h3 id="user-mode-vs-kernel-mode"><strong>User Mode vs Kernel Mode</strong><a href="#user-mode-vs-kernel-mode" class="anchor" aria-hidden="true">#</a> </h3>
+<p>To protect the OS from errant user programs and vice versa, the OS operates in two main modes: <strong>User Mode</strong> and <strong>Kernel Mode</strong> (also called <strong>system mode</strong>, <strong>privileged mode</strong>, or <strong>supervisor mode</strong>).</p>
+<ul>
+<li><strong>User Mode (1)</strong>: The mode in which user applications run.</li>
+<li><strong>Kernel Mode (0)</strong>: The privileged mode in which the OS operates and can execute sensitive instructions.</li>
+</ul>
+<p>A <strong>mode bit</strong> is added to the CPU to indicate the current mode of operation. This dual-mode operation helps protect the OS by restricting certain instructions, called <strong>privileged instructions</strong>, to <strong>Kernel Mode</strong>. These privileged instructions may include tasks like I/O control, interrupt management, and timer management.</p>
+<blockquote>
+<p><strong>Examples of privileged instructions</strong>:</p>
+<ul>
+<li>Switching between modes (User to Kernel or Kernel to User)</li>
+<li>I/O control</li>
+<li>Timer management</li>
+<li>Interrupt management</li>
+</ul>
+</blockquote>
+<p>[image for transition from user mode to kernel mode]</p>
+<hr>
+<h3 id="multi-mode-operation"><strong>Multi-Mode Operation</strong><a href="#multi-mode-operation" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Some CPU&rsquo;s support more than two modes of operation.<br>
+For example, systems supporting <strong>virtualization</strong> may have a mode for the <strong>Virtual Machine Manager (VMM)</strong> that has more privileges than user programs to create virtual machines and to change the state of CPU but fewer privileges than the Kernel.</p>
+<blockquote>
+<p><strong>Note:</strong> CPU&rsquo;s like the Intel 64 family support <strong>privilege levels</strong> for virtualization, but they do not have a separate mode specifically for virtualization.</p>
+</blockquote>
+<hr>
+<h4 id="mode-transition-and-control-flow"><strong>Mode Transition and Control Flow</strong><a href="#mode-transition-and-control-flow" class="anchor" aria-hidden="true">#</a> </h4>
+<p>At system startup, the hardware begins in <strong>Kernel Mode</strong>. As the OS loads, it switches to <strong>User Mode</strong> to run applications. The OS switches back to <strong>Kernel Mode</strong> when responding to system calls, interrupts, or traps. Before passing the control to a user program, the system always switches to user mode.</p>
+<ol>
+<li><strong>Boot time</strong>: The system starts in <strong>Kernel Mode</strong>.</li>
+<li><strong>User applications</strong>: When the OS loads user applications, it switches to <strong>User Mode</strong>.</li>
+<li><strong>System Call/Interrupt/Trap</strong>: When a user application requests OS services or an error occurs, the system switches to <strong>Kernel Mode</strong> to process the request or handle the issue.</li>
+<li><strong>Return to User Mode</strong>: Once the OS has completed the task, it returns to <strong>User Mode</strong> to resume the user application.</li>
+</ol>
+<hr>
+<h2 id="system-calls"><strong>System Calls</strong><a href="#system-calls" class="anchor" aria-hidden="true">#</a> </h2>
+<p>A <strong>System Call</strong> is a mechanism that allows a user program to request services from the OS to perform tasks on the user program&rsquo;s behalf, typically involving privileged operations that are otherwise restricted.</p>
+<p>System calls are usually implemented as <strong>traps</strong> that transfer control to a specific location in the <strong>interrupt vector</strong>.</p>
+<h5 id="execution-of-a-system-call">Execution of a system call<a href="#execution-of-a-system-call" class="anchor" aria-hidden="true">#</a> </h5>
+<ul>
+<li>When a system call is executed, it is treated by the hardware as a <strong>software interrupt</strong>.</li>
+<li>The <strong>interrupt vector</strong> passes control to a <strong>service routine</strong> in the OS, and the system switches to <strong>Kernel Mode</strong>. (The <strong>system-call service routine</strong> is a part of the operating system. )</li>
+<li>The kernel examines the interrupting instruction to determine what system call has occurred.</li>
+<li>A parameter indicates what type of service the user program is requesting.</li>
+<li>The OS then verifies the system call parameters to be legal.</li>
+<li>Executes the requested task, and returns control to the user program.</li>
+</ul>
+<blockquote>
+<p>[!control passing] Control Flow of a System call</p>
+<ul>
+<li>Interrupt / Trap</li>
+<li>Interrupt Vector</li>
+<li>OS</li>
+<li>Service routine (System-call service routine in OS)</li>
+<li>Kernel</li>
+</ul>
+</blockquote>
+<blockquote>
+<p><strong>Example in MIPS</strong>: A specific <code>syscall</code> instruction is used to invoke a system call.</p>
+</blockquote>
+<hr>
+<h3 id="preventing-illegal-execution"><strong>Preventing Illegal Execution</strong><a href="#preventing-illegal-execution" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Once hardware protection is in place, it detects errors that violate modes.</p>
+<p>When the system is in <strong>Kernel Mode</strong>, it can detect errors that violate the operating modes, such as illegal instruction execution or unauthorized memory access. These errors are handled by the OS:</p>
+<ul>
+<li>If a user program attempts to execute an illegal instruction or access unauthorized memory which is not in the user&rsquo;s address space, the hardware <strong>traps</strong> to the OS.</li>
+<li>The OS handles the error, typically terminating the program abnormally and providing an error message.</li>
+<li>The system may also generate a <strong>memory dump</strong> for debugging purposes, which is saved to a file for analysis.</li>
+</ul>
+<blockquote>
+<p><strong>Note</strong>: The absence of hardware-supported dual-mode operation can lead to serious issues. For instance, <strong>MS-DOS</strong>, which was designed for the Intel 8088 without a mode bit, allowed user programs to overwrite the OS and access hardware directly, resulting in potential system crashes.</p>
+</blockquote>
+<hr>
+<h3 id="152-timer"><strong>1.5.2 Timer</strong><a href="#152-timer" class="anchor" aria-hidden="true">#</a> </h3>
+<p>A <strong>Timer</strong> is a critical component in the OS to maintain control over execution. It can interrupt the system after a fixed or variable period, preventing user programs from running indefinitely.</p>
+<ul>
+<li>A <strong>fixed-rate clock</strong> and a <strong>counter</strong> are used to implement a variable timer.</li>
+<li>The OS initializes the counter, and each time the clock ticks, the counter is decremented. When the counter reaches zero, an interrupt occurs.</li>
+<li>Timer interrupts ensure that a program does not run too long or gets stuck in an infinite loop and never return control to OS.</li>
+</ul>
+<h4 id="timer-usage-example"><strong>Timer Usage Example</strong><a href="#timer-usage-example" class="anchor" aria-hidden="true">#</a> </h4>
+<ul>
+<li>A program with a 7-minute limit could have its timer initialized to <strong>420</strong> (7 minutes in seconds).</li>
+<li>Each second, the counter decrements by 1, and control returns to the user program as long as the counter is positive.</li>
+<li>If the counter reaches zero, the OS terminates the program for exceeding its time limit.</li>
+</ul>
+<blockquote>
+<p><strong>Example Timer Configuration</strong>:<br>
+A 10-bit counter with a 1-millisecond clock allows for interrupts at intervals ranging from 1 millisecond to 1,024 milliseconds (1 second).</p>
+</blockquote>
+<p>Before transferring control to a user program, the OS ensures that the timer is set. If the timer interrupts, control is passed to the OS, which can either treat the interrupt as an error or extend the program&rsquo;s time.</p>
+<p>Instructions that modify the content of the timer are privileged.</p>
+<hr>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="page-nav d-flex flex-column flex-sm-row">
+	
+	<div class="card w-100">
+			<div class="card-body d-flex">
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M5 12l6 6"></path>
+						<path d="M5 12l6 -6"></path>
+				 	</svg>
+				</div>
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Prev</div>
+					<a href="/personal-site/docs/os/c01_introduction/os-1.1-operating-systems-introduction/" class="stretched-link text-reset text-decoration-none">OS 1.1 - Operating Systems Introduction</a>
+				</div>
+			</div>
+		</div>
+	<div class="m-2"></div>
+	<div class="card text-end w-100">
+			<div class="card-body d-flex justify-content-end">
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Next</div>
+					<a href="/personal-site/docs/os/c01_introduction/os-1.11-computing-environments/" class="stretched-link text-reset text-decoration-none">OS 1.11 - Computing Environments</a>
+				</div>
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M13 18l6 -6"></path>
+						<path d="M13 6l6 6"></path>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</div>
+
+			
+		</main>
+		
+	</div>
+
+      
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-lg">
+    <div class="row">
+      <div class="col-lg-8 text-center text-lg-start">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a class="text-muted" href="/personal-site/privacy/">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 text-center text-lg-end">
+        <ul class="list-inline">
+          <li class="list-inline-item">Made by <a class="text-muted" href="https://sujith-eag.github.io/personal-site/">Sujith</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+<script async
+  src="/personal-site/js/app.ec98ea736af7f8f531281a21224330da682d1dc9973423443b3d5ce8c45c6ea1.js"
+  integrity="sha256-7Jjqc2r3&#43;PUxKBohIkMw2mgtHcmXNCNEOz1c6MRcbqE=">
+</script>
+
+
+
+
+
+<script async
+  src="/personal-site/js/flexsearch.8350d2f520e131f8552ed57c1eadd05c50eccf0427267781442dd8ddf8fdcdf7.js"
+  integrity="sha256-g1DS9SDhMfhVLtV8Hq3QXFDszwQnJneBRC3Y3fj9zfc=">
+</script>
+<script async
+  src="/personal-site/js/search-modal.877cece5b6bc789456f89fa1955ccfcd8a5acdb2179e7882e292a6caa49efe68.js"
+  integrity="sha256-h3zs5ba8eJRW&#43;J&#43;hlVzPzYpazbIXnniC4pKmyqSe/mg=">
+</script>
+
+    
+  </body>
+</html>
