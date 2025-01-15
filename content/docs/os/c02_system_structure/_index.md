@@ -1,5 +1,5 @@
 ---
-title: "C02_system_structure"
+title: "Chapter 02 - System Structure"
 description: ""
 summary: ""
 date: 2025-01-12T21:13:47+05:30
