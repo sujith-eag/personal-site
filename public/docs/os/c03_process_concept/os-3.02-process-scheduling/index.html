@@ -14,9 +14,9 @@
 
 <link rel="stylesheet" href="/personal-site/main.c0e24d0bb4526375ef42a8fffa4eb23f8f782cb58ac9f07c6886fe943a0ed00e176b284d9d1a5b8e9d68a3f2f5918367e18fe55f5fde9451a8c6d3fe85342b7b.css" integrity="sha512-wOJNC7RSY3XvQqj/&#43;k6yP494LLWKyfB8aIb&#43;lDoO0A4XayhNnRpbjp1oo/L1kYNn4Y/lX1/elFGoxtP&#43;hTQrew==" crossorigin="anonymous">
 
-<noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/personal-site/docs/os/c02_system_structure/os-2.10-system-boot/">
-  <link rel="canonical" href="http://localhost:1313/personal-site/docs/os/c02_system_structure/os-2.10-system-boot/">
-<title>OS 2.10 - System Boot  |  Sujith&#39;s Library</title>
+<noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/personal-site/docs/os/c03_process_concept/os-3.02-process-scheduling/">
+  <link rel="canonical" href="http://localhost:1313/personal-site/docs/os/c03_process_concept/os-3.02-process-scheduling/">
+<title>OS 3.02 - Process Scheduling  |  Sujith&#39;s Library</title>
 <meta name="description" content="A reference site with summary of various coding topics">
 
     
@@ -44,16 +44,18 @@
       >
 <link rel="manifest" href="/personal-site/manifest.webmanifest">
 
-<meta property="og:title" content="OS 2.10 - System Boot">
-<meta property="og:description" content="Booting a computer system refers to the process of starting it up by loading the kernel into memory and initiating its execution. This procedure is vital for initializing the operating system and setting up the system for user operations.">
+<meta property="og:title" content="OS 3.02 - Process Scheduling">
+<meta property="og:description" content="The objective of multiprogramming is to ensure that some process is always running, maximizing CPU utilization.
+The goal of time-sharing systems is to switch the CPU between processes frequently enough that the user can interact with each program while it is running.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="http://localhost:1313/personal-site/docs/os/c02_system_structure/os-2.10-system-boot/"><meta property="og:image" content="http://localhost:1313/personal-site/cover.png"><meta property="article:section" content="docs">
+<meta property="og:url" content="http://localhost:1313/personal-site/docs/os/c03_process_concept/os-3.02-process-scheduling/"><meta property="og:image" content="http://localhost:1313/personal-site/cover.png"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2025-01-12T21:27:49+05:30">
 <meta property="article:modified_time" content="2025-01-12T21:27:49+05:30"><meta property="og:site_name" content="Sujith&#39;s Notes">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://localhost:1313/personal-site/cover.png"><meta name="twitter:title" content="OS 2.10 - System Boot">
-<meta name="twitter:description" content="Booting a computer system refers to the process of starting it up by loading the kernel into memory and initiating its execution. This procedure is vital for initializing the operating system and setting up the system for user operations.">
+<meta name="twitter:image" content="http://localhost:1313/personal-site/cover.png"><meta name="twitter:title" content="OS 3.02 - Process Scheduling">
+<meta name="twitter:description" content="The objective of multiprogramming is to ensure that some process is always running, maximizing CPU utilization.
+The goal of time-sharing systems is to switch the CPU between processes frequently enough that the user can interact with each program while it is running.">
 
     
     
@@ -83,13 +85,13 @@
      },
      {
        "@type": "ListItem",
-       "item": "http://localhost:1313/personal-site/docs/os/c02_system_structure/",
-       "name": "Chapter 02 System Structure",
+       "item": "",
+       "name": "C03 Process Concept",
        "position": 4
      },
      {
        "@type": "ListItem",
-       "name": "Os 2.10 System Boot",
+       "name": "Os 3.02 Process Scheduling",
        "position": 5
      }
    ]
@@ -830,7 +832,7 @@
   </li>
 
   <li>
-    <details open open>
+    <details open>
       <summary>Chapter 02 - System Structure</summary>
       <ul class="list-unstyled list-nested">
 
@@ -854,8 +856,8 @@
       <a href="/personal-site/docs/os/c02_system_structure/os-2.07-os-structure/">OS 2.07 - OS Structure</a>
   </li>
 
-  <li class="active" >
-      <a aria-current="page" href="/personal-site/docs/os/c02_system_structure/os-2.10-system-boot/">OS 2.10 - System Boot</a>
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.10-system-boot/">OS 2.10 - System Boot</a>
   </li>
       </ul>
     </details>
@@ -1703,7 +1705,7 @@
   </li>
 
   <li>
-    <details open open>
+    <details open>
       <summary>Chapter 02 - System Structure</summary>
       <ul class="list-unstyled list-nested">
 
@@ -1727,8 +1729,8 @@
       <a href="/personal-site/docs/os/c02_system_structure/os-2.07-os-structure/">OS 2.07 - OS Structure</a>
   </li>
 
-  <li class="active" >
-      <a aria-current="page" href="/personal-site/docs/os/c02_system_structure/os-2.10-system-boot/">OS 2.10 - System Boot</a>
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.10-system-boot/">OS 2.10 - System Boot</a>
   </li>
       </ul>
     </details>
@@ -1750,8 +1752,32 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#steps-in-the-boot-process">Steps in the Boot Process</a></li>
-        <li><a href="#key-concepts">Key Concepts:</a></li>
+        <li><a href="#321-scheduling-queues"><strong>3.2.1 Scheduling Queues</strong></a>
+          <ul>
+            <li><a href="#process-lifecycle-in-queues"><strong>Process Lifecycle in Queues:</strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#322-schedulers"><strong>3.2.2 Schedulers</strong></a>
+          <ul>
+            <li><a href="#types-of-schedulers"><strong>Types of Schedulers:</strong></a></li>
+            <li><a href="#types-of-processes"><strong>Types of Processes:</strong></a></li>
+            <li><a href="#differences-between-long-term-and-short-term-schedulers"><strong>Differences Between Long-Term and Short-Term Schedulers:</strong></a></li>
+            <li><a href="#medium-term-scheduler"><strong>Medium-Term Scheduler:</strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#323-context-switch"><strong>3.2.3 Context Switch</strong></a>
+          <ul>
+            <li><a href="#process-of-a-context-switch"><strong>Process of a Context Switch:</strong></a></li>
+            <li><a href="#key-points"><strong>Key Points:</strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#swapping-vs-context-switching"><strong>Swapping vs. Context Switching</strong></a>
+          <ul>
+            <li><a href="#1-purpose"><strong>1. Purpose</strong></a></li>
+            <li><a href="#2-when-it-happens"><strong>2. When It Happens</strong></a></li>
+            <li><a href="#3-impact-on-the-system"><strong>3. Impact on the System</strong></a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -1761,7 +1787,7 @@
 		</nav>
 		<main class="docs-content col-lg-11 col-xl-9">
 		
-			<h1>OS 2.10 - System Boot</h1>
+			<h1>OS 3.02 - Process Scheduling</h1>
 			
 			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
 				<details>
@@ -1771,8 +1797,32 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#steps-in-the-boot-process">Steps in the Boot Process</a></li>
-        <li><a href="#key-concepts">Key Concepts:</a></li>
+        <li><a href="#321-scheduling-queues"><strong>3.2.1 Scheduling Queues</strong></a>
+          <ul>
+            <li><a href="#process-lifecycle-in-queues"><strong>Process Lifecycle in Queues:</strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#322-schedulers"><strong>3.2.2 Schedulers</strong></a>
+          <ul>
+            <li><a href="#types-of-schedulers"><strong>Types of Schedulers:</strong></a></li>
+            <li><a href="#types-of-processes"><strong>Types of Processes:</strong></a></li>
+            <li><a href="#differences-between-long-term-and-short-term-schedulers"><strong>Differences Between Long-Term and Short-Term Schedulers:</strong></a></li>
+            <li><a href="#medium-term-scheduler"><strong>Medium-Term Scheduler:</strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#323-context-switch"><strong>3.2.3 Context Switch</strong></a>
+          <ul>
+            <li><a href="#process-of-a-context-switch"><strong>Process of a Context Switch:</strong></a></li>
+            <li><a href="#key-points"><strong>Key Points:</strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#swapping-vs-context-switching"><strong>Swapping vs. Context Switching</strong></a>
+          <ul>
+            <li><a href="#1-purpose"><strong>1. Purpose</strong></a></li>
+            <li><a href="#2-when-it-happens"><strong>2. When It Happens</strong></a></li>
+            <li><a href="#3-impact-on-the-system"><strong>3. Impact on the System</strong></a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -1781,92 +1831,202 @@
   </details>
 
 			</nav>
-			<p>Booting a computer system refers to the process of starting it up by loading the kernel into memory and initiating its execution. This procedure is vital for initializing the operating system and setting up the system for user operations.</p>
-<p>The process begins with a small piece of code called the <strong>bootstrap program</strong> or <strong>bootstrap loader</strong>. This program is responsible for finding and loading the operating system kernel into the main memory and starting its execution.</p>
-<p>Some computer systems, such as PCs, use a two-step process in which a simple bootstrap loader fetches a more complex boot program from disk, which in turn loads the kernel.</p>
+			<p>The objective of <strong>multiprogramming</strong> is to ensure that some process is always running, maximizing <strong>CPU utilization</strong>.</p>
+<p>The goal of <strong>time-sharing</strong> systems is to switch the CPU between processes frequently enough that the user can interact with each program while it is running.</p>
+<p>To achieve these objectives, the <strong>Process Scheduler</strong> selects an available process from a set of processes waiting for execution on the CPU. When there are more processes than available CPU time, some processes must wait until the processor is free to be rescheduled.</p>
 <hr>
-<h3 id="steps-in-the-boot-process">Steps in the Boot Process<a href="#steps-in-the-boot-process" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="321-scheduling-queues"><strong>3.2.1 Scheduling Queues</strong><a href="#321-scheduling-queues" class="anchor" aria-hidden="true">#</a> </h3>
+<p>When a process enters the system, it is placed in the <strong>job queue</strong>, which consists of all the processes in the system.</p>
+<ul>
+<li>
+<p><strong>Ready Queue:</strong><br>
+The processes residing in main memory, ready to execute, are placed in the <strong>ready queue</strong>, which is generally implemented as a <strong>linked list</strong>.</p>
+<ul>
+<li>The <strong>ready queue header</strong> contains pointers to the first and last <strong>PCBs</strong> (Process Control Blocks).</li>
+<li>Each <strong>PCB</strong> contains a pointer to the next <strong>PCB</strong> in the queue.</li>
+</ul>
+</li>
+<li>
+<p><strong>Device Queue:</strong><br>
+If a process requests I/O (e.g., disk access) and the device is busy, the process is placed in the <strong>device queue</strong> for that specific I/O device. Each device has its own queue.</p>
+</li>
+</ul>
+<h4 id="process-lifecycle-in-queues"><strong>Process Lifecycle in Queues:</strong><a href="#process-lifecycle-in-queues" class="anchor" aria-hidden="true">#</a> </h4>
 <ol>
 <li>
-<p><strong>Reset Event</strong>:</p>
+<p><strong>New Process:</strong></p>
 <ul>
-<li>When a computer is powered on or rebooted, the <strong>CPU</strong> receives a reset signal.</li>
-<li>The <strong>Instruction Register (IR)</strong> is loaded with a predefined memory location, and execution begins from that location.</li>
+<li>A process is initially placed in the <strong>ready queue</strong>.</li>
+<li>It waits there until it is selected for execution, or <em>dispatched</em>.</li>
 </ul>
 </li>
 <li>
-<p><strong>Initial Bootstrap Program</strong>:</p>
+<p><strong>During Execution:</strong></p>
 <ul>
-<li>The initial bootstrap program is stored in <strong>read-only memory (ROM)</strong> because at this stage, <strong>RAM</strong> is in an unknown state. ROM is used because it doesn&rsquo;t need initialization and is not easily infected by viruses.</li>
-<li>The bootstrap program is typically stored in a small, non-volatile storage like <strong>ROM</strong> or <strong>firmware</strong>.</li>
+<li>The process may:
+<ul>
+<li>Issue an I/O request and move to the <strong>I/O queue</strong>.</li>
+<li>Create a child process and wait for the child’s termination.</li>
+<li>Be removed forcibly from the CPU due to an interrupt and moved back to the <strong>ready queue</strong>.</li>
 </ul>
-</li>
-<li>
-<p><strong>Diagnostics and Initialization</strong>:</p>
-<ul>
-<li>The bootstrap program usually runs system diagnostics to check the machine’s hardware and ensure that all components are functioning properly.</li>
-<li>If diagnostics pass, the program continues to initialize the system, including the CPU registers, device controllers, and memory contents.</li>
-<li>Eventually, the program begins loading the <strong>operating system (OS)</strong>.</li>
-</ul>
-</li>
-<li>
-<p><strong>Firmware and Read-Only Memory (ROM)</strong>:</p>
-<ul>
-<li>
-<p>All forms of ROM are also known as ﬁrmware, since their characteristics fall somewhere between those of hardware and those of software.</p>
-</li>
-<li>
-<p>Some systems, especially simpler ones (like cell phones, tablets, or game consoles), may store the entire operating system in <strong>ROM</strong>. This is often done for simplicity and ruggedness.</p>
-</li>
-<li>
-<p>However, <strong>firmware</strong> (a combination of hardware and software) comes with limitations:</p>
-<ul>
-<li><strong>Speed</strong>: Executing code in ROM is slower than executing code in <strong>RAM</strong>.</li>
-<li><strong>Flexibility</strong>: Changing the firmware requires replacing the ROM hardware, which can be costly. To address this, <strong>EPROM (Erasable Programmable Read-Only Memory)</strong> is used, allowing the code to be rewritten.</li>
-</ul>
-</li>
-<li>
-<p>While firmware is durable, it typically provides only small amounts of storage and slower execution compared to RAM.</p>
 </li>
 </ul>
 </li>
 <li>
-<p><strong>Bootloader on Disk for Larger OS</strong>:</p>
+<p><strong>Cycle Continuation:</strong></p>
 <ul>
-<li>For larger or more dynamic operating systems (like <strong>Windows</strong>, <strong>macOS</strong>, or <strong>UNIX</strong>), the <strong>bootstrap loader</strong> is stored in <strong>firmware</strong>, but the operating system itself resides on a <strong>disk</strong>.</li>
-<li>The bootstrap program stored in the firmware runs diagnostics and reads a small <strong>boot block</strong> (often from the first block on disk).</li>
-<li>This boot block contains enough code to load the remaining bootstrap program into memory.</li>
-</ul>
-<p>The boot block itself is typically small and only contains instructions to load the remainder of the <strong>bootstrap program</strong> from a specific address on the disk.</p>
-</li>
-<li>
-<p><strong>Loading the Operating System</strong>:</p>
-<ul>
-<li>Once the bootstrap program has been loaded into memory, it traverses the file system on disk to find and load the kernel of the operating system.</li>
-<li>After locating the kernel, it is loaded into memory and execution starts, and the system begins to <strong>run</strong> the operating system.</li>
+<li>The process moves from the <strong>waiting state</strong> to the <strong>ready state</strong> when I/O or other events complete and is placed back into the <strong>ready queue</strong>.</li>
+<li>This cycle continues until the process is <strong>terminated</strong>, at which point it is removed from all queues, and its <strong>PCB</strong> and resources are deallocated.</li>
 </ul>
 </li>
 </ol>
-<blockquote>
-<p><strong>GRUB (Grand Unified Bootloader)</strong>:<br>
-One of the most widely used bootstrap programs for Linux systems is <strong>GRUB</strong>, which helps manage the boot process and allows users to choose between different operating systems or kernel versions at startup.</p>
-</blockquote>
-<blockquote>
-<p><strong>Boot Disk</strong>:<br>
-The disk that contains the boot partition and the operating system is often referred to as the <strong>boot disk</strong> or <strong>system disk</strong>.<br>
-This disk is critical for loading the operating system during the boot process.</p>
-</blockquote>
 <hr>
-<h3 id="key-concepts">Key Concepts:<a href="#key-concepts" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="322-schedulers"><strong>3.2.2 Schedulers</strong><a href="#322-schedulers" class="anchor" aria-hidden="true">#</a> </h3>
+<p>A process moves between various <strong>scheduling queues</strong> throughout its lifetime, and the <strong>Operating System (OS)</strong> must select processes from these queues for execution.</p>
+<h4 id="types-of-schedulers"><strong>Types of Schedulers:</strong><a href="#types-of-schedulers" class="anchor" aria-hidden="true">#</a> </h4>
+<ol>
+<li>
+<p><strong>Long-Term Scheduler (Job Scheduler):</strong></p>
 <ul>
-<li><strong>Bootstrap Loader</strong>: A small program responsible for loading the operating system kernel into memory.</li>
-<li><strong>ROM (Read-Only Memory)</strong>: Non-volatile memory used for storing the initial bootstrap program. It is essential for starting the system because it doesn&rsquo;t require initialization like RAM.</li>
-<li><strong>Firmware</strong>: Code stored in ROM or EPROM that can control hardware and run basic system functions.</li>
-<li><strong>Boot Block</strong>: A small, fixed location on the disk that contains the first part of the bootstrap program.</li>
-<li><strong>Boot Disk/System Disk</strong>: The disk that holds the operating system and contains the boot partition necessary for system startup.</li>
-<li><strong>GRUB (Grand Unified Bootloader)</strong>: A popular bootloader used in Linux systems for loading and managing multiple operating systems.</li>
+<li>Selects processes from a pool and loads them into memory for execution.</li>
+<li>Controls the <strong>degree of multiprogramming</strong> (the number of processes in memory).</li>
+</ul>
+</li>
+<li>
+<p><strong>Short-Term Scheduler (CPU Scheduler):</strong></p>
+<ul>
+<li>Selects from the <strong>ready queue</strong> and allocates CPU time to one of the processes.</li>
+<li><strong>Frequency of execution:</strong> It is very fast as it must select a new process frequently due to the short time between executions.</li>
+</ul>
+</li>
+</ol>
+<h4 id="types-of-processes"><strong>Types of Processes:</strong><a href="#types-of-processes" class="anchor" aria-hidden="true">#</a> </h4>
+<ul>
+<li>
+<p><strong>I/O Bound Processes:</strong></p>
+<ul>
+<li>Spend more time performing <strong>I/O</strong> operations than computations.</li>
+</ul>
+</li>
+<li>
+<p><strong>CPU Bound Processes:</strong></p>
+<ul>
+<li>Perform infrequent <strong>I/O</strong> operations and spend more time on computations.</li>
+</ul>
+</li>
+</ul>
+<p>For better system performance, a combination of <strong>I/O-bound</strong> and <strong>CPU-bound</strong> processes should be selected (Process Mix).</p>
+<h4 id="differences-between-long-term-and-short-term-schedulers"><strong>Differences Between Long-Term and Short-Term Schedulers:</strong><a href="#differences-between-long-term-and-short-term-schedulers" class="anchor" aria-hidden="true">#</a> </h4>
+<ul>
+<li>
+<p><strong>Short-Term Scheduler:</strong></p>
+<ul>
+<li>Handles <strong>CPU-bound</strong> processes and performs scheduling frequently to ensure minimal wastage of CPU time.</li>
+</ul>
+</li>
+<li>
+<p><strong>Long-Term Scheduler:</strong></p>
+<ul>
+<li>Manages the mix of <strong>CPU-bound</strong> and <strong>I/O-bound</strong> processes.</li>
+<li>A balance between these types ensures that the <strong>ready queue</strong> does not empty (if too many I/O-bound processes) and CPU scheduler will have nothing to do or the <strong>I/O waiting queues</strong> remain empty (if too many CPU-bound processes) causing the I/O devices to go unused.</li>
+</ul>
+</li>
 </ul>
 <hr>
+<h4 id="medium-term-scheduler"><strong>Medium-Term Scheduler:</strong><a href="#medium-term-scheduler" class="anchor" aria-hidden="true">#</a> </h4>
+<p>In <strong>time-sharing systems</strong> (like UNIX and Windows), there may be an additional <strong>medium-term scheduler</strong>.</p>
+<ul>
+<li><strong>Purpose of Medium-Term Scheduling:</strong>
+<ul>
+<li>It is sometimes advantageous to remove processes from memory to reduce the level of multiprogramming.</li>
+<li>The process can later be reintroduced into memory and resume from where it left off. This is called <strong>swapping</strong>.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Swapping</strong> helps manage system load and memory usage, particularly when memory requirements exceed available resources.</p>
+<hr>
+<h3 id="323-context-switch"><strong>3.2.3 Context Switch</strong><a href="#323-context-switch" class="anchor" aria-hidden="true">#</a> </h3>
+<p>A <strong>context switch</strong> occurs when an interrupt happens, and the system must save the current process&rsquo;s state and load the state of another process to resume its execution.</p>
+<h4 id="process-of-a-context-switch"><strong>Process of a Context Switch:</strong><a href="#process-of-a-context-switch" class="anchor" aria-hidden="true">#</a> </h4>
+<ol>
+<li>
+<p><strong>Context Saving:</strong></p>
+<ul>
+<li>The <strong>OS saves the current process&rsquo;s context</strong> (e.g., <strong>CPU registers</strong>, <strong>process state</strong>, and <strong>memory management information</strong>) in its <strong>Process Control Block (PCB)</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Context Restore:</strong></p>
+<ul>
+<li>The OS loads the saved context of the <strong>next process</strong> to execute, restoring its state (e.g., CPU registers, program counter).</li>
+</ul>
+</li>
+</ol>
+<h4 id="key-points"><strong>Key Points:</strong><a href="#key-points" class="anchor" aria-hidden="true">#</a> </h4>
+<ul>
+<li>
+<p><strong>Overhead:</strong><br>
+A <strong>context switch</strong> takes time and doesn&rsquo;t perform useful work while switching, so adding overhead to the system.</p>
+</li>
+<li>
+<p><strong>Speed Variation:</strong><br>
+The time taken for a context switch can vary based on system factors, like memory speed and the number of registers involved.</p>
+</li>
+</ul>
+<hr>
+<h3 id="swapping-vs-context-switching"><strong>Swapping vs. Context Switching</strong><a href="#swapping-vs-context-switching" class="anchor" aria-hidden="true">#</a> </h3>
+<h4 id="1-purpose"><strong>1. Purpose</strong><a href="#1-purpose" class="anchor" aria-hidden="true">#</a> </h4>
+<ul>
+<li>
+<p>The primary purpose of swapping is to manage <strong>memory</strong> and <strong>multiprogramming</strong>. It involves temporarily removing a process from <strong>main memory</strong> to free up space, and then later restoring it when needed. This is typically done when the system is overloaded or when the available memory is insufficient to handle all the running processes.</p>
+</li>
+<li>
+<p><strong>Swapping</strong> is about managing memory by moving processes between RAM and disk. It&rsquo;s done when the system runs out of memory or needs to adjust the number of processes in memory.</p>
+</li>
+<li>
+<p><strong>Context Switching:</strong></p>
+</li>
+<li>
+<p>The purpose of context switching is to <strong>switch between processes</strong> during execution, so that the CPU can allocate time to multiple processes in a time-sharing environment. It is a fundamental operation in multitasking systems, enabling the CPU to switch between processes without having to halt the system completely.</p>
+</li>
+<li>
+<p><strong>Context Switching</strong> is about switching the CPU’s focus between processes. It occurs frequently as the CPU moves between tasks, saving and restoring the state of processes.</p>
+</li>
+</ul>
+<h4 id="2-when-it-happens"><strong>2. When It Happens</strong><a href="#2-when-it-happens" class="anchor" aria-hidden="true">#</a> </h4>
+<ul>
+<li>
+<p><strong>Swapping:</strong></p>
+<ul>
+<li>Swapping occurs when a process is removed from <strong>memory</strong> and stored on <strong>disk</strong> to make space for other processes in memory. This generally happens when the system is running out of memory or when the degree of multiprogramming needs to be adjusted.</li>
+<li>Swapping occurs less frequently and only when necessary due to memory constraints or system load management. It&rsquo;s usually a <strong>long-term operation</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Context Switching:</strong></p>
+<ul>
+<li>Context switching happens during the <strong>execution</strong> of processes, typically due to an <strong>interrupt</strong>, a <strong>system call</strong>, or when the process is voluntarily suspended. It involves saving the state of the currently running process and restoring the state of the next process to be executed by the CPU.</li>
+<li>Context switching happens <strong>frequently</strong> during the execution of processes, especially in time-sharing systems. It occurs <strong>many times per second</strong> as the CPU switches between active processes.</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-impact-on-the-system"><strong>3. Impact on the System</strong><a href="#3-impact-on-the-system" class="anchor" aria-hidden="true">#</a> </h4>
+<ul>
+<li>
+<p><strong>Swapping:</strong></p>
+<ul>
+<li>Swapping is a <strong>high-cost operation</strong> in terms of time and resources because it involves transferring a process between main memory and disk. It is relatively slower than context switching due to the slower speed of disk compared to RAM.</li>
+<li>Involves <strong>main memory</strong> and <strong>disk</strong>. A process is moved from <strong>RAM to disk</strong> and back to <strong>RAM</strong> when it needs to resume execution.</li>
+</ul>
+</li>
+<li>
+<p><strong>Context Switching:</strong></p>
+<ul>
+<li>Context switching is much <strong>faster</strong> than swapping, but still incurs overhead because the system has to save and load the process state (e.g., CPU registers, program counter, etc.) between switches. The overhead is minimal but significant when switching frequently.</li>
+<li>Involves <strong>CPU state</strong> (registers, program counter, etc.) but does not involve moving a process between memory and disk. The process remains in memory throughout the switch.</li>
+</ul>
+</li>
+</ul>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				</div>
@@ -1884,7 +2044,7 @@ This disk is critical for loading the operating system during the boot process.<
 				</div>
 				<div class="d-flex flex-column">
 					<div class="text-body-secondary">Prev</div>
-					<a href="/personal-site/docs/os/c02_system_structure/os-2.07-os-structure/" class="stretched-link text-reset text-decoration-none">OS 2.07 - OS Structure</a>
+					<a href="/personal-site/docs/os/c03_process_concept/os-3.01-process-concept/" class="stretched-link text-reset text-decoration-none">OS 3.01 - Process Concept</a>
 				</div>
 			</div>
 		</div>
@@ -1893,7 +2053,7 @@ This disk is critical for loading the operating system during the boot process.<
 			<div class="card-body d-flex justify-content-end">
 				<div class="d-flex flex-column">
 					<div class="text-body-secondary">Next</div>
-					<a href="/personal-site/docs/os/c03_process_concept/os-3.01-process-concept/" class="stretched-link text-reset text-decoration-none">OS 3.01 - Process Concept</a>
+					<a href="/personal-site/docs/os/c03_process_concept/os-3.04-inter-process-communication/" class="stretched-link text-reset text-decoration-none">OS 3.04 - Inter-Process Communication</a>
 				</div>
 				<div class="d-flex flex-column justify-content-center">
 					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">

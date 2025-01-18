@@ -14,9 +14,9 @@
 
 <link rel="stylesheet" href="/personal-site/main.c0e24d0bb4526375ef42a8fffa4eb23f8f782cb58ac9f07c6886fe943a0ed00e176b284d9d1a5b8e9d68a3f2f5918367e18fe55f5fde9451a8c6d3fe85342b7b.css" integrity="sha512-wOJNC7RSY3XvQqj/&#43;k6yP494LLWKyfB8aIb&#43;lDoO0A4XayhNnRpbjp1oo/L1kYNn4Y/lX1/elFGoxtP&#43;hTQrew==" crossorigin="anonymous">
 
-<noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/personal-site/docs/os/c02_system_structure/os-2.10-system-boot/">
-  <link rel="canonical" href="http://localhost:1313/personal-site/docs/os/c02_system_structure/os-2.10-system-boot/">
-<title>OS 2.10 - System Boot  |  Sujith&#39;s Library</title>
+<noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/personal-site/docs/os/c03_process_concept/os-3.04-inter-process-communication/">
+  <link rel="canonical" href="http://localhost:1313/personal-site/docs/os/c03_process_concept/os-3.04-inter-process-communication/">
+<title>OS 3.04 - Inter-Process Communication  |  Sujith&#39;s Library</title>
 <meta name="description" content="A reference site with summary of various coding topics">
 
     
@@ -44,16 +44,24 @@
       >
 <link rel="manifest" href="/personal-site/manifest.webmanifest">
 
-<meta property="og:title" content="OS 2.10 - System Boot">
-<meta property="og:description" content="Booting a computer system refers to the process of starting it up by loading the kernel into memory and initiating its execution. This procedure is vital for initializing the operating system and setting up the system for user operations.">
+<meta property="og:title" content="OS 3.04 - Inter-Process Communication">
+<meta property="og:description" content="Processes executing concurrently in an operating system can be either independent or cooperating.
+
+
+Independent Process:
+A process that cannot affect or be affected by other processes. These processes do not share data with others.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="http://localhost:1313/personal-site/docs/os/c02_system_structure/os-2.10-system-boot/"><meta property="og:image" content="http://localhost:1313/personal-site/cover.png"><meta property="article:section" content="docs">
+<meta property="og:url" content="http://localhost:1313/personal-site/docs/os/c03_process_concept/os-3.04-inter-process-communication/"><meta property="og:image" content="http://localhost:1313/personal-site/cover.png"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2025-01-12T21:27:49+05:30">
 <meta property="article:modified_time" content="2025-01-12T21:27:49+05:30"><meta property="og:site_name" content="Sujith&#39;s Notes">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://localhost:1313/personal-site/cover.png"><meta name="twitter:title" content="OS 2.10 - System Boot">
-<meta name="twitter:description" content="Booting a computer system refers to the process of starting it up by loading the kernel into memory and initiating its execution. This procedure is vital for initializing the operating system and setting up the system for user operations.">
+<meta name="twitter:image" content="http://localhost:1313/personal-site/cover.png"><meta name="twitter:title" content="OS 3.04 - Inter-Process Communication">
+<meta name="twitter:description" content="Processes executing concurrently in an operating system can be either independent or cooperating.
+
+
+Independent Process:
+A process that cannot affect or be affected by other processes. These processes do not share data with others.">
 
     
     
@@ -83,13 +91,13 @@
      },
      {
        "@type": "ListItem",
-       "item": "http://localhost:1313/personal-site/docs/os/c02_system_structure/",
-       "name": "Chapter 02 System Structure",
+       "item": "",
+       "name": "C03 Process Concept",
        "position": 4
      },
      {
        "@type": "ListItem",
-       "name": "Os 2.10 System Boot",
+       "name": "Os 3.04 Inter Process Communication",
        "position": 5
      }
    ]
@@ -830,7 +838,7 @@
   </li>
 
   <li>
-    <details open open>
+    <details open>
       <summary>Chapter 02 - System Structure</summary>
       <ul class="list-unstyled list-nested">
 
@@ -854,8 +862,8 @@
       <a href="/personal-site/docs/os/c02_system_structure/os-2.07-os-structure/">OS 2.07 - OS Structure</a>
   </li>
 
-  <li class="active" >
-      <a aria-current="page" href="/personal-site/docs/os/c02_system_structure/os-2.10-system-boot/">OS 2.10 - System Boot</a>
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.10-system-boot/">OS 2.10 - System Boot</a>
   </li>
       </ul>
     </details>
@@ -1703,7 +1711,7 @@
   </li>
 
   <li>
-    <details open open>
+    <details open>
       <summary>Chapter 02 - System Structure</summary>
       <ul class="list-unstyled list-nested">
 
@@ -1727,8 +1735,8 @@
       <a href="/personal-site/docs/os/c02_system_structure/os-2.07-os-structure/">OS 2.07 - OS Structure</a>
   </li>
 
-  <li class="active" >
-      <a aria-current="page" href="/personal-site/docs/os/c02_system_structure/os-2.10-system-boot/">OS 2.10 - System Boot</a>
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.10-system-boot/">OS 2.10 - System Boot</a>
   </li>
       </ul>
     </details>
@@ -1750,8 +1758,38 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#steps-in-the-boot-process">Steps in the Boot Process</a></li>
-        <li><a href="#key-concepts">Key Concepts:</a></li>
+        <li>
+          <ul>
+            <li><a href="#reasons-for-process-cooperation"><strong>Reasons for Process Cooperation:</strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#341-shared-memory-systems"><strong>3.4.1 Shared-Memory Systems</strong></a>
+          <ul>
+            <li><a href="#how-shared-memory-works"><strong>How Shared Memory Works:</strong></a></li>
+            <li><a href="#synchronization"><strong>Synchronization:</strong></a></li>
+            <li><a href="#synchronization-mechanism"><strong>Synchronization Mechanism:</strong></a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#342-message-passing-systems"><strong>3.4.2 Message Passing Systems</strong></a>
+      <ul>
+        <li><a href="#message-passing-operations"><strong>Message Passing Operations</strong></a></li>
+        <li><a href="#message-passing-implementation-models"><strong>Message Passing Implementation Models</strong></a></li>
+        <li><a href="#3421-naming"><strong>3.4.2.1 Naming</strong></a>
+          <ul>
+            <li><a href="#direct-communication"><strong>Direct Communication</strong></a></li>
+            <li><a href="#indirect-communication"><strong>Indirect Communication</strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#3422-synchronization"><strong>3.4.2.2 Synchronization</strong></a></li>
+        <li><a href="#3423-buffering"><strong>3.4.2.3 Buffering</strong></a>
+          <ul>
+            <li><a href="#summary-for-ipc">Summary for IPC</a></li>
+          </ul>
+        </li>
+        <li><a href="#summary-of-process-chapter"><strong>Summary of Process Chapter</strong></a></li>
+        <li><a href="#summary--for-threads"><strong>Summary  for Threads</strong></a></li>
       </ul>
     </li>
   </ul>
@@ -1761,7 +1799,7 @@
 		</nav>
 		<main class="docs-content col-lg-11 col-xl-9">
 		
-			<h1>OS 2.10 - System Boot</h1>
+			<h1>OS 3.04 - Inter-Process Communication</h1>
 			
 			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
 				<details>
@@ -1771,8 +1809,38 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#steps-in-the-boot-process">Steps in the Boot Process</a></li>
-        <li><a href="#key-concepts">Key Concepts:</a></li>
+        <li>
+          <ul>
+            <li><a href="#reasons-for-process-cooperation"><strong>Reasons for Process Cooperation:</strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#341-shared-memory-systems"><strong>3.4.1 Shared-Memory Systems</strong></a>
+          <ul>
+            <li><a href="#how-shared-memory-works"><strong>How Shared Memory Works:</strong></a></li>
+            <li><a href="#synchronization"><strong>Synchronization:</strong></a></li>
+            <li><a href="#synchronization-mechanism"><strong>Synchronization Mechanism:</strong></a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#342-message-passing-systems"><strong>3.4.2 Message Passing Systems</strong></a>
+      <ul>
+        <li><a href="#message-passing-operations"><strong>Message Passing Operations</strong></a></li>
+        <li><a href="#message-passing-implementation-models"><strong>Message Passing Implementation Models</strong></a></li>
+        <li><a href="#3421-naming"><strong>3.4.2.1 Naming</strong></a>
+          <ul>
+            <li><a href="#direct-communication"><strong>Direct Communication</strong></a></li>
+            <li><a href="#indirect-communication"><strong>Indirect Communication</strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#3422-synchronization"><strong>3.4.2.2 Synchronization</strong></a></li>
+        <li><a href="#3423-buffering"><strong>3.4.2.3 Buffering</strong></a>
+          <ul>
+            <li><a href="#summary-for-ipc">Summary for IPC</a></li>
+          </ul>
+        </li>
+        <li><a href="#summary-of-process-chapter"><strong>Summary of Process Chapter</strong></a></li>
+        <li><a href="#summary--for-threads"><strong>Summary  for Threads</strong></a></li>
       </ul>
     </li>
   </ul>
@@ -1781,90 +1849,335 @@
   </details>
 
 			</nav>
-			<p>Booting a computer system refers to the process of starting it up by loading the kernel into memory and initiating its execution. This procedure is vital for initializing the operating system and setting up the system for user operations.</p>
-<p>The process begins with a small piece of code called the <strong>bootstrap program</strong> or <strong>bootstrap loader</strong>. This program is responsible for finding and loading the operating system kernel into the main memory and starting its execution.</p>
-<p>Some computer systems, such as PCs, use a two-step process in which a simple bootstrap loader fetches a more complex boot program from disk, which in turn loads the kernel.</p>
+			<p>Processes executing concurrently in an operating system can be either <strong>independent</strong> or <strong>cooperating</strong>.</p>
+<ul>
+<li>
+<p><strong>Independent Process:</strong><br>
+A process that cannot affect or be affected by other processes. These processes do not share data with others.</p>
+</li>
+<li>
+<p><strong>Cooperating Process:</strong><br>
+A process that can be affected by or affect other processes. These processes share data and require communication to synchronize and exchange information.</p>
+</li>
+</ul>
+<h4 id="reasons-for-process-cooperation"><strong>Reasons for Process Cooperation:</strong><a href="#reasons-for-process-cooperation" class="anchor" aria-hidden="true">#</a> </h4>
+<ul>
+<li>
+<p><strong>Information Sharing:</strong><br>
+Multiple processes may need access to the same data (e.g., a shared file).</p>
+</li>
+<li>
+<p><strong>Computation Speedup:</strong><br>
+Large tasks can be broken into smaller sub-tasks to run in parallel, speeding up execution.</p>
+</li>
+<li>
+<p><strong>Modularity:</strong><br>
+A system can be constructed modularly by dividing functionality into separate processes or threads.</p>
+</li>
+<li>
+<p><strong>Convenience:</strong><br>
+Allows multiple tasks to run concurrently, improving system efficiency.</p>
+</li>
+</ul>
+<p>Cooperating processes require an <strong>Inter-Process Communication (IPC)</strong> mechanism to exchange data and synchronize their operations. The two primary IPC models are <strong>Shared Memory</strong> and <strong>Message Passing</strong>.</p>
 <hr>
-<h3 id="steps-in-the-boot-process">Steps in the Boot Process<a href="#steps-in-the-boot-process" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="341-shared-memory-systems"><strong>3.4.1 Shared-Memory Systems</strong><a href="#341-shared-memory-systems" class="anchor" aria-hidden="true">#</a> </h3>
+<p>In <strong>shared-memory systems</strong>, cooperating processes communicate by sharing a region of memory. This allows processes to exchange information by reading and writing data to the shared memory region.</p>
+<h4 id="how-shared-memory-works"><strong>How Shared Memory Works:</strong><a href="#how-shared-memory-works" class="anchor" aria-hidden="true">#</a> </h4>
+<ul>
+<li>A process creates a <strong>shared memory segment</strong> in its address space.</li>
+<li>Other processes that wish to communicate using this memory must attach the shared memory to their address space.</li>
+<li>These processes can then exchange data by reading and writing in the shared region.</li>
+<li>The OS does not control the data format or the memory location; this responsibility lies with the processes.</li>
+</ul>
+<h4 id="synchronization"><strong>Synchronization:</strong><a href="#synchronization" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Processes must ensure that they do not write to the same memory location simultaneously. One common problem in cooperative processes is the <strong>Producer-Consumer problem</strong>.</p>
+<ul>
+<li><strong>Producer Process:</strong> Produces data.</li>
+<li><strong>Consumer Process:</strong> Consumes data produced by the producer.</li>
+</ul>
+<p>To allow both processes to run concurrently, they need a <strong>shared buffer</strong> a region of memory where the producer can place data, and the consumer can retrieve it.</p>
+<p>There are two types of buffers used:</p>
+<ul>
+<li>
+<p><strong>Unbounded Buffer:</strong><br>
+No limit on the buffer size. The producer can continue producing items even if the consumer is slower in consuming. The consumer may need to wait for new items, but the producer is not blocked.</p>
+</li>
+<li>
+<p><strong>Bounded Buffer:</strong><br>
+The buffer has a fixed size. The producer must wait if the buffer is full, and the consumer must wait if the buffer is empty.</p>
+</li>
+</ul>
+<p>The shared buffer is often implemented as a <strong>circular array</strong> with two logical pointers:</p>
+<ul>
+<li><strong>In Pointer:</strong> Points to the next available position in the buffer.</li>
+<li><strong>Out Pointer:</strong> Points to the next item to be consumed.</li>
+</ul>
+<h4 id="synchronization-mechanism"><strong>Synchronization Mechanism:</strong><a href="#synchronization-mechanism" class="anchor" aria-hidden="true">#</a> </h4>
+<p>To ensure the producer and consumer operate efficiently, synchronization mechanisms such as <strong>mutexes</strong> or <strong>semaphores</strong> are often used to avoid race conditions and ensure mutual exclusion.</p>
+<hr>
+<h2 id="342-message-passing-systems"><strong>3.4.2 Message Passing Systems</strong><a href="#342-message-passing-systems" class="anchor" aria-hidden="true">#</a> </h2>
+<p>Message passing allows processes to communicate and synchronize without sharing the same address space, making it especially useful in <strong>distributed systems</strong> where processes may reside on different computers connected by a network.</p>
+<h3 id="message-passing-operations"><strong>Message Passing Operations</strong><a href="#message-passing-operations" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Message passing typically provides at least two operations:</p>
+<ul>
+<li><strong>send(message):</strong> Send a message to another process.</li>
+<li><strong>receive(message):</strong> Receive a message from another process.</li>
+</ul>
+<p>Messages can be <strong>fixed</strong> or <strong>variable</strong> in size:</p>
+<ul>
+<li><strong>Fixed-sized messages:</strong> Easier system implementation, but harder to program.</li>
+<li><strong>Variable-sized messages:</strong> More complex system-level implementation, but simpler for the programmer.</li>
+</ul>
+<h3 id="message-passing-implementation-models"><strong>Message Passing Implementation Models</strong><a href="#message-passing-implementation-models" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Message passing systems can be implemented using different methods, including:</p>
+<ul>
+<li><strong>Direct or Indirect Communication</strong></li>
+<li><strong>Synchronous or Asynchronous Communication</strong></li>
+<li><strong>Automatic or Explicit Buffering</strong></li>
+</ul>
+<hr>
+<h3 id="3421-naming"><strong>3.4.2.1 Naming</strong><a href="#3421-naming" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Processes communicating via message passing must refer to each other. This can be done via <strong>direct</strong> or <strong>indirect</strong> communication.</p>
+<h4 id="direct-communication"><strong>Direct Communication</strong><a href="#direct-communication" class="anchor" aria-hidden="true">#</a> </h4>
+<ul>
+<li>Each process explicitly names the sender or receiver.</li>
+<li><strong>send(P, message):</strong> Send a message to process P.</li>
+<li><strong>receive(Q, message):</strong> Receive a message from process Q.</li>
+</ul>
+<p>Properties of direct communication:</p>
+<ul>
+<li>A communication link is automatically established between every pair of processes that wish to communicate.</li>
+<li>Each pair of processes has exactly one link.</li>
+<li><strong>Symmetric addressing:</strong> Both processes must name each other.</li>
+</ul>
+<p>A variant is <strong>asymmetric addressing</strong>, where only the sender names the recipient; the recipient is not required to name the sender. :</p>
+<ul>
+<li><strong>send(P, message):</strong> Send a message to process P.</li>
+<li><strong>receive(id, message):</strong> Receive a message from any process, with <code>id</code> set to the name of the sender.</li>
+</ul>
+<p>The disadvantage of both symmetric and asymmetric communication schemes is the <strong>limited modularity</strong> of the resulting process definitions.<br>
+These schemes rely on <strong>hard-coding</strong> techniques, where identifiers must be explicitly stated, which reduces flexibility and makes the system less modular. Such hard-coding is generally less desirable than using techniques that involve <strong>indirection</strong>, where the identities of communicating processes are more dynamically determined.</p>
+<hr>
+<h4 id="indirect-communication"><strong>Indirect Communication</strong><a href="#indirect-communication" class="anchor" aria-hidden="true">#</a> </h4>
+<p>With indirect communication, processes communicate via <strong>mailboxes</strong> (or ports), which are abstract objects where messages are placed and retrieved.</p>
+<ul>
+<li><strong>send(A, message):</strong> Send a message to mailbox A.</li>
+<li><strong>receive(A, message):</strong> Receive a message from mailbox A.</li>
+</ul>
+<p>Properties of indirect communication:</p>
+<ul>
+<li>Communication only happens between processes with a shared mailbox.</li>
+<li>A link can involve more than two processes, as multiple processes can communicate through a single mailbox.</li>
+</ul>
+<p>There are two types of mailbox ownership:</p>
 <ol>
-<li>
-<p><strong>Reset Event</strong>:</p>
-<ul>
-<li>When a computer is powered on or rebooted, the <strong>CPU</strong> receives a reset signal.</li>
-<li>The <strong>Instruction Register (IR)</strong> is loaded with a predefined memory location, and execution begins from that location.</li>
-</ul>
-</li>
-<li>
-<p><strong>Initial Bootstrap Program</strong>:</p>
-<ul>
-<li>The initial bootstrap program is stored in <strong>read-only memory (ROM)</strong> because at this stage, <strong>RAM</strong> is in an unknown state. ROM is used because it doesn&rsquo;t need initialization and is not easily infected by viruses.</li>
-<li>The bootstrap program is typically stored in a small, non-volatile storage like <strong>ROM</strong> or <strong>firmware</strong>.</li>
-</ul>
-</li>
-<li>
-<p><strong>Diagnostics and Initialization</strong>:</p>
-<ul>
-<li>The bootstrap program usually runs system diagnostics to check the machine’s hardware and ensure that all components are functioning properly.</li>
-<li>If diagnostics pass, the program continues to initialize the system, including the CPU registers, device controllers, and memory contents.</li>
-<li>Eventually, the program begins loading the <strong>operating system (OS)</strong>.</li>
-</ul>
-</li>
-<li>
-<p><strong>Firmware and Read-Only Memory (ROM)</strong>:</p>
-<ul>
-<li>
-<p>All forms of ROM are also known as ﬁrmware, since their characteristics fall somewhere between those of hardware and those of software.</p>
-</li>
-<li>
-<p>Some systems, especially simpler ones (like cell phones, tablets, or game consoles), may store the entire operating system in <strong>ROM</strong>. This is often done for simplicity and ruggedness.</p>
-</li>
-<li>
-<p>However, <strong>firmware</strong> (a combination of hardware and software) comes with limitations:</p>
-<ul>
-<li><strong>Speed</strong>: Executing code in ROM is slower than executing code in <strong>RAM</strong>.</li>
-<li><strong>Flexibility</strong>: Changing the firmware requires replacing the ROM hardware, which can be costly. To address this, <strong>EPROM (Erasable Programmable Read-Only Memory)</strong> is used, allowing the code to be rewritten.</li>
-</ul>
-</li>
-<li>
-<p>While firmware is durable, it typically provides only small amounts of storage and slower execution compared to RAM.</p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Bootloader on Disk for Larger OS</strong>:</p>
-<ul>
-<li>For larger or more dynamic operating systems (like <strong>Windows</strong>, <strong>macOS</strong>, or <strong>UNIX</strong>), the <strong>bootstrap loader</strong> is stored in <strong>firmware</strong>, but the operating system itself resides on a <strong>disk</strong>.</li>
-<li>The bootstrap program stored in the firmware runs diagnostics and reads a small <strong>boot block</strong> (often from the first block on disk).</li>
-<li>This boot block contains enough code to load the remaining bootstrap program into memory.</li>
-</ul>
-<p>The boot block itself is typically small and only contains instructions to load the remainder of the <strong>bootstrap program</strong> from a specific address on the disk.</p>
-</li>
-<li>
-<p><strong>Loading the Operating System</strong>:</p>
-<ul>
-<li>Once the bootstrap program has been loaded into memory, it traverses the file system on disk to find and load the kernel of the operating system.</li>
-<li>After locating the kernel, it is loaded into memory and execution starts, and the system begins to <strong>run</strong> the operating system.</li>
-</ul>
-</li>
+<li><strong>Process-owned mailbox:</strong> A process can only receive messages through its mailbox, and it disappears when the process terminates.</li>
+<li><strong>OS-owned mailbox:</strong> A mailbox exists independently of any process, and the OS manages its creation, deletion, and message passing.</li>
 </ol>
-<blockquote>
-<p><strong>GRUB (Grand Unified Bootloader)</strong>:<br>
-One of the most widely used bootstrap programs for Linux systems is <strong>GRUB</strong>, which helps manage the boot process and allows users to choose between different operating systems or kernel versions at startup.</p>
-</blockquote>
-<blockquote>
-<p><strong>Boot Disk</strong>:<br>
-The disk that contains the boot partition and the operating system is often referred to as the <strong>boot disk</strong> or <strong>system disk</strong>.<br>
-This disk is critical for loading the operating system during the boot process.</p>
-</blockquote>
 <hr>
-<h3 id="key-concepts">Key Concepts:<a href="#key-concepts" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="3422-synchronization"><strong>3.4.2.2 Synchronization</strong><a href="#3422-synchronization" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Synchronization determines how send and receive operations block or proceed.</p>
 <ul>
-<li><strong>Bootstrap Loader</strong>: A small program responsible for loading the operating system kernel into memory.</li>
-<li><strong>ROM (Read-Only Memory)</strong>: Non-volatile memory used for storing the initial bootstrap program. It is essential for starting the system because it doesn&rsquo;t require initialization like RAM.</li>
-<li><strong>Firmware</strong>: Code stored in ROM or EPROM that can control hardware and run basic system functions.</li>
-<li><strong>Boot Block</strong>: A small, fixed location on the disk that contains the first part of the bootstrap program.</li>
-<li><strong>Boot Disk/System Disk</strong>: The disk that holds the operating system and contains the boot partition necessary for system startup.</li>
-<li><strong>GRUB (Grand Unified Bootloader)</strong>: A popular bootloader used in Linux systems for loading and managing multiple operating systems.</li>
+<li><strong>Blocking Send:</strong> The sender is blocked until the message is received or placed in the mailbox.</li>
+<li><strong>Non-blocking Send:</strong> The sender sends the message and continues execution without waiting.</li>
+<li><strong>Blocking Receive:</strong> The receiver is blocked until a message is available.</li>
+<li><strong>Non-blocking Receive:</strong> The receiver retrieves either a valid message or a <code>null</code>.</li>
+</ul>
+<p>For example, in a <strong>Producer-Consumer</strong> problem:</p>
+<ul>
+<li>The producer sends a message using a blocking send and waits until the message is received.</li>
+<li>The consumer receives a message via a blocking receive, waiting until a message is available.</li>
+</ul>
+<hr>
+<h3 id="3423-buffering"><strong>3.4.2.3 Buffering</strong><a href="#3423-buffering" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Messages exchanged between processes are held in temporary queues. These queues can be implemented in three ways:</p>
+<ul>
+<li>
+<p><strong>Zero-capacity Queue:</strong><br>
+No messages can be stored. The sender is blocked until the receiver retrieves the message. This type of queue is sometimes referred to as a <strong>message system with no buffering</strong>.</p>
+</li>
+<li>
+<p><strong>Bounded-capacity Queue:</strong>  The queue has a finite size. The sender is blocked if the queue is full.
+The queue has a finite size (e.g., at most <em>n</em> messages can reside in it). If the queue is not full when a new message is sent, the message is placed in the queue (either the message is copied or a pointer to the message is kept), and the sender can continue execution without waiting. If the queue is full, the sender is blocked until space becomes available.</p>
+</li>
+<li>
+<p><strong>Unbounded-capacity Queue:</strong><br>
+The queue can hold an unlimited number of messages. The sender never blocks, regardless of the queue’s size.</p>
+</li>
+</ul>
+<p>Systems with bounded or unbounded queues are referred to as <strong>automatic buffering systems</strong>, while a zero-capacity queue system is referred to as having <strong>no buffering</strong>.</p>
+<hr>
+<h4 id="summary-for-ipc">Summary for IPC<a href="#summary-for-ipc" class="anchor" aria-hidden="true">#</a> </h4>
+<ul>
+<li>
+<p><strong>Direct vs Indirect Communication:</strong><br>
+Direct communication requires processes to explicitly name each other, whereas indirect communication uses mailboxes that can hold messages from multiple processes.</p>
+</li>
+<li>
+<p><strong>Synchronous vs Asynchronous:</strong><br>
+Synchronous (blocking) communication blocks the sender or receiver until the operation completes, while asynchronous (non-blocking) communication allows the sender or receiver to continue without waiting.</p>
+</li>
+<li>
+<p><strong>Buffering Types:</strong><br>
+Message queues can be zero-capacity (no buffering), bounded-capacity (limited storage), or unbounded-capacity (unlimited storage), each with different performance trade-offs.</p>
+</li>
+</ul>
+<p>Message passing is particularly advantageous in distributed systems and when small data exchanges between processes are needed. It is generally slower than shared memory communication because it requires kernel intervention, but it provides easier implementation and avoids synchronization issues.</p>
+<hr>
+<h3 id="summary-of-process-chapter"><strong>Summary of Process Chapter</strong><a href="#summary-of-process-chapter" class="anchor" aria-hidden="true">#</a> </h3>
+<ul>
+<li>
+<p><strong>Process Concept:</strong></p>
+<ul>
+<li>A <strong>process</strong> is a program in execution and changes state during its lifetime. The states include:
+<ul>
+<li><strong>New</strong>: The process is being created.</li>
+<li><strong>Ready</strong>: The process is ready to execute, waiting for the CPU.</li>
+<li><strong>Running</strong>: The process is currently executing.</li>
+<li><strong>Waiting</strong>: The process is waiting for an event (like I/O completion).</li>
+<li><strong>Terminated</strong>: The process has finished execution.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Process Control Block (PCB):</strong></p>
+<ul>
+<li>Each process is represented by its own <strong>Process Control Block (PCB)</strong> in the OS.</li>
+<li>A process that is not executing is placed in a waiting queue, which can be either an <strong>I/O request queue</strong> or a <strong>ready queue</strong>.</li>
+<li>The <strong>ready queue</strong> holds processes that are ready to execute and waiting for the CPU.</li>
+</ul>
+</li>
+<li>
+<p><strong>Scheduling:</strong></p>
+<ul>
+<li><strong>Long-term (Job) Scheduling</strong>: Selects processes to contend for the CPU, influenced by resource allocation, especially memory management.</li>
+<li><strong>Short-term (CPU) Scheduling</strong>: Selects one process from the ready queue to execute.</li>
+</ul>
+</li>
+<li>
+<p><strong>Parent-Child Process Relationships:</strong></p>
+<ul>
+<li><strong>Parent processes</strong> can create <strong>child processes</strong>.</li>
+<li>The parent can either wait for the child to terminate before proceeding or allow them to execute concurrently.</li>
+<li>Reasons for concurrent execution include:
+<ul>
+<li>Information sharing</li>
+<li>Computation speedup</li>
+<li>Modularity</li>
+<li>Convenience</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Types of Processes:</strong></p>
+<ul>
+<li><strong>Independent Processes</strong>: These processes do not affect or share data with other processes.</li>
+<li><strong>Cooperating Processes</strong>: These processes interact with each other and require an <strong>Interprocess Communication (IPC)</strong> mechanism.</li>
+</ul>
+</li>
+<li>
+<p><strong>Interprocess Communication (IPC):</strong></p>
+<ul>
+<li><strong>Shared Memory</strong>: Processes communicate by reading/writing to shared memory regions. The OS provides the memory, but application programmers manage the communication.</li>
+<li><strong>Message Passing</strong>: Processes exchange messages. The OS typically provides the communication mechanism.</li>
+</ul>
+<p>Both schemes (shared memory and message passing) can be used simultaneously in an OS.</p>
+</li>
+<li>
+<p><strong>Communication Methods in Client-Server Systems:</strong></p>
+<ul>
+<li><strong>Sockets</strong>: An endpoint for communication, forming a connection between applications.</li>
+<li><strong>Remote Procedure Calls (RPCs)</strong>: A process calls a procedure on a remote application.</li>
+<li><strong>Pipes</strong>: Provide simple communication between processes.
+<ul>
+<li><strong>Ordinary pipes</strong>: Used between parent and child processes.</li>
+<li><strong>Named pipes</strong>: Allow communication between unrelated processes.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<hr>
+<h3 id="summary--for-threads"><strong>Summary  for Threads</strong><a href="#summary--for-threads" class="anchor" aria-hidden="true">#</a> </h3>
+<ul>
+<li>
+<p><strong>Definition:</strong></p>
+<ul>
+<li>A <strong>thread</strong> is a single sequence of instructions within a process. Each thread within a process shares the same memory space, but they can execute independently. A <strong>multithreaded process</strong> contains multiple threads running concurrently within the same process. This allows for parallelism, enabling efficient use of CPU resources.</li>
+</ul>
+</li>
+<li>
+<p><strong>Benefits of Multithreading:</strong></p>
+<ul>
+<li><strong>Increased Responsiveness</strong>: When an application uses multiple threads, one thread can handle user inputs (such as clicking or typing) while other threads perform background tasks. This results in a smoother user experience, as the program does not freeze while executing other tasks.</li>
+<li><strong>Resource Sharing</strong>: Threads within the same process share the same memory space, which means they can directly access shared data (variables, structures) without the need for complex inter-process communication (IPC). This resource sharing simplifies data management and improves efficiency.</li>
+<li><strong>Economy</strong>: Threads are lighter-weight compared to processes. Creating and managing threads generally involves less overhead than managing processes because threads share the same address space and resources within a process. This makes context switching faster compared to processes.</li>
+<li><strong>Scalability</strong>: Multithreaded programs can be optimized to use multiple CPU cores. On multi-core systems, threads can run concurrently on different cores, significantly improving performance for CPU-bound tasks and enabling the application to scale effectively.</li>
+</ul>
+</li>
+<li>
+<p><strong>Types of Threads:</strong></p>
+<ul>
+<li><strong>User-Level Threads</strong>: These threads are created and managed by the user-level thread library (e.g., POSIX Pthreads), not by the operating system. The kernel is unaware of their existence, meaning it cannot schedule or manage them directly. Since no kernel intervention is needed, user-level threads are faster to create, destroy, and manage. However, if a user-level thread is blocked (for example, waiting for I/O), the entire process can be blocked because the kernel doesn&rsquo;t recognize the other threads in the process.</li>
+<li><strong>Kernel-Level Threads</strong>: These threads are created and managed by the operating system kernel. The kernel schedules these threads and is aware of their existence. If one kernel thread is blocked, the operating system can schedule another thread from the same process. Kernel-level threads are slower to create and manage compared to user-level threads due to kernel intervention, but they provide better concurrency and responsiveness because the kernel manages the threads.</li>
+</ul>
+</li>
+<li>
+<p><strong>Thread Models:</strong></p>
+<ul>
+<li><strong>Many-to-One Model</strong>: In this model, multiple user-level threads are mapped to a single kernel thread. This model allows multiple threads within a process to run concurrently from the user’s perspective, but the operating system can only schedule one kernel thread at a time. If one user thread blocks, the entire process may be blocked. This model is less efficient for multitasking because it does not utilize multiple CPUs effectively.</li>
+<li><strong>One-to-One Model</strong>: In this model, each user-level thread corresponds to a kernel thread. This allows each thread to be scheduled independently by the operating system. If a thread is blocked, others in the same process can still run. The one-to-one model can take full advantage of multi-core systems, making it more scalable, but it requires more resources because each thread needs its own kernel thread.</li>
+<li><strong>Many-to-Many Model</strong>: This model multiplexes many user threads onto a smaller or equal number of kernel threads. This allows a process to use multiple kernel threads while still managing many user threads. This model provides a good balance between user-level and kernel-level management, allowing efficient use of resources while preventing some of the limitations of the many-to-one model.</li>
+</ul>
+</li>
+<li>
+<p><strong>Operating System Support for Threads:</strong></p>
+<ul>
+<li>Modern operating systems, such as <strong>Windows</strong>, <strong>Mac OS X</strong>, <strong>Linux</strong>, and <strong>Solaris</strong>, provide support for kernel-level threading. They provide mechanisms to create, manage, and schedule threads. In these systems, the kernel is responsible for managing thread execution, synchronization, and scheduling, which allows for efficient multitasking and resource management.</li>
+</ul>
+</li>
+<li>
+<p><strong>Thread Libraries:</strong></p>
+<ul>
+<li><strong>Thread libraries</strong> offer an Application Programming Interface (API) that helps developers create and manage threads. Three primary thread libraries include:
+<ul>
+<li><strong>POSIX Pthreads</strong>: A popular threading library for Unix-like operating systems. It provides a set of functions for creating and managing threads.</li>
+<li><strong>Windows threads</strong>: The threading API provided by Microsoft Windows. It allows developers to create, manage, and synchronize threads on Windows-based systems.</li>
+<li><strong>Java threads</strong>: The Java programming language has built-in support for multithreading. It provides the <code>Thread</code> class and <code>Runnable</code> interface to create and manage threads in Java applications.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Implicit Threading:</strong></p>
+<ul>
+<li>In <strong>implicit threading</strong>, the creation and management of threads are handled by compilers and runtime libraries, rather than the application programmer. This allows developers to focus on writing code without worrying about the details of thread management.
+<ul>
+<li><strong>Thread Pools</strong>: A collection of pre-created threads that can be reused to execute tasks. Thread pools manage the lifecycle of threads automatically, reducing the overhead of creating and destroying threads.</li>
+<li><strong>OpenMP</strong>: A set of compiler directives that allow developers to parallelize their code using threads without explicitly creating them. OpenMP is widely used in scientific computing.</li>
+<li><strong>Grand Central Dispatch (GCD)</strong>: A threading API used by Apple in Mac OS X and iOS to manage concurrency. GCD handles the creation, scheduling, and execution of threads automatically, allowing developers to write parallel programs with ease.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Challenges in Multithreading:</strong></p>
+<ul>
+<li>Multithreaded programs introduce several challenges for developers, including:
+<ul>
+<li><strong>Semantics of fork() and exec() system calls</strong>: The behavior of these system calls can change in a multithreaded environment. For example, <code>fork()</code> creates a new process, but it only copies the calling thread in some systems, not all threads, which can lead to unexpected behavior.</li>
+<li><strong>Signal Handling</strong>: In a multithreaded program, signals can be delivered to any thread, making signal handling more complex. This can cause issues in terms of which thread should handle specific signals (e.g., termination signals).</li>
+<li><strong>Thread Cancellation</strong>: Threads may need to be canceled in response to certain conditions. Proper cancellation handling is required to prevent resource leaks or inconsistent states.</li>
+<li><strong>Thread-local Storage (TLS)</strong>: TLS allows each thread to have its own private data. Managing TLS can be tricky when using multiple threads that need access to specific data.</li>
+<li><strong>Scheduler Activations</strong>: In some systems, threads are scheduled by the kernel, but the user-level thread library must also be activated to schedule threads. This complex interaction between kernel scheduling and user-level management requires careful design.</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <hr>
 
@@ -1884,24 +2197,7 @@ This disk is critical for loading the operating system during the boot process.<
 				</div>
 				<div class="d-flex flex-column">
 					<div class="text-body-secondary">Prev</div>
-					<a href="/personal-site/docs/os/c02_system_structure/os-2.07-os-structure/" class="stretched-link text-reset text-decoration-none">OS 2.07 - OS Structure</a>
-				</div>
-			</div>
-		</div>
-	<div class="m-2"></div>
-	<div class="card text-end w-100">
-			<div class="card-body d-flex justify-content-end">
-				<div class="d-flex flex-column">
-					<div class="text-body-secondary">Next</div>
-					<a href="/personal-site/docs/os/c03_process_concept/os-3.01-process-concept/" class="stretched-link text-reset text-decoration-none">OS 3.01 - Process Concept</a>
-				</div>
-				<div class="d-flex flex-column justify-content-center">
-					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-						<path d="M5 12l14 0"></path>
-						<path d="M13 18l6 -6"></path>
-						<path d="M13 6l6 6"></path>
-					</svg>
+					<a href="/personal-site/docs/os/c03_process_concept/os-3.02-process-scheduling/" class="stretched-link text-reset text-decoration-none">OS 3.02 - Process Scheduling</a>
 				</div>
 			</div>
 		</div>
