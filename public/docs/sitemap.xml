@@ -134,4 +134,22 @@
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/os/c03_process_concept/</loc>
+        <lastmod>2025-01-12T21:14:19+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/os/c05_process_scheduling/</loc>
+        <lastmod>2025-01-12T21:15:18+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/os/c06_synchronization/</loc>
+        <lastmod>2025-01-12T21:15:43+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
       </urlset>

@@ -1,11 +1,11 @@
 ---
-title: "C03_process_concept"
+title: "Chapter 03 - Process Concept"
 description: ""
 summary: ""
 date: 2025-01-12T21:14:19+05:30
 lastmod: 2025-01-12T21:14:19+05:30
-draft: true
-weight: 999
+draft: false
+weight: 2016
 toc: true
 seo:
   title: "" # custom title (optional)

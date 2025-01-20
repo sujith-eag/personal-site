@@ -14,7 +14,6 @@ seo:
   noindex: false # false (default) or true
 ---
 
-
 **Interrupts, System Calls, and Modes of Operation**
 
 ## **Interrupt-Driven Systems**
@@ -30,42 +29,37 @@ For each type of interrupt, the OS contains specific code that determines the ap
 
 Since both the OS and users share the hardware and software resources, any error in a user program should only affect that particular program, not the entire system. However, issues such as infinite loops or erroneous programs modifying data from other programs can cause system-wide problems.
 
-> **Note:** A properly designed OS ensures that a faulty or malicious program does not negatively affect other running programs or the OS itself.
 
-___
+{{< callout note >}}
+A properly designed OS ensures that a faulty or malicious program does not negatively affect other running programs or the OS itself.
+ {{< /callout >}}
+
+ ___
 
 ### **Interrupt vs. Trap**
 
-> **Question:** What is the difference between a **trap** and an **interrupt**?
-> 
-> Both **traps** and **interrupts** are mechanisms that allow the operating system to take control of the processor, but they are triggered in different ways and serve different purposes:       
-> 
-> A **trap** is a software-generated interrupt, typically triggered by a user program requesting a service or due to errors, while **interrupts** can be caused by external events, such as hardware I/O requests.
-> 
-> While **interrupts** are typically hardware-driven and serve external events, **traps** are software-driven, usually related to program errors or service requests. Both mechanisms transfer control to the OS, but **privileged instructions** are used to prevent unauthorized programs from interfering with critical system operations.
+Both **traps** and **interrupts** allow the operating system to take control of the processor but are triggered differently and serve distinct purposes:
 
+- **Interrupts** are hardware-driven, typically caused by external events (e.g., I/O operations, timers), while **traps** are software-driven, usually caused by program errors or system service requests.
 
-1. **Interrupt**:
-   - **Cause**: Interrupts are typically **hardware-driven** events that occur asynchronously. These can be triggered by external hardware devices (such as I/O devices) that need the processor's attention (e.g., when input/output operations are completed, or a timer has expired).
-   - **Function**: Interrupts notify the processor that it must temporarily stop executing the current instructions to handle an external event. After the interrupt is serviced, the processor resumes its previous task.
-   - **Example**: A keyboard press, network packet arrival, or disk I/O completion.
+#### 1. **Interrupt**:
+   - **Cause**: Hardware-driven events, such as I/O operations or timers.
+   - **Function**: Temporarily halts the processor to handle the event, after which execution resumes.
+   - **Example**: Keyboard press, network packet, disk I/O completion.
 
-2. **Trap (or Exception)**:
-   - **Cause**: A **trap** (or **exception**) is **software-generated** and occurs synchronously. It is usually caused by an event that arises during program execution, such as an error or a system call (where a program requests an OS service).
-   - **Function**: Traps are triggered by **program execution** and can indicate issues like errors or a specific request for operating system services. They often signal that a process needs special handling from the OS (e.g., an invalid memory access or division by zero).
-   - **Example**: A program attempting to divide by zero or access invalid memory.
+#### 2. **Trap (Exception)**:
+   - **Cause**: Software-generated, typically due to errors or system calls during program execution.
+   - **Function**: Signals the OS for special handling (e.g., error handling or service request).
+   - **Example**: Division by zero or invalid memory access.
 
-**Interrupts**: These are managed by the OS, which often includes **privileged instructions** for interrupt handling (e.g., enabling or disabling interrupts). Interrupts are generally not allowed to be triggered by user programs directly.
-  
-**Traps**: User programs can trigger a trap (e.g., by making a system call), but they cannot directly trigger interrupts. The OS provides specific instructions to handle these, and **privileged instructions** are restricted to the kernel to prevent misuse by user applications.
+**Interrupts** are hardware-managed and often require privileged instructions, while **traps** can be triggered by user programs for system calls but cannot directly cause interrupts.
 
-
-| Feature          | **Interrupt**                                                        | **Trap (Exception)**                                                                          |
-| ---------------- | -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| **Trigger**      | Hardware event (asynchronous)                                        | Software event (synchronous)                                                                  |
-| **Cause**        | External devices (I/O, timer, etc.)                                  | Program errors or system calls (e.g., divide by zero, invalid memory access)                  |
-| **Control Flow** | Control is transferred to the OS immediately to handle the event     | Control is transferred to the OS by the program itself (typically via a system call or error) |
-| **Handling**     | Typically involves service routines for external hardware management | Involves error handling or system service routines                                            |
+| Feature          | **Interrupt**                                                        | **Trap (Exception)**                                                                      |
+| ---------------- | -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| **Trigger**      | Hardware event (asynchronous)                                        | Software event (synchronous)                                                              |
+| **Cause**        | External devices (I/O, timer, etc.)                                  | Program errors or system calls (e.g., divide by zero, invalid memory access)              |
+| **Control Flow** | OS takes control to handle the event                                 | OS takes control via a system call or error during program execution                       |
+| **Handling**     | Handled by service routines for hardware events                       | Handled by error handling or system service routines                                      |
 
 
 ---
@@ -81,14 +75,17 @@ To protect the OS from errant user programs and vice versa, the OS operates in t
 
 A **mode bit** is added to the CPU to indicate the current mode of operation. This dual-mode operation helps protect the OS by restricting certain instructions, called **privileged instructions**, to **Kernel Mode**. These privileged instructions may include tasks like I/O control, interrupt management, and timer management.
 
-> **Examples of privileged instructions**:  
-> - Switching between modes (User to Kernel or Kernel to User)
-> - I/O control
-> - Timer management
-> - Interrupt management
+{{< callout note >}}
+**Examples of privileged instructions**:  
+- Switching between modes (User to Kernel or Kernel to User)
+- I/O control
+- Timer management
+- Interrupt management
+ {{< /callout >}}
 
-[image for transition from user mode to kernel mode]
 
+
+{{< figure src="images/os/1_10_user_to_kernel_mode.jpg"  alt="1.10 User Mode to Kernel Mode"  caption="1.10 User Mode to Kernel Mode" >}}
 
 ---
 
@@ -97,7 +94,9 @@ A **mode bit** is added to the CPU to indicate the current mode of operation. Th
 Some CPU's support more than two modes of operation.      
 For example, systems supporting **virtualization** may have a mode for the **Virtual Machine Manager (VMM)** that has more privileges than user programs to create virtual machines and to change the state of CPU but fewer privileges than the Kernel.
 
-> **Note:** CPU's like the Intel 64 family support **privilege levels** for virtualization, but they do not have a separate mode specifically for virtualization.
+{{< callout note >}}
+CPU's like the Intel 64 family support **privilege levels** for virtualization, but they do not have a separate mode specifically for virtualization.
+ {{< /callout >}}
 
 
 ---
@@ -128,16 +127,20 @@ System calls are usually implemented as **traps** that transfer control to a spe
 - The OS then verifies the system call parameters to be legal.
 - Executes the requested task, and returns control to the user program.
 
+{{< callout note >}}
+Control Flow of a System call
+* Interrupt / Trap
+* Interrupt Vector
+* OS
+* Service routine (System-call service routine in OS)
+* Kernel
+ {{< /callout >}}
 
->[!control passing] Control Flow of a System call
-> * Interrupt / Trap
-> * Interrupt Vector
-> * OS
-> * Service routine (System-call service routine in OS)
-> * Kernel
 
+{{< callout note >}}
+**Example in MIPS**: A specific `syscall` instruction is used to invoke a system call.
+{{< /callout >}}
 
-> **Example in MIPS**: A specific `syscall` instruction is used to invoke a system call.
 
 ---
 
@@ -151,7 +154,11 @@ When the system is in **Kernel Mode**, it can detect errors that violate the ope
 - The OS handles the error, typically terminating the program abnormally and providing an error message.
 - The system may also generate a **memory dump** for debugging purposes, which is saved to a file for analysis.
 
-> **Note**: The absence of hardware-supported dual-mode operation can lead to serious issues. For instance, **MS-DOS**, which was designed for the Intel 8088 without a mode bit, allowed user programs to overwrite the OS and access hardware directly, resulting in potential system crashes.
+
+{{< callout note >}}
+The absence of hardware-supported dual-mode operation can lead to serious issues. For instance, **MS-DOS**, which was designed for the Intel 8088 without a mode bit, allowed user programs to overwrite the OS and access hardware directly, resulting in potential system crashes.
+{{< /callout >}}
+
 
 ---
 
@@ -168,8 +175,11 @@ A **Timer** is a critical component in the OS to maintain control over execution
 - Each second, the counter decrements by 1, and control returns to the user program as long as the counter is positive.
 - If the counter reaches zero, the OS terminates the program for exceeding its time limit.
 
-> **Example Timer Configuration**:  
-> A 10-bit counter with a 1-millisecond clock allows for interrupts at intervals ranging from 1 millisecond to 1,024 milliseconds (1 second).
+{{< callout note >}}
+**Example Timer Configuration**:  
+A 10-bit counter with a 1-millisecond clock allows for interrupts at intervals ranging from 1 millisecond to 1,024 milliseconds (1 second).
+{{< /callout >}}
+
 
 Before transferring control to a user program, the OS ensures that the timer is set. If the timer interrupts, control is passed to the OS, which can either treat the interrupt as an error or extend the program's time.
 
@@ -177,3 +187,4 @@ Instructions that modify the content of the timer are privileged.
 
 
 ---
+

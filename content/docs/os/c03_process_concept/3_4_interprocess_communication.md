@@ -39,6 +39,12 @@ Processes executing concurrently in an operating system can be either **independ
 
 Cooperating processes require an **Inter-Process Communication (IPC)** mechanism to exchange data and synchronize their operations. The two primary IPC models are **Shared Memory** and **Message Passing**.
 
+
+
+{{< figure  src="images/os/3_12_CommunicationsModels.jpg"  alt="3.12 Communication Models"  caption="3.12 Communication Models" >}}
+
+
+
 ---
 
 ### **3.4.1 Shared-Memory Systems**
@@ -192,7 +198,7 @@ Message passing is particularly advantageous in distributed systems and when sma
 
 ### **Summary of Process Chapter**
 
-- **Process Concept:**
+* ***Process Concept:**
   - A **process** is a program in execution and changes state during its lifetime. The states include:
     - **New**: The process is being created.
     - **Ready**: The process is ready to execute, waiting for the CPU.

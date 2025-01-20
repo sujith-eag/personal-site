@@ -32,8 +32,6 @@ MS-DOS (Microsoft Disk Operating System) is an example of an operating system wi
 **MS-DOS Layer Structure**:
 - The system was a single layer, with no distinct separation between user-level processes and the kernel. Applications had direct access to I/O operations and hardware resources, making it easier to develop but prone to errors and system crashes when user programs failed.
 
-[image, MS-DOS layer structure]
-
 
 ### 2.7.2 **Layered Approach**
 
@@ -76,8 +74,7 @@ The **modular kernel** design has become a popular approach, combining the advan
 - **Linux**: The Linux kernel uses a modular approach where additional features, such as device drivers or filesystems, are implemented as loadable kernel modules.
 - **Windows**: Windows also supports loadable kernel modules to extend its functionality without modifying the core kernel.
 
-[Traditional UNIX system structure]
-
+___
 
 ### 2.7.5 **Hybrid System**
 
@@ -108,7 +105,8 @@ Structure of three hybrid systems: the Apple Mac OS X operating system and the t
 
 Mac OS X is an example of a hybrid system where the Mach microkernel and BSD components work together to offer a robust and flexible system. The combination allows for powerful, efficient kernel functionality while providing a user-friendly interface and modularity for extensibility.
 
-[image, The Mac OS X structure]
+{{< figure  src="images/os/2_16_Mac_OSX_Structure.jpg"  alt="2.16 Structure of Mac OS X"  caption="2.16 Structure of Mac OS X" >}}
+
 
 ### 2.7.5.2 **iOS**
 
@@ -124,6 +122,8 @@ Mac OS X is an example of a hybrid system where the Mach microkernel and BSD com
 
 Android's architecture uses a **monolithic kernel** for core services but builds a **modular** user-space layer for device management, apps, and communication with external hardware.
 
+{{< figure  src="images/os/2_18_AndroidArchitecture.jpg"  alt="2.18 Android Architecture"  caption="2.18 Android Architecture" >}}
+
 ---
 
 ### Conclusion
@@ -135,4 +135,5 @@ The design choices depend on the operating system's target use cases, with trade
 Modern systems such as Linux, macOS, iOS, and Android combine different structural models to optimize performance and functionality, creating hybrid systems that balance efficiency and modularity.
 
 _____
+
 

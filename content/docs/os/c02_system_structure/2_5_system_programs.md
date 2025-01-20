@@ -115,3 +115,7 @@ The operating system's **system programs** and **application programs** define t
 System programs include utilities for file management, status information, programming support, communication, and background services. While system calls form the core functionality of the OS, these system programs provide an accessible interface for users and developers to interact with the underlying system resources.
 
 For most users, their interaction with the operating system is through **application and system programs**, rather than directly through system calls. This abstraction simplifies the use of the system and allows users to perform tasks without needing to interact with the lower-level components of the operating system directly.
+
+
+_____
+

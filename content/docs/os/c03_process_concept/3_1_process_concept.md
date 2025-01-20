@@ -16,6 +16,7 @@ seo:
 
 
 
+
 Contemporary computer systems allow multiple programs to be loaded into memory and executed concurrently. This requires tighter control and better compartmentalization of various programs. These needs led to the concept of a **process**, which is a program in execution.
 
 - A **process** is a unit of work in a modern time-sharing system.
@@ -44,7 +45,7 @@ Additionally, a process may have a **heap**, which is dynamically allocated memo
 
 #### **Structure of a Process in Memory:**
 
-[image: structure of a process in memory]
+{{< figure  src="images/os/3_01_Process_Memory.jpg"  alt="3.01 A Process in Memory"  caption="3.01 A Process in Memory" >}}
 
 ---
 
@@ -86,7 +87,8 @@ As a process executes, it transitions through various **states** based on its cu
 - Only one process can be **running** on a processor at any given moment.  
 - Many processes may be **ready** or **waiting** at the same time.
 
-[image: Process states and movement]
+{{< figure  src="images/os/3_02_ProcessState.jpg"  alt="3.02 States Of Process"  caption="3.02 States Of Process" >}}
+
 
 ---
 
@@ -102,9 +104,15 @@ Each process in an operating system is represented by a **Process Control Block 
 - **Accounting Information:** Contains CPU and real time usage, time limits, account numbers, job or process numbers, and other metrics.
 - **I/O Status Information:** Lists all I/O devices allocated to the process, open files, and other I/O-related data.
 
-[image: Process Control Block]
+
+{{< figure  src="images/os/3_03_PCB.jpg"  alt="3.03 Process Control Block"  caption="3.03 Process Control Block" >}}
+
 
 When an interrupt occurs, the program counter and state information must be saved to ensure the process can continue correctly afterward.
+
+
+
+{{< figure  src="images/os/3_04_ProcessSwitch.jpg"  alt="3.04 Process Switching"  caption="3.04 Process Switching" >}}
 
 ---
 
@@ -120,13 +128,16 @@ On systems that support threads, the **Process Control Block (PCB)** is expanded
 
 ---
 
-### **Linux OS and the Task Structure**
 
-> In Linux, the **Process Control Block** is represented by the C structure `task_struct`, which is found in the `<linux/sched.h>` header file within the kernel source code.  
-> This structure contains all necessary information about a process, including:
-> - Process state
-> - Scheduling and memory management information
-> - List of open files
-> - Pointers to the process's parent, children, and siblings
+{{< callout note >}}
+**Linux OS and the Task Structure**
+In Linux, the **Process Control Block** is represented by the C structure `task_struct`, which is found in the `<linux/sched.h>` header file within the kernel source code.  
+ This structure contains all necessary information about a process, including:
+ - Process state
+ - Scheduling and memory management information
+ - List of open files
+ - Pointers to the process's parent, children, and siblings
+{{< /callout >}}
+
 
 ---

@@ -15,6 +15,7 @@ seo:
 ---
 
 
+
 System calls provide the essential interface between user-level programs and the operating system. They allow applications to request services, such as file manipulation, process control, and communication with I/O devices, from the OS kernel. The process of making a system call is essential for interaction between software and hardware components.
 
 ---
@@ -54,8 +55,6 @@ The use of an API ensures that applications designed on one platform can be easi
 
 The **system-call interface** acts as the intermediary between the user program and the operating system kernel. When an application invokes an API function, the system-call interface intercepts that call and translates it into the appropriate system call. The OS kernel then executes the request and returns any relevant data or status information back to the application via the system-call interface.
 
-[Image: Handling of a user application invoking the open() system call]
-
 
 ---
 
@@ -73,7 +72,6 @@ There are three general methods for passing parameters from user applications to
    - This method allows for more flexibility and is used by operating systems like **Linux** and **Solaris**.
    - **Example**: A system call that requires many parameters, such as a file operation with multiple options, can use this method.
 
-[Image: Passing parameters as a table]
 
 3. **Passing Parameters via the Stack:**
    - In this method, the application pushes parameters onto the stack before making the system call. The OS then pops the parameters from the stack when the call is invoked.
@@ -94,4 +92,6 @@ In summary:
 - **System-call interfaces** enable user applications to invoke OS services.
 - The **passing of parameters** to system calls can be done via registers, memory blocks, or the stack, depending on the number of parameters and the OS.
 
+
+____
 

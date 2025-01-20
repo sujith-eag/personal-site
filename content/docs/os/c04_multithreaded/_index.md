@@ -1,11 +1,11 @@
 ---
-title: "C04_multithreaded"
+title: "Chapter 04 - Multithreaded Programming"
 description: ""
 summary: ""
 date: 2025-01-12T21:14:58+05:30
 lastmod: 2025-01-12T21:14:58+05:30
 draft: true
-weight: 999
+weight: 2020
 toc: true
 seo:
   title: "" # custom title (optional)

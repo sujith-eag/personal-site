@@ -105,11 +105,17 @@ Key Benefits:
   - Facilitates better resource management and isolation.
   - Enables testing and development of different OS setups without needing separate hardware.
 
-[image for virtualization and VMware]
+{{< figure src="images/os/1_20_Virtual_Models.jpg"  alt="1.20 Virtualization"  caption="1.20 Virtualization" >}}
 
-> Java is always interpreted. Interpretation is a form of emulation, the high level language code is translated to native CPU instructions, emulating a theoretical virtual machine on which that language could run natively.
-> 
-> Java programs are run on "Java virtual machines", but technically those virtual machines are Java emulators.
+{{< callout note >}}
+Java is always interpreted. Interpretation is a form of emulation, the high level language code is translated to native CPU instructions, emulating a theoretical virtual machine on which that language could run natively.
+
+Java programs are run on "Java virtual machines", but technically those virtual machines are Java emulators.
+{{< /callout >}}
+
+
+{{< figure src="images/os/1_21_Java_VM.jpg"  alt="1.21 Java Virtual Machine"  caption="1.21 Java Virtual Machine" >}}
+
 
 ---
 
@@ -414,7 +420,7 @@ Others are (ASICs) application-specific Integrated circuits that perform the tas
 ---
 
 
-### Real-Time Embedded Systems in Home Appliances
+#### 10. Real-Time Embedded Systems in Home Appliances
 
 1. **Smart Thermostats**
 2. **Washing Machines**

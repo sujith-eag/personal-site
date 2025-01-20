@@ -15,6 +15,7 @@ seo:
 ---
 
 
+
 The objective of **multiprogramming** is to ensure that some process is always running, maximizing **CPU utilization**. 
 
 The goal of **time-sharing** systems is to switch the CPU between processes frequently enough that the user can interact with each program while it is running.
@@ -34,6 +35,9 @@ When a process enters the system, it is placed in the **job queue**, which consi
 
 - **Device Queue:**  
   If a process requests I/O (e.g., disk access) and the device is busy, the process is placed in the **device queue** for that specific I/O device. Each device has its own queue.
+
+
+{{< figure  src="images/os/3_06_QueueingDiagram.jpg"  alt="3.06 Queueing Diagram Representing Process Scheduling"  caption="3.06 Queueing Diagram Representing Process Scheduling" >}}
 
 #### **Process Lifecycle in Queues:**
 
@@ -97,6 +101,10 @@ In **time-sharing systems** (like UNIX and Windows), there may be an additional 
   - The process can later be reintroduced into memory and resume from where it left off. This is called **swapping**.
 
 **Swapping** helps manage system load and memory usage, particularly when memory requirements exceed available resources.
+
+
+
+{{< figure  src="images/os/3_07_QueuingDiagram2.jpg"  alt="3.07 Medium Term Scheduling in Queueing Diagram"  caption="3.07 Medium Term Scheduling in Queueing Diagram" >}}
 
 ---
 

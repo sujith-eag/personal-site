@@ -59,13 +59,18 @@ Some computer systems, such as PCs, use a two-step process in which a simple boo
 6. **Loading the Operating System**:
    - Once the bootstrap program has been loaded into memory, it traverses the file system on disk to find and load the kernel of the operating system.
    - After locating the kernel, it is loaded into memory and execution starts, and the system begins to **run** the operating system.
-   
-> **GRUB (Grand Unified Bootloader)**:    
-> One of the most widely used bootstrap programs for Linux systems is **GRUB**, which helps manage the boot process and allows users to choose between different operating systems or kernel versions at startup.
 
-> **Boot Disk**:      
-> The disk that contains the boot partition and the operating system is often referred to as the **boot disk** or **system disk**.    
-> This disk is critical for loading the operating system during the boot process.
+{{< callout note >}}
+**GRUB (Grand Unified Bootloader)**:    
+One of the most widely used bootstrap programs for Linux systems is **GRUB**, which helps manage the boot process and allows users to choose between different operating systems or kernel versions at startup.
+{{< /callout >}}
+
+
+{{< callout note >}}
+**Boot Disk**:      
+The disk that contains the boot partition and the operating system is often referred to as the **boot disk** or **system disk**.    
+This disk is critical for loading the operating system during the boot process.
+{{< /callout >}}
 
 
 ---
@@ -80,3 +85,7 @@ Some computer systems, such as PCs, use a two-step process in which a simple boo
 - **GRUB (Grand Unified Bootloader)**: A popular bootloader used in Linux systems for loading and managing multiple operating systems.
 
 ---
+
+
+___
+

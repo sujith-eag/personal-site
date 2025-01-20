@@ -19,7 +19,7 @@ seo:
 The main three aspects of an OS are its **services**, **interfaces**, and **components**. 
 
 
-[Image, A view of Operating System services]
+{{< figure src="images/os/2_01_OS_Services.jpg"  alt="2.1 Operating System Services"  caption="2.1 Operating System Services" >}}
 
 ---
 

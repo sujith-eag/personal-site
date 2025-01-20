@@ -42,7 +42,10 @@ Common process control system calls include:
 | Process Termination         | ExitProcess()                | exit()      |
 | Process Waiting             | WaitingForSingleObject()     | wait()      |
 
-> In an interactive system, if a program terminates abnormally, the OS usually handles the termination and outputs an error message. In GUI systems, a pop-up may alert the user. In batch systems, the job may be terminated and the next job executed.
+{{< callout note >}}
+In an interactive system, if a program terminates abnormally, the OS usually handles the termination and outputs an error message. In GUI systems, a pop-up may alert the user. In batch systems, the job may be terminated and the next job executed.
+{{< /callout >}}
+
 
 ---
 
@@ -139,3 +142,7 @@ Common protection system calls include:
 
 
 By organizing system calls into categories such as **process control**, **file management**, and **device management**, operating systems allow developers to interact with the underlying hardware and system services efficiently.
+
+
+____
+
