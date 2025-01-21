@@ -14,27 +14,16 @@ seo:
   noindex: false # false (default) or true
 ---
 
-**Interrupts, System Calls, and Modes of Operation**
+Interrupts, System Calls, and Modes of Operation
 
-## **Interrupt-Driven Systems**
+### **Interrupt-Driven Systems**
 
 Modern Operating Systems are **interrupt-driven**, meaning they rely on **interrupts** to perform tasks. If there are no I/O devices to service or no user requests, the OS remains idle, waiting for events to occur.
 
-### **Interrupts**
+
 An **interrupt** is a signal to the processor indicating that an event has occurred, prompting the OS to take specific actions.      
+
 A **trap** (or **exception**) is a software-generated interrupt triggered by errors (e.g., division by zero, invalid memory access) or by a user program requesting an operating system service.
-
-### **Interrupt Service Routine**
-For each type of interrupt, the OS contains specific code that determines the appropriate action. The OS uses an **Interrupt Service Routine (ISR)** to handle interrupts when they occur.
-
-Since both the OS and users share the hardware and software resources, any error in a user program should only affect that particular program, not the entire system. However, issues such as infinite loops or erroneous programs modifying data from other programs can cause system-wide problems.
-
-
-{{< callout note >}}
-A properly designed OS ensures that a faulty or malicious program does not negatively affect other running programs or the OS itself.
- {{< /callout >}}
-
- ___
 
 ### **Interrupt vs. Trap**
 
@@ -54,12 +43,25 @@ Both **traps** and **interrupts** allow the operating system to take control of 
 
 **Interrupts** are hardware-managed and often require privileged instructions, while **traps** can be triggered by user programs for system calls but cannot directly cause interrupts.
 
-| Feature          | **Interrupt**                                                        | **Trap (Exception)**                                                                      |
-| ---------------- | -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| **Trigger**      | Hardware event (asynchronous)                                        | Software event (synchronous)                                                              |
-| **Cause**        | External devices (I/O, timer, etc.)                                  | Program errors or system calls (e.g., divide by zero, invalid memory access)              |
-| **Control Flow** | OS takes control to handle the event                                 | OS takes control via a system call or error during program execution                       |
-| **Handling**     | Handled by service routines for hardware events                       | Handled by error handling or system service routines                                      |
+| Feature          | **Interrupt**                                   | **Trap (Exception)**                                                         |
+| ---------------- | ----------------------------------------------- | ---------------------------------------------------------------------------- |
+| **Trigger**      | Hardware event (asynchronous)                   | Software event (synchronous)                                                 |
+| **Cause**        | External devices (I/O, timer, etc.)             | Program errors or system calls (e.g., divide by zero, invalid memory access) |
+| **Control Flow** | OS takes control to handle the event            | OS takes control via a system call or error during program execution         |
+| **Handling**     | Handled by service routines for hardware events | Handled by error handling or system service routines                         |
+
+ ___
+
+### **Interrupt Service Routine**
+
+For each type of interrupt, the OS contains specific code that determines the appropriate action. The OS uses an **Interrupt Service Routine (ISR)** to handle interrupts when they occur.
+
+Since both the OS and users share the hardware and software resources, any error in a user program should only affect that particular program, not the entire system. However, issues such as infinite loops or erroneous programs modifying data from other programs can cause system-wide problems.
+
+
+{{< callout note >}}
+A properly designed OS ensures that a faulty or malicious program does not negatively affect other running programs or the OS itself.
+ {{< /callout >}}
 
 
 ---
@@ -73,7 +75,7 @@ To protect the OS from errant user programs and vice versa, the OS operates in t
 - **User Mode (1)**: The mode in which user applications run.
 - **Kernel Mode (0)**: The privileged mode in which the OS operates and can execute sensitive instructions.
 
-A **mode bit** is added to the CPU to indicate the current mode of operation. This dual-mode operation helps protect the OS by restricting certain instructions, called **privileged instructions**, to **Kernel Mode**. These privileged instructions may include tasks like I/O control, interrupt management, and timer management.
+A **mode bit** is added to the CPU to indicate the current mode of operation. This dual-mode operation helps protect the OS by restricting certain instructions, called **privileged instructions**, to **Kernel Mode**.
 
 {{< callout note >}}
 **Examples of privileged instructions**:  
@@ -103,7 +105,6 @@ CPU's like the Intel 64 family support **privilege levels** for virtualization, 
 
 #### **Mode Transition and Control Flow**
 
-At system startup, the hardware begins in **Kernel Mode**. As the OS loads, it switches to **User Mode** to run applications. The OS switches back to **Kernel Mode** when responding to system calls, interrupts, or traps. Before passing the control to a user program, the system always switches to user mode.
 
 1. **Boot time**: The system starts in **Kernel Mode**.
 2. **User applications**: When the OS loads user applications, it switches to **User Mode**.
@@ -146,7 +147,7 @@ Control Flow of a System call
 
 ### **Preventing Illegal Execution**
 
-Once hardware protection is in place, it detects errors that violate modes. 
+Once hardware protection like mode bit is in place, it detects errors that violate modes. 
 
 When the system is in **Kernel Mode**, it can detect errors that violate the operating modes, such as illegal instruction execution or unauthorized memory access. These errors are handled by the OS:
 
@@ -164,13 +165,21 @@ The absence of hardware-supported dual-mode operation can lead to serious issues
 
 ### **1.5.2 Timer**
 
-A **Timer** is a critical component in the OS to maintain control over execution. It can interrupt the system after a fixed or variable period, preventing user programs from running indefinitely.
+**Timer** is a component that can interrupt the system after a fixed or variable period, preventing user programs from running indefinitely.
+It is a critical component in the OS to maintain control over execution. 
 
 - A **fixed-rate clock** and a **counter** are used to implement a variable timer.
 - The OS initializes the counter, and each time the clock ticks, the counter is decremented. When the counter reaches zero, an interrupt occurs.
 - Timer interrupts ensure that a program does not run too long or gets stuck in an infinite loop and never return control to OS.
 
+OS ensures that timer is set before transferring control to a user program. If the timer interrupts, control is passed back to the OS, which can either treat the interrupt as an error or extend the program's time.
+
+Instructions that modify the content of the timer are privileged.
+
+___
+
 #### **Timer Usage Example**
+
 - A program with a 7-minute limit could have its timer initialized to **420** (7 minutes in seconds).
 - Each second, the counter decrements by 1, and control returns to the user program as long as the counter is positive.
 - If the counter reaches zero, the OS terminates the program for exceeding its time limit.
@@ -179,11 +188,6 @@ A **Timer** is a critical component in the OS to maintain control over execution
 **Example Timer Configuration**:  
 A 10-bit counter with a 1-millisecond clock allows for interrupts at intervals ranging from 1 millisecond to 1,024 milliseconds (1 second).
 {{< /callout >}}
-
-
-Before transferring control to a user program, the OS ensures that the timer is set. If the timer interrupts, control is passed to the OS, which can either treat the interrupt as an error or extend the program's time.
-
-Instructions that modify the content of the timer are privileged.
 
 
 ---
