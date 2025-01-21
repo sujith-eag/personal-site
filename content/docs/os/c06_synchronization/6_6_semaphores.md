@@ -22,11 +22,11 @@ A **semaphore** is an integer variable that controls access to a shared resource
 
 ___
 
-#### The `wait()` and `signal()` Operations
+#### The wait() and signal() Operations
 
 - The **`wait()`** operation checks the value of the semaphore. If the value is greater than 0, it decrements the value and allows the process to proceed. If the value is 0 or less, the process will wait (i.e., it will keep checking the value until it can proceed). This prevents the process from proceeding if resources are unavailable.
 
-```
+```c
 wait(S) {
     while (S <= 0)
         ; // busy wait
@@ -36,7 +36,7 @@ wait(S) {
 
 - The **`signal()`** operation increments the semaphore value, signaling that a resource has been released or an event has occurred. This operation allows waiting processes to continue if necessary.
 
-```
+```c
 signal(S) {
     S++;
 }
@@ -77,13 +77,13 @@ Consider two processes, P1 and P2, running concurrently. Let’s say we want to 
 We can achieve this synchronization using a common semaphore, `synch`, initialized to 0. 
 
 In **P1**:
-```
+```c
 S1;                // Execute some operation
 signal(synch);     // Signal that S1 is complete
 ```
 
 In **P2**:
-```
+```c
 wait(synch);       // Wait until P1 signals
 S2;                // Execute the operation only after S1 is done
 ```

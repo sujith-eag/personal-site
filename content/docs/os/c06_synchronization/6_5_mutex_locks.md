@@ -32,7 +32,7 @@ The term **mutex** is short for **mutual exclusion**, and its purpose is to prot
   - If **available** is true, the lock is available, and the process can acquire it.
   - If **available** is false, the lock is unavailable, and the process trying to acquire the lock will be blocked until the lock is released.
   
-### `acquire()` Function:
+### acquire() Function:
 The definition of the `acquire()` function is as follows:
 
 ```c
@@ -47,7 +47,7 @@ acquire() {
 - If the lock is unavailable (`available == false`), the process enters a **busy wait**, meaning it continuously checks if the lock becomes available.
 - Once the lock is available, the process acquires it by setting `available` to **false**, making the lock unavailable for other processes.
 
-### `release()` Function:
+### release() Function:
 The definition of the `release()` function is as follows:
 
 ```c

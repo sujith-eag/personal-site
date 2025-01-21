@@ -15,6 +15,7 @@ seo:
 ---
 
 
+
 #### 1.11.1 Traditional Computing
 
 Traditional computing refers to the setup where computing resources, such as servers and workstations, are located locally in a company or institution. Web technologies and increasing WAN (Wide Area Network) bandwidth are expanding the boundaries of traditional computing.
@@ -32,8 +33,7 @@ This shift towards thin clients helps reduce the complexity and cost of maintain
 
 Mobile computing refers to the use of portable computing devices (like smartphones, tablets, and laptops) that can connect to networks wirelessly.
 
-- OS for mobile devices is designed to be lightweight and optimized for touch interfaces.
-- Examples: iOS, Android, Windows Mobile
+- OS for mobile devices is designed to be lightweight and optimized for touch interfaces. Ex: iOS, Android, Windows Mobile
 - Key features:
   - **Portability**: Devices are highly portable, allowing users to stay connected anytime, anywhere.
   - **Battery Optimization**: Mobile OSes are designed to conserve battery life while providing performance.
@@ -125,9 +125,10 @@ Cloud computing refers to the delivery of computing services—including storage
 
 Cloud computing allows users to access services remotely from any device with an internet connection, offering flexibility, scalability, and cost efficiency. Cloud services are typically offered under a subscription-based model.
 
-**Types of Clouds**:
+#### **Types of Clouds**:
 
-**Public Cloud**:       
+##### **Public Cloud**:       
+
 In a public cloud, the cloud resources (servers, storage, and applications) are owned and operated by a third-party provider and made available to the general public. 
 
 **Examples**: 
@@ -146,7 +147,8 @@ In a public cloud, the cloud resources (servers, storage, and applications) are 
 
 ___
 
-**Private Cloud**:      
+##### **Private Cloud**:      
+
 In a private cloud, the cloud infrastructure is used exclusively by a single organization. The resources may be hosted on-premises or by a third-party provider.
 
 **Examples**: 
@@ -164,7 +166,8 @@ In a private cloud, the cloud infrastructure is used exclusively by a single org
 
 ___
 
-**Hybrid Cloud**:      
+##### **Hybrid Cloud**:      
+
 A hybrid cloud combines both public and private clouds, allowing data and applications to be shared between them. This provides businesses with greater flexibility and optimization of existing infrastructure.
 
 **Examples**: 
@@ -181,7 +184,8 @@ A hybrid cloud combines both public and private clouds, allowing data and applic
 
 ___
 
-**Community Cloud**:      
+##### **Community Cloud**:   
+
 A community cloud is shared by several organizations with similar interests or requirements, typically in a specific industry or regulatory domain. It allows for shared infrastructure and resources, yet still maintains a level of privacy and security for each organization.
 
 **Examples**: 
@@ -198,11 +202,12 @@ A community cloud is shared by several organizations with similar interests or r
 
 ____
 
-**Cloud Service Models**:
+#### **Cloud Service Models**:
 
 Cloud services are typically categorized into three primary service models, which differ in the level of control and responsibility retained by the user:
 
-**Infrastructure as a Service (IaaS)**:        
+##### **Infrastructure as a Service (IaaS)**:        
+
 IaaS provides virtualized computing resources over the internet, including virtual machines, storage, and networks. The user is responsible for managing the operating system, applications, and data, while the provider handles the physical infrastructure.
 
 **Examples**: 
@@ -221,7 +226,8 @@ IaaS provides virtualized computing resources over the internet, including virtu
 
 ___
 
-**Platform as a Service (PaaS)**:       
+##### **Platform as a Service (PaaS)**: 
+
 PaaS provides a platform that allows developers to build, deploy, and manage applications without dealing with the underlying hardware or operating systems. The provider handles the infrastructure, operating systems, and runtime environments.
 
 **Examples**: 
@@ -240,8 +246,9 @@ PaaS provides a platform that allows developers to build, deploy, and manage app
 
 ___
 
-**Software as a Service (SaaS)**:        
-- SaaS delivers software applications over the internet on a subscription basis. Users access applications through a web browser, and the provider manages the underlying infrastructure, platform, and software updates.
+##### **Software as a Service (SaaS)**:        
+
+SaaS delivers software applications over the internet on a subscription basis. Users access applications through a web browser, and the provider manages the underlying infrastructure, platform, and software updates.
 
 **Examples**: 
 - **Google Workspace (formerly G Suite)**: A suite of productivity applications, including Gmail, Google Docs, Sheets, and Drive, all accessible via a web browser.
@@ -259,7 +266,8 @@ ___
 
 ___
 
-**Function as a Service (FaaS)**:      
+##### **Function as a Service (FaaS)**:    
+
 FaaS, or serverless computing, allows users to execute individual functions or code in response to events without managing the underlying infrastructure. The cloud provider automatically handles the scaling and resources needed for the execution.
 
 **Examples**: 
@@ -276,7 +284,8 @@ FaaS, or serverless computing, allows users to execute individual functions or c
 
 ___
 
-**Database as a Service (DBaaS)**:      
+##### **Database as a Service (DBaaS)**:      
+
 DBaaS allows users to host, manage, and scale databases without handling the underlying infrastructure. The cloud provider manages database performance, backups, and scalability.
 
 **Examples**: 
@@ -293,7 +302,8 @@ DBaaS allows users to host, manage, and scale databases without handling the und
 
 ___
 
-**Key Benefits of Cloud Computing**:
+#### **Key Benefits of Cloud Computing**:
+
 - **Scalable Resources on Demand**: Cloud services allow businesses to scale their computing resources up or down based on demand. For example, an e-commerce website might require more resources during a holiday sale and scale back afterward.
 - **Pay-as-You-Go Pricing Models**: With cloud computing, users only pay for the resources they use. This helps businesses avoid upfront infrastructure costs and scale efficiently.
 - **Accessibility**: Cloud services can be accessed from any device with an internet connection, allowing for greater flexibility and mobility. Remote work and collaboration become more efficient, as users can access their data and applications from anywhere.
@@ -329,8 +339,8 @@ Others are (ASICs) application-specific Integrated circuits that perform the tas
 
 
 ---
-
-#### 1. **Aerospace & Defense**
+#### Areas of Real Time Embedded systems usage
+##### 1. **Aerospace & Defense**
 
 **Flight Control Systems**: ensure that the flight control systems (e.g., autopilot, navigation, and thrust management) respond promptly to inputs like altitude changes, turns, or environmental factors.
    
@@ -341,7 +351,7 @@ Others are (ASICs) application-specific Integrated circuits that perform the tas
 
 ---
 
-#### 2. **Automotive**
+##### 2. **Automotive**
 
 **Anti-lock Braking System (ABS)**: Continuously monitors wheel speed sensors and adjusts brake pressure to prevent skidding during hard braking.
 
@@ -422,18 +432,19 @@ Others are (ASICs) application-specific Integrated circuits that perform the tas
 
 #### 10. Real-Time Embedded Systems in Home Appliances
 
-1. **Smart Thermostats**
-2. **Washing Machines**
-3. **Dishwashers**
-4. **Refrigerators**
-5. **Microwave Ovens**
-6. **Air Conditioners**
-7. **Smart Coffee Makers**
-8. **Smart Locks**
-9. **Smart Light Bulbs**
-10. **Vacuum Cleaners**
-11. **Smoke Detectors**
-12. **Electric Kettles**
+* Smart Thermostats
+* Washing Machines
+* Dishwashers
+* Refrigerators
+* Microwave Ovens
+* Air Conditioners
+* Smart Coffee Makers
+* Smart Locks
+* Smart Light Bulbs
+* Vacuum Cleaners
+* Smoke Detectors
+
 
 ---
+
 

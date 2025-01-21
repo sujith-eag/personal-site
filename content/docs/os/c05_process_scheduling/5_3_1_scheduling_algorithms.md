@@ -18,7 +18,7 @@ seo:
 
 CPU scheduling deals with the problem of deciding which of the processes in the ready queue is to be allocated the CPU. There are many different CPU-scheduling algorithms.
 
-## 5.3.1 First-Come, First-Served Scheduling (FCFS)
+### 5.3.1 First-Come, First-Served Scheduling (FCFS)
 
 The **First-Come, First-Served (FCFS)** scheduling algorithm allocates the CPU to processes in the order they request it, using a **FIFO queue**. The process at the head of the queue is given the CPU, and once it completes, it is removed.
 

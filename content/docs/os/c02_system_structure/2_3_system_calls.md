@@ -16,17 +16,22 @@ seo:
 
 
 
-System calls provide the essential interface between user-level programs and the operating system. They allow applications to request services, such as file manipulation, process control, and communication with I/O devices, from the OS kernel. The process of making a system call is essential for interaction between software and hardware components.
+
+The process of making a system call is essential for interaction between software and hardware components.
+
+System calls provide the essential interface between user-level programs and the operating system by allowing applications to request services, such as **file manipulation, process control, and communication** with I/O devices, from the OS kernel. 
+
 
 ---
 
-#### **System Calls: An Overview**
+### **System Calls: An Overview**
 
-System calls are the fundamental interface between applications and the operating system.      
-They are typically implemented as **routines in C or C++**, although **assembly language** might be used for low-level operations requiring direct hardware access.        
-The OS can execute thousands of system calls per second, as they are used to manage resources and provide services to running applications.
+* System calls are the fundamental interface between applications and the operating system.      
+* They are typically implemented as **routines in C or C++**, although **assembly language** might be used for low-level operations requiring direct hardware access.        
+* The OS can execute thousands of system calls per second, as they are used to manage resources and provide services to running applications.
 
-Applications are designed based on an **Application Programming Interface (API)**, which specifies the available system services that can be used by the application. The API outlines the set of functions, their parameters, and the return values that a programmer can expect when interacting with the operating system.
+Applications are designed based on an **Application Programming Interface (API)**.      
+The API outlines the available system services, set of functions, their parameters, and the return values that a programmer can expect when interacting with the operating system.
 
 Some common **APIs** include:
 - **Windows API**: Used for applications running on Windows systems.
@@ -53,7 +58,10 @@ The use of an API ensures that applications designed on one platform can be easi
 
 #### **System-Call Interface**
 
-The **system-call interface** acts as the intermediary between the user program and the operating system kernel. When an application invokes an API function, the system-call interface intercepts that call and translates it into the appropriate system call. The OS kernel then executes the request and returns any relevant data or status information back to the application via the system-call interface.
+The **system-call interface** acts as the intermediary between the user program and the operating system kernel. 
+
+* When an application invokes an API function, the system-call interface intercepts that call and translates it into the appropriate system call.
+* The OS kernel then executes the request and returns any relevant data or status information back to the application via the system-call interface.
 
 
 ---
@@ -87,10 +95,10 @@ APIs provide a high-level interface to these system calls, making them easier fo
 
 The **system-call interface** serves as the link between the application and the OS, handling the translation of API function calls into actual system calls.
 
-In summary:
 - **APIs** abstract the complexity of making system calls directly.
 - **System-call interfaces** enable user applications to invoke OS services.
 - The **passing of parameters** to system calls can be done via registers, memory blocks, or the stack, depending on the number of parameters and the OS.
+
 
 
 ____

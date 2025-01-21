@@ -19,6 +19,9 @@ System calls are typically grouped into six major categories, each providing dif
 
 These categories include **process control**, **file management**, **device management**, **information maintenance**, **communications**, and **protection**.
 
+
+By organizing system calls into categories, operating systems allow developers to interact with the underlying hardware and system services efficiently.
+
 ---
 
 #### 2.4.1 **Process Control**
@@ -140,9 +143,4 @@ Common protection system calls include:
 
 ---
 
-
-By organizing system calls into categories such as **process control**, **file management**, and **device management**, operating systems allow developers to interact with the underlying hardware and system services efficiently.
-
-
-____
 

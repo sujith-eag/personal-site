@@ -73,11 +73,10 @@ A process moves between various **scheduling queues** throughout its lifetime, a
 
 #### **Types of Processes:**
 
-- **I/O Bound Processes:**  
-  - Spend more time performing **I/O** operations than computations.
+- **I/O Bound Processes:**  Spend more time performing **I/O** operations than computations.
   
-- **CPU Bound Processes:**  
-  - Perform infrequent **I/O** operations and spend more time on computations.
+- **CPU Bound Processes:**  Perform infrequent **I/O** operations and spend more time on computations.
+
 
 For better system performance, a combination of **I/O-bound** and **CPU-bound** processes should be selected (Process Mix).
 
@@ -120,44 +119,36 @@ A **context switch** occurs when an interrupt happens, and the system must save 
 2. **Context Restore:**  
    - The OS loads the saved context of the **next process** to execute, restoring its state (e.g., CPU registers, program counter).
 
-#### **Key Points:**
 
-- **Overhead:**  
-  A **context switch** takes time and doesn't perform useful work while switching, so adding overhead to the system.
+- **Overhead:**  A **context switch** takes time and doesn't perform useful work while switching, so adding overhead to the system.
   
-- **Speed Variation:**  
-  The time taken for a context switch can vary based on system factors, like memory speed and the number of registers involved.
+- **Speed Variation:**  The time taken for a context switch can vary based on system factors, like memory speed and the number of registers involved.
 
 ---
 
 
 ### **Swapping vs. Context Switching**
 
-#### **1. Purpose**
-
-- The primary purpose of swapping is to manage **memory** and **multiprogramming**. It involves temporarily removing a process from **main memory** to free up space, and then later restoring it when needed. This is typically done when the system is overloaded or when the available memory is insufficient to handle all the running processes.
+**Swapping :**
 - **Swapping** is about managing memory by moving processes between RAM and disk. It's done when the system runs out of memory or needs to adjust the number of processes in memory.
+- The primary purpose of swapping is to manage **memory** and **multiprogramming**. It involves temporarily removing a process from **main memory** to free up space, and then later restoring it when needed. This is typically done when the system is overloaded or when the available memory is insufficient to handle all the running processes.
+
  
-- **Context Switching:**  
-- The purpose of context switching is to **switch between processes** during execution, so that the CPU can allocate time to multiple processes in a time-sharing environment. It is a fundamental operation in multitasking systems, enabling the CPU to switch between processes without having to halt the system completely.
+**Context Switching :**
 - **Context Switching** is about switching the CPU’s focus between processes. It occurs frequently as the CPU moves between tasks, saving and restoring the state of processes.
+- The purpose of context switching is to **switch between processes** during execution, so that the CPU can allocate time to multiple processes in a time-sharing environment. It is a fundamental operation in multitasking systems, enabling the CPU to switch between processes without having to halt the system completely.
 
-#### **2. When It Happens**
 
-- **Swapping:**  
-  - Swapping occurs when a process is removed from **memory** and stored on **disk** to make space for other processes in memory. This generally happens when the system is running out of memory or when the degree of multiprogramming needs to be adjusted.
-  - Swapping occurs less frequently and only when necessary due to memory constraints or system load management. It's usually a **long-term operation**.
+#### **Impact on the System**
+
+**Swapping:**  
+- Swapping is a **high-cost operation** in terms of time and resources because it involves transferring a process between main memory and disk. It is relatively slower than context switching due to the slower speed of disk compared to RAM.
+- Involves **main memory** and **disk**. A process is moved from **RAM to disk** and back to **RAM** when it needs to resume execution.
   
-- **Context Switching:**  
-  - Context switching happens during the **execution** of processes, typically due to an **interrupt**, a **system call**, or when the process is voluntarily suspended. It involves saving the state of the currently running process and restoring the state of the next process to be executed by the CPU.
-  - Context switching happens **frequently** during the execution of processes, especially in time-sharing systems. It occurs **many times per second** as the CPU switches between active processes.
+**Context Switching:**  
+- Context switching is much **faster** than swapping, but still incurs overhead because the system has to save and load the process state (e.g., CPU registers, program counter, etc.) between switches. The overhead is minimal but significant when switching frequently.
+- Involves **CPU state** (registers, program counter, etc.) but does not involve moving a process between memory and disk. The process remains in memory throughout the switch.
 
-#### **3. Impact on the System**
 
-- **Swapping:**  
-  - Swapping is a **high-cost operation** in terms of time and resources because it involves transferring a process between main memory and disk. It is relatively slower than context switching due to the slower speed of disk compared to RAM.
-  - Involves **main memory** and **disk**. A process is moved from **RAM to disk** and back to **RAM** when it needs to resume execution.
-  
-- **Context Switching:**  
-  - Context switching is much **faster** than swapping, but still incurs overhead because the system has to save and load the process state (e.g., CPU registers, program counter, etc.) between switches. The overhead is minimal but significant when switching frequently.
-  - Involves **CPU state** (registers, program counter, etc.) but does not involve moving a process between memory and disk. The process remains in memory throughout the switch.
+____
+
