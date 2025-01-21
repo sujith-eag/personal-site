@@ -35,7 +35,7 @@
       <link>http://localhost:1313/personal-site/docs/os/c06_synchronization/os-6.06-semaphores/</link>
       <pubDate>Sun, 12 Jan 2025 21:27:49 +0530</pubDate>
       <guid>http://localhost:1313/personal-site/docs/os/c06_synchronization/os-6.06-semaphores/</guid>
-      <description>&lt;h2 id=&#34;66-semaphores&#34;&gt;6.6 Semaphores&lt;/h2&gt;&#xA;&lt;h3 id=&#34;661-semaphore-usage&#34;&gt;6.6.1 Semaphore Usage&lt;/h3&gt;&#xA;&lt;h3 id=&#34;662-semaphore-implementation&#34;&gt;6.6.2 Semaphore Implementation&lt;/h3&gt;&#xA;&lt;h3 id=&#34;663-deadlock-and-starvation&#34;&gt;6.6.3 Deadlock and Starvation&lt;/h3&gt;</description>
+      <description>&lt;p&gt;Semaphores are a more advanced and flexible synchronization mechanism compared to mutex locks. They allow processes to synchronize their actions in more sophisticated ways.&lt;/p&gt;</description>
     </item>
     <item>
       <title>OS 6.07 - Classic Problems</title>

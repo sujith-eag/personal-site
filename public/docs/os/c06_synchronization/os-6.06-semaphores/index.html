@@ -45,10 +45,7 @@
 <link rel="manifest" href="/personal-site/manifest.webmanifest">
 
 <meta property="og:title" content="OS 6.06 - Semaphores">
-<meta property="og:description" content="6.6 Semaphores
-6.6.1 Semaphore Usage
-6.6.2 Semaphore Implementation
-6.6.3 Deadlock and Starvation">
+<meta property="og:description" content="Semaphores are a more advanced and flexible synchronization mechanism compared to mutex locks. They allow processes to synchronize their actions in more sophisticated ways.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://localhost:1313/personal-site/docs/os/c06_synchronization/os-6.06-semaphores/"><meta property="og:image" content="http://localhost:1313/personal-site/cover.png"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2025-01-12T21:27:49+05:30">
@@ -56,10 +53,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://localhost:1313/personal-site/cover.png"><meta name="twitter:title" content="OS 6.06 - Semaphores">
-<meta name="twitter:description" content="6.6 Semaphores
-6.6.1 Semaphore Usage
-6.6.2 Semaphore Implementation
-6.6.3 Deadlock and Starvation">
+<meta name="twitter:description" content="Semaphores are a more advanced and flexible synchronization mechanism compared to mutex locks. They allow processes to synchronize their actions in more sophisticated ways.">
 
     
     
@@ -1914,11 +1908,30 @@
   <h3>On this page</h3>
     <nav id="toc">
   <ul>
-    <li><a href="#66-semaphores">6.6 Semaphores</a>
+    <li>
       <ul>
-        <li><a href="#661-semaphore-usage">6.6.1 Semaphore Usage</a></li>
-        <li><a href="#662-semaphore-implementation">6.6.2 Semaphore Implementation</a></li>
-        <li><a href="#663-deadlock-and-starvation">6.6.3 Deadlock and Starvation</a></li>
+        <li>
+          <ul>
+            <li><a href="#the-wait-and-signal-operations">The <code>wait()</code> and <code>signal()</code> Operations</a></li>
+          </ul>
+        </li>
+        <li><a href="#661-semaphore-usage-in-synchronization">6.6.1 Semaphore Usage in Synchronization</a>
+          <ul>
+            <li></li>
+            <li><a href="#example-process-synchronization-with-semaphores">Example: Process Synchronization with Semaphores</a></li>
+          </ul>
+        </li>
+        <li><a href="#662-semaphore-implementation">6.6.2 Semaphore Implementation</a>
+          <ul>
+            <li><a href="#ensuring-atomicity">Ensuring Atomicity</a></li>
+          </ul>
+        </li>
+        <li><a href="#663-deadlock-and-starvation">6.6.3 Deadlock and Starvation</a>
+          <ul>
+            <li><a href="#example-of-deadlock">Example of Deadlock</a></li>
+            <li><a href="#starvation-indefinite-blocking">Starvation (Indefinite Blocking)</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -1936,11 +1949,30 @@
     <div class="page-links">
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#66-semaphores">6.6 Semaphores</a>
+    <li>
       <ul>
-        <li><a href="#661-semaphore-usage">6.6.1 Semaphore Usage</a></li>
-        <li><a href="#662-semaphore-implementation">6.6.2 Semaphore Implementation</a></li>
-        <li><a href="#663-deadlock-and-starvation">6.6.3 Deadlock and Starvation</a></li>
+        <li>
+          <ul>
+            <li><a href="#the-wait-and-signal-operations">The <code>wait()</code> and <code>signal()</code> Operations</a></li>
+          </ul>
+        </li>
+        <li><a href="#661-semaphore-usage-in-synchronization">6.6.1 Semaphore Usage in Synchronization</a>
+          <ul>
+            <li></li>
+            <li><a href="#example-process-synchronization-with-semaphores">Example: Process Synchronization with Semaphores</a></li>
+          </ul>
+        </li>
+        <li><a href="#662-semaphore-implementation">6.6.2 Semaphore Implementation</a>
+          <ul>
+            <li><a href="#ensuring-atomicity">Ensuring Atomicity</a></li>
+          </ul>
+        </li>
+        <li><a href="#663-deadlock-and-starvation">6.6.3 Deadlock and Starvation</a>
+          <ul>
+            <li><a href="#example-of-deadlock">Example of Deadlock</a></li>
+            <li><a href="#starvation-indefinite-blocking">Starvation (Indefinite Blocking)</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -1949,10 +1981,219 @@
   </details>
 
 			</nav>
-			<h2 id="66-semaphores">6.6 Semaphores<a href="#66-semaphores" class="anchor" aria-hidden="true">#</a> </h2>
-<h3 id="661-semaphore-usage">6.6.1 Semaphore Usage<a href="#661-semaphore-usage" class="anchor" aria-hidden="true">#</a> </h3>
+			<p>Semaphores are a more advanced and flexible synchronization mechanism compared to mutex locks. They allow processes to synchronize their actions in more sophisticated ways.</p>
+<p>A <strong>semaphore</strong> is an integer variable that controls access to a shared resource. Apart from being initialized, the semaphore can only be accessed using two operations: <code>wait()</code> and <code>signal()</code>, both of which are atomic (indivisible) operations.</p>
+<hr>
+<h4 id="the-wait-and-signal-operations">The <code>wait()</code> and <code>signal()</code> Operations<a href="#the-wait-and-signal-operations" class="anchor" aria-hidden="true">#</a> </h4>
+<ul>
+<li>The <strong><code>wait()</code></strong> operation checks the value of the semaphore. If the value is greater than 0, it decrements the value and allows the process to proceed. If the value is 0 or less, the process will wait (i.e., it will keep checking the value until it can proceed). This prevents the process from proceeding if resources are unavailable.</li>
+</ul>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <pre tabindex="0"><code>wait(S) {
+    while (S &lt;= 0)
+        ; // busy wait
+    S--;
+}</code></pre>
+  </figure>
+</div>
+<ul>
+<li>The <strong><code>signal()</code></strong> operation increments the semaphore value, signaling that a resource has been released or an event has occurred. This operation allows waiting processes to continue if necessary.</li>
+</ul>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <pre tabindex="0"><code>signal(S) {
+    S++;
+}</code></pre>
+  </figure>
+</div>
+<p>Both the <code>wait()</code> and <code>signal()</code> operations modify the semaphore’s value. These operations must be executed atomically—meaning no other process can change the semaphore’s value while it’s being modified. This ensures that the operation is performed correctly and without interruption.
+(in the case of <code>wait(S)</code>, both the testing of the semaphore’s value <code>(S ≤ 0)</code> and its modification <code>(S--)</code> must be executed without interruption.)</p>
+<hr>
+<h3 id="661-semaphore-usage-in-synchronization">6.6.1 Semaphore Usage in Synchronization<a href="#661-semaphore-usage-in-synchronization" class="anchor" aria-hidden="true">#</a> </h3>
+<h5 id="types-of-semaphores">Types of Semaphores<a href="#types-of-semaphores" class="anchor" aria-hidden="true">#</a> </h5>
+<p>Semaphores are typically divided into two types:</p>
+<ul>
+<li>
+<p><strong>Counting semaphores</strong>: These semaphores can have any non-negative integer value, making them useful for managing multiple instances of a resource (e.g., a pool of identical resources). They are commonly used in scenarios where multiple resources are available, and each process needs to track how many resources are in use.</p>
+</li>
+<li>
+<p><strong>Binary semaphores</strong>: These semaphores can only have two values: 0 or 1. This behavior makes them similar to mutex locks, where the semaphore can either be in a locked (0) or unlocked (1) state.</p>
+</li>
+</ul>
+<hr>
+<p>Counting semaphores are particularly useful when controlling access to resources that have a limited number of instances.</p>
+<p>For example, in a system with a finite number of identical resources. A semaphore is initialized with the number of available resources.</p>
+<p>Each process that wants to use a resource must perform a <code>wait()</code> operation, which decreases the semaphore’s value.</p>
+<p>When the process is done using the resource, it performs a <code>signal()</code> operation to increase the semaphore’s value, making the resource available again.</p>
+<p>If the semaphore’s value is 0, it indicates that no resources are available, and any process attempting to use a resource will block (wait) until a resource is freed.</p>
+<hr>
+<h4 id="example-process-synchronization-with-semaphores">Example: Process Synchronization with Semaphores<a href="#example-process-synchronization-with-semaphores" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Consider two processes, P1 and P2, running concurrently. Let’s say we want to ensure that process P2 executes its statement <strong>S2</strong> only after process P1 has executed its statement <strong>S1</strong>.</p>
+<p>We can achieve this synchronization using a common semaphore, <code>synch</code>, initialized to 0.</p>
+<p>In <strong>P1</strong>:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <pre tabindex="0"><code>S1;                // Execute some operation
+signal(synch);     // Signal that S1 is complete</code></pre>
+  </figure>
+</div>
+<p>In <strong>P2</strong>:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <pre tabindex="0"><code>wait(synch);       // Wait until P1 signals
+S2;                // Execute the operation only after S1 is done</code></pre>
+  </figure>
+</div>
+<p>Since <code>synch</code> is initialized to 0, process P2 will be blocked at <code>wait(synch)</code> until process P1 executes <code>signal(synch)</code> after completing S1. Only then can process P2 proceed with S2.</p>
+<hr>
 <h3 id="662-semaphore-implementation">6.6.2 Semaphore Implementation<a href="#662-semaphore-implementation" class="anchor" aria-hidden="true">#</a> </h3>
+<p>The <code>wait()</code> and <code>signal()</code> operations have a <strong>busy-waiting</strong> issue similar to that of mutex locks.</p>
+<p>To avoid this inefficiency, we can modify these operations so that processes do not repeatedly check the semaphore value in a busy-wait loop.</p>
+<p>When a process executes the <code>wait()</code> operation and finds the semaphore value is <strong>not positive</strong>, it does not engage in busy waiting. Instead, the process blocks itself, placing it in a waiting queue associated with the semaphore. The process state is switched to the waiting state, and control is transferred to the CPU scheduler, which selects another process to execute.</p>
+<p>When another process executes the <code>signal()</code> operation, the blocked process is restarted by the <code>wakeup()</code> operation, which transitions it from the waiting state to the ready state and places it in the ready queue allowing it ti resume execution.</p>
+<p>To implement this, a semaphore is defined as:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">value</span><span class="p">;</span>          <span class="c1">// Semaphore&#39;s value (integer)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">struct</span> <span class="n">process</span> <span class="o">*</span><span class="n">list</span><span class="p">;</span>  <span class="c1">// List of processes waiting on the semaphore
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span> <span class="n">semaphore</span><span class="p">;</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Each semaphore has:</p>
+<ol>
+<li>An <strong>integer value</strong> to track the available resources (or events).</li>
+<li>A <strong>list</strong> of processes that are currently waiting for the semaphore.
+The <code>signal()</code> operation removes a process from the list and awakens it.</li>
+</ol>
+<p>The <code>wait()</code> operation is now defined as:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="nf">wait</span><span class="p">(</span><span class="n">semaphore</span> <span class="o">*</span><span class="n">S</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">S</span><span class="o">-&gt;</span><span class="n">value</span><span class="o">--</span><span class="p">;</span>  <span class="c1">// Decrement the semaphore value
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="n">S</span><span class="o">-&gt;</span><span class="n">value</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// If the value is negative, the process must wait
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">add</span> <span class="n">this</span> <span class="n">process</span> <span class="n">to</span> <span class="n">S</span><span class="o">-&gt;</span><span class="n">list</span><span class="p">;</span>  <span class="c1">// Add the process to the waiting list
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">block</span><span class="p">();</span>  <span class="c1">// Block the process (move it to the waiting state)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>The <code>signal()</code> operation is defined as:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="nf">signal</span><span class="p">(</span><span class="n">semaphore</span> <span class="o">*</span><span class="n">S</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">S</span><span class="o">-&gt;</span><span class="n">value</span><span class="o">++</span><span class="p">;</span>  <span class="c1">// Increment the semaphore value
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="n">S</span><span class="o">-&gt;</span><span class="n">value</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// If there are processes waiting
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">remove</span> <span class="n">a</span> <span class="n">process</span> <span class="n">P</span> <span class="n">from</span> <span class="n">S</span><span class="o">-&gt;</span><span class="n">list</span><span class="p">;</span>  <span class="c1">// Remove a process from the waiting list
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">wakeup</span><span class="p">(</span><span class="n">P</span><span class="p">);</span>  <span class="c1">// Wake up the process and move it to the ready state
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+  </figure>
+</div>
+<ul>
+<li><strong><code>block()</code></strong>: This operation suspends the invoking process and places it in the waiting state.</li>
+<li><strong><code>wakeup(P)</code></strong>: This operation resumes the execution of a blocked process <code>P</code>, moving it to the ready state, where it can be scheduled by the CPU.</li>
+</ul>
+<p>These operations are handled by the operating system as system calls.</p>
+<hr>
+<h4 id="ensuring-atomicity">Ensuring Atomicity<a href="#ensuring-atomicity" class="anchor" aria-hidden="true">#</a> </h4>
+<p>It is essential that semaphore operations (<code>wait()</code> and <code>signal()</code>) are <strong>atomic</strong>. This means that no two processes should be able to execute <code>wait()</code> or <code>signal()</code> on the same semaphore at the same time. If this atomicity is not ensured, it could lead to incorrect behavior and synchronization problems.</p>
+<p>To achieve atomicity, we need to prevent context switching during the execution of the semaphore operations. One way to do this is by <strong>disabling interrupts</strong> temporarily during the execution of <code>wait()</code> and <code>signal()</code>. While this guarantees atomicity, it comes with a performance cost, as it reduces the system&rsquo;s responsiveness.</p>
+<p>In <strong>Symmetric Multiprocessing (SMP)</strong> systems, where multiple processors might be involved, <strong>alternative locking mechanisms</strong> such as <code>compare and swap()</code> or <strong>spinlocks</strong> can be used to ensure that semaphore operations are atomic.</p>
+<p>However, while these mechanisms solve the atomicity issue, they do not completely eliminate <strong>busy waiting</strong>—they only move the busy waiting from the entry section (where processes wait to enter a critical section) to the critical sections of application programs.</p>
+<hr>
 <h3 id="663-deadlock-and-starvation">6.6.3 Deadlock and Starvation<a href="#663-deadlock-and-starvation" class="anchor" aria-hidden="true">#</a> </h3>
+<p><strong>Deadlock</strong> occurs when two or more processes are stuck, each waiting indefinitely for an event (such as a <code>signal()</code> operation) that can only be triggered by one of the processes in the group.</p>
+<p>In other words, a set of processes is deadlocked when every process is waiting for an event that can only be caused by another process in the same set, creating a circular dependency.</p>
+<h4 id="example-of-deadlock">Example of Deadlock<a href="#example-of-deadlock" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Consider two processes, P0 and P1, each trying to access two semaphores, <code>S</code> and <code>Q</code>, which are both initialized to 1:</p>
+<p><strong>P0</strong>:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <pre tabindex="0"><code>wait(S);
+wait(Q);
+...
+signal(S);
+signal(Q);</code></pre>
+  </figure>
+</div>
+<p><strong>P1</strong>:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <pre tabindex="0"><code>wait(Q);
+wait(S);
+...
+signal(Q);
+signal(S);</code></pre>
+  </figure>
+</div>
+<ul>
+<li>P0 executes <code>wait(S)</code> and successfully acquires semaphore <code>S</code>.</li>
+<li>P1 then executes <code>wait(Q)</code> and successfully acquires semaphore <code>Q</code>.</li>
+<li>Next, P0 tries to execute <code>wait(Q)</code>, but it must wait because P1 holds <code>Q</code>.</li>
+<li>Meanwhile, P1 tries to execute <code>wait(S)</code>, but it must wait because P0 holds <code>S</code>.</li>
+</ul>
+<p>At this point, P0 is waiting for P1 to release <code>Q</code>, and P1 is waiting for P0 to release <code>S</code>. Neither process can proceed because they are waiting for each other to signal the other. This creates a <strong>deadlock</strong>, where both processes are stuck in a cycle of waiting.</p>
+<hr>
+<h4 id="starvation-indefinite-blocking">Starvation (Indefinite Blocking)<a href="#starvation-indefinite-blocking" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Another issue related to deadlock is <strong>starvation</strong>, or <strong>indefinite blocking</strong>, which happens when a process is perpetually delayed because other processes keep taking priority.</p>
+<p>This can occur if processes are removed from the semaphore’s waiting list in a <strong>LIFO (Last-In, First-Out)</strong> order, meaning that newer processes are always allowed to proceed before older ones. As a result, processes at the front of the list may be blocked indefinitely while newer processes keep getting executed.</p>
+<hr>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				</div>
