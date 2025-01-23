@@ -1912,16 +1912,16 @@ Modern Operating Systems are interrupt-driven, meaning they rely on interrupts t
   <h3>On this page</h3>
     <nav id="toc">
   <ul>
-    <li><a href="#interrupt-driven-systems"><strong>Interrupt-Driven Systems</strong></a>
+    <li>
       <ul>
-        <li><a href="#interrupts"><strong>Interrupts</strong></a></li>
-        <li><a href="#interrupt-service-routine"><strong>Interrupt Service Routine</strong></a></li>
+        <li><a href="#interrupt-driven-systems"><strong>Interrupt-Driven Systems</strong></a></li>
         <li><a href="#interrupt-vs-trap"><strong>Interrupt vs. Trap</strong></a>
           <ul>
             <li><a href="#1-interrupt">1. <strong>Interrupt</strong>:</a></li>
             <li><a href="#2-trap-exception">2. <strong>Trap (Exception)</strong>:</a></li>
           </ul>
         </li>
+        <li><a href="#interrupt-service-routine"><strong>Interrupt Service Routine</strong></a></li>
       </ul>
     </li>
     <li><a href="#151-dual-mode-and-multi-mode-operation"><strong>1.5.1 Dual-Mode and Multi-Mode Operation</strong></a>
@@ -1964,16 +1964,16 @@ Modern Operating Systems are interrupt-driven, meaning they rely on interrupts t
     <div class="page-links">
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#interrupt-driven-systems"><strong>Interrupt-Driven Systems</strong></a>
+    <li>
       <ul>
-        <li><a href="#interrupts"><strong>Interrupts</strong></a></li>
-        <li><a href="#interrupt-service-routine"><strong>Interrupt Service Routine</strong></a></li>
+        <li><a href="#interrupt-driven-systems"><strong>Interrupt-Driven Systems</strong></a></li>
         <li><a href="#interrupt-vs-trap"><strong>Interrupt vs. Trap</strong></a>
           <ul>
             <li><a href="#1-interrupt">1. <strong>Interrupt</strong>:</a></li>
             <li><a href="#2-trap-exception">2. <strong>Trap (Exception)</strong>:</a></li>
           </ul>
         </li>
+        <li><a href="#interrupt-service-routine"><strong>Interrupt Service Routine</strong></a></li>
       </ul>
     </li>
     <li><a href="#151-dual-mode-and-multi-mode-operation"><strong>1.5.1 Dual-Mode and Multi-Mode Operation</strong></a>
@@ -2007,27 +2007,11 @@ Modern Operating Systems are interrupt-driven, meaning they rely on interrupts t
   </details>
 
 			</nav>
-			<p><strong>Interrupts, System Calls, and Modes of Operation</strong></p>
-<h2 id="interrupt-driven-systems"><strong>Interrupt-Driven Systems</strong><a href="#interrupt-driven-systems" class="anchor" aria-hidden="true">#</a> </h2>
+			<p>Interrupts, System Calls, and Modes of Operation</p>
+<h3 id="interrupt-driven-systems"><strong>Interrupt-Driven Systems</strong><a href="#interrupt-driven-systems" class="anchor" aria-hidden="true">#</a> </h3>
 <p>Modern Operating Systems are <strong>interrupt-driven</strong>, meaning they rely on <strong>interrupts</strong> to perform tasks. If there are no I/O devices to service or no user requests, the OS remains idle, waiting for events to occur.</p>
-<h3 id="interrupts"><strong>Interrupts</strong><a href="#interrupts" class="anchor" aria-hidden="true">#</a> </h3>
-<p>An <strong>interrupt</strong> is a signal to the processor indicating that an event has occurred, prompting the OS to take specific actions.<br>
-A <strong>trap</strong> (or <strong>exception</strong>) is a software-generated interrupt triggered by errors (e.g., division by zero, invalid memory access) or by a user program requesting an operating system service.</p>
-<h3 id="interrupt-service-routine"><strong>Interrupt Service Routine</strong><a href="#interrupt-service-routine" class="anchor" aria-hidden="true">#</a> </h3>
-<p>For each type of interrupt, the OS contains specific code that determines the appropriate action. The OS uses an <strong>Interrupt Service Routine (ISR)</strong> to handle interrupts when they occur.</p>
-<p>Since both the OS and users share the hardware and software resources, any error in a user program should only affect that particular program, not the entire system. However, issues such as infinite loops or erroneous programs modifying data from other programs can cause system-wide problems.</p>
-<div class="callout callout-note d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
-  
-  <div class="callout-content">
-    
-    <div class="callout-body">
-      <p>A properly designed OS ensures that a faulty or malicious program does not negatively affect other running programs or the OS itself.</p>
-
-    </div>
-  </div>
-</div>
-
-<hr>
+<p>An <strong>interrupt</strong> is a signal to the processor indicating that an event has occurred, prompting the OS to take specific actions.</p>
+<p>A <strong>trap</strong> (or <strong>exception</strong>) is a software-generated interrupt triggered by errors (e.g., division by zero, invalid memory access) or by a user program requesting an operating system service.</p>
 <h3 id="interrupt-vs-trap"><strong>Interrupt vs. Trap</strong><a href="#interrupt-vs-trap" class="anchor" aria-hidden="true">#</a> </h3>
 <p>Both <strong>traps</strong> and <strong>interrupts</strong> allow the operating system to take control of the processor but are triggered differently and serve distinct purposes:</p>
 <ul>
@@ -2078,6 +2062,21 @@ A <strong>trap</strong> (or <strong>exception</strong>) is a software-generated 
   </tbody>
 </table>
 <hr>
+<h3 id="interrupt-service-routine"><strong>Interrupt Service Routine</strong><a href="#interrupt-service-routine" class="anchor" aria-hidden="true">#</a> </h3>
+<p>For each type of interrupt, the OS contains specific code that determines the appropriate action. The OS uses an <strong>Interrupt Service Routine (ISR)</strong> to handle interrupts when they occur.</p>
+<p>Since both the OS and users share the hardware and software resources, any error in a user program should only affect that particular program, not the entire system. However, issues such as infinite loops or erroneous programs modifying data from other programs can cause system-wide problems.</p>
+<div class="callout callout-note d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
+  
+  <div class="callout-content">
+    
+    <div class="callout-body">
+      <p>A properly designed OS ensures that a faulty or malicious program does not negatively affect other running programs or the OS itself.</p>
+
+    </div>
+  </div>
+</div>
+
+<hr>
 <h2 id="151-dual-mode-and-multi-mode-operation"><strong>1.5.1 Dual-Mode and Multi-Mode Operation</strong><a href="#151-dual-mode-and-multi-mode-operation" class="anchor" aria-hidden="true">#</a> </h2>
 <h3 id="user-mode-vs-kernel-mode"><strong>User Mode vs Kernel Mode</strong><a href="#user-mode-vs-kernel-mode" class="anchor" aria-hidden="true">#</a> </h3>
 <p>To protect the OS from errant user programs and vice versa, the OS operates in two main modes: <strong>User Mode</strong> and <strong>Kernel Mode</strong> (also called <strong>system mode</strong>, <strong>privileged mode</strong>, or <strong>supervisor mode</strong>).</p>
@@ -2085,7 +2084,7 @@ A <strong>trap</strong> (or <strong>exception</strong>) is a software-generated 
 <li><strong>User Mode (1)</strong>: The mode in which user applications run.</li>
 <li><strong>Kernel Mode (0)</strong>: The privileged mode in which the OS operates and can execute sensitive instructions.</li>
 </ul>
-<p>A <strong>mode bit</strong> is added to the CPU to indicate the current mode of operation. This dual-mode operation helps protect the OS by restricting certain instructions, called <strong>privileged instructions</strong>, to <strong>Kernel Mode</strong>. These privileged instructions may include tasks like I/O control, interrupt management, and timer management.</p>
+<p>A <strong>mode bit</strong> is added to the CPU to indicate the current mode of operation. This dual-mode operation helps protect the OS by restricting certain instructions, called <strong>privileged instructions</strong>, to <strong>Kernel Mode</strong>.</p>
 <div class="callout callout-note d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
   
   <div class="callout-content">
@@ -2136,7 +2135,6 @@ For example, systems supporting <strong>virtualization</strong> may have a mode 
 
 <hr>
 <h4 id="mode-transition-and-control-flow"><strong>Mode Transition and Control Flow</strong><a href="#mode-transition-and-control-flow" class="anchor" aria-hidden="true">#</a> </h4>
-<p>At system startup, the hardware begins in <strong>Kernel Mode</strong>. As the OS loads, it switches to <strong>User Mode</strong> to run applications. The OS switches back to <strong>Kernel Mode</strong> when responding to system calls, interrupts, or traps. Before passing the control to a user program, the system always switches to user mode.</p>
 <ol>
 <li><strong>Boot time</strong>: The system starts in <strong>Kernel Mode</strong>.</li>
 <li><strong>User applications</strong>: When the OS loads user applications, it switches to <strong>User Mode</strong>.</li>
@@ -2187,7 +2185,7 @@ For example, systems supporting <strong>virtualization</strong> may have a mode 
 
 <hr>
 <h3 id="preventing-illegal-execution"><strong>Preventing Illegal Execution</strong><a href="#preventing-illegal-execution" class="anchor" aria-hidden="true">#</a> </h3>
-<p>Once hardware protection is in place, it detects errors that violate modes.</p>
+<p>Once hardware protection like mode bit is in place, it detects errors that violate modes.</p>
 <p>When the system is in <strong>Kernel Mode</strong>, it can detect errors that violate the operating modes, such as illegal instruction execution or unauthorized memory access. These errors are handled by the OS:</p>
 <ul>
 <li>If a user program attempts to execute an illegal instruction or access unauthorized memory which is not in the user&rsquo;s address space, the hardware <strong>traps</strong> to the OS.</li>
@@ -2207,12 +2205,16 @@ For example, systems supporting <strong>virtualization</strong> may have a mode 
 
 <hr>
 <h3 id="152-timer"><strong>1.5.2 Timer</strong><a href="#152-timer" class="anchor" aria-hidden="true">#</a> </h3>
-<p>A <strong>Timer</strong> is a critical component in the OS to maintain control over execution. It can interrupt the system after a fixed or variable period, preventing user programs from running indefinitely.</p>
+<p><strong>Timer</strong> is a component that can interrupt the system after a fixed or variable period, preventing user programs from running indefinitely.
+It is a critical component in the OS to maintain control over execution.</p>
 <ul>
 <li>A <strong>fixed-rate clock</strong> and a <strong>counter</strong> are used to implement a variable timer.</li>
 <li>The OS initializes the counter, and each time the clock ticks, the counter is decremented. When the counter reaches zero, an interrupt occurs.</li>
 <li>Timer interrupts ensure that a program does not run too long or gets stuck in an infinite loop and never return control to OS.</li>
 </ul>
+<p>OS ensures that timer is set before transferring control to a user program. If the timer interrupts, control is passed back to the OS, which can either treat the interrupt as an error or extend the program&rsquo;s time.</p>
+<p>Instructions that modify the content of the timer are privileged.</p>
+<hr>
 <h4 id="timer-usage-example"><strong>Timer Usage Example</strong><a href="#timer-usage-example" class="anchor" aria-hidden="true">#</a> </h4>
 <ul>
 <li>A program with a 7-minute limit could have its timer initialized to <strong>420</strong> (7 minutes in seconds).</li>
@@ -2231,8 +2233,6 @@ A 10-bit counter with a 1-millisecond clock allows for interrupts at intervals r
   </div>
 </div>
 
-<p>Before transferring control to a user program, the OS ensures that the timer is set. If the timer interrupts, control is passed to the OS, which can either treat the interrupt as an error or extend the program&rsquo;s time.</p>
-<p>Instructions that modify the content of the timer are privileged.</p>
 <hr>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">

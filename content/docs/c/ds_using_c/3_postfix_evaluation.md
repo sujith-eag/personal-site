@@ -18,30 +18,21 @@ seo:
 
 `isdigit()` is needed to check the numbers, which will be available in `<ctype.h>`
 
-
-* Iterate over the expression,
-* Put the numbers in the stack (not the binary numbers of the characters)
-* If operators are found, pop two `int` from the stack
-* Assign first pop and second pop into `int` variables.
-* Check the operator using `switch case` or `if else` and solve the operation separately and push the result to stack.
-* The last value remaining in the stack will be the result.
-
 ### Logic for Variables
 
-* `int stack[]` to hold the numbers pushed and popped
-* `int top = -1` to point at the top of the stack
-* `char exp[]` array to hold the expression entered
-* `char *e` a pointer to the array and traversal pointer to get the value at location and to check the end of array.
-* `int conv` to hold the converted `int` value to be pushed to `stack`
-* `int n1, n2, n3` to hold the two popped values and the final result to be pushed to `stack`.
+- `int stack[100]`: A fixed-size stack to hold the operands and results of operations.
+- `int top = -1`: This variable points to the top of the stack.
+- `char exp[100]`: Array to store the input postfix expression.
+- `char *e`: Pointer used to traverse the `exp[]` array.
+- `int conv`: Variable used to hold the converted integer value from the character.
+- `int n1, n2, n3`: Variables to hold the popped values from the stack and the result of operations.
  
 ### Logic for Implementation
 
-* A global `int stack[]` of fixed size and `int top = -1` to hold values and point to index of the stack.
-* In main function Declaring `char exp[]` and `char *e` to hold the expression and location of current character in the array.
+* Global Variables `int stack[100]` and `int top = -1` to manage stack.
+* In `main` function Declaring `char exp[100]` and `char *e` to hold the prefix expression and pointer to traverse it.
 * Taking the expression from input and passing to array, `scanf("%s", exp)`
 * Assigning the address of array starting location to the pointer, `e = exp`
-* 
 * Declaring `int conv` to hold converted value of the character in `*e`
 * Declaring `int n1, n2, n3` to hold the values in the popped values and new result.
 * Starting a `while` loop to traverse through the `exp` array while incrementing `e`
@@ -49,7 +40,7 @@ seo:
 * Within the loop checking if the `*e` is a number by passing to `isdigit()` from `<ctype.h>`
 * If it is a digit, convert to `int` by subtracting its ASCII value with `48` as number `0` has value of `48`, then storing it in `conv`
 * Pushing `conv` to the `stack`.
-* If it is not a digit, then it is an operator, then two `int` from the stack has to be popped and operated on.
+* If it is not a digit, then it is an operator, then two `int` from the stack has to be popped and operated on. (there will be no `(` or `)` in postfix evaluation)
 
 ### Logic for operation
 
@@ -67,9 +58,9 @@ Once the iteration of the `exp[]` is done, the `stack` will have the last value 
 * No checks, Increment top and push the value to stack at top, `x = stack[++top]`
 
 #### Pop
-* Returns a character, receives no parameter
+* Returns an int, receives no parameter
 * (not required) Edge case - if stack is empty, check using `top == -1` and return `-1` 
-* Else return the value at the top and decrement `stack[top--]` 
+* else return the value at the top and decrement `stack[top--]` 
 
 #### Eval
 * Receives the `n1, n2, n3` integers and the `*e` character.
@@ -140,5 +131,79 @@ void eval(int n1, int n2, int n3, char x )
 	else
 		n3 = n2 / n1;
 	push(n3);
+}
+```
+
+
+### Another Implementation
+
+```c
+#include <stdio.h>
+#include <ctype.h>
+
+int stack[100];
+int top = -1;
+
+void push(int x);
+int pop();
+void eval(int n1, int n2, int *n3, char x);
+
+int main() {
+    char exp[100];
+    char *e;
+    
+    printf("Enter the Postfix Expression: \n");
+    scanf("%s", exp);  // Read the input postfix expression
+    e = exp;  // Pointer to traverse the expression
+    int conv;
+    int n1, n2, n3;
+
+    while (*e != '\0') {  // Loop until the end of the expression
+        if (isdigit(*e)) {  // Check if the character is a digit
+            conv = *e - '0';  // Convert char to int
+            push(conv);  // Push the integer onto the stack
+        }
+        else {  // If the character is an operator
+            n1 = pop();  // Pop first operand
+            n2 = pop();  // Pop second operand
+            eval(n1, n2, &n3, *e);  // Perform the operation
+            push(n3);  // Push the result back onto the stack
+        }
+        e++;  // Move to the next character in the expression
+    }
+    
+    printf("\nThe Result of the expression %s is %d\n", exp, pop());  // The final result
+    return 0;
+}
+
+// Function to push an integer onto the stack
+void push(int x) {
+    stack[++top] = x;  // Increment top and store the value
+}
+
+// Function to pop an integer from the stack
+int pop() {
+    return stack[top--];  // Return the value at top and decrement top
+}
+
+// Function to evaluate an operation and store the result in n3
+void eval(int n1, int n2, int *n3, char x) {
+    switch (x) {
+        case '+':
+            *n3 = n2 + n1;  // Addition
+            break;
+        case '-':
+            *n3 = n2 - n1;  // Subtraction
+            break;
+        case '*':
+            *n3 = n2 * n1;  // Multiplication
+            break;
+        case '/':
+            *n3 = n2 / n1;  // Division
+            break;
+        default:
+            printf("Unknown operator %c\n", x);  // Handle invalid operators
+            break;
+    }
 }
 ```

@@ -46,30 +46,21 @@
 
 <meta property="og:title" content="04 - Postfix Expression Evaluation">
 <meta property="og:description" content="isdigit() is needed to check the numbers, which will be available in &lt;ctype.h&gt;
-
-Iterate over the expression,
-Put the numbers in the stack (not the binary numbers of the characters)
-If operators are found, pop two int from the stack
-Assign first pop and second pop into int variables.
-Check the operator using switch case or if else and solve the operation separately and push the result to stack.
-The last value remaining in the stack will be the result.
-
 Logic for Variables
 
-int stack[] to hold the numbers pushed and popped
-int top = -1 to point at the top of the stack
-char exp[] array to hold the expression entered
-char *e a pointer to the array and traversal pointer to get the value at location and to check the end of array.
-int conv to hold the converted int value to be pushed to stack
-int n1, n2, n3 to hold the two popped values and the final result to be pushed to stack.
+int stack[100]: A fixed-size stack to hold the operands and results of operations.
+int top = -1: This variable points to the top of the stack.
+char exp[100]: Array to store the input postfix expression.
+char *e: Pointer used to traverse the exp[] array.
+int conv: Variable used to hold the converted integer value from the character.
+int n1, n2, n3: Variables to hold the popped values from the stack and the result of operations.
 
 Logic for Implementation
 
-A global int stack[] of fixed size and int top = -1 to hold values and point to index of the stack.
-In main function Declaring char exp[] and char *e to hold the expression and location of current character in the array.
+Global Variables int stack[100] and int top = -1 to manage stack.
+In main function Declaring char exp[100] and char *e to hold the prefix expression and pointer to traverse it.
 Taking the expression from input and passing to array, scanf(&quot;%s&quot;, exp)
 Assigning the address of array starting location to the pointer, e = exp
-
 Declaring int conv to hold converted value of the character in *e
 Declaring int n1, n2, n3 to hold the values in the popped values and new result.
 Starting a while loop to traverse through the exp array while incrementing e
@@ -77,7 +68,7 @@ Loop ending condition when *e == &#39;\0&#39;, So runs when while ( *e != &#39;\
 Within the loop checking if the *e is a number by passing to isdigit() from &lt;ctype.h&gt;
 If it is a digit, convert to int by subtracting its ASCII value with 48 as number 0 has value of 48, then storing it in conv
 Pushing conv to the stack.
-If it is not a digit, then it is an operator, then two int from the stack has to be popped and operated on.
+If it is not a digit, then it is an operator, then two int from the stack has to be popped and operated on. (there will be no ( or ) in postfix evaluation)
 
 Logic for operation
 
@@ -95,30 +86,21 @@ Once the iteration of the exp[] is done, the stack will have the last value whic
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://localhost:1313/personal-site/cover.png"><meta name="twitter:title" content="04 - Postfix Expression Evaluation">
 <meta name="twitter:description" content="isdigit() is needed to check the numbers, which will be available in &lt;ctype.h&gt;
-
-Iterate over the expression,
-Put the numbers in the stack (not the binary numbers of the characters)
-If operators are found, pop two int from the stack
-Assign first pop and second pop into int variables.
-Check the operator using switch case or if else and solve the operation separately and push the result to stack.
-The last value remaining in the stack will be the result.
-
 Logic for Variables
 
-int stack[] to hold the numbers pushed and popped
-int top = -1 to point at the top of the stack
-char exp[] array to hold the expression entered
-char *e a pointer to the array and traversal pointer to get the value at location and to check the end of array.
-int conv to hold the converted int value to be pushed to stack
-int n1, n2, n3 to hold the two popped values and the final result to be pushed to stack.
+int stack[100]: A fixed-size stack to hold the operands and results of operations.
+int top = -1: This variable points to the top of the stack.
+char exp[100]: Array to store the input postfix expression.
+char *e: Pointer used to traverse the exp[] array.
+int conv: Variable used to hold the converted integer value from the character.
+int n1, n2, n3: Variables to hold the popped values from the stack and the result of operations.
 
 Logic for Implementation
 
-A global int stack[] of fixed size and int top = -1 to hold values and point to index of the stack.
-In main function Declaring char exp[] and char *e to hold the expression and location of current character in the array.
+Global Variables int stack[100] and int top = -1 to manage stack.
+In main function Declaring char exp[100] and char *e to hold the prefix expression and pointer to traverse it.
 Taking the expression from input and passing to array, scanf(&quot;%s&quot;, exp)
 Assigning the address of array starting location to the pointer, e = exp
-
 Declaring int conv to hold converted value of the character in *e
 Declaring int n1, n2, n3 to hold the values in the popped values and new result.
 Starting a while loop to traverse through the exp array while incrementing e
@@ -126,7 +108,7 @@ Loop ending condition when *e == &#39;\0&#39;, So runs when while ( *e != &#39;\
 Within the loop checking if the *e is a number by passing to isdigit() from &lt;ctype.h&gt;
 If it is a digit, convert to int by subtracting its ASCII value with 48 as number 0 has value of 48, then storing it in conv
 Pushing conv to the stack.
-If it is not a digit, then it is an operator, then two int from the stack has to be popped and operated on.
+If it is not a digit, then it is an operator, then two int from the stack has to be popped and operated on. (there will be no ( or ) in postfix evaluation)
 
 Logic for operation
 
@@ -2004,7 +1986,11 @@ Once the iteration of the exp[] is done, the stack will have the last value whic
         </li>
       </ul>
     </li>
-    <li><a href="#implementation">Implementation</a></li>
+    <li><a href="#implementation">Implementation</a>
+      <ul>
+        <li><a href="#another-implementation">Another Implementation</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 </div>
@@ -2034,7 +2020,11 @@ Once the iteration of the exp[] is done, the stack will have the last value whic
         </li>
       </ul>
     </li>
-    <li><a href="#implementation">Implementation</a></li>
+    <li><a href="#implementation">Implementation</a>
+      <ul>
+        <li><a href="#another-implementation">Another Implementation</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
@@ -2042,30 +2032,21 @@ Once the iteration of the exp[] is done, the stack will have the last value whic
 
 			</nav>
 			<p><code>isdigit()</code> is needed to check the numbers, which will be available in <code>&lt;ctype.h&gt;</code></p>
-<ul>
-<li>Iterate over the expression,</li>
-<li>Put the numbers in the stack (not the binary numbers of the characters)</li>
-<li>If operators are found, pop two <code>int</code> from the stack</li>
-<li>Assign first pop and second pop into <code>int</code> variables.</li>
-<li>Check the operator using <code>switch case</code> or <code>if else</code> and solve the operation separately and push the result to stack.</li>
-<li>The last value remaining in the stack will be the result.</li>
-</ul>
 <h3 id="logic-for-variables">Logic for Variables<a href="#logic-for-variables" class="anchor" aria-hidden="true">#</a> </h3>
 <ul>
-<li><code>int stack[]</code> to hold the numbers pushed and popped</li>
-<li><code>int top = -1</code> to point at the top of the stack</li>
-<li><code>char exp[]</code> array to hold the expression entered</li>
-<li><code>char *e</code> a pointer to the array and traversal pointer to get the value at location and to check the end of array.</li>
-<li><code>int conv</code> to hold the converted <code>int</code> value to be pushed to <code>stack</code></li>
-<li><code>int n1, n2, n3</code> to hold the two popped values and the final result to be pushed to <code>stack</code>.</li>
+<li><code>int stack[100]</code>: A fixed-size stack to hold the operands and results of operations.</li>
+<li><code>int top = -1</code>: This variable points to the top of the stack.</li>
+<li><code>char exp[100]</code>: Array to store the input postfix expression.</li>
+<li><code>char *e</code>: Pointer used to traverse the <code>exp[]</code> array.</li>
+<li><code>int conv</code>: Variable used to hold the converted integer value from the character.</li>
+<li><code>int n1, n2, n3</code>: Variables to hold the popped values from the stack and the result of operations.</li>
 </ul>
 <h3 id="logic-for-implementation">Logic for Implementation<a href="#logic-for-implementation" class="anchor" aria-hidden="true">#</a> </h3>
 <ul>
-<li>A global <code>int stack[]</code> of fixed size and <code>int top = -1</code> to hold values and point to index of the stack.</li>
-<li>In main function Declaring <code>char exp[]</code> and <code>char *e</code> to hold the expression and location of current character in the array.</li>
+<li>Global Variables <code>int stack[100]</code> and <code>int top = -1</code> to manage stack.</li>
+<li>In <code>main</code> function Declaring <code>char exp[100]</code> and <code>char *e</code> to hold the prefix expression and pointer to traverse it.</li>
 <li>Taking the expression from input and passing to array, <code>scanf(&quot;%s&quot;, exp)</code></li>
 <li>Assigning the address of array starting location to the pointer, <code>e = exp</code></li>
-<li></li>
 <li>Declaring <code>int conv</code> to hold converted value of the character in <code>*e</code></li>
 <li>Declaring <code>int n1, n2, n3</code> to hold the values in the popped values and new result.</li>
 <li>Starting a <code>while</code> loop to traverse through the <code>exp</code> array while incrementing <code>e</code></li>
@@ -2073,7 +2054,7 @@ Once the iteration of the exp[] is done, the stack will have the last value whic
 <li>Within the loop checking if the <code>*e</code> is a number by passing to <code>isdigit()</code> from <code>&lt;ctype.h&gt;</code></li>
 <li>If it is a digit, convert to <code>int</code> by subtracting its ASCII value with <code>48</code> as number <code>0</code> has value of <code>48</code>, then storing it in <code>conv</code></li>
 <li>Pushing <code>conv</code> to the <code>stack</code>.</li>
-<li>If it is not a digit, then it is an operator, then two <code>int</code> from the stack has to be popped and operated on.</li>
+<li>If it is not a digit, then it is an operator, then two <code>int</code> from the stack has to be popped and operated on. (there will be no <code>(</code> or <code>)</code> in postfix evaluation)</li>
 </ul>
 <h3 id="logic-for-operation">Logic for operation<a href="#logic-for-operation" class="anchor" aria-hidden="true">#</a> </h3>
 <ul>
@@ -2091,9 +2072,9 @@ Once the iteration of the exp[] is done, the stack will have the last value whic
 </ul>
 <h4 id="pop">Pop<a href="#pop" class="anchor" aria-hidden="true">#</a> </h4>
 <ul>
-<li>Returns a character, receives no parameter</li>
+<li>Returns an int, receives no parameter</li>
 <li>(not required) Edge case - if stack is empty, check using <code>top == -1</code> and return <code>-1</code></li>
-<li>Else return the value at the top and decrement <code>stack[top--]</code></li>
+<li>else return the value at the top and decrement <code>stack[top--]</code></li>
 </ul>
 <h4 id="eval">Eval<a href="#eval" class="anchor" aria-hidden="true">#</a> </h4>
 <ul>
@@ -2170,6 +2151,85 @@ Once the iteration of the exp[] is done, the stack will have the last value whic
 </span></span><span class="line"><span class="cl">	<span class="k">else</span>
 </span></span><span class="line"><span class="cl">		<span class="n">n3</span> <span class="o">=</span> <span class="n">n2</span> <span class="o">/</span> <span class="n">n1</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">	<span class="nf">push</span><span class="p">(</span><span class="n">n3</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h3 id="another-implementation">Another Implementation<a href="#another-implementation" class="anchor" aria-hidden="true">#</a> </h3>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;ctype.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">stack</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">top</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">push</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">pop</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">eval</span><span class="p">(</span><span class="kt">int</span> <span class="n">n1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n2</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">n3</span><span class="p">,</span> <span class="kt">char</span> <span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">char</span> <span class="n">exp</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">char</span> <span class="o">*</span><span class="n">e</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Enter the Postfix Expression: </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%s&#34;</span><span class="p">,</span> <span class="n">exp</span><span class="p">);</span>  <span class="c1">// Read the input postfix expression
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">e</span> <span class="o">=</span> <span class="n">exp</span><span class="p">;</span>  <span class="c1">// Pointer to traverse the expression
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">int</span> <span class="n">conv</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">n3</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="o">*</span><span class="n">e</span> <span class="o">!=</span> <span class="sc">&#39;\0&#39;</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// Loop until the end of the expression
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="nf">isdigit</span><span class="p">(</span><span class="o">*</span><span class="n">e</span><span class="p">))</span> <span class="p">{</span>  <span class="c1">// Check if the character is a digit
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">conv</span> <span class="o">=</span> <span class="o">*</span><span class="n">e</span> <span class="o">-</span> <span class="sc">&#39;0&#39;</span><span class="p">;</span>  <span class="c1">// Convert char to int
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nf">push</span><span class="p">(</span><span class="n">conv</span><span class="p">);</span>  <span class="c1">// Push the integer onto the stack
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span> <span class="p">{</span>  <span class="c1">// If the character is an operator
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">n1</span> <span class="o">=</span> <span class="nf">pop</span><span class="p">();</span>  <span class="c1">// Pop first operand
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">n2</span> <span class="o">=</span> <span class="nf">pop</span><span class="p">();</span>  <span class="c1">// Pop second operand
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nf">eval</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n3</span><span class="p">,</span> <span class="o">*</span><span class="n">e</span><span class="p">);</span>  <span class="c1">// Perform the operation
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nf">push</span><span class="p">(</span><span class="n">n3</span><span class="p">);</span>  <span class="c1">// Push the result back onto the stack
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">e</span><span class="o">++</span><span class="p">;</span>  <span class="c1">// Move to the next character in the expression
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">The Result of the expression %s is %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">exp</span><span class="p">,</span> <span class="nf">pop</span><span class="p">());</span>  <span class="c1">// The final result
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Function to push an integer onto the stack
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">push</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">stack</span><span class="p">[</span><span class="o">++</span><span class="n">top</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>  <span class="c1">// Increment top and store the value
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Function to pop an integer from the stack
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="nf">pop</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">stack</span><span class="p">[</span><span class="n">top</span><span class="o">--</span><span class="p">];</span>  <span class="c1">// Return the value at top and decrement top
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Function to evaluate an operation and store the result in n3
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">eval</span><span class="p">(</span><span class="kt">int</span> <span class="n">n1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n2</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">n3</span><span class="p">,</span> <span class="kt">char</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">switch</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="sc">&#39;+&#39;</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">            <span class="o">*</span><span class="n">n3</span> <span class="o">=</span> <span class="n">n2</span> <span class="o">+</span> <span class="n">n1</span><span class="p">;</span>  <span class="c1">// Addition
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="sc">&#39;-&#39;</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">            <span class="o">*</span><span class="n">n3</span> <span class="o">=</span> <span class="n">n2</span> <span class="o">-</span> <span class="n">n1</span><span class="p">;</span>  <span class="c1">// Subtraction
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="sc">&#39;*&#39;</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">            <span class="o">*</span><span class="n">n3</span> <span class="o">=</span> <span class="n">n2</span> <span class="o">*</span> <span class="n">n1</span><span class="p">;</span>  <span class="c1">// Multiplication
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="sc">&#39;/&#39;</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">            <span class="o">*</span><span class="n">n3</span> <span class="o">=</span> <span class="n">n2</span> <span class="o">/</span> <span class="n">n1</span><span class="p">;</span>  <span class="c1">// Division
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">default</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Unknown operator %c</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>  <span class="c1">// Handle invalid operators
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
   </figure>
 </div>

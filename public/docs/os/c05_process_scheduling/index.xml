@@ -28,7 +28,7 @@
       <link>http://localhost:1313/personal-site/docs/os/c05_process_scheduling/os-5.03.02-shortest-job-first/</link>
       <pubDate>Sun, 12 Jan 2025 21:27:49 +0530</pubDate>
       <guid>http://localhost:1313/personal-site/docs/os/c05_process_scheduling/os-5.03.02-shortest-job-first/</guid>
-      <description>&lt;p&gt;The &lt;strong&gt;Shortest Job First (SJF)&lt;/strong&gt; scheduling algorithm assigns the CPU to the process with the shortest next CPU burst.&lt;br&gt;&#xA;The process with the smallest next burst time is given priority when the CPU becomes available.&lt;br&gt;&#xA;If two processes have the same next CPU burst, &lt;strong&gt;FCFS (First-Come, First-Served)&lt;/strong&gt; is used to break the tie.&lt;/p&gt;</description>
+      <description>&lt;p&gt;The &lt;strong&gt;Shortest Job First (SJF)&lt;/strong&gt; scheduling algorithm assigns the CPU to the process with the shortest next CPU burst. The process with the smallest next burst time is given priority when the CPU becomes available.&lt;br&gt;&#xA;If two processes have the same next CPU burst, &lt;strong&gt;FCFS (First-Come, First-Served)&lt;/strong&gt; is used to break the tie.&lt;/p&gt;</description>
     </item>
     <item>
       <title>OS 5.03.03 - Priority Scheduling</title>

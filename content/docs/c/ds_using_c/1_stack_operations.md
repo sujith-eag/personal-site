@@ -15,28 +15,37 @@ seo:
 ---
 
 
+
 ### Variables Logic
 
-A Stack has to be declared, Needs a variable for size and pointer for the top of Stack.
-`n, top = -1` are declared globally, to be accessible in all functions for verification and increment.
+1. `int n`: The size of the stack (input by the user).
+2. `int top=-1`: A variable to track the top of the stack. Initially set to `-1` to represent an empty stack.
 
-`stack[n]` is defined in main function as local variable for isolation.
-`e` an element variable is declared to capture the data input for pushing operation.
+The variables `n` and `top` are declared globally so they can be accessed by all functions for stack operations and for condition verification.
 
-`ch` is choice variable used for capturing the choice to use in switch case.
-
+3. `stack[n]`: An array declared locally inside the `main()` function to hold the stack elements.
+4. `e`: A temporary variable used to capture the element that is being pushed onto the stack.
+5. `int ch`: A variable to capture the user's choice for selecting the stack operation (Push, Pop, Peep, Display, Exit).
 ___
 
 ## Logic of Implementation
 
-* `n, top= -1` are declared as global
-* Main function calls for entering the size of stack,
-* Captured by `n` and a `stack` of size `n` is declared `stack[n]` according to input data type `int or char` that will be put in the stack.
+**Global Declaration of Variables**:
+- `n` and `top = -1` are declared globally to handle the stack's size and top index throughout the functions.
+
+**Main Function**:
+- The user is prompted to enter the size of the stack, which is stored in `n`.
+- The stack `stack[n]` is defined based on the size `n`. 
 * `e` to capture the input data is declared to pass to the `push` function.
-* To get the response repeatedly, a `while(1)` is started and `ch` is declared in that to capture the choice made by the user.
-* Print the choices that can be chosen and store it in `ch`
-* Pass `ch` to `switch case` or `if else` conditional to call the appropriate function.
-* One choice to trigger a `exit` from the loop and end the program.
+- A `while(1)` loop is used to repeatedly display the menu and capture the user's choice (`ch`) to perform the corresponding stack operation.
+- The program will continue running until the user chooses to exit.
+
+**Choice Handling**:    
+- The `ch` variable captures the user's input for the stack operation they want to perform (Push, Pop, Peep, Display, or Exit).
+- The input choice is passed to a `switch` or `if-else` block to determine the appropriate function to call.
+
+**Exit Condition**:    
+- A choice of `0` (Exit) will trigger an exit from the loop using `exit(0)`.
 
 ### Stack Operations
 
@@ -74,6 +83,7 @@ Choice to exit the program, using `exit(0)` for some case or condition.
 (or flag can be used to call `break` outside switch case for the while loop)
 
 To reduce three checks and print for if the stack is empty, `isempty()` is called to check if `top == -1` and print `it is empty` and return `1` if not empty return `0`.
+`if (! isempty)` return true when not empty, then code inside will run.
 
 ___
 
@@ -83,100 +93,117 @@ ___
 #include <stdio.h>
 #include <stdlib.h>
 
-int n, top = -1;
+int n, top = -1;  // global variables for stack size and top position
 
+// Function declarations
 void push(int stack[], int x);
 void pop(int stack[]);
 void peep(int stack[]);
 void display(int stack[]);
 int isempty();
 
+// Main function
 void main()
 {
-	printf("Enter the size of the stack: \n");
-	scanf("%d", &n);
-	int stack[n], e;
+    // Input the size of the stack
+    printf("Enter the size of the stack: \n");
+    scanf("%d", &n);
+    
+    int stack[n], e;  // Local stack array and element to push
 
-	while(1)
-	{
-		int ch;
-		printf("\nEnter the choice - \n0 : Exit,\n1 : Push,\t2 : Pop,\n3 : Peep,\t4 : Display\n");
-		scanf("%d", &ch);
+    // Menu-driven loop for stack operations
+    while(1)
+    {
+        int ch;  // Choice variable
+        printf("\nEnter the choice - \n");
+        printf("0 : Exit,\n");
+        printf("1 : Push,\t2 : Pop,\n");
+        printf("3 : Peep,\t4 : Display\n");
+        scanf("%d", &ch);
 
-		switch(ch)
-		{
-			case 0: exit(0);
-			case 1: printf("\nEnter the number to be Pushed in: \n");
-					scanf("%d", &e);
-					push(stack, e);
-					break;
-			case 2: pop(stack);
-					break;
-			case 3: peep(stack);
-					break;
-			case 4: display(stack);
-					break;
-			default: printf("\nEnter any given choice only\n");
-		}
-	}
+        switch(ch) 
+        {
+            case 0:
+                exit(0);  // Exit the program
+                break;
+            case 1:
+                printf("\nEnter the number to be pushed: \n");
+                scanf("%d", &e);
+                push(stack, e);  // Push the element to the stack
+                break;
+            case 2:
+                pop(stack);  // Pop the element from the stack
+                break;
+            case 3:
+                peep(stack);  // Display the top element without removing
+                break;
+            case 4:
+                display(stack);  // Display all elements in the stack
+                break;
+            default:
+                printf("\nInvalid choice. Please try again.\n");  // Handle invalid choices
+                break;
+        }
+    }
 }
 
-
+// Function to check if the stack is empty
 int isempty()
 {
-	if (top == -1)
-	{
-		printf("\nThe Stack is Empty\n");
-		return 1;
-	}
-	else 
-	{
-		return 0;
-	}
+    if (top == -1)
+    {
+        printf("\nThe Stack is Empty\n");
+        return 1;  // Stack is empty
+    }
+    return 0;  // Stack is not empty
 }
+
+// Function to push an element onto the stack
 void push(int stack[], int x)
 {
-	if (top == n-1)
-	{
-		printf("Stack is full\n\n");
-	}
-	else
-	{
-		top++;
-		stack[top] = x;
-		printf("\nThe element %d is pushed into the stack\n\n", x );
-	}
+    if (top == n - 1)  // Check if the stack is full
+    {
+        printf("Stack is full. Cannot push %d.\n", x);
+    }
+    else
+    {
+        stack[++top] = x;  // Increment top and push the element
+        printf("\nThe element %d is pushed into the stack.\n", x);
+    }
 }
+
+// Function to pop an element from the stack
 void pop(int stack[])
 {
-	if( isempty() );
-	else
-	{
-		printf("\nThe number %d has been popped\n\n", stack[top]);
-		top--;
-	}
+    if (!isempty())  // Check if stack is not empty
+    {
+        printf("\nThe number %d has been popped.\n", stack[top]);
+        top--;  // Decrease top position after popping
+    }
 }
+
+// Function to display the top element without popping
 void peep(int stack[])
 {
-	if( isempty() );
-	else
-	{
-		printf("\nThe number at the top is %d \n\n", stack[top]);
-	}
+    if (!isempty())  // Check if stack is not empty
+    {
+        printf("\nThe number at the top is %d.\n", stack[top]);
+    }
 }
+
+// Function to display all elements in the stack
 void display(int stack[])
 {
-	if ( isempty() );
-	else
-	{
-		for(int i = top; i > -1; i--)
-		{
-			printf("%d \n",stack[i]);
-		}
-	}
+    if (!isempty())  // Check if stack is not empty
+    {
+        printf("\nThe elements in the stack are:\n");
+        for (int i = top; i >= 0; i--)  // Traverse stack from top to bottom
+        {
+            printf("%d\n", stack[i]);
+        }
+    }
 }
 ```
-
 
 ## Implementation 2 (Using if else)
 
@@ -184,98 +211,118 @@ void display(int stack[])
 #include <stdio.h>
 #include <stdlib.h>
 
-int n, top = -1;
+int n, top = -1;  // Global variables for stack size and top position
 
+// Function declarations
 void push(int stack[], int x);
 void pop(int stack[]);
 void peep(int stack[]);
 void display(int stack[]);
 int isempty();
 
+// Main function
 void main()
 {
-	printf("Enter the size of the stack: \n");
-	scanf("%d", &n);
-	int stack[n], e;
+    // Input the size of the stack
+    printf("Enter the size of the stack: \n");
+    scanf("%d", &n);
+    
+    int stack[n], e;  // Local stack array and element to push
 
-	while(1)
-	{
-		int ch;
-		printf("\nEnter the choice - \n0 : Exit,\n1 : Push,\t2 : Pop,\n3 : Peep,\t4 : Display\n");
-		scanf("%d", &ch);
+    // Menu-driven loop for stack operations
+    while(1)
+    {
+        int ch;  // Choice variable
+        printf("\nEnter the choice - \n");
+        printf("0 : Exit,\n");
+        printf("1 : Push,\t2 : Pop,\n");
+        printf("3 : Peep,\t4 : Display\n");
+        scanf("%d", &ch);
 
-		if (ch == 0)
-			exit(0);
-		else if (ch == 1)
-		{
-			printf("\nEnter the number to be Pushed in: \n");
-			scanf("%d", &e);
-			push(stack, e);
-		}
-		else if (ch == 2)
-			pop(stack);
-		else if (ch == 3)
-			peep(stack);
-		else if (ch == 4)
-			display(stack);	
-		else 
-			printf("\nEnter any given choice only\n");
-		}
-	}
+        if (ch == 0) 
+        {
+            exit(0);  // Exit the program
+        }
+        else if (ch == 1) 
+        {
+            printf("\nEnter the number to be pushed: \n");
+            scanf("%d", &e);
+            push(stack, e);  // Push the element to the stack
+        }
+        else if (ch == 2) 
+        {
+            pop(stack);  // Pop the element from the stack
+        }
+        else if (ch == 3) 
+        {
+            peep(stack);  // Display the top element without removing
+        }
+        else if (ch == 4) 
+        {
+            display(stack);  // Display all elements in the stack
+        }
+        else 
+        {
+            printf("\nInvalid choice. Please try again.\n");  // Handle invalid choices
+        }
+    }
 }
 
-
+// Function to check if the stack is empty
 int isempty()
 {
-	if (top == -1)
-	{
-		printf("\nThe Stack is Empty\n");
-		return 1;
-	}
-	else 
-	{
-		return 0;
-	}
+    if (top == -1)
+    {
+        printf("\nThe Stack is Empty\n");
+        return 1;  // Stack is empty
+    }
+    return 0;  // Stack is not empty
 }
+
+// Function to push an element onto the stack
 void push(int stack[], int x)
 {
-	if (top == n-1)
-	{
-		printf("Stack is full\n\n");
-	}
-	else
-	{
-		top++;
-		stack[top] = x;
-		printf("\nThe element %d is pushed into the stack\n\n", x );
-	}
+    if (top == n - 1)  // Check if the stack is full
+    {
+        printf("Stack is full. Cannot push %d.\n", x);
+    }
+    else
+    {
+        stack[++top] = x;  // Increment top and push the element
+        printf("\nThe element %d is pushed into the stack.\n", x);
+    }
 }
+
+// Function to pop an element from the stack
 void pop(int stack[])
 {
-	if( isempty() );
-	else
-	{
-		printf("\nThe number %d has been popped\n\n", stack[top]);
-		top--;
-	}
+    if (!isempty())  // Check if stack is not empty
+    {
+        printf("\nThe number %d has been popped.\n", stack[top]);
+        top--;  // Decrease top position after popping
+    }
 }
+
+// Function to display the top element without popping
 void peep(int stack[])
 {
-	if( isempty() );
-	else
-	{
-		printf("\nThe number at the top is %d \n\n", stack[top]);
-	}
+    if (!isempty())  // Check if stack is not empty
+    {
+        printf("\nThe number at the top is %d.\n", stack[top]);
+    }
 }
+
+// Function to display all elements in the stack
 void display(int stack[])
 {
-	if ( isempty() );
-	else
-	{
-		for(int i = top; i > -1; i--)
-		{
-			printf("%d \n",stack[i]);
-		}
-	}
+    if (!isempty())  // Check if stack is not empty
+    {
+        printf("\nThe elements in the stack are:\n");
+        for (int i = top; i >= 0; i--)  // Traverse stack from top to bottom
+        {
+            printf("%d\n", stack[i]);
+        }
+    }
 }
+
 ```

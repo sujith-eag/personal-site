@@ -14,15 +14,52 @@ seo:
   noindex: false # false (default) or true
 ---
 
-### Basic Logic
+#### **Basic Logic**
 
-* An array where elements are added and the first element in the array is indicated by the `head` pointer and `tail` represents the next place available for insertion.
+**Queue Structure**: The queue is a data structure where elements are added at the **back** and removed from the **front**.
 
-* Removal of element is done only from the `head`, it increments
-* Adding of elements happens at the `tail`, it increments
+**Pointers**:
+- `head` points to the first element in the queue (front).
+- `tail` points to the next available position for insertion (back).
+- The `head` is incremented after each removal, and `tail` is incremented after each insertion.
 
-___
+#### **Variables**
 
+- **`int n`**: Size of the queue.
+- **`int head = -1, tail = -1`**: Initialize the `head` and `tail` pointers to indicate an empty queue.
+- **`stack[n]`**: Array of integers or characters used as the queue.
+- **`ele`**: The value to be added to the queue (enqueue operation).
+- **`ch`**: Integer variable used to store the user’s choice for queue operations.
+
+#### Implementation Logic
+
+**Global Variables**:
+- Declare `n`, `head = -1`, and `tail = -1` globally to manage the queue.
+- Functions for queue operations (`enque`, `deque`, and `display`) are declared, all of which return `void`.
+
+**Input Handling**:
+- In the `main()` function, the size of the queue is taken as input (`scanf("%d", &n)`).
+- Declare `stack[n]` to store the queue elements and `ele` for input values of relevant type.
+
+* A `while(1)` loop used to continuously display options and perform chosen operation.
+* Declare `int ch` to hold the choice of user.
+* make `if else` conditions for each function, an exit and miss typed number.
+* Only option for `enque` needs to be passed the value to be added with `stack`
+
+#### **Function Logic**
+
+**`enque`**:
+- Checks if the queue is full (`tail == n-1`).
+- If not full, it increments `tail` and inserts the element into `stack[tail]`.
+- If `head` is `-1` (first insertion), it increments `head` to indicate that the queue is no longer empty.
+**`dequ`**:
+- Removal happens at the head, so check if (`head == -1 || head > tail`) which means queue is empty
+- If not empty, it removes the element at `head` and increments `head`.
+**`display`**:
+- Checks if the queue is empty (`head == -1 || head > tail`).
+- If not empty, it displays all elements from `head` to `tail`.
+* run a for loop with `i = front` and running till `i <= tail` with `i++`
+* Print each `stack[i]`
 
 ### Implementation
 
@@ -102,6 +139,8 @@ void display(int stack[])
 		{
 			printf("%d \t", stack[i]);
 		}
+		printf("\n");
 	}
 }
 ```
+

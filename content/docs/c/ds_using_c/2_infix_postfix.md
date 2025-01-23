@@ -19,45 +19,37 @@ seo:
 
 ### Logic for Variables
 
-* A `char stack[100]` fixed size array stack (not by input) for pushing and popping characters during process of conversion.
-* A `int top = -1` to point at the top of this stack.
-* In main function one more fixed size stack `char exp[100]` to catch the expression entered by the user.
-* `char *e` to be the pointer to the `exp` array, used for traversal and checking end of `exp`.
-* `char x` to catch the popped element from the `stack` and printing it. 
+- `char stack[100]`: A fixed-size array to store operators and operands for conversion.
+- `int top = -1`: This variable points to the top of the stack.
+- `char exp[100]`: Another array to store the user input expression.
+- `char *e`: A pointer used to traverse the `exp[]` array.
+- `char x`: A variable to store the element popped from the stack.
 
 ### Implementation Logic
 
-* Make a `stack[]` of a fixed size and `top = -1` for pointing at its top position. Both global.
-* Main function, declare `exp[]` and `*e`. Taking input from user the expression and storing it in `exp[]` as `scanf("%s ", exp)`.  `%s` is used instead of `%c` to get the full string.
-* No need to pass `&exp` as it is an array, it automatically passes the address of starting location of the array.
-* Assign the location of the start of expression array `exp` to the pointer `e` as `e = exp`
-* Declare another `char x` to hold popped values in main. (Can be done in while loop also?)
-* The beginning and assigning part is done.
-* Start a `while()` loop to traverse the `exp` by incrementing the pointer as `e++` in iteration. 
-* Condition to termination of loop is reaching the end of the `exp` array which will have `\0` at the end, so the condition will be `while( *e != '\0' )`
+- Declare a global stack (`stack[100]`) with `top = -1` to track the top of the stack.
+- In the `main` function, declare the `exp[100]` array to capture the user input expression. Use `scanf("%s", exp)` to capture the entire expression (`%c` is for single `char`) (`&exp` is not needed as it is an array).
+- Declare `e` and Set `e = exp` to point to the start of the expression, enabling traversal.
+- Use `x` in the main function to capture popped elements.
+- Use a `while` loop (`while(*e != '\0')`) to traverse the expression by incrementing pointer `e++`. 
+- Each iteration processes one character in `exp[]` and ends when the end of the array is reached which is signaled by `*e == '\0'` 
 
 ### Conversion Logic
 
 As the `while` loop runs, `e` is incremented and it traverses the `exp` array elements.    
 `e` points at the location within the array and `*e` is element in that array location.
-* If `*e` is a number then print it, this will not go into the stack.  `if ( isalnum(*e) )`
-* else If `*e` is starting brace `(`, no checking, push `*e` into the `stack` array.  `else if ( *e == '(' )`
-* else if `*e` is ending brace `)`, then use `while` loop to `pop` all elements from the stack till the popped item is `(` an opening brace. `while( pop() != '(' )`
-* The popped items need to be printed so returned character from `pop()` is assigned to `x` and `x` is printed in each iteration of the `while` loop. `while( (x=pop()) != '(' )`
-
-If the element in the `*e` is not a number or opening and closing brace, it will be an Operator that has to be pushed into the `stack[]` and `top` has to be incremented.    
+- **Alphanumeric Characters**: `if ( isalnum(*e) )` If the character `*e` is alphanumeric (number or letter), it is printed directly without being pushed to the stack.
+- **Opening Parenthesis** `(`:  Always pushed onto the stack.
+- **Closing Parenthesis** `)`: Pop elements from the stack and print them until an opening parenthesis `(` is encountered. `while( (x=pop()) != '(' )`
+- **Operators**: For other characters (operators), compare their priority with the operator at the top of the stack. Pop and print operators with equal or higher priority before pushing the current operator. `while ( priority(stack[top]) >= priority(*e) )`
 
 Conditions for pushing in the operator.    
 * If stack is empty, `if (top == -1 )` then can be pushed in.
 * If not empty, then priority of the element at the top of the stack `stack[top]` has to be compared with the element from the expression `*e`.
-* If `stack[top]` is of lower priority than `*e` then `*e` can be pushed in.
-* if `stack[top]` is greater than or equal to `*e` then element is popped and printed till the `stack[top]` becomes less than `*e`. Then `*e` is pushed into stack.
-* `while` loop is used to check this condition and print the popped operators using 
-* `while ( priority(stack[top]) >= priority(*e) )`
 
-When the main `while` loop ends after `*e` reaches `\0`. There are still operators in the stack.
-To remove them, `stack` is traversed using `top` till it reaches `-1` and no elements are in `stack`.
-* `while (top != -1 )` print all the popped items.
+After processing the entire expression, pop all remaining operators from the stack.
+After processing the entire expression the main `while` loop ends after `*e` reaches `\0`. There are still operators in the stack.
+pop all remaining operators from the stack. `while (top != -1 )` print all the popped items.
 
 ### Functions logic
 
@@ -75,8 +67,9 @@ To remove them, `stack` is traversed using `top` till it reaches `-1` and no ele
 * Takes a `char` as parameter.
 * Works by returning a value to reflect the operators precedence which allows the `while` loop to compare both operators based on their return value.
 * Operator with lowest precedence returns `0` and next would be `1, 2, 3`
-* For operators with same precedence, Using `||` or to pass same value.
-* `(` has lowest value, `+ -` next and `* /` come after that.
+* - `(`: Lowest precedence (0).
+- `+`, `-`: Medium precedence (1).
+- `*`, `/`: Highest precedence (2).
 
 ```c
 #include <stdio.h>
@@ -91,47 +84,47 @@ int priority(char x);
 
 int main()
 {
-char exp[100];
-char *e, x;
-
-printf("Enter the Infix Expression to be Converted: \n");
-scanf("%s", exp);
-e = exp;
-
-while( *e != '\0' )
-{
-	if ( isalnum(*e) )
+	char exp[100];
+	char *e, x;
+	
+	printf("Enter the Infix Expression to be Converted: \n");
+	scanf("%s", exp);
+	e = exp;
+	
+	while( *e != '\0' )
 	{
-		print("%c \n", *e );
-	}
-	else if ( *e == '(')
-	{
-		push(*e);
-	}
-	else if ( *e == ')')
-	{
-		while ( (x = pop()) != '(' )
+		if ( isalnum(*e) )
 		{
-			printf("%c \n", x);
+			print("%c \n", *e );
 		}
-	}
-	else 
-	{
-		while ( priority(stack[top]) >= priority(*e) )
+		else if ( *e == '(')
 		{
-			printf("%c \n", pop());
+			push(*e);
 		}
-		push(*e);
+		else if ( *e == ')')
+		{
+			while ( (x = pop()) != '(' )
+			{
+				printf("%c \n", x);
+			}
+		}
+		else 
+		{
+			while ( priority(stack[top]) >= priority(*e) )
+			{
+				printf("%c \n", pop());
+			}
+			push(*e);
+		}
+		e++;
 	}
-	e++;
-}
-
-while ( top != -1)
-{
-	printf("%c \n", pop());
-}
-
-return 0;
+	
+	while ( top != -1)
+	{
+		printf("%c \n", pop());
+	}
+	
+	return 0;
 }
 
 
@@ -158,4 +151,90 @@ int priority(char x)
 	else 
 		return 0;
 }
+```
+
+
+```c
+#include <stdio.h>
+#include <ctype.h>
+
+char stack[100];
+int top = -1;
+
+char pop();
+void push(char x);
+int priority(char x);
+
+int main() {
+    char exp[100];  // Expression to be converted
+    char *e, x;     // Pointer to traverse the expression and variable to store popped element
+
+    printf("Enter the Infix Expression to be Converted: \n");
+    scanf("%s", exp);  // Take input expression
+
+    e = exp;  // Pointer to the start of expression
+
+    while (*e != '\0')   // Loop until end of expression 
+    {  
+        if (isalnum(*e))  // If the character is a number/letter 
+        {  
+            printf("%c \n", *e);  // Print the character (operand)
+        }
+        else if (*e == '(')   // If opening parenthesis
+        {
+            push(*e);  // Push it onto the stack
+        }
+        else if (*e == ')')  // If closing parenthesis
+        {
+            while ((x = pop()) != '(')  // Pop until '(' is encountered
+            {
+                printf("%c \n", x);  // Print the popped operator
+            }
+        }
+        else  // If the character is an operator
+        {
+            // Pop operators of higher or equal precedence and print them
+            while (priority(stack[top]) >= priority(*e))
+            {
+                printf("%c \n", pop());
+            }
+            push(*e);  // Push the current operator onto the stack
+        }
+        e++;  // Move to the next character in the expression
+    }
+
+    // After processing the expression, pop all remaining operators from the stack
+    while (top != -1) 
+    {
+        printf("%c \n", pop());  // Print and pop the remaining operators
+    }
+
+    return 0;
+}
+
+// Function to push an element onto the stack
+void push(char x) 
+{
+    top++;  // Increment the top of the stack
+    stack[top] = x;  // Assign the element to the stack
+}
+
+// Function to pop an element from the stack
+char pop() 
+{
+    if (top == -1)  // Check if the stack is empty
+        return -1;  // Return -1 if stack is empty
+    else
+        return stack[top--];  // Return the top element and decrement top
+}
+
+// Function to return the priority of operators
+int priority(char x) 
+{
+    if (x == '(') return 0;  // '(' has the lowest precedence
+    else if (x == '+' || x == '-') return 1;  // + and - have medium precedence
+    else if (x == '*' || x == '/') return 2;  // * and / have high precedence
+    else return 0;  // Default case for non-operators
+}
+
 ```

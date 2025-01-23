@@ -21,7 +21,7 @@
       <link>http://localhost:1313/personal-site/docs/os/c01_introduction/os-1.05-os-operations/</link>
       <pubDate>Sun, 12 Jan 2025 21:21:19 +0530</pubDate>
       <guid>http://localhost:1313/personal-site/docs/os/c01_introduction/os-1.05-os-operations/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Interrupts, System Calls, and Modes of Operation&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;interrupt-driven-systems&#34;&gt;&lt;strong&gt;Interrupt-Driven Systems&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;p&gt;Modern Operating Systems are &lt;strong&gt;interrupt-driven&lt;/strong&gt;, meaning they rely on &lt;strong&gt;interrupts&lt;/strong&gt; to perform tasks. If there are no I/O devices to service or no user requests, the OS remains idle, waiting for events to occur.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Interrupts, System Calls, and Modes of Operation&lt;/p&gt;&#xA;&lt;h3 id=&#34;interrupt-driven-systems&#34;&gt;&lt;strong&gt;Interrupt-Driven Systems&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Modern Operating Systems are &lt;strong&gt;interrupt-driven&lt;/strong&gt;, meaning they rely on &lt;strong&gt;interrupts&lt;/strong&gt; to perform tasks. If there are no I/O devices to service or no user requests, the OS remains idle, waiting for events to occur.&lt;/p&gt;</description>
     </item>
     <item>
       <title>OS 1.11 - Computing Environments</title>

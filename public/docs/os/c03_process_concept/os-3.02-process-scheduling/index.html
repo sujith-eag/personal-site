@@ -1928,14 +1928,11 @@ The goal of time-sharing systems is to switch the CPU between processes frequent
         <li><a href="#323-context-switch"><strong>3.2.3 Context Switch</strong></a>
           <ul>
             <li><a href="#process-of-a-context-switch"><strong>Process of a Context Switch:</strong></a></li>
-            <li><a href="#key-points"><strong>Key Points:</strong></a></li>
           </ul>
         </li>
         <li><a href="#swapping-vs-context-switching"><strong>Swapping vs. Context Switching</strong></a>
           <ul>
-            <li><a href="#1-purpose"><strong>1. Purpose</strong></a></li>
-            <li><a href="#2-when-it-happens"><strong>2. When It Happens</strong></a></li>
-            <li><a href="#3-impact-on-the-system"><strong>3. Impact on the System</strong></a></li>
+            <li><a href="#impact-on-the-system"><strong>Impact on the System</strong></a></li>
           </ul>
         </li>
       </ul>
@@ -1973,14 +1970,11 @@ The goal of time-sharing systems is to switch the CPU between processes frequent
         <li><a href="#323-context-switch"><strong>3.2.3 Context Switch</strong></a>
           <ul>
             <li><a href="#process-of-a-context-switch"><strong>Process of a Context Switch:</strong></a></li>
-            <li><a href="#key-points"><strong>Key Points:</strong></a></li>
           </ul>
         </li>
         <li><a href="#swapping-vs-context-switching"><strong>Swapping vs. Context Switching</strong></a>
           <ul>
-            <li><a href="#1-purpose"><strong>1. Purpose</strong></a></li>
-            <li><a href="#2-when-it-happens"><strong>2. When It Happens</strong></a></li>
-            <li><a href="#3-impact-on-the-system"><strong>3. Impact on the System</strong></a></li>
+            <li><a href="#impact-on-the-system"><strong>Impact on the System</strong></a></li>
           </ul>
         </li>
       </ul>
@@ -2079,16 +2073,10 @@ If a process requests I/O (e.g., disk access) and the device is busy, the proces
 <h4 id="types-of-processes"><strong>Types of Processes:</strong><a href="#types-of-processes" class="anchor" aria-hidden="true">#</a> </h4>
 <ul>
 <li>
-<p><strong>I/O Bound Processes:</strong></p>
-<ul>
-<li>Spend more time performing <strong>I/O</strong> operations than computations.</li>
-</ul>
+<p><strong>I/O Bound Processes:</strong>  Spend more time performing <strong>I/O</strong> operations than computations.</p>
 </li>
 <li>
-<p><strong>CPU Bound Processes:</strong></p>
-<ul>
-<li>Perform infrequent <strong>I/O</strong> operations and spend more time on computations.</li>
-</ul>
+<p><strong>CPU Bound Processes:</strong>  Perform infrequent <strong>I/O</strong> operations and spend more time on computations.</p>
 </li>
 </ul>
 <p>For better system performance, a combination of <strong>I/O-bound</strong> and <strong>CPU-bound</strong> processes should be selected (Process Mix).</p>
@@ -2154,71 +2142,38 @@ If a process requests I/O (e.g., disk access) and the device is busy, the proces
 </ul>
 </li>
 </ol>
-<h4 id="key-points"><strong>Key Points:</strong><a href="#key-points" class="anchor" aria-hidden="true">#</a> </h4>
 <ul>
 <li>
-<p><strong>Overhead:</strong><br>
-A <strong>context switch</strong> takes time and doesn&rsquo;t perform useful work while switching, so adding overhead to the system.</p>
+<p><strong>Overhead:</strong>  A <strong>context switch</strong> takes time and doesn&rsquo;t perform useful work while switching, so adding overhead to the system.</p>
 </li>
 <li>
-<p><strong>Speed Variation:</strong><br>
-The time taken for a context switch can vary based on system factors, like memory speed and the number of registers involved.</p>
+<p><strong>Speed Variation:</strong>  The time taken for a context switch can vary based on system factors, like memory speed and the number of registers involved.</p>
 </li>
 </ul>
 <hr>
 <h3 id="swapping-vs-context-switching"><strong>Swapping vs. Context Switching</strong><a href="#swapping-vs-context-switching" class="anchor" aria-hidden="true">#</a> </h3>
-<h4 id="1-purpose"><strong>1. Purpose</strong><a href="#1-purpose" class="anchor" aria-hidden="true">#</a> </h4>
+<p><strong>Swapping :</strong></p>
 <ul>
-<li>
-<p>The primary purpose of swapping is to manage <strong>memory</strong> and <strong>multiprogramming</strong>. It involves temporarily removing a process from <strong>main memory</strong> to free up space, and then later restoring it when needed. This is typically done when the system is overloaded or when the available memory is insufficient to handle all the running processes.</p>
-</li>
-<li>
-<p><strong>Swapping</strong> is about managing memory by moving processes between RAM and disk. It&rsquo;s done when the system runs out of memory or needs to adjust the number of processes in memory.</p>
-</li>
-<li>
-<p><strong>Context Switching:</strong></p>
-</li>
-<li>
-<p>The purpose of context switching is to <strong>switch between processes</strong> during execution, so that the CPU can allocate time to multiple processes in a time-sharing environment. It is a fundamental operation in multitasking systems, enabling the CPU to switch between processes without having to halt the system completely.</p>
-</li>
-<li>
-<p><strong>Context Switching</strong> is about switching the CPU’s focus between processes. It occurs frequently as the CPU moves between tasks, saving and restoring the state of processes.</p>
-</li>
+<li><strong>Swapping</strong> is about managing memory by moving processes between RAM and disk. It&rsquo;s done when the system runs out of memory or needs to adjust the number of processes in memory.</li>
+<li>The primary purpose of swapping is to manage <strong>memory</strong> and <strong>multiprogramming</strong>. It involves temporarily removing a process from <strong>main memory</strong> to free up space, and then later restoring it when needed. This is typically done when the system is overloaded or when the available memory is insufficient to handle all the running processes.</li>
 </ul>
-<h4 id="2-when-it-happens"><strong>2. When It Happens</strong><a href="#2-when-it-happens" class="anchor" aria-hidden="true">#</a> </h4>
+<p><strong>Context Switching :</strong></p>
 <ul>
-<li>
-<p><strong>Swapping:</strong></p>
-<ul>
-<li>Swapping occurs when a process is removed from <strong>memory</strong> and stored on <strong>disk</strong> to make space for other processes in memory. This generally happens when the system is running out of memory or when the degree of multiprogramming needs to be adjusted.</li>
-<li>Swapping occurs less frequently and only when necessary due to memory constraints or system load management. It&rsquo;s usually a <strong>long-term operation</strong>.</li>
+<li><strong>Context Switching</strong> is about switching the CPU’s focus between processes. It occurs frequently as the CPU moves between tasks, saving and restoring the state of processes.</li>
+<li>The purpose of context switching is to <strong>switch between processes</strong> during execution, so that the CPU can allocate time to multiple processes in a time-sharing environment. It is a fundamental operation in multitasking systems, enabling the CPU to switch between processes without having to halt the system completely.</li>
 </ul>
-</li>
-<li>
-<p><strong>Context Switching:</strong></p>
-<ul>
-<li>Context switching happens during the <strong>execution</strong> of processes, typically due to an <strong>interrupt</strong>, a <strong>system call</strong>, or when the process is voluntarily suspended. It involves saving the state of the currently running process and restoring the state of the next process to be executed by the CPU.</li>
-<li>Context switching happens <strong>frequently</strong> during the execution of processes, especially in time-sharing systems. It occurs <strong>many times per second</strong> as the CPU switches between active processes.</li>
-</ul>
-</li>
-</ul>
-<h4 id="3-impact-on-the-system"><strong>3. Impact on the System</strong><a href="#3-impact-on-the-system" class="anchor" aria-hidden="true">#</a> </h4>
-<ul>
-<li>
+<h4 id="impact-on-the-system"><strong>Impact on the System</strong><a href="#impact-on-the-system" class="anchor" aria-hidden="true">#</a> </h4>
 <p><strong>Swapping:</strong></p>
 <ul>
 <li>Swapping is a <strong>high-cost operation</strong> in terms of time and resources because it involves transferring a process between main memory and disk. It is relatively slower than context switching due to the slower speed of disk compared to RAM.</li>
 <li>Involves <strong>main memory</strong> and <strong>disk</strong>. A process is moved from <strong>RAM to disk</strong> and back to <strong>RAM</strong> when it needs to resume execution.</li>
 </ul>
-</li>
-<li>
 <p><strong>Context Switching:</strong></p>
 <ul>
 <li>Context switching is much <strong>faster</strong> than swapping, but still incurs overhead because the system has to save and load the process state (e.g., CPU registers, program counter, etc.) between switches. The overhead is minimal but significant when switching frequently.</li>
 <li>Involves <strong>CPU state</strong> (registers, program counter, etc.) but does not involve moving a process between memory and disk. The process remains in memory throughout the switch.</li>
 </ul>
-</li>
-</ul>
+<hr>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				</div>

@@ -46,8 +46,11 @@
 
 <meta property="og:title" content="02 - Stack Operations">
 <meta property="og:description" content="Variables Logic
-A Stack has to be declared, Needs a variable for size and pointer for the top of Stack.
-n, top = -1 are declared globally, to be accessible in all functions for verification and increment.">
+
+int n: The size of the stack (input by the user).
+int top=-1: A variable to track the top of the stack. Initially set to -1 to represent an empty stack.
+
+The variables n and top are declared globally so they can be accessed by all functions for stack operations and for condition verification.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://localhost:1313/personal-site/docs/c/ds_using_c/02-stack-operations/"><meta property="og:image" content="http://localhost:1313/personal-site/cover.png"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2025-01-01T16:00:28+05:30">
@@ -56,8 +59,11 @@ n, top = -1 are declared globally, to be accessible in all functions for verific
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://localhost:1313/personal-site/cover.png"><meta name="twitter:title" content="02 - Stack Operations">
 <meta name="twitter:description" content="Variables Logic
-A Stack has to be declared, Needs a variable for size and pointer for the top of Stack.
-n, top = -1 are declared globally, to be accessible in all functions for verification and increment.">
+
+int n: The size of the stack (input by the user).
+int top=-1: A variable to track the top of the stack. Initially set to -1 to represent an empty stack.
+
+The variables n and top are declared globally so they can be accessed by all functions for stack operations and for condition verification.">
 
     
     
@@ -1972,22 +1978,42 @@ n, top = -1 are declared globally, to be accessible in all functions for verific
 
 			</nav>
 			<h3 id="variables-logic">Variables Logic<a href="#variables-logic" class="anchor" aria-hidden="true">#</a> </h3>
-<p>A Stack has to be declared, Needs a variable for size and pointer for the top of Stack.
-<code>n, top = -1</code> are declared globally, to be accessible in all functions for verification and increment.</p>
-<p><code>stack[n]</code> is defined in main function as local variable for isolation.
-<code>e</code> an element variable is declared to capture the data input for pushing operation.</p>
-<p><code>ch</code> is choice variable used for capturing the choice to use in switch case.</p>
+<ol>
+<li><code>int n</code>: The size of the stack (input by the user).</li>
+<li><code>int top=-1</code>: A variable to track the top of the stack. Initially set to <code>-1</code> to represent an empty stack.</li>
+</ol>
+<p>The variables <code>n</code> and <code>top</code> are declared globally so they can be accessed by all functions for stack operations and for condition verification.</p>
+<ol start="3">
+<li><code>stack[n]</code>: An array declared locally inside the <code>main()</code> function to hold the stack elements.</li>
+<li><code>e</code>: A temporary variable used to capture the element that is being pushed onto the stack.</li>
+<li><code>int ch</code>: A variable to capture the user&rsquo;s choice for selecting the stack operation (Push, Pop, Peep, Display, Exit).</li>
+</ol>
 <hr>
 <h2 id="logic-of-implementation">Logic of Implementation<a href="#logic-of-implementation" class="anchor" aria-hidden="true">#</a> </h2>
+<p><strong>Global Declaration of Variables</strong>:</p>
 <ul>
-<li><code>n, top= -1</code> are declared as global</li>
-<li>Main function calls for entering the size of stack,</li>
-<li>Captured by <code>n</code> and a <code>stack</code> of size <code>n</code> is declared <code>stack[n]</code> according to input data type <code>int or char</code> that will be put in the stack.</li>
+<li><code>n</code> and <code>top = -1</code> are declared globally to handle the stack&rsquo;s size and top index throughout the functions.</li>
+</ul>
+<p><strong>Main Function</strong>:</p>
+<ul>
+<li>The user is prompted to enter the size of the stack, which is stored in <code>n</code>.</li>
+<li>The stack <code>stack[n]</code> is defined based on the size <code>n</code>.</li>
+</ul>
+<ul>
 <li><code>e</code> to capture the input data is declared to pass to the <code>push</code> function.</li>
-<li>To get the response repeatedly, a <code>while(1)</code> is started and <code>ch</code> is declared in that to capture the choice made by the user.</li>
-<li>Print the choices that can be chosen and store it in <code>ch</code></li>
-<li>Pass <code>ch</code> to <code>switch case</code> or <code>if else</code> conditional to call the appropriate function.</li>
-<li>One choice to trigger a <code>exit</code> from the loop and end the program.</li>
+</ul>
+<ul>
+<li>A <code>while(1)</code> loop is used to repeatedly display the menu and capture the user&rsquo;s choice (<code>ch</code>) to perform the corresponding stack operation.</li>
+<li>The program will continue running until the user chooses to exit.</li>
+</ul>
+<p><strong>Choice Handling</strong>:</p>
+<ul>
+<li>The <code>ch</code> variable captures the user&rsquo;s input for the stack operation they want to perform (Push, Pop, Peep, Display, or Exit).</li>
+<li>The input choice is passed to a <code>switch</code> or <code>if-else</code> block to determine the appropriate function to call.</li>
+</ul>
+<p><strong>Exit Condition</strong>:</p>
+<ul>
+<li>A choice of <code>0</code> (Exit) will trigger an exit from the loop using <code>exit(0)</code>.</li>
 </ul>
 <h3 id="stack-operations">Stack Operations<a href="#stack-operations" class="anchor" aria-hidden="true">#</a> </h3>
 <h4 id="push">Push<a href="#push" class="anchor" aria-hidden="true">#</a> </h4>
@@ -2025,7 +2051,8 @@ n, top = -1 are declared globally, to be accessible in all functions for verific
 <p>Choice to exit the program, using <code>exit(0)</code> for some case or condition.<br>
 <code>#include &lt;stdlib.h&gt;</code> has to be there for the <code>exit</code> function.<br>
 (or flag can be used to call <code>break</code> outside switch case for the while loop)</p>
-<p>To reduce three checks and print for if the stack is empty, <code>isempty()</code> is called to check if <code>top == -1</code> and print <code>it is empty</code> and return <code>1</code> if not empty return <code>0</code>.</p>
+<p>To reduce three checks and print for if the stack is empty, <code>isempty()</code> is called to check if <code>top == -1</code> and print <code>it is empty</code> and return <code>1</code> if not empty return <code>0</code>.
+<code>if (! isempty)</code> return true when not empty, then code inside will run.</p>
 <hr>
 <h2 id="implementation-1-using-switch-case">Implementation 1 (Using Switch Case)<a href="#implementation-1-using-switch-case" class="anchor" aria-hidden="true">#</a> </h2>
 
@@ -2039,97 +2066,115 @@ n, top = -1 are declared globally, to be accessible in all functions for verific
   <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp"></span>
-</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">top</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">push</span><span class="p">(</span><span class="kt">int</span> <span class="n">stack</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">top</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>  <span class="c1">// global variables for stack size and top position
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Function declarations
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">push</span><span class="p">(</span><span class="kt">int</span> <span class="n">stack</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">x</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">pop</span><span class="p">(</span><span class="kt">int</span> <span class="n">stack</span><span class="p">[]);</span>
 </span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">peep</span><span class="p">(</span><span class="kt">int</span> <span class="n">stack</span><span class="p">[]);</span>
 </span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">display</span><span class="p">(</span><span class="kt">int</span> <span class="n">stack</span><span class="p">[]);</span>
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">isempty</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Main function
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">main</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Enter the size of the stack: </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">	<span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">stack</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">e</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Input the size of the stack
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Enter the size of the stack: </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">stack</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">e</span><span class="p">;</span>  <span class="c1">// Local stack array and element to push
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Menu-driven loop for stack operations
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">ch</span><span class="p">;</span>  <span class="c1">// Choice variable
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">Enter the choice - </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;0 : Exit,</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;1 : Push,</span><span class="se">\t</span><span class="s">2 : Pop,</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;3 : Peep,</span><span class="se">\t</span><span class="s">4 : Display</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ch</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">	<span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="kt">int</span> <span class="n">ch</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">Enter the choice - </span><span class="se">\n</span><span class="s">0 : Exit,</span><span class="se">\n</span><span class="s">1 : Push,</span><span class="se">\t</span><span class="s">2 : Pop,</span><span class="se">\n</span><span class="s">3 : Peep,</span><span class="se">\t</span><span class="s">4 : Display</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">		<span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ch</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">		<span class="k">switch</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">		<span class="p">{</span>
-</span></span><span class="line"><span class="cl">			<span class="k">case</span> <span class="mi">0</span><span class="o">:</span> <span class="nf">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">			<span class="k">case</span> <span class="mi">1</span><span class="o">:</span> <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">Enter the number to be Pushed in: </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">					<span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">					<span class="nf">push</span><span class="p">(</span><span class="n">stack</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">					<span class="k">break</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">			<span class="k">case</span> <span class="mi">2</span><span class="o">:</span> <span class="nf">pop</span><span class="p">(</span><span class="n">stack</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">					<span class="k">break</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">			<span class="k">case</span> <span class="mi">3</span><span class="o">:</span> <span class="nf">peep</span><span class="p">(</span><span class="n">stack</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">					<span class="k">break</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">			<span class="k">case</span> <span class="mi">4</span><span class="o">:</span> <span class="nf">display</span><span class="p">(</span><span class="n">stack</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">					<span class="k">break</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">			<span class="k">default</span><span class="o">:</span> <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">Enter any given choice only</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">		<span class="p">}</span>
-</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">switch</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">case</span> <span class="mi">0</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">                <span class="nf">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>  <span class="c1">// Exit the program
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">                <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">Enter the number to be pushed: </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="nf">push</span><span class="p">(</span><span class="n">stack</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span>  <span class="c1">// Push the element to the stack
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">                <span class="nf">pop</span><span class="p">(</span><span class="n">stack</span><span class="p">);</span>  <span class="c1">// Pop the element from the stack
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">case</span> <span class="mi">3</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">                <span class="nf">peep</span><span class="p">(</span><span class="n">stack</span><span class="p">);</span>  <span class="c1">// Display the top element without removing
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">case</span> <span class="mi">4</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">                <span class="nf">display</span><span class="p">(</span><span class="n">stack</span><span class="p">);</span>  <span class="c1">// Display all elements in the stack
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">default</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">                <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">Invalid choice. Please try again.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>  <span class="c1">// Handle invalid choices
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Function to check if the stack is empty
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="nf">isempty</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">top</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">The Stack is Empty</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>  <span class="c1">// Stack is empty
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>  <span class="c1">// Stack is not empty
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">isempty</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Function to push an element onto the stack
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">push</span><span class="p">(</span><span class="kt">int</span> <span class="n">stack</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">top</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">The Stack is Empty</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">	<span class="p">}</span>
-</span></span><span class="line"><span class="cl">	<span class="k">else</span> 
-</span></span><span class="line"><span class="cl">	<span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">top</span> <span class="o">==</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1">// Check if the stack is full
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Stack is full. Cannot push %d.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">stack</span><span class="p">[</span><span class="o">++</span><span class="n">top</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>  <span class="c1">// Increment top and push the element
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">The element %d is pushed into the stack.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">push</span><span class="p">(</span><span class="kt">int</span> <span class="n">stack</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Function to pop an element from the stack
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">pop</span><span class="p">(</span><span class="kt">int</span> <span class="n">stack</span><span class="p">[])</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">top</span> <span class="o">==</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Stack is full</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">	<span class="p">}</span>
-</span></span><span class="line"><span class="cl">	<span class="k">else</span>
-</span></span><span class="line"><span class="cl">	<span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="n">top</span><span class="o">++</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">		<span class="n">stack</span><span class="p">[</span><span class="n">top</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">The element %d is pushed into the stack</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">x</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nf">isempty</span><span class="p">())</span>  <span class="c1">// Check if stack is not empty
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">The number %d has been popped.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">stack</span><span class="p">[</span><span class="n">top</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">top</span><span class="o">--</span><span class="p">;</span>  <span class="c1">// Decrease top position after popping
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">pop</span><span class="p">(</span><span class="kt">int</span> <span class="n">stack</span><span class="p">[])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Function to display the top element without popping
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">peep</span><span class="p">(</span><span class="kt">int</span> <span class="n">stack</span><span class="p">[])</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span> <span class="nf">isempty</span><span class="p">()</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl">	<span class="k">else</span>
-</span></span><span class="line"><span class="cl">	<span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">The number %d has been popped</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">stack</span><span class="p">[</span><span class="n">top</span><span class="p">]);</span>
-</span></span><span class="line"><span class="cl">		<span class="n">top</span><span class="o">--</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nf">isempty</span><span class="p">())</span>  <span class="c1">// Check if stack is not empty
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">The number at the top is %d.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">stack</span><span class="p">[</span><span class="n">top</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">peep</span><span class="p">(</span><span class="kt">int</span> <span class="n">stack</span><span class="p">[])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Function to display all elements in the stack
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">display</span><span class="p">(</span><span class="kt">int</span> <span class="n">stack</span><span class="p">[])</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span> <span class="nf">isempty</span><span class="p">()</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl">	<span class="k">else</span>
-</span></span><span class="line"><span class="cl">	<span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">The number at the top is %d </span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">stack</span><span class="p">[</span><span class="n">top</span><span class="p">]);</span>
-</span></span><span class="line"><span class="cl">	<span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">display</span><span class="p">(</span><span class="kt">int</span> <span class="n">stack</span><span class="p">[])</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span> <span class="nf">isempty</span><span class="p">()</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl">	<span class="k">else</span>
-</span></span><span class="line"><span class="cl">	<span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">top</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">		<span class="p">{</span>
-</span></span><span class="line"><span class="cl">			<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%d </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="n">stack</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-</span></span><span class="line"><span class="cl">		<span class="p">}</span>
-</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nf">isempty</span><span class="p">())</span>  <span class="c1">// Check if stack is not empty
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">The elements in the stack are:</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">top</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span>  <span class="c1">// Traverse stack from top to bottom
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">stack</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
   </figure>
 </div>
@@ -2145,99 +2190,118 @@ n, top = -1 are declared globally, to be accessible in all functions for verific
   <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp"></span>
-</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">top</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">push</span><span class="p">(</span><span class="kt">int</span> <span class="n">stack</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">top</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>  <span class="c1">// Global variables for stack size and top position
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Function declarations
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">push</span><span class="p">(</span><span class="kt">int</span> <span class="n">stack</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">x</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">pop</span><span class="p">(</span><span class="kt">int</span> <span class="n">stack</span><span class="p">[]);</span>
 </span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">peep</span><span class="p">(</span><span class="kt">int</span> <span class="n">stack</span><span class="p">[]);</span>
 </span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">display</span><span class="p">(</span><span class="kt">int</span> <span class="n">stack</span><span class="p">[]);</span>
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">isempty</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Main function
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">main</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Enter the size of the stack: </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">	<span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">stack</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">e</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Input the size of the stack
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Enter the size of the stack: </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">stack</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">e</span><span class="p">;</span>  <span class="c1">// Local stack array and element to push
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Menu-driven loop for stack operations
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">ch</span><span class="p">;</span>  <span class="c1">// Choice variable
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">Enter the choice - </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;0 : Exit,</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;1 : Push,</span><span class="se">\t</span><span class="s">2 : Pop,</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;3 : Peep,</span><span class="se">\t</span><span class="s">4 : Display</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ch</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">	<span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="kt">int</span> <span class="n">ch</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">Enter the choice - </span><span class="se">\n</span><span class="s">0 : Exit,</span><span class="se">\n</span><span class="s">1 : Push,</span><span class="se">\t</span><span class="s">2 : Pop,</span><span class="se">\n</span><span class="s">3 : Peep,</span><span class="se">\t</span><span class="s">4 : Display</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">		<span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ch</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="p">(</span><span class="n">ch</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">			<span class="nf">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">		<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">ch</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">		<span class="p">{</span>
-</span></span><span class="line"><span class="cl">			<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">Enter the number to be Pushed in: </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">			<span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">			<span class="nf">push</span><span class="p">(</span><span class="n">stack</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">		<span class="p">}</span>
-</span></span><span class="line"><span class="cl">		<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">ch</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">			<span class="nf">pop</span><span class="p">(</span><span class="n">stack</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">		<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">ch</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">			<span class="nf">peep</span><span class="p">(</span><span class="n">stack</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">		<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">ch</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">			<span class="nf">display</span><span class="p">(</span><span class="n">stack</span><span class="p">);</span>	
-</span></span><span class="line"><span class="cl">		<span class="k">else</span> 
-</span></span><span class="line"><span class="cl">			<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">Enter any given choice only</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">		<span class="p">}</span>
-</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">ch</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>  <span class="c1">// Exit the program
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">ch</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">Enter the number to be pushed: </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">push</span><span class="p">(</span><span class="n">stack</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span>  <span class="c1">// Push the element to the stack
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">ch</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">pop</span><span class="p">(</span><span class="n">stack</span><span class="p">);</span>  <span class="c1">// Pop the element from the stack
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">ch</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">peep</span><span class="p">(</span><span class="n">stack</span><span class="p">);</span>  <span class="c1">// Display the top element without removing
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">ch</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">display</span><span class="p">(</span><span class="n">stack</span><span class="p">);</span>  <span class="c1">// Display all elements in the stack
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span> 
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">Invalid choice. Please try again.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>  <span class="c1">// Handle invalid choices
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Function to check if the stack is empty
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="nf">isempty</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">top</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">The Stack is Empty</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>  <span class="c1">// Stack is empty
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>  <span class="c1">// Stack is not empty
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">isempty</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Function to push an element onto the stack
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">push</span><span class="p">(</span><span class="kt">int</span> <span class="n">stack</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">top</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">The Stack is Empty</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">	<span class="p">}</span>
-</span></span><span class="line"><span class="cl">	<span class="k">else</span> 
-</span></span><span class="line"><span class="cl">	<span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">top</span> <span class="o">==</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1">// Check if the stack is full
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Stack is full. Cannot push %d.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">stack</span><span class="p">[</span><span class="o">++</span><span class="n">top</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>  <span class="c1">// Increment top and push the element
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">The element %d is pushed into the stack.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">push</span><span class="p">(</span><span class="kt">int</span> <span class="n">stack</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Function to pop an element from the stack
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">pop</span><span class="p">(</span><span class="kt">int</span> <span class="n">stack</span><span class="p">[])</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">top</span> <span class="o">==</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Stack is full</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">	<span class="p">}</span>
-</span></span><span class="line"><span class="cl">	<span class="k">else</span>
-</span></span><span class="line"><span class="cl">	<span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="n">top</span><span class="o">++</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">		<span class="n">stack</span><span class="p">[</span><span class="n">top</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">The element %d is pushed into the stack</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">x</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nf">isempty</span><span class="p">())</span>  <span class="c1">// Check if stack is not empty
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">The number %d has been popped.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">stack</span><span class="p">[</span><span class="n">top</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">top</span><span class="o">--</span><span class="p">;</span>  <span class="c1">// Decrease top position after popping
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">pop</span><span class="p">(</span><span class="kt">int</span> <span class="n">stack</span><span class="p">[])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Function to display the top element without popping
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">peep</span><span class="p">(</span><span class="kt">int</span> <span class="n">stack</span><span class="p">[])</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span> <span class="nf">isempty</span><span class="p">()</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl">	<span class="k">else</span>
-</span></span><span class="line"><span class="cl">	<span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">The number %d has been popped</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">stack</span><span class="p">[</span><span class="n">top</span><span class="p">]);</span>
-</span></span><span class="line"><span class="cl">		<span class="n">top</span><span class="o">--</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nf">isempty</span><span class="p">())</span>  <span class="c1">// Check if stack is not empty
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">The number at the top is %d.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">stack</span><span class="p">[</span><span class="n">top</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">peep</span><span class="p">(</span><span class="kt">int</span> <span class="n">stack</span><span class="p">[])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Function to display all elements in the stack
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">display</span><span class="p">(</span><span class="kt">int</span> <span class="n">stack</span><span class="p">[])</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span> <span class="nf">isempty</span><span class="p">()</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl">	<span class="k">else</span>
-</span></span><span class="line"><span class="cl">	<span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">The number at the top is %d </span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">stack</span><span class="p">[</span><span class="n">top</span><span class="p">]);</span>
-</span></span><span class="line"><span class="cl">	<span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">display</span><span class="p">(</span><span class="kt">int</span> <span class="n">stack</span><span class="p">[])</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span> <span class="nf">isempty</span><span class="p">()</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl">	<span class="k">else</span>
-</span></span><span class="line"><span class="cl">	<span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">top</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">		<span class="p">{</span>
-</span></span><span class="line"><span class="cl">			<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%d </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="n">stack</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-</span></span><span class="line"><span class="cl">		<span class="p">}</span>
-</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nf">isempty</span><span class="p">())</span>  <span class="c1">// Check if stack is not empty
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">The elements in the stack are:</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">top</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span>  <span class="c1">// Traverse stack from top to bottom
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">stack</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
   </figure>
 </div>

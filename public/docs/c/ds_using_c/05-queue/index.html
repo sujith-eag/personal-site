@@ -46,9 +46,7 @@
 
 <meta property="og:title" content="05 - Queue">
 <meta property="og:description" content="Basic Logic
-
-
-An array where elements are added and the first element in the array is indicated by the head pointer and tail represents the next place available for insertion.">
+Queue Structure: The queue is a data structure where elements are added at the back and removed from the front.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://localhost:1313/personal-site/docs/c/ds_using_c/05-queue/"><meta property="og:image" content="http://localhost:1313/personal-site/cover.png"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2025-01-01T16:00:44+05:30">
@@ -57,9 +55,7 @@ An array where elements are added and the first element in the array is indicate
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://localhost:1313/personal-site/cover.png"><meta name="twitter:title" content="05 - Queue">
 <meta name="twitter:description" content="Basic Logic
-
-
-An array where elements are added and the first element in the array is indicated by the head pointer and tail represents the next place available for insertion.">
+Queue Structure: The queue is a data structure where elements are added at the back and removed from the front.">
 
     
     
@@ -1916,7 +1912,14 @@ An array where elements are added and the first element in the array is indicate
   <ul>
     <li>
       <ul>
-        <li><a href="#basic-logic">Basic Logic</a></li>
+        <li>
+          <ul>
+            <li><a href="#basic-logic"><strong>Basic Logic</strong></a></li>
+            <li><a href="#variables"><strong>Variables</strong></a></li>
+            <li><a href="#implementation-logic">Implementation Logic</a></li>
+            <li><a href="#function-logic"><strong>Function Logic</strong></a></li>
+          </ul>
+        </li>
         <li><a href="#implementation">Implementation</a></li>
       </ul>
     </li>
@@ -1937,7 +1940,14 @@ An array where elements are added and the first element in the array is indicate
   <ul>
     <li>
       <ul>
-        <li><a href="#basic-logic">Basic Logic</a></li>
+        <li>
+          <ul>
+            <li><a href="#basic-logic"><strong>Basic Logic</strong></a></li>
+            <li><a href="#variables"><strong>Variables</strong></a></li>
+            <li><a href="#implementation-logic">Implementation Logic</a></li>
+            <li><a href="#function-logic"><strong>Function Logic</strong></a></li>
+          </ul>
+        </li>
         <li><a href="#implementation">Implementation</a></li>
       </ul>
     </li>
@@ -1947,19 +1957,56 @@ An array where elements are added and the first element in the array is indicate
   </details>
 
 			</nav>
-			<h3 id="basic-logic">Basic Logic<a href="#basic-logic" class="anchor" aria-hidden="true">#</a> </h3>
+			<h4 id="basic-logic"><strong>Basic Logic</strong><a href="#basic-logic" class="anchor" aria-hidden="true">#</a> </h4>
+<p><strong>Queue Structure</strong>: The queue is a data structure where elements are added at the <strong>back</strong> and removed from the <strong>front</strong>.</p>
+<p><strong>Pointers</strong>:</p>
 <ul>
-<li>
-<p>An array where elements are added and the first element in the array is indicated by the <code>head</code> pointer and <code>tail</code> represents the next place available for insertion.</p>
-</li>
-<li>
-<p>Removal of element is done only from the <code>head</code>, it increments</p>
-</li>
-<li>
-<p>Adding of elements happens at the <code>tail</code>, it increments</p>
-</li>
+<li><code>head</code> points to the first element in the queue (front).</li>
+<li><code>tail</code> points to the next available position for insertion (back).</li>
+<li>The <code>head</code> is incremented after each removal, and <code>tail</code> is incremented after each insertion.</li>
 </ul>
-<hr>
+<h4 id="variables"><strong>Variables</strong><a href="#variables" class="anchor" aria-hidden="true">#</a> </h4>
+<ul>
+<li><strong><code>int n</code></strong>: Size of the queue.</li>
+<li><strong><code>int head = -1, tail = -1</code></strong>: Initialize the <code>head</code> and <code>tail</code> pointers to indicate an empty queue.</li>
+<li><strong><code>stack[n]</code></strong>: Array of integers or characters used as the queue.</li>
+<li><strong><code>ele</code></strong>: The value to be added to the queue (enqueue operation).</li>
+<li><strong><code>ch</code></strong>: Integer variable used to store the user’s choice for queue operations.</li>
+</ul>
+<h4 id="implementation-logic">Implementation Logic<a href="#implementation-logic" class="anchor" aria-hidden="true">#</a> </h4>
+<p><strong>Global Variables</strong>:</p>
+<ul>
+<li>Declare <code>n</code>, <code>head = -1</code>, and <code>tail = -1</code> globally to manage the queue.</li>
+<li>Functions for queue operations (<code>enque</code>, <code>deque</code>, and <code>display</code>) are declared, all of which return <code>void</code>.</li>
+</ul>
+<p><strong>Input Handling</strong>:</p>
+<ul>
+<li>In the <code>main()</code> function, the size of the queue is taken as input (<code>scanf(&quot;%d&quot;, &amp;n)</code>).</li>
+<li>Declare <code>stack[n]</code> to store the queue elements and <code>ele</code> for input values of relevant type.</li>
+</ul>
+<ul>
+<li>A <code>while(1)</code> loop used to continuously display options and perform chosen operation.</li>
+<li>Declare <code>int ch</code> to hold the choice of user.</li>
+<li>make <code>if else</code> conditions for each function, an exit and miss typed number.</li>
+<li>Only option for <code>enque</code> needs to be passed the value to be added with <code>stack</code></li>
+</ul>
+<h4 id="function-logic"><strong>Function Logic</strong><a href="#function-logic" class="anchor" aria-hidden="true">#</a> </h4>
+<p><strong><code>enque</code></strong>:</p>
+<ul>
+<li>Checks if the queue is full (<code>tail == n-1</code>).</li>
+<li>If not full, it increments <code>tail</code> and inserts the element into <code>stack[tail]</code>.</li>
+<li>If <code>head</code> is <code>-1</code> (first insertion), it increments <code>head</code> to indicate that the queue is no longer empty.
+<strong><code>dequ</code></strong>:</li>
+<li>Removal happens at the head, so check if (<code>head == -1 || head &gt; tail</code>) which means queue is empty</li>
+<li>If not empty, it removes the element at <code>head</code> and increments <code>head</code>.
+<strong><code>display</code></strong>:</li>
+<li>Checks if the queue is empty (<code>head == -1 || head &gt; tail</code>).</li>
+<li>If not empty, it displays all elements from <code>head</code> to <code>tail</code>.</li>
+</ul>
+<ul>
+<li>run a for loop with <code>i = front</code> and running till <code>i &lt;= tail</code> with <code>i++</code></li>
+<li>Print each <code>stack[i]</code></li>
+</ul>
 <h3 id="implementation">Implementation<a href="#implementation" class="anchor" aria-hidden="true">#</a> </h3>
 
 
@@ -2044,6 +2091,7 @@ An array where elements are added and the first element in the array is indicate
 </span></span><span class="line"><span class="cl">		<span class="p">{</span>
 </span></span><span class="line"><span class="cl">			<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%d </span><span class="se">\t</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">stack</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
 </span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
   </figure>

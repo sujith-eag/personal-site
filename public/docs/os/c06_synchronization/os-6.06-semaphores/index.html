@@ -1912,7 +1912,7 @@
       <ul>
         <li>
           <ul>
-            <li><a href="#the-wait-and-signal-operations">The <code>wait()</code> and <code>signal()</code> Operations</a></li>
+            <li><a href="#the-wait-and-signal-operations">The wait() and signal() Operations</a></li>
           </ul>
         </li>
         <li><a href="#661-semaphore-usage-in-synchronization">6.6.1 Semaphore Usage in Synchronization</a>
@@ -1953,7 +1953,7 @@
       <ul>
         <li>
           <ul>
-            <li><a href="#the-wait-and-signal-operations">The <code>wait()</code> and <code>signal()</code> Operations</a></li>
+            <li><a href="#the-wait-and-signal-operations">The wait() and signal() Operations</a></li>
           </ul>
         </li>
         <li><a href="#661-semaphore-usage-in-synchronization">6.6.1 Semaphore Usage in Synchronization</a>
@@ -1984,7 +1984,7 @@
 			<p>Semaphores are a more advanced and flexible synchronization mechanism compared to mutex locks. They allow processes to synchronize their actions in more sophisticated ways.</p>
 <p>A <strong>semaphore</strong> is an integer variable that controls access to a shared resource. Apart from being initialized, the semaphore can only be accessed using two operations: <code>wait()</code> and <code>signal()</code>, both of which are atomic (indivisible) operations.</p>
 <hr>
-<h4 id="the-wait-and-signal-operations">The <code>wait()</code> and <code>signal()</code> Operations<a href="#the-wait-and-signal-operations" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="the-wait-and-signal-operations">The wait() and signal() Operations<a href="#the-wait-and-signal-operations" class="anchor" aria-hidden="true">#</a> </h4>
 <ul>
 <li>The <strong><code>wait()</code></strong> operation checks the value of the semaphore. If the value is greater than 0, it decrements the value and allows the process to proceed. If the value is 0 or less, the process will wait (i.e., it will keep checking the value until it can proceed). This prevents the process from proceeding if resources are unavailable.</li>
 </ul>
@@ -1996,11 +1996,11 @@
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <pre tabindex="0"><code>wait(S) {
-    while (S &lt;= 0)
-        ; // busy wait
-    S--;
-}</code></pre>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="nf">wait</span><span class="p">(</span><span class="n">S</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">S</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">;</span> <span class="c1">// busy wait
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">S</span><span class="o">--</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
   </figure>
 </div>
 <ul>
@@ -2014,9 +2014,9 @@
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <pre tabindex="0"><code>signal(S) {
-    S++;
-}</code></pre>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="nf">signal</span><span class="p">(</span><span class="n">S</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">S</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
   </figure>
 </div>
 <p>Both the <code>wait()</code> and <code>signal()</code> operations modify the semaphore’s value. These operations must be executed atomically—meaning no other process can change the semaphore’s value while it’s being modified. This ensures that the operation is performed correctly and without interruption.
@@ -2052,8 +2052,9 @@
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <pre tabindex="0"><code>S1;                // Execute some operation
-signal(synch);     // Signal that S1 is complete</code></pre>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">S1</span><span class="p">;</span>                <span class="c1">// Execute some operation
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nf">signal</span><span class="p">(</span><span class="n">synch</span><span class="p">);</span>     <span class="c1">// Signal that S1 is complete
+</span></span></span></code></pre></div>
   </figure>
 </div>
 <p>In <strong>P2</strong>:</p>
@@ -2065,8 +2066,9 @@ signal(synch);     // Signal that S1 is complete</code></pre>
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <pre tabindex="0"><code>wait(synch);       // Wait until P1 signals
-S2;                // Execute the operation only after S1 is done</code></pre>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="nf">wait</span><span class="p">(</span><span class="n">synch</span><span class="p">);</span>       <span class="c1">// Wait until P1 signals
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">S2</span><span class="p">;</span>                <span class="c1">// Execute the operation only after S1 is done
+</span></span></span></code></pre></div>
   </figure>
 </div>
 <p>Since <code>synch</code> is initialized to 0, process P2 will be blocked at <code>wait(synch)</code> until process P1 executes <code>signal(synch)</code> after completing S1. Only then can process P2 proceed with S2.</p>

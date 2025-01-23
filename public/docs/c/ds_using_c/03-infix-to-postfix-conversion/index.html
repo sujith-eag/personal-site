@@ -48,22 +48,20 @@
 <meta property="og:description" content="#include &lt;ctype.h&gt; to get the isalnum() function to check alphabets and numbers which returns false for any special characters.
 Logic for Variables
 
-A char stack[100] fixed size array stack (not by input) for pushing and popping characters during process of conversion.
-A int top = -1 to point at the top of this stack.
-In main function one more fixed size stack char exp[100] to catch the expression entered by the user.
-char *e to be the pointer to the exp array, used for traversal and checking end of exp.
-char x to catch the popped element from the stack and printing it.
+char stack[100]: A fixed-size array to store operators and operands for conversion.
+int top = -1: This variable points to the top of the stack.
+char exp[100]: Another array to store the user input expression.
+char *e: A pointer used to traverse the exp[] array.
+char x: A variable to store the element popped from the stack.
 
 Implementation Logic
 
-Make a stack[] of a fixed size and top = -1 for pointing at its top position. Both global.
-Main function, declare exp[] and *e. Taking input from user the expression and storing it in exp[] as scanf(&quot;%s &quot;, exp).  %s is used instead of %c to get the full string.
-No need to pass &amp;exp as it is an array, it automatically passes the address of starting location of the array.
-Assign the location of the start of expression array exp to the pointer e as e = exp
-Declare another char x to hold popped values in main. (Can be done in while loop also?)
-The beginning and assigning part is done.
-Start a while() loop to traverse the exp by incrementing the pointer as e&#43;&#43; in iteration.
-Condition to termination of loop is reaching the end of the exp array which will have \0 at the end, so the condition will be while( *e != &#39;\0&#39; )
+Declare a global stack (stack[100]) with top = -1 to track the top of the stack.
+In the main function, declare the exp[100] array to capture the user input expression. Use scanf(&quot;%s&quot;, exp) to capture the entire expression (%c is for single char) (&amp;exp is not needed as it is an array).
+Declare e and Set e = exp to point to the start of the expression, enabling traversal.
+Use x in the main function to capture popped elements.
+Use a while loop (while(*e != &#39;\0&#39;)) to traverse the expression by incrementing pointer e&#43;&#43;.
+Each iteration processes one character in exp[] and ends when the end of the array is reached which is signaled by *e == &#39;\0&#39;
 
 Conversion Logic
 As the while loop runs, e is incremented and it traverses the exp array elements.
@@ -78,22 +76,20 @@ e points at the location within the array and *e is element in that array locati
 <meta name="twitter:description" content="#include &lt;ctype.h&gt; to get the isalnum() function to check alphabets and numbers which returns false for any special characters.
 Logic for Variables
 
-A char stack[100] fixed size array stack (not by input) for pushing and popping characters during process of conversion.
-A int top = -1 to point at the top of this stack.
-In main function one more fixed size stack char exp[100] to catch the expression entered by the user.
-char *e to be the pointer to the exp array, used for traversal and checking end of exp.
-char x to catch the popped element from the stack and printing it.
+char stack[100]: A fixed-size array to store operators and operands for conversion.
+int top = -1: This variable points to the top of the stack.
+char exp[100]: Another array to store the user input expression.
+char *e: A pointer used to traverse the exp[] array.
+char x: A variable to store the element popped from the stack.
 
 Implementation Logic
 
-Make a stack[] of a fixed size and top = -1 for pointing at its top position. Both global.
-Main function, declare exp[] and *e. Taking input from user the expression and storing it in exp[] as scanf(&quot;%s &quot;, exp).  %s is used instead of %c to get the full string.
-No need to pass &amp;exp as it is an array, it automatically passes the address of starting location of the array.
-Assign the location of the start of expression array exp to the pointer e as e = exp
-Declare another char x to hold popped values in main. (Can be done in while loop also?)
-The beginning and assigning part is done.
-Start a while() loop to traverse the exp by incrementing the pointer as e&#43;&#43; in iteration.
-Condition to termination of loop is reaching the end of the exp array which will have \0 at the end, so the condition will be while( *e != &#39;\0&#39; )
+Declare a global stack (stack[100]) with top = -1 to track the top of the stack.
+In the main function, declare the exp[100] array to capture the user input expression. Use scanf(&quot;%s&quot;, exp) to capture the entire expression (%c is for single char) (&amp;exp is not needed as it is an array).
+Declare e and Set e = exp to point to the start of the expression, enabling traversal.
+Use x in the main function to capture popped elements.
+Use a while loop (while(*e != &#39;\0&#39;)) to traverse the expression by incrementing pointer e&#43;&#43;.
+Each iteration processes one character in exp[] and ends when the end of the array is reached which is signaled by *e == &#39;\0&#39;
 
 Conversion Logic
 As the while loop runs, e is incremented and it traverses the exp array elements.
@@ -2004,47 +2000,38 @@ e points at the location within the array and *e is element in that array locati
 			<p><code>#include &lt;ctype.h&gt;</code> to get the <code>isalnum()</code> function to check alphabets and numbers which returns false for any special characters.</p>
 <h3 id="logic-for-variables">Logic for Variables<a href="#logic-for-variables" class="anchor" aria-hidden="true">#</a> </h3>
 <ul>
-<li>A <code>char stack[100]</code> fixed size array stack (not by input) for pushing and popping characters during process of conversion.</li>
-<li>A <code>int top = -1</code> to point at the top of this stack.</li>
-<li>In main function one more fixed size stack <code>char exp[100]</code> to catch the expression entered by the user.</li>
-<li><code>char *e</code> to be the pointer to the <code>exp</code> array, used for traversal and checking end of <code>exp</code>.</li>
-<li><code>char x</code> to catch the popped element from the <code>stack</code> and printing it.</li>
+<li><code>char stack[100]</code>: A fixed-size array to store operators and operands for conversion.</li>
+<li><code>int top = -1</code>: This variable points to the top of the stack.</li>
+<li><code>char exp[100]</code>: Another array to store the user input expression.</li>
+<li><code>char *e</code>: A pointer used to traverse the <code>exp[]</code> array.</li>
+<li><code>char x</code>: A variable to store the element popped from the stack.</li>
 </ul>
 <h3 id="implementation-logic">Implementation Logic<a href="#implementation-logic" class="anchor" aria-hidden="true">#</a> </h3>
 <ul>
-<li>Make a <code>stack[]</code> of a fixed size and <code>top = -1</code> for pointing at its top position. Both global.</li>
-<li>Main function, declare <code>exp[]</code> and <code>*e</code>. Taking input from user the expression and storing it in <code>exp[]</code> as <code>scanf(&quot;%s &quot;, exp)</code>.  <code>%s</code> is used instead of <code>%c</code> to get the full string.</li>
-<li>No need to pass <code>&amp;exp</code> as it is an array, it automatically passes the address of starting location of the array.</li>
-<li>Assign the location of the start of expression array <code>exp</code> to the pointer <code>e</code> as <code>e = exp</code></li>
-<li>Declare another <code>char x</code> to hold popped values in main. (Can be done in while loop also?)</li>
-<li>The beginning and assigning part is done.</li>
-<li>Start a <code>while()</code> loop to traverse the <code>exp</code> by incrementing the pointer as <code>e++</code> in iteration.</li>
-<li>Condition to termination of loop is reaching the end of the <code>exp</code> array which will have <code>\0</code> at the end, so the condition will be <code>while( *e != '\0' )</code></li>
+<li>Declare a global stack (<code>stack[100]</code>) with <code>top = -1</code> to track the top of the stack.</li>
+<li>In the <code>main</code> function, declare the <code>exp[100]</code> array to capture the user input expression. Use <code>scanf(&quot;%s&quot;, exp)</code> to capture the entire expression (<code>%c</code> is for single <code>char</code>) (<code>&amp;exp</code> is not needed as it is an array).</li>
+<li>Declare <code>e</code> and Set <code>e = exp</code> to point to the start of the expression, enabling traversal.</li>
+<li>Use <code>x</code> in the main function to capture popped elements.</li>
+<li>Use a <code>while</code> loop (<code>while(*e != '\0')</code>) to traverse the expression by incrementing pointer <code>e++</code>.</li>
+<li>Each iteration processes one character in <code>exp[]</code> and ends when the end of the array is reached which is signaled by <code>*e == '\0'</code></li>
 </ul>
 <h3 id="conversion-logic">Conversion Logic<a href="#conversion-logic" class="anchor" aria-hidden="true">#</a> </h3>
 <p>As the <code>while</code> loop runs, <code>e</code> is incremented and it traverses the <code>exp</code> array elements.<br>
 <code>e</code> points at the location within the array and <code>*e</code> is element in that array location.</p>
 <ul>
-<li>If <code>*e</code> is a number then print it, this will not go into the stack.  <code>if ( isalnum(*e) )</code></li>
-<li>else If <code>*e</code> is starting brace <code>(</code>, no checking, push <code>*e</code> into the <code>stack</code> array.  <code>else if ( *e == '(' )</code></li>
-<li>else if <code>*e</code> is ending brace <code>)</code>, then use <code>while</code> loop to <code>pop</code> all elements from the stack till the popped item is <code>(</code> an opening brace. <code>while( pop() != '(' )</code></li>
-<li>The popped items need to be printed so returned character from <code>pop()</code> is assigned to <code>x</code> and <code>x</code> is printed in each iteration of the <code>while</code> loop. <code>while( (x=pop()) != '(' )</code></li>
+<li><strong>Alphanumeric Characters</strong>: <code>if ( isalnum(*e) )</code> If the character <code>*e</code> is alphanumeric (number or letter), it is printed directly without being pushed to the stack.</li>
+<li><strong>Opening Parenthesis</strong> <code>(</code>:  Always pushed onto the stack.</li>
+<li><strong>Closing Parenthesis</strong> <code>)</code>: Pop elements from the stack and print them until an opening parenthesis <code>(</code> is encountered. <code>while( (x=pop()) != '(' )</code></li>
+<li><strong>Operators</strong>: For other characters (operators), compare their priority with the operator at the top of the stack. Pop and print operators with equal or higher priority before pushing the current operator. <code>while ( priority(stack[top]) &gt;= priority(*e) )</code></li>
 </ul>
-<p>If the element in the <code>*e</code> is not a number or opening and closing brace, it will be an Operator that has to be pushed into the <code>stack[]</code> and <code>top</code> has to be incremented.</p>
 <p>Conditions for pushing in the operator.</p>
 <ul>
 <li>If stack is empty, <code>if (top == -1 )</code> then can be pushed in.</li>
 <li>If not empty, then priority of the element at the top of the stack <code>stack[top]</code> has to be compared with the element from the expression <code>*e</code>.</li>
-<li>If <code>stack[top]</code> is of lower priority than <code>*e</code> then <code>*e</code> can be pushed in.</li>
-<li>if <code>stack[top]</code> is greater than or equal to <code>*e</code> then element is popped and printed till the <code>stack[top]</code> becomes less than <code>*e</code>. Then <code>*e</code> is pushed into stack.</li>
-<li><code>while</code> loop is used to check this condition and print the popped operators using</li>
-<li><code>while ( priority(stack[top]) &gt;= priority(*e) )</code></li>
 </ul>
-<p>When the main <code>while</code> loop ends after <code>*e</code> reaches <code>\0</code>. There are still operators in the stack.
-To remove them, <code>stack</code> is traversed using <code>top</code> till it reaches <code>-1</code> and no elements are in <code>stack</code>.</p>
-<ul>
-<li><code>while (top != -1 )</code> print all the popped items.</li>
-</ul>
+<p>After processing the entire expression, pop all remaining operators from the stack.
+After processing the entire expression the main <code>while</code> loop ends after <code>*e</code> reaches <code>\0</code>. There are still operators in the stack.
+pop all remaining operators from the stack. <code>while (top != -1 )</code> print all the popped items.</p>
 <h3 id="functions-logic">Functions logic<a href="#functions-logic" class="anchor" aria-hidden="true">#</a> </h3>
 <h4 id="push">Push<a href="#push" class="anchor" aria-hidden="true">#</a> </h4>
 <ul>
@@ -2063,8 +2050,15 @@ To remove them, <code>stack</code> is traversed using <code>top</code> till it r
 <li>Takes a <code>char</code> as parameter.</li>
 <li>Works by returning a value to reflect the operators precedence which allows the <code>while</code> loop to compare both operators based on their return value.</li>
 <li>Operator with lowest precedence returns <code>0</code> and next would be <code>1, 2, 3</code></li>
-<li>For operators with same precedence, Using <code>||</code> or to pass same value.</li>
-<li><code>(</code> has lowest value, <code>+ -</code> next and <code>* /</code> come after that.</li>
+<li>
+<ul>
+<li><code>(</code>: Lowest precedence (0).</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><code>+</code>, <code>-</code>: Medium precedence (1).</li>
+<li><code>*</code>, <code>/</code>: Highest precedence (2).</li>
 </ul>
 
 
@@ -2086,47 +2080,47 @@ To remove them, <code>stack</code> is traversed using <code>top</code> till it r
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl"><span class="kt">char</span> <span class="n">exp</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl"><span class="kt">char</span> <span class="o">*</span><span class="n">e</span><span class="p">,</span> <span class="n">x</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Enter the Infix Expression to be Converted: </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%s&#34;</span><span class="p">,</span> <span class="n">exp</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">e</span> <span class="o">=</span> <span class="n">exp</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">while</span><span class="p">(</span> <span class="o">*</span><span class="n">e</span> <span class="o">!=</span> <span class="sc">&#39;\0&#39;</span> <span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span> <span class="nf">isalnum</span><span class="p">(</span><span class="o">*</span><span class="n">e</span><span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">char</span> <span class="n">exp</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">char</span> <span class="o">*</span><span class="n">e</span><span class="p">,</span> <span class="n">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Enter the Infix Expression to be Converted: </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%s&#34;</span><span class="p">,</span> <span class="n">exp</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">e</span> <span class="o">=</span> <span class="n">exp</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	<span class="k">while</span><span class="p">(</span> <span class="o">*</span><span class="n">e</span> <span class="o">!=</span> <span class="sc">&#39;\0&#39;</span> <span class="p">)</span>
 </span></span><span class="line"><span class="cl">	<span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="nf">print</span><span class="p">(</span><span class="s">&#34;%c </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="o">*</span><span class="n">e</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl">	<span class="p">}</span>
-</span></span><span class="line"><span class="cl">	<span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="o">*</span><span class="n">e</span> <span class="o">==</span> <span class="sc">&#39;(&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="nf">push</span><span class="p">(</span><span class="o">*</span><span class="n">e</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">	<span class="p">}</span>
-</span></span><span class="line"><span class="cl">	<span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="o">*</span><span class="n">e</span> <span class="o">==</span> <span class="sc">&#39;)&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	<span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="k">while</span> <span class="p">(</span> <span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="nf">pop</span><span class="p">())</span> <span class="o">!=</span> <span class="sc">&#39;(&#39;</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="p">(</span> <span class="nf">isalnum</span><span class="p">(</span><span class="o">*</span><span class="n">e</span><span class="p">)</span> <span class="p">)</span>
 </span></span><span class="line"><span class="cl">		<span class="p">{</span>
-</span></span><span class="line"><span class="cl">			<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%c </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">			<span class="nf">print</span><span class="p">(</span><span class="s">&#34;%c </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="o">*</span><span class="n">e</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">		<span class="p">}</span>
-</span></span><span class="line"><span class="cl">	<span class="p">}</span>
-</span></span><span class="line"><span class="cl">	<span class="k">else</span> 
-</span></span><span class="line"><span class="cl">	<span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="k">while</span> <span class="p">(</span> <span class="nf">priority</span><span class="p">(</span><span class="n">stack</span><span class="p">[</span><span class="n">top</span><span class="p">])</span> <span class="o">&gt;=</span> <span class="nf">priority</span><span class="p">(</span><span class="o">*</span><span class="n">e</span><span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="o">*</span><span class="n">e</span> <span class="o">==</span> <span class="sc">&#39;(&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">		<span class="p">{</span>
-</span></span><span class="line"><span class="cl">			<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%c </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="nf">pop</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">			<span class="nf">push</span><span class="p">(</span><span class="o">*</span><span class="n">e</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">		<span class="p">}</span>
-</span></span><span class="line"><span class="cl">		<span class="nf">push</span><span class="p">(</span><span class="o">*</span><span class="n">e</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="o">*</span><span class="n">e</span> <span class="o">==</span> <span class="sc">&#39;)&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="k">while</span> <span class="p">(</span> <span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="nf">pop</span><span class="p">())</span> <span class="o">!=</span> <span class="sc">&#39;(&#39;</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%c </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="k">else</span> 
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="k">while</span> <span class="p">(</span> <span class="nf">priority</span><span class="p">(</span><span class="n">stack</span><span class="p">[</span><span class="n">top</span><span class="p">])</span> <span class="o">&gt;=</span> <span class="nf">priority</span><span class="p">(</span><span class="o">*</span><span class="n">e</span><span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%c </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="nf">pop</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">			<span class="nf">push</span><span class="p">(</span><span class="o">*</span><span class="n">e</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="n">e</span><span class="o">++</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
-</span></span><span class="line"><span class="cl">	<span class="n">e</span><span class="o">++</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="p">(</span> <span class="n">top</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%c </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="nf">pop</span><span class="p">());</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="p">(</span> <span class="n">top</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%c </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="nf">pop</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
@@ -2153,6 +2147,97 @@ To remove them, <code>stack</code> is traversed using <code>top</code> till it r
 </span></span><span class="line"><span class="cl">	<span class="k">else</span> 
 </span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+  </figure>
+</div>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;ctype.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">char</span> <span class="n">stack</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">top</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">char</span> <span class="nf">pop</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">push</span><span class="p">(</span><span class="kt">char</span> <span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">priority</span><span class="p">(</span><span class="kt">char</span> <span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">char</span> <span class="n">exp</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>  <span class="c1">// Expression to be converted
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">char</span> <span class="o">*</span><span class="n">e</span><span class="p">,</span> <span class="n">x</span><span class="p">;</span>     <span class="c1">// Pointer to traverse the expression and variable to store popped element
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Enter the Infix Expression to be Converted: </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%s&#34;</span><span class="p">,</span> <span class="n">exp</span><span class="p">);</span>  <span class="c1">// Take input expression
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="n">e</span> <span class="o">=</span> <span class="n">exp</span><span class="p">;</span>  <span class="c1">// Pointer to the start of expression
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="o">*</span><span class="n">e</span> <span class="o">!=</span> <span class="sc">&#39;\0&#39;</span><span class="p">)</span>   <span class="c1">// Loop until end of expression 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">{</span>  
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nf">isalnum</span><span class="p">(</span><span class="o">*</span><span class="n">e</span><span class="p">))</span>  <span class="c1">// If the character is a number/letter 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">{</span>  
+</span></span><span class="line"><span class="cl">            <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%c </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="o">*</span><span class="n">e</span><span class="p">);</span>  <span class="c1">// Print the character (operand)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="n">e</span> <span class="o">==</span> <span class="sc">&#39;(&#39;</span><span class="p">)</span>   <span class="c1">// If opening parenthesis
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">push</span><span class="p">(</span><span class="o">*</span><span class="n">e</span><span class="p">);</span>  <span class="c1">// Push it onto the stack
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="n">e</span> <span class="o">==</span> <span class="sc">&#39;)&#39;</span><span class="p">)</span>  <span class="c1">// If closing parenthesis
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">while</span> <span class="p">((</span><span class="n">x</span> <span class="o">=</span> <span class="nf">pop</span><span class="p">())</span> <span class="o">!=</span> <span class="sc">&#39;(&#39;</span><span class="p">)</span>  <span class="c1">// Pop until &#39;(&#39; is encountered
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%c </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>  <span class="c1">// Print the popped operator
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span>  <span class="c1">// If the character is an operator
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// Pop operators of higher or equal precedence and print them
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">while</span> <span class="p">(</span><span class="nf">priority</span><span class="p">(</span><span class="n">stack</span><span class="p">[</span><span class="n">top</span><span class="p">])</span> <span class="o">&gt;=</span> <span class="nf">priority</span><span class="p">(</span><span class="o">*</span><span class="n">e</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%c </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="nf">pop</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">push</span><span class="p">(</span><span class="o">*</span><span class="n">e</span><span class="p">);</span>  <span class="c1">// Push the current operator onto the stack
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">e</span><span class="o">++</span><span class="p">;</span>  <span class="c1">// Move to the next character in the expression
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// After processing the expression, pop all remaining operators from the stack
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">while</span> <span class="p">(</span><span class="n">top</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%c </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="nf">pop</span><span class="p">());</span>  <span class="c1">// Print and pop the remaining operators
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Function to push an element onto the stack
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">push</span><span class="p">(</span><span class="kt">char</span> <span class="n">x</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">top</span><span class="o">++</span><span class="p">;</span>  <span class="c1">// Increment the top of the stack
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">stack</span><span class="p">[</span><span class="n">top</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>  <span class="c1">// Assign the element to the stack
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Function to pop an element from the stack
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">char</span> <span class="nf">pop</span><span class="p">()</span> 
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">top</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>  <span class="c1">// Check if the stack is empty
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>  <span class="c1">// Return -1 if stack is empty
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">stack</span><span class="p">[</span><span class="n">top</span><span class="o">--</span><span class="p">];</span>  <span class="c1">// Return the top element and decrement top
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Function to return the priority of operators
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="nf">priority</span><span class="p">(</span><span class="kt">char</span> <span class="n">x</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="sc">&#39;(&#39;</span><span class="p">)</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>  <span class="c1">// &#39;(&#39; has the lowest precedence
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="sc">&#39;+&#39;</span> <span class="o">||</span> <span class="n">x</span> <span class="o">==</span> <span class="sc">&#39;-&#39;</span><span class="p">)</span> <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>  <span class="c1">// + and - have medium precedence
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="sc">&#39;*&#39;</span> <span class="o">||</span> <span class="n">x</span> <span class="o">==</span> <span class="sc">&#39;/&#39;</span><span class="p">)</span> <span class="k">return</span> <span class="mi">2</span><span class="p">;</span>  <span class="c1">// * and / have high precedence
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">else</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>  <span class="c1">// Default case for non-operators
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span></span></span></code></pre></div>
   </figure>
 </div>
 

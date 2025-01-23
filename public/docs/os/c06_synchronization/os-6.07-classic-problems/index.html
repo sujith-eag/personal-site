@@ -45,8 +45,7 @@
 <link rel="manifest" href="/personal-site/manifest.webmanifest">
 
 <meta property="og:title" content="OS 6.07 - Classic Problems">
-<meta property="og:description" content="6.7.2 Reader-Writers Problem
-6.7.3 Dining-Philosophers Problem">
+<meta property="og:description" content="Synchronization problems as examples of a large class of concurrency-control problems. These problems are used for testing nearly every newly proposed synchronization scheme.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://localhost:1313/personal-site/docs/os/c06_synchronization/os-6.07-classic-problems/"><meta property="og:image" content="http://localhost:1313/personal-site/cover.png"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2025-01-12T21:27:49+05:30">
@@ -54,8 +53,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://localhost:1313/personal-site/cover.png"><meta name="twitter:title" content="OS 6.07 - Classic Problems">
-<meta name="twitter:description" content="6.7.2 Reader-Writers Problem
-6.7.3 Dining-Philosophers Problem">
+<meta name="twitter:description" content="Synchronization problems as examples of a large class of concurrency-control problems. These problems are used for testing nearly every newly proposed synchronization scheme.">
 
     
     
@@ -1912,8 +1910,30 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#672-reader-writers-problem">6.7.2 Reader-Writers Problem</a></li>
-        <li><a href="#673-dining-philosophers-problem">6.7.3 Dining-Philosophers Problem</a></li>
+        <li><a href="#672-reader-writers-problem">6.7.2 Reader-Writers Problem</a>
+          <ul>
+            <li><a href="#variants-of-the-reader-writers-problem">Variants of the Reader-Writers Problem</a></li>
+          </ul>
+        </li>
+        <li><a href="#solution-to-the-first-readers-writers-problem">Solution to the First Readers-Writers Problem</a></li>
+        <li><a href="#reader-writer-locks">Reader-Writer Locks</a></li>
+        <li><a href="#673-dining-philosophers-problem">6.7.3 Dining-Philosophers Problem</a>
+          <ul>
+            <li><a href="#problem-setup">Problem Setup:</a></li>
+          </ul>
+        </li>
+        <li><a href="#solution-using-semaphores">Solution Using Semaphores</a>
+          <ul>
+            <li><a href="#shared-data">Shared Data:</a></li>
+            <li><a href="#philosopher-process">Philosopher Process:</a></li>
+          </ul>
+        </li>
+        <li><a href="#problems-with-the-simple-solution">Problems with the Simple Solution</a>
+          <ul>
+            <li><a href="#deadlock-scenario">Deadlock Scenario:</a></li>
+          </ul>
+        </li>
+        <li><a href="#possible-remedies-for-deadlock">Possible Remedies for Deadlock</a></li>
       </ul>
     </li>
   </ul>
@@ -1933,8 +1953,30 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#672-reader-writers-problem">6.7.2 Reader-Writers Problem</a></li>
-        <li><a href="#673-dining-philosophers-problem">6.7.3 Dining-Philosophers Problem</a></li>
+        <li><a href="#672-reader-writers-problem">6.7.2 Reader-Writers Problem</a>
+          <ul>
+            <li><a href="#variants-of-the-reader-writers-problem">Variants of the Reader-Writers Problem</a></li>
+          </ul>
+        </li>
+        <li><a href="#solution-to-the-first-readers-writers-problem">Solution to the First Readers-Writers Problem</a></li>
+        <li><a href="#reader-writer-locks">Reader-Writer Locks</a></li>
+        <li><a href="#673-dining-philosophers-problem">6.7.3 Dining-Philosophers Problem</a>
+          <ul>
+            <li><a href="#problem-setup">Problem Setup:</a></li>
+          </ul>
+        </li>
+        <li><a href="#solution-using-semaphores">Solution Using Semaphores</a>
+          <ul>
+            <li><a href="#shared-data">Shared Data:</a></li>
+            <li><a href="#philosopher-process">Philosopher Process:</a></li>
+          </ul>
+        </li>
+        <li><a href="#problems-with-the-simple-solution">Problems with the Simple Solution</a>
+          <ul>
+            <li><a href="#deadlock-scenario">Deadlock Scenario:</a></li>
+          </ul>
+        </li>
+        <li><a href="#possible-remedies-for-deadlock">Possible Remedies for Deadlock</a></li>
       </ul>
     </li>
   </ul>
@@ -1943,8 +1985,227 @@
   </details>
 
 			</nav>
-			<h3 id="672-reader-writers-problem">6.7.2 Reader-Writers Problem<a href="#672-reader-writers-problem" class="anchor" aria-hidden="true">#</a> </h3>
+			<p>Synchronization problems as examples of a large class of concurrency-control problems. These problems are used for testing nearly every newly proposed synchronization scheme.</p>
+<hr>
+<h3 id="672-reader-writers-problem">6.7.2 Reader-Writers Problem<a href="#672-reader-writers-problem" class="anchor" aria-hidden="true">#</a> </h3>
+<p>The <strong>Reader-Writers problem</strong> is a classic synchronization issue that arises when multiple processes share access to a database. Some processes may need only read access (readers), while others require both read and write access (writers).</p>
+<ul>
+<li><strong>Reading:</strong> If two readers access the shared database simultaneously, no conflicts occur.</li>
+<li><strong>Writing:</strong> If a writer and any other process (whether a reader or another writer) attempt to access the database at the same time, conflicts and inconsistencies may arise. To prevent this, writers must have <strong>exclusive access</strong> to the database when writing.</li>
+</ul>
+<p>The goal of the Reader-Writers problem is to manage access to the shared resource (the database) in a way that ensures no conflicts occur, while also balancing fairness between readers and writers.</p>
+<hr>
+<h4 id="variants-of-the-reader-writers-problem">Variants of the Reader-Writers Problem<a href="#variants-of-the-reader-writers-problem" class="anchor" aria-hidden="true">#</a> </h4>
+<ol>
+<li>
+<p><strong>First Readers-Writers Problem:</strong></p>
+<ul>
+<li><strong>Requirement:</strong> No reader should be kept waiting for access unless a writer has already been granted permission to access the database.</li>
+<li><strong>Goal:</strong> Ensure that readers can access the database concurrently without having to wait for other readers, even if a writer is waiting.</li>
+</ul>
+</li>
+<li>
+<p><strong>Second Readers-Writers Problem:</strong></p>
+<ul>
+<li><strong>Requirement:</strong> Once a writer is ready, the writer should be able to access the database as soon as possible.</li>
+<li><strong>Goal:</strong> If a writer is waiting, no new readers should begin reading until the writer has finished.</li>
+</ul>
+</li>
+</ol>
+<p>Both problems have the potential for <strong>starvation</strong>:</p>
+<ul>
+<li>In the first case, <strong>writers may starve</strong> if readers continue to gain access.</li>
+<li>In the second case, <strong>readers may starve</strong> if writers continuously prevent new readers from starting.</li>
+</ul>
+<hr>
+<h3 id="solution-to-the-first-readers-writers-problem">Solution to the First Readers-Writers Problem<a href="#solution-to-the-first-readers-writers-problem" class="anchor" aria-hidden="true">#</a> </h3>
+<p>The solution to the first readers-writers problem involves the following key data structures shared by reader and writer processes:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">semaphore</span> <span class="n">rw_mutex</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>    <span class="c1">// Mutex for writer
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">semaphore</span> <span class="n">mutex</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>       <span class="c1">// Mutex for readers
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="n">read_count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>        <span class="c1">// Tracks number of readers currently accessing the database
+</span></span></span></code></pre></div>
+  </figure>
+</div>
+<ul>
+<li><code>rw_mutex</code> and <code>mutex</code> are initialized to 1.</li>
+<li><code>read_count</code> is initialized to 0 to track the number of active readers.</li>
+</ul>
+<p>A writer process follows this structure:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">do</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">wait</span><span class="p">(</span><span class="n">rw_mutex</span><span class="p">);</span>      <span class="c1">// Acquire exclusive access for writing
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// Writing is performed
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">signal</span><span class="p">(</span><span class="n">rw_mutex</span><span class="p">);</span>    <span class="c1">// Release exclusive access
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="nb">true</span><span class="p">);</span></span></span></code></pre></div>
+  </figure>
+</div>
+<ul>
+<li><code>rw_mutex</code> ensures that only one writer can access the database at a time.</li>
+</ul>
+<p>A reader process follows this structure:</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">do</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">wait</span><span class="p">(</span><span class="n">mutex</span><span class="p">);</span>         <span class="c1">// Ensure mutual exclusion when updating read_count
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">read_count</span><span class="o">++</span><span class="p">;</span>        <span class="c1">// Increment number of active readers
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="n">read_count</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">wait</span><span class="p">(</span><span class="n">rw_mutex</span><span class="p">);</span>  <span class="c1">// First reader locks the writer mutex
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">signal</span><span class="p">(</span><span class="n">mutex</span><span class="p">);</span>       <span class="c1">// Release mutex after updating read_count
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    
+</span></span><span class="line"><span class="cl">    <span class="c1">// Reading is performed
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    
+</span></span><span class="line"><span class="cl">    <span class="nf">wait</span><span class="p">(</span><span class="n">mutex</span><span class="p">);</span>         <span class="c1">// Ensure mutual exclusion when updating read_count
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">read_count</span><span class="o">--</span><span class="p">;</span>        <span class="c1">// Decrement number of active readers
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="n">read_count</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">signal</span><span class="p">(</span><span class="n">rw_mutex</span><span class="p">);</span> <span class="c1">// Last reader unlocks the writer mutex
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">signal</span><span class="p">(</span><span class="n">mutex</span><span class="p">);</span>       <span class="c1">// Release mutex after updating read_count
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="nb">true</span><span class="p">);</span></span></span></code></pre></div>
+  </figure>
+</div>
+<ul>
+<li>
+<p><code>mutex</code> ensures mutual exclusion when modifying <code>read_count</code>.</p>
+</li>
+<li>
+<p><code>rw_mutex</code> ensures exclusive access for writers. It is locked by the first reader and unlocked by the last reader.</p>
+</li>
+<li>
+<p><strong>Key Points:</strong></p>
+<ul>
+<li>If a writer is in the critical section and there are <code>n</code> readers waiting, then 1 reader waits on <code>rw_mutex</code>, and the remaining <code>n-1</code> readers wait on <code>mutex</code>.</li>
+<li>When <code>signal(rw_mutex)</code> is executed, the scheduler decides whether to resume a waiting reader or a waiting writer.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="reader-writer-locks">Reader-Writer Locks<a href="#reader-writer-locks" class="anchor" aria-hidden="true">#</a> </h3>
+<p>The Reader-Writers problem and its solutions have been extended into <strong>reader-writer locks</strong>, which are implemented in some systems to simplify synchronization. A <strong>reader-writer lock</strong> can be acquired in one of two modes:</p>
+<ol>
+<li><strong>Read Mode:</strong> For processes that only need to read shared data.</li>
+<li><strong>Write Mode:</strong> For processes that need to both read and write shared data.</li>
+</ol>
+<ul>
+<li>Multiple processes can acquire the lock in <strong>read mode</strong> concurrently.</li>
+<li>Only one process can acquire the lock in <strong>write mode</strong> at a time, ensuring exclusive access to the shared data.</li>
+</ul>
+<p>Reader-writer locks are most useful in situations where:</p>
+<ol>
+<li><strong>Processes can be clearly identified as readers or writers</strong>, making it easy to distinguish between those that only need to read data and those that need to modify the data.</li>
+<li><strong>There are more readers than writers</strong>, as allowing multiple readers to access the data concurrently significantly improves performance. While the overhead of establishing a reader-writer lock is higher than using semaphores or mutual-exclusion locks, the increased concurrency of multiple readers justifies the overhead.</li>
+</ol>
+<hr>
 <h3 id="673-dining-philosophers-problem">6.7.3 Dining-Philosophers Problem<a href="#673-dining-philosophers-problem" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Consider five philosophers who spend their lives thinking and eating. These philosophers share a circular table with five chairs, each belonging to one philosopher. In the center of the table is a bowl of rice, and five chopsticks are laid out for use.</p>
+<h4 id="problem-setup">Problem Setup:<a href="#problem-setup" class="anchor" aria-hidden="true">#</a> </h4>
+<ul>
+<li>When a philosopher is thinking, she does not interact with her neighbors.</li>
+<li>From time to time, a philosopher gets hungry and tries to pick up the two chopsticks closest to her: one between her and the philosopher on her left, and the other between her and the philosopher on her right.</li>
+<li>A philosopher can only pick up one chopstick at a time. She cannot pick up a chopstick that is already in use by a neighboring philosopher.</li>
+<li>Once a philosopher has both chopsticks, she eats and does not release them until she is done.</li>
+<li>After eating, the philosopher puts down both chopsticks and returns to thinking.</li>
+</ul>
+<p>This scenario is a simple model for the problem of allocating resources (chopsticks) among competing processes (philosophers) in a <strong>deadlock-free</strong> and <strong>starvation-free</strong> manner.</p>
+<hr>
+<h3 id="solution-using-semaphores">Solution Using Semaphores<a href="#solution-using-semaphores" class="anchor" aria-hidden="true">#</a> </h3>
+<p>One straightforward solution involves representing each chopstick with a semaphore. The philosopher attempts to grab a chopstick by executing a <code>wait()</code> operation on the corresponding semaphore. When finished eating, she releases the chopsticks by executing the <code>signal()</code> operation on the respective semaphores.</p>
+<h4 id="shared-data">Shared Data:<a href="#shared-data" class="anchor" aria-hidden="true">#</a> </h4>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">semaphore</span> <span class="n">chopstick</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span>   <span class="c1">// Array of semaphores for chopsticks
+</span></span></span></code></pre></div>
+  </figure>
+</div>
+<ul>
+<li>All elements of <code>chopstick</code> are initialized to 1, representing that each chopstick is available.</li>
+</ul>
+<h4 id="philosopher-process">Philosopher Process:<a href="#philosopher-process" class="anchor" aria-hidden="true">#</a> </h4>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">do</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">wait</span><span class="p">(</span><span class="n">chopstick</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>        <span class="c1">// Pick up left chopstick
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">wait</span><span class="p">(</span><span class="n">chopstick</span><span class="p">[(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">5</span><span class="p">]);</span> <span class="c1">// Pick up right chopstick
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="cm">/* Eat for a while */</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="nf">signal</span><span class="p">(</span><span class="n">chopstick</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>        <span class="c1">// Put down left chopstick
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">signal</span><span class="p">(</span><span class="n">chopstick</span><span class="p">[(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">5</span><span class="p">]);</span> <span class="c1">// Put down right chopstick
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="cm">/* Think for a while */</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="nb">true</span><span class="p">);</span></span></span></code></pre></div>
+  </figure>
+</div>
+<ul>
+<li>Each philosopher executes this loop, trying to pick up chopsticks, eat, and then think.</li>
+</ul>
+<hr>
+<h3 id="problems-with-the-simple-solution">Problems with the Simple Solution<a href="#problems-with-the-simple-solution" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Although this solution ensures that no two neighboring philosophers eat at the same time, it has the potential to lead to <strong>deadlock</strong>.</p>
+<h4 id="deadlock-scenario">Deadlock Scenario:<a href="#deadlock-scenario" class="anchor" aria-hidden="true">#</a> </h4>
+<ul>
+<li>Suppose all five philosophers become hungry at the same time.</li>
+<li>Each philosopher picks up her left chopstick (the one between her and her left neighbor).</li>
+<li>Now, all chopsticks are in use (value = 0), and when each philosopher tries to pick up her right chopstick, she will be blocked, waiting forever. This leads to a deadlock where no philosopher can proceed.</li>
+</ul>
+<hr>
+<h3 id="possible-remedies-for-deadlock">Possible Remedies for Deadlock<a href="#possible-remedies-for-deadlock" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Several solutions can be applied to avoid the deadlock problem:</p>
+<ol>
+<li>
+<p><strong>Limit the number of philosophers</strong>: Allow at most four philosophers to sit at the table at any one time. This guarantees that at least one philosopher can always pick up both chopsticks.</p>
+</li>
+<li>
+<p><strong>Critical Section for Picking Chopsticks</strong>:</p>
+<ul>
+<li>Ensure that a philosopher can only pick up both chopsticks if both are available. This means the philosopher must acquire both chopsticks within a critical section to avoid conflicts.</li>
+</ul>
+</li>
+<li>
+<p><strong>Asymmetric Solution</strong>:</p>
+<ul>
+<li>Introduce an asymmetric rule to the philosophers:
+<ul>
+<li><strong>Odd-numbered philosophers</strong> pick up their left chopstick first, then their right chopstick.</li>
+<li><strong>Even-numbered philosophers</strong> pick up their right chopstick first, then their left chopstick.</li>
+</ul>
+</li>
+<li>This solution prevents the circular wait condition and reduces the likelihood of deadlock.</li>
+</ul>
+</li>
+</ol>
+<hr>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				</div>
