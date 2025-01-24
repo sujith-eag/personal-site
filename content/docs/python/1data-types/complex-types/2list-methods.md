@@ -1,5 +1,5 @@
 ---
-title: "02 Complex Data Type - 02 List Methods"
+title: "02 CDT - 02 List Methods"
 description: ""
 summary: ""
 date: 2024-12-17T22:46:00+05:30

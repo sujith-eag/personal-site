@@ -1,11 +1,11 @@
 ---
-title: "01 Primitive Data Type - 02 int & float"
+title: "01 PDT - 04 int & float"
 description: ""
 summary: ""
-date: 2024-12-17T22:33:48+05:30
-lastmod: 2024-12-17T22:33:48+05:30
+date: 2024-12-17T22:34:15+05:30
+lastmod: 2024-12-17T22:34:15+05:30
 draft: false
-weight: 11
+weight: 13
 toc: true
 seo:
   title: "" # custom title (optional)
@@ -83,17 +83,4 @@ print ( f"{z:.2f}" )
 ```
 
 
-##### Arithmetic Operators
 
-It always better to use `()` for suggesting order of operations.
-```python
-%  reminder / modulo operator
-// quotient
-==
-!=
-<=
->=
-** exponent
-```
-`%` is modulo operator which allows taking the reminder after dividing a number.
-`3**2` is representing exponents.

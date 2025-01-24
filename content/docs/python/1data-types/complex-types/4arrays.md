@@ -1,5 +1,5 @@
 ---
-title: "02 Complex Data Type - 04 Arrays"
+title: "02 CDT - 04 List Vs Arrays"
 description: ""
 summary: ""
 date: 2024-12-17T22:46:32+05:30

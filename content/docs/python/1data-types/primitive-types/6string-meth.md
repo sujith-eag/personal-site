@@ -1,11 +1,11 @@
 ---
-title: "01 Primitive Data Type - 05 String Methods"
+title: "01 PDT - 06 String Methods"
 description: ""
 summary: ""
 date: 2024-12-17T22:34:58+05:30
 lastmod: 2024-12-17T22:34:58+05:30
 draft: false
-weight: 14
+weight: 15
 toc: true
 seo:
   title: "" # custom title (optional)
@@ -15,8 +15,6 @@ seo:
 ---
 
 
-
-## String Methods
 
 Method is a function that is built into a function used to perform actions on a piece of data.
 They are followed by a `()` parenthesis, as they may need additional data to work. 

@@ -7,7 +7,14 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright (c) 2020-2024 Thulite</copyright>
-    <lastBuildDate></lastBuildDate>
+    <lastBuildDate>Tue, 17 Dec 2024 22:34:58 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/personal-site/docs/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>03 - Print and Input</title>
+      <link>http://localhost:1313/personal-site/docs/python/03-print-and-input/</link>
+      <pubDate>Tue, 17 Dec 2024 22:34:58 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/python/03-print-and-input/</guid>
+      <description>&lt;h2 id=&#34;print&#34;&gt;&lt;strong&gt;Print()&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;p&gt;The &lt;code&gt;print()&lt;/code&gt; function in Python is used to output data to the console. It can accept multiple arguments and display them in various formats.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

@@ -1,5 +1,5 @@
 ---
-title: "02 Complex Data Type - 01 Lists"
+title: "02 CDT - 01 Lists"
 description: ""
 summary: ""
 date: 2024-12-17T22:45:42+05:30
@@ -15,8 +15,6 @@ seo:
 ---
 
 
-
-## Lists (Linked Lists)
 
 Lists are collection of items in a particular order, it allows storing information in one place.
 Better to make their name plural as they contain more than one item.

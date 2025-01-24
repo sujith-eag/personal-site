@@ -1,11 +1,11 @@
 ---
-title: "02 Complex Data Type - 06 Dictinaries"
+title: "02 CDT - 07 Dictinaries"
 description: ""
 summary: ""
 date: 2024-12-17T22:47:04+05:30
 lastmod: 2024-12-17T22:47:04+05:30
 draft: false
-weight: 25
+weight: 26
 toc: true
 seo:
   title: "" # custom title (optional)
@@ -15,8 +15,9 @@ seo:
 ---
 
 
+
 Dictionary is a collection of key-value pairs. each key is connected to a value, and key can be used to access a value.
-It is wrapped in `{}` ,  key connected to value by `:` , and each key-value pair is separated by `,`
+It is wrapped in `{}` ,  key connected to value by colon `:` , and each key-value pair is separated by `,`
 `a = {"colour" : "green", "points" : 5 }`
 
 ## Dictionary
@@ -24,7 +25,7 @@ It is wrapped in `{}` ,  key connected to value by `:` , and each key-value pai
 ```python NPTL
 A list l = [13, 24, 54, 77, 33]
 ```
-Values are associated to positions {0,1,2,3,4}, so 0,1,2,3,4 are keys which can be used to access corresponding values. But no specific key can be defined other than these, which are auto assigned.
+Values are associated to positions `{0,1,2,3,4}`, so `0,1,2,3,4` are keys which can be used to access corresponding values. But no specific key can be defined other than these, which are auto assigned.
 
 ```python
 test1 = {}
@@ -142,6 +143,33 @@ for lang in set(fav_lang.values()):
 # wrapping set() around fav_lang.values() to get only uniqu values
 ```
 
+___
+
+```python
+E = { 'apple' : 10, "banana" : 5, "orange":15, "grapes":20 }
+
+# Find the fruit with the maximum key based on alphabetical order
+max_key = ""
+for fruit in E:
+    if fruit > max_key:
+        max_key = fruit
+        max_value = E[fruit]
+
+print("Max key:", max_key)  # Output: grapes
+print("Max value:", max_value)  # Output: 20
+
+# Check if 12 is a value in the dictionary
+print(12 in E.values())  # Output: False
+
+# Convert the dictionary values to a list and sort in descending order
+value_list = list(E.values())
+value_list.sort(reverse=True)  # Corrected reverse argument
+print("Second largest value:", value_list[1])  # Output: 15
+
+```
+
+___
+
 ## Nesting
 
 Nesting is storing multiple dictionaries in a list, or list of items in dictionary, or dicts in dict.
@@ -181,6 +209,8 @@ for a in aliens[:3]:
 for ali in aliens:
     print(ali)
 ```
+
+___
 
 ## A list in a dictionary
 
@@ -259,6 +289,8 @@ for user, data in users.items():        
     location = f"{data['location'].title()}"
     print(f"\tFull Name: {full_name}\n\tLocation: {location}")
 ```
+
+____
 
 ## CS50
 

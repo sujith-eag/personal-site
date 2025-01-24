@@ -1,11 +1,11 @@
 ---
-title: "01 Primitive Data Type - 04 String Manipulation"
+title: "01 PDT - 05 String Manipulation"
 description: ""
 summary: ""
-date: 2024-12-17T22:34:15+05:30
-lastmod: 2024-12-17T22:34:15+05:30
+date: 2024-12-17T22:34:58+05:30
+lastmod: 2024-12-17T22:34:58+05:30
 draft: false
-weight: 13
+weight: 14
 toc: true
 seo:
   title: "" # custom title (optional)
@@ -15,8 +15,78 @@ seo:
 ---
 
 
-## Basic String manipulation
 
+The `str` datatype represents a **string**, which is a sequence of characters. Strings in Python are enclosed in **single quotes** (`'`), **double quotes** (`"`), or **triple quotes** (`'''` or `"""`) for multi-line strings.
+
+- A single character is treated the same as a string of length 1.
+- **Strings are immutable**: once created, they cannot be changed.
+
+#### **String Representation**
+- Anything inside single (`'`) or double quotes (`"`) is a string.
+  
+```python
+string1 = "Hello, World!"
+string2 = 'Python is awesome'
+```
+
+You can use one type of quote inside the other without escaping:
+```python
+string3 = "He said, 'Hello!'"
+string4 = 'She replied, "Good morning!"'
+```
+
+For multi-line strings, use triple quotes:
+```python
+multiline_string = '''This is a string
+that spans multiple lines.'''
+print(multiline_string)
+```
+
+---
+
+#### **Avoiding Syntax Errors with Strings**
+
+To avoid errors when using quotes within strings, you can:
+- **Use different quote types** inside and outside:
+  
+```python
+print("Hello, 'friend'")  # Using double quotes for the string
+print('Hello, "friend"')  # Using single quotes for the string
+```
+
+- **Escape quotes** with a backslash (`\`):
+  
+```python
+print("Hello, \"friend\"")  # Escape double quotes
+print('Hitchhiker\'s Guide to the Galaxy')  # Escape single quote
+```
+
+---
+
+### **f-strings (Formatted Strings)**
+
+An **f-string** (formatted string) allows embedding expressions inside string literals for formatting. To use an f-string, prefix the string with an `f` and include expressions inside curly braces (`{}`).
+
+```python
+name = input("What's your name? ")
+print(f"Hello, {name}!")  # Inserts the value of 'name' inside the string
+```
+
+```python
+first = "John"
+last = "Doe"
+print(f"Hello, {first} {last}!")  # Output: Hello, John Doe!
+```
+
+```python
+name = "john"
+print(f"Hello, {name.title()}!")  # Output: Hello, John!
+```
+
+---
+
+
+## Basic String manipulation
 
 #### Combining two strings / Concatenation "+"
 
