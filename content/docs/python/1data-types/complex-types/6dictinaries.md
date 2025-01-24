@@ -1,5 +1,5 @@
 ---
-title: "Dictinaries"
+title: "02 Complex Data Type - 06 Dictinaries"
 description: ""
 summary: ""
 date: 2024-12-17T22:47:04+05:30

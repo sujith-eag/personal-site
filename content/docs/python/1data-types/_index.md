@@ -1,5 +1,5 @@
 ---
-title: "Data Types"
+title: "Python Data Types"
 description: ""
 summary: ""
 date: 2024-12-17T22:41:09+05:30

@@ -1,5 +1,5 @@
 ---
-title: "Lists"
+title: "02 Complex Data Type - 01 Lists"
 description: ""
 summary: ""
 date: 2024-12-17T22:45:42+05:30

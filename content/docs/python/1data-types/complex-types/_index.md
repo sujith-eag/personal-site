@@ -1,5 +1,5 @@
 ---
-title: "Complex Types"
+title: "Complex Data Types"
 description: ""
 summary: ""
 date: 2024-12-17T22:55:59+05:30

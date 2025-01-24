@@ -1,5 +1,5 @@
 ---
-title: "6 - Circular Queue"
+title: "06 - Circular Queue"
 description: ""
 summary: ""
 date: 2025-01-01T16:00:48+05:30

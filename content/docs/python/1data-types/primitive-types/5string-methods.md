@@ -1,5 +1,5 @@
 ---
-title: "String Methods"
+title: "01 Primitive Data Type - 05 String Methods"
 description: ""
 summary: ""
 date: 2024-12-17T22:34:58+05:30

@@ -1,5 +1,5 @@
 ---
-title: "List Operators"
+title: "02 Complex Data Type - 03 List Operators"
 description: ""
 summary: ""
 date: 2024-12-17T22:46:17+05:30

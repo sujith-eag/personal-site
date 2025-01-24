@@ -2,42 +2,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/lists/</loc>
+      <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-complex-data-type-01-lists/</loc>
       <lastmod>2024-12-17T22:45:42+05:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/list-methods/</loc>
+      <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-complex-data-type-02-list-methods/</loc>
       <lastmod>2024-12-17T22:46:00+05:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/list-operators/</loc>
+      <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-complex-data-type-03-list-operators/</loc>
       <lastmod>2024-12-17T22:46:17+05:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/arrays/</loc>
+      <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-complex-data-type-04-arrays/</loc>
       <lastmod>2024-12-17T22:46:32+05:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/tuples/</loc>
+      <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-complex-data-type-05-tuples/</loc>
       <lastmod>2024-12-17T22:46:50+05:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/dictinaries/</loc>
+      <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-complex-data-type-06-dictinaries/</loc>
       <lastmod>2024-12-17T22:47:04+05:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>

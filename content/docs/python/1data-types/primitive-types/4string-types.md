@@ -1,5 +1,5 @@
 ---
-title: "String Manipulation"
+title: "01 Primitive Data Type - 04 String Manipulation"
 description: ""
 summary: ""
 date: 2024-12-17T22:34:15+05:30

@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright (c) 2020-2024 Thulite</copyright>
-    <lastBuildDate>Wed, 01 Jan 2025 16:00:44 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jan 2025 16:00:48 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/personal-site/docs/c/ds_using_c/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01 - Tower of Hanoi</title>
@@ -43,6 +43,13 @@
       <pubDate>Wed, 01 Jan 2025 16:00:44 +0530</pubDate>
       <guid>http://localhost:1313/personal-site/docs/c/ds_using_c/05-queue/</guid>
       <description>&lt;h4 id=&#34;basic-logic&#34;&gt;&lt;strong&gt;Basic Logic&lt;/strong&gt;&lt;/h4&gt;&#xA;&lt;p&gt;&lt;strong&gt;Queue Structure&lt;/strong&gt;: The queue is a data structure where elements are added at the &lt;strong&gt;back&lt;/strong&gt; and removed from the &lt;strong&gt;front&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>06 - Circular Queue</title>
+      <link>http://localhost:1313/personal-site/docs/c/ds_using_c/06-circular-queue/</link>
+      <pubDate>Wed, 01 Jan 2025 16:00:48 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/c/ds_using_c/06-circular-queue/</guid>
+      <description>&lt;p&gt;In a circular queue, the &lt;code&gt;tail&lt;/code&gt; pointer wraps around to the front when the queue is full, making efficient use of the available space in the array. This avoids the problem of running out of space when elements are dequeued, as would happen in a linear queue.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

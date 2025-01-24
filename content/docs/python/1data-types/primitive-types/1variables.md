@@ -1,5 +1,5 @@
 ---
-title: "Variables"
+title: "01 Primitive Data Type - 01 Variables"
 description: ""
 summary: ""
 date: 2024-12-17T22:32:32+05:30

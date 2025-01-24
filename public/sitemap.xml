@@ -7,7 +7,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/variables/</loc>
+    <loc>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/01-primitive-data-type-01-variables/</loc>
     <lastmod>2024-12-17T22:32:32+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -17,22 +17,22 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/int-float/</loc>
+    <loc>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/01-primitive-data-type-02-int-float/</loc>
     <lastmod>2024-12-17T22:33:48+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/string/</loc>
+    <loc>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/01-primitive-data-type-03-string/</loc>
     <lastmod>2024-12-17T22:33:59+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/string-manipulation/</loc>
+    <loc>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/01-primitive-data-type-04-string-manipulation/</loc>
     <lastmod>2024-12-17T22:34:15+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/string-methods/</loc>
+    <loc>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/01-primitive-data-type-05-string-methods/</loc>
     <lastmod>2024-12-17T22:34:58+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -42,32 +42,32 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/lists/</loc>
+    <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-complex-data-type-01-lists/</loc>
     <lastmod>2024-12-17T22:45:42+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/list-methods/</loc>
+    <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-complex-data-type-02-list-methods/</loc>
     <lastmod>2024-12-17T22:46:00+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/list-operators/</loc>
+    <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-complex-data-type-03-list-operators/</loc>
     <lastmod>2024-12-17T22:46:17+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/arrays/</loc>
+    <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-complex-data-type-04-arrays/</loc>
     <lastmod>2024-12-17T22:46:32+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/tuples/</loc>
+    <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-complex-data-type-05-tuples/</loc>
     <lastmod>2024-12-17T22:46:50+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/dictinaries/</loc>
+    <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-complex-data-type-06-dictinaries/</loc>
     <lastmod>2024-12-17T22:47:04+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -169,6 +169,11 @@
   </url><url>
     <loc>http://localhost:1313/personal-site/docs/c/ds_using_c/05-queue/</loc>
     <lastmod>2025-01-01T16:00:44+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/personal-site/docs/c/ds_using_c/06-circular-queue/</loc>
+    <lastmod>2025-01-01T16:00:48+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>

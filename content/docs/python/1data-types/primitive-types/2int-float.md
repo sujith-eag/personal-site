@@ -1,5 +1,5 @@
 ---
-title: "int & float"
+title: "01 Primitive Data Type - 02 int & float"
 description: ""
 summary: ""
 date: 2024-12-17T22:33:48+05:30

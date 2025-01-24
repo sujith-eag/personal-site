@@ -10,73 +10,73 @@
     <lastBuildDate>Tue, 17 Dec 2024 22:46:50 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/personal-site/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Variables</title>
-      <link>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/variables/</link>
+      <title>01 Primitive Data Type - 01 Variables</title>
+      <link>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/01-primitive-data-type-01-variables/</link>
       <pubDate>Tue, 17 Dec 2024 22:32:32 +0530</pubDate>
-      <guid>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/variables/</guid>
+      <guid>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/01-primitive-data-type-01-variables/</guid>
       <description>&lt;h2 id=&#34;variables-and-simple-data-types&#34;&gt;Variables and Simple Data Types&lt;/h2&gt;&#xA;&lt;p&gt;Better to think of variables as labels to values or referencing a certain value rather than a storage container.&#xA;Variables can contain letters, numbers and &lt;code&gt;_&lt;/code&gt; as names.&#xA;Number cannot be used in the beginning, space is not allowed.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>int &amp; float</title>
-      <link>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/int-float/</link>
+      <title>01 Primitive Data Type - 02 int &amp; float</title>
+      <link>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/01-primitive-data-type-02-int-float/</link>
       <pubDate>Tue, 17 Dec 2024 22:33:48 +0530</pubDate>
-      <guid>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/int-float/</guid>
+      <guid>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/01-primitive-data-type-02-int-float/</guid>
       <description>&lt;h2 id=&#34;int&#34;&gt;Int&lt;/h2&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;div class=&#34;expressive-code&#34;&gt;&#xD;&#xA;  &lt;figure class=&#34;frame not-content&#34;&gt;&#xD;&#xA;  &lt;figcaption class=&#34;header&#34;&gt;&#xD;&#xA;    &lt;span class=&#34;title&#34;&gt;&lt;/span&gt;&#xD;&#xA;  &lt;/figcaption&gt;&#xD;&#xA;  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;  &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xD;&#xA;  &lt;/figure&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;p&gt;Making it interactive with &lt;code&gt;input()&lt;/code&gt;&lt;/p&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;div class=&#34;expressive-code&#34;&gt;&#xD;&#xA;  &lt;figure class=&#34;frame not-content&#34;&gt;&#xD;&#xA;  &lt;figcaption class=&#34;header&#34;&gt;&#xD;&#xA;    &lt;span class=&#34;title&#34;&gt;&lt;/span&gt;&#xD;&#xA;  &lt;/figcaption&gt;&#xD;&#xA;  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;input&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;whats x? &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;input&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;whats y? &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xD;&#xA;  &lt;/figure&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;p&gt;Any input from keyboard is treated as a string.&#xA;For input 2 and 2, output will be 22 as + is concatenating both numbers because they are treated as strings.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>String</title>
-      <link>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/string/</link>
+      <title>01 Primitive Data Type - 03 String</title>
+      <link>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/01-primitive-data-type-03-string/</link>
       <pubDate>Tue, 17 Dec 2024 22:33:59 +0530</pubDate>
-      <guid>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/string/</guid>
+      <guid>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/01-primitive-data-type-03-string/</guid>
       <description>&lt;p&gt;String &lt;code&gt;str&lt;/code&gt; is a series/sequence of characters,&#xA;Anything inside a &lt;code&gt;&amp;quot; &amp;quot;&lt;/code&gt; or &lt;code&gt;&#39; &#39;&lt;/code&gt; is considered a string in python.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>String Manipulation</title>
-      <link>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/string-manipulation/</link>
+      <title>01 Primitive Data Type - 04 String Manipulation</title>
+      <link>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/01-primitive-data-type-04-string-manipulation/</link>
       <pubDate>Tue, 17 Dec 2024 22:34:15 +0530</pubDate>
-      <guid>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/string-manipulation/</guid>
+      <guid>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/01-primitive-data-type-04-string-manipulation/</guid>
       <description>&lt;h2 id=&#34;basic-string-manipulation&#34;&gt;Basic String manipulation&lt;/h2&gt;&#xA;&lt;h4 id=&#34;combining-two-strings--concatenation-&#34;&gt;Combining two strings / Concatenation &amp;ldquo;+&amp;rdquo;&lt;/h4&gt;&#xA;&lt;p&gt;&amp;ldquo;+&amp;rdquo; concatenates the two strings like a text, its just one argument&lt;/p&gt;</description>
     </item>
     <item>
-      <title>String Methods</title>
-      <link>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/string-methods/</link>
+      <title>01 Primitive Data Type - 05 String Methods</title>
+      <link>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/01-primitive-data-type-05-string-methods/</link>
       <pubDate>Tue, 17 Dec 2024 22:34:58 +0530</pubDate>
-      <guid>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/string-methods/</guid>
+      <guid>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/01-primitive-data-type-05-string-methods/</guid>
       <description>&lt;h2 id=&#34;string-methods&#34;&gt;String Methods&lt;/h2&gt;&#xA;&lt;p&gt;Method is a function that is built into a function used to perform actions on a piece of data.&#xA;They are followed by a &lt;code&gt;()&lt;/code&gt; parenthesis, as they may need additional data to work.&#xA;(need to check documentation for more)&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Lists</title>
-      <link>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/lists/</link>
+      <title>02 Complex Data Type - 01 Lists</title>
+      <link>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-complex-data-type-01-lists/</link>
       <pubDate>Tue, 17 Dec 2024 22:45:42 +0530</pubDate>
-      <guid>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/lists/</guid>
+      <guid>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-complex-data-type-01-lists/</guid>
       <description>&lt;h2 id=&#34;lists-linked-lists&#34;&gt;Lists (Linked Lists)&lt;/h2&gt;&#xA;&lt;p&gt;Lists are collection of items in a particular order, it allows storing information in one place.&#xA;Better to make their name plural as they contain more than one item.&#xA;Printing a list returns even &lt;code&gt;[]&lt;/code&gt; and &lt;code&gt;,&#39;&#39;,&#39;&#39;,&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>List Methods</title>
-      <link>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/list-methods/</link>
+      <title>02 Complex Data Type - 02 List Methods</title>
+      <link>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-complex-data-type-02-list-methods/</link>
       <pubDate>Tue, 17 Dec 2024 22:46:00 +0530</pubDate>
-      <guid>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/list-methods/</guid>
+      <guid>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-complex-data-type-02-list-methods/</guid>
       <description>&lt;p&gt;Simple statistics with List of numbers&lt;/p&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;div class=&#34;expressive-code&#34;&gt;&#xD;&#xA;  &lt;figure class=&#34;frame not-content&#34;&gt;&#xD;&#xA;  &lt;figcaption class=&#34;header&#34;&gt;&#xD;&#xA;    &lt;span class=&#34;title&#34;&gt;&lt;/span&gt;&#xD;&#xA;  &lt;/figcaption&gt;&#xD;&#xA;  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;digits&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;25&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;36&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;49&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;min&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;digits&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;     &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;digits&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;     &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;sum&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;digits&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xD;&#xA;  &lt;/figure&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;h2 id=&#34;range&#34;&gt;range&lt;/h2&gt;&#xA;&lt;p&gt;range from 0 to &lt;code&gt;len(l)&lt;/code&gt;&lt;/p&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;div class=&#34;expressive-code&#34;&gt;&#xD;&#xA;  &lt;figure class=&#34;frame not-content&#34;&gt;&#xD;&#xA;  &lt;figcaption class=&#34;header&#34;&gt;&#xD;&#xA;    &lt;span class=&#34;title&#34;&gt;&lt;/span&gt;&#xD;&#xA;  &lt;/figcaption&gt;&#xD;&#xA;  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# produces sequence i, i+1, ..., j-1&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;     &lt;span class=&#34;c1&#34;&gt;# is like slice(:j) automatically starts from 0, till j-1  &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xD;&#xA;  &lt;/figure&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;p&gt;&lt;code&gt;range()&lt;/code&gt; has a third argument which is increment, default will be +1  &lt;/p&gt;</description>
     </item>
     <item>
-      <title>List Operators</title>
-      <link>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/list-operators/</link>
+      <title>02 Complex Data Type - 03 List Operators</title>
+      <link>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-complex-data-type-03-list-operators/</link>
       <pubDate>Tue, 17 Dec 2024 22:46:17 +0530</pubDate>
-      <guid>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/list-operators/</guid>
+      <guid>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-complex-data-type-03-list-operators/</guid>
       <description>&lt;h2 id=&#34;operations-on-lists&#34;&gt;Operations on lists&lt;/h2&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;div class=&#34;expressive-code&#34;&gt;&#xD;&#xA;  &lt;figure class=&#34;frame not-content&#34;&gt;&#xD;&#xA;  &lt;figcaption class=&#34;header&#34;&gt;&#xD;&#xA;    &lt;span class=&#34;title&#34;&gt;&lt;/span&gt;&#xD;&#xA;  &lt;/figcaption&gt;&#xD;&#xA;  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;applylist&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xD;&#xA;  &lt;/figure&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;h3 id=&#34;map-&#34;&gt;&lt;code&gt;map( )&lt;/code&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Built in function to apply something to all the elements of &lt;code&gt;l&lt;/code&gt;.&#xA;&lt;code&gt;map(f, l)&lt;/code&gt; applies &lt;code&gt;f&lt;/code&gt; to each element of &lt;code&gt;l&lt;/code&gt; (entire list)&#xA;output of &lt;code&gt;map(f, l)&lt;/code&gt; is not a list but a sequence like &lt;code&gt;range(i, j)&lt;/code&gt; and &lt;code&gt;dict.keys( )&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Arrays</title>
-      <link>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/arrays/</link>
+      <title>02 Complex Data Type - 04 Arrays</title>
+      <link>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-complex-data-type-04-arrays/</link>
       <pubDate>Tue, 17 Dec 2024 22:46:32 +0530</pubDate>
-      <guid>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/arrays/</guid>
+      <guid>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-complex-data-type-04-arrays/</guid>
       <description>&lt;h2 id=&#34;arrays&#34;&gt;Arrays&lt;/h2&gt;&#xA;&lt;p&gt;They are a single block of memory, continuous without any gap in between.&#xA;Elements are of same type, present in a sequence.&#xA;The size of an array is also fixed in advance.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Tuples</title>
-      <link>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/tuples/</link>
+      <title>02 Complex Data Type - 05 Tuples</title>
+      <link>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-complex-data-type-05-tuples/</link>
       <pubDate>Tue, 17 Dec 2024 22:46:50 +0530</pubDate>
-      <guid>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/tuples/</guid>
+      <guid>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-complex-data-type-05-tuples/</guid>
       <description>&lt;p&gt;&lt;code&gt;tuple( )&lt;/code&gt;&#xA;can be a string of values&#xA;It behaves like a list or string, can extract values.&lt;/p&gt;&#xA;&lt;p&gt;Used as simultaneous assignments&lt;br&gt;&#xA;&lt;code&gt;(age, name, primes) = ( 23, &amp;quot;Kamal&amp;quot;, [2, 3, 5, 7] )&lt;/code&gt;&#xA; &#xA; can assign a &amp;ldquo;tuple&amp;rdquo; of values to a name (similar to a list of values)&lt;br&gt;&#xA; &lt;code&gt;point = (3.5,  4.8)&lt;/code&gt;&#xA;&lt;code&gt;date = (16,7,2023)&lt;/code&gt;&lt;/p&gt;</description>
     </item>
   </channel>

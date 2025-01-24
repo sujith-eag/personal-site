@@ -1,5 +1,5 @@
 ---
-title: "Primitive Types"
+title: "Primitive Data Types"
 description: ""
 summary: ""
 date: 2024-12-17T22:42:37+05:30

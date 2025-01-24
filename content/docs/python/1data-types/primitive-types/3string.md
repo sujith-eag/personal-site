@@ -1,5 +1,5 @@
 ---
-title: "String"
+title: "01 Primitive Data Type - 03 String"
 description: ""
 summary: ""
 date: 2024-12-17T22:33:59+05:30

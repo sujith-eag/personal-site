@@ -1,5 +1,5 @@
 ---
-title: "Tuples"
+title: "02 Complex Data Type - 05 Tuples"
 description: ""
 summary: ""
 date: 2024-12-17T22:46:50+05:30
