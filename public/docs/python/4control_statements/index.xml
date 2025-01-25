@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python Control Statements on Sujith&#39;s Library</title>
+    <link>http://localhost:1313/personal-site/docs/python/4control_statements/</link>
+    <description>Recent content in Python Control Statements on Sujith&#39;s Library</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2020-2024 Thulite</copyright>
+    <lastBuildDate>Sat, 25 Jan 2025 07:41:22 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/personal-site/docs/python/4control_statements/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>04 Control-Flow - 01 Conditional Branching</title>
+      <link>http://localhost:1313/personal-site/docs/python/4control_statements/04-control-flow-01-conditional-branching/</link>
+      <pubDate>Sat, 25 Jan 2025 07:40:52 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/python/4control_statements/04-control-flow-01-conditional-branching/</guid>
+      <description>&lt;h3 id=&#34;control-flow-statements-in-python&#34;&gt;Control Flow Statements in Python&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;&lt;code&gt;if&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;&lt;code&gt;if...else&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;&lt;code&gt;if...elif...else&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;These are the primary structures for controlling the flow of execution based on conditions.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>04 Control-Flow - 03 Loops</title>
+      <link>http://localhost:1313/personal-site/docs/python/4control_statements/04-control-flow-03-loops/</link>
+      <pubDate>Sat, 25 Jan 2025 07:41:22 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/python/4control_statements/04-control-flow-03-loops/</guid>
+      <description>&lt;h3 id=&#34;1-for-loop-iterating-over-a-collection&#34;&gt;1. &lt;code&gt;for&lt;/code&gt; Loop: Iterating Over a Collection&lt;/h3&gt;&#xA;&lt;p&gt;The &lt;code&gt;for&lt;/code&gt; loop is used to iterate over a sequence (like a list, tuple, or string) and execute a block of code for each item in the sequence.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>04 Control-Flow - 02 Match-Case</title>
+      <link>http://localhost:1313/personal-site/docs/python/4control_statements/04-control-flow-02-match-case/</link>
+      <pubDate>Sat, 25 Jan 2025 07:41:04 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/python/4control_statements/04-control-flow-02-match-case/</guid>
+      <description>&lt;p&gt;&lt;code&gt;match&lt;/code&gt; Statement in Python introduced in &lt;code&gt;Python 3.10&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;The &lt;code&gt;match&lt;/code&gt; statement allows you to compare a variable against different patterns and execute corresponding code blocks. much like the &lt;code&gt;switch&lt;/code&gt; statement in other languages.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

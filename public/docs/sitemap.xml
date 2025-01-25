@@ -63,6 +63,12 @@
         <priority>0.5</priority>
       </url>
       <url>
+        <loc>http://localhost:1313/personal-site/docs/python/4control_statements/</loc>
+        <lastmod>2025-01-25T07:40:00+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
         <loc>http://localhost:1313/personal-site/docs/python/1data-types/</loc>
         <lastmod>2024-12-17T22:41:09+05:30</lastmod>
         <changefreq>monthly</changefreq>

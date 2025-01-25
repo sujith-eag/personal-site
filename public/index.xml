@@ -56,7 +56,7 @@
       <link>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-cdt-01-lists/</link>
       <pubDate>Tue, 17 Dec 2024 22:45:42 +0530</pubDate>
       <guid>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-cdt-01-lists/</guid>
-      <description>&lt;p&gt;Lists are collection of items in a particular order, it allows storing information in one place.&#xA;Better to make their name plural as they contain more than one item.&#xA;Printing a list returns even &lt;code&gt;[]&lt;/code&gt; and &lt;code&gt;,&#39;&#39;,&#39;&#39;,&lt;/code&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Lists are collections of items arranged in a particular order. They allow you to store multiple pieces of information in a single structure. It’s a good practice to make the name of a list plural, as it typically contains more than one item.&lt;/p&gt;</description>
     </item>
     <item>
       <title>02 CDT - 02 List Methods</title>
@@ -77,7 +77,7 @@
       <link>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-cdt-04-list-vs-arrays/</link>
       <pubDate>Tue, 17 Dec 2024 22:46:32 +0530</pubDate>
       <guid>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-cdt-04-list-vs-arrays/</guid>
-      <description>&lt;h2 id=&#34;arrays&#34;&gt;Arrays&lt;/h2&gt;&#xA;&lt;p&gt;They are a single block of memory, continuous without any gap in between.&#xA;Elements are of same type, present in a sequence.&#xA;The size of an array is also fixed in advance.&lt;/p&gt;</description>
+      <description>&lt;h3 id=&#34;arrays-vs-lists-in-python&#34;&gt;Arrays vs. Lists in Python&lt;/h3&gt;&#xA;&lt;p&gt;Python offers two primary ways to store a collection of data: &lt;strong&gt;arrays&lt;/strong&gt; and &lt;strong&gt;lists&lt;/strong&gt;. While they may seem similar, they have key differences in how they are implemented, how they behave, and their performance characteristics.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -45,10 +45,8 @@
 <link rel="manifest" href="/personal-site/manifest.webmanifest">
 
 <meta property="og:title" content="02 CDT - 04 List Vs Arrays">
-<meta property="og:description" content="Arrays
-They are a single block of memory, continuous without any gap in between.
-Elements are of same type, present in a sequence.
-The size of an array is also fixed in advance.">
+<meta property="og:description" content="Arrays vs. Lists in Python
+Python offers two primary ways to store a collection of data: arrays and lists. While they may seem similar, they have key differences in how they are implemented, how they behave, and their performance characteristics.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-cdt-04-list-vs-arrays/"><meta property="og:image" content="http://localhost:1313/personal-site/cover.png"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2024-12-17T22:46:32+05:30">
@@ -56,10 +54,8 @@ The size of an array is also fixed in advance.">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://localhost:1313/personal-site/cover.png"><meta name="twitter:title" content="02 CDT - 04 List Vs Arrays">
-<meta name="twitter:description" content="Arrays
-They are a single block of memory, continuous without any gap in between.
-Elements are of same type, present in a sequence.
-The size of an array is also fixed in advance.">
+<meta name="twitter:description" content="Arrays vs. Lists in Python
+Python offers two primary ways to store a collection of data: arrays and lists. While they may seem similar, they have key differences in how they are implemented, how they behave, and their performance characteristics.">
 
     
     
@@ -168,6 +164,26 @@ The size of an array is also fixed in advance.">
 
   <li>
       <a href="/personal-site/docs/python/03-print-and-input/">03 - Print and Input</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Python Control Statements</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-01-conditional-branching/">04 Control-Flow - 01 Conditional Branching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-03-loops/">04 Control-Flow - 03 Loops</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-02-match-case/">04 Control-Flow - 02 Match-Case</a>
+  </li>
+      </ul>
+    </details>
   </li>
 
   <li>
@@ -1140,6 +1156,26 @@ The size of an array is also fixed in advance.">
   </li>
 
   <li>
+    <details open>
+      <summary>Python Control Statements</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-01-conditional-branching/">04 Control-Flow - 01 Conditional Branching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-03-loops/">04 Control-Flow - 03 Loops</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-02-match-case/">04 Control-Flow - 02 Match-Case</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
     <details open open>
       <summary>Python Data Types</summary>
       <ul class="list-unstyled list-nested">
@@ -1953,9 +1989,33 @@ The size of an array is also fixed in advance.">
   <h3>On this page</h3>
     <nav id="toc">
   <ul>
-    <li><a href="#arrays">Arrays</a>
+    <li>
       <ul>
-        <li><a href="#numpy-array-implementation">numpy array implementation</a></li>
+        <li><a href="#arrays-vs-lists-in-python">Arrays vs. Lists in Python</a></li>
+        <li><a href="#arrays"><strong>Arrays</strong></a>
+          <ul>
+            <li><a href="#key-characteristics"><strong>Key Characteristics:</strong></a></li>
+            <li><a href="#example-of-creating-an-array"><strong>Example of Creating an Array:</strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#lists"><strong>Lists</strong></a>
+          <ul>
+            <li><a href="#key-characteristics-1"><strong>Key Characteristics:</strong></a></li>
+            <li><a href="#example-of-creating-a-list"><strong>Example of Creating a List:</strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#performance-considerations"><strong>Performance Considerations</strong></a>
+          <ul>
+            <li><a href="#1-access-time"><strong>1. Access Time:</strong></a></li>
+            <li><a href="#2-insertiondeletion"><strong>2. Insertion/Deletion:</strong></a></li>
+            <li><a href="#3-memory-usage"><strong>3. Memory Usage:</strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#when-to-use-lists-vs-arrays"><strong>When to Use Lists vs. Arrays</strong></a>
+          <ul>
+            <li><a href="#numpy-arrays-for-more-complex-operations"><strong>Numpy Arrays for More Complex Operations</strong></a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -1973,9 +2033,33 @@ The size of an array is also fixed in advance.">
     <div class="page-links">
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#arrays">Arrays</a>
+    <li>
       <ul>
-        <li><a href="#numpy-array-implementation">numpy array implementation</a></li>
+        <li><a href="#arrays-vs-lists-in-python">Arrays vs. Lists in Python</a></li>
+        <li><a href="#arrays"><strong>Arrays</strong></a>
+          <ul>
+            <li><a href="#key-characteristics"><strong>Key Characteristics:</strong></a></li>
+            <li><a href="#example-of-creating-an-array"><strong>Example of Creating an Array:</strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#lists"><strong>Lists</strong></a>
+          <ul>
+            <li><a href="#key-characteristics-1"><strong>Key Characteristics:</strong></a></li>
+            <li><a href="#example-of-creating-a-list"><strong>Example of Creating a List:</strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#performance-considerations"><strong>Performance Considerations</strong></a>
+          <ul>
+            <li><a href="#1-access-time"><strong>1. Access Time:</strong></a></li>
+            <li><a href="#2-insertiondeletion"><strong>2. Insertion/Deletion:</strong></a></li>
+            <li><a href="#3-memory-usage"><strong>3. Memory Usage:</strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#when-to-use-lists-vs-arrays"><strong>When to Use Lists vs. Arrays</strong></a>
+          <ul>
+            <li><a href="#numpy-arrays-for-more-complex-operations"><strong>Numpy Arrays for More Complex Operations</strong></a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -1984,17 +2068,34 @@ The size of an array is also fixed in advance.">
   </details>
 
 			</nav>
-			<h2 id="arrays">Arrays<a href="#arrays" class="anchor" aria-hidden="true">#</a> </h2>
-<p>They are a single block of memory, continuous without any gap in between.
-Elements are of same type, present in a sequence.
-The size of an array is also fixed in advance.</p>
-<p>(Random Access) Accessing/Indexing <code>seq[i]</code> is constant time for any <code>i</code>,
-takes same time for any element in any place.
-Having the address and jumping to that possition.</p>
-<p>Inserting between two elements, <code>seq[i]</code> and <code>seq[i+1]</code> is expensive.
-Removing/contraction is also expensive because all elements are indexed,
-to create a new index in the middle or remove the rest of the elements have to be changed also.</p>
+			<h3 id="arrays-vs-lists-in-python">Arrays vs. Lists in Python<a href="#arrays-vs-lists-in-python" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Python offers two primary ways to store a collection of data: <strong>arrays</strong> and <strong>lists</strong>. While they may seem similar, they have key differences in how they are implemented, how they behave, and their performance characteristics.</p>
 <hr>
+<h3 id="arrays"><strong>Arrays</strong><a href="#arrays" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Arrays in Python are represented using the <code>array</code> module or more commonly, the <code>numpy</code> library, and they have distinct features:</p>
+<h4 id="key-characteristics"><strong>Key Characteristics:</strong><a href="#key-characteristics" class="anchor" aria-hidden="true">#</a> </h4>
+<ol>
+<li>
+<p><strong>Fixed Size</strong>: The size of an array is fixed in advance. Once created, the number of elements cannot be changed unless the array is resized, which involves creating a new array.</p>
+</li>
+<li>
+<p><strong>Homogeneous Elements</strong>: Arrays only store elements of the same type. This means they are much more memory-efficient than lists, as the data is tightly packed and does not require additional information for each element.</p>
+</li>
+<li>
+<p><strong>Memory Layout</strong>: Arrays are stored in a <strong>continuous block of memory</strong>. This makes them very efficient for random access, as accessing any element by index takes constant time (<code>O(1)</code>), regardless of the element&rsquo;s position in the array.</p>
+</li>
+<li>
+<p><strong>Insertion and Deletion</strong>: Inserting or deleting elements in the middle of an array is <strong>expensive</strong> because the elements after the insertion or deletion point need to be shifted to accommodate the new element or close the gap. This takes <strong>linear time</strong> (<code>O(n)</code>).</p>
+</li>
+<li>
+<p><strong>Performance</strong>:</p>
+<ul>
+<li><strong>Accessing an element</strong>: Accessing an element by index (<code>arr[i]</code>) takes constant time, as arrays provide <strong>random access</strong>. The time to access any element is the same, whether it&rsquo;s the first or the last element.</li>
+<li><strong>Insertion/Deletion</strong>: Inserting or deleting elements, especially in the middle, requires shifting elements, which results in a linear time complexity (<code>O(n)</code>).</li>
+</ul>
+</li>
+</ol>
+<h4 id="example-of-creating-an-array"><strong>Example of Creating an Array:</strong><a href="#example-of-creating-an-array" class="anchor" aria-hidden="true">#</a> </h4>
 
 
 
@@ -2003,19 +2104,195 @@ to create a new index in the middle or remove the rest of the elements have to b
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <pre tabindex="0"><code>Python lists behave more like arrays than lists
-
-Underlying interpretation maps the lists an array
-	assign a block when you create a list
-	Double the size if the list overflow the array
-
-Keep track of the last position of the list in the array
-	l.append() and l.pop() are constant time, amortised - O(1)  constant time
-	Insertion/deletion require time O(n)</code></pre>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">array</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Create an array of integers</span>
+</span></span><span class="line"><span class="cl"><span class="n">arr</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>  <span class="c1"># Output: 3</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Append an element to the end of the array</span>
+</span></span><span class="line"><span class="cl"><span class="n">arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Insert an element at a specific position</span>
+</span></span><span class="line"><span class="cl"><span class="n">arr</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>  <span class="c1"># Insert 10 at index 2</span></span></span></code></pre></div>
   </figure>
 </div>
 <hr>
-<h3 id="numpy-array-implementation">numpy array implementation<a href="#numpy-array-implementation" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="lists"><strong>Lists</strong><a href="#lists" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Python lists are more flexible and commonly used in Python programming. However, their performance differs significantly from arrays in certain areas.</p>
+<h4 id="key-characteristics-1"><strong>Key Characteristics:</strong><a href="#key-characteristics-1" class="anchor" aria-hidden="true">#</a> </h4>
+<ol>
+<li>
+<p><strong>Dynamic Size</strong>: Lists are <strong>dynamic</strong>, meaning they can grow or shrink in size as needed. This is achieved by allocating extra space in memory when the list is created.</p>
+</li>
+<li>
+<p><strong>Heterogeneous Elements</strong>: Unlike arrays, lists can store elements of <strong>different types</strong>, including integers, strings, and even other lists. This provides more flexibility, but it comes at the cost of efficiency in memory storage.</p>
+</li>
+<li>
+<p><strong>Memory Layout</strong>: Lists are not stored in a contiguous block of memory like arrays. Instead, they use pointers to the objects stored in memory, which allows for dynamic resizing but results in more overhead.</p>
+</li>
+<li>
+<p><strong>Performance</strong>:</p>
+<ul>
+<li><strong>Accessing an element</strong>: Accessing an element by index (<code>lst[i]</code>) is constant time (<code>O(1)</code>), similar to arrays.</li>
+<li><strong>Insertion/Deletion</strong>: While inserting or deleting at the end of the list is generally constant time (<code>O(1)</code>), inserting or deleting elements at other positions takes <strong>linear time</strong> (<code>O(n)</code>), as elements need to be shifted.</li>
+</ul>
+</li>
+</ol>
+<h4 id="example-of-creating-a-list"><strong>Example of Creating a List:</strong><a href="#example-of-creating-a-list" class="anchor" aria-hidden="true">#</a> </h4>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Create a list with mixed types</span>
+</span></span><span class="line"><span class="cl"><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&#34;hello&#34;</span><span class="p">,</span> <span class="mf">3.14</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># Output: hello</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Append an element to the end of the list</span>
+</span></span><span class="line"><span class="cl"><span class="n">lst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&#34;world&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Insert an element at a specific position</span>
+</span></span><span class="line"><span class="cl"><span class="n">lst</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&#34;inserted&#34;</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<hr>
+<h3 id="performance-considerations"><strong>Performance Considerations</strong><a href="#performance-considerations" class="anchor" aria-hidden="true">#</a> </h3>
+<p>When comparing the performance of lists and arrays, it&rsquo;s important to understand their strengths and weaknesses:</p>
+<h4 id="1-access-time"><strong>1. Access Time:</strong><a href="#1-access-time" class="anchor" aria-hidden="true">#</a> </h4>
+<ul>
+<li><strong>Arrays</strong>: Accessing elements is <strong>constant time</strong> (<code>O(1)</code>), no matter where the element is in the array.</li>
+<li><strong>Lists</strong>: Accessing elements is also <strong>constant time</strong> (<code>O(1)</code>), as the list maintains a dynamic structure, but it may have additional overhead due to the use of pointers.</li>
+</ul>
+<h4 id="2-insertiondeletion"><strong>2. Insertion/Deletion:</strong><a href="#2-insertiondeletion" class="anchor" aria-hidden="true">#</a> </h4>
+<ul>
+<li><strong>Arrays</strong>: Inserting or deleting elements in an array, especially in the middle, is expensive. It requires shifting all subsequent elements, which results in <strong>linear time complexity</strong> (<code>O(n)</code>).</li>
+<li><strong>Lists</strong>: Inserting or deleting elements at the end of a list is <strong>constant time</strong> (<code>O(1)</code>), but insertion/deletion at other positions takes <strong>linear time</strong> (<code>O(n)</code>), as elements need to be shifted.</li>
+</ul>
+<h4 id="3-memory-usage"><strong>3. Memory Usage:</strong><a href="#3-memory-usage" class="anchor" aria-hidden="true">#</a> </h4>
+<ul>
+<li><strong>Arrays</strong>: More memory-efficient as they store elements of the same type in a contiguous block of memory.</li>
+<li><strong>Lists</strong>: Lists are less memory-efficient because they store pointers to the actual objects, which adds overhead.</li>
+</ul>
+<hr>
+<h3 id="when-to-use-lists-vs-arrays"><strong>When to Use Lists vs. Arrays</strong><a href="#when-to-use-lists-vs-arrays" class="anchor" aria-hidden="true">#</a> </h3>
+<ul>
+<li>
+<p><strong>Use Arrays</strong> when:</p>
+<ul>
+<li>You need efficient memory usage and fast access to elements by index.</li>
+<li>You are working with numerical data and need to perform mathematical operations.</li>
+<li>You need a <strong>fixed-size</strong> collection of elements with a known type (e.g., numerical data).</li>
+</ul>
+</li>
+<li>
+<p><strong>Use Lists</strong> when:</p>
+<ul>
+<li>You need a flexible collection that can store mixed data types.</li>
+<li>You need dynamic resizing and frequent additions/removals of elements.</li>
+<li>You are not concerned with the performance of insertion or deletion at arbitrary positions.</li>
+</ul>
+</li>
+</ul>
+<table>
+  <thead>
+      <tr>
+          <th>Feature</th>
+          <th>Arrays</th>
+          <th>Lists</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Size</strong></td>
+          <td>Fixed (in most cases)</td>
+          <td>Dynamic (can grow or shrink)</td>
+      </tr>
+      <tr>
+          <td><strong>Element Type</strong></td>
+          <td>Homogeneous (all elements must be of the same type)</td>
+          <td>Heterogeneous (different types allowed)</td>
+      </tr>
+      <tr>
+          <td><strong>Memory Layout</strong></td>
+          <td>Contiguous block of memory</td>
+          <td>Pointers to objects in non-contiguous memory</td>
+      </tr>
+      <tr>
+          <td><strong>Access Time</strong></td>
+          <td>O(1) (constant time)</td>
+          <td>O(1) (constant time)</td>
+      </tr>
+      <tr>
+          <td><strong>Insertion/Deletion</strong></td>
+          <td>O(n) (linear time)</td>
+          <td>O(1) at the end, O(n) elsewhere</td>
+      </tr>
+      <tr>
+          <td><strong>Use Cases</strong></td>
+          <td>Numerical data, fixed-size collections</td>
+          <td>Mixed data types, dynamic collections</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h4 id="numpy-arrays-for-more-complex-operations"><strong>Numpy Arrays for More Complex Operations</strong><a href="#numpy-arrays-for-more-complex-operations" class="anchor" aria-hidden="true">#</a> </h4>
+<p>While Python&rsquo;s built-in arrays are efficient for basic tasks, for more advanced operations like matrix manipulation or handling large datasets, the <code>numpy</code> library provides a powerful alternative.</p>
+<h5 id="numpy-array-features"><strong>Numpy Array Features:</strong><a href="#numpy-array-features" class="anchor" aria-hidden="true">#</a> </h5>
+<ul>
+<li>Numpy arrays are <strong>homogeneous</strong>, just like Python arrays, and provide a more <strong>compact memory layout</strong> and efficient processing.</li>
+<li>Numpy supports <strong>vectorized operations</strong>, which allow you to perform operations on entire arrays or matrices without explicit loops.</li>
+</ul>
+<h5 id="example-of-creating-a-numpy-array"><strong>Example of Creating a Numpy Array:</strong><a href="#example-of-creating-a-numpy-array" class="anchor" aria-hidden="true">#</a> </h5>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Create a 3x3 matrix of zeros</span>
+</span></span><span class="line"><span class="cl"><span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Create a matrix from a nested list</span>
+</span></span><span class="line"><span class="cl"><span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Use arange to generate a range of values</span>
+</span></span><span class="line"><span class="cl"><span class="n">row2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># Output: [0 1 2 3 4]</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">row2</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h5 id="matrix-operations-in-numpy"><strong>Matrix Operations in Numpy:</strong><a href="#matrix-operations-in-numpy" class="anchor" aria-hidden="true">#</a> </h5>
+<p>Numpy provides support for matrix operations such as multiplication and addition, which are optimized and more efficient than using nested lists.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+</span></span><span class="line"><span class="cl"><span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Matrix addition</span>
+</span></span><span class="line"><span class="cl"><span class="n">C</span> <span class="o">=</span> <span class="n">A</span> <span class="o">+</span> <span class="n">B</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>  <span class="c1"># Output: [[ 6  8] [10 12]]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Matrix multiplication</span>
+</span></span><span class="line"><span class="cl"><span class="n">C</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>  <span class="c1"># Output: [[19 22] [43 50]]</span></span></span></code></pre></div>
+  </figure>
+</div>
+<hr>
 <p>Arrays are more useful for representing matrices (to represent graphs)
 In list notation, these are nested lists  <code>[ [0,1], [1,0] ]</code></p>
 
