@@ -16,6 +16,7 @@ seo:
 
 
 
+
 The `str` datatype represents a **string**, which is a sequence of characters. Strings in Python are enclosed in **single quotes** (`'`), **double quotes** (`"`), or **triple quotes** (`'''` or `"""`) for multi-line strings.
 
 - A single character is treated the same as a string of length 1.

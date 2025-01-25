@@ -5,7 +5,7 @@ summary: ""
 date: 2025-01-25T07:41:22+05:30
 lastmod: 2025-01-25T07:41:22+05:30
 draft: false
-weight: 38
+weight: 40
 toc: true
 seo:
   title: "" # custom title (optional)
@@ -16,7 +16,8 @@ seo:
 
 
 
-### 1. `for` Loop: Iterating Over a Collection
+
+### 1. 'for' Loop: Iterating Over a Collection
 
 The `for` loop is used to iterate over a sequence (like a list, tuple, or string) and execute a block of code for each item in the sequence.
 
@@ -43,7 +44,7 @@ for i in range(0, n):  # Sequence from 0 to n-1
 
 ---
 
-### 2. `while` Loop: Loops Based on Condition
+### 2. 'while' Loop: Loops Based on Condition
 
 The `while` loop is useful when you don't know how many times the loop should run in advance. It keeps executing as long as the condition evaluates to `True`.
 
@@ -116,7 +117,7 @@ This approach keeps the program flow simple, only needing to check the flag cond
 
 ---
 
-### 4. Using `break` to Exit a Loop
+### 4. Using 'break' to Exit a Loop
 
 The `break` statement immediately exits the loop, regardless of the condition.
 
@@ -134,7 +135,7 @@ while True:  # This loop will run indefinitely until 'break' is encountered
 
 ---
 
-### 5. Using `continue` in a Loop
+### 5. Using 'continue' in a Loop
 
 The `continue` statement skips the current iteration of the loop and moves on to the next one.
 
@@ -235,7 +236,7 @@ main()
 
 ---
 
-### 9. Simulating a `for` Loop with a `while` Loop
+### 9. Simulating a 'for' Loop with a 'while' Loop
 
 Sometimes you may want to simulate a `for` loop using a `while` loop.
 

@@ -17,160 +17,230 @@ seo:
 
 
 Method is a function that is built into a function used to perform actions on a piece of data.
-They are followed by a `()` parenthesis, as they may need additional data to work. 
-(need to check documentation for more)
+They are followed by a `()` parenthesis, as they may need additional data to work.  (need to check documentation for more)
 
-Changing Case using `upper, lower, swapcase, title, capitalize`
-Cleaning `rstrip, lstrip, strip, removeprefix, removesuffix`
-Searching for text `find, index`
-Search and replace `replace`
-Splitting strings using `split`
-Resizing strings `center, ljust, rjust`
-checking the nature of string characters `isalpha, isnumeric`
+### String Methods Covered:
 
-___
+1. **Case Modification**:
+   - `upper()`: Converts all characters to uppercase.
+   - `lower()`: Converts all characters to lowercase.
+   - `swapcase()`: Swaps case (lower to upper and vice versa).
+   - `title()`: Converts the first character of each word to uppercase.
+   - `capitalize()`: Capitalizes the first character of the string.
 
-### Changing case
+2. **Cleaning Strings**:
+   - `rstrip()`: Removes trailing whitespace.
+   - `lstrip()`: Removes leading whitespace.
+   - `strip()`: Removes both leading and trailing whitespace.
+   - `removeprefix()`: Removes a specified prefix from the string.
+   - `removesuffix()`: Removes a specified suffix from the string.
 
-`title` will capitalize each words first letter
+3. **Searching for Text**:
+   - `find()`: Returns the index of the first occurrence of a substring (returns `-1` if not found).
+   - `index()`: Similar to `find()`, but raises an error if the substring isn't found.
+
+4. **Search and Replace**:
+   - `replace()`: Replaces occurrences of a substring with a new one.
+
+5. **Splitting Strings**:
+   - `split()`: Splits the string into a list at each occurrence of a specified delimiter (defaults to whitespace).
+   - `splitlines()`: Splits the string into a list at each newline character (`\n`).
+
+6. **Resizing Strings**:
+   - `center()`: Centers the string within a given width, padding with spaces.
+   - `ljust()`: Left-aligns the string within a given width, padding with spaces.
+   - `rjust()`: Right-aligns the string within a given width, padding with spaces.
+
+7. **Checking Character Types**:
+   - `isalpha()`: Returns `True` if all characters are alphabetic.
+   - `isnumeric()`: Returns `True` if all characters are numeric.
+
+8. **Other Utility**:
+   - `join()`: Joins elements of an iterable (e.g., a list) into a single string, using the string as a separator.
+
+
+---
+
+### Changing Case
+
+The `title()` method capitalizes the first letter of each word.
 ```python
-variable.title()    
+variable.title()
 print(variable.title())
 ```
-`.` after the variable tells python to act title() method on it.
+The `.` after the variable tells Python to apply the `title()` method on it.
 
 ```python
 variable.upper()
-variable.lower()    
-variable.swapcase()  
+variable.lower()
+variable.swapcase()
 ```
-`lower()` method is very useful while storing user input data.
-`swapcase` turns upper to lower, lower to upper
+`lower()` is useful for handling user input data, while `swapcase()` changes uppercase to lowercase and vice versa.
 
-To adjust the miss typed spacing in a string and capitalization
+To adjust mis-typed spacing and capitalization in a string:
 ```python
-name = name.capitalize()      # to capitalize first letter
-name = name.title()           # to create title format
-name = name.title().strip()   
-name = name.strip()           # to remove spaces on left and right
+name = name.capitalize()    # Capitalizes the first letter
+name = name.title()         # Converts to title case
+name = name.title().strip() # Strips leading and trailing spaces
+name = name.strip()         # Removes spaces on both sides
 ```
 
-Everything is in one line
+Everything in one line:
 ```python
-name = input("whats your name? ").title().strip()
-print(f"hello, {name}"+ "sss", name, sep='   ', end="\n")         
-
-name = input("please type in your name, ").strip().title()
+name = input("What's your name? ").title().strip()
+print(f"Hello, {name}", name, sep=' ', end="\n")
+name = input("Please type your name: ").strip().title()
 ```
 
-___
+---
 
-### Stripping white space / Removing Prefix
+### Stripping White Space / Removing Prefix
 
-When comparing two values, having one extra white space might mean not equal to another similar value. So it is better to handle white space before storing data.
-To remove white space permanently it is better to associate it with a variable name.
+When comparing two values, extra whitespace can lead to mismatches. It's a good idea to handle whitespace before storing data:
 ```python
 variable.rstrip() 
 variable.lstrip()
 variable.strip()
 ```
 
+To remove prefixes:
 ```python
-# removing Prefixes
 url = 'https://nostarch.com'
-url.removeprefix('https://')         
-
-# within the parenthesis() enter the prefix to be removed from the original string
+url.removeprefix('https://')
 url.removesuffix('.com')
 ```
 
+---
 
-___
+### Searching for Text
 
-### Searching for text
-
-Returns first position in `s` where 'pattern' occurs, returns `-1` if not found
+- **`find()`**: Returns the index of the first occurrence of a substring, or `-1` if not found.
 ```python
 s.find(pattern)
-
 s.find(pattern, start, end)
 ```
-Specifying starting and ending position searches in that slice not the whole file.
-Searching for "pattern" in slice `s[start:end]`
 
-Similar to find, but raises `ValueError` when pattern not found
+- **`index()`**: Works like `find()`, but raises an error if the substring is not found.
 ```python
 s.index(pattern)
 s.index(pattern, start, end)
 ```
 
 
-### Searching and replace
+1. **Using `find()`**: 
 
-Returns a copy of `s` where `fromstr` is replaced by `tostr`
-Copy of `s` because strings are immutable, cannot be changed in place.
 ```python
-s.replace(fromstr,tostr)
+text = "Hello, welcome to the world of Python."
 
-s.replace(fromstr, tostr, n)
+# Find the first occurrence of 'welcome'
+position = text.find("welcome")
+print(position)  # Output: 7 (index of 'w' in 'welcome')
+
+# Find a substring within a slice
+position = text.find("world", 10, 30)  # Searching in the range from index 10 to 30
+print(position)  # Output: 20 (index of 'w' in 'world')
 ```
-Replaces at most `n` copies and returns a copy of the string `s`.
+
+If the pattern is not found, `find()` will return `-1`:
+```python
+position = text.find("Java")
+print(position)  # Output: -1 (since 'Java' isn't in the string)
+```
+
+2. **Using `index()`**:
+
+```python
+# Using index to find 'Python'
+position = text.index("Python")
+print(position)  # Output: 33 (index of 'P' in 'Python')
+
+# Using index with a slice
+position = text.index("world", 10, 30)
+print(position)  # Output: 20 (index of 'w' in 'world')
+```
+
+If the pattern is not found, `index()` will raise an error:
+```python
+try:
+    position = text.index("Java")
+except ValueError:
+    print("Pattern not found!")  # Output: Pattern not found!
+```
 
 
-### Splitting a string
+---
 
-Split methods in strings which splits string to many sub strings, each part can be assigned a variable so only one can be called.
-`.split(" ")` argument says divide the name at single space.
+### Search and Replace
+
+Returns a copy of `s` with `fromstr` replaced by `tostr`:
+```python
+s.replace(fromstr, tostr)
+s.replace(fromstr, tostr, n)  # Replaces at most n copies
+```
+Note: Strings are immutable, so `replace()` returns a new string.
+
+---
+
+### Splitting a String
+
+Split a string into substrings. For example:
 ```python
 first, last = name.split(" ")
-
-print(f"hey, {first}", "How are you", end="\n", sep=",")
-print("hey,", first, emote = input("how are you? ") )
+print(f"Hey, {first}, How are you?")
 ```
 
-Exported spreadsheet becomes CSV "comma separated value" text file. each column separated by a comma,
-`s.split()` takes an argument for where to split the string (a separator string) and will return a list of strings
+For CSV-like data, use a delimiter like `,`:
 ```python
-columns = s.split(",")  # splits wherever , is found
-
-columns = s.split(" : ", n)  # to make at most n chunks
+columns = s.split(",")  # Split by comma
+columns = s.split(" : ", n)  # Split at most n parts
 ```
 
+Example:
 ```python
 csline = "6,7,8"
-csvline.split(",")      # ['6', '7', '8']
-csvline.split("," ,1)   # ['6', '7,8']
-
-csline ="6#?7#?8"
-csline.split("#?")   
-# ['6', '7', '8']
-# the seperator string has to be uniform
+csvline.split(",")  # ['6', '7', '8']
 ```
 
+---
 
-### Resizing strings
+### Resizing Strings
 
-Will return a string of length `n`, with string `s` at center. 
-Rest of the place will be blank or it can be filled with some characters.
+Resize strings to a specified width, using padding:
 ```python
-s.center(n)
+s.center(n)  # Centers string
+s.center(n, "*")  # Centers with stars
 
-s.centre(n, "*")   # rest are filled with *
+s.ljust(n)    # Left justifies string
+s.ljust(n, "*")  # Left justify with stars
 
-s.ljust(n)         # left justify the srting s
-s.ljust(n, "*")
-s.rjust(n)         # right justify the string s
-s.rjust(n, "*")
+s.rjust(n)    # Right justifies string
+s.rjust(n, "*")  # Right justify with stars
+```
+
+---
+
+### Checking Nature of Characters in a String
+
+Check if all characters in the string are alphabetic or numeric:
+```python
+s.isalpha()    # Checks if all characters are alphabetic
+s.isnumeric()  # Checks if all characters are numeric
 ```
 
 
-### Checking nature of characters in a string
+---
+
+
+**`join()`**: Joins elements of an iterable (e.g., a list, tuple) into a single string, using the string that calls the method as the separator.
 
 ```python
-s.isalpha()    # to check if all are alphabetical
-s.isnumeric()  # to check if all are numbers
+words = ['Hello', 'world', 'Python']
+sentence = ' '.join(words)  # Joins with space
+print(sentence)  # Output: "Hello world Python"
+
+# Join with a different separator
+sentence = '-'.join(words)  # Joins with a hyphen
+print(sentence)  # Output: "Hello-world-Python"
 ```
 
 
-
-____

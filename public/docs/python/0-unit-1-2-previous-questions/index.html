@@ -14,9 +14,9 @@
 
 <link rel="stylesheet" href="/personal-site/main.c0e24d0bb4526375ef42a8fffa4eb23f8f782cb58ac9f07c6886fe943a0ed00e176b284d9d1a5b8e9d68a3f2f5918367e18fe55f5fde9451a8c6d3fe85342b7b.css" integrity="sha512-wOJNC7RSY3XvQqj/&#43;k6yP494LLWKyfB8aIb&#43;lDoO0A4XayhNnRpbjp1oo/L1kYNn4Y/lX1/elFGoxtP&#43;hTQrew==" crossorigin="anonymous">
 
-<noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-using-python-part-1/">
-  <link rel="canonical" href="http://localhost:1313/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-using-python-part-1/">
-<title>K&amp;R - Chapter 0 - Introduction using Python (Part 1)  |  Sujith&#39;s Library</title>
+<noscript><style>img.lazyload { display: none; }</style></noscript><base href="http://localhost:1313/personal-site/docs/python/0-unit-1-2-previous-questions/">
+  <link rel="canonical" href="http://localhost:1313/personal-site/docs/python/0-unit-1-2-previous-questions/">
+<title>0 - Unit 1 &amp; 2 Previous Questions  |  Sujith&#39;s Library</title>
 <meta name="description" content="A reference site with summary of various coding topics">
 
     
@@ -44,84 +44,133 @@
       >
 <link rel="manifest" href="/personal-site/manifest.webmanifest">
 
-<meta property="og:title" content="K&amp;R - Chapter 0 - Introduction using Python (Part 1)">
-<meta property="og:description" content="Python and C Comparison
+<meta property="og:title" content="0 - Unit 1 &amp; 2 Previous Questions">
+<meta property="og:description" content="String Operations
 
-  
-      
-          Python
-          C
-      
-  
-  
-      
-          Whitespace is essential
-          Whitespace is ignored
-      
-      
-          Very object-oriented
-          Not object-oriented at all
-      
-      
-          Data structures like list, dict
-          struct, pointers
-      
-      
-          Auto memory management
-          Manual memory management
-      
-      
-          High-level language
-          Low-level language
-      
-  
+Mention the data types in Python with an example for each.
+Demonstrate slicing on strings. Also, explain the use of join() and split() string methods with examples.
+What is a string? Discuss the different ways of representing a string in Python.
+Write a Python program to count the frequency of words in a string using a dictionary.
+Write a Python function to return the number of palindrome words in a line of text.
+Write a Python function to check if a string is a palindrome.
+
+The function should take &ldquo;MADAM&rdquo; as the default argument.
+It should return a Boolean value.
 
 
-Similarities Between Python and C
-Arithmetic Operators:   &#43;, -, *, /, %">
+Predict the output of the following and justify your answer:
+
+
+
+
+
+  
+  
+    
+  
+  # (i)
+s = &#34;Vishweswaraiah&#34;
+print(s[4:])
+print(s[:5])
+
+# (ii)
+str1 = &#34;Bangalore&#34;
+str1[1] = &#34;e&#34;
+str1[6] = str1[8] = &#34;u&#34;
+print(str1)
+
+# (iii)
+a = -45
+print(--a)
+
+# (iv)
+a, b, c = True, False, False
+if a or b and c:
+	print(&#34;MSRIT&#34;)
+else:
+	print(&#34;RNSIT&#34;)
+  
+
+
+Write a Python script to generate the third-person singular form of verbs based on the following rules:
+
+If the verb ends in y, remove it and add ies.
+If the verb ends in o, ch, s, sh, x, or z, add es.
+Otherwise, add s.
+
+
+
+String Methods
+
+
+Explain the usage of the following methods with examples:">
 <meta property="og:type" content="article">
-<meta property="og:url" content="http://localhost:1313/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-using-python-part-1/"><meta property="og:image" content="http://localhost:1313/personal-site/cover.png"><meta property="article:section" content="docs">
-<meta property="article:published_time" content="2024-12-18T12:15:49+05:30">
-<meta property="article:modified_time" content="2024-12-18T12:15:49+05:30"><meta property="og:site_name" content="Sujith&#39;s Notes">
+<meta property="og:url" content="http://localhost:1313/personal-site/docs/python/0-unit-1-2-previous-questions/"><meta property="og:image" content="http://localhost:1313/personal-site/cover.png"><meta property="article:section" content="docs">
+<meta property="article:published_time" content="2024-12-17T22:34:58+05:30">
+<meta property="article:modified_time" content="2024-12-17T22:34:58+05:30"><meta property="og:site_name" content="Sujith&#39;s Notes">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://localhost:1313/personal-site/cover.png"><meta name="twitter:title" content="K&amp;R - Chapter 0 - Introduction using Python (Part 1)">
-<meta name="twitter:description" content="Python and C Comparison
+<meta name="twitter:image" content="http://localhost:1313/personal-site/cover.png"><meta name="twitter:title" content="0 - Unit 1 &amp; 2 Previous Questions">
+<meta name="twitter:description" content="String Operations
 
-  
-      
-          Python
-          C
-      
-  
-  
-      
-          Whitespace is essential
-          Whitespace is ignored
-      
-      
-          Very object-oriented
-          Not object-oriented at all
-      
-      
-          Data structures like list, dict
-          struct, pointers
-      
-      
-          Auto memory management
-          Manual memory management
-      
-      
-          High-level language
-          Low-level language
-      
-  
+Mention the data types in Python with an example for each.
+Demonstrate slicing on strings. Also, explain the use of join() and split() string methods with examples.
+What is a string? Discuss the different ways of representing a string in Python.
+Write a Python program to count the frequency of words in a string using a dictionary.
+Write a Python function to return the number of palindrome words in a line of text.
+Write a Python function to check if a string is a palindrome.
+
+The function should take &ldquo;MADAM&rdquo; as the default argument.
+It should return a Boolean value.
 
 
-Similarities Between Python and C
-Arithmetic Operators:   &#43;, -, *, /, %">
+Predict the output of the following and justify your answer:
 
+
+
+
+
+  
+  
     
+  
+  # (i)
+s = &#34;Vishweswaraiah&#34;
+print(s[4:])
+print(s[:5])
+
+# (ii)
+str1 = &#34;Bangalore&#34;
+str1[1] = &#34;e&#34;
+str1[6] = str1[8] = &#34;u&#34;
+print(str1)
+
+# (iii)
+a = -45
+print(--a)
+
+# (iv)
+a, b, c = True, False, False
+if a or b and c:
+	print(&#34;MSRIT&#34;)
+else:
+	print(&#34;RNSIT&#34;)
+  
+
+
+Write a Python script to generate the third-person singular form of verbs based on the following rules:
+
+If the verb ends in y, remove it and add ies.
+If the verb ends in o, ch, s, sh, x, or z, add es.
+Otherwise, add s.
+
+
+
+String Methods
+
+
+Explain the usage of the following methods with examples:">
+
     
     
     <script type="application/ld+json">
@@ -143,20 +192,14 @@ Arithmetic Operators:   &#43;, -, *, /, %">
      },
      {
        "@type": "ListItem",
-       "item": "http://localhost:1313/personal-site/docs/c/",
-       "name": "C Language",
+       "item": "http://localhost:1313/personal-site/docs/python/",
+       "name": "Python",
        "position": 3
      },
      {
        "@type": "ListItem",
-       "item": "http://localhost:1313/personal-site/docs/c/kr_c_book/",
-       "name": "The C Programming Language by Kernighan and Ritchie",
+       "name": "0 Unit 1 \u0026 2 Previous Questions",
        "position": 4
-     },
-     {
-       "@type": "ListItem",
-       "name": "K\u0026 R Chapter 0 Introduction Using Python ( Part 1)",
-       "position": 5
      }
    ]
  }
@@ -215,12 +258,12 @@ Arithmetic Operators:   &#43;, -, *, /, %">
   <ul class="list-unstyled">
 
   <li>
-    <details open>
+    <details open open>
       <summary>Python</summary>
       <ul class="list-unstyled list-nested">
 
-  <li>
-      <a href="/personal-site/docs/python/0-unit-1-2-previous-questions/">0 - Unit 1 &amp; 2 Previous Questions</a>
+  <li class="active" >
+      <a aria-current="page" href="/personal-site/docs/python/0-unit-1-2-previous-questions/">0 - Unit 1 &amp; 2 Previous Questions</a>
   </li>
 
   <li>
@@ -331,12 +374,12 @@ Arithmetic Operators:   &#43;, -, *, /, %">
   </li>
 
   <li>
-    <details open open>
+    <details open>
       <summary>C Language</summary>
       <ul class="list-unstyled list-nested">
 
   <li>
-    <details open open>
+    <details open>
       <summary>The C Programming Language by Kernighan and Ritchie</summary>
       <ul class="list-unstyled list-nested">
 
@@ -344,8 +387,8 @@ Arithmetic Operators:   &#43;, -, *, /, %">
       <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-to-c-language/">K&amp;R - Chapter 0 - Introduction to C language</a>
   </li>
 
-  <li class="active" >
-      <a aria-current="page" href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-using-python-part-1/">K&amp;R - Chapter 0 - Introduction using Python (Part 1)</a>
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-using-python-part-1/">K&amp;R - Chapter 0 - Introduction using Python (Part 1)</a>
   </li>
 
   <li>
@@ -1212,12 +1255,12 @@ Arithmetic Operators:   &#43;, -, *, /, %">
   <ul class="list-unstyled">
 
   <li>
-    <details open>
+    <details open open>
       <summary>Python</summary>
       <ul class="list-unstyled list-nested">
 
-  <li>
-      <a href="/personal-site/docs/python/0-unit-1-2-previous-questions/">0 - Unit 1 &amp; 2 Previous Questions</a>
+  <li class="active" >
+      <a aria-current="page" href="/personal-site/docs/python/0-unit-1-2-previous-questions/">0 - Unit 1 &amp; 2 Previous Questions</a>
   </li>
 
   <li>
@@ -1328,12 +1371,12 @@ Arithmetic Operators:   &#43;, -, *, /, %">
   </li>
 
   <li>
-    <details open open>
+    <details open>
       <summary>C Language</summary>
       <ul class="list-unstyled list-nested">
 
   <li>
-    <details open open>
+    <details open>
       <summary>The C Programming Language by Kernighan and Ritchie</summary>
       <ul class="list-unstyled list-nested">
 
@@ -1341,8 +1384,8 @@ Arithmetic Operators:   &#43;, -, *, /, %">
       <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-to-c-language/">K&amp;R - Chapter 0 - Introduction to C language</a>
   </li>
 
-  <li class="active" >
-      <a aria-current="page" href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-using-python-part-1/">K&amp;R - Chapter 0 - Introduction using Python (Part 1)</a>
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-using-python-part-1/">K&amp;R - Chapter 0 - Introduction using Python (Part 1)</a>
   </li>
 
   <li>
@@ -2062,10 +2105,44 @@ Arithmetic Operators:   &#43;, -, *, /, %">
   <h3>On this page</h3>
     <nav id="toc">
   <ul>
-    <li><a href="#python-and-c-comparison"><strong>Python and C Comparison</strong></a>
+    <li>
       <ul>
-        <li><a href="#similarities-between-python-and-c"><strong>Similarities Between Python and C</strong></a></li>
-        <li><a href="#key-differences-between-python-and-c"><strong>Key Differences Between Python and C</strong></a></li>
+        <li><a href="#string-operations"><strong>String Operations</strong></a>
+          <ul>
+            <li><a href="#string-methods"><strong>String Methods</strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#data-structures"><strong>Data Structures</strong></a>
+          <ul>
+            <li><a href="#lists-tuples-and-sets"><strong>Lists, Tuples, and Sets</strong></a></li>
+            <li><a href="#dictionaries"><strong>Dictionaries</strong></a></li>
+            <li><a href="#data-structure-operations"><strong>Data Structure Operations</strong></a></li>
+            <li><a href="#data-structure-properties"><strong>Data Structure Properties</strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#expressions-and-evaluations"><strong>Expressions and Evaluations</strong></a>
+          <ul>
+            <li><a href="#evaluations"><strong>Evaluations</strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#control-flow-and-logic"><strong>Control Flow and Logic</strong></a>
+          <ul>
+            <li><a href="#scope-and-variables"><strong>Scope and Variables</strong></a></li>
+            <li><a href="#operators"><strong>Operators</strong></a></li>
+            <li><a href="#objects-and-identicality"><strong>Objects and Identicality</strong></a></li>
+            <li><a href="#implementation-and-user-input"><strong>Implementation and User Input</strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#loops-and-iterative-statements"><strong>Loops and Iterative Statements</strong></a>
+          <ul>
+            <li><a href="#iterative-structures"><strong>Iterative Structures</strong></a></li>
+            <li><a href="#for-loop-applications"><strong>For Loop Applications</strong></a></li>
+            <li><a href="#pattern-generation"><strong>Pattern Generation</strong></a></li>
+            <li><a href="#specialized-loops"><strong>Specialized Loops</strong></a></li>
+            <li><a href="#creative-loops"><strong>Creative Loops</strong></a></li>
+            <li><a href="#special-implementations"><strong>Special Implementations</strong></a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -2075,7 +2152,7 @@ Arithmetic Operators:   &#43;, -, *, /, %">
 		</nav>
 		<main class="docs-content col-lg-11 col-xl-9">
 		
-			<h1>K&amp;R - Chapter 0 - Introduction using Python (Part 1)</h1>
+			<h1>0 - Unit 1 &amp; 2 Previous Questions</h1>
 			
 			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
 				<details>
@@ -2083,10 +2160,44 @@ Arithmetic Operators:   &#43;, -, *, /, %">
     <div class="page-links">
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#python-and-c-comparison"><strong>Python and C Comparison</strong></a>
+    <li>
       <ul>
-        <li><a href="#similarities-between-python-and-c"><strong>Similarities Between Python and C</strong></a></li>
-        <li><a href="#key-differences-between-python-and-c"><strong>Key Differences Between Python and C</strong></a></li>
+        <li><a href="#string-operations"><strong>String Operations</strong></a>
+          <ul>
+            <li><a href="#string-methods"><strong>String Methods</strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#data-structures"><strong>Data Structures</strong></a>
+          <ul>
+            <li><a href="#lists-tuples-and-sets"><strong>Lists, Tuples, and Sets</strong></a></li>
+            <li><a href="#dictionaries"><strong>Dictionaries</strong></a></li>
+            <li><a href="#data-structure-operations"><strong>Data Structure Operations</strong></a></li>
+            <li><a href="#data-structure-properties"><strong>Data Structure Properties</strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#expressions-and-evaluations"><strong>Expressions and Evaluations</strong></a>
+          <ul>
+            <li><a href="#evaluations"><strong>Evaluations</strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#control-flow-and-logic"><strong>Control Flow and Logic</strong></a>
+          <ul>
+            <li><a href="#scope-and-variables"><strong>Scope and Variables</strong></a></li>
+            <li><a href="#operators"><strong>Operators</strong></a></li>
+            <li><a href="#objects-and-identicality"><strong>Objects and Identicality</strong></a></li>
+            <li><a href="#implementation-and-user-input"><strong>Implementation and User Input</strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#loops-and-iterative-statements"><strong>Loops and Iterative Statements</strong></a>
+          <ul>
+            <li><a href="#iterative-structures"><strong>Iterative Structures</strong></a></li>
+            <li><a href="#for-loop-applications"><strong>For Loop Applications</strong></a></li>
+            <li><a href="#pattern-generation"><strong>Pattern Generation</strong></a></li>
+            <li><a href="#specialized-loops"><strong>Specialized Loops</strong></a></li>
+            <li><a href="#creative-loops"><strong>Creative Loops</strong></a></li>
+            <li><a href="#special-implementations"><strong>Special Implementations</strong></a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -2095,48 +2206,21 @@ Arithmetic Operators:   &#43;, -, *, /, %">
   </details>
 
 			</nav>
-			<h2 id="python-and-c-comparison"><strong>Python and C Comparison</strong><a href="#python-and-c-comparison" class="anchor" aria-hidden="true">#</a> </h2>
-<table>
-  <thead>
-      <tr>
-          <th><strong>Python</strong></th>
-          <th><strong>C</strong></th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Whitespace is essential</td>
-          <td>Whitespace is ignored</td>
-      </tr>
-      <tr>
-          <td>Very object-oriented</td>
-          <td>Not object-oriented at all</td>
-      </tr>
-      <tr>
-          <td>Data structures like <code>list</code>, <code>dict</code></td>
-          <td><code>struct</code>, pointers</td>
-      </tr>
-      <tr>
-          <td>Auto memory management</td>
-          <td>Manual memory management</td>
-      </tr>
-      <tr>
-          <td>High-level language</td>
-          <td>Low-level language</td>
-      </tr>
-  </tbody>
-</table>
-<hr>
-<h3 id="similarities-between-python-and-c"><strong>Similarities Between Python and C</strong><a href="#similarities-between-python-and-c" class="anchor" aria-hidden="true">#</a> </h3>
-<p><strong>Arithmetic Operators</strong>:   <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code></p>
-<p><strong>Comparison Operators</strong>:  <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>, <code>!=</code></p>
-<p><strong>Variable Naming Rules</strong>:</p>
+			<h3 id="string-operations"><strong>String Operations</strong><a href="#string-operations" class="anchor" aria-hidden="true">#</a> </h3>
+<ol>
+<li>Mention the data types in Python with an example for each.</li>
+<li>Demonstrate slicing on strings. Also, explain the use of <code>join()</code> and <code>split()</code> string methods with examples.</li>
+<li>What is a string? Discuss the different ways of representing a string in Python.</li>
+<li>Write a Python program to count the frequency of words in a string using a dictionary.</li>
+<li>Write a Python function to return the number of palindrome words in a line of text.</li>
+<li>Write a Python function to check if a string is a palindrome.
 <ul>
-<li>Case matters (e.g., <code>myVar</code> is different from <code>myvar</code>).</li>
-<li>Can use letters, numbers, and underscores in variable names, but they cannot start with a number.</li>
+<li>The function should take &ldquo;MADAM&rdquo; as the default argument.</li>
+<li>It should return a Boolean value.</li>
 </ul>
-<p><strong>Control Flow</strong>:<br>
-<strong>While Loops</strong>: Both languages have <code>while</code> loops and support the <code>break</code> and <code>continue</code> statements.</p>
+</li>
+<li>Predict the output of the following and justify your answer:</li>
+</ol>
 
 
 
@@ -2145,329 +2229,345 @@ Arithmetic Operators:   &#43;, -, *, /, %">
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="k">break</span>
-</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span></span></span></code></pre></div>
-  </figure>
-</div>
-
-
-
-<div class="expressive-code">
-  <figure class="frame not-content">
-  <figcaption class="header">
-    <span class="title"></span>
-  </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">break</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">i</span><span class="o">++</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
-  </figure>
-</div>
-<p><strong>Constants</strong>:<br>
-Both Python and C allow defining constants.<br>
-While Python has a convention for constants (uppercase variable names),<br>
-C uses <code>#define</code> or <code>const</code> to define constants.</p>
-
-
-
-<div class="expressive-code">
-  <figure class="frame not-content">
-  <figcaption class="header">
-    <span class="title"></span>
-  </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">MAX_VALUE</span> <span class="o">=</span> <span class="mi">100</span></span></span></code></pre></div>
-  </figure>
-</div>
-
-
-
-<div class="expressive-code">
-  <figure class="frame not-content">
-  <figcaption class="header">
-    <span class="title"></span>
-  </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#define MAX_VALUE 100</span></span></span></code></pre></div>
-  </figure>
-</div>
-<p><em><strong>Data Types</strong></em>:<br>
-<strong>Integers and Floats</strong>: Both languages support integer and floating-point types.<br>
-In C, the <code>int</code> and <code>float</code> types exist, while in Python, all numbers are represented as <code>int</code> or <code>float</code> (and Python&rsquo;s <code>float</code> is equivalent to C&rsquo;s <code>double</code>).</p>
-<p><em><strong>Characters</strong></em>:<br>
-C has <code>char</code> for single characters, while Python uses strings,<br>
-but a single character in Python is a string of length 1.</p>
-<hr>
-<h3 id="key-differences-between-python-and-c"><strong>Key Differences Between Python and C</strong><a href="#key-differences-between-python-and-c" class="anchor" aria-hidden="true">#</a> </h3>
-<p><em><strong>Boolean Operators</strong></em>:<br>
-In Python, <code>and</code>, <code>not</code>, <code>or</code> are used for boolean operations.<br>
-In C, <code>&amp;&amp;</code> (and), <code>!</code> (not), <code>||</code> (or) are used.</p>
-
-
-
-<div class="expressive-code">
-  <figure class="frame not-content">
-  <figcaption class="header">
-    <span class="title"></span>
-  </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="kc">True</span>
-</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="kc">False</span>
-</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">a</span> <span class="ow">and</span> <span class="n">b</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Both are true&#34;</span><span class="p">)</span></span></span></code></pre></div>
-  </figure>
-</div>
-
-
-
-<div class="expressive-code">
-  <figure class="frame not-content">
-  <figcaption class="header">
-    <span class="title"></span>
-  </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&amp;&amp;</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Both are true</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">	<span class="p">}</span></span></span></code></pre></div>
-  </figure>
-</div>
-<p><em><strong>For Loops</strong></em>:<br>
-Python has a <code>for..in</code> loop for iterating over elements of a list or other iterable objects.</p>
-
-
-
-<div class="expressive-code">
-  <figure class="frame not-content">
-  <figcaption class="header">
-    <span class="title"></span>
-  </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span></span></span></code></pre></div>
-  </figure>
-</div>
-<p>C does not have a <code>for..in</code> loop. Instead, you need to specify a loop variable, condition, and update manually:</p>
-
-
-
-<div class="expressive-code">
-  <figure class="frame not-content">
-  <figcaption class="header">
-    <span class="title"></span>
-  </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
-  </figure>
-</div>
-<p><strong>Boolean Values</strong>:<br>
-Python has predefined constants <code>True</code> and <code>False</code> as boolean values.<br>
-In C, there are no predefined <code>True</code> or <code>False</code> values;<br>
-typically, <code>1</code> is used for true and <code>0</code> for false.</p>
-
-
-
-<div class="expressive-code">
-  <figure class="frame not-content">
-  <figcaption class="header">
-    <span class="title"></span>
-  </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">if</span> <span class="kc">True</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;True&#34;</span><span class="p">)</span></span></span></code></pre></div>
-  </figure>
-</div>
-
-
-
-<div class="expressive-code">
-  <figure class="frame not-content">
-  <figcaption class="header">
-    <span class="title"></span>
-  </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;True</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
-  </figure>
-</div>
-<p><strong>None vs NULL</strong>:</p>
-<ul>
-<li><strong>None</strong> in Python is a special object that represents the absence of a value. It is its own type.</li>
-<li><strong>NULL</strong> in C is a null pointer constant, typically represented as <code>0</code> or <code>((void*)0)</code>.<br>
-It represents a pointer that does not point to any memory address.</li>
-</ul>
-
-
-
-<div class="expressive-code">
-  <figure class="frame not-content">
-  <figcaption class="header">
-    <span class="title"></span>
-  </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="kc">None</span>
-</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">x</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">	<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;x is None&#34;</span><span class="p">)</span></span></span></code></pre></div>
-  </figure>
-</div>
-
-
-
-<div class="expressive-code">
-  <figure class="frame not-content">
-  <figcaption class="header">
-    <span class="title"></span>
-  </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">int</span><span class="o">*</span> <span class="n">x</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;x is NULL</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
-  </figure>
-</div>
-<p><strong>Strings and Character Arrays</strong>:</p>
-<ul>
-<li><strong>Strings</strong> in Python are immutable and can be treated as objects with many built-in methods.</li>
-<li><strong>C</strong> strings are arrays of characters, terminated by a null character (<code>'\0'</code>). String manipulation in C is less intuitive and requires careful handling of memory.</li>
-</ul>
-
-
-
-<div class="expressive-code">
-  <figure class="frame not-content">
-  <figcaption class="header">
-    <span class="title"></span>
-  </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">s</span> <span class="o">=</span> <span class="s2">&#34;Hello&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span></span></span></code></pre></div>
-  </figure>
-</div>
-
-
-
-<div class="expressive-code">
-  <figure class="frame not-content">
-  <figcaption class="header">
-    <span class="title"></span>
-  </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">char</span> <span class="n">s</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&#34;Hello&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="nf">strupr</span><span class="p">(</span><span class="n">s</span><span class="p">));</span>  
-</span></span><span class="line"><span class="cl"><span class="c1">// Requires external string manipulation functions like `strupr()`
-</span></span></span></code></pre></div>
-  </figure>
-</div>
-<p><strong>Data Structures</strong>:<br>
-Python comes with built-in data structures like <code>list</code> and <code>dict</code>, which are high-level and flexible.<br>
-In C, you must manually define data structures using <code>struct</code>, and dynamic data structures often require the use of pointers for manipulation.</p>
-
-
-
-<div class="expressive-code">
-  <figure class="frame not-content">
-  <figcaption class="header">
-    <span class="title"></span>
-  </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;key&#34;</span><span class="p">:</span> <span class="s2">&#34;value&#34;</span><span class="p">}</span></span></span></code></pre></div>
-  </figure>
-</div>
-
-
-
-<div class="expressive-code">
-  <figure class="frame not-content">
-  <figcaption class="header">
-    <span class="title"></span>
-  </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">struct</span> <span class="n">Point</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">x</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">y</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># (i)</span>
+</span></span><span class="line"><span class="cl"><span class="n">s</span> <span class="o">=</span> <span class="s2">&#34;Vishweswaraiah&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">4</span><span class="p">:])</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="n">Point</span> <span class="n">p</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">};</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl"><span class="c1"># (ii)</span>
+</span></span><span class="line"><span class="cl"><span class="n">str1</span> <span class="o">=</span> <span class="s2">&#34;Bangalore&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">str1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&#34;e&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">str1</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="n">str1</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&#34;u&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">str1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># (iii)</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="o">-</span><span class="mi">45</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="o">--</span><span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># (iv)</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">a</span> <span class="ow">or</span> <span class="n">b</span> <span class="ow">and</span> <span class="n">c</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">	<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;MSRIT&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">	<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;RNSIT&#34;</span><span class="p">)</span></span></span></code></pre></div>
   </figure>
 </div>
-<p><strong>Memory Management</strong>:<br>
-Python has automatic memory management with garbage collection, meaning memory is allocated and freed automatically.<br>
-C requires <strong>manual memory management</strong> using functions like <code>malloc()</code> for allocation and <code>free()</code> for deallocation.</p>
-
-
-
-<div class="expressive-code">
-  <figure class="frame not-content">
-  <figcaption class="header">
-    <span class="title"></span>
-  </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>  <span class="c1"># Memory management handled by Python</span></span></span></code></pre></div>
-  </figure>
-</div>
-
-
-
-<div class="expressive-code">
-  <figure class="frame not-content">
-  <figcaption class="header">
-    <span class="title"></span>
-  </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">int</span><span class="o">*</span> <span class="n">arr</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span> <span class="nf">malloc</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>  <span class="c1">// Manual allocation
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nf">free</span><span class="p">(</span><span class="n">arr</span><span class="p">);</span>  <span class="c1">// Manual deallocation
-</span></span></span></code></pre></div>
-  </figure>
-</div>
-<p><strong>No <code>double</code> in Python</strong>:<br>
-Python uses <code>float</code> for both single-precision and double-precision floating-point numbers, while C has both <code>float</code> (single precision) and <code>double</code> (double precision) types.</p>
-
-
-
-<div class="expressive-code">
-  <figure class="frame not-content">
-  <figcaption class="header">
-    <span class="title"></span>
-  </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="mf">3.14159</span>  <span class="c1"># Python float (equivalent to C&#39;s double)</span></span></span></code></pre></div>
-  </figure>
-</div>
-
-
-
-<div class="expressive-code">
-  <figure class="frame not-content">
-  <figcaption class="header">
-    <span class="title"></span>
-  </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">double</span> <span class="n">a</span> <span class="o">=</span> <span class="mf">3.14159</span><span class="p">;</span>  <span class="c1">// C double
-</span></span></span></code></pre></div>
-  </figure>
-</div>
+<ol start="8">
+<li>Write a Python script to generate the third-person singular form of verbs based on the following rules:
+<ul>
+<li>If the verb ends in <code>y</code>, remove it and add <code>ies</code>.</li>
+<li>If the verb ends in <code>o</code>, <code>ch</code>, <code>s</code>, <code>sh</code>, <code>x</code>, or <code>z</code>, add <code>es</code>.</li>
+<li>Otherwise, add <code>s</code>.</li>
+</ul>
+</li>
+</ol>
+<h4 id="string-methods"><strong>String Methods</strong><a href="#string-methods" class="anchor" aria-hidden="true">#</a> </h4>
+<ol start="9">
+<li>
+<p><strong>Explain the usage of the following methods with examples:</strong></p>
+<ul>
+<li><strong>(i)</strong> <code>extend()</code></li>
+<li><strong>(ii)</strong> <code>pop()</code></li>
+<li><strong>(iii)</strong> <code>sort()</code></li>
+<li><strong>(iv)</strong> <code>split()</code></li>
+<li><strong>(v)</strong> <code>join()</code></li>
+</ul>
+</li>
+<li>
+<p>Explain the use of <code>ord()</code> and <code>chr()</code> functions. Write a function that converts all uppercase letters to lowercase and vice versa in a given string.<br>
+Example Input: <code>I love PyTHon</code><br>
+Example Output: <code>i LOVE pYthON</code></p>
+</li>
+</ol>
 <hr>
+<h3 id="data-structures"><strong>Data Structures</strong><a href="#data-structures" class="anchor" aria-hidden="true">#</a> </h3>
+<h4 id="lists-tuples-and-sets"><strong>Lists, Tuples, and Sets</strong><a href="#lists-tuples-and-sets" class="anchor" aria-hidden="true">#</a> </h4>
+<ol>
+<li>Compare and contrast lists, tuples, and sets.</li>
+<li>List and describe any five methods on tuples.</li>
+<li>Create a list of even numbers from 1 to 10 using both a loop and the filter method.</li>
+<li>Demonstrate any four functions of lists with examples.</li>
+<li>Write a Python program to print unique elements from a list.</li>
+</ol>
+<h4 id="dictionaries"><strong>Dictionaries</strong><a href="#dictionaries" class="anchor" aria-hidden="true">#</a> </h4>
+<ol start="5">
+<li>How do you create and access dictionaries in Python? Explain the operations <code>len()</code>, <code>copy()</code>, <code>clear()</code>, and <code>items()</code> on dictionaries.</li>
+<li>Write a Python program to count the occurrences of a letter in a string using dictionaries.</li>
+<li>Develop a Python program to print the intersection of two lists (without using list comprehension or sets).</li>
+<li>Implement a telephone directory using dictionaries.</li>
+<li>Demonstrate any three functions of dictionaries in Python with examples.</li>
+<li>Write a Python program to create a dictionary from a list where keys are elements and values are their frequencies.</li>
+</ol>
+<h4 id="data-structure-operations"><strong>Data Structure Operations</strong><a href="#data-structure-operations" class="anchor" aria-hidden="true">#</a> </h4>
+<ol start="10">
+<li>Store the following data in a list, a tuple, and a dictionary:</li>
+</ol>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <pre tabindex="0"><code>India    91
+USA      1
+UK       41
+Japan    9</code></pre>
+  </figure>
+</div>
+<ol start="11">
+<li>Consider the list <code>scores = [5, 4, 7, 3, 6, 2, 1]</code> and write Python instructions to perform the following operations:
+<ul>
+<li><strong>(i)</strong> Insert an element <code>9</code> at the beginning of the list.</li>
+<li><strong>(ii)</strong> Insert an element <code>8</code> at index position <code>3</code> of the list.</li>
+<li><strong>(iii)</strong> Delete an element at the end of the list.</li>
+<li><strong>(iv)</strong> Delete an element at index position <code>3</code>.</li>
+</ul>
+</li>
+</ol>
+<h4 id="data-structure-properties"><strong>Data Structure Properties</strong><a href="#data-structure-properties" class="anchor" aria-hidden="true">#</a> </h4>
+<ol start="12">
+<li>What do you mean by mutable and immutable data structures? Explain with examples.</li>
+<li>When you use the <code>+</code> operator to concatenate two lists, does it make a copy or a reference of the arguments? Explain with the help of an example.</li>
+</ol>
+<hr>
+<h3 id="expressions-and-evaluations"><strong>Expressions and Evaluations</strong><a href="#expressions-and-evaluations" class="anchor" aria-hidden="true">#</a> </h3>
+<h4 id="evaluations"><strong>Evaluations</strong><a href="#evaluations" class="anchor" aria-hidden="true">#</a> </h4>
+<ol>
+<li>Evaluate the results of the following expressions:</li>
+</ol>
+<ul>
+<li><strong>(i)</strong> <code>not &quot;True&quot;</code></li>
+<li><strong>(ii)</strong> <code>-22 % 5</code></li>
+<li><strong>(iii)</strong> <code>&quot;99&quot; + 1</code></li>
+<li><strong>(iv)</strong> <code>dir(&quot;python&quot;)</code></li>
+<li><strong>(v)</strong> <code>['H', 'He', 'Li'] + 'Be'</code></li>
+</ul>
+<ol start="2">
+<li>Examine the following expressions. Predict the result and explain the type of each expression. If an expression is illegal, explain why:</li>
+</ol>
+<ul>
+<li><strong>(i)</strong> <code>10 / 5</code></li>
+<li><strong>(ii)</strong> <code>5 / 10</code></li>
+<li><strong>(iii)</strong> <code>5.0 / 10</code></li>
+<li><strong>(iv)</strong> <code>10 % 4 + 8 / 4</code></li>
+<li><strong>(v)</strong> <code>3 ** 10 / 3</code></li>
+</ul>
+<hr>
+<h3 id="control-flow-and-logic"><strong>Control Flow and Logic</strong><a href="#control-flow-and-logic" class="anchor" aria-hidden="true">#</a> </h3>
+<ol>
+<li>
+<p>Explain the significance of <code>break</code>, <code>continue</code>, and <code>pass</code> with a suitable example.</p>
+</li>
+<li>
+<p>Predict the output of the following code snippets and justify your answers:</p>
+</li>
+</ol>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">i</span><span class="p">)</span> <span class="n">a</span> <span class="o">=</span> <span class="o">-</span><span class="mi">45</span>
+</span></span><span class="line"><span class="cl">   <span class="nb">print</span><span class="p">(</span><span class="o">--</span><span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ii</span><span class="p">)</span> <span class="n">str1</span> <span class="o">=</span> <span class="s1">&#39;hello&#39;</span>
+</span></span><span class="line"><span class="cl">	<span class="nb">print</span><span class="p">(</span><span class="n">str1</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">:])</span>
+</span></span><span class="line"><span class="cl"><span class="n">iii</span><span class="p">)</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">	 <span class="n">a</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">90</span>
+</span></span><span class="line"><span class="cl"><span class="n">iv</span><span class="p">)</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="n">a</span> <span class="ow">or</span> <span class="n">b</span> <span class="ow">and</span> <span class="n">c</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">		<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;MSRIT&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">		<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;RNSIT&#34;</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<ol start="3">
+<li>Predict the output of the following code snippets and justify your answers:</li>
+</ol>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">i</span><span class="p">)</span> <span class="mi">22</span> <span class="o">&lt;</span> <span class="s2">&#34;A&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ii</span><span class="p">)</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">5</span>
+</span></span><span class="line"><span class="cl">	<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;welcome&#34;</span><span class="p">)</span> <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">5</span> <span class="k">else</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;bye&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">iii</span><span class="p">)</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">iv</span><span class="p">)</span> <span class="n">s</span> <span class="o">=</span> <span class="s2">&#34;programming&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">v</span><span class="p">)</span> <span class="n">ls</span> <span class="o">=</span> <span class="p">[</span><span class="mi">34</span><span class="p">,</span> <span class="s1">&#39;hi&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">	<span class="n">ls</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h4 id="scope-and-variables"><strong>Scope and Variables</strong><a href="#scope-and-variables" class="anchor" aria-hidden="true">#</a> </h4>
+<ol start="4">
+<li>Explain (or Demonstrate) the scope of local and global variables.</li>
+<li>Explain the significance of the following concepts in Python:
+<ul>
+<li>Local and global variables</li>
+<li>DOC strings</li>
+<li><code>map()</code> and <code>reduce()</code> functions</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h4 id="operators"><strong>Operators</strong><a href="#operators" class="anchor" aria-hidden="true">#</a> </h4>
+<ol start="7">
+<li>Describe Arithmetic Operators, Assignment Operators, Comparison Operators, Logical Operators, and Bitwise Operators in detail with examples.</li>
+</ol>
+<h4 id="objects-and-identicality"><strong>Objects and Identicality</strong><a href="#objects-and-identicality" class="anchor" aria-hidden="true">#</a> </h4>
+<ol start="8">
+<li>What are identical objects and equivalent objects? Provide examples.</li>
+</ol>
+<h4 id="implementation-and-user-input"><strong>Implementation and User Input</strong><a href="#implementation-and-user-input" class="anchor" aria-hidden="true">#</a> </h4>
+<ol start="9">
+<li>Implement a Python program to reverse a number, count the number of digits, and calculate the sum of the digits in the reversed number. Prompt the user for input.</li>
+</ol>
+<hr>
+<h3 id="loops-and-iterative-statements"><strong>Loops and Iterative Statements</strong><a href="#loops-and-iterative-statements" class="anchor" aria-hidden="true">#</a> </h3>
+<h4 id="iterative-structures"><strong>Iterative Structures</strong><a href="#iterative-structures" class="anchor" aria-hidden="true">#</a> </h4>
+<ol>
+<li>Illustrate the different types of iterative statements available in Python.</li>
+<li>Write a program to count the total number of digits and the sum of digits in a number using a while loop.</li>
+<li>Develop a Python program to find the sum of even numbers and odd numbers in a given list.</li>
+<li>Develop a Python program to extract the indices of even elements from a list.</li>
+</ol>
+<h4 id="for-loop-applications"><strong>For Loop Applications</strong><a href="#for-loop-applications" class="anchor" aria-hidden="true">#</a> </h4>
+<ol start="5">
+<li>Use a <code>for</code> loop to perform the following tasks (give examples for):
+<ul>
+<li>Process characters in a string</li>
+<li>Display values and keys of a dictionary</li>
+<li>Loop over a list of lists</li>
+</ul>
+</li>
+<li>Using a <code>for</code> loop, print a table of Celsius/Fahrenheit equivalences. Let <code>c</code> be the Celsius temperatures ranging from 0 to 100. For each value of <code>c</code>, print the corresponding Fahrenheit temperature.</li>
+</ol>
+<h4 id="pattern-generation"><strong>Pattern Generation</strong><a href="#pattern-generation" class="anchor" aria-hidden="true">#</a> </h4>
+<ol start="8">
+<li>Define a function that takes a positive integer <code>n</code> and produces <code>n</code> lines of output in the following pattern:</li>
+</ol>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <pre tabindex="0"><code>+
++ +
++ + +
++ + + +
++ + + + +</code></pre>
+  </figure>
+</div>
+<p>Is it possible to get the same output using a single loop? Justify.</p>
+<h4 id="specialized-loops"><strong>Specialized Loops</strong><a href="#specialized-loops" class="anchor" aria-hidden="true">#</a> </h4>
+<ol start="9">
+<li>Write a program to display only those numbers from a list that satisfy the following conditions:
+<ul>
+<li>The number must be divisible by five.</li>
+<li>If the number is greater than 150, skip it and move to the next number.</li>
+<li>If the number is greater than 500, stop the loop.</li>
+</ul>
+</li>
+</ol>
+<h4 id="creative-loops"><strong>Creative Loops</strong><a href="#creative-loops" class="anchor" aria-hidden="true">#</a> </h4>
+<ol start="10">
+<li><strong>Develop a Python program that reads two integer values, <code>n</code> and <code>m</code>, from the user and produces a box of size <code>n x m</code>.</strong>
+Example:</li>
+</ol>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">Enter</span> <span class="n">a</span> <span class="n">width</span><span class="p">:</span> <span class="mi">5</span>
+</span></span><span class="line"><span class="cl"><span class="n">Enter</span> <span class="n">a</span> <span class="n">height</span><span class="p">:</span> <span class="mi">4</span>
+</span></span><span class="line"><span class="cl"><span class="o">@@@@@</span>
+</span></span><span class="line"><span class="cl"><span class="o">@</span>   <span class="o">@</span>
+</span></span><span class="line"><span class="cl"><span class="o">@</span>   <span class="o">@</span>
+</span></span><span class="line"><span class="cl"><span class="o">@@@@@</span></span></span></code></pre></div>
+  </figure>
+</div>
+<ol start="11">
+<li>What is the output of the following code segments? Explain the causes:</li>
+</ol>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s1">&#39;Python&#39;</span><span class="p">:</span>     
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="n">letter</span> <span class="o">==</span> <span class="s1">&#39;h&#39;</span><span class="p">:</span>  
+</span></span><span class="line"><span class="cl">		<span class="k">break</span>  
+</span></span><span class="line"><span class="cl">	<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Current Letter:&#39;</span><span class="p">,</span> <span class="n">letter</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s1">&#39;Python&#39;</span><span class="p">:</span>  
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="n">letter</span> <span class="o">==</span> <span class="s1">&#39;h&#39;</span><span class="p">:</span>  
+</span></span><span class="line"><span class="cl">		<span class="k">continue</span>  
+</span></span><span class="line"><span class="cl">	<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Current Letter:&#39;</span><span class="p">,</span> <span class="n">letter</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s1">&#39;Python&#39;</span><span class="p">:</span>  
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="n">letter</span> <span class="o">==</span> <span class="s1">&#39;h&#39;</span><span class="p">:</span>  
+</span></span><span class="line"><span class="cl">		<span class="k">pass</span>  
+</span></span><span class="line"><span class="cl">	<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This is pass block&#39;</span><span class="p">)</span>  
+</span></span><span class="line"><span class="cl">	<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Current Letter:&#39;</span><span class="p">,</span> <span class="n">letter</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h4 id="special-implementations"><strong>Special Implementations</strong><a href="#special-implementations" class="anchor" aria-hidden="true">#</a> </h4>
+<ol start="6">
+<li>Design a simple calculator with different mathematical operations using a Python script.</li>
+<li>Write a Python script that takes a list of words and returns the length of the longest word using tuples.</li>
+<li>Design a Python program to find the middle number among three input numbers.</li>
+<li>Develop a Python program that will accept, as input, a series of names and salaries. Use the name ‘End’ to mark the end of the sequence of values. After the values have been entered, print the average salary and the names and salaries of those individuals with the highest and lowest salaries.</li>
+</ol>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				</div>
 			<div class="page-nav d-flex flex-column flex-sm-row">
 	
-	<div class="card w-100">
-			<div class="card-body d-flex">
-				<div class="d-flex flex-column justify-content-center">
-					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-						<path d="M5 12l14 0"></path>
-						<path d="M5 12l6 6"></path>
-						<path d="M5 12l6 -6"></path>
-				 	</svg>
-				</div>
-				<div class="d-flex flex-column">
-					<div class="text-body-secondary">Prev</div>
-					<a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-to-c-language/" class="stretched-link text-reset text-decoration-none">K&amp;R - Chapter 0 - Introduction to C language</a>
-				</div>
-			</div>
-		</div>
-	<div class="m-2"></div>
 	<div class="card text-end w-100">
 			<div class="card-body d-flex justify-content-end">
 				<div class="d-flex flex-column">
 					<div class="text-body-secondary">Next</div>
-					<a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-using-python-part-2/" class="stretched-link text-reset text-decoration-none">K&amp;R - Chapter 0 - Introduction using Python (Part 2)</a>
+					<a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-01-variables/" class="stretched-link text-reset text-decoration-none">01 PDT - 01 Variables</a>
 				</div>
 				<div class="d-flex flex-column justify-content-center">
 					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">

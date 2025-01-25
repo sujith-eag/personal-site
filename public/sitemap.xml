@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/personal-site/docs/python/0-unit-1-2-previous-questions/</loc>
+    <lastmod>2024-12-17T22:34:58+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/</loc>
     <lastmod>2024-12-17T22:42:37+05:30</lastmod>
     <changefreq>monthly</changefreq>
@@ -97,17 +102,17 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/python/4control_statements/04-control-flow-04-loops/</loc>
-    <lastmod>2025-01-25T07:41:22+05:30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://localhost:1313/personal-site/docs/python/4control_statements/04-control-flow-02-match-case/</loc>
     <lastmod>2025-01-25T07:41:04+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/personal-site/docs/python/4control_statements/04-control-flow-03-range/</loc>
+    <lastmod>2025-01-25T07:41:22+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/personal-site/docs/python/4control_statements/04-control-flow-04-loops/</loc>
     <lastmod>2025-01-25T07:41:22+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
