@@ -35,6 +35,13 @@
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/os/0-os-previous-questions-unit-1-2/</loc>
+      <lastmod>2025-01-12T21:27:49+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
     <url>
         <loc>http://localhost:1313/personal-site/docs/os/c01_introduction/os-1.01-operating-systems-introduction/</loc>
         <lastmod>2025-01-12T21:20:56+05:30</lastmod>
