@@ -45,7 +45,7 @@
 <link rel="manifest" href="/personal-site/manifest.webmanifest">
 
 <meta property="og:title" content="02 CDT - 01 Lists">
-<meta property="og:description" content="Lists are collections of items arranged in a particular order. They allow you to store multiple pieces of information in a single structure. It’s a good practice to make the name of a list plural, as it typically contains more than one item.">
+<meta property="og:description" content="Lists are collections of items arranged in a particular order. They allow you to store multiple pieces of information in a single structure.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-cdt-01-lists/"><meta property="og:image" content="http://localhost:1313/personal-site/cover.png"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2024-12-17T22:45:42+05:30">
@@ -53,7 +53,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://localhost:1313/personal-site/cover.png"><meta name="twitter:title" content="02 CDT - 01 Lists">
-<meta name="twitter:description" content="Lists are collections of items arranged in a particular order. They allow you to store multiple pieces of information in a single structure. It’s a good practice to make the name of a list plural, as it typically contains more than one item.">
+<meta name="twitter:description" content="Lists are collections of items arranged in a particular order. They allow you to store multiple pieces of information in a single structure.">
 
     
     
@@ -174,11 +174,15 @@
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/4control_statements/04-control-flow-03-loops/">04 Control-Flow - 03 Loops</a>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-04-loops/">04 Control-Flow - 04 Loops</a>
   </li>
 
   <li>
       <a href="/personal-site/docs/python/4control_statements/04-control-flow-02-match-case/">04 Control-Flow - 02 Match-Case</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-03-range/">04 Control-Flow - 03 Range</a>
   </li>
       </ul>
     </details>
@@ -1163,11 +1167,15 @@
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/4control_statements/04-control-flow-03-loops/">04 Control-Flow - 03 Loops</a>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-04-loops/">04 Control-Flow - 04 Loops</a>
   </li>
 
   <li>
       <a href="/personal-site/docs/python/4control_statements/04-control-flow-02-match-case/">04 Control-Flow - 02 Match-Case</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-03-range/">04 Control-Flow - 03 Range</a>
   </li>
       </ul>
     </details>
@@ -1994,6 +2002,8 @@
             <li><a href="#key-features-of-lists">Key Features of Lists:</a></li>
           </ul>
         </li>
+        <li><a href="#index-of-concepts-covered">Index of Concepts Covered:</a></li>
+        <li><a href="#creating-a-list">Creating a List</a></li>
         <li><a href="#accessing-elements-in-lists">Accessing Elements in Lists</a></li>
         <li><a href="#nested-lists">Nested Lists</a></li>
         <li><a href="#updating-lists-mutable">Updating Lists (Mutable)</a></li>
@@ -2001,12 +2011,19 @@
           <ul>
             <li><a href="#example-for-immutable">Example for Immutable:</a></li>
             <li><a href="#example-for-mutable">Example for Mutable:</a></li>
+            <li><a href="#equality-vs-identity">Equality vs Identity</a></li>
           </ul>
         </li>
-        <li><a href="#equality-vs-identity">Equality vs Identity</a></li>
-        <li><a href="#slicing-in-python-lists">Slicing in Python Lists</a>
+        <li><a href="#list-slicing-in-python">List Slicing in Python</a></li>
+        <li><a href="#slicing-examples">Slicing Examples:</a>
           <ul>
-            <li><a href="#examples"><strong>Examples:</strong></a></li>
+            <li><a href="#1-basic-slicing">1. Basic Slicing</a></li>
+            <li><a href="#2-slice-from-start-to-specific-index">2. Slice from Start to Specific Index</a></li>
+            <li><a href="#3-slice-from-a-specific-index-to-the-end">3. Slice from a Specific Index to the End</a></li>
+            <li><a href="#4-full-list-slice">4. Full List Slice</a></li>
+            <li><a href="#5-slice-with-a-step-size">5. Slice with a Step Size</a></li>
+            <li><a href="#6-reverse-the-list">6. Reverse the List</a></li>
+            <li><a href="#7-slice-with-step-and-startstop">7. Slice with Step and Start/Stop</a></li>
           </ul>
         </li>
         <li><a href="#list-vs-string-slicing">List vs String Slicing</a>
@@ -2014,34 +2031,16 @@
             <li></li>
           </ul>
         </li>
-        <li><a href="#step-size-variation-in-slicing">Step Size Variation in Slicing</a>
-          <ul>
-            <li><a href="#examples-1"><strong>Examples:</strong></a></li>
-          </ul>
-        </li>
         <li><a href="#copying-lists-using-slicing">Copying Lists Using Slicing</a></li>
         <li><a href="#full-slice">Full Slice</a></li>
-        <li><a href="#index-error-handling">Index Error Handling</a>
-          <ul>
-            <li><a href="#examples-2"><strong>Examples:</strong></a></li>
-          </ul>
-        </li>
-        <li><a href="#using-lists-with-f-strings">Using Lists with f-strings</a>
-          <ul>
-            <li><a href="#example"><strong>Example:</strong></a></li>
-          </ul>
-        </li>
+        <li><a href="#index-error-handling">Index Error Handling</a></li>
+        <li><a href="#using-lists-with-f-strings">Using Lists with f-strings</a></li>
         <li><a href="#concatenation-of-lists">Concatenation of Lists</a>
           <ul>
-            <li><a href="#example-1">Example:</a></li>
             <li><a href="#note">Note:</a></li>
           </ul>
         </li>
-        <li><a href="#index-error">Index Error</a>
-          <ul>
-            <li><a href="#example-2">Example:</a></li>
-          </ul>
-        </li>
+        <li><a href="#index-error">Index Error</a></li>
       </ul>
     </li>
   </ul>
@@ -2066,6 +2065,8 @@
             <li><a href="#key-features-of-lists">Key Features of Lists:</a></li>
           </ul>
         </li>
+        <li><a href="#index-of-concepts-covered">Index of Concepts Covered:</a></li>
+        <li><a href="#creating-a-list">Creating a List</a></li>
         <li><a href="#accessing-elements-in-lists">Accessing Elements in Lists</a></li>
         <li><a href="#nested-lists">Nested Lists</a></li>
         <li><a href="#updating-lists-mutable">Updating Lists (Mutable)</a></li>
@@ -2073,12 +2074,19 @@
           <ul>
             <li><a href="#example-for-immutable">Example for Immutable:</a></li>
             <li><a href="#example-for-mutable">Example for Mutable:</a></li>
+            <li><a href="#equality-vs-identity">Equality vs Identity</a></li>
           </ul>
         </li>
-        <li><a href="#equality-vs-identity">Equality vs Identity</a></li>
-        <li><a href="#slicing-in-python-lists">Slicing in Python Lists</a>
+        <li><a href="#list-slicing-in-python">List Slicing in Python</a></li>
+        <li><a href="#slicing-examples">Slicing Examples:</a>
           <ul>
-            <li><a href="#examples"><strong>Examples:</strong></a></li>
+            <li><a href="#1-basic-slicing">1. Basic Slicing</a></li>
+            <li><a href="#2-slice-from-start-to-specific-index">2. Slice from Start to Specific Index</a></li>
+            <li><a href="#3-slice-from-a-specific-index-to-the-end">3. Slice from a Specific Index to the End</a></li>
+            <li><a href="#4-full-list-slice">4. Full List Slice</a></li>
+            <li><a href="#5-slice-with-a-step-size">5. Slice with a Step Size</a></li>
+            <li><a href="#6-reverse-the-list">6. Reverse the List</a></li>
+            <li><a href="#7-slice-with-step-and-startstop">7. Slice with Step and Start/Stop</a></li>
           </ul>
         </li>
         <li><a href="#list-vs-string-slicing">List vs String Slicing</a>
@@ -2086,34 +2094,16 @@
             <li></li>
           </ul>
         </li>
-        <li><a href="#step-size-variation-in-slicing">Step Size Variation in Slicing</a>
-          <ul>
-            <li><a href="#examples-1"><strong>Examples:</strong></a></li>
-          </ul>
-        </li>
         <li><a href="#copying-lists-using-slicing">Copying Lists Using Slicing</a></li>
         <li><a href="#full-slice">Full Slice</a></li>
-        <li><a href="#index-error-handling">Index Error Handling</a>
-          <ul>
-            <li><a href="#examples-2"><strong>Examples:</strong></a></li>
-          </ul>
-        </li>
-        <li><a href="#using-lists-with-f-strings">Using Lists with f-strings</a>
-          <ul>
-            <li><a href="#example"><strong>Example:</strong></a></li>
-          </ul>
-        </li>
+        <li><a href="#index-error-handling">Index Error Handling</a></li>
+        <li><a href="#using-lists-with-f-strings">Using Lists with f-strings</a></li>
         <li><a href="#concatenation-of-lists">Concatenation of Lists</a>
           <ul>
-            <li><a href="#example-1">Example:</a></li>
             <li><a href="#note">Note:</a></li>
           </ul>
         </li>
-        <li><a href="#index-error">Index Error</a>
-          <ul>
-            <li><a href="#example-2">Example:</a></li>
-          </ul>
-        </li>
+        <li><a href="#index-error">Index Error</a></li>
       </ul>
     </li>
   </ul>
@@ -2122,13 +2112,15 @@
   </details>
 
 			</nav>
-			<p>Lists are collections of items arranged in a particular order. They allow you to store multiple pieces of information in a single structure. It’s a good practice to make the name of a list plural, as it typically contains more than one item.</p>
+			<p>Lists are collections of items arranged in a particular order. They allow you to store multiple pieces of information in a single structure.</p>
 <h4 id="key-features-of-lists">Key Features of Lists:<a href="#key-features-of-lists" class="anchor" aria-hidden="true">#</a> </h4>
 <ul>
-<li><strong>Flexibility:</strong> Lists are dynamic in size and can grow or shrink as needed.</li>
-<li><strong>Non-contiguous Memory:</strong> The values in a list are not stored in contiguous memory locations, unlike arrays, where elements are stored next to each other.</li>
-<li><strong>Heterogeneous Data:</strong> Elements in a list can be of different data types (unlike arrays which store elements of the same type).</li>
-<li><strong>Linked Structure:</strong> Each element points to the next, which allows the list to expand and contract without requiring contiguous memory.</li>
+<li><strong>Flexibility:</strong> Lists are dynamic in size and can grow or shrink as needed, providing great flexibility for managing collections of elements.</li>
+<li><strong>Non-contiguous Memory:</strong> The values in a list are not stored in contiguous memory locations, unlike arrays, where elements are stored next to each other. This allows lists to be more efficient in certain cases where resizing is frequent.</li>
+<li><strong>Heterogeneous Data:</strong> Elements in a list can be of different data types (unlike arrays which store elements of the same type), allowing for more varied and complex data structures.</li>
+<li><strong>Linked Structure:</strong> Each element points to the next, which allows the list to expand and contract without requiring contiguous memory, making it easier to manipulate.</li>
+<li><strong>Ordered:</strong> The elements in a list are maintained in a specific order, meaning the position of each element matters and can be accessed by its index.</li>
+<li><strong>Modifications:</strong> Lists support various operations such as adding, removing, or altering elements, providing flexibility in manipulating the data structure. Operations like appending, inserting, and deleting can be performed efficiently depending on the implementation (e.g., linked list or dynamic array).</li>
 </ul>
 <p>Lists are represented using square brackets <code>[]</code>, and items are separated by commas.</p>
 
@@ -2142,6 +2134,109 @@
   <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">factors</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>  <span class="c1"># List of numbers</span>
 </span></span><span class="line"><span class="cl"><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;Anand&#34;</span><span class="p">,</span> <span class="s2">&#34;Charles&#34;</span><span class="p">]</span>  <span class="c1"># List of strings</span>
 </span></span><span class="line"><span class="cl"><span class="n">mixed</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">&#34;Yellow&#34;</span><span class="p">]</span>  <span class="c1"># List with mixed data types</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>It’s a good practice to make the name of a list plural, as it typically contains more than one item.</p>
+<hr>
+<h3 id="index-of-concepts-covered">Index of Concepts Covered:<a href="#index-of-concepts-covered" class="anchor" aria-hidden="true">#</a> </h3>
+<ol>
+<li><strong>Creating Lists</strong>: Use <code>list()</code> to convert iterables (strings, tuples, ranges) into lists.</li>
+<li><strong>Accessing Elements</strong>:
+<ul>
+<li>Positive indexing (<code>list[0]</code>), Negative indexing (<code>list[-1]</code>).</li>
+</ul>
+</li>
+<li><strong>Nested Lists</strong>: Lists within lists for hierarchical structures.</li>
+<li><strong>Mutable Lists</strong>: Lists are mutable and can be updated directly.</li>
+<li><strong>Equality vs Identity</strong>: <code>==</code> compares values, <code>is</code> compares memory references.</li>
+<li><strong>List Slicing</strong>: <code>list[start:stop:step]</code> to extract sublists. Supports reverse and step slicing.</li>
+<li><strong>Copying Lists</strong>: Use slicing <code>[:]</code> to copy a list.</li>
+<li><strong>Index Errors</strong>: Out-of-range slices return empty lists, and negative indexing avoids errors.</li>
+<li><strong>Concatenation</strong>: Use <code>+</code> to combine lists.</li>
+<li><strong>f-strings</strong>: Embed list elements into strings using f-strings.</li>
+</ol>
+<hr>
+<h3 id="creating-a-list">Creating a List<a href="#creating-a-list" class="anchor" aria-hidden="true">#</a> </h3>
+<p>The <code>list()</code> function in Python is a built-in function used to create a list from other iterable data types such as tuples, strings, or sets.<br>
+It provides a way to convert these iterables into a list, which can be useful when you need to manipulate the data in list form.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">list</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<ul>
+<li><strong>iterable</strong>: Any iterable object (like a string, tuple, set, or range) that you want to convert into a list.</li>
+</ul>
+<ol>
+<li><strong>Creating a list from a string:</strong></li>
+</ol>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">my_string</span> <span class="o">=</span> <span class="s2">&#34;hello&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">my_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">my_string</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Output: [&#39;h&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;]</span></span></span></code></pre></div>
+  </figure>
+</div>
+<ol start="2">
+<li><strong>Creating a list from a tuple:</strong></li>
+</ol>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">my_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">my_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">my_tuple</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Output: [1, 2, 3]</span></span></span></code></pre></div>
+  </figure>
+</div>
+<ol start="3">
+<li><strong>Creating a list from a range:</strong></li>
+</ol>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">my_range</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">my_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">my_range</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Output: [0, 1, 2, 3, 4]</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p><strong><code>range(0, 10)</code></strong> creates a <code>range</code> object, not a list. To convert it into a list, use the <code>list()</code> function.</p>
+<p>Useful for generating sequences where numbers are skipped, like even numbers or multiples of a number.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">even</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>  <span class="c1"># Starts from 2, adds 2 to each value, stops at 11</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">even</span><span class="p">)</span>  
+</span></span><span class="line"><span class="cl"><span class="c1"># Output: [2, 4, 6, 8, 10]</span></span></span></code></pre></div>
   </figure>
 </div>
 <hr>
@@ -2239,8 +2334,7 @@
 </span></span><span class="line"><span class="cl"><span class="c1"># Now, list1 and list2 both contain [1, 3, 4, 7]</span></span></span></code></pre></div>
   </figure>
 </div>
-<hr>
-<h3 id="equality-vs-identity">Equality vs Identity<a href="#equality-vs-identity" class="anchor" aria-hidden="true">#</a> </h3>
+<h4 id="equality-vs-identity">Equality vs Identity<a href="#equality-vs-identity" class="anchor" aria-hidden="true">#</a> </h4>
 <ul>
 <li><code>x == y</code> checks if the values of <code>x</code> and <code>y</code> are the same.</li>
 <li><code>x is y</code> checks if <code>x</code> and <code>y</code> refer to the <strong>same object</strong> in memory.</li>
@@ -2257,17 +2351,20 @@
 </span></span><span class="line"><span class="cl"><span class="n">list2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl"><span class="n">list3</span> <span class="o">=</span> <span class="n">list2</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">list1</span> <span class="o">==</span> <span class="n">list2</span>  <span class="c1"># True, because their values are the same</span>
-</span></span><span class="line"><span class="cl"><span class="n">list2</span> <span class="o">==</span> <span class="n">list3</span>  <span class="c1"># True, because their values are the same</span>
+</span></span><span class="line"><span class="cl"><span class="n">list1</span> <span class="o">==</span> <span class="n">list2</span>  
+</span></span><span class="line"><span class="cl"><span class="c1"># True, because their values are the same</span>
+</span></span><span class="line"><span class="cl"><span class="n">list2</span> <span class="o">==</span> <span class="n">list3</span>  
+</span></span><span class="line"><span class="cl"><span class="c1"># True, because their values are the same</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">list1</span> <span class="ow">is</span> <span class="n">list2</span>  <span class="c1"># False, because they are two separate objects in memory</span>
-</span></span><span class="line"><span class="cl"><span class="n">list2</span> <span class="ow">is</span> <span class="n">list3</span>  <span class="c1"># True, because list2 and list3 refer to the same object</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl"><span class="n">list1</span> <span class="ow">is</span> <span class="n">list2</span>  
+</span></span><span class="line"><span class="cl"><span class="c1"># False, because they are two separate objects in memory</span>
+</span></span><span class="line"><span class="cl"><span class="n">list2</span> <span class="ow">is</span> <span class="n">list3</span>  
+</span></span><span class="line"><span class="cl"><span class="c1"># True, because list2 and list3 refer to the same object</span></span></span></code></pre></div>
   </figure>
 </div>
 <hr>
-<h3 id="slicing-in-python-lists">Slicing in Python Lists<a href="#slicing-in-python-lists" class="anchor" aria-hidden="true">#</a> </h3>
-<p>Slicing is a powerful tool in Python for accessing and extracting sublists. It works similarly to string slicing but has some subtle differences, especially when it comes to the output.</p>
-<p>extracting sublists from a list using slicing:</p>
+<h3 id="list-slicing-in-python">List Slicing in Python<a href="#list-slicing-in-python" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Slicing is used to extract a subset (sublist) from a list, similar to string slicing. The syntax is:</p>
 
 
 
@@ -2280,12 +2377,12 @@
   </figure>
 </div>
 <ul>
-<li><code>start</code> is the index where slicing begins (inclusive).</li>
-<li><code>stop</code> is the index where slicing ends (exclusive).</li>
-<li><code>step</code> is the number of elements to skip between selections.</li>
+<li><strong><code>start</code></strong>: The index where slicing begins (inclusive).</li>
+<li><strong><code>stop</code></strong>: The index where slicing ends (exclusive).</li>
+<li><strong><code>step</code></strong>: The number of elements to skip between selections.</li>
 </ul>
-<h4 id="examples"><strong>Examples:</strong><a href="#examples" class="anchor" aria-hidden="true">#</a> </h4>
-<h5 id="1-basic-slicing">1. Basic Slicing<a href="#1-basic-slicing" class="anchor" aria-hidden="true">#</a> </h5>
+<h3 id="slicing-examples">Slicing Examples:<a href="#slicing-examples" class="anchor" aria-hidden="true">#</a> </h3>
+<h4 id="1-basic-slicing">1. Basic Slicing<a href="#1-basic-slicing" class="anchor" aria-hidden="true">#</a> </h4>
 
 
 
@@ -2295,13 +2392,11 @@
     <span class="title"></span>
   </figcaption>
   <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Slice from index 2 to 5 (excluding 5)</span>
 </span></span><span class="line"><span class="cl"><span class="n">sliced</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">sliced</span><span class="p">)</span>  <span class="c1"># Output: [2, 3, 4]</span></span></span></code></pre></div>
   </figure>
 </div>
-<h5 id="2-slice-from-start-to-a-specific-index">2. Slice from Start to a Specific Index<a href="#2-slice-from-start-to-a-specific-index" class="anchor" aria-hidden="true">#</a> </h5>
+<h4 id="2-slice-from-start-to-specific-index">2. Slice from Start to Specific Index<a href="#2-slice-from-start-to-specific-index" class="anchor" aria-hidden="true">#</a> </h4>
 
 
 
@@ -2310,12 +2405,11 @@
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Slice from the beginning to index 4 (excluding 4)</span>
-</span></span><span class="line"><span class="cl"><span class="n">sliced</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sliced</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">sliced</span><span class="p">)</span>  <span class="c1"># Output: [0, 1, 2, 3]</span></span></span></code></pre></div>
   </figure>
 </div>
-<h5 id="3-slice-from-a-specific-index-to-the-end">3. Slice from a Specific Index to the End<a href="#3-slice-from-a-specific-index-to-the-end" class="anchor" aria-hidden="true">#</a> </h5>
+<h4 id="3-slice-from-a-specific-index-to-the-end">3. Slice from a Specific Index to the End<a href="#3-slice-from-a-specific-index-to-the-end" class="anchor" aria-hidden="true">#</a> </h4>
 
 
 
@@ -2324,12 +2418,11 @@
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Slice from index 5 to the end</span>
-</span></span><span class="line"><span class="cl"><span class="n">sliced</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">5</span><span class="p">:]</span>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sliced</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">5</span><span class="p">:]</span>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">sliced</span><span class="p">)</span>  <span class="c1"># Output: [5, 6, 7, 8, 9]</span></span></span></code></pre></div>
   </figure>
 </div>
-<h5 id="4-full-slice-all-elements">4. Full Slice (All Elements)<a href="#4-full-slice-all-elements" class="anchor" aria-hidden="true">#</a> </h5>
+<h4 id="4-full-list-slice">4. Full List Slice<a href="#4-full-list-slice" class="anchor" aria-hidden="true">#</a> </h4>
 
 
 
@@ -2338,12 +2431,11 @@
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Get a full copy of the list</span>
-</span></span><span class="line"><span class="cl"><span class="n">sliced</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[:]</span>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sliced</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[:]</span>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">sliced</span><span class="p">)</span>  <span class="c1"># Output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span></span></code></pre></div>
   </figure>
 </div>
-<h5 id="5-slice-with-a-step-size">5. Slice with a Step Size<a href="#5-slice-with-a-step-size" class="anchor" aria-hidden="true">#</a> </h5>
+<h4 id="5-slice-with-a-step-size">5. Slice with a Step Size<a href="#5-slice-with-a-step-size" class="anchor" aria-hidden="true">#</a> </h4>
 
 
 
@@ -2352,12 +2444,11 @@
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Slice every second element</span>
-</span></span><span class="line"><span class="cl"><span class="n">sliced</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sliced</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">sliced</span><span class="p">)</span>  <span class="c1"># Output: [0, 2, 4, 6, 8]</span></span></span></code></pre></div>
   </figure>
 </div>
-<h5 id="6-slice-in-reverse-order">6. Slice in Reverse Order<a href="#6-slice-in-reverse-order" class="anchor" aria-hidden="true">#</a> </h5>
+<h4 id="6-reverse-the-list">6. Reverse the List<a href="#6-reverse-the-list" class="anchor" aria-hidden="true">#</a> </h4>
 
 
 
@@ -2366,12 +2457,11 @@
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Slice in reverse order (start from the last element)</span>
-</span></span><span class="line"><span class="cl"><span class="n">sliced</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sliced</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">sliced</span><span class="p">)</span>  <span class="c1"># Output: [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]</span></span></span></code></pre></div>
   </figure>
 </div>
-<h5 id="7-slice-with-step-and-startstop">7. Slice with Step and Start/Stop<a href="#7-slice-with-step-and-startstop" class="anchor" aria-hidden="true">#</a> </h5>
+<h4 id="7-slice-with-step-and-startstop">7. Slice with Step and Start/Stop<a href="#7-slice-with-step-and-startstop" class="anchor" aria-hidden="true">#</a> </h4>
 
 
 
@@ -2380,9 +2470,32 @@
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Get every second element between index 1 and 8 (excluding 8)</span>
-</span></span><span class="line"><span class="cl"><span class="n">sliced</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">8</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sliced</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">8</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">sliced</span><span class="p">)</span>  <span class="c1"># Output: [1, 3, 5, 7]</span></span></span></code></pre></div>
+  </figure>
+</div>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sliced</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[::</span><span class="mi">3</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">sliced</span><span class="p">)</span>  <span class="c1"># Output: [0, 3, 6, 9]</span></span></span></code></pre></div>
+  </figure>
+</div>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sliced</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">8</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">sliced</span><span class="p">)</span>  <span class="c1"># Output: [8, 6, 4, 2]</span></span></span></code></pre></div>
   </figure>
 </div>
 <hr>
@@ -2418,68 +2531,6 @@
   <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">factors</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">factors</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>    <span class="c1"># Output: 2 (Accessing element directly)</span>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">factors</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># Output: [1] (Slicing returns a list, not a value)</span></span></span></code></pre></div>
-  </figure>
-</div>
-<hr>
-<h3 id="step-size-variation-in-slicing">Step Size Variation in Slicing<a href="#step-size-variation-in-slicing" class="anchor" aria-hidden="true">#</a> </h3>
-<p>Step size in slicing allows you to skip elements as you slice through the list.</p>
-<h4 id="examples-1"><strong>Examples:</strong><a href="#examples-1" class="anchor" aria-hidden="true">#</a> </h4>
-<h5 id="1-basic-step-size">1. Basic Step Size<a href="#1-basic-step-size" class="anchor" aria-hidden="true">#</a> </h5>
-
-
-
-<div class="expressive-code">
-  <figure class="frame not-content">
-  <figcaption class="header">
-    <span class="title"></span>
-  </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Slice every second element</span>
-</span></span><span class="line"><span class="cl"><span class="n">sliced</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">sliced</span><span class="p">)</span>  <span class="c1"># Output: [0, 2, 4, 6, 8]</span></span></span></code></pre></div>
-  </figure>
-</div>
-<h5 id="2-reverse-step-size">2. Reverse Step Size<a href="#2-reverse-step-size" class="anchor" aria-hidden="true">#</a> </h5>
-
-
-
-<div class="expressive-code">
-  <figure class="frame not-content">
-  <figcaption class="header">
-    <span class="title"></span>
-  </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Slice the list in reverse order</span>
-</span></span><span class="line"><span class="cl"><span class="n">sliced</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">sliced</span><span class="p">)</span>  <span class="c1"># Output: [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]</span></span></span></code></pre></div>
-  </figure>
-</div>
-<h5 id="3-step-size-with-startstop">3. Step Size with Start/Stop<a href="#3-step-size-with-startstop" class="anchor" aria-hidden="true">#</a> </h5>
-
-
-
-<div class="expressive-code">
-  <figure class="frame not-content">
-  <figcaption class="header">
-    <span class="title"></span>
-  </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Get every third element from index 1 to index 8</span>
-</span></span><span class="line"><span class="cl"><span class="n">sliced</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">8</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">sliced</span><span class="p">)</span>  <span class="c1"># Output: [1, 4, 7]</span></span></span></code></pre></div>
-  </figure>
-</div>
-<h5 id="4-step-size-with-negative-indices">4. Step Size with Negative Indices<a href="#4-step-size-with-negative-indices" class="anchor" aria-hidden="true">#</a> </h5>
-
-
-
-<div class="expressive-code">
-  <figure class="frame not-content">
-  <figcaption class="header">
-    <span class="title"></span>
-  </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Get elements starting from index 8 to index 0, stepping by -2</span>
-</span></span><span class="line"><span class="cl"><span class="n">sliced</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">8</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">sliced</span><span class="p">)</span>  <span class="c1"># Output: [8, 6, 4, 2]</span></span></span></code></pre></div>
   </figure>
 </div>
 <hr>
@@ -2531,7 +2582,6 @@
 <hr>
 <h3 id="index-error-handling">Index Error Handling<a href="#index-error-handling" class="anchor" aria-hidden="true">#</a> </h3>
 <p>When slicing a list, if you try to access an index that doesn’t exist, Python will not throw an error. Instead, it will return an empty list or the available elements, depending on the slice.</p>
-<h4 id="examples-2"><strong>Examples:</strong><a href="#examples-2" class="anchor" aria-hidden="true">#</a> </h4>
 
 
 
@@ -2553,7 +2603,6 @@
 <hr>
 <h3 id="using-lists-with-f-strings">Using Lists with f-strings<a href="#using-lists-with-f-strings" class="anchor" aria-hidden="true">#</a> </h3>
 <p>You can easily access elements from a list and incorporate them into an f-string to format output.</p>
-<h4 id="example"><strong>Example:</strong><a href="#example" class="anchor" aria-hidden="true">#</a> </h4>
 
 
 
@@ -2572,7 +2621,6 @@
 <hr>
 <h3 id="concatenation-of-lists">Concatenation of Lists<a href="#concatenation-of-lists" class="anchor" aria-hidden="true">#</a> </h3>
 <p>You can concatenate lists using the <code>+</code> operator, which creates a new list.</p>
-<h4 id="example-1">Example:<a href="#example-1" class="anchor" aria-hidden="true">#</a> </h4>
 
 
 
@@ -2622,7 +2670,6 @@
 <hr>
 <h3 id="index-error">Index Error<a href="#index-error" class="anchor" aria-hidden="true">#</a> </h3>
 <p>Attempting to access an index outside the range of the list will result in an <strong>IndexError</strong>.</p>
-<h4 id="example-2">Example:<a href="#example-2" class="anchor" aria-hidden="true">#</a> </h4>
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: "04 Control-Flow - 03 Loops"
+title: "04 Control-Flow - 04 Loops"
 description: ""
 summary: ""
 date: 2025-01-25T07:41:22+05:30
@@ -13,7 +13,6 @@ seo:
   canonical: "" # custom canonical URL (optional)
   noindex: false # false (default) or true
 ---
-
 
 
 
@@ -41,49 +40,6 @@ for i in range(3):  # Iterates over a range of 3 numbers (0, 1, 2)
 for i in range(0, n):  # Sequence from 0 to n-1
     # Code to execute
 ```
-
----
-
-#### Using `range()` to Generate Sequences
-
-The `range()` function generates a sequence of numbers, which can be used in a `for` loop.
-
-**Example 1: Repeating a String Multiple Times:**
-
-```python
-# Repeating the string "meow" 3 times:
-print("meow" * 3)  # Output: meowmeowmeow
-```
-
-**Example 2: Using Newlines with `range()`:**
-
-```python
-# Using newline `\n`:
-print("meow\n" * 3)  # Output: meow (with new line after each "meow")
-```
-
-**Example 3: Removing the Default Newline in `print()`:**
-
-```python
-# Removing the default newline after the print:
-print("meow\n" * 3, end="")  # Output: meowmeowmeow (without extra newline)
-```
-
----
-
-**Example 4: Finding All Factors of a Number `n`**
-
-You can use a `for` loop to find all the factors of a given number `n`.
-
-```python
-def factors(n):
-    flist = []
-    for i in range(1, n + 1):
-        if n % i == 0:
-            flist = flist + [i]  # Can also use flist.append(i)
-    return flist
-```
-
 
 ---
 
