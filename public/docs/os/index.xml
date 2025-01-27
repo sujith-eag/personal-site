@@ -10,6 +10,20 @@
     <lastBuildDate>Sun, 12 Jan 2025 21:27:49 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/personal-site/docs/os/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>0 - OS - Short Notes (Unit 1)</title>
+      <link>http://localhost:1313/personal-site/docs/os/0-os-short-notes-unit-1/</link>
+      <pubDate>Sun, 12 Jan 2025 21:20:56 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/os/0-os-short-notes-unit-1/</guid>
+      <description>&lt;p&gt;The Operating System (OS) is the core software on a computer, often referred to as the &lt;strong&gt;Kernel&lt;/strong&gt;, which manages hardware and system resources.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>0 - OS - Short Notes (Unit 2)</title>
+      <link>http://localhost:1313/personal-site/docs/os/0-os-short-notes-unit-2/</link>
+      <pubDate>Sun, 12 Jan 2025 21:20:56 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/os/0-os-short-notes-unit-2/</guid>
+      <description>&lt;p&gt;A &lt;strong&gt;program&lt;/strong&gt; is a passive entity. It is essentially a file that contains a list of instructions (e.g., an executable file) along with associated resources.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>0 - OS - Previous Questions (Unit 1 &amp; 2)</title>
       <link>http://localhost:1313/personal-site/docs/os/0-os-previous-questions-unit-1-2/</link>
       <pubDate>Sun, 12 Jan 2025 21:27:49 +0530</pubDate>
