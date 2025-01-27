@@ -2,31 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/personal-site/docs/python/0-answered-previous-questions-1/</loc>
-    <lastmod>2024-12-17T22:34:58+05:30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/personal-site/docs/python/0-answered-previous-questions-2/</loc>
-    <lastmod>2024-12-17T22:34:58+05:30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/personal-site/docs/python/0-answered-previous-questions-3/</loc>
-    <lastmod>2024-12-17T22:34:58+05:30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/personal-site/docs/python/0-answered-previous-questions-4-practice-q/</loc>
-    <lastmod>2024-12-17T22:34:58+05:30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/personal-site/docs/python/0-unit-1-2-previous-questions/</loc>
-    <lastmod>2024-12-17T22:34:58+05:30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/</loc>
     <lastmod>2024-12-17T22:42:37+05:30</lastmod>
     <changefreq>monthly</changefreq>

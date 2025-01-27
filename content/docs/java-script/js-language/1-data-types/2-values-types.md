@@ -82,7 +82,7 @@ console.log("Hello!");
 
 ---
 
-### `typeof` Operator
+### 'typeof' Operator
 
 The `typeof` operator is used to determine the **type** of a value or variable. It returns a string indicating the type of the operand.  
 The type can change based on the value it holds.

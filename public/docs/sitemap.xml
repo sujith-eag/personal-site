@@ -57,36 +57,6 @@
       <priority>0.5</priority>
     </url>
     <url>
-        <loc>http://localhost:1313/personal-site/docs/python/0-answered-previous-questions-1/</loc>
-        <lastmod>2024-12-17T22:34:58+05:30</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-      </url>
-      <url>
-        <loc>http://localhost:1313/personal-site/docs/python/0-answered-previous-questions-2/</loc>
-        <lastmod>2024-12-17T22:34:58+05:30</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-      </url>
-      <url>
-        <loc>http://localhost:1313/personal-site/docs/python/0-answered-previous-questions-3/</loc>
-        <lastmod>2024-12-17T22:34:58+05:30</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-      </url>
-      <url>
-        <loc>http://localhost:1313/personal-site/docs/python/0-answered-previous-questions-4-practice-q/</loc>
-        <lastmod>2024-12-17T22:34:58+05:30</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-      </url>
-      <url>
-        <loc>http://localhost:1313/personal-site/docs/python/0-unit-1-2-previous-questions/</loc>
-        <lastmod>2024-12-17T22:34:58+05:30</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-      </url>
-      <url>
         <loc>http://localhost:1313/personal-site/docs/python/03-print-and-input/</loc>
         <lastmod>2024-12-17T22:34:58+05:30</lastmod>
         <changefreq>monthly</changefreq>

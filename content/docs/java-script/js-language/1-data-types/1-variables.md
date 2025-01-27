@@ -60,13 +60,13 @@ let totalPrice = 100.50;
 
 ---
 
-## `var` (Old Way of Declaring Variables)
+## **'var'** (Old Way of Declaring Variables)
 
 The `var` keyword was previously used to declare variables in JavaScript, but it is now considered outdated due to some issues with variable scoping. As such, its usage is discouraged in favor of `let` and `const`.
 
 ---
 
-## `let` for Declaring Variables
+## **'let'** for Declaring Variables
 
 The `let` keyword is used to declare variables that can be **reassigned** later.
 
@@ -105,7 +105,7 @@ let user = 'John'
 
 ---
 
-## `const` for Constants
+## **'const`** for Constants
 
 The `const` keyword is used to declare **constants**. Once a value is assigned to a `const` variable, it **cannot be reassigned**. Attempting to change the value of a constant results in an error.
 
