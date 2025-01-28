@@ -98,6 +98,7 @@ When there are more processes than available CPU time, some processes will have 
 
 ---
 
+
 #### **Scheduling Queues**
 
 - **Job Queue:**  
@@ -108,27 +109,32 @@ When there are more processes than available CPU time, some processes will have 
     
 - **Device Queue:**  
     If a process requests I/O (e.g., disk access) and the device is busy, it enters the **device queue** for that specific I/O device. Each device has its own queue.
-    
+
+
+{{< figure  src="images/os/3_06_QueueingDiagram.jpg"  alt="3.06 Queueing Diagram Representing Process Scheduling"  caption="3.06 Queueing Diagram Representing Process Scheduling" >}}
+
 
 **CPU-I/O Cycle**: Process execution alternates between CPU bursts and I/O waits until the program terminates.
 
 - **I/O-bound programs**: These programs tend to have short CPU bursts and frequent I/O operations.
 - **CPU-bound programs**: These have long CPU bursts and minimal I/O operations.
 
+
 #### **Schedulers**
 
 1. **Long-Term Scheduler (Job Scheduler):**
-    
     - Selects processes from a pool and loads them into memory for execution, controlling the **degree of multiprogramming** (the number of processes in memory).
-2. **Short-Term Scheduler (CPU Scheduler):**
     
+2. **Short-Term Scheduler (CPU Scheduler):**    
     - When the CPU is idle, it selects a process from the **ready queue** and allocates CPU time to it. This ensures that CPU time is used efficiently.
-3. **Medium-Term Scheduling:**
-    
 
-- In multiprogramming systems, sometimes it’s beneficial to remove processes from main memory (swapping them to disk) to reduce the level of multiprogramming and manage system resources.
+3. **Medium-Term Scheduling:**
+	- In multiprogramming systems, sometimes it’s beneficial to remove processes from main memory (swapping them to disk) to reduce the level of multiprogramming and manage system resources.
 
 Swapping allows processes to be later reintroduced into memory and continue execution from where they left off, helping balance memory load and system performance.
+
+{{< figure  src="images/os/3_07_QueuingDiagram2.jpg"  alt="3.07 Medium Term Scheduling in Queueing Diagram"  caption="3.07 Medium Term Scheduling in Queueing Diagram" >}}
+
 
 ---
 

@@ -220,6 +220,9 @@ A **bounded buffer** is more practical in real systems to prevent memory overloa
 
 ---
 
+{{< figure  src="images/os/3_12_CommunicationsModels.jpg"  alt="3.12 Communication Models"  caption="3.12 Communication Models" >}}
+
+
 ### **Message Passing System**
 
 Message passing allows processes to communicate and synchronize without sharing the same address space. This makes message passing systems ideal for **distributed systems**, where processes may reside on different machines connected by a network. 
