@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright (c) 2020-2024 Thulite</copyright>
-    <lastBuildDate>Wed, 01 Jan 2025 16:00:48 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jan 2025 16:00:52 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/personal-site/docs/c/ds_using_c/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01 - Tower of Hanoi</title>
@@ -50,6 +50,13 @@
       <pubDate>Wed, 01 Jan 2025 16:00:48 +0530</pubDate>
       <guid>http://localhost:1313/personal-site/docs/c/ds_using_c/06-circular-queue/</guid>
       <description>&lt;p&gt;In a circular queue, the &lt;code&gt;tail&lt;/code&gt; pointer wraps around to the front when the queue is full, making efficient use of the available space in the array. This avoids the problem of running out of space when elements are dequeued, as would happen in a linear queue.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>07 - Singly Linked List</title>
+      <link>http://localhost:1313/personal-site/docs/c/ds_using_c/07-singly-linked-list/</link>
+      <pubDate>Wed, 01 Jan 2025 16:00:52 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/c/ds_using_c/07-singly-linked-list/</guid>
+      <description>&lt;p&gt;A &lt;code&gt;node&lt;/code&gt; data type is defined using a &lt;code&gt;struct&lt;/code&gt; that contains two elements:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Data Element&lt;/strong&gt;: An integer (&lt;code&gt;int&lt;/code&gt;) to store the actual data of the node.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Next Pointer&lt;/strong&gt;: A pointer (&lt;code&gt;next&lt;/code&gt;) of type &lt;code&gt;struct node*&lt;/code&gt; that holds the memory location of the next node in the list.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h4 id=&#34;pointers-for-operations&#34;&gt;&lt;strong&gt;Pointers for Operations&lt;/strong&gt;&lt;/h4&gt;&#xA;&lt;p&gt;To manage the list, three pointers of type &lt;code&gt;struct node*&lt;/code&gt; are used:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -42,4 +42,11 @@
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/c/ds_using_c/07-singly-linked-list/</loc>
+      <lastmod>2025-01-01T16:00:52+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
     </urlset>
