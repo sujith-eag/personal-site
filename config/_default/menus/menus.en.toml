@@ -54,7 +54,7 @@
   weight = 40
 
 [[main]]
-  name = "C"
+  name = "C & DSA"
   url = "docs/c/"
   weight = 50
   
@@ -69,9 +69,14 @@
   weight = 70
   
 [[main]]
+  name = "DBMS"
+  url = "/docs/dbms/"
+  weight = 80
+  
+[[main]]
   name = "Tools"
   url = "/docs/tools/"
-  weight = 80
+  weight = 90
 
 [[main]]
   name = "Blog"

@@ -1,5 +1,5 @@
 ---
-title: "C Language"
+title: "C and Data Structures"
 description: ""
 summary: ""
 date: 2024-12-18T12:00:15+05:30
