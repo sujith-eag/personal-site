@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HTML on Sujith&#39;s Library</title>
+    <link>http://localhost:1313/personal-site/docs/html-css/html/</link>
+    <description>Recent content in HTML on Sujith&#39;s Library</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2020-2024 Thulite</copyright>
+    <lastBuildDate>Mon, 04 Nov 2024 19:54:06 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/personal-site/docs/html-css/html/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HTML - 01 - Boiler Plate</title>
+      <link>http://localhost:1313/personal-site/docs/html-css/html/html-01-boiler-plate/</link>
+      <pubDate>Mon, 04 Nov 2024 19:50:38 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/html-css/html/html-01-boiler-plate/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;HTML (HyperText Markup Language)&lt;/strong&gt; defines the structure and content of webpages. We use HTML elements to create all the paragraphs, headings, lists, images, and links that make up a typical webpage.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>HTML - 02 - Texts &amp; Lists</title>
+      <link>http://localhost:1313/personal-site/docs/html-css/html/html-02-texts-lists/</link>
+      <pubDate>Mon, 04 Nov 2024 19:52:11 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/html-css/html/html-02-texts-lists/</guid>
+      <description>&lt;h3 id=&#34;paragraphs-p-p&#34;&gt;Paragraphs &lt;code&gt;&amp;lt;p&amp;gt; &amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/h3&gt;&#xA;&lt;p&gt;All text can be placed inside the &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt;, but spaces will not be considered without using paragraph tags. The &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; tag can be used to create distinct paragraphs.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>HTML - 03 - Links &amp; Images</title>
+      <link>http://localhost:1313/personal-site/docs/html-css/html/html-03-links-images/</link>
+      <pubDate>Mon, 04 Nov 2024 19:52:36 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/html-css/html/html-03-links-images/</guid>
+      <description>&lt;h2 id=&#34;anchor-elements&#34;&gt;Anchor Elements&lt;/h2&gt;&#xA;&lt;p&gt;An anchor element is defined by wrapping the text or another HTML element we want to link with an &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; tag.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>HTML - 04 - Input Types</title>
+      <link>http://localhost:1313/personal-site/docs/html-css/html/html-04-input-types/</link>
+      <pubDate>Mon, 04 Nov 2024 19:53:10 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/html-css/html/html-04-input-types/</guid>
+      <description>&lt;p&gt;The &lt;strong&gt;&lt;code&gt;&amp;lt;input&amp;gt;&lt;/code&gt;&lt;/strong&gt; HTML element is used to create interactive controls for web-based forms to accept data from users. It provides a wide variety of input types and control widgets depending on the device and user agent. The &lt;code&gt;&amp;lt;input&amp;gt;&lt;/code&gt; element is one of the most powerful and complex in HTML due to the numerous combinations of input types and attributes available.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>HTML - 05 - Button</title>
+      <link>http://localhost:1313/personal-site/docs/html-css/html/html-05-button/</link>
+      <pubDate>Mon, 04 Nov 2024 19:53:44 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/html-css/html/html-05-button/</guid>
+      <description>&lt;h3 id=&#34;buttonbutton&#34;&gt;&lt;code&gt;&amp;lt;button&amp;gt;&amp;lt;/button&amp;gt;&lt;/code&gt;&lt;/h3&gt;&#xA;&lt;p&gt;The &lt;code&gt;&amp;lt;button&amp;gt;&lt;/code&gt; element represents a clickable button that can be used to submit forms or trigger actions on the webpage. It can contain text, images, or other HTML elements.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>HTML - 06 - DOM Events</title>
+      <link>http://localhost:1313/personal-site/docs/html-css/html/html-06-dom-events/</link>
+      <pubDate>Mon, 04 Nov 2024 19:54:06 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/html-css/html/html-06-dom-events/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.w3schools.com/jsref/dom_obj_event.asp&#34;&gt;HTML DOM Events&lt;/a&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;HTML events are actions that occur to HTML elements, which JavaScript can respond to. By using event listeners, you can execute JavaScript code in reaction to these events.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,2509 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="/personal-site/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=personal-site/livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preload" href="http://localhost:1313/personal-site/fonts/vendor/jost/jost-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/personal-site/fonts/vendor/jost/jost-v4-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/personal-site/fonts/vendor/jost/jost-v4-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<script 
+  src="/personal-site/js/color-mode.f14b3e296de1d0b69e75af684b62a4a912a2cadab04e36123407cd8388204f1d.js"
+  integrity="sha256-8Us&#43;KW3h0Laeda9oS2KkqRKiytqwTjYSNAfNg4ggTx0=">
+</script>
+
+
+<link rel="stylesheet" href="/personal-site/main.c0e24d0bb4526375ef42a8fffa4eb23f8f782cb58ac9f07c6886fe943a0ed00e176b284d9d1a5b8e9d68a3f2f5918367e18fe55f5fde9451a8c6d3fe85342b7b.css" integrity="sha512-wOJNC7RSY3XvQqj/&#43;k6yP494LLWKyfB8aIb&#43;lDoO0A4XayhNnRpbjp1oo/L1kYNn4Y/lX1/elFGoxtP&#43;hTQrew==" crossorigin="anonymous">
+
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+	
+<title>Git &amp; Github</title>
+  
+<meta name="description" content="A reference site with summary of various coding topics">
+
+
+
+</head>
+
+  
+  <body class="single section docs" data-bs-spy="scroll" data-bs-target="#toc" data-bs-root-margin="0px 0px -60%" data-bs-smooth-scroll="true" tabindex="0">
+    <div class="sticky-top">
+<header class="navbar navbar-expand-lg">
+  <div class="container-lg">
+  
+    <a class="navbar-brand me-auto me-lg-3" href="/personal-site/">Sujith&#39;s Library</a>
+
+    
+    
+    <button type="button" id="searchToggleMobile" class="btn btn-link nav-link mx-2 d-lg-none" aria-label="Search website">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <circle cx="10" cy="10" r="7"></circle>
+        <line x1="21" y1="21" x2="15" y2="15"></line>
+      </svg>
+    </button>
+    
+    <button class="btn btn-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavSection" aria-controls="offcanvasNavSection" aria-label="Open section navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+      </svg>
+    </button>
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavSection" aria-labelledby="offcanvasNavSectionLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavSectionLabel">Docs</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <aside class="doks-sidebar mt-n3">
+          <nav id="doks-docs-nav" aria-label="Tertiary navigation">
+            
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+    <details open>
+      <summary>Python</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/03-print-and-input/">03 - Print and Input</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Python Control Statements</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-01-conditional-branching/">04 Control-Flow - 01 Conditional Branching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-02-match-case/">04 Control-Flow - 02 Match-Case</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-03-range/">04 Control-Flow - 03 Range</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-04-loops/">04 Control-Flow - 04 Loops</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Python Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Primitive Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-01-variables/">01 PDT - 01 Variables</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-02-datatypes/">01 PDT - 02 Datatypes</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-03-operators/">01 PDT - 03 Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-04-int-float/">01 PDT - 04 int &amp; float</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-05-string-manipulation/">01 PDT - 05 String Manipulation</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-06-string-methods/">01 PDT - 06 String Methods</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Complex Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-01-lists/">02 CDT - 01 Lists</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-02-list-methods/">02 CDT - 02 List Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-03-list-operators/">02 CDT - 03 List Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-04-list-vs-arrays/">02 CDT - 04 List Vs Arrays</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-05-tuples/">02 CDT - 05 Tuples</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-06-sets/">02 CDT - 06 Sets</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-07-dictinaries/">02 CDT - 07 Dictinaries</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>C and Data Structures</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>The C Programming Language by Kernighan and Ritchie</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-to-c-language/">K&amp;R - Chapter 0 - Introduction to C language</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-using-python-part-1/">K&amp;R - Chapter 0 - Introduction using Python (Part 1)</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-using-python-part-2/">K&amp;R - Chapter 0 - Introduction using Python (Part 2)</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-1-basic-syntax/">K&amp;R - Chapter 1 - Basic Syntax</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-2-types-operators-expressions/">K&amp;R - Chapter 2 - Types, Operators, Expressions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-3-control-flow/">K&amp;R - Chapter 3 - Control Flow</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-4-function-program-structure/">K&amp;R - Chapter 4 - Function, Program Structure</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-5-pointers-arrays/">K&amp;R - Chapter 5 - Pointers, Arrays</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-6-structures/">K&amp;R - Chapter 6 - Structures</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-6.1-structures/">K&amp;R - Chapter 6.1 - Structures</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Data Structures Using C</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/01-tower-of-hanoi/">01 - Tower of Hanoi</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/02-stack-operations/">02 - Stack Operations</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/03-infix-to-postfix-conversion/">03 - Infix to Postfix Conversion</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/04-postfix-expression-evaluation/">04 - Postfix Expression Evaluation</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/05-queue/">05 - Queue</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/06-circular-queue/">06 - Circular Queue</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/07-singly-linked-list/">07 - Singly Linked List</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>JavaScript</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>JS Language</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.01-variables/">JS - 01.01 - Variables</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.02-values-and-types/">JS - 01.02 - Values and Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.03-number-types/">JS - 01.03 - Number Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.04-number-methods/">JS - 01.04 - Number Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.05-string-type/">JS - 01.05 - String Type</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.06-string-methods/">JS - 01.06 - String Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.07-modifying-string/">JS - 01.07 - Modifying String</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.08-boolean-type/">JS - 01.08 - Boolean Type</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.09-operators/">JS - 01.09 - Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.10-auto-type-conversions/">JS - 01.10 - Auto Type Conversions</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Control Flow</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Conditionals</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.01-if-else/">JS - 02.01 - if, else</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.02-switch-case/">JS - 02.02 - switch-case</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.03-ternary-operator/">JS - 02.03 - Ternary Operator</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.04-logical-operators/">JS - 02.04 - Logical Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.05-short-circuiting/">JS - 02.05 - Short Circuiting</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Loops</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.11-do-while-loop/">JS - 02.11 - do-while Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.12-for-loop/">JS - 02.12 - for Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.13-for-of-loop/">JS - 02.13 - for-of Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.14-for-in-loop/">JS - 02.14 - for-in Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.15-break-continue-label/">JS - 02.15 - break-continue-label</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.16-iterables/">JS - 02.16 - Iterables</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Functions</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.01-function/">JS - 03.01 - Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.02-defining-function/">JS - 03.02 - Defining Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.03-arrow-function/">JS - 03.03 - Arrow Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.04-scope-of-variable/">JS - 03.04 - Scope of Variable</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.05-parameters-arguments/">JS - 03.05 - Parameters &amp; Arguments</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.06-return-recursion-call-stack/">JS - 03.06 - Return, Recursion, Call Stack</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.07-scheduling/">JS - 03.07 - Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.08-decorators/">JS - 03.08 - Decorators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.09-function-object/">JS - 03.09 - Function Object</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Objects</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.01-object/">JS - 04.01 - Object</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.02-object-properties/">JS - 04.02 - Object Properties</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.03-cloning-object/">JS - 04.03 - Cloning Object</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.04-object.keys/">JS - 04.04 - Object.keys()</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.05-methods-this-chaining/">JS - 04.05 - Methods, this, Chaining</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.06-constructor-new/">JS - 04.06 - Constructor new</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Arrays</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.01-array/">JS - 05.01 - Array</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.02-array-methods/">JS - 05.02 - Array Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.03-filter-method/">JS - 05.03 - Filter Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.04-map-method/">JS - 05.04 - Map Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.05-reduce-method/">JS - 05.05 - Reduce Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.06-sort-method/">JS - 05.06 - Sort Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.07-rest-spread/">JS - 05.07 - Rest &amp; Spread</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/">JavaScript DOM Manipulation</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>HTML &amp; CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>HTML</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-01-boiler-plate/">HTML - 01 - Boiler Plate</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-02-texts-lists/">HTML - 02 - Texts &amp; Lists</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-03-links-images/">HTML - 03 - Links &amp; Images</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-04-input-types/">HTML - 04 - Input Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-05-button/">HTML - 05 - Button</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-06-dom-events/">HTML - 06 - DOM Events</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-01-selectors/">CSS - 01 -Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-02-multiple-selecors/">CSS - 02 - Multiple Selecors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-03-declaration/">CSS - 03 - Declaration</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-04-adding-css/">CSS - 04 - Adding CSS</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-05-box-model/">CSS - 05 - Box Model</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-06-flexbox/">CSS - 06 - Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-07-flex-flexibility/">CSS - 07 - Flex Flexibility</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-08-axes-in-flexbox/">CSS - 08 - Axes in Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-09-utility-class-inheritance/">CSS - 09 - Utility Class &amp; Inheritance</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>CSS Reference</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css_resource/css-04.1-size-units/">CSS - 04.1 - Size Units</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css_resource/css-04.2-color-values/">CSS - 04.2 - Color Values</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open open>
+      <summary>Tools &amp; Accesories</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/tools/obsidian/">Obsidian</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/vs-code/">VS Code</a>
+  </li>
+
+  <li class="active" >
+      <a aria-current="page" href="/personal-site/docs/tools/git-github/">Git &amp; Github</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Linux - Bash &amp; OS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Linux OS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-01-linux-kernel/">Linux OS - 01 - Linux Kernel</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-02-forms-of-process-management/">Linux OS - 02 - Forms of Process Management</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-03-system-resources/">Linux OS - 03 System Resources</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Linx Bash</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-01-basics/">Bash - 01 - Basics</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-02-features/">Bash - 02 - Features</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-03-help-pages/">Bash - 03 - help pages</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-04-variables-and-aliases/">Bash - 04 - Variables and Aliases</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-05-listing-files/">Bash - 05 - Listing Files</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-06-environment-and-subshell/">Bash - 06 - Environment and Subshell</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-08-basic-file-commands/">Bash - 08 - Basic File Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-07-storage-terminology-in-linux/">Bash - 07 - Storage Terminology in Linux</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-08.1-bc-and-date/">Bash - 08.1 - bc and date</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-09-file-movement-and-copy-commands/">Bash - 09 - File Movement and Copy Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-10-file-viewing-and-editing-commands/">Bash - 10 - File Viewing and Editing Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-11-file-permissions/">Bash - 11 - File Permissions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-12-hard-and-soft-links/">Bash - 12 - Hard and Soft Links</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13-regular-expressions/">Bash - 13 - Regular Expressions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13.1-regex-expanded/">Bash - 13.1 - regex Expanded</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13.2-regex-matching/">Bash - 13.2 - regex Matching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-14-file-searching/">Bash - 14 - File Searching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-15-neovim/">Bash - 15 - Neovim</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-16-egrep/">Bash - 16 - egrep</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-17-sed/">Bash - 17 - sed</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Database Management Systems</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Structured Query Language (SQL)</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-0-quering/">SQL - 0 Quering</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-01-relating/">SQL - 01 Relating</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-02-designing/">SQL - 02 Designing</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-03-writing/">SQL - 03 Writing</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-04-viewing/">SQL - 04 Viewing</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-05-optimizing/">SQL - 05 Optimizing</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-06-scaling/">SQL - 06 Scaling</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Operating System Concepts</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/0-os-short-notes-unit-1/">0 - OS - Short Notes (Unit 1)</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/0-os-short-notes-unit-2/">0 - OS - Short Notes (Unit 2)</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>OS - 01 - Operating Systems Introduction</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c01_introduction/os-1.01-operating-systems-introduction/">OS 1.01 - Operating Systems Introduction</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c01_introduction/os-1.05-os-operations/">OS 1.05 - OS Operations</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c01_introduction/os-1.11-computing-environments/">OS 1.11 - Computing Environments</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Chapter 02 - System Structure</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.01-os-services/">OS 2.01 - OS Services</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.03-system-calls/">OS 2.03 - System Calls</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.04-types-of-system-calls/">OS 2.04 - Types Of System Calls</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.05-system-programs/">OS 2.05 - System Programs</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.07-os-structure/">OS 2.07 - OS Structure</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.10-system-boot/">OS 2.10 - System Boot</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Chapter 03 - Process Concept</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c03_process_concept/os-3.01-process-concept/">OS 3.01 - Process Concept</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c03_process_concept/os-3.02-process-scheduling/">OS 3.02 - Process Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c03_process_concept/os-3.04-inter-process-communication/">OS 3.04 - Inter-Process Communication</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Chapter 05 - Process Scheduling</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.01-process-scheduling/">OS 5.01 - Process Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03-scheduling-algorithms/">OS 5.03 - Scheduling Algorithms</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03.02-shortest-job-first/">OS 5.03.02 - Shortest Job First</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03.03-priority-scheduling/">OS 5.03.03 - Priority Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03.04-round-robin-scheduling/">OS 5.03.04 - Round-Robin Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03.05-multi-level-queue-scheduling/">OS 5.03.05 - Multi-Level Queue Scheduling</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Chapter 6 -  Process Synchronization</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.01-process-synchronization/">OS 6.01 - Process Synchronization</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.02-critical-section-problem/">OS 6.02 - Critical-Section Problem</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.05-mutex-locks/">OS 6.05 - Mutex Locks</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.06-semaphores/">OS 6.06 - Semaphores</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.07-classic-problems/">OS 6.07 - Classic Problems</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/0-os-previous-questions-unit-1-2/">0 - OS - Previous Questions (Unit 1 &amp; 2)</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+          </nav>
+        </aside>
+      </div>
+    </div>
+    
+    <button class="btn btn-link nav-link mx-2 order-3 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavMain" aria-controls="offcanvasNavMain" aria-label="Open main navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <line x1="4" y1="8" x2="20" y2="8"></line>
+        <line x1="4" y1="16" x2="20" y2="16"></line>
+      </svg>
+    </button>
+
+    
+    <div class="offcanvas offcanvas-end h-auto" tabindex="-1" id="offcanvasNavMain" aria-labelledby="offcanvasNavMainLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavMainLabel">Sujith&#39;s Library</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+         </svg>
+        </button>
+      </div>
+      
+      <div class="offcanvas-body d-flex flex-column flex-lg-row justify-content-between">
+        <ul class="navbar-nav flex-grow-1"><li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/python/">Python</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/html-css/">HTML/CSS</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/java-script/">JavaScript</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/java-script-dom/">JS DOM</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/c/">C &amp; DSA</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/bash-linux/">Linux</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/os/">OS</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/dbms/">DBMS</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/tools/">Tools</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/blog/">Blog</a>
+              </li>
+            </ul>
+
+        
+        
+        <button type="button" id="searchToggleDesktop" class="btn btn-link nav-link p-2 d-none d-lg-block" aria-label="Search website">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <circle cx="10" cy="10" r="7"></circle>
+            <line x1="21" y1="21" x2="15" y2="15"></line>
+          </svg>
+        </button>
+        
+        
+        
+        <button id="buttonColorMode" class="btn btn-link mx-auto nav-link p-0 ms-lg-2 me-lg-1" type="button" aria-label="Toggle theme">
+          <svg data-bs-theme-value="dark" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+          </svg>
+          <svg data-bs-theme-value="light" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0m-5 0h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+          </svg>
+        </button>
+        
+        <ul id="socialMenu" class="nav mx-auto flex-row order-lg-4">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/sujith-eag"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg><small class="ms-2 visually-hidden">GitHub</small></a>
+            </li>
+          </ul>
+        
+        </div>
+    </div>
+
+    
+    </div>
+</header>
+</div>
+
+<div class="modal" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-md-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 visually-hidden" id="searchModalLabel">Search</h1>
+        <button type="button" class="btn-close visually-hidden" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="search-input flex-grow-1 d-none">
+          <form id="search-form" class="search-form" action="#" method="post" accept-charset="UTF-8" role="search">
+            <label for="query" class="visually-hidden">Search</label>
+            <div class="d-flex">
+              <input type="search" id="query" name="query" class="search-text form-control form-control-lg" placeholder="Search" aria-label="Search" maxlength="128" autocomplete="off">
+              <button type="button" class="btn btn-link text-decoration-none px-0 ms-3 d-md-none" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-body">
+        <p class="search-loading status message d-none mt-3 text-center">Loading search index…</p>
+        <p class="search-no-recent message d-none mt-3 text-center">No recent searches</p>
+        <p class="search-no-results message d-none mt-3 text-center">No results for "<strong><span class="query-no-results">Query here</span></strong>"</p>
+        <div id="searchResults" class="search-results"></div>
+        <template>
+          <article class="search-result list-view">
+            <div class="card my-3">
+              <div class="card-body">
+                <header>
+                  <h2 class="h5 title title-submitted mb-0"><a class="stretched-link text-decoration-none text-reset" href="#">Title here</a></h2>
+                  <div class="submitted d-none"><time class="created-date">Date here</time></div>
+                </header>
+                <div class="content">Summary here</div>
+              </div>
+            </div>
+          </article>
+        </template>
+      </div>
+      <div class="modal-footer">
+        <ul class="list-inline me-auto d-none d-md-block">
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Enter key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M12 3.53088v3c0 1-1 2-2 2H4M7 11.53088l-3-3 3-3"></path></g></svg></kbd><span class="DocSearch-Label">to select</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow down" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 3.5v8M10.5 8.5l-3 3-3-3"></path></g></svg></kbd><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow up" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 11.5v-8M10.5 6.5l-3-3-3 3"></path></g></svg></kbd><span class="DocSearch-Label">to navigate</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Escape key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M13.6167 8.936c-.1065.3583-.6883.962-1.4875.962-.7993 0-1.653-.9165-1.653-2.1258v-.5678c0-1.2548.7896-2.1016 1.653-2.1016.8634 0 1.3601.4778 1.4875 1.0724M9 6c-.1352-.4735-.7506-.9219-1.46-.8972-.7092.0246-1.344.57-1.344 1.2166s.4198.8812 1.3445.9805C8.465 7.3992 8.968 7.9337 9 8.5c.032.5663-.454 1.398-1.4595 1.398C6.6593 9.898 6 9 5.963 8.4851m-1.4748.5368c-.2635.5941-.8099.876-1.5443.876s-1.7073-.6248-1.7073-2.204v-.4603c0-1.0416.721-2.131 1.7073-2.131.9864 0 1.6425 1.031 1.5443 2.2492h-2.956"></path></g></svg></kbd><span class="DocSearch-Label">to close</span></li>
+        </ul>
+        <p class="d-md-none">Search by <a class="text-decoration-none" href="https://github.com/nextapps-de/flexsearch">FlexSearch</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="wrap container-lg" role="document">
+      <div class="content">
+      
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+    <details open>
+      <summary>Python</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/03-print-and-input/">03 - Print and Input</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Python Control Statements</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-01-conditional-branching/">04 Control-Flow - 01 Conditional Branching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-02-match-case/">04 Control-Flow - 02 Match-Case</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-03-range/">04 Control-Flow - 03 Range</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-04-loops/">04 Control-Flow - 04 Loops</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Python Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Primitive Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-01-variables/">01 PDT - 01 Variables</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-02-datatypes/">01 PDT - 02 Datatypes</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-03-operators/">01 PDT - 03 Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-04-int-float/">01 PDT - 04 int &amp; float</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-05-string-manipulation/">01 PDT - 05 String Manipulation</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-06-string-methods/">01 PDT - 06 String Methods</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Complex Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-01-lists/">02 CDT - 01 Lists</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-02-list-methods/">02 CDT - 02 List Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-03-list-operators/">02 CDT - 03 List Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-04-list-vs-arrays/">02 CDT - 04 List Vs Arrays</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-05-tuples/">02 CDT - 05 Tuples</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-06-sets/">02 CDT - 06 Sets</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-07-dictinaries/">02 CDT - 07 Dictinaries</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>C and Data Structures</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>The C Programming Language by Kernighan and Ritchie</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-to-c-language/">K&amp;R - Chapter 0 - Introduction to C language</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-using-python-part-1/">K&amp;R - Chapter 0 - Introduction using Python (Part 1)</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-using-python-part-2/">K&amp;R - Chapter 0 - Introduction using Python (Part 2)</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-1-basic-syntax/">K&amp;R - Chapter 1 - Basic Syntax</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-2-types-operators-expressions/">K&amp;R - Chapter 2 - Types, Operators, Expressions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-3-control-flow/">K&amp;R - Chapter 3 - Control Flow</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-4-function-program-structure/">K&amp;R - Chapter 4 - Function, Program Structure</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-5-pointers-arrays/">K&amp;R - Chapter 5 - Pointers, Arrays</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-6-structures/">K&amp;R - Chapter 6 - Structures</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-6.1-structures/">K&amp;R - Chapter 6.1 - Structures</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Data Structures Using C</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/01-tower-of-hanoi/">01 - Tower of Hanoi</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/02-stack-operations/">02 - Stack Operations</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/03-infix-to-postfix-conversion/">03 - Infix to Postfix Conversion</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/04-postfix-expression-evaluation/">04 - Postfix Expression Evaluation</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/05-queue/">05 - Queue</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/06-circular-queue/">06 - Circular Queue</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/07-singly-linked-list/">07 - Singly Linked List</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>JavaScript</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>JS Language</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.01-variables/">JS - 01.01 - Variables</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.02-values-and-types/">JS - 01.02 - Values and Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.03-number-types/">JS - 01.03 - Number Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.04-number-methods/">JS - 01.04 - Number Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.05-string-type/">JS - 01.05 - String Type</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.06-string-methods/">JS - 01.06 - String Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.07-modifying-string/">JS - 01.07 - Modifying String</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.08-boolean-type/">JS - 01.08 - Boolean Type</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.09-operators/">JS - 01.09 - Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.10-auto-type-conversions/">JS - 01.10 - Auto Type Conversions</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Control Flow</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Conditionals</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.01-if-else/">JS - 02.01 - if, else</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.02-switch-case/">JS - 02.02 - switch-case</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.03-ternary-operator/">JS - 02.03 - Ternary Operator</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.04-logical-operators/">JS - 02.04 - Logical Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.05-short-circuiting/">JS - 02.05 - Short Circuiting</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Loops</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.11-do-while-loop/">JS - 02.11 - do-while Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.12-for-loop/">JS - 02.12 - for Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.13-for-of-loop/">JS - 02.13 - for-of Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.14-for-in-loop/">JS - 02.14 - for-in Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.15-break-continue-label/">JS - 02.15 - break-continue-label</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.16-iterables/">JS - 02.16 - Iterables</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Functions</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.01-function/">JS - 03.01 - Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.02-defining-function/">JS - 03.02 - Defining Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.03-arrow-function/">JS - 03.03 - Arrow Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.04-scope-of-variable/">JS - 03.04 - Scope of Variable</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.05-parameters-arguments/">JS - 03.05 - Parameters &amp; Arguments</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.06-return-recursion-call-stack/">JS - 03.06 - Return, Recursion, Call Stack</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.07-scheduling/">JS - 03.07 - Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.08-decorators/">JS - 03.08 - Decorators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.09-function-object/">JS - 03.09 - Function Object</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Objects</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.01-object/">JS - 04.01 - Object</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.02-object-properties/">JS - 04.02 - Object Properties</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.03-cloning-object/">JS - 04.03 - Cloning Object</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.04-object.keys/">JS - 04.04 - Object.keys()</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.05-methods-this-chaining/">JS - 04.05 - Methods, this, Chaining</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.06-constructor-new/">JS - 04.06 - Constructor new</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Arrays</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.01-array/">JS - 05.01 - Array</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.02-array-methods/">JS - 05.02 - Array Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.03-filter-method/">JS - 05.03 - Filter Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.04-map-method/">JS - 05.04 - Map Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.05-reduce-method/">JS - 05.05 - Reduce Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.06-sort-method/">JS - 05.06 - Sort Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.07-rest-spread/">JS - 05.07 - Rest &amp; Spread</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/">JavaScript DOM Manipulation</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>HTML &amp; CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>HTML</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-01-boiler-plate/">HTML - 01 - Boiler Plate</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-02-texts-lists/">HTML - 02 - Texts &amp; Lists</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-03-links-images/">HTML - 03 - Links &amp; Images</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-04-input-types/">HTML - 04 - Input Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-05-button/">HTML - 05 - Button</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-06-dom-events/">HTML - 06 - DOM Events</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-01-selectors/">CSS - 01 -Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-02-multiple-selecors/">CSS - 02 - Multiple Selecors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-03-declaration/">CSS - 03 - Declaration</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-04-adding-css/">CSS - 04 - Adding CSS</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-05-box-model/">CSS - 05 - Box Model</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-06-flexbox/">CSS - 06 - Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-07-flex-flexibility/">CSS - 07 - Flex Flexibility</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-08-axes-in-flexbox/">CSS - 08 - Axes in Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-09-utility-class-inheritance/">CSS - 09 - Utility Class &amp; Inheritance</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>CSS Reference</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css_resource/css-04.1-size-units/">CSS - 04.1 - Size Units</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css_resource/css-04.2-color-values/">CSS - 04.2 - Color Values</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open open>
+      <summary>Tools &amp; Accesories</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/tools/obsidian/">Obsidian</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/vs-code/">VS Code</a>
+  </li>
+
+  <li class="active" >
+      <a aria-current="page" href="/personal-site/docs/tools/git-github/">Git &amp; Github</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Linux - Bash &amp; OS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Linux OS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-01-linux-kernel/">Linux OS - 01 - Linux Kernel</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-02-forms-of-process-management/">Linux OS - 02 - Forms of Process Management</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-03-system-resources/">Linux OS - 03 System Resources</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Linx Bash</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-01-basics/">Bash - 01 - Basics</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-02-features/">Bash - 02 - Features</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-03-help-pages/">Bash - 03 - help pages</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-04-variables-and-aliases/">Bash - 04 - Variables and Aliases</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-05-listing-files/">Bash - 05 - Listing Files</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-06-environment-and-subshell/">Bash - 06 - Environment and Subshell</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-08-basic-file-commands/">Bash - 08 - Basic File Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-07-storage-terminology-in-linux/">Bash - 07 - Storage Terminology in Linux</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-08.1-bc-and-date/">Bash - 08.1 - bc and date</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-09-file-movement-and-copy-commands/">Bash - 09 - File Movement and Copy Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-10-file-viewing-and-editing-commands/">Bash - 10 - File Viewing and Editing Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-11-file-permissions/">Bash - 11 - File Permissions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-12-hard-and-soft-links/">Bash - 12 - Hard and Soft Links</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13-regular-expressions/">Bash - 13 - Regular Expressions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13.1-regex-expanded/">Bash - 13.1 - regex Expanded</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13.2-regex-matching/">Bash - 13.2 - regex Matching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-14-file-searching/">Bash - 14 - File Searching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-15-neovim/">Bash - 15 - Neovim</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-16-egrep/">Bash - 16 - egrep</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-17-sed/">Bash - 17 - sed</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Database Management Systems</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Structured Query Language (SQL)</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-0-quering/">SQL - 0 Quering</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-01-relating/">SQL - 01 Relating</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-02-designing/">SQL - 02 Designing</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-03-writing/">SQL - 03 Writing</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-04-viewing/">SQL - 04 Viewing</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-05-optimizing/">SQL - 05 Optimizing</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-06-scaling/">SQL - 06 Scaling</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Operating System Concepts</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/0-os-short-notes-unit-1/">0 - OS - Short Notes (Unit 1)</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/0-os-short-notes-unit-2/">0 - OS - Short Notes (Unit 2)</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>OS - 01 - Operating Systems Introduction</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c01_introduction/os-1.01-operating-systems-introduction/">OS 1.01 - Operating Systems Introduction</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c01_introduction/os-1.05-os-operations/">OS 1.05 - OS Operations</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c01_introduction/os-1.11-computing-environments/">OS 1.11 - Computing Environments</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Chapter 02 - System Structure</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.01-os-services/">OS 2.01 - OS Services</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.03-system-calls/">OS 2.03 - System Calls</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.04-types-of-system-calls/">OS 2.04 - Types Of System Calls</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.05-system-programs/">OS 2.05 - System Programs</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.07-os-structure/">OS 2.07 - OS Structure</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.10-system-boot/">OS 2.10 - System Boot</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Chapter 03 - Process Concept</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c03_process_concept/os-3.01-process-concept/">OS 3.01 - Process Concept</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c03_process_concept/os-3.02-process-scheduling/">OS 3.02 - Process Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c03_process_concept/os-3.04-inter-process-communication/">OS 3.04 - Inter-Process Communication</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Chapter 05 - Process Scheduling</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.01-process-scheduling/">OS 5.01 - Process Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03-scheduling-algorithms/">OS 5.03 - Scheduling Algorithms</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03.02-shortest-job-first/">OS 5.03.02 - Shortest Job First</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03.03-priority-scheduling/">OS 5.03.03 - Priority Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03.04-round-robin-scheduling/">OS 5.03.04 - Round-Robin Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03.05-multi-level-queue-scheduling/">OS 5.03.05 - Multi-Level Queue Scheduling</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Chapter 6 -  Process Synchronization</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.01-process-synchronization/">OS 6.01 - Process Synchronization</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.02-critical-section-problem/">OS 6.02 - Critical-Section Problem</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.05-mutex-locks/">OS 6.05 - Mutex Locks</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.06-semaphores/">OS 6.06 - Semaphores</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.07-classic-problems/">OS 6.07 - Classic Problems</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/0-os-previous-questions-unit-1-2/">0 - OS - Previous Questions (Unit 1 &amp; 2)</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+		</div>
+		
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="page-links">
+  <h3>On this page</h3>
+    <nav id="toc">
+  <ul>
+    <li><a href="#introduction-to-git">Introduction to Git</a></li>
+    <li><a href="#basic-setup">Basic Setup</a></li>
+    <li><a href="#connecting-git-to-github-with-ssh">Connecting Git to GitHub with SSH</a>
+      <ul>
+        <li><a href="#setting-up-ssh-key">Setting Up SSH Key</a></li>
+        <li><a href="#adding-ssh-key-to-github">Adding SSH Key to GitHub</a></li>
+      </ul>
+    </li>
+    <li><a href="#basic-git-commands">Basic Git Commands</a>
+      <ul>
+        <li><a href="#using-git-in-vs-code">Using Git in VS Code</a></li>
+      </ul>
+    </li>
+    <li><a href="#github-to-git">GitHub to Git</a>
+      <ul>
+        <li><a href="#cloning-a-repository">Cloning a Repository</a></li>
+      </ul>
+    </li>
+    <li><a href="#pushing-local-repository-to-github">Pushing Local Repository to GitHub</a></li>
+    <li><a href="#commit-messages">Commit Messages</a></li>
+    <li><a href="#branches">Branches</a></li>
+    <li><a href="#merging-branches">Merging Branches</a>
+      <ul>
+        <li><a href="#merge-conflicts">Merge Conflicts</a></li>
+        <li><a href="#deleting-a-branch">Deleting a Branch</a></li>
+        <li><a href="#pushing-a-new-branch-to-github">Pushing a New Branch to GitHub</a></li>
+      </ul>
+    </li>
+    <li><a href="#changing-to-an-old-commit">Changing to an Old Commit</a>
+      <ul>
+        <li><a href="#additional-topics-to-explore">Additional Topics to Explore</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+			<h1>Git &amp; Github</h1>
+			
+			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
+				<details>
+    <summary>On this page</summary>
+    <div class="page-links">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction-to-git">Introduction to Git</a></li>
+    <li><a href="#basic-setup">Basic Setup</a></li>
+    <li><a href="#connecting-git-to-github-with-ssh">Connecting Git to GitHub with SSH</a>
+      <ul>
+        <li><a href="#setting-up-ssh-key">Setting Up SSH Key</a></li>
+        <li><a href="#adding-ssh-key-to-github">Adding SSH Key to GitHub</a></li>
+      </ul>
+    </li>
+    <li><a href="#basic-git-commands">Basic Git Commands</a>
+      <ul>
+        <li><a href="#using-git-in-vs-code">Using Git in VS Code</a></li>
+      </ul>
+    </li>
+    <li><a href="#github-to-git">GitHub to Git</a>
+      <ul>
+        <li><a href="#cloning-a-repository">Cloning a Repository</a></li>
+      </ul>
+    </li>
+    <li><a href="#pushing-local-repository-to-github">Pushing Local Repository to GitHub</a></li>
+    <li><a href="#commit-messages">Commit Messages</a></li>
+    <li><a href="#branches">Branches</a></li>
+    <li><a href="#merging-branches">Merging Branches</a>
+      <ul>
+        <li><a href="#merge-conflicts">Merge Conflicts</a></li>
+        <li><a href="#deleting-a-branch">Deleting a Branch</a></li>
+        <li><a href="#pushing-a-new-branch-to-github">Pushing a New Branch to GitHub</a></li>
+      </ul>
+    </li>
+    <li><a href="#changing-to-an-old-commit">Changing to an Old Commit</a>
+      <ul>
+        <li><a href="#additional-topics-to-explore">Additional Topics to Explore</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  </details>
+
+			</nav>
+			<h2 id="introduction-to-git">Introduction to Git<a href="#introduction-to-git" class="anchor" aria-hidden="true">#</a> </h2>
+<ul>
+<li><strong><a href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control">Pro Git Book</a></strong>: A comprehensive guide to Git.</li>
+</ul>
+<h2 id="basic-setup">Basic Setup<a href="#basic-setup" class="anchor" aria-hidden="true">#</a> </h2>
+
+
+
+<div class="expressive-code">
+  <figure class="frame is-terminal not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git --version  <span class="c1"># Check Git version</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Change default branch to main</span>
+</span></span><span class="line"><span class="cl">git config --global init.defaultBranch main
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git config --global user.name <span class="s2">&#34;Your Name&#34;</span>  <span class="c1"># Set username</span>
+</span></span><span class="line"><span class="cl">git config --get user.name                   <span class="c1"># Retrieve username</span>
+</span></span><span class="line"><span class="cl">git config --global user.email <span class="s2">&#34;mail@mail.com&#34;</span>  <span class="c1"># Set email</span>
+</span></span><span class="line"><span class="cl">git config --get user.email                   <span class="c1"># Retrieve email</span>
+</span></span><span class="line"><span class="cl">git config --global color.ui auto             <span class="c1"># Enable colored output</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git config --global pull.rebase <span class="nb">false</span>         <span class="c1"># Disable rebase on pull</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>git pull: This command is used to fetch changes from a remote repository and merge them into your current branch. By default, it performs a merge.
+Rebasing: This is an alternative to merging where Git re-applies your local changes on top of the changes fetched from the remote.</p>
+<h2 id="connecting-git-to-github-with-ssh">Connecting Git to GitHub with SSH<a href="#connecting-git-to-github-with-ssh" class="anchor" aria-hidden="true">#</a> </h2>
+<h3 id="setting-up-ssh-key">Setting Up SSH Key<a href="#setting-up-ssh-key" class="anchor" aria-hidden="true">#</a> </h3>
+
+
+
+<div class="expressive-code">
+  <figure class="frame is-terminal not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls ~/.ssh/id_ed25519.pub  <span class="c1"># Check if SSH key exists</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ssh-keygen -t ed25519     <span class="c1"># Create a new SSH key</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Press Enter for default location and no passphrase</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">cat ~/.ssh/id_ed25519.pub  <span class="c1"># Copy the SSH key</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h3 id="adding-ssh-key-to-github">Adding SSH Key to GitHub<a href="#adding-ssh-key-to-github" class="anchor" aria-hidden="true">#</a> </h3>
+<ol>
+<li>Go to <strong>Settings</strong> → <strong>SSH and GPG keys</strong>.</li>
+<li>Click <strong>New SSH key</strong> and paste the SSH key.</li>
+</ol>
+<h2 id="basic-git-commands">Basic Git Commands<a href="#basic-git-commands" class="anchor" aria-hidden="true">#</a> </h2>
+
+
+
+<div class="expressive-code">
+  <figure class="frame is-terminal not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git status                          <span class="c1"># Show tracked, untracked, staged files</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git add <span class="o">[</span>file name<span class="o">]</span>                 <span class="c1"># Add specific file to staging area</span>
+</span></span><span class="line"><span class="cl">git add .                           <span class="c1"># Add all files to staging area</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;message&#34;</span>             <span class="c1"># Commit staged files with a message</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git log                             <span class="c1"># Show commit history</span>
+</span></span><span class="line"><span class="cl">q                                   <span class="c1"># Exit log view if it&#39;s too long</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git push                            <span class="c1"># Push changes to the remote repository</span>
+</span></span><span class="line"><span class="cl">git push origin main                <span class="c1"># Push to the main branch</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h3 id="using-git-in-vs-code">Using Git in VS Code<a href="#using-git-in-vs-code" class="anchor" aria-hidden="true">#</a> </h3>
+<ul>
+<li>Open the terminal in VS Code: <code>code .</code></li>
+<li>To set VS Code as the default editor for commit messages:</li>
+</ul>
+
+
+
+<div class="expressive-code">
+  <figure class="frame is-terminal not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git config --global core.editor <span class="s2">&#34;code --wait&#34;</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h2 id="github-to-git">GitHub to Git<a href="#github-to-git" class="anchor" aria-hidden="true">#</a> </h2>
+<ol>
+<li><strong>Creating a New Repository</strong>:
+<ul>
+<li>In GitHub, click <strong>New repository</strong>.</li>
+<li>Select <strong>Code</strong>, then copy the SSH link (not the HTTP link).</li>
+</ul>
+</li>
+</ol>
+<h3 id="cloning-a-repository">Cloning a Repository<a href="#cloning-a-repository" class="anchor" aria-hidden="true">#</a> </h3>
+
+
+
+<div class="expressive-code">
+  <figure class="frame is-terminal not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir repos                      <span class="c1"># Create a new directory</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> repos                         <span class="c1"># Navigate to that directory</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git clone <span class="o">[</span>paste the ssh link<span class="o">]</span>  <span class="c1"># Clone the repo from GitHub</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> <span class="o">[</span>the new folder<span class="o">]</span>             <span class="c1"># Navigate into the cloned folder</span>
+</span></span><span class="line"><span class="cl">git remote -v                    <span class="c1"># Show the linked GitHub repository</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h2 id="pushing-local-repository-to-github">Pushing Local Repository to GitHub<a href="#pushing-local-repository-to-github" class="anchor" aria-hidden="true">#</a> </h2>
+
+
+
+<div class="expressive-code">
+  <figure class="frame is-terminal not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git init                          <span class="c1"># Initialize a new Git repository</span>
+</span></span><span class="line"><span class="cl">git add .                         <span class="c1"># Stage all files</span>
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;message&#34;</span>          <span class="c1"># Commit the changes</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Create an empty repository on GitHub (without README or license)</span>
+</span></span><span class="line"><span class="cl">git remote add origin <span class="o">[</span>ssh key<span class="o">]</span>  <span class="c1"># Link to the GitHub repository</span>
+</span></span><span class="line"><span class="cl">git branch -M main               <span class="c1"># Rename current branch to main (if necessary)</span>
+</span></span><span class="line"><span class="cl">git push -u origin main          <span class="c1"># Push changes to GitHub</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h2 id="commit-messages">Commit Messages<a href="#commit-messages" class="anchor" aria-hidden="true">#</a> </h2>
+<ul>
+<li>
+<p>Follow the seven rules of a great Git commit message:</p>
+<ol>
+<li>Separate subject from body with a blank line.</li>
+<li>Limit subject line to 50 characters.</li>
+<li>Capitalize the subject line.</li>
+<li>Do not end the subject line with a period.</li>
+<li>Use the imperative mood in the subject line.</li>
+<li>Wrap the body at 72 characters.</li>
+<li>Explain <em>what</em> and <em>why</em> in the body, not <em>how</em>.</li>
+</ol>
+</li>
+<li>
+<p><strong>Tutorial Video</strong>: <a href="https://www.youtube.com/watch?v=OJqUWvmf4gg">Conventional Commits</a></p>
+</li>
+</ul>
+<h2 id="branches">Branches<a href="#branches" class="anchor" aria-hidden="true">#</a> </h2>
+<ul>
+<li>Use <code>git branch</code> to see all branches.</li>
+<li>To create a new branch:</li>
+</ul>
+
+
+
+<div class="expressive-code">
+  <figure class="frame is-terminal not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git branch &lt;branch_name&gt;              <span class="c1"># Create a new branch</span>
+</span></span><span class="line"><span class="cl">git checkout &lt;branch_name&gt;             <span class="c1"># Switch to the branch</span>
+</span></span><span class="line"><span class="cl">git checkout -b &lt;branch_name&gt;          <span class="c1"># Create and switch to a new branch</span>
+</span></span><span class="line"><span class="cl">git checkout main                      <span class="c1"># Switch back to the main branch</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h2 id="merging-branches">Merging Branches<a href="#merging-branches" class="anchor" aria-hidden="true">#</a> </h2>
+
+
+
+<div class="expressive-code">
+  <figure class="frame is-terminal not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Move to the branch you want to merge into</span>
+</span></span><span class="line"><span class="cl">git merge &lt;branch_name&gt;  <span class="c1"># Merge changes from &lt;branch_name&gt;</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h3 id="merge-conflicts">Merge Conflicts<a href="#merge-conflicts" class="anchor" aria-hidden="true">#</a> </h3>
+<ul>
+<li>Occur when changes to the same line in a file are made in different branches.</li>
+</ul>
+<h3 id="deleting-a-branch">Deleting a Branch<a href="#deleting-a-branch" class="anchor" aria-hidden="true">#</a> </h3>
+
+
+
+<div class="expressive-code">
+  <figure class="frame is-terminal not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git branch -d &lt;branch_name&gt;  <span class="c1"># Delete a merged branch</span>
+</span></span><span class="line"><span class="cl">git branch -D &lt;branch_name&gt;  <span class="c1"># Force delete an unmerged branch</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h3 id="pushing-a-new-branch-to-github">Pushing a New Branch to GitHub<a href="#pushing-a-new-branch-to-github" class="anchor" aria-hidden="true">#</a> </h3>
+
+
+
+<div class="expressive-code">
+  <figure class="frame is-terminal not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git checkout -b &lt;branch_name&gt;    <span class="c1"># Create and switch to the new branch</span>
+</span></span><span class="line"><span class="cl">git push origin &lt;branch_name&gt;     <span class="c1"># Push the branch to GitHub</span>
+</span></span><span class="line"><span class="cl">git push -u origin &lt;branch_name&gt;  <span class="c1"># Link the local branch with the remote one</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h2 id="changing-to-an-old-commit">Changing to an Old Commit<a href="#changing-to-an-old-commit" class="anchor" aria-hidden="true">#</a> </h2>
+
+
+
+<div class="expressive-code">
+  <figure class="frame is-terminal not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git log --oneline                  <span class="c1"># View commit history</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Get the commit ID from the log</span>
+</span></span><span class="line"><span class="cl">git reset --hard <span class="o">[</span>9digitId<span class="o">]</span>       <span class="c1"># Reset to that commit (deletes progress)</span>
+</span></span><span class="line"><span class="cl">git checkout -b old-state <span class="o">[</span>id<span class="o">]</span>    <span class="c1"># Create a new branch at the old commit</span>
+</span></span><span class="line"><span class="cl">git revert <span class="o">[</span>commit_id<span class="o">]</span>             <span class="c1"># Revert a specific commit</span></span></span></code></pre></div>
+  </figure>
+</div>
+<hr>
+<h3 id="additional-topics-to-explore">Additional Topics to Explore<a href="#additional-topics-to-explore" class="anchor" aria-hidden="true">#</a> </h3>
+<ol>
+<li>
+<p><strong>Git Workflow Models</strong>:</p>
+<ul>
+<li>Overview of workflows like Git Flow, GitHub Flow, etc.</li>
+</ul>
+</li>
+<li>
+<p><strong>Remote Management</strong>:</p>
+<ul>
+<li>How to manage multiple remotes and their configurations.</li>
+</ul>
+</li>
+<li>
+<p><strong>Stashing Changes</strong>:</p>
+<ul>
+<li>Using <code>git stash</code> to temporarily save changes.</li>
+</ul>
+</li>
+<li>
+<p><strong>Rebasing</strong>:</p>
+<ul>
+<li>Introduction to rebasing vs. merging and its implications.</li>
+</ul>
+</li>
+<li>
+<p><strong>Using Tags</strong>:</p>
+<ul>
+<li>How to create and manage tags for releases.</li>
+</ul>
+</li>
+<li>
+<p><strong>Working with Submodules</strong>:</p>
+<ul>
+<li>Overview of using submodules for managing dependencies.</li>
+</ul>
+</li>
+<li>
+<p><strong>Collaborative Work</strong>:</p>
+<ul>
+<li>Best practices for collaborating on GitHub (pull requests, code reviews).</li>
+</ul>
+</li>
+<li>
+<p><strong>Git Hooks</strong>:</p>
+<ul>
+<li>Introduction to hooks for automating tasks at different points in the Git workflow.</li>
+</ul>
+</li>
+<li>
+<p><strong>Git GUI Clients</strong>:</p>
+<ul>
+<li>Overview of popular GUI clients for Git and their features.</li>
+</ul>
+</li>
+<li>
+<p><strong>Troubleshooting Common Issues</strong>:</p>
+<ul>
+<li>Tips for resolving common Git issues (merge conflicts, detached HEAD, etc.).</li>
+</ul>
+</li>
+</ol>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="page-nav d-flex flex-column flex-sm-row">
+	
+	<div class="card w-100">
+			<div class="card-body d-flex">
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M5 12l6 6"></path>
+						<path d="M5 12l6 -6"></path>
+				 	</svg>
+				</div>
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Prev</div>
+					<a href="/personal-site/docs/tools/vs-code/" class="stretched-link text-reset text-decoration-none">VS Code</a>
+				</div>
+			</div>
+		</div>
+	<div class="m-2"></div>
+	<div class="card text-end w-100">
+			<div class="card-body d-flex justify-content-end">
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Next</div>
+					<a href="/personal-site/docs/bash-linux/linux_os/linux-os-01-linux-kernel/" class="stretched-link text-reset text-decoration-none">Linux OS - 01 - Linux Kernel</a>
+				</div>
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M13 18l6 -6"></path>
+						<path d="M13 6l6 6"></path>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</div>
+
+			
+		</main>
+		
+	</div>
+
+      
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-lg">
+    <div class="row">
+      <div class="col-lg-8 text-center text-lg-start">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a class="text-muted" href="/personal-site/privacy/">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 text-center text-lg-end">
+        <ul class="list-inline">
+          <li class="list-inline-item">Made by <a class="text-muted" href="https://sujith-eag.github.io/personal-site/">Sujith</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+<script async
+  src="/personal-site/js/app.ec98ea736af7f8f531281a21224330da682d1dc9973423443b3d5ce8c45c6ea1.js"
+  integrity="sha256-7Jjqc2r3&#43;PUxKBohIkMw2mgtHcmXNCNEOz1c6MRcbqE=">
+</script>
+
+
+
+
+
+<script async
+  src="/personal-site/js/flexsearch.8350d2f520e131f8552ed57c1eadd05c50eccf0427267781442dd8ddf8fdcdf7.js"
+  integrity="sha256-g1DS9SDhMfhVLtV8Hq3QXFDszwQnJneBRC3Y3fj9zfc=">
+</script>
+<script async
+  src="/personal-site/js/search-modal.877cece5b6bc789456f89fa1955ccfcd8a5acdb2179e7882e292a6caa49efe68.js"
+  integrity="sha256-h3zs5ba8eJRW&#43;J&#43;hlVzPzYpazbIXnniC4pKmyqSe/mg=">
+</script>
+
+    
+  </body>
+</html>

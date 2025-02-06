@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/js-05.01-array/</loc>
+      <lastmod>2024-11-09T17:08:28+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/js-05.02-array-methods/</loc>
+      <lastmod>2024-11-09T17:08:52+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/js-05.03-filter-method/</loc>
+      <lastmod>2024-11-09T17:09:14+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/js-05.04-map-method/</loc>
+      <lastmod>2024-11-09T17:09:29+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/js-05.05-reduce-method/</loc>
+      <lastmod>2024-11-09T17:09:41+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/js-05.06-sort-method/</loc>
+      <lastmod>2024-11-09T17:09:53+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/js-05.07-rest-spread/</loc>
+      <lastmod>2024-11-09T17:10:12+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    </urlset>

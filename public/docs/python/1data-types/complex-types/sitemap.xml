@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-cdt-01-lists/</loc>
+      <lastmod>2024-12-17T22:45:42+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-cdt-02-list-methods/</loc>
+      <lastmod>2024-12-17T22:46:00+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-cdt-03-list-operators/</loc>
+      <lastmod>2024-12-17T22:46:17+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-cdt-04-list-vs-arrays/</loc>
+      <lastmod>2024-12-17T22:46:32+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-cdt-05-tuples/</loc>
+      <lastmod>2024-12-17T22:46:50+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-cdt-06-sets/</loc>
+      <lastmod>2024-12-17T22:47:04+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-cdt-07-dictinaries/</loc>
+      <lastmod>2024-12-17T22:47:04+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    </urlset>

@@ -1,0 +1,2492 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="/personal-site/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=personal-site/livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preload" href="http://localhost:1313/personal-site/fonts/vendor/jost/jost-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/personal-site/fonts/vendor/jost/jost-v4-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/personal-site/fonts/vendor/jost/jost-v4-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<script 
+  src="/personal-site/js/color-mode.f14b3e296de1d0b69e75af684b62a4a912a2cadab04e36123407cd8388204f1d.js"
+  integrity="sha256-8Us&#43;KW3h0Laeda9oS2KkqRKiytqwTjYSNAfNg4ggTx0=">
+</script>
+
+
+<link rel="stylesheet" href="/personal-site/main.c0e24d0bb4526375ef42a8fffa4eb23f8f782cb58ac9f07c6886fe943a0ed00e176b284d9d1a5b8e9d68a3f2f5918367e18fe55f5fde9451a8c6d3fe85342b7b.css" integrity="sha512-wOJNC7RSY3XvQqj/&#43;k6yP494LLWKyfB8aIb&#43;lDoO0A4XayhNnRpbjp1oo/L1kYNn4Y/lX1/elFGoxtP&#43;hTQrew==" crossorigin="anonymous">
+
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+	
+<title>Bash Commands</title>
+  
+<meta name="description" content="A reference site with summary of various coding topics">
+
+
+
+</head>
+
+  
+  <body class="single section docs" data-bs-spy="scroll" data-bs-target="#toc" data-bs-root-margin="0px 0px -60%" data-bs-smooth-scroll="true" tabindex="0">
+    <div class="sticky-top">
+<header class="navbar navbar-expand-lg">
+  <div class="container-lg">
+  
+    <a class="navbar-brand me-auto me-lg-3" href="/personal-site/">Sujith&#39;s Library</a>
+
+    
+    
+    <button type="button" id="searchToggleMobile" class="btn btn-link nav-link mx-2 d-lg-none" aria-label="Search website">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <circle cx="10" cy="10" r="7"></circle>
+        <line x1="21" y1="21" x2="15" y2="15"></line>
+      </svg>
+    </button>
+    
+    <button class="btn btn-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavSection" aria-controls="offcanvasNavSection" aria-label="Open section navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+      </svg>
+    </button>
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavSection" aria-labelledby="offcanvasNavSectionLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavSectionLabel">Docs</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <aside class="doks-sidebar mt-n3">
+          <nav id="doks-docs-nav" aria-label="Tertiary navigation">
+            
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+    <details open>
+      <summary>Python</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/03-print-and-input/">03 - Print and Input</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Python Control Statements</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-01-conditional-branching/">04 Control-Flow - 01 Conditional Branching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-02-match-case/">04 Control-Flow - 02 Match-Case</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-03-range/">04 Control-Flow - 03 Range</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-04-loops/">04 Control-Flow - 04 Loops</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Python Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Primitive Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-01-variables/">01 PDT - 01 Variables</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-02-datatypes/">01 PDT - 02 Datatypes</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-03-operators/">01 PDT - 03 Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-04-int-float/">01 PDT - 04 int &amp; float</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-05-string-manipulation/">01 PDT - 05 String Manipulation</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-06-string-methods/">01 PDT - 06 String Methods</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Complex Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-01-lists/">02 CDT - 01 Lists</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-02-list-methods/">02 CDT - 02 List Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-03-list-operators/">02 CDT - 03 List Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-04-list-vs-arrays/">02 CDT - 04 List Vs Arrays</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-05-tuples/">02 CDT - 05 Tuples</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-06-sets/">02 CDT - 06 Sets</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-07-dictinaries/">02 CDT - 07 Dictinaries</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>C and Data Structures</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>The C Programming Language by Kernighan and Ritchie</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-to-c-language/">K&amp;R - Chapter 0 - Introduction to C language</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-using-python-part-1/">K&amp;R - Chapter 0 - Introduction using Python (Part 1)</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-using-python-part-2/">K&amp;R - Chapter 0 - Introduction using Python (Part 2)</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-1-basic-syntax/">K&amp;R - Chapter 1 - Basic Syntax</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-2-types-operators-expressions/">K&amp;R - Chapter 2 - Types, Operators, Expressions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-3-control-flow/">K&amp;R - Chapter 3 - Control Flow</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-4-function-program-structure/">K&amp;R - Chapter 4 - Function, Program Structure</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-5-pointers-arrays/">K&amp;R - Chapter 5 - Pointers, Arrays</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-6-structures/">K&amp;R - Chapter 6 - Structures</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-6.1-structures/">K&amp;R - Chapter 6.1 - Structures</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Data Structures Using C</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/01-tower-of-hanoi/">01 - Tower of Hanoi</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/02-stack-operations/">02 - Stack Operations</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/03-infix-to-postfix-conversion/">03 - Infix to Postfix Conversion</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/04-postfix-expression-evaluation/">04 - Postfix Expression Evaluation</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/05-queue/">05 - Queue</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/06-circular-queue/">06 - Circular Queue</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/07-singly-linked-list/">07 - Singly Linked List</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>JavaScript</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>JS Language</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.01-variables/">JS - 01.01 - Variables</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.02-values-and-types/">JS - 01.02 - Values and Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.03-number-types/">JS - 01.03 - Number Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.04-number-methods/">JS - 01.04 - Number Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.05-string-type/">JS - 01.05 - String Type</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.06-string-methods/">JS - 01.06 - String Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.07-modifying-string/">JS - 01.07 - Modifying String</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.08-boolean-type/">JS - 01.08 - Boolean Type</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.09-operators/">JS - 01.09 - Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.10-auto-type-conversions/">JS - 01.10 - Auto Type Conversions</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Control Flow</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Conditionals</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.01-if-else/">JS - 02.01 - if, else</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.02-switch-case/">JS - 02.02 - switch-case</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.03-ternary-operator/">JS - 02.03 - Ternary Operator</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.04-logical-operators/">JS - 02.04 - Logical Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.05-short-circuiting/">JS - 02.05 - Short Circuiting</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Loops</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.11-do-while-loop/">JS - 02.11 - do-while Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.12-for-loop/">JS - 02.12 - for Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.13-for-of-loop/">JS - 02.13 - for-of Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.14-for-in-loop/">JS - 02.14 - for-in Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.15-break-continue-label/">JS - 02.15 - break-continue-label</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.16-iterables/">JS - 02.16 - Iterables</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Functions</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.01-function/">JS - 03.01 - Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.02-defining-function/">JS - 03.02 - Defining Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.03-arrow-function/">JS - 03.03 - Arrow Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.04-scope-of-variable/">JS - 03.04 - Scope of Variable</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.05-parameters-arguments/">JS - 03.05 - Parameters &amp; Arguments</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.06-return-recursion-call-stack/">JS - 03.06 - Return, Recursion, Call Stack</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.07-scheduling/">JS - 03.07 - Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.08-decorators/">JS - 03.08 - Decorators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.09-function-object/">JS - 03.09 - Function Object</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Objects</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.01-object/">JS - 04.01 - Object</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.02-object-properties/">JS - 04.02 - Object Properties</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.03-cloning-object/">JS - 04.03 - Cloning Object</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.04-object.keys/">JS - 04.04 - Object.keys()</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.05-methods-this-chaining/">JS - 04.05 - Methods, this, Chaining</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.06-constructor-new/">JS - 04.06 - Constructor new</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Arrays</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.01-array/">JS - 05.01 - Array</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.02-array-methods/">JS - 05.02 - Array Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.03-filter-method/">JS - 05.03 - Filter Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.04-map-method/">JS - 05.04 - Map Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.05-reduce-method/">JS - 05.05 - Reduce Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.06-sort-method/">JS - 05.06 - Sort Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.07-rest-spread/">JS - 05.07 - Rest &amp; Spread</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/">JavaScript DOM Manipulation</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>HTML &amp; CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>HTML</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-01-boiler-plate/">HTML - 01 - Boiler Plate</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-02-texts-lists/">HTML - 02 - Texts &amp; Lists</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-03-links-images/">HTML - 03 - Links &amp; Images</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-04-input-types/">HTML - 04 - Input Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-05-button/">HTML - 05 - Button</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-06-dom-events/">HTML - 06 - DOM Events</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-01-selectors/">CSS - 01 -Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-02-multiple-selecors/">CSS - 02 - Multiple Selecors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-03-declaration/">CSS - 03 - Declaration</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-04-adding-css/">CSS - 04 - Adding CSS</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-05-box-model/">CSS - 05 - Box Model</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-06-flexbox/">CSS - 06 - Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-07-flex-flexibility/">CSS - 07 - Flex Flexibility</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-08-axes-in-flexbox/">CSS - 08 - Axes in Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-09-utility-class-inheritance/">CSS - 09 - Utility Class &amp; Inheritance</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>CSS Reference</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css_resource/css-04.1-size-units/">CSS - 04.1 - Size Units</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css_resource/css-04.2-color-values/">CSS - 04.2 - Color Values</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Tools &amp; Accesories</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/tools/obsidian/">Obsidian</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/vs-code/">VS Code</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/git-github/">Git &amp; Github</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open open>
+      <summary>Linux - Bash &amp; OS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Linux OS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-01-linux-kernel/">Linux OS - 01 - Linux Kernel</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-02-forms-of-process-management/">Linux OS - 02 - Forms of Process Management</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-03-system-resources/">Linux OS - 03 System Resources</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Linx Bash</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-01-basics/">Bash - 01 - Basics</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-02-features/">Bash - 02 - Features</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-03-help-pages/">Bash - 03 - help pages</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-04-variables-and-aliases/">Bash - 04 - Variables and Aliases</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-05-listing-files/">Bash - 05 - Listing Files</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-06-environment-and-subshell/">Bash - 06 - Environment and Subshell</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-08-basic-file-commands/">Bash - 08 - Basic File Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-07-storage-terminology-in-linux/">Bash - 07 - Storage Terminology in Linux</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-08.1-bc-and-date/">Bash - 08.1 - bc and date</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-09-file-movement-and-copy-commands/">Bash - 09 - File Movement and Copy Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-10-file-viewing-and-editing-commands/">Bash - 10 - File Viewing and Editing Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-11-file-permissions/">Bash - 11 - File Permissions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-12-hard-and-soft-links/">Bash - 12 - Hard and Soft Links</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13-regular-expressions/">Bash - 13 - Regular Expressions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13.1-regex-expanded/">Bash - 13.1 - regex Expanded</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13.2-regex-matching/">Bash - 13.2 - regex Matching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-14-file-searching/">Bash - 14 - File Searching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-15-neovim/">Bash - 15 - Neovim</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-16-egrep/">Bash - 16 - egrep</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-17-sed/">Bash - 17 - sed</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Database Management Systems</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Structured Query Language (SQL)</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-0-quering/">SQL - 0 Quering</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-01-relating/">SQL - 01 Relating</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-02-designing/">SQL - 02 Designing</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-03-writing/">SQL - 03 Writing</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-04-viewing/">SQL - 04 Viewing</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-05-optimizing/">SQL - 05 Optimizing</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-06-scaling/">SQL - 06 Scaling</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Operating System Concepts</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/0-os-short-notes-unit-1/">0 - OS - Short Notes (Unit 1)</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/0-os-short-notes-unit-2/">0 - OS - Short Notes (Unit 2)</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>OS - 01 - Operating Systems Introduction</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c01_introduction/os-1.01-operating-systems-introduction/">OS 1.01 - Operating Systems Introduction</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c01_introduction/os-1.05-os-operations/">OS 1.05 - OS Operations</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c01_introduction/os-1.11-computing-environments/">OS 1.11 - Computing Environments</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Chapter 02 - System Structure</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.01-os-services/">OS 2.01 - OS Services</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.03-system-calls/">OS 2.03 - System Calls</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.04-types-of-system-calls/">OS 2.04 - Types Of System Calls</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.05-system-programs/">OS 2.05 - System Programs</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.07-os-structure/">OS 2.07 - OS Structure</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.10-system-boot/">OS 2.10 - System Boot</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Chapter 03 - Process Concept</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c03_process_concept/os-3.01-process-concept/">OS 3.01 - Process Concept</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c03_process_concept/os-3.02-process-scheduling/">OS 3.02 - Process Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c03_process_concept/os-3.04-inter-process-communication/">OS 3.04 - Inter-Process Communication</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Chapter 05 - Process Scheduling</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.01-process-scheduling/">OS 5.01 - Process Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03-scheduling-algorithms/">OS 5.03 - Scheduling Algorithms</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03.02-shortest-job-first/">OS 5.03.02 - Shortest Job First</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03.03-priority-scheduling/">OS 5.03.03 - Priority Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03.04-round-robin-scheduling/">OS 5.03.04 - Round-Robin Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03.05-multi-level-queue-scheduling/">OS 5.03.05 - Multi-Level Queue Scheduling</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Chapter 6 -  Process Synchronization</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.01-process-synchronization/">OS 6.01 - Process Synchronization</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.02-critical-section-problem/">OS 6.02 - Critical-Section Problem</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.05-mutex-locks/">OS 6.05 - Mutex Locks</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.06-semaphores/">OS 6.06 - Semaphores</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.07-classic-problems/">OS 6.07 - Classic Problems</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/0-os-previous-questions-unit-1-2/">0 - OS - Previous Questions (Unit 1 &amp; 2)</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+          </nav>
+        </aside>
+      </div>
+    </div>
+    
+    <button class="btn btn-link nav-link mx-2 order-3 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavMain" aria-controls="offcanvasNavMain" aria-label="Open main navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <line x1="4" y1="8" x2="20" y2="8"></line>
+        <line x1="4" y1="16" x2="20" y2="16"></line>
+      </svg>
+    </button>
+
+    
+    <div class="offcanvas offcanvas-end h-auto" tabindex="-1" id="offcanvasNavMain" aria-labelledby="offcanvasNavMainLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavMainLabel">Sujith&#39;s Library</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+         </svg>
+        </button>
+      </div>
+      
+      <div class="offcanvas-body d-flex flex-column flex-lg-row justify-content-between">
+        <ul class="navbar-nav flex-grow-1"><li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/python/">Python</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/html-css/">HTML/CSS</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/java-script/">JavaScript</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/java-script-dom/">JS DOM</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/c/">C &amp; DSA</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/bash-linux/">Linux</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/os/">OS</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/dbms/">DBMS</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/tools/">Tools</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/blog/">Blog</a>
+              </li>
+            </ul>
+
+        
+        
+        <button type="button" id="searchToggleDesktop" class="btn btn-link nav-link p-2 d-none d-lg-block" aria-label="Search website">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <circle cx="10" cy="10" r="7"></circle>
+            <line x1="21" y1="21" x2="15" y2="15"></line>
+          </svg>
+        </button>
+        
+        
+        
+        <button id="buttonColorMode" class="btn btn-link mx-auto nav-link p-0 ms-lg-2 me-lg-1" type="button" aria-label="Toggle theme">
+          <svg data-bs-theme-value="dark" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+          </svg>
+          <svg data-bs-theme-value="light" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0m-5 0h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+          </svg>
+        </button>
+        
+        <ul id="socialMenu" class="nav mx-auto flex-row order-lg-4">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/sujith-eag"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg><small class="ms-2 visually-hidden">GitHub</small></a>
+            </li>
+          </ul>
+        
+        </div>
+    </div>
+
+    
+    </div>
+</header>
+</div>
+
+<div class="modal" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-md-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 visually-hidden" id="searchModalLabel">Search</h1>
+        <button type="button" class="btn-close visually-hidden" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="search-input flex-grow-1 d-none">
+          <form id="search-form" class="search-form" action="#" method="post" accept-charset="UTF-8" role="search">
+            <label for="query" class="visually-hidden">Search</label>
+            <div class="d-flex">
+              <input type="search" id="query" name="query" class="search-text form-control form-control-lg" placeholder="Search" aria-label="Search" maxlength="128" autocomplete="off">
+              <button type="button" class="btn btn-link text-decoration-none px-0 ms-3 d-md-none" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-body">
+        <p class="search-loading status message d-none mt-3 text-center">Loading search index…</p>
+        <p class="search-no-recent message d-none mt-3 text-center">No recent searches</p>
+        <p class="search-no-results message d-none mt-3 text-center">No results for "<strong><span class="query-no-results">Query here</span></strong>"</p>
+        <div id="searchResults" class="search-results"></div>
+        <template>
+          <article class="search-result list-view">
+            <div class="card my-3">
+              <div class="card-body">
+                <header>
+                  <h2 class="h5 title title-submitted mb-0"><a class="stretched-link text-decoration-none text-reset" href="#">Title here</a></h2>
+                  <div class="submitted d-none"><time class="created-date">Date here</time></div>
+                </header>
+                <div class="content">Summary here</div>
+              </div>
+            </div>
+          </article>
+        </template>
+      </div>
+      <div class="modal-footer">
+        <ul class="list-inline me-auto d-none d-md-block">
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Enter key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M12 3.53088v3c0 1-1 2-2 2H4M7 11.53088l-3-3 3-3"></path></g></svg></kbd><span class="DocSearch-Label">to select</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow down" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 3.5v8M10.5 8.5l-3 3-3-3"></path></g></svg></kbd><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow up" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 11.5v-8M10.5 6.5l-3-3-3 3"></path></g></svg></kbd><span class="DocSearch-Label">to navigate</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Escape key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M13.6167 8.936c-.1065.3583-.6883.962-1.4875.962-.7993 0-1.653-.9165-1.653-2.1258v-.5678c0-1.2548.7896-2.1016 1.653-2.1016.8634 0 1.3601.4778 1.4875 1.0724M9 6c-.1352-.4735-.7506-.9219-1.46-.8972-.7092.0246-1.344.57-1.344 1.2166s.4198.8812 1.3445.9805C8.465 7.3992 8.968 7.9337 9 8.5c.032.5663-.454 1.398-1.4595 1.398C6.6593 9.898 6 9 5.963 8.4851m-1.4748.5368c-.2635.5941-.8099.876-1.5443.876s-1.7073-.6248-1.7073-2.204v-.4603c0-1.0416.721-2.131 1.7073-2.131.9864 0 1.6425 1.031 1.5443 2.2492h-2.956"></path></g></svg></kbd><span class="DocSearch-Label">to close</span></li>
+        </ul>
+        <p class="d-md-none">Search by <a class="text-decoration-none" href="https://github.com/nextapps-de/flexsearch">FlexSearch</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="wrap container-lg" role="document">
+      <div class="content">
+      
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+    <details open>
+      <summary>Python</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/03-print-and-input/">03 - Print and Input</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Python Control Statements</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-01-conditional-branching/">04 Control-Flow - 01 Conditional Branching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-02-match-case/">04 Control-Flow - 02 Match-Case</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-03-range/">04 Control-Flow - 03 Range</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-04-loops/">04 Control-Flow - 04 Loops</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Python Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Primitive Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-01-variables/">01 PDT - 01 Variables</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-02-datatypes/">01 PDT - 02 Datatypes</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-03-operators/">01 PDT - 03 Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-04-int-float/">01 PDT - 04 int &amp; float</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-05-string-manipulation/">01 PDT - 05 String Manipulation</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-06-string-methods/">01 PDT - 06 String Methods</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Complex Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-01-lists/">02 CDT - 01 Lists</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-02-list-methods/">02 CDT - 02 List Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-03-list-operators/">02 CDT - 03 List Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-04-list-vs-arrays/">02 CDT - 04 List Vs Arrays</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-05-tuples/">02 CDT - 05 Tuples</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-06-sets/">02 CDT - 06 Sets</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-07-dictinaries/">02 CDT - 07 Dictinaries</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>C and Data Structures</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>The C Programming Language by Kernighan and Ritchie</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-to-c-language/">K&amp;R - Chapter 0 - Introduction to C language</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-using-python-part-1/">K&amp;R - Chapter 0 - Introduction using Python (Part 1)</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-using-python-part-2/">K&amp;R - Chapter 0 - Introduction using Python (Part 2)</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-1-basic-syntax/">K&amp;R - Chapter 1 - Basic Syntax</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-2-types-operators-expressions/">K&amp;R - Chapter 2 - Types, Operators, Expressions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-3-control-flow/">K&amp;R - Chapter 3 - Control Flow</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-4-function-program-structure/">K&amp;R - Chapter 4 - Function, Program Structure</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-5-pointers-arrays/">K&amp;R - Chapter 5 - Pointers, Arrays</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-6-structures/">K&amp;R - Chapter 6 - Structures</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-6.1-structures/">K&amp;R - Chapter 6.1 - Structures</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Data Structures Using C</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/01-tower-of-hanoi/">01 - Tower of Hanoi</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/02-stack-operations/">02 - Stack Operations</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/03-infix-to-postfix-conversion/">03 - Infix to Postfix Conversion</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/04-postfix-expression-evaluation/">04 - Postfix Expression Evaluation</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/05-queue/">05 - Queue</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/06-circular-queue/">06 - Circular Queue</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/07-singly-linked-list/">07 - Singly Linked List</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>JavaScript</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>JS Language</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.01-variables/">JS - 01.01 - Variables</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.02-values-and-types/">JS - 01.02 - Values and Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.03-number-types/">JS - 01.03 - Number Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.04-number-methods/">JS - 01.04 - Number Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.05-string-type/">JS - 01.05 - String Type</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.06-string-methods/">JS - 01.06 - String Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.07-modifying-string/">JS - 01.07 - Modifying String</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.08-boolean-type/">JS - 01.08 - Boolean Type</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.09-operators/">JS - 01.09 - Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.10-auto-type-conversions/">JS - 01.10 - Auto Type Conversions</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Control Flow</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Conditionals</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.01-if-else/">JS - 02.01 - if, else</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.02-switch-case/">JS - 02.02 - switch-case</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.03-ternary-operator/">JS - 02.03 - Ternary Operator</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.04-logical-operators/">JS - 02.04 - Logical Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.05-short-circuiting/">JS - 02.05 - Short Circuiting</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Loops</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.11-do-while-loop/">JS - 02.11 - do-while Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.12-for-loop/">JS - 02.12 - for Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.13-for-of-loop/">JS - 02.13 - for-of Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.14-for-in-loop/">JS - 02.14 - for-in Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.15-break-continue-label/">JS - 02.15 - break-continue-label</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.16-iterables/">JS - 02.16 - Iterables</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Functions</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.01-function/">JS - 03.01 - Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.02-defining-function/">JS - 03.02 - Defining Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.03-arrow-function/">JS - 03.03 - Arrow Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.04-scope-of-variable/">JS - 03.04 - Scope of Variable</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.05-parameters-arguments/">JS - 03.05 - Parameters &amp; Arguments</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.06-return-recursion-call-stack/">JS - 03.06 - Return, Recursion, Call Stack</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.07-scheduling/">JS - 03.07 - Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.08-decorators/">JS - 03.08 - Decorators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.09-function-object/">JS - 03.09 - Function Object</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Objects</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.01-object/">JS - 04.01 - Object</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.02-object-properties/">JS - 04.02 - Object Properties</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.03-cloning-object/">JS - 04.03 - Cloning Object</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.04-object.keys/">JS - 04.04 - Object.keys()</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.05-methods-this-chaining/">JS - 04.05 - Methods, this, Chaining</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.06-constructor-new/">JS - 04.06 - Constructor new</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Arrays</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.01-array/">JS - 05.01 - Array</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.02-array-methods/">JS - 05.02 - Array Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.03-filter-method/">JS - 05.03 - Filter Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.04-map-method/">JS - 05.04 - Map Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.05-reduce-method/">JS - 05.05 - Reduce Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.06-sort-method/">JS - 05.06 - Sort Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.07-rest-spread/">JS - 05.07 - Rest &amp; Spread</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/">JavaScript DOM Manipulation</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>HTML &amp; CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>HTML</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-01-boiler-plate/">HTML - 01 - Boiler Plate</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-02-texts-lists/">HTML - 02 - Texts &amp; Lists</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-03-links-images/">HTML - 03 - Links &amp; Images</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-04-input-types/">HTML - 04 - Input Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-05-button/">HTML - 05 - Button</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-06-dom-events/">HTML - 06 - DOM Events</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-01-selectors/">CSS - 01 -Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-02-multiple-selecors/">CSS - 02 - Multiple Selecors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-03-declaration/">CSS - 03 - Declaration</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-04-adding-css/">CSS - 04 - Adding CSS</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-05-box-model/">CSS - 05 - Box Model</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-06-flexbox/">CSS - 06 - Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-07-flex-flexibility/">CSS - 07 - Flex Flexibility</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-08-axes-in-flexbox/">CSS - 08 - Axes in Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-09-utility-class-inheritance/">CSS - 09 - Utility Class &amp; Inheritance</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>CSS Reference</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css_resource/css-04.1-size-units/">CSS - 04.1 - Size Units</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css_resource/css-04.2-color-values/">CSS - 04.2 - Color Values</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Tools &amp; Accesories</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/tools/obsidian/">Obsidian</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/vs-code/">VS Code</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/git-github/">Git &amp; Github</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open open>
+      <summary>Linux - Bash &amp; OS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Linux OS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-01-linux-kernel/">Linux OS - 01 - Linux Kernel</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-02-forms-of-process-management/">Linux OS - 02 - Forms of Process Management</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-03-system-resources/">Linux OS - 03 System Resources</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Linx Bash</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-01-basics/">Bash - 01 - Basics</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-02-features/">Bash - 02 - Features</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-03-help-pages/">Bash - 03 - help pages</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-04-variables-and-aliases/">Bash - 04 - Variables and Aliases</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-05-listing-files/">Bash - 05 - Listing Files</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-06-environment-and-subshell/">Bash - 06 - Environment and Subshell</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-08-basic-file-commands/">Bash - 08 - Basic File Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-07-storage-terminology-in-linux/">Bash - 07 - Storage Terminology in Linux</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-08.1-bc-and-date/">Bash - 08.1 - bc and date</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-09-file-movement-and-copy-commands/">Bash - 09 - File Movement and Copy Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-10-file-viewing-and-editing-commands/">Bash - 10 - File Viewing and Editing Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-11-file-permissions/">Bash - 11 - File Permissions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-12-hard-and-soft-links/">Bash - 12 - Hard and Soft Links</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13-regular-expressions/">Bash - 13 - Regular Expressions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13.1-regex-expanded/">Bash - 13.1 - regex Expanded</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13.2-regex-matching/">Bash - 13.2 - regex Matching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-14-file-searching/">Bash - 14 - File Searching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-15-neovim/">Bash - 15 - Neovim</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-16-egrep/">Bash - 16 - egrep</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-17-sed/">Bash - 17 - sed</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Database Management Systems</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Structured Query Language (SQL)</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-0-quering/">SQL - 0 Quering</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-01-relating/">SQL - 01 Relating</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-02-designing/">SQL - 02 Designing</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-03-writing/">SQL - 03 Writing</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-04-viewing/">SQL - 04 Viewing</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-05-optimizing/">SQL - 05 Optimizing</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-06-scaling/">SQL - 06 Scaling</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Operating System Concepts</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/0-os-short-notes-unit-1/">0 - OS - Short Notes (Unit 1)</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/0-os-short-notes-unit-2/">0 - OS - Short Notes (Unit 2)</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>OS - 01 - Operating Systems Introduction</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c01_introduction/os-1.01-operating-systems-introduction/">OS 1.01 - Operating Systems Introduction</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c01_introduction/os-1.05-os-operations/">OS 1.05 - OS Operations</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c01_introduction/os-1.11-computing-environments/">OS 1.11 - Computing Environments</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Chapter 02 - System Structure</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.01-os-services/">OS 2.01 - OS Services</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.03-system-calls/">OS 2.03 - System Calls</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.04-types-of-system-calls/">OS 2.04 - Types Of System Calls</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.05-system-programs/">OS 2.05 - System Programs</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.07-os-structure/">OS 2.07 - OS Structure</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.10-system-boot/">OS 2.10 - System Boot</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Chapter 03 - Process Concept</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c03_process_concept/os-3.01-process-concept/">OS 3.01 - Process Concept</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c03_process_concept/os-3.02-process-scheduling/">OS 3.02 - Process Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c03_process_concept/os-3.04-inter-process-communication/">OS 3.04 - Inter-Process Communication</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Chapter 05 - Process Scheduling</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.01-process-scheduling/">OS 5.01 - Process Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03-scheduling-algorithms/">OS 5.03 - Scheduling Algorithms</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03.02-shortest-job-first/">OS 5.03.02 - Shortest Job First</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03.03-priority-scheduling/">OS 5.03.03 - Priority Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03.04-round-robin-scheduling/">OS 5.03.04 - Round-Robin Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03.05-multi-level-queue-scheduling/">OS 5.03.05 - Multi-Level Queue Scheduling</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Chapter 6 -  Process Synchronization</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.01-process-synchronization/">OS 6.01 - Process Synchronization</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.02-critical-section-problem/">OS 6.02 - Critical-Section Problem</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.05-mutex-locks/">OS 6.05 - Mutex Locks</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.06-semaphores/">OS 6.06 - Semaphores</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.07-classic-problems/">OS 6.07 - Classic Problems</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/0-os-previous-questions-unit-1-2/">0 - OS - Previous Questions (Unit 1 &amp; 2)</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+		</div>
+		
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="page-links">
+  <h3>On this page</h3>
+    <nav id="toc">
+  <ul>
+    <li><a href="#help">help</a></li>
+    <li><a href="#info">info</a></li>
+    <li><a href="#info-bash">info bash</a></li>
+  </ul>
+</nav>
+</div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+			<h1>Bash Commands</h1>
+			
+			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
+				<details>
+    <summary>On this page</summary>
+    <div class="page-links">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#help">help</a></li>
+    <li><a href="#info">info</a></li>
+    <li><a href="#info-bash">info bash</a></li>
+  </ul>
+</nav>
+    </div>
+  </details>
+
+			</nav>
+			<p>Most commonly used Bash commands:</p>
+<ol>
+<li><a href="/personal-site/docs/bash-linux/command-docs/ls-list"><strong>ls</strong></a> - List directory contents.</li>
+<li><a href="/personal-site/docs/bash-linux/command-docs/cd-change-directory"><strong>cd</strong></a> - Change the current directory.</li>
+<li><a href="/personal-site/docs/bash-linux/command-docs/pwd"><strong>pwd</strong></a> - Print the current working directory.</li>
+<li><a href="/personal-site/docs/bash-linux/command-docs/cp-copy"><strong>cp</strong></a> - Copy files and directories.</li>
+<li><a href="/personal-site/docs/bash-linux/command-docs/mv-move"><strong>mv</strong></a> - Move or rename files and directories.</li>
+<li><a href="/personal-site/docs/bash-linux/command-docs/rm-remove"><strong>rm</strong></a> - Remove files or directories.</li>
+<li><a href="/personal-site/docs/bash-linux/command-docs/touch"><strong>touch</strong></a> - Create an empty file or update the timestamp of an existing file.</li>
+<li><a href="/personal-site/docs/bash-linux/command-docs/mkdir"><strong>mkdir</strong></a> - Create a new directory.</li>
+<li><strong>rmdir</strong> - Remove an empty directory.</li>
+<li><a href="/personal-site/docs/bash-linux/command-docs/cat-concatenate"><strong>cat</strong></a> - Concatenate and display file contents.</li>
+<li><a href="/personal-site/docs/bash-linux/command-docs/echo"><strong>echo</strong></a> - Display a line of text or variables.</li>
+<li><a href="/personal-site/docs/bash-linux/command-docs/grep"><strong>grep</strong></a> - Search for patterns in files.</li>
+<li><strong>find</strong> - Search for files and directories in a directory hierarchy.</li>
+<li><strong>chmod</strong> - Change file permissions.</li>
+<li><strong>chown</strong> - Change file owner and group.</li>
+<li><strong>tar</strong> - Archive files.</li>
+<li><strong>wget</strong> - Download files from the web.</li>
+<li><strong>curl</strong> - Transfer data to or from a server.</li>
+<li><strong>man</strong> - Display the manual for a command.</li>
+<li><strong>history</strong> - Show the command history.</li>
+</ol>
+<p>These commands form the backbone of file management and system navigation in the Bash shell.</p>
+<h2 id="help">help<a href="#help" class="anchor" aria-hidden="true">#</a> </h2>
+
+
+
+<div class="expressive-code">
+  <figure class="frame is-terminal not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">These shell commands are defined internally.  Type <span class="sb">`</span>help<span class="s1">&#39; to see this list.
+</span></span></span><span class="line"><span class="cl"><span class="s1">Type `help name&#39;</span> to find out more about the <span class="k">function</span> <span class="sb">`</span>name<span class="s1">&#39;.
+</span></span></span><span class="line"><span class="cl"><span class="s1">Use `info bash&#39;</span> to find out more about the shell in general.
+</span></span><span class="line"><span class="cl">Use <span class="sb">`</span>man -k<span class="s1">&#39; or `info&#39;</span> to find out more about commands not in this list.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">A star <span class="o">(</span>*<span class="o">)</span> next to a name means that the <span class="nb">command</span> is disabled.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> job_spec <span class="o">[</span><span class="p">&amp;</span><span class="o">]</span>                            <span class="nb">history</span> <span class="o">[</span>-c<span class="o">]</span> <span class="o">[</span>-d offset<span class="o">]</span> <span class="o">[</span>n<span class="o">]</span> or hist&gt;
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="o">((</span> expression <span class="o">))</span>                        <span class="k">if</span> COMMANDS<span class="p">;</span> <span class="k">then</span> COMMANDS<span class="p">;</span> <span class="o">[</span> <span class="k">elif</span> C&gt;
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> . filename <span class="o">[</span>arguments<span class="o">]</span>                  <span class="nb">jobs</span> <span class="o">[</span>-lnprs<span class="o">]</span> <span class="o">[</span>jobspec ...<span class="o">]</span> or <span class="nb">jobs</span> &gt;
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> :                                       <span class="nb">kill</span> <span class="o">[</span>-s sigspec <span class="p">|</span> -n signum <span class="p">|</span> -sigs&gt;
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="o">[</span> arg... <span class="o">]</span>                              <span class="nb">let</span> arg <span class="o">[</span>arg ...<span class="o">]</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="o">[[</span> expression <span class="o">]]</span>                        <span class="nb">local</span> <span class="o">[</span>option<span class="o">]</span> name<span class="o">[=</span>value<span class="o">]</span> ...
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="nb">alias</span> <span class="o">[</span>-p<span class="o">]</span> <span class="o">[</span>name<span class="o">[=</span>value<span class="o">]</span> ... <span class="o">]</span>          <span class="nb">logout</span> <span class="o">[</span>n<span class="o">]</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="nb">bg</span> <span class="o">[</span>job_spec ...<span class="o">]</span>                       mapfile <span class="o">[</span>-d delim<span class="o">]</span> <span class="o">[</span>-n count<span class="o">]</span> <span class="o">[</span>-O or&gt;
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="nb">bind</span> <span class="o">[</span>-lpsvPSVX<span class="o">]</span> <span class="o">[</span>-m keymap<span class="o">]</span> <span class="o">[</span>-f file&gt;  <span class="nb">popd</span> <span class="o">[</span>-n<span class="o">]</span> <span class="o">[</span>+N <span class="p">|</span> -N<span class="o">]</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="nb">break</span> <span class="o">[</span>n<span class="o">]</span>                               <span class="nb">printf</span> <span class="o">[</span>-v var<span class="o">]</span> format <span class="o">[</span>arguments<span class="o">]</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="nb">builtin</span> <span class="o">[</span>shell-builtin <span class="o">[</span>arg ...<span class="o">]]</span>       <span class="nb">pushd</span> <span class="o">[</span>-n<span class="o">]</span> <span class="o">[</span>+N <span class="p">|</span> -N <span class="p">|</span> dir<span class="o">]</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="nb">caller</span> <span class="o">[</span>expr<span class="o">]</span>                           <span class="nb">pwd</span> <span class="o">[</span>-LP<span class="o">]</span>    
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="k">case</span> WORD in <span class="o">[</span>PATTERN <span class="o">[</span><span class="p">|</span> PATTERN<span class="o">]</span>...<span class="o">)</span>&gt;  <span class="nb">read</span> <span class="o">[</span>-ers<span class="o">]</span> <span class="o">[</span>-a array<span class="o">]</span> <span class="o">[</span>-d delim<span class="o">]</span> <span class="o">[</span>-&gt;
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="nb">cd</span> <span class="o">[</span>-L<span class="p">|</span><span class="o">[</span>-P <span class="o">[</span>-e<span class="o">]]</span> <span class="o">[</span>-@<span class="o">]]</span> <span class="o">[</span>dir<span class="o">]</span>            readarray <span class="o">[</span>-d delim<span class="o">]</span> <span class="o">[</span>-n count<span class="o">]</span> <span class="o">[</span>-O &gt;
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="nb">command</span> <span class="o">[</span>-pVv<span class="o">]</span> <span class="nb">command</span> <span class="o">[</span>arg ...<span class="o">]</span>        <span class="nb">readonly</span> <span class="o">[</span>-aAf<span class="o">]</span> <span class="o">[</span>name<span class="o">[=</span>value<span class="o">]</span> ...<span class="o">]</span> o&gt;
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="nb">compgen</span> <span class="o">[</span>-abcdefgjksuv<span class="o">]</span> <span class="o">[</span>-o option<span class="o">]</span> <span class="o">[</span>&gt;  <span class="k">return</span> <span class="o">[</span>n<span class="o">]</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="nb">complete</span> <span class="o">[</span>-abcdefgjksuv<span class="o">]</span> <span class="o">[</span>-pr<span class="o">]</span> <span class="o">[</span>-DEI<span class="o">]</span>&gt;  <span class="k">select</span> NAME <span class="o">[</span>in WORDS ... <span class="p">;</span><span class="o">]</span> <span class="k">do</span> COMM&gt;
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> compopt <span class="o">[</span>-o<span class="p">|</span>+o option<span class="o">]</span> <span class="o">[</span>-DEI<span class="o">]</span> <span class="o">[</span>name .&gt;  <span class="nb">set</span> <span class="o">[</span>-abefhkmnptuvxBCEHPT<span class="o">]</span> <span class="o">[</span>-o optio&gt;
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="k">continue</span> <span class="o">[</span>n<span class="o">]</span>                            <span class="nb">shift</span> <span class="o">[</span>n<span class="o">]</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> coproc <span class="o">[</span>NAME<span class="o">]</span> <span class="nb">command</span> <span class="o">[</span>redirections<span class="o">]</span>    <span class="nb">shopt</span> <span class="o">[</span>-pqsu<span class="o">]</span> <span class="o">[</span>-o<span class="o">]</span> <span class="o">[</span>optname ...<span class="o">]</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="nb">declare</span> <span class="o">[</span>-aAfFgiIlnrtux<span class="o">]</span> <span class="o">[</span>name<span class="o">[=</span>value&gt;  <span class="nb">source</span> filename <span class="o">[</span>arguments<span class="o">]</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="nb">dirs</span> <span class="o">[</span>-clpv<span class="o">]</span> <span class="o">[</span>+N<span class="o">]</span> <span class="o">[</span>-N<span class="o">]</span>                  <span class="nb">suspend</span> <span class="o">[</span>-f<span class="o">]</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="nb">disown</span> <span class="o">[</span>-h<span class="o">]</span> <span class="o">[</span>-ar<span class="o">]</span> <span class="o">[</span>jobspec ... <span class="p">|</span> pid &gt;  <span class="nb">test</span> <span class="o">[</span>expr<span class="o">]</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="nb">echo</span> <span class="o">[</span>-neE<span class="o">]</span> <span class="o">[</span>arg ...<span class="o">]</span>                   <span class="nb">time</span> <span class="o">[</span>-p<span class="o">]</span> pipeline
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="nb">enable</span> <span class="o">[</span>-a<span class="o">]</span> <span class="o">[</span>-dnps<span class="o">]</span> <span class="o">[</span>-f filename<span class="o">]</span> <span class="o">[</span>na&gt;  <span class="nb">times</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="nb">eval</span> <span class="o">[</span>arg ...<span class="o">]</span>                          <span class="nb">trap</span> <span class="o">[</span>-lp<span class="o">]</span> <span class="o">[[</span>arg<span class="o">]</span> signal_spec ...<span class="o">]</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="nb">exec</span> <span class="o">[</span>-cl<span class="o">]</span> <span class="o">[</span>-a name<span class="o">]</span> <span class="o">[</span><span class="nb">command</span> <span class="o">[</span>argume&gt;  <span class="nb">true</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="nb">exit</span> <span class="o">[</span>n<span class="o">]</span>                                <span class="nb">type</span> <span class="o">[</span>-afptP<span class="o">]</span> name <span class="o">[</span>name ...<span class="o">]</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="nb">export</span> <span class="o">[</span>-fn<span class="o">]</span> <span class="o">[</span>name<span class="o">[=</span>value<span class="o">]</span> ...<span class="o">]</span> or ex&gt;  <span class="nb">typeset</span> <span class="o">[</span>-aAfFgiIlnrtux<span class="o">]</span> name<span class="o">[=</span>value&gt;
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="nb">false</span>                                   <span class="nb">ulimit</span> <span class="o">[</span>-SHabcdefiklmnpqrstuvxPRT<span class="o">]</span> <span class="o">[</span>&gt;
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="nb">fc</span> <span class="o">[</span>-e ename<span class="o">]</span> <span class="o">[</span>-lnr<span class="o">]</span> <span class="o">[</span>first<span class="o">]</span> <span class="o">[</span>last<span class="o">]</span> o&gt;  <span class="nb">umask</span> <span class="o">[</span>-p<span class="o">]</span> <span class="o">[</span>-S<span class="o">]</span> <span class="o">[</span>mode<span class="o">]</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="nb">fg</span> <span class="o">[</span>job_spec<span class="o">]</span>                           <span class="nb">unalias</span> <span class="o">[</span>-a<span class="o">]</span> name <span class="o">[</span>name ...<span class="o">]</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="k">for</span> NAME <span class="o">[</span>in WORDS ... <span class="o">]</span> <span class="p">;</span> <span class="k">do</span> COMMAND&gt;  <span class="nb">unset</span> <span class="o">[</span>-f<span class="o">]</span> <span class="o">[</span>-v<span class="o">]</span> <span class="o">[</span>-n<span class="o">]</span> <span class="o">[</span>name ...<span class="o">]</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="k">for</span> <span class="o">((</span> exp1<span class="p">;</span> exp2<span class="p">;</span> exp3 <span class="o">))</span><span class="p">;</span> <span class="k">do</span> COMMAN&gt;  <span class="k">until</span> COMMANDS<span class="p">;</span> <span class="k">do</span> COMMANDS-2<span class="p">;</span> <span class="k">done</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="k">function</span> name <span class="o">{</span> COMMANDS <span class="p">;</span> <span class="o">}</span> or name &gt;  variables - Names and meanings of so&gt;
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="nb">getopts</span> optstring name <span class="o">[</span>arg ...<span class="o">]</span>        <span class="nb">wait</span> <span class="o">[</span>-fn<span class="o">]</span> <span class="o">[</span>-p var<span class="o">]</span> <span class="o">[</span>id ...<span class="o">]</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="nb">hash</span> <span class="o">[</span>-lr<span class="o">]</span> <span class="o">[</span>-p pathname<span class="o">]</span> <span class="o">[</span>-dt<span class="o">]</span> <span class="o">[</span>name &gt;  <span class="k">while</span> COMMANDS<span class="p">;</span> <span class="k">do</span> COMMANDS-2<span class="p">;</span> <span class="k">done</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="nb">help</span> <span class="o">[</span>-dms<span class="o">]</span> <span class="o">[</span>pattern ...<span class="o">]</span>               <span class="o">{</span> COMMANDS <span class="p">;</span> <span class="o">}</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h2 id="info">info<a href="#info" class="anchor" aria-hidden="true">#</a> </h2>
+
+
+
+<div class="expressive-code">
+  <figure class="frame is-terminal not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">* Menu:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Basics
+</span></span><span class="line"><span class="cl">* Common options: <span class="o">(</span>coreutils<span class="o">)</span>Common options.
+</span></span><span class="line"><span class="cl">* Coreutils: <span class="o">(</span>coreutils<span class="o">)</span>.       Core GNU <span class="o">(</span>file, text, shell<span class="o">)</span> utilities.
+</span></span><span class="line"><span class="cl">* Date input formats: <span class="o">(</span>coreutils<span class="o">)</span>Date input formats.
+</span></span><span class="line"><span class="cl">* Ed: <span class="o">(</span>ed<span class="o">)</span>.                     The GNU line editor
+</span></span><span class="line"><span class="cl">* File permissions: <span class="o">(</span>coreutils<span class="o">)</span>File permissions.
+</span></span><span class="line"><span class="cl">                                Access modes.
+</span></span><span class="line"><span class="cl">* Finding files: <span class="o">(</span>find<span class="o">)</span>.        Operating on files matching certain criteria.
+</span></span><span class="line"><span class="cl">* Time: <span class="o">(</span><span class="nb">time</span><span class="o">)</span>.                 <span class="nb">time</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Compression
+</span></span><span class="line"><span class="cl">* Gzip: <span class="o">(</span>gzip<span class="o">)</span>.                 General <span class="o">(</span>de<span class="o">)</span>compression of files <span class="o">(</span>lzw<span class="o">)</span>.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Development
+</span></span><span class="line"><span class="cl">* SSIP: <span class="o">(</span>ssip<span class="o">)</span>.                 Speech Synthesis Interface Protocol.
+</span></span><span class="line"><span class="cl">* Speech Dispatcher: <span class="o">(</span>speech-dispatcher<span class="o">)</span>.
+</span></span><span class="line"><span class="cl">                                Speech Dispatcher.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Editors
+</span></span><span class="line"><span class="cl">* nano: <span class="o">(</span>nano<span class="o">)</span>.                 Small and friendly text editor.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">GNU organization
+</span></span><span class="line"><span class="cl">* Maintaining Findutils: <span class="o">(</span>find-maint<span class="o">)</span>.
+</span></span><span class="line"><span class="cl">                                Maintaining GNU findutils
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">GNU Utilities
+</span></span><span class="line"><span class="cl">* dirmngr-client: <span class="o">(</span>gnupg<span class="o">)</span>.      X.509 CRL and OCSP client.
+</span></span><span class="line"><span class="cl">* dirmngr: <span class="o">(</span>gnupg<span class="o">)</span>.             X.509 CRL and OCSP server.
+</span></span><span class="line"><span class="cl">* gpg-agent: <span class="o">(</span>gnupg<span class="o">)</span>.           The secret key daemon.
+</span></span><span class="line"><span class="cl">* gpg2: <span class="o">(</span>gnupg<span class="o">)</span>.                OpenPGP encryption and signing tool.
+</span></span><span class="line"><span class="cl">* gpgsm: <span class="o">(</span>gnupg<span class="o">)</span>.               S/MIME encryption and signing tool.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Individual utilities
+</span></span><span class="line"><span class="cl">* arch: <span class="o">(</span>coreutils<span class="o">)</span>arch invocation.             Print machine hardware name.
+</span></span><span class="line"><span class="cl">* b2sum: <span class="o">(</span>coreutils<span class="o">)</span>b2sum invocation.           Print or check BLAKE2 digests.
+</span></span><span class="line"><span class="cl">* base32: <span class="o">(</span>coreutils<span class="o">)</span>base32 invocation.         Base32 encode/decode data.
+</span></span><span class="line"><span class="cl">* base64: <span class="o">(</span>coreutils<span class="o">)</span>base64 invocation.         Base64 encode/decode data.
+</span></span><span class="line"><span class="cl">* basename: <span class="o">(</span>coreutils<span class="o">)</span>basename invocation.     Strip directory and suffix.
+</span></span><span class="line"><span class="cl">* basenc: <span class="o">(</span>coreutils<span class="o">)</span>basenc invocation.         Encoding/decoding of data.
+</span></span><span class="line"><span class="cl">* cat: <span class="o">(</span>coreutils<span class="o">)</span>cat invocation.               Concatenate and write files.
+</span></span><span class="line"><span class="cl">* chcon: <span class="o">(</span>coreutils<span class="o">)</span>chcon invocation.           Change SELinux CTX of files.
+</span></span><span class="line"><span class="cl">* chgrp: <span class="o">(</span>coreutils<span class="o">)</span>chgrp invocation.           Change file groups.
+</span></span><span class="line"><span class="cl">* chmod: <span class="o">(</span>coreutils<span class="o">)</span>chmod invocation.           Change access permissions.
+</span></span><span class="line"><span class="cl">* chown: <span class="o">(</span>coreutils<span class="o">)</span>chown invocation.           Change file owners and groups.
+</span></span><span class="line"><span class="cl">* chroot: <span class="o">(</span>coreutils<span class="o">)</span>chroot invocation.         Specify the root directory.
+</span></span><span class="line"><span class="cl">* cksum: <span class="o">(</span>coreutils<span class="o">)</span>cksum invocation.           Print POSIX CRC checksum.
+</span></span><span class="line"><span class="cl">* cmp: <span class="o">(</span>diffutils<span class="o">)</span>Invoking cmp.                 Compare <span class="m">2</span> files byte by byte.
+</span></span><span class="line"><span class="cl">* comm: <span class="o">(</span>coreutils<span class="o">)</span>comm invocation.             Compare sorted files by line.
+</span></span><span class="line"><span class="cl">* cp: <span class="o">(</span>coreutils<span class="o">)</span>cp invocation.                 Copy files.
+</span></span><span class="line"><span class="cl">* csplit: <span class="o">(</span>coreutils<span class="o">)</span>csplit invocation.         Split by context.
+</span></span><span class="line"><span class="cl">* cut: <span class="o">(</span>coreutils<span class="o">)</span>cut invocation.               Print selected parts of lines.
+</span></span><span class="line"><span class="cl">* date: <span class="o">(</span>coreutils<span class="o">)</span>date invocation.             Print/set system date and time.
+</span></span><span class="line"><span class="cl">* dd: <span class="o">(</span>coreutils<span class="o">)</span>dd invocation.                 Copy and convert a file.
+</span></span><span class="line"><span class="cl">* df: <span class="o">(</span>coreutils<span class="o">)</span>df invocation.                 Report file system usage.
+</span></span><span class="line"><span class="cl">* diff: <span class="o">(</span>diffutils<span class="o">)</span>Invoking diff.               Compare <span class="m">2</span> files line by line.
+</span></span><span class="line"><span class="cl">* diff3: <span class="o">(</span>diffutils<span class="o">)</span>Invoking diff3.             Compare <span class="m">3</span> files line by line.
+</span></span><span class="line"><span class="cl">* dir: <span class="o">(</span>coreutils<span class="o">)</span>dir invocation.               List directories briefly.
+</span></span><span class="line"><span class="cl">* dircolors: <span class="o">(</span>coreutils<span class="o">)</span>dircolors invocation.   Color setup <span class="k">for</span> ls.
+</span></span><span class="line"><span class="cl">* dirname: <span class="o">(</span>coreutils<span class="o">)</span>dirname invocation.       Strip last file name component.
+</span></span><span class="line"><span class="cl">* du: <span class="o">(</span>coreutils<span class="o">)</span>du invocation.                 Report file usage.
+</span></span><span class="line"><span class="cl">* echo: <span class="o">(</span>coreutils<span class="o">)</span><span class="nb">echo</span> invocation.             Print a line of text.
+</span></span><span class="line"><span class="cl">* env: <span class="o">(</span>coreutils<span class="o">)</span>env invocation.               Modify the environment.
+</span></span><span class="line"><span class="cl">* expand: <span class="o">(</span>coreutils<span class="o">)</span>expand invocation.         Convert tabs to spaces.
+</span></span><span class="line"><span class="cl">* expr: <span class="o">(</span>coreutils<span class="o">)</span>expr invocation.             Evaluate expressions.
+</span></span><span class="line"><span class="cl">* factor: <span class="o">(</span>coreutils<span class="o">)</span>factor invocation.         Print prime factors
+</span></span><span class="line"><span class="cl">* false: <span class="o">(</span>coreutils<span class="o">)</span><span class="nb">false</span> invocation.           Do nothing, unsuccessfully.
+</span></span><span class="line"><span class="cl">* find: <span class="o">(</span>find<span class="o">)</span>Invoking find.                    Finding and acting on files.
+</span></span><span class="line"><span class="cl">* fmt: <span class="o">(</span>coreutils<span class="o">)</span>fmt invocation.               Reformat paragraph text.
+</span></span><span class="line"><span class="cl">* fold: <span class="o">(</span>coreutils<span class="o">)</span>fold invocation.             Wrap long input lines.
+</span></span><span class="line"><span class="cl">* groups: <span class="o">(</span>coreutils<span class="o">)</span>groups invocation.         Print group names a user is in.
+</span></span><span class="line"><span class="cl">* gunzip: <span class="o">(</span>gzip<span class="o">)</span>Overview.                       Decompression.
+</span></span><span class="line"><span class="cl">* gzexe: <span class="o">(</span>gzip<span class="o">)</span>Overview.                        Compress executables.
+</span></span><span class="line"><span class="cl">* head: <span class="o">(</span>coreutils<span class="o">)</span>head invocation.             Output the first part of files.
+</span></span><span class="line"><span class="cl">* hostid: <span class="o">(</span>coreutils<span class="o">)</span>hostid invocation.         Print numeric host identifier.
+</span></span><span class="line"><span class="cl">* hostname: <span class="o">(</span>coreutils<span class="o">)</span>hostname invocation.     Print or <span class="nb">set</span> system name.
+</span></span><span class="line"><span class="cl">* id: <span class="o">(</span>coreutils<span class="o">)</span>id invocation.                 Print user identity.
+</span></span><span class="line"><span class="cl">* install: <span class="o">(</span>coreutils<span class="o">)</span>install invocation.       Copy files and <span class="nb">set</span> attributes.
+</span></span><span class="line"><span class="cl">* join: <span class="o">(</span>coreutils<span class="o">)</span>join invocation.             Join lines on a common field.
+</span></span><span class="line"><span class="cl">* kill: <span class="o">(</span>coreutils<span class="o">)</span><span class="nb">kill</span> invocation.             Send a signal to processes.
+</span></span><span class="line"><span class="cl">* link: <span class="o">(</span>coreutils<span class="o">)</span>link invocation.             Make hard links between files.
+</span></span><span class="line"><span class="cl">* ln: <span class="o">(</span>coreutils<span class="o">)</span>ln invocation.                 Make links between files.
+</span></span><span class="line"><span class="cl">* locate: <span class="o">(</span>find<span class="o">)</span>Invoking locate.                Finding files in a database.
+</span></span><span class="line"><span class="cl">* logname: <span class="o">(</span>coreutils<span class="o">)</span>logname invocation.       Print current login name.
+</span></span><span class="line"><span class="cl">* ls: <span class="o">(</span>coreutils<span class="o">)</span>ls invocation.                 List directory contents.
+</span></span><span class="line"><span class="cl">* md5sum: <span class="o">(</span>coreutils<span class="o">)</span>md5sum invocation.         Print or check MD5 digests.
+</span></span><span class="line"><span class="cl">* mkdir: <span class="o">(</span>coreutils<span class="o">)</span>mkdir invocation.           Create directories.
+</span></span><span class="line"><span class="cl">* mkfifo: <span class="o">(</span>coreutils<span class="o">)</span>mkfifo invocation.         Create FIFOs <span class="o">(</span>named pipes<span class="o">)</span>.
+</span></span><span class="line"><span class="cl">* mknod: <span class="o">(</span>coreutils<span class="o">)</span>mknod invocation.           Create special files.
+</span></span><span class="line"><span class="cl">* mktemp: <span class="o">(</span>coreutils<span class="o">)</span>mktemp invocation.         Create temporary files.
+</span></span><span class="line"><span class="cl">* mv: <span class="o">(</span>coreutils<span class="o">)</span>mv invocation.                 Rename files.
+</span></span><span class="line"><span class="cl">* nice: <span class="o">(</span>coreutils<span class="o">)</span>nice invocation.             Modify niceness.
+</span></span><span class="line"><span class="cl">* nl: <span class="o">(</span>coreutils<span class="o">)</span>nl invocation.                 Number lines and write files.
+</span></span><span class="line"><span class="cl">* nohup: <span class="o">(</span>coreutils<span class="o">)</span>nohup invocation.           Immunize to hangups.
+</span></span><span class="line"><span class="cl">* nproc: <span class="o">(</span>coreutils<span class="o">)</span>nproc invocation.           Print the number of processors.
+</span></span><span class="line"><span class="cl">* numfmt: <span class="o">(</span>coreutils<span class="o">)</span>numfmt invocation.         Reformat numbers.
+</span></span><span class="line"><span class="cl">* od: <span class="o">(</span>coreutils<span class="o">)</span>od invocation.                 Dump files in octal, etc.
+</span></span><span class="line"><span class="cl">* paste: <span class="o">(</span>coreutils<span class="o">)</span>paste invocation.           Merge lines of files.
+</span></span><span class="line"><span class="cl">* patch: <span class="o">(</span>diffutils<span class="o">)</span>Invoking patch.             Apply a patch to a file.
+</span></span><span class="line"><span class="cl">* pathchk: <span class="o">(</span>coreutils<span class="o">)</span>pathchk invocation.       Check file name portability.
+</span></span><span class="line"><span class="cl">* pr: <span class="o">(</span>coreutils<span class="o">)</span>pr invocation.                 Paginate or columnate files.
+</span></span><span class="line"><span class="cl">* printenv: <span class="o">(</span>coreutils<span class="o">)</span>printenv invocation.     Print environment variables.
+</span></span><span class="line"><span class="cl">* printf: <span class="o">(</span>coreutils<span class="o">)</span><span class="nb">printf</span> invocation.         Format and print data.
+</span></span><span class="line"><span class="cl">* ptx: <span class="o">(</span>coreutils<span class="o">)</span>ptx invocation.               Produce permuted indexes.
+</span></span><span class="line"><span class="cl">* pwd: <span class="o">(</span>coreutils<span class="o">)</span><span class="nb">pwd</span> invocation.               Print working directory.
+</span></span><span class="line"><span class="cl">* readlink: <span class="o">(</span>coreutils<span class="o">)</span>readlink invocation.     Print referent of a symlink.
+</span></span><span class="line"><span class="cl">* realpath: <span class="o">(</span>coreutils<span class="o">)</span>realpath invocation.     Print resolved file names.
+</span></span><span class="line"><span class="cl">* rm: <span class="o">(</span>coreutils<span class="o">)</span>rm invocation.                 Remove files.
+</span></span><span class="line"><span class="cl">* rmdir: <span class="o">(</span>coreutils<span class="o">)</span>rmdir invocation.           Remove empty directories.
+</span></span><span class="line"><span class="cl">* runcon: <span class="o">(</span>coreutils<span class="o">)</span>runcon invocation.         Run in specified SELinux CTX.
+</span></span><span class="line"><span class="cl">* sdiff: <span class="o">(</span>diffutils<span class="o">)</span>Invoking sdiff.             Merge <span class="m">2</span> files side-by-side.
+</span></span><span class="line"><span class="cl">* seq: <span class="o">(</span>coreutils<span class="o">)</span>seq invocation.               Print numeric sequences
+</span></span><span class="line"><span class="cl">* sha1sum: <span class="o">(</span>coreutils<span class="o">)</span>sha1sum invocation.       Print or check SHA-1 digests.
+</span></span><span class="line"><span class="cl">* sha2: <span class="o">(</span>coreutils<span class="o">)</span>sha2 utilities.              Print or check SHA-2 digests.
+</span></span><span class="line"><span class="cl">* shred: <span class="o">(</span>coreutils<span class="o">)</span>shred invocation.           Remove files more securely.
+</span></span><span class="line"><span class="cl">* shuf: <span class="o">(</span>coreutils<span class="o">)</span>shuf invocation.             Shuffling text files.
+</span></span><span class="line"><span class="cl">* sleep: <span class="o">(</span>coreutils<span class="o">)</span>sleep invocation.           Delay <span class="k">for</span> a specified time.
+</span></span><span class="line"><span class="cl">* sort: <span class="o">(</span>coreutils<span class="o">)</span>sort invocation.             Sort text files.
+</span></span><span class="line"><span class="cl">* split: <span class="o">(</span>coreutils<span class="o">)</span>split invocation.           Split into pieces.
+</span></span><span class="line"><span class="cl">* stat: <span class="o">(</span>coreutils<span class="o">)</span>stat invocation.             Report file<span class="o">(</span>system<span class="o">)</span> status.
+</span></span><span class="line"><span class="cl">* stdbuf: <span class="o">(</span>coreutils<span class="o">)</span>stdbuf invocation.         Modify stdio buffering.
+</span></span><span class="line"><span class="cl">* stty: <span class="o">(</span>coreutils<span class="o">)</span>stty invocation.             Print/change terminal settings.
+</span></span><span class="line"><span class="cl">* sum: <span class="o">(</span>coreutils<span class="o">)</span>sum invocation.               Print traditional checksum.
+</span></span><span class="line"><span class="cl">* sync: <span class="o">(</span>coreutils<span class="o">)</span>sync invocation.             Sync files to stable storage.
+</span></span><span class="line"><span class="cl">* tac: <span class="o">(</span>coreutils<span class="o">)</span>tac invocation.               Reverse files.
+</span></span><span class="line"><span class="cl">* tail: <span class="o">(</span>coreutils<span class="o">)</span>tail invocation.             Output the last part of files.
+</span></span><span class="line"><span class="cl">* tee: <span class="o">(</span>coreutils<span class="o">)</span>tee invocation.               Redirect to multiple files.
+</span></span><span class="line"><span class="cl">* test: <span class="o">(</span>coreutils<span class="o">)</span><span class="nb">test</span> invocation.             File/string tests.
+</span></span><span class="line"><span class="cl">* timeout: <span class="o">(</span>coreutils<span class="o">)</span>timeout invocation.       Run with <span class="nb">time</span> limit.
+</span></span><span class="line"><span class="cl">* touch: <span class="o">(</span>coreutils<span class="o">)</span>touch invocation.           Change file timestamps.
+</span></span><span class="line"><span class="cl">* tr: <span class="o">(</span>coreutils<span class="o">)</span>tr invocation.                 Translate characters.
+</span></span><span class="line"><span class="cl">* true: <span class="o">(</span>coreutils<span class="o">)</span><span class="nb">true</span> invocation.             Do nothing, successfully.
+</span></span><span class="line"><span class="cl">* truncate: <span class="o">(</span>coreutils<span class="o">)</span>truncate invocation.     Shrink/extend size of a file.
+</span></span><span class="line"><span class="cl">* tsort: <span class="o">(</span>coreutils<span class="o">)</span>tsort invocation.           Topological sort.
+</span></span><span class="line"><span class="cl">* tty: <span class="o">(</span>coreutils<span class="o">)</span>tty invocation.               Print terminal name.
+</span></span><span class="line"><span class="cl">* uname: <span class="o">(</span>coreutils<span class="o">)</span>uname invocation.           Print system information.
+</span></span><span class="line"><span class="cl">* unexpand: <span class="o">(</span>coreutils<span class="o">)</span>unexpand invocation.     Convert spaces to tabs.
+</span></span><span class="line"><span class="cl">* uniq: <span class="o">(</span>coreutils<span class="o">)</span>uniq invocation.             Uniquify files.
+</span></span><span class="line"><span class="cl">* unlink: <span class="o">(</span>coreutils<span class="o">)</span>unlink invocation.         Removal via unlink<span class="o">(</span>2<span class="o">)</span>.
+</span></span><span class="line"><span class="cl">* updatedb: <span class="o">(</span>find<span class="o">)</span>Invoking updatedb.            Building the locate database.
+</span></span><span class="line"><span class="cl">* uptime: <span class="o">(</span>coreutils<span class="o">)</span>uptime invocation.         Print uptime and load.
+</span></span><span class="line"><span class="cl">* users: <span class="o">(</span>coreutils<span class="o">)</span>users invocation.           Print current user names.
+</span></span><span class="line"><span class="cl">* vdir: <span class="o">(</span>coreutils<span class="o">)</span>vdir invocation.             List directories verbosely.
+</span></span><span class="line"><span class="cl">* wc: <span class="o">(</span>coreutils<span class="o">)</span>wc invocation.                 Line, word, and byte counts.
+</span></span><span class="line"><span class="cl">* who: <span class="o">(</span>coreutils<span class="o">)</span>who invocation.               Print who is logged in.
+</span></span><span class="line"><span class="cl">* whoami: <span class="o">(</span>coreutils<span class="o">)</span>whoami invocation.         Print effective user ID.
+</span></span><span class="line"><span class="cl">* xargs: <span class="o">(</span>find<span class="o">)</span>Invoking xargs.                  Operating on many files.
+</span></span><span class="line"><span class="cl">* yes: <span class="o">(</span>coreutils<span class="o">)</span>yes invocation.               Print a string indefinitely.
+</span></span><span class="line"><span class="cl">* zcat: <span class="o">(</span>gzip<span class="o">)</span>Overview.                         Decompression to stdout.
+</span></span><span class="line"><span class="cl">* zdiff: <span class="o">(</span>gzip<span class="o">)</span>Overview.                        Compare compressed files.
+</span></span><span class="line"><span class="cl">* zforce: <span class="o">(</span>gzip<span class="o">)</span>Overview.                       Force .gz extension on files.
+</span></span><span class="line"><span class="cl">* zgrep: <span class="o">(</span>gzip<span class="o">)</span>Overview.                        Search compressed files.
+</span></span><span class="line"><span class="cl">* zmore: <span class="o">(</span>gzip<span class="o">)</span>Overview.                        Decompression output by pages.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Kernel
+</span></span><span class="line"><span class="cl">* grub-dev: <span class="o">(</span>grub-dev<span class="o">)</span>.         The GRand Unified Bootloader Dev
+</span></span><span class="line"><span class="cl">* grub-install: <span class="o">(</span>grub<span class="o">)</span>Invoking grub-install.
+</span></span><span class="line"><span class="cl">                                Install GRUB on your drive
+</span></span><span class="line"><span class="cl">* grub-mkconfig: <span class="o">(</span>grub<span class="o">)</span>Invoking grub-mkconfig.
+</span></span><span class="line"><span class="cl">                                Generate GRUB configuration
+</span></span><span class="line"><span class="cl">* grub-mkpasswd-pbkdf2: <span class="o">(</span>grub<span class="o">)</span>Invoking grub-mkpasswd-pbkdf2.
+</span></span><span class="line"><span class="cl">* grub-mkrelpath: <span class="o">(</span>grub<span class="o">)</span>Invoking grub-mkrelpath.
+</span></span><span class="line"><span class="cl">* grub-mkrescue: <span class="o">(</span>grub<span class="o">)</span>Invoking grub-mkrescue.
+</span></span><span class="line"><span class="cl">                                Make a GRUB rescue image
+</span></span><span class="line"><span class="cl">* grub-mount: <span class="o">(</span>grub<span class="o">)</span>Invoking grub-mount.
+</span></span><span class="line"><span class="cl">                                Mount a file system using GRUB
+</span></span><span class="line"><span class="cl">* grub-probe: <span class="o">(</span>grub<span class="o">)</span>Invoking grub-probe.
+</span></span><span class="line"><span class="cl">                                Probe device information
+</span></span><span class="line"><span class="cl">* grub-script-check: <span class="o">(</span>grub<span class="o">)</span>Invoking grub-script-check.
+</span></span><span class="line"><span class="cl">* GRUB: <span class="o">(</span>grub<span class="o">)</span>.                 The GRand Unified Bootloader
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Libraries
+</span></span><span class="line"><span class="cl">* RLuserman: <span class="o">(</span>rluserman<span class="o">)</span>.       The GNU readline library User<span class="err">&#39;</span>s Manual.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Math
+</span></span><span class="line"><span class="cl">* bc: <span class="o">(</span>bc<span class="o">)</span>.                     An arbitrary precision calculator language.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Miscellaneous
+</span></span><span class="line"><span class="cl">* dc: <span class="o">(</span>dc<span class="o">)</span>.                     Arbitrary precision RPN <span class="s2">&#34;Desktop Calculator&#34;</span>.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Network applications
+</span></span><span class="line"><span class="cl">* Wget: <span class="o">(</span>wget<span class="o">)</span>.                 Non-interactive network downloader.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Sound
+</span></span><span class="line"><span class="cl">* SSIP: <span class="o">(</span>ssip<span class="o">)</span>.                 Speech Synthesis Interface Protocol.
+</span></span><span class="line"><span class="cl">* Say <span class="k">for</span> Speech Dispatcher: <span class="o">(</span>spd-say<span class="o">)</span>.
+</span></span><span class="line"><span class="cl">                                Say.
+</span></span><span class="line"><span class="cl">* Speech Dispatcher: <span class="o">(</span>speech-dispatcher<span class="o">)</span>.
+</span></span><span class="line"><span class="cl">                                Speech Dispatcher.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Texinfo documentation system
+</span></span><span class="line"><span class="cl">* info stand-alone: <span class="o">(</span>info-stnd<span class="o">)</span>.
+</span></span><span class="line"><span class="cl">                                Read Info documents without Emacs.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Text creation and manipulation
+</span></span><span class="line"><span class="cl">* Diffutils: <span class="o">(</span>diffutils<span class="o">)</span>.       Comparing and merging files.
+</span></span><span class="line"><span class="cl">* grep: <span class="o">(</span>grep<span class="o">)</span>.                 Print lines that match patterns.
+</span></span><span class="line"><span class="cl">* sed: <span class="o">(</span>sed<span class="o">)</span>.                   Stream EDitor.  </span></span></code></pre></div>
+  </figure>
+</div>
+<h2 id="info-bash">info bash<a href="#info-bash" class="anchor" aria-hidden="true">#</a> </h2>
+
+
+
+<div class="expressive-code">
+  <figure class="frame is-terminal not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Total manual</span></span></code></pre></div>
+  </figure>
+</div>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="page-nav d-flex flex-column flex-sm-row">
+	
+	<div class="card w-100">
+			<div class="card-body d-flex">
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M5 12l6 6"></path>
+						<path d="M5 12l6 -6"></path>
+				 	</svg>
+				</div>
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Prev</div>
+					<a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/" class="stretched-link text-reset text-decoration-none">Bash - 18 - Shell Scripts</a>
+				</div>
+			</div>
+		</div>
+	<div class="m-2"></div>
+	<div class="card text-end w-100">
+			<div class="card-body d-flex justify-content-end">
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Next</div>
+					<a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/" class="stretched-link text-reset text-decoration-none">Bash - 18.2 - Shell Scripts - Loops</a>
+				</div>
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M13 18l6 -6"></path>
+						<path d="M13 6l6 6"></path>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</div>
+
+			
+		</main>
+		
+	</div>
+
+      
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-lg">
+    <div class="row">
+      <div class="col-lg-8 text-center text-lg-start">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a class="text-muted" href="/personal-site/privacy/">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 text-center text-lg-end">
+        <ul class="list-inline">
+          <li class="list-inline-item">Made by <a class="text-muted" href="https://sujith-eag.github.io/personal-site/">Sujith</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+<script async
+  src="/personal-site/js/app.ec98ea736af7f8f531281a21224330da682d1dc9973423443b3d5ce8c45c6ea1.js"
+  integrity="sha256-7Jjqc2r3&#43;PUxKBohIkMw2mgtHcmXNCNEOz1c6MRcbqE=">
+</script>
+
+
+
+
+
+<script async
+  src="/personal-site/js/flexsearch.8350d2f520e131f8552ed57c1eadd05c50eccf0427267781442dd8ddf8fdcdf7.js"
+  integrity="sha256-g1DS9SDhMfhVLtV8Hq3QXFDszwQnJneBRC3Y3fj9zfc=">
+</script>
+<script async
+  src="/personal-site/js/search-modal.877cece5b6bc789456f89fa1955ccfcd8a5acdb2179e7882e292a6caa49efe68.js"
+  integrity="sha256-h3zs5ba8eJRW&#43;J&#43;hlVzPzYpazbIXnniC4pKmyqSe/mg=">
+</script>
+
+    
+  </body>
+</html>

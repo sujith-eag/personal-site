@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chapter 03 - Process Concept on Sujith&#39;s Library</title>
+    <link>http://localhost:1313/personal-site/docs/os/c03_process_concept/</link>
+    <description>Recent content in Chapter 03 - Process Concept on Sujith&#39;s Library</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2020-2024 Thulite</copyright>
+    <lastBuildDate>Sun, 12 Jan 2025 21:27:49 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/personal-site/docs/os/c03_process_concept/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OS 3.01 - Process Concept</title>
+      <link>http://localhost:1313/personal-site/docs/os/c03_process_concept/os-3.01-process-concept/</link>
+      <pubDate>Sun, 12 Jan 2025 21:27:49 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/os/c03_process_concept/os-3.01-process-concept/</guid>
+      <description>&lt;p&gt;Contemporary computer systems allow multiple programs to be loaded into memory and executed concurrently. This requires tighter control and better compartmentalization of various programs. These needs led to the concept of a &lt;strong&gt;process&lt;/strong&gt;, which is a program in execution.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OS 3.02 - Process Scheduling</title>
+      <link>http://localhost:1313/personal-site/docs/os/c03_process_concept/os-3.02-process-scheduling/</link>
+      <pubDate>Sun, 12 Jan 2025 21:27:49 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/os/c03_process_concept/os-3.02-process-scheduling/</guid>
+      <description>&lt;p&gt;The objective of &lt;strong&gt;multiprogramming&lt;/strong&gt; is to ensure that some process is always running, maximizing &lt;strong&gt;CPU utilization&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The goal of &lt;strong&gt;time-sharing&lt;/strong&gt; systems is to switch the CPU between processes frequently enough that the user can interact with each program while it is running.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OS 3.04 - Inter-Process Communication</title>
+      <link>http://localhost:1313/personal-site/docs/os/c03_process_concept/os-3.04-inter-process-communication/</link>
+      <pubDate>Sun, 12 Jan 2025 21:27:49 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/os/c03_process_concept/os-3.04-inter-process-communication/</guid>
+      <description>&lt;p&gt;Processes executing concurrently in an operating system can be either &lt;strong&gt;independent&lt;/strong&gt; or &lt;strong&gt;cooperating&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Independent Process:&lt;/strong&gt;&lt;br&gt;&#xA;A process that cannot affect or be affected by other processes. These processes do not share data with others.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

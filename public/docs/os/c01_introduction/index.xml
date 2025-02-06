@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OS - 01 - Operating Systems Introduction on Sujith&#39;s Library</title>
+    <link>http://localhost:1313/personal-site/docs/os/c01_introduction/</link>
+    <description>Recent content in OS - 01 - Operating Systems Introduction on Sujith&#39;s Library</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2020-2024 Thulite</copyright>
+    <lastBuildDate>Sun, 12 Jan 2025 21:21:44 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/personal-site/docs/os/c01_introduction/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OS 1.01 - Operating Systems Introduction</title>
+      <link>http://localhost:1313/personal-site/docs/os/c01_introduction/os-1.01-operating-systems-introduction/</link>
+      <pubDate>Sun, 12 Jan 2025 21:20:56 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/os/c01_introduction/os-1.01-operating-systems-introduction/</guid>
+      <description>&lt;p&gt;An &lt;strong&gt;Operating System (OS)&lt;/strong&gt; is software that manages computer hardware and serves as an intermediary between the user and the computer hardware. Its primary purpose is to provide an environment in which users can execute programs efficiently and conveniently.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OS 1.05 - OS Operations</title>
+      <link>http://localhost:1313/personal-site/docs/os/c01_introduction/os-1.05-os-operations/</link>
+      <pubDate>Sun, 12 Jan 2025 21:21:19 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/os/c01_introduction/os-1.05-os-operations/</guid>
+      <description>&lt;p&gt;Interrupts, System Calls, and Modes of Operation&lt;/p&gt;&#xA;&lt;h3 id=&#34;interrupt-driven-systems&#34;&gt;&lt;strong&gt;Interrupt-Driven Systems&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Modern Operating Systems are &lt;strong&gt;interrupt-driven&lt;/strong&gt;, meaning they rely on &lt;strong&gt;interrupts&lt;/strong&gt; to perform tasks. If there are no I/O devices to service or no user requests, the OS remains idle, waiting for events to occur.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OS 1.11 - Computing Environments</title>
+      <link>http://localhost:1313/personal-site/docs/os/c01_introduction/os-1.11-computing-environments/</link>
+      <pubDate>Sun, 12 Jan 2025 21:21:44 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/os/c01_introduction/os-1.11-computing-environments/</guid>
+      <description>&lt;h4 id=&#34;1111-traditional-computing&#34;&gt;1.11.1 Traditional Computing&lt;/h4&gt;&#xA;&lt;p&gt;Traditional computing refers to the setup where computing resources, such as servers and workstations, are located locally in a company or institution. Web technologies and increasing WAN (Wide Area Network) bandwidth are expanding the boundaries of traditional computing.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

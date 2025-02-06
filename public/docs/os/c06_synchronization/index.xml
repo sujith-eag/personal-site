@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chapter 6 -  Process Synchronization on Sujith&#39;s Library</title>
+    <link>http://localhost:1313/personal-site/docs/os/c06_synchronization/</link>
+    <description>Recent content in Chapter 6 -  Process Synchronization on Sujith&#39;s Library</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2020-2024 Thulite</copyright>
+    <lastBuildDate>Sun, 12 Jan 2025 21:27:49 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/personal-site/docs/os/c06_synchronization/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OS 6.01 - Process Synchronization</title>
+      <link>http://localhost:1313/personal-site/docs/os/c06_synchronization/os-6.01-process-synchronization/</link>
+      <pubDate>Sun, 12 Jan 2025 21:27:49 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/os/c06_synchronization/os-6.01-process-synchronization/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Process synchronization&lt;/strong&gt; refers to various mechanisms used to ensure the orderly execution of cooperating processes that share a &lt;strong&gt;logical address space&lt;/strong&gt;, ensuring &lt;strong&gt;data consistency&lt;/strong&gt; is maintained.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OS 6.02 - Critical-Section Problem</title>
+      <link>http://localhost:1313/personal-site/docs/os/c06_synchronization/os-6.02-critical-section-problem/</link>
+      <pubDate>Sun, 12 Jan 2025 21:27:49 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/os/c06_synchronization/os-6.02-critical-section-problem/</guid>
+      <description>&lt;p&gt;Consider a system with &lt;strong&gt;n processes&lt;/strong&gt;: {P0, P1, &amp;hellip;, Pn-1}. Each process has a &lt;strong&gt;critical section&lt;/strong&gt;, a segment of code where the process manipulates shared resources (such as common variables, a table, or a file).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OS 6.05 - Mutex Locks</title>
+      <link>http://localhost:1313/personal-site/docs/os/c06_synchronization/os-6.05-mutex-locks/</link>
+      <pubDate>Sun, 12 Jan 2025 21:27:49 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/os/c06_synchronization/os-6.05-mutex-locks/</guid>
+      <description>&lt;p&gt;Operating system designers use software tools to address the &lt;strong&gt;critical-section problem&lt;/strong&gt;, and one of the simplest tools used is the &lt;strong&gt;mutex lock&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OS 6.06 - Semaphores</title>
+      <link>http://localhost:1313/personal-site/docs/os/c06_synchronization/os-6.06-semaphores/</link>
+      <pubDate>Sun, 12 Jan 2025 21:27:49 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/os/c06_synchronization/os-6.06-semaphores/</guid>
+      <description>&lt;p&gt;Semaphores are a more advanced and flexible synchronization mechanism compared to mutex locks. They allow processes to synchronize their actions in more sophisticated ways.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OS 6.07 - Classic Problems</title>
+      <link>http://localhost:1313/personal-site/docs/os/c06_synchronization/os-6.07-classic-problems/</link>
+      <pubDate>Sun, 12 Jan 2025 21:27:49 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/os/c06_synchronization/os-6.07-classic-problems/</guid>
+      <description>&lt;p&gt;Synchronization problems as examples of a large class of concurrency-control problems. These problems are used for testing nearly every newly proposed synchronization scheme.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

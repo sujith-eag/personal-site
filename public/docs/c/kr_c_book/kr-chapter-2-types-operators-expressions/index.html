@@ -1,0 +1,2541 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="/personal-site/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=personal-site/livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preload" href="http://localhost:1313/personal-site/fonts/vendor/jost/jost-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/personal-site/fonts/vendor/jost/jost-v4-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/personal-site/fonts/vendor/jost/jost-v4-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<script 
+  src="/personal-site/js/color-mode.f14b3e296de1d0b69e75af684b62a4a912a2cadab04e36123407cd8388204f1d.js"
+  integrity="sha256-8Us&#43;KW3h0Laeda9oS2KkqRKiytqwTjYSNAfNg4ggTx0=">
+</script>
+
+
+<link rel="stylesheet" href="/personal-site/main.c0e24d0bb4526375ef42a8fffa4eb23f8f782cb58ac9f07c6886fe943a0ed00e176b284d9d1a5b8e9d68a3f2f5918367e18fe55f5fde9451a8c6d3fe85342b7b.css" integrity="sha512-wOJNC7RSY3XvQqj/&#43;k6yP494LLWKyfB8aIb&#43;lDoO0A4XayhNnRpbjp1oo/L1kYNn4Y/lX1/elFGoxtP&#43;hTQrew==" crossorigin="anonymous">
+
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+	
+<title>K&amp;R - Chapter 2 - Types, Operators, Expressions</title>
+  
+<meta name="description" content="A reference site with summary of various coding topics">
+
+
+
+</head>
+
+  
+  <body class="single section docs" data-bs-spy="scroll" data-bs-target="#toc" data-bs-root-margin="0px 0px -60%" data-bs-smooth-scroll="true" tabindex="0">
+    <div class="sticky-top">
+<header class="navbar navbar-expand-lg">
+  <div class="container-lg">
+  
+    <a class="navbar-brand me-auto me-lg-3" href="/personal-site/">Sujith&#39;s Library</a>
+
+    
+    
+    <button type="button" id="searchToggleMobile" class="btn btn-link nav-link mx-2 d-lg-none" aria-label="Search website">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <circle cx="10" cy="10" r="7"></circle>
+        <line x1="21" y1="21" x2="15" y2="15"></line>
+      </svg>
+    </button>
+    
+    <button class="btn btn-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavSection" aria-controls="offcanvasNavSection" aria-label="Open section navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+      </svg>
+    </button>
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavSection" aria-labelledby="offcanvasNavSectionLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavSectionLabel">Docs</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <aside class="doks-sidebar mt-n3">
+          <nav id="doks-docs-nav" aria-label="Tertiary navigation">
+            
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+    <details open>
+      <summary>Python</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/03-print-and-input/">03 - Print and Input</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Python Control Statements</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-01-conditional-branching/">04 Control-Flow - 01 Conditional Branching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-02-match-case/">04 Control-Flow - 02 Match-Case</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-03-range/">04 Control-Flow - 03 Range</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-04-loops/">04 Control-Flow - 04 Loops</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Python Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Primitive Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-01-variables/">01 PDT - 01 Variables</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-02-datatypes/">01 PDT - 02 Datatypes</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-03-operators/">01 PDT - 03 Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-04-int-float/">01 PDT - 04 int &amp; float</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-05-string-manipulation/">01 PDT - 05 String Manipulation</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-06-string-methods/">01 PDT - 06 String Methods</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Complex Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-01-lists/">02 CDT - 01 Lists</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-02-list-methods/">02 CDT - 02 List Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-03-list-operators/">02 CDT - 03 List Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-04-list-vs-arrays/">02 CDT - 04 List Vs Arrays</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-05-tuples/">02 CDT - 05 Tuples</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-06-sets/">02 CDT - 06 Sets</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-07-dictinaries/">02 CDT - 07 Dictinaries</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open open>
+      <summary>C and Data Structures</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open open>
+      <summary>The C Programming Language by Kernighan and Ritchie</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-to-c-language/">K&amp;R - Chapter 0 - Introduction to C language</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-using-python-part-1/">K&amp;R - Chapter 0 - Introduction using Python (Part 1)</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-using-python-part-2/">K&amp;R - Chapter 0 - Introduction using Python (Part 2)</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-1-basic-syntax/">K&amp;R - Chapter 1 - Basic Syntax</a>
+  </li>
+
+  <li class="active" >
+      <a aria-current="page" href="/personal-site/docs/c/kr_c_book/kr-chapter-2-types-operators-expressions/">K&amp;R - Chapter 2 - Types, Operators, Expressions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-3-control-flow/">K&amp;R - Chapter 3 - Control Flow</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-4-function-program-structure/">K&amp;R - Chapter 4 - Function, Program Structure</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-5-pointers-arrays/">K&amp;R - Chapter 5 - Pointers, Arrays</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-6-structures/">K&amp;R - Chapter 6 - Structures</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-6.1-structures/">K&amp;R - Chapter 6.1 - Structures</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Data Structures Using C</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/01-tower-of-hanoi/">01 - Tower of Hanoi</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/02-stack-operations/">02 - Stack Operations</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/03-infix-to-postfix-conversion/">03 - Infix to Postfix Conversion</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/04-postfix-expression-evaluation/">04 - Postfix Expression Evaluation</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/05-queue/">05 - Queue</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/06-circular-queue/">06 - Circular Queue</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/07-singly-linked-list/">07 - Singly Linked List</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>JavaScript</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>JS Language</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.01-variables/">JS - 01.01 - Variables</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.02-values-and-types/">JS - 01.02 - Values and Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.03-number-types/">JS - 01.03 - Number Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.04-number-methods/">JS - 01.04 - Number Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.05-string-type/">JS - 01.05 - String Type</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.06-string-methods/">JS - 01.06 - String Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.07-modifying-string/">JS - 01.07 - Modifying String</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.08-boolean-type/">JS - 01.08 - Boolean Type</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.09-operators/">JS - 01.09 - Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.10-auto-type-conversions/">JS - 01.10 - Auto Type Conversions</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Control Flow</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Conditionals</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.01-if-else/">JS - 02.01 - if, else</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.02-switch-case/">JS - 02.02 - switch-case</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.03-ternary-operator/">JS - 02.03 - Ternary Operator</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.04-logical-operators/">JS - 02.04 - Logical Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.05-short-circuiting/">JS - 02.05 - Short Circuiting</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Loops</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.11-do-while-loop/">JS - 02.11 - do-while Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.12-for-loop/">JS - 02.12 - for Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.13-for-of-loop/">JS - 02.13 - for-of Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.14-for-in-loop/">JS - 02.14 - for-in Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.15-break-continue-label/">JS - 02.15 - break-continue-label</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.16-iterables/">JS - 02.16 - Iterables</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Functions</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.01-function/">JS - 03.01 - Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.02-defining-function/">JS - 03.02 - Defining Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.03-arrow-function/">JS - 03.03 - Arrow Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.04-scope-of-variable/">JS - 03.04 - Scope of Variable</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.05-parameters-arguments/">JS - 03.05 - Parameters &amp; Arguments</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.06-return-recursion-call-stack/">JS - 03.06 - Return, Recursion, Call Stack</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.07-scheduling/">JS - 03.07 - Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.08-decorators/">JS - 03.08 - Decorators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.09-function-object/">JS - 03.09 - Function Object</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Objects</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.01-object/">JS - 04.01 - Object</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.02-object-properties/">JS - 04.02 - Object Properties</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.03-cloning-object/">JS - 04.03 - Cloning Object</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.04-object.keys/">JS - 04.04 - Object.keys()</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.05-methods-this-chaining/">JS - 04.05 - Methods, this, Chaining</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.06-constructor-new/">JS - 04.06 - Constructor new</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Arrays</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.01-array/">JS - 05.01 - Array</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.02-array-methods/">JS - 05.02 - Array Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.03-filter-method/">JS - 05.03 - Filter Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.04-map-method/">JS - 05.04 - Map Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.05-reduce-method/">JS - 05.05 - Reduce Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.06-sort-method/">JS - 05.06 - Sort Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.07-rest-spread/">JS - 05.07 - Rest &amp; Spread</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/">JavaScript DOM Manipulation</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>HTML &amp; CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>HTML</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-01-boiler-plate/">HTML - 01 - Boiler Plate</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-02-texts-lists/">HTML - 02 - Texts &amp; Lists</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-03-links-images/">HTML - 03 - Links &amp; Images</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-04-input-types/">HTML - 04 - Input Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-05-button/">HTML - 05 - Button</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-06-dom-events/">HTML - 06 - DOM Events</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-01-selectors/">CSS - 01 -Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-02-multiple-selecors/">CSS - 02 - Multiple Selecors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-03-declaration/">CSS - 03 - Declaration</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-04-adding-css/">CSS - 04 - Adding CSS</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-05-box-model/">CSS - 05 - Box Model</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-06-flexbox/">CSS - 06 - Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-07-flex-flexibility/">CSS - 07 - Flex Flexibility</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-08-axes-in-flexbox/">CSS - 08 - Axes in Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-09-utility-class-inheritance/">CSS - 09 - Utility Class &amp; Inheritance</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>CSS Reference</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css_resource/css-04.1-size-units/">CSS - 04.1 - Size Units</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css_resource/css-04.2-color-values/">CSS - 04.2 - Color Values</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Tools &amp; Accesories</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/tools/obsidian/">Obsidian</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/vs-code/">VS Code</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/git-github/">Git &amp; Github</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Linux - Bash &amp; OS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Linux OS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-01-linux-kernel/">Linux OS - 01 - Linux Kernel</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-02-forms-of-process-management/">Linux OS - 02 - Forms of Process Management</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-03-system-resources/">Linux OS - 03 System Resources</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Linx Bash</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-01-basics/">Bash - 01 - Basics</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-02-features/">Bash - 02 - Features</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-03-help-pages/">Bash - 03 - help pages</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-04-variables-and-aliases/">Bash - 04 - Variables and Aliases</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-05-listing-files/">Bash - 05 - Listing Files</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-06-environment-and-subshell/">Bash - 06 - Environment and Subshell</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-08-basic-file-commands/">Bash - 08 - Basic File Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-07-storage-terminology-in-linux/">Bash - 07 - Storage Terminology in Linux</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-08.1-bc-and-date/">Bash - 08.1 - bc and date</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-09-file-movement-and-copy-commands/">Bash - 09 - File Movement and Copy Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-10-file-viewing-and-editing-commands/">Bash - 10 - File Viewing and Editing Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-11-file-permissions/">Bash - 11 - File Permissions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-12-hard-and-soft-links/">Bash - 12 - Hard and Soft Links</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13-regular-expressions/">Bash - 13 - Regular Expressions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13.1-regex-expanded/">Bash - 13.1 - regex Expanded</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13.2-regex-matching/">Bash - 13.2 - regex Matching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-14-file-searching/">Bash - 14 - File Searching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-15-neovim/">Bash - 15 - Neovim</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-16-egrep/">Bash - 16 - egrep</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-17-sed/">Bash - 17 - sed</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Database Management Systems</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Structured Query Language (SQL)</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-0-quering/">SQL - 0 Quering</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-01-relating/">SQL - 01 Relating</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-02-designing/">SQL - 02 Designing</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-03-writing/">SQL - 03 Writing</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-04-viewing/">SQL - 04 Viewing</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-05-optimizing/">SQL - 05 Optimizing</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-06-scaling/">SQL - 06 Scaling</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Operating System Concepts</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/0-os-short-notes-unit-1/">0 - OS - Short Notes (Unit 1)</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/0-os-short-notes-unit-2/">0 - OS - Short Notes (Unit 2)</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>OS - 01 - Operating Systems Introduction</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c01_introduction/os-1.01-operating-systems-introduction/">OS 1.01 - Operating Systems Introduction</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c01_introduction/os-1.05-os-operations/">OS 1.05 - OS Operations</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c01_introduction/os-1.11-computing-environments/">OS 1.11 - Computing Environments</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Chapter 02 - System Structure</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.01-os-services/">OS 2.01 - OS Services</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.03-system-calls/">OS 2.03 - System Calls</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.04-types-of-system-calls/">OS 2.04 - Types Of System Calls</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.05-system-programs/">OS 2.05 - System Programs</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.07-os-structure/">OS 2.07 - OS Structure</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.10-system-boot/">OS 2.10 - System Boot</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Chapter 03 - Process Concept</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c03_process_concept/os-3.01-process-concept/">OS 3.01 - Process Concept</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c03_process_concept/os-3.02-process-scheduling/">OS 3.02 - Process Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c03_process_concept/os-3.04-inter-process-communication/">OS 3.04 - Inter-Process Communication</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Chapter 05 - Process Scheduling</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.01-process-scheduling/">OS 5.01 - Process Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03-scheduling-algorithms/">OS 5.03 - Scheduling Algorithms</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03.02-shortest-job-first/">OS 5.03.02 - Shortest Job First</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03.03-priority-scheduling/">OS 5.03.03 - Priority Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03.04-round-robin-scheduling/">OS 5.03.04 - Round-Robin Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03.05-multi-level-queue-scheduling/">OS 5.03.05 - Multi-Level Queue Scheduling</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Chapter 6 -  Process Synchronization</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.01-process-synchronization/">OS 6.01 - Process Synchronization</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.02-critical-section-problem/">OS 6.02 - Critical-Section Problem</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.05-mutex-locks/">OS 6.05 - Mutex Locks</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.06-semaphores/">OS 6.06 - Semaphores</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.07-classic-problems/">OS 6.07 - Classic Problems</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/0-os-previous-questions-unit-1-2/">0 - OS - Previous Questions (Unit 1 &amp; 2)</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+          </nav>
+        </aside>
+      </div>
+    </div>
+    
+    <button class="btn btn-link nav-link mx-2 order-3 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavMain" aria-controls="offcanvasNavMain" aria-label="Open main navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <line x1="4" y1="8" x2="20" y2="8"></line>
+        <line x1="4" y1="16" x2="20" y2="16"></line>
+      </svg>
+    </button>
+
+    
+    <div class="offcanvas offcanvas-end h-auto" tabindex="-1" id="offcanvasNavMain" aria-labelledby="offcanvasNavMainLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavMainLabel">Sujith&#39;s Library</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+         </svg>
+        </button>
+      </div>
+      
+      <div class="offcanvas-body d-flex flex-column flex-lg-row justify-content-between">
+        <ul class="navbar-nav flex-grow-1"><li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/python/">Python</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/html-css/">HTML/CSS</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/java-script/">JavaScript</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/java-script-dom/">JS DOM</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/c/">C &amp; DSA</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/bash-linux/">Linux</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/os/">OS</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/dbms/">DBMS</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/tools/">Tools</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/blog/">Blog</a>
+              </li>
+            </ul>
+
+        
+        
+        <button type="button" id="searchToggleDesktop" class="btn btn-link nav-link p-2 d-none d-lg-block" aria-label="Search website">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <circle cx="10" cy="10" r="7"></circle>
+            <line x1="21" y1="21" x2="15" y2="15"></line>
+          </svg>
+        </button>
+        
+        
+        
+        <button id="buttonColorMode" class="btn btn-link mx-auto nav-link p-0 ms-lg-2 me-lg-1" type="button" aria-label="Toggle theme">
+          <svg data-bs-theme-value="dark" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+          </svg>
+          <svg data-bs-theme-value="light" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0m-5 0h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+          </svg>
+        </button>
+        
+        <ul id="socialMenu" class="nav mx-auto flex-row order-lg-4">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/sujith-eag"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg><small class="ms-2 visually-hidden">GitHub</small></a>
+            </li>
+          </ul>
+        
+        </div>
+    </div>
+
+    
+    </div>
+</header>
+</div>
+
+<div class="modal" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-md-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 visually-hidden" id="searchModalLabel">Search</h1>
+        <button type="button" class="btn-close visually-hidden" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="search-input flex-grow-1 d-none">
+          <form id="search-form" class="search-form" action="#" method="post" accept-charset="UTF-8" role="search">
+            <label for="query" class="visually-hidden">Search</label>
+            <div class="d-flex">
+              <input type="search" id="query" name="query" class="search-text form-control form-control-lg" placeholder="Search" aria-label="Search" maxlength="128" autocomplete="off">
+              <button type="button" class="btn btn-link text-decoration-none px-0 ms-3 d-md-none" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-body">
+        <p class="search-loading status message d-none mt-3 text-center">Loading search index…</p>
+        <p class="search-no-recent message d-none mt-3 text-center">No recent searches</p>
+        <p class="search-no-results message d-none mt-3 text-center">No results for "<strong><span class="query-no-results">Query here</span></strong>"</p>
+        <div id="searchResults" class="search-results"></div>
+        <template>
+          <article class="search-result list-view">
+            <div class="card my-3">
+              <div class="card-body">
+                <header>
+                  <h2 class="h5 title title-submitted mb-0"><a class="stretched-link text-decoration-none text-reset" href="#">Title here</a></h2>
+                  <div class="submitted d-none"><time class="created-date">Date here</time></div>
+                </header>
+                <div class="content">Summary here</div>
+              </div>
+            </div>
+          </article>
+        </template>
+      </div>
+      <div class="modal-footer">
+        <ul class="list-inline me-auto d-none d-md-block">
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Enter key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M12 3.53088v3c0 1-1 2-2 2H4M7 11.53088l-3-3 3-3"></path></g></svg></kbd><span class="DocSearch-Label">to select</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow down" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 3.5v8M10.5 8.5l-3 3-3-3"></path></g></svg></kbd><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow up" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 11.5v-8M10.5 6.5l-3-3-3 3"></path></g></svg></kbd><span class="DocSearch-Label">to navigate</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Escape key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M13.6167 8.936c-.1065.3583-.6883.962-1.4875.962-.7993 0-1.653-.9165-1.653-2.1258v-.5678c0-1.2548.7896-2.1016 1.653-2.1016.8634 0 1.3601.4778 1.4875 1.0724M9 6c-.1352-.4735-.7506-.9219-1.46-.8972-.7092.0246-1.344.57-1.344 1.2166s.4198.8812 1.3445.9805C8.465 7.3992 8.968 7.9337 9 8.5c.032.5663-.454 1.398-1.4595 1.398C6.6593 9.898 6 9 5.963 8.4851m-1.4748.5368c-.2635.5941-.8099.876-1.5443.876s-1.7073-.6248-1.7073-2.204v-.4603c0-1.0416.721-2.131 1.7073-2.131.9864 0 1.6425 1.031 1.5443 2.2492h-2.956"></path></g></svg></kbd><span class="DocSearch-Label">to close</span></li>
+        </ul>
+        <p class="d-md-none">Search by <a class="text-decoration-none" href="https://github.com/nextapps-de/flexsearch">FlexSearch</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="wrap container-lg" role="document">
+      <div class="content">
+      
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+    <details open>
+      <summary>Python</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/03-print-and-input/">03 - Print and Input</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Python Control Statements</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-01-conditional-branching/">04 Control-Flow - 01 Conditional Branching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-02-match-case/">04 Control-Flow - 02 Match-Case</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-03-range/">04 Control-Flow - 03 Range</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-04-loops/">04 Control-Flow - 04 Loops</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Python Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Primitive Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-01-variables/">01 PDT - 01 Variables</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-02-datatypes/">01 PDT - 02 Datatypes</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-03-operators/">01 PDT - 03 Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-04-int-float/">01 PDT - 04 int &amp; float</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-05-string-manipulation/">01 PDT - 05 String Manipulation</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-06-string-methods/">01 PDT - 06 String Methods</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Complex Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-01-lists/">02 CDT - 01 Lists</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-02-list-methods/">02 CDT - 02 List Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-03-list-operators/">02 CDT - 03 List Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-04-list-vs-arrays/">02 CDT - 04 List Vs Arrays</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-05-tuples/">02 CDT - 05 Tuples</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-06-sets/">02 CDT - 06 Sets</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-07-dictinaries/">02 CDT - 07 Dictinaries</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open open>
+      <summary>C and Data Structures</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open open>
+      <summary>The C Programming Language by Kernighan and Ritchie</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-to-c-language/">K&amp;R - Chapter 0 - Introduction to C language</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-using-python-part-1/">K&amp;R - Chapter 0 - Introduction using Python (Part 1)</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-using-python-part-2/">K&amp;R - Chapter 0 - Introduction using Python (Part 2)</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-1-basic-syntax/">K&amp;R - Chapter 1 - Basic Syntax</a>
+  </li>
+
+  <li class="active" >
+      <a aria-current="page" href="/personal-site/docs/c/kr_c_book/kr-chapter-2-types-operators-expressions/">K&amp;R - Chapter 2 - Types, Operators, Expressions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-3-control-flow/">K&amp;R - Chapter 3 - Control Flow</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-4-function-program-structure/">K&amp;R - Chapter 4 - Function, Program Structure</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-5-pointers-arrays/">K&amp;R - Chapter 5 - Pointers, Arrays</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-6-structures/">K&amp;R - Chapter 6 - Structures</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-6.1-structures/">K&amp;R - Chapter 6.1 - Structures</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Data Structures Using C</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/01-tower-of-hanoi/">01 - Tower of Hanoi</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/02-stack-operations/">02 - Stack Operations</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/03-infix-to-postfix-conversion/">03 - Infix to Postfix Conversion</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/04-postfix-expression-evaluation/">04 - Postfix Expression Evaluation</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/05-queue/">05 - Queue</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/06-circular-queue/">06 - Circular Queue</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/07-singly-linked-list/">07 - Singly Linked List</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>JavaScript</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>JS Language</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.01-variables/">JS - 01.01 - Variables</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.02-values-and-types/">JS - 01.02 - Values and Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.03-number-types/">JS - 01.03 - Number Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.04-number-methods/">JS - 01.04 - Number Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.05-string-type/">JS - 01.05 - String Type</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.06-string-methods/">JS - 01.06 - String Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.07-modifying-string/">JS - 01.07 - Modifying String</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.08-boolean-type/">JS - 01.08 - Boolean Type</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.09-operators/">JS - 01.09 - Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.10-auto-type-conversions/">JS - 01.10 - Auto Type Conversions</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Control Flow</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Conditionals</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.01-if-else/">JS - 02.01 - if, else</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.02-switch-case/">JS - 02.02 - switch-case</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.03-ternary-operator/">JS - 02.03 - Ternary Operator</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.04-logical-operators/">JS - 02.04 - Logical Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.05-short-circuiting/">JS - 02.05 - Short Circuiting</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Loops</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.11-do-while-loop/">JS - 02.11 - do-while Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.12-for-loop/">JS - 02.12 - for Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.13-for-of-loop/">JS - 02.13 - for-of Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.14-for-in-loop/">JS - 02.14 - for-in Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.15-break-continue-label/">JS - 02.15 - break-continue-label</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.16-iterables/">JS - 02.16 - Iterables</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Functions</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.01-function/">JS - 03.01 - Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.02-defining-function/">JS - 03.02 - Defining Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.03-arrow-function/">JS - 03.03 - Arrow Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.04-scope-of-variable/">JS - 03.04 - Scope of Variable</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.05-parameters-arguments/">JS - 03.05 - Parameters &amp; Arguments</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.06-return-recursion-call-stack/">JS - 03.06 - Return, Recursion, Call Stack</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.07-scheduling/">JS - 03.07 - Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.08-decorators/">JS - 03.08 - Decorators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.09-function-object/">JS - 03.09 - Function Object</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Objects</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.01-object/">JS - 04.01 - Object</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.02-object-properties/">JS - 04.02 - Object Properties</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.03-cloning-object/">JS - 04.03 - Cloning Object</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.04-object.keys/">JS - 04.04 - Object.keys()</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.05-methods-this-chaining/">JS - 04.05 - Methods, this, Chaining</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.06-constructor-new/">JS - 04.06 - Constructor new</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Arrays</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.01-array/">JS - 05.01 - Array</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.02-array-methods/">JS - 05.02 - Array Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.03-filter-method/">JS - 05.03 - Filter Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.04-map-method/">JS - 05.04 - Map Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.05-reduce-method/">JS - 05.05 - Reduce Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.06-sort-method/">JS - 05.06 - Sort Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.07-rest-spread/">JS - 05.07 - Rest &amp; Spread</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/">JavaScript DOM Manipulation</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>HTML &amp; CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>HTML</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-01-boiler-plate/">HTML - 01 - Boiler Plate</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-02-texts-lists/">HTML - 02 - Texts &amp; Lists</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-03-links-images/">HTML - 03 - Links &amp; Images</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-04-input-types/">HTML - 04 - Input Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-05-button/">HTML - 05 - Button</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-06-dom-events/">HTML - 06 - DOM Events</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-01-selectors/">CSS - 01 -Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-02-multiple-selecors/">CSS - 02 - Multiple Selecors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-03-declaration/">CSS - 03 - Declaration</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-04-adding-css/">CSS - 04 - Adding CSS</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-05-box-model/">CSS - 05 - Box Model</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-06-flexbox/">CSS - 06 - Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-07-flex-flexibility/">CSS - 07 - Flex Flexibility</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-08-axes-in-flexbox/">CSS - 08 - Axes in Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-09-utility-class-inheritance/">CSS - 09 - Utility Class &amp; Inheritance</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>CSS Reference</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css_resource/css-04.1-size-units/">CSS - 04.1 - Size Units</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css_resource/css-04.2-color-values/">CSS - 04.2 - Color Values</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Tools &amp; Accesories</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/tools/obsidian/">Obsidian</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/vs-code/">VS Code</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/git-github/">Git &amp; Github</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Linux - Bash &amp; OS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Linux OS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-01-linux-kernel/">Linux OS - 01 - Linux Kernel</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-02-forms-of-process-management/">Linux OS - 02 - Forms of Process Management</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-03-system-resources/">Linux OS - 03 System Resources</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Linx Bash</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-01-basics/">Bash - 01 - Basics</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-02-features/">Bash - 02 - Features</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-03-help-pages/">Bash - 03 - help pages</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-04-variables-and-aliases/">Bash - 04 - Variables and Aliases</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-05-listing-files/">Bash - 05 - Listing Files</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-06-environment-and-subshell/">Bash - 06 - Environment and Subshell</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-08-basic-file-commands/">Bash - 08 - Basic File Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-07-storage-terminology-in-linux/">Bash - 07 - Storage Terminology in Linux</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-08.1-bc-and-date/">Bash - 08.1 - bc and date</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-09-file-movement-and-copy-commands/">Bash - 09 - File Movement and Copy Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-10-file-viewing-and-editing-commands/">Bash - 10 - File Viewing and Editing Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-11-file-permissions/">Bash - 11 - File Permissions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-12-hard-and-soft-links/">Bash - 12 - Hard and Soft Links</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13-regular-expressions/">Bash - 13 - Regular Expressions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13.1-regex-expanded/">Bash - 13.1 - regex Expanded</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13.2-regex-matching/">Bash - 13.2 - regex Matching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-14-file-searching/">Bash - 14 - File Searching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-15-neovim/">Bash - 15 - Neovim</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-16-egrep/">Bash - 16 - egrep</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-17-sed/">Bash - 17 - sed</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Database Management Systems</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Structured Query Language (SQL)</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-0-quering/">SQL - 0 Quering</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-01-relating/">SQL - 01 Relating</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-02-designing/">SQL - 02 Designing</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-03-writing/">SQL - 03 Writing</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-04-viewing/">SQL - 04 Viewing</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-05-optimizing/">SQL - 05 Optimizing</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-06-scaling/">SQL - 06 Scaling</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Operating System Concepts</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/0-os-short-notes-unit-1/">0 - OS - Short Notes (Unit 1)</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/0-os-short-notes-unit-2/">0 - OS - Short Notes (Unit 2)</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>OS - 01 - Operating Systems Introduction</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c01_introduction/os-1.01-operating-systems-introduction/">OS 1.01 - Operating Systems Introduction</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c01_introduction/os-1.05-os-operations/">OS 1.05 - OS Operations</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c01_introduction/os-1.11-computing-environments/">OS 1.11 - Computing Environments</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Chapter 02 - System Structure</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.01-os-services/">OS 2.01 - OS Services</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.03-system-calls/">OS 2.03 - System Calls</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.04-types-of-system-calls/">OS 2.04 - Types Of System Calls</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.05-system-programs/">OS 2.05 - System Programs</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.07-os-structure/">OS 2.07 - OS Structure</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.10-system-boot/">OS 2.10 - System Boot</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Chapter 03 - Process Concept</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c03_process_concept/os-3.01-process-concept/">OS 3.01 - Process Concept</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c03_process_concept/os-3.02-process-scheduling/">OS 3.02 - Process Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c03_process_concept/os-3.04-inter-process-communication/">OS 3.04 - Inter-Process Communication</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Chapter 05 - Process Scheduling</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.01-process-scheduling/">OS 5.01 - Process Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03-scheduling-algorithms/">OS 5.03 - Scheduling Algorithms</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03.02-shortest-job-first/">OS 5.03.02 - Shortest Job First</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03.03-priority-scheduling/">OS 5.03.03 - Priority Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03.04-round-robin-scheduling/">OS 5.03.04 - Round-Robin Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03.05-multi-level-queue-scheduling/">OS 5.03.05 - Multi-Level Queue Scheduling</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Chapter 6 -  Process Synchronization</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.01-process-synchronization/">OS 6.01 - Process Synchronization</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.02-critical-section-problem/">OS 6.02 - Critical-Section Problem</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.05-mutex-locks/">OS 6.05 - Mutex Locks</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.06-semaphores/">OS 6.06 - Semaphores</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.07-classic-problems/">OS 6.07 - Classic Problems</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/0-os-previous-questions-unit-1-2/">0 - OS - Previous Questions (Unit 1 &amp; 2)</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+		</div>
+		
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="page-links">
+  <h3>On this page</h3>
+    <nav id="toc">
+  <ul>
+    <li><a href="#chapter-2---types-operators-and-expressions">Chapter 2 - Types, Operators and Expressions</a>
+      <ul>
+        <li><a href="#21-variable-names">2.1 Variable names</a></li>
+        <li><a href="#22-data-types-and-sizes">2.2 Data types and sizes</a></li>
+        <li><a href="#23-constants">2.3 Constants</a></li>
+        <li><a href="#24-declarations">2.4 Declarations</a></li>
+        <li><a href="#25-arithmetic-operators">2.5 Arithmetic Operators</a></li>
+        <li><a href="#26-relational-and-logical-operators">2.6 Relational and Logical Operators</a></li>
+        <li><a href="#27-type-conversion">2.7 Type Conversion</a></li>
+        <li><a href="#28-increment-and-decrement-operators">2.8 Increment and Decrement Operators</a></li>
+        <li><a href="#29-bitwise-operators">2.9 Bitwise Operators</a></li>
+        <li><a href="#210-assignment-operators-and-expressions">2.10 Assignment Operators and Expressions</a></li>
+        <li><a href="#211-conditional-expressions">2.11 Conditional Expressions</a></li>
+        <li><a href="#212-precedence-and-order-of-evaluation">2.12 Precedence and Order of Evaluation</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+			<h1>K&amp;R - Chapter 2 - Types, Operators, Expressions</h1>
+			
+			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
+				<details>
+    <summary>On this page</summary>
+    <div class="page-links">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#chapter-2---types-operators-and-expressions">Chapter 2 - Types, Operators and Expressions</a>
+      <ul>
+        <li><a href="#21-variable-names">2.1 Variable names</a></li>
+        <li><a href="#22-data-types-and-sizes">2.2 Data types and sizes</a></li>
+        <li><a href="#23-constants">2.3 Constants</a></li>
+        <li><a href="#24-declarations">2.4 Declarations</a></li>
+        <li><a href="#25-arithmetic-operators">2.5 Arithmetic Operators</a></li>
+        <li><a href="#26-relational-and-logical-operators">2.6 Relational and Logical Operators</a></li>
+        <li><a href="#27-type-conversion">2.7 Type Conversion</a></li>
+        <li><a href="#28-increment-and-decrement-operators">2.8 Increment and Decrement Operators</a></li>
+        <li><a href="#29-bitwise-operators">2.9 Bitwise Operators</a></li>
+        <li><a href="#210-assignment-operators-and-expressions">2.10 Assignment Operators and Expressions</a></li>
+        <li><a href="#211-conditional-expressions">2.11 Conditional Expressions</a></li>
+        <li><a href="#212-precedence-and-order-of-evaluation">2.12 Precedence and Order of Evaluation</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  </details>
+
+			</nav>
+			<p>Section 2.2 - Data types and storage allocation - Character, integer, short, long.
+Section 2.7 - Type conversion
+Section 2.9 - Bit-wise Logical operations</p>
+<hr>
+<h2 id="chapter-2---types-operators-and-expressions">Chapter 2 - Types, Operators and Expressions<a href="#chapter-2---types-operators-and-expressions" class="anchor" aria-hidden="true">#</a> </h2>
+<p>Declaration lists the variables being used, along with their type and perhaps their initial value.<br>
+Operators specify what is to be done to them.<br>
+Expressions combine Variables and constants to produce new values.</p>
+<p>There are <em>signed</em> and <em>unsigned</em> forms of all integer types.</p>
+<h3 id="21-variable-names">2.1 Variable names<a href="#21-variable-names" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Naming conventions&hellip;<br>
+lower case for variable names and all upper case for symbolic constants.<br>
+Significant characters of a name (31), Uniqueness for</p>
+<h3 id="22-data-types-and-sizes">2.2 Data types and sizes<a href="#22-data-types-and-sizes" class="anchor" aria-hidden="true">#</a> </h3>
+<p><code>char, int, float, double</code></p>
+<p>Qualifiers that can be applied to these basic types are,<br>
+<code>short, long</code> here <code>int</code> can be omitted also.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">short</span> <span class="kt">int</span> <span class="n">sh</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">long</span> <span class="kt">int</span> <span class="n">sh</span><span class="p">;</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Qualifiers <code>signed, unsigned</code> can be used for <code>char</code> or any integer.</p>
+<p><code>unsigned char</code> numbers are positive or zero, between 0 and 255,<br>
+<code>signed char</code> has values b/w <code>-128 127</code>.<br>
+<code>long double</code> specifies extended-precision floating point.</p>
+<h3 id="23-constants">2.3 Constants<a href="#23-constants" class="anchor" aria-hidden="true">#</a> </h3>
+<p><em><strong>Integer constant</strong></em><br>
+<strong>long constants</strong> with terminal <code>l</code><br>
+<strong>unsigned constants</strong> with terminal <code>u</code></p>
+<p>suffixes, <code>ul - unsigned double</code>, <code>f - float</code>, <code>l - long double</code></p>
+<p>Leading <code>0</code> in an integer constant meas octal, decimal <code>31</code> can be written as  <code>037</code>
+leading <code>0x</code> means hexadecimal <code>31</code> becomes <code>0x1f</code></p>
+<p>A <em><strong>Character constant</strong></em> is an integer, <code>0 is 48 in ASCII</code><br>
+these participate in numeric operations just as any other integers, although they are mostly used in comparison with other characters.</p>
+<p><em><strong>Escape sequences</strong></em> which looks like 2 character but is only one. <code>\n  \v  \0</code></p>
+<p>A <em><strong>constant expression</strong></em> involves only constants and are evaluated during <em>compilation time</em> rather than runtime.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#define MAXLINE 1000
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">char</span> <span class="n">line</span><span class="p">[</span><span class="n">MAXLINE</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">#define LEAP 1
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">int</span> <span class="n">days</span><span class="p">[</span><span class="mi">31</span><span class="o">+</span><span class="mi">28</span><span class="o">+</span><span class="n">LEAP</span><span class="o">+</span><span class="mi">31</span><span class="p">];</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p><em><strong>string constant/literal</strong></em> is sequence of zero or more characters surrounded by double quotes <code>&quot;&quot;</code>.<br>
+Technically it is an <em><strong>array of characters</strong></em>.<br>
+The strings internal representation has a <em>null character</em> <code>\0</code> at the end. So the physical storage is one one more than number of characters.</p>
+<p><code>strlen</code> and other string functions are declared in the standard header <code>&lt;string.h&gt;</code>.
+It returns length of character string excluding <code>\0</code></p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">strlen</span><span class="p">(</span><span class="kt">char</span> <span class="n">s</span><span class="p">[])</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="sc">&#39;\0&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="o">++</span><span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p><code>'x' &quot;x&quot;</code> are not the same.<br>
+One is a an integer representing x, and other is array of characters containing x and <code>\0</code></p>
+<p><em><strong>enumeration constant</strong></em> is a list of constant integer values.<br>
+The first name in <code>enum</code> has value 0, next 1 so on. Unless explicit values are specified.<br>
+If not all values are specified, unspecified values continue the progression from the last specified.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">enum</span> <span class="nf">boolean</span> <span class="p">(</span><span class="n">NO</span><span class="p">,</span> <span class="n">YES</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">enum</span> <span class="nf">escapes</span> <span class="p">(</span><span class="n">BELL</span> <span class="o">=</span> <span class="sc">&#39;\a&#39;</span><span class="p">,</span> <span class="n">BACKSPACE</span> <span class="o">=</span> <span class="sc">&#39;\b&#39;</span><span class="p">,</span> <span class="n">TAB</span> <span class="o">=</span> <span class="sc">&#39;\t&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">enum</span> <span class="nf">months</span> <span class="p">(</span> <span class="n">JAN</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">FEB</span><span class="p">,</span> <span class="n">MAR</span><span class="p">,</span> <span class="n">APR</span><span class="p">,</span> <span class="n">MAY</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="cm">/* FEB = 2, MAR = 3 etc*/</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Names of <code>enum</code> have to be distinct but values need not be.<br>
+This can be an alternative to <code>#define</code></p>
+<h3 id="24-declarations">2.4 Declarations<a href="#24-declarations" class="anchor" aria-hidden="true">#</a> </h3>
+<p>All variables must be declared before use,<br>
+certain declarations can be made implicitly by content.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">,</span> <span class="n">step</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">char</span> <span class="n">c</span><span class="p">,</span> <span class="n">line</span><span class="p">[</span><span class="mi">1000</span><span class="p">];</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Can be done individually which allows for adding comments.</p>
+<p>A variable can also be initialized during its declaration.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">char</span> <span class="n">esc</span> <span class="o">=</span> <span class="sc">&#39;\\&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">limit</span> <span class="o">=</span> <span class="n">MAXLINE</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">float</span> <span class="n">eps</span> <span class="o">=</span> <span class="mf">1.0e-5</span><span class="p">;</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>The initializer must be a constant expression as initialization is done only once before the program execution.<br>
+An explicitly initialized automatic variable is initialized each time the function or block it is in is entered; the initializer may be an expression.</p>
+<p>The qualifier <code>const</code> can be applied to the declaration of any variable to specify the value will not change. It can be used with any arguments.<br>
+<code>const double e = 2.7182818;</code><br>
+<code>const char msg[] = &quot;warning: &quot;;</code><br>
+<code>int strlen (const char[]);</code></p>
+<p>The result is implementation defined if an attempt is made to change a <code>const</code></p>
+<h3 id="25-arithmetic-operators">2.5 Arithmetic Operators<a href="#25-arithmetic-operators" class="anchor" aria-hidden="true">#</a> </h3>
+<p><code>+ - * / %</code></p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">((</span><span class="n">year</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">||</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">400</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%d is a leap year</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">year</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%d is not a leap year</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">year</span><span class="p">);</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p><code>%</code> cannot be applied to float or double.</p>
+<h3 id="26-relational-and-logical-operators">2.6 Relational and Logical Operators<a href="#26-relational-and-logical-operators" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Relational operators <code>&gt; &gt;= &lt; &lt;=</code><br>
+Equality operators <code>==  !=</code><br>
+These have lower precedence than arithmetic operators.</p>
+<p><code>&amp;&amp; ||</code> is evaluated left to right</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">lim</span><span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="p">(</span> <span class="n">c</span><span class="o">=</span><span class="nf">getchar</span><span class="p">())</span> <span class="o">!=</span> <span class="sc">&#39;\n&#39;</span> <span class="o">&amp;&amp;</span> <span class="n">c</span> <span class="o">!=</span> <span class="n">EOF</span><span class="p">;</span>  <span class="o">++</span><span class="n">i</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">c</span><span class="p">;</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Before reading a new character it is necessary to check that there is room to store it in the array s, so the test <code>i &lt; lim-1</code> must be made first. If failed, must go to read another character.</p>
+<h3 id="27-type-conversion">2.7 Type Conversion<a href="#27-type-conversion" class="anchor" aria-hidden="true">#</a> </h3>
+<p>When an operator has operands of different types, they are converted to a common type according to a small number of rules.<br>
+Converting <code>int</code> to <code>float</code> that happens automatically as there is no loss in information <code>f + i</code>.</p>
+<p>Where information might loose info, like long to short, or float to int may draw a warning but are not illegal.</p>
+<p>In arithmetic operator like <code>+ *</code> which take two operands, if they are of different type the lower type is promoted to higher type.</p>
+<p>String to numeric equivalent</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">atoi</span><span class="p">(</span><span class="kt">char</span> <span class="n">s</span><span class="p">[])</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">n</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	<span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="sc">&#39;0&#39;</span> <span class="o">&amp;&amp;</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="sc">&#39;9&#39;</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="n">n</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">n</span> <span class="o">+</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="sc">&#39;0&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">n</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p><code>s[i] - '0'</code> gives the numeric value of the character stored in <code>s[i]</code></p>
+<h3 id="28-increment-and-decrement-operators">2.8 Increment and Decrement Operators<a href="#28-increment-and-decrement-operators" class="anchor" aria-hidden="true">#</a> </h3>
+<p><code>++</code> adds one, <code>--</code> subtracts one.<br>
+Both can be used as prefix or suffix, both does the job but prefix increments before its values is used, while suffix increments after the value has been used.<br>
+<code>x = n++   x = ++n</code></p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cm">/* squeeze: delete all c from s */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">squeeze</span><span class="p">(</span><span class="kt">char</span> <span class="n">s</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">c</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="sc">&#39;\0&#39;</span><span class="p">;</span>  <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">c</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">	<span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;\0&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Each time a non-c occurs, it is copied into the current j position, and only then is j incremented to be ready for the next character. This is equivalent to</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">	<span class="n">j</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>also</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="sc">&#39;\n&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">c</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="o">++</span><span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>In more compact way</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span> <span class="n">c</span> <span class="o">==</span> <span class="sc">&#39;\n&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">c</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>To concatenate a string to end of another string.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">strcat</span><span class="p">(</span><span class="kt">char</span> <span class="n">s</span><span class="p">[],</span> <span class="kt">char</span> <span class="n">t</span><span class="p">[])</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	<span class="n">i</span> <span class="o">=</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="p">(</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="sc">&#39;\0&#39;</span> <span class="p">)</span>      <span class="cm">/* find end of s */</span>
+</span></span><span class="line"><span class="cl">		<span class="n">i</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="p">(</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="n">j</span><span class="o">++</span><span class="p">]</span> <span class="p">)</span> <span class="o">!=</span> <span class="sc">&#39;\0&#39;</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>As each member is copied from t to s, the postfix ++ is applied to both to make sure they are in position for the next pass through the loop.</p>
+<p><code>s[i++] = t[j++]</code>  i will be in right position!!<br>
+The check of <code> != '\0'</code> is odd !!!</p>
+<h3 id="29-bitwise-operators">2.9 Bitwise Operators<a href="#29-bitwise-operators" class="anchor" aria-hidden="true">#</a> </h3>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="o">&amp;</span>  <span class="o">|</span>  <span class="o">^</span>  <span class="o">&lt;&lt;</span>  <span class="o">&gt;&gt;</span>  <span class="o">~</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h3 id="210-assignment-operators-and-expressions">2.10 Assignment Operators and Expressions<a href="#210-assignment-operators-and-expressions" class="anchor" aria-hidden="true">#</a> </h3>
+<p><code>i = i + 2</code> is <code>i += 2</code><br>
+Here <code>+=</code> is the assignment operator.</p>
+<p>Most binary operators have a corresponding assignment operator <code>op=</code> where <code>op</code> is one of <code>+ - * / % &lt;&lt; &gt;&gt; &amp; ^ |</code></p>
+<p><code>x *= y + 1</code>  is  <code>x = x * (y + 1)</code></p>
+<p>Assignment statement has a value and can occur in expression;<br>
+<code>while ((c=getchar()) != EOF)</code></p>
+<h3 id="211-conditional-expressions">2.11 Conditional Expressions<a href="#211-conditional-expressions" class="anchor" aria-hidden="true">#</a> </h3>
+<p>To get Z as max(a, b)</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="n">z</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">	<span class="n">z</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>The alternate is using ternary operator <code>? :</code></p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">z</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">)</span> <span class="o">?</span> <span class="nl">a</span> <span class="p">:</span> <span class="n">b</span><span class="p">;</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>If (a &gt; b) is true, then z = a,  otherwise z = b</p>
+<p><code>expr1 ? expr2 : expr3</code><br>
+If 1 is true then 2 is evaluated, if false then 3 is evaluated.</p>
+<p>To print <code>n</code> elements from an array, 10 per line, with each separated by one blank line including the terminating newline.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span> <span class="s">&#34;%6d%c&#34;</span><span class="p">,</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="p">(</span><span class="n">i</span><span class="o">%</span><span class="mi">10</span><span class="o">==</span><span class="mi">9</span> <span class="o">||</span> <span class="n">i</span><span class="o">==</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">?</span> <span class="sc">&#39;\n&#39;</span> <span class="o">:</span> <span class="sc">&#39; &#39;</span> <span class="p">);</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h3 id="212-precedence-and-order-of-evaluation">2.12 Precedence and Order of Evaluation<a href="#212-precedence-and-order-of-evaluation" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Left to right and Right to left associativity.</p>
+<p>Writing code that depends on order of evaluation is a bad programming practice as the order might change depending on the compiler and machine run on.</p>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="page-nav d-flex flex-column flex-sm-row">
+	
+	<div class="card w-100">
+			<div class="card-body d-flex">
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M5 12l6 6"></path>
+						<path d="M5 12l6 -6"></path>
+				 	</svg>
+				</div>
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Prev</div>
+					<a href="/personal-site/docs/c/kr_c_book/kr-chapter-1-basic-syntax/" class="stretched-link text-reset text-decoration-none">K&amp;R - Chapter 1 - Basic Syntax</a>
+				</div>
+			</div>
+		</div>
+	<div class="m-2"></div>
+	<div class="card text-end w-100">
+			<div class="card-body d-flex justify-content-end">
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Next</div>
+					<a href="/personal-site/docs/c/kr_c_book/kr-chapter-3-control-flow/" class="stretched-link text-reset text-decoration-none">K&amp;R - Chapter 3 - Control Flow</a>
+				</div>
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M13 18l6 -6"></path>
+						<path d="M13 6l6 6"></path>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</div>
+
+			
+		</main>
+		
+	</div>
+
+      
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-lg">
+    <div class="row">
+      <div class="col-lg-8 text-center text-lg-start">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a class="text-muted" href="/personal-site/privacy/">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 text-center text-lg-end">
+        <ul class="list-inline">
+          <li class="list-inline-item">Made by <a class="text-muted" href="https://sujith-eag.github.io/personal-site/">Sujith</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+<script async
+  src="/personal-site/js/app.ec98ea736af7f8f531281a21224330da682d1dc9973423443b3d5ce8c45c6ea1.js"
+  integrity="sha256-7Jjqc2r3&#43;PUxKBohIkMw2mgtHcmXNCNEOz1c6MRcbqE=">
+</script>
+
+
+
+
+
+<script async
+  src="/personal-site/js/flexsearch.8350d2f520e131f8552ed57c1eadd05c50eccf0427267781442dd8ddf8fdcdf7.js"
+  integrity="sha256-g1DS9SDhMfhVLtV8Hq3QXFDszwQnJneBRC3Y3fj9zfc=">
+</script>
+<script async
+  src="/personal-site/js/search-modal.877cece5b6bc789456f89fa1955ccfcd8a5acdb2179e7882e292a6caa49efe68.js"
+  integrity="sha256-h3zs5ba8eJRW&#43;J&#43;hlVzPzYpazbIXnniC4pKmyqSe/mg=">
+</script>
+
+    
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arrays on Sujith&#39;s Library</title>
+    <link>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/</link>
+    <description>Recent content in Arrays on Sujith&#39;s Library</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2020-2024 Thulite</copyright>
+    <lastBuildDate>Sat, 09 Nov 2024 17:10:12 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JS - 05.01 - Array</title>
+      <link>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/js-05.01-array/</link>
+      <pubDate>Sat, 09 Nov 2024 17:08:28 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/js-05.01-array/</guid>
+      <description>&lt;p&gt;JavaScript arrays are a special type of object used to store ordered sequences of values.   Unlike regular objects, which use named keys (like strings), arrays use numeric indexes.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>JS - 05.02 - Array Methods</title>
+      <link>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/js-05.02-array-methods/</link>
+      <pubDate>Sat, 09 Nov 2024 17:08:52 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/js-05.02-array-methods/</guid>
+      <description>&lt;h1 id=&#34;basic-array-methods&#34;&gt;Basic Array Methods&lt;/h1&gt;&#xA;&lt;p&gt;Properties that contain functions are called methods of the value they belong to,&#xA;as in &lt;code&gt;.toUpperCase&lt;/code&gt; is a method of a string.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>JS - 05.03 - Filter Method</title>
+      <link>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/js-05.03-filter-method/</link>
+      <pubDate>Sat, 09 Nov 2024 17:09:14 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/js-05.03-filter-method/</guid>
+      <description>&lt;h3 id=&#34;filter-method&#34;&gt;&lt;code&gt;filter()&lt;/code&gt; Method&lt;/h3&gt;&#xA;&lt;p&gt;The &lt;code&gt;filter()&lt;/code&gt; method is similar to &lt;code&gt;map()&lt;/code&gt;, as it iterates over the array and applies a callback function on each item. However, instead of transforming the array elements, &lt;code&gt;filter()&lt;/code&gt; returns a &lt;strong&gt;new array&lt;/strong&gt; with only those elements for which the callback function returns &lt;code&gt;true&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>JS - 05.04 - Map Method</title>
+      <link>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/js-05.04-map-method/</link>
+      <pubDate>Sat, 09 Nov 2024 17:09:29 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/js-05.04-map-method/</guid>
+      <description>&lt;h3 id=&#34;transforming-arrays-with-map&#34;&gt;Transforming Arrays with &lt;code&gt;map()&lt;/code&gt;&lt;/h3&gt;&#xA;&lt;p&gt;The &lt;code&gt;map()&lt;/code&gt; method allows you to transform an array by applying a callback function to each element. This method returns a &lt;strong&gt;new array&lt;/strong&gt; where each element has been transformed based on the function provided, without modifying the original array.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>JS - 05.05 - Reduce Method</title>
+      <link>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/js-05.05-reduce-method/</link>
+      <pubDate>Sat, 09 Nov 2024 17:09:41 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/js-05.05-reduce-method/</guid>
+      <description>&lt;h3 id=&#34;reduce-method&#34;&gt;&lt;code&gt;reduce()&lt;/code&gt; Method&lt;/h3&gt;&#xA;&lt;p&gt;The &lt;code&gt;reduce()&lt;/code&gt; method is one of the most powerful and flexible array methods in JavaScript. It allows you to &lt;strong&gt;reduce&lt;/strong&gt; an array to a single value by iterating over all elements and applying a function that combines each element with an accumulator (the result of previous calculations).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>JS - 05.06 - Sort Method</title>
+      <link>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/js-05.06-sort-method/</link>
+      <pubDate>Sat, 09 Nov 2024 17:09:53 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/js-05.06-sort-method/</guid>
+      <description>&lt;h3 id=&#34;sort-method&#34;&gt;&lt;code&gt;sort()&lt;/code&gt; Method&lt;/h3&gt;&#xA;&lt;p&gt;The &lt;code&gt;sort()&lt;/code&gt; method in JavaScript is used to sort the elements of an array &lt;strong&gt;in place&lt;/strong&gt;, meaning it changes the original array, and also returns the sorted array. By default, it converts array elements to strings and sorts them lexicographically (i.e., alphabetically or numerically in string order).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>JS - 05.07 - Rest &amp; Spread</title>
+      <link>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/js-05.07-rest-spread/</link>
+      <pubDate>Sat, 09 Nov 2024 17:10:12 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/js-05.07-rest-spread/</guid>
+      <description>&lt;h3 id=&#34;rest-parameters--and-spread-syntax-httpsjavascriptinforest-parameters-spread&#34;&gt;&lt;a href=&#34;https://javascript.info/rest-parameters-spread&#34;&gt;Rest Parameters (&lt;code&gt;...&lt;/code&gt;) and Spread Syntax (&lt;code&gt;...&lt;/code&gt;)&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;p&gt;In JavaScript, the &lt;strong&gt;rest parameters&lt;/strong&gt; and &lt;strong&gt;spread syntax&lt;/strong&gt; both use the &lt;code&gt;...&lt;/code&gt; syntax, but they serve different purposes.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

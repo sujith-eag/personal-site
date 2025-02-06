@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Functions on Sujith&#39;s Library</title>
+    <link>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/</link>
+    <description>Recent content in Functions on Sujith&#39;s Library</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2020-2024 Thulite</copyright>
+    <lastBuildDate>Sat, 09 Nov 2024 17:04:09 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JS - 03.01 - Function</title>
+      <link>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/js-03.01-function/</link>
+      <pubDate>Sat, 09 Nov 2024 17:00:29 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/js-03.01-function/</guid>
+      <description>&lt;h3 id=&#34;expressions-vs-statements&#34;&gt;&lt;strong&gt;Expressions vs Statements&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Expression&lt;/strong&gt;: A fragment of code that produces a value. Expressions can contain other expressions, allowing for nesting.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>JS - 03.02 - Defining Function</title>
+      <link>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/js-03.02-defining-function/</link>
+      <pubDate>Sat, 09 Nov 2024 17:01:00 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/js-03.02-defining-function/</guid>
+      <description>&lt;p&gt;There are &lt;strong&gt;three ways&lt;/strong&gt; to define a function in JavaScript:&lt;br&gt;&#xA;&lt;strong&gt;Function Expressions&lt;/strong&gt;, &lt;strong&gt;Function Declarations&lt;/strong&gt;, and &lt;strong&gt;Arrow Functions&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;1-function-expression&#34;&gt;&lt;strong&gt;1. Function Expression&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;A &lt;strong&gt;Function Expression&lt;/strong&gt; is when a function is defined as part of an expression.&lt;br&gt;&#xA;The function itself is assigned to a variable, which can then be called later.&lt;br&gt;&#xA;Since the function is part of an expression, it cannot be used before it is defined.&#xA;This allows for creating a function in the middle of any expression.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>JS - 03.03 - Arrow Function</title>
+      <link>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/js-03.03-arrow-function/</link>
+      <pubDate>Sat, 09 Nov 2024 17:01:33 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/js-03.03-arrow-function/</guid>
+      <description>&lt;p&gt;Arrow functions are a concise syntax for defining functions using the &lt;code&gt;=&amp;gt;&lt;/code&gt; syntax, rather than the traditional &lt;code&gt;function&lt;/code&gt; keyword. They offer several advantages, such as more concise syntax and different behavior for &lt;code&gt;this&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>JS - 03.04 - Scope of Variable</title>
+      <link>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/js-03.04-scope-of-variable/</link>
+      <pubDate>Sat, 09 Nov 2024 17:01:58 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/js-03.04-scope-of-variable/</guid>
+      <description>&lt;h2 id=&#34;bindings-and-scopes&#34;&gt;&lt;strong&gt;Bindings and Scopes&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;p&gt;In JavaScript, the &lt;strong&gt;scope&lt;/strong&gt; refers to the context in which variables (bindings) are accessible.&lt;/p&gt;&#xA;&lt;h3 id=&#34;local-variables&#34;&gt;&lt;strong&gt;Local Variables&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;A &lt;strong&gt;local variable&lt;/strong&gt; is declared inside a function or block (e.g., &lt;code&gt;{}&lt;/code&gt;) and is only accessible within that function or block. Each time the function is called, a new instance of the local variables is created.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>JS - 03.05 - Parameters &amp; Arguments</title>
+      <link>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/js-03.05-parameters-arguments/</link>
+      <pubDate>Sat, 09 Nov 2024 17:02:48 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/js-03.05-parameters-arguments/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Parameter&lt;/strong&gt;: A variable listed inside the &lt;code&gt;()&lt;/code&gt; in a function declaration. This is a term at &lt;strong&gt;declaration time&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Argument&lt;/strong&gt;: The actual value passed to the function when it is called. This is a term at &lt;strong&gt;call time&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;div class=&#34;expressive-code&#34;&gt;&#xD;&#xA;  &lt;figure class=&#34;frame not-content&#34;&gt;&#xD;&#xA;  &lt;figcaption class=&#34;header&#34;&gt;&#xD;&#xA;    &lt;span class=&#34;title&#34;&gt;&lt;/span&gt;&#xD;&#xA;  &lt;/figcaption&gt;&#xD;&#xA;  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;showMessage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;from&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;*&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;*&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;// Modify local `from`&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;nx&#34;&gt;alert&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;: &amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Ann&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;showMessage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;from&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Hello&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;// *Ann*: Hello&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;alert&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;from&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;// Ann (the outer `from` remains unchanged)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xD;&#xA;  &lt;/figure&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;from&lt;/code&gt; and &lt;code&gt;text&lt;/code&gt; are &lt;strong&gt;parameters&lt;/strong&gt; of the function &lt;code&gt;showMessage&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;The value of &lt;code&gt;from&lt;/code&gt; is modified locally inside the function, but the outer variable &lt;code&gt;from&lt;/code&gt; remains unchanged after the function call.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;default-value-for-parameters&#34;&gt;&lt;strong&gt;Default Value for Parameters&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;If a function is called without an argument for a parameter, the parameter&amp;rsquo;s value becomes &lt;code&gt;undefined&lt;/code&gt;.&lt;br&gt;&#xA;However, you can specify a &lt;strong&gt;default value&lt;/strong&gt; for a parameter, which is used when no argument is provided.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>JS - 03.06 - Return, Recursion, Call Stack</title>
+      <link>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/js-03.06-return-recursion-call-stack/</link>
+      <pubDate>Sat, 09 Nov 2024 17:03:17 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/js-03.06-return-recursion-call-stack/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;returning values&lt;/strong&gt;, &lt;strong&gt;callback functions&lt;/strong&gt;, &lt;strong&gt;recursion&lt;/strong&gt;, and &lt;strong&gt;closures&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;returning-a-value&#34;&gt;&lt;strong&gt;Returning a Value&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;functions-and-side-effects&#34;&gt;&lt;strong&gt;Functions and Side Effects&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Functions can serve two purposes: they can produce &lt;strong&gt;side effects&lt;/strong&gt; (such as modifying a variable, printing to the console, or changing the DOM) or they can &lt;strong&gt;return values&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>JS - 03.07 - Scheduling</title>
+      <link>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/js-03.07-scheduling/</link>
+      <pubDate>Sat, 09 Nov 2024 17:03:35 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/js-03.07-scheduling/</guid>
+      <description>&lt;h2 id=&#34;scheduling-function-calls-with-settimeout-and-setinterval&#34;&gt;&lt;strong&gt;Scheduling Function Calls with &lt;code&gt;setTimeout&lt;/code&gt; and &lt;code&gt;setInterval&lt;/code&gt;&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;p&gt;JavaScript provides the ability to schedule functions to be executed &lt;strong&gt;later&lt;/strong&gt; or &lt;strong&gt;repeatedly&lt;/strong&gt; using two methods: &lt;strong&gt;&lt;code&gt;setTimeout&lt;/code&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;code&gt;setInterval&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>JS - 03.08 - Decorators</title>
+      <link>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/js-03.08-decorators/</link>
+      <pubDate>Sat, 09 Nov 2024 17:03:48 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/js-03.08-decorators/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Decorators&lt;/strong&gt; and function manipulation via methods like &lt;code&gt;call&lt;/code&gt;, &lt;code&gt;apply&lt;/code&gt;, and &lt;code&gt;bind&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-decorators-in-javascript&#34;&gt;&lt;strong&gt;1. Decorators in JavaScript&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;p&gt;Decorators in JavaScript are a design pattern that allows you to add behavior to an existing function without modifying its structure.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>JS - 03.09 - Function Object</title>
+      <link>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/js-03.09-function-object/</link>
+      <pubDate>Sat, 09 Nov 2024 17:04:09 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/js-03.09-function-object/</guid>
+      <description>&lt;h2 id=&#34;functions-as-objects&#34;&gt;&lt;strong&gt;Functions as Objects&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;p&gt;In JavaScript, &lt;strong&gt;functions are first-class objects&lt;/strong&gt;. This means that they are &lt;strong&gt;objects&lt;/strong&gt; themselves, and you can treat them like any other object: assign them properties, pass them around as arguments, or even add methods to them.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

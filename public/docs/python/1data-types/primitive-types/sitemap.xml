@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/01-pdt-01-variables/</loc>
+      <lastmod>2024-12-17T22:32:32+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/01-pdt-02-datatypes/</loc>
+      <lastmod>2024-12-17T22:33:48+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/01-pdt-03-operators/</loc>
+      <lastmod>2024-12-17T22:33:59+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/01-pdt-04-int-float/</loc>
+      <lastmod>2024-12-17T22:34:15+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/01-pdt-05-string-manipulation/</loc>
+      <lastmod>2024-12-17T22:34:58+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/01-pdt-06-string-methods/</loc>
+      <lastmod>2024-12-17T22:34:58+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    </urlset>

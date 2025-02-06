@@ -1,0 +1,2477 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="/personal-site/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=personal-site/livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preload" href="http://localhost:1313/personal-site/fonts/vendor/jost/jost-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/personal-site/fonts/vendor/jost/jost-v4-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="http://localhost:1313/personal-site/fonts/vendor/jost/jost-v4-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<script 
+  src="/personal-site/js/color-mode.f14b3e296de1d0b69e75af684b62a4a912a2cadab04e36123407cd8388204f1d.js"
+  integrity="sha256-8Us&#43;KW3h0Laeda9oS2KkqRKiytqwTjYSNAfNg4ggTx0=">
+</script>
+
+
+<link rel="stylesheet" href="/personal-site/main.c0e24d0bb4526375ef42a8fffa4eb23f8f782cb58ac9f07c6886fe943a0ed00e176b284d9d1a5b8e9d68a3f2f5918367e18fe55f5fde9451a8c6d3fe85342b7b.css" integrity="sha512-wOJNC7RSY3XvQqj/&#43;k6yP494LLWKyfB8aIb&#43;lDoO0A4XayhNnRpbjp1oo/L1kYNn4Y/lX1/elFGoxtP&#43;hTQrew==" crossorigin="anonymous">
+
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+	
+<title>0 - OS - Short Notes (Unit 1)</title>
+  
+<meta name="description" content="A reference site with summary of various coding topics">
+
+
+
+</head>
+
+  
+  <body class="single section docs" data-bs-spy="scroll" data-bs-target="#toc" data-bs-root-margin="0px 0px -60%" data-bs-smooth-scroll="true" tabindex="0">
+    <div class="sticky-top">
+<header class="navbar navbar-expand-lg">
+  <div class="container-lg">
+  
+    <a class="navbar-brand me-auto me-lg-3" href="/personal-site/">Sujith&#39;s Library</a>
+
+    
+    
+    <button type="button" id="searchToggleMobile" class="btn btn-link nav-link mx-2 d-lg-none" aria-label="Search website">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <circle cx="10" cy="10" r="7"></circle>
+        <line x1="21" y1="21" x2="15" y2="15"></line>
+      </svg>
+    </button>
+    
+    <button class="btn btn-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavSection" aria-controls="offcanvasNavSection" aria-label="Open section navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+      </svg>
+    </button>
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavSection" aria-labelledby="offcanvasNavSectionLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavSectionLabel">Docs</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <aside class="doks-sidebar mt-n3">
+          <nav id="doks-docs-nav" aria-label="Tertiary navigation">
+            
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+    <details open>
+      <summary>Python</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/03-print-and-input/">03 - Print and Input</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Python Control Statements</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-01-conditional-branching/">04 Control-Flow - 01 Conditional Branching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-02-match-case/">04 Control-Flow - 02 Match-Case</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-03-range/">04 Control-Flow - 03 Range</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-04-loops/">04 Control-Flow - 04 Loops</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Python Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Primitive Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-01-variables/">01 PDT - 01 Variables</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-02-datatypes/">01 PDT - 02 Datatypes</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-03-operators/">01 PDT - 03 Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-04-int-float/">01 PDT - 04 int &amp; float</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-05-string-manipulation/">01 PDT - 05 String Manipulation</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-06-string-methods/">01 PDT - 06 String Methods</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Complex Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-01-lists/">02 CDT - 01 Lists</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-02-list-methods/">02 CDT - 02 List Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-03-list-operators/">02 CDT - 03 List Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-04-list-vs-arrays/">02 CDT - 04 List Vs Arrays</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-05-tuples/">02 CDT - 05 Tuples</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-06-sets/">02 CDT - 06 Sets</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-07-dictinaries/">02 CDT - 07 Dictinaries</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>C and Data Structures</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>The C Programming Language by Kernighan and Ritchie</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-to-c-language/">K&amp;R - Chapter 0 - Introduction to C language</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-using-python-part-1/">K&amp;R - Chapter 0 - Introduction using Python (Part 1)</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-using-python-part-2/">K&amp;R - Chapter 0 - Introduction using Python (Part 2)</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-1-basic-syntax/">K&amp;R - Chapter 1 - Basic Syntax</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-2-types-operators-expressions/">K&amp;R - Chapter 2 - Types, Operators, Expressions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-3-control-flow/">K&amp;R - Chapter 3 - Control Flow</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-4-function-program-structure/">K&amp;R - Chapter 4 - Function, Program Structure</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-5-pointers-arrays/">K&amp;R - Chapter 5 - Pointers, Arrays</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-6-structures/">K&amp;R - Chapter 6 - Structures</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-6.1-structures/">K&amp;R - Chapter 6.1 - Structures</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Data Structures Using C</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/01-tower-of-hanoi/">01 - Tower of Hanoi</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/02-stack-operations/">02 - Stack Operations</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/03-infix-to-postfix-conversion/">03 - Infix to Postfix Conversion</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/04-postfix-expression-evaluation/">04 - Postfix Expression Evaluation</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/05-queue/">05 - Queue</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/06-circular-queue/">06 - Circular Queue</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/07-singly-linked-list/">07 - Singly Linked List</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>JavaScript</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>JS Language</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.01-variables/">JS - 01.01 - Variables</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.02-values-and-types/">JS - 01.02 - Values and Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.03-number-types/">JS - 01.03 - Number Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.04-number-methods/">JS - 01.04 - Number Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.05-string-type/">JS - 01.05 - String Type</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.06-string-methods/">JS - 01.06 - String Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.07-modifying-string/">JS - 01.07 - Modifying String</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.08-boolean-type/">JS - 01.08 - Boolean Type</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.09-operators/">JS - 01.09 - Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.10-auto-type-conversions/">JS - 01.10 - Auto Type Conversions</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Control Flow</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Conditionals</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.01-if-else/">JS - 02.01 - if, else</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.02-switch-case/">JS - 02.02 - switch-case</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.03-ternary-operator/">JS - 02.03 - Ternary Operator</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.04-logical-operators/">JS - 02.04 - Logical Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.05-short-circuiting/">JS - 02.05 - Short Circuiting</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Loops</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.11-do-while-loop/">JS - 02.11 - do-while Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.12-for-loop/">JS - 02.12 - for Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.13-for-of-loop/">JS - 02.13 - for-of Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.14-for-in-loop/">JS - 02.14 - for-in Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.15-break-continue-label/">JS - 02.15 - break-continue-label</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.16-iterables/">JS - 02.16 - Iterables</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Functions</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.01-function/">JS - 03.01 - Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.02-defining-function/">JS - 03.02 - Defining Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.03-arrow-function/">JS - 03.03 - Arrow Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.04-scope-of-variable/">JS - 03.04 - Scope of Variable</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.05-parameters-arguments/">JS - 03.05 - Parameters &amp; Arguments</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.06-return-recursion-call-stack/">JS - 03.06 - Return, Recursion, Call Stack</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.07-scheduling/">JS - 03.07 - Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.08-decorators/">JS - 03.08 - Decorators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.09-function-object/">JS - 03.09 - Function Object</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Objects</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.01-object/">JS - 04.01 - Object</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.02-object-properties/">JS - 04.02 - Object Properties</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.03-cloning-object/">JS - 04.03 - Cloning Object</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.04-object.keys/">JS - 04.04 - Object.keys()</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.05-methods-this-chaining/">JS - 04.05 - Methods, this, Chaining</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.06-constructor-new/">JS - 04.06 - Constructor new</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Arrays</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.01-array/">JS - 05.01 - Array</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.02-array-methods/">JS - 05.02 - Array Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.03-filter-method/">JS - 05.03 - Filter Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.04-map-method/">JS - 05.04 - Map Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.05-reduce-method/">JS - 05.05 - Reduce Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.06-sort-method/">JS - 05.06 - Sort Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.07-rest-spread/">JS - 05.07 - Rest &amp; Spread</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/">JavaScript DOM Manipulation</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>HTML &amp; CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>HTML</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-01-boiler-plate/">HTML - 01 - Boiler Plate</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-02-texts-lists/">HTML - 02 - Texts &amp; Lists</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-03-links-images/">HTML - 03 - Links &amp; Images</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-04-input-types/">HTML - 04 - Input Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-05-button/">HTML - 05 - Button</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-06-dom-events/">HTML - 06 - DOM Events</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-01-selectors/">CSS - 01 -Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-02-multiple-selecors/">CSS - 02 - Multiple Selecors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-03-declaration/">CSS - 03 - Declaration</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-04-adding-css/">CSS - 04 - Adding CSS</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-05-box-model/">CSS - 05 - Box Model</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-06-flexbox/">CSS - 06 - Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-07-flex-flexibility/">CSS - 07 - Flex Flexibility</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-08-axes-in-flexbox/">CSS - 08 - Axes in Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-09-utility-class-inheritance/">CSS - 09 - Utility Class &amp; Inheritance</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>CSS Reference</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css_resource/css-04.1-size-units/">CSS - 04.1 - Size Units</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css_resource/css-04.2-color-values/">CSS - 04.2 - Color Values</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Tools &amp; Accesories</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/tools/obsidian/">Obsidian</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/vs-code/">VS Code</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/git-github/">Git &amp; Github</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Linux - Bash &amp; OS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Linux OS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-01-linux-kernel/">Linux OS - 01 - Linux Kernel</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-02-forms-of-process-management/">Linux OS - 02 - Forms of Process Management</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-03-system-resources/">Linux OS - 03 System Resources</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Linx Bash</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-01-basics/">Bash - 01 - Basics</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-02-features/">Bash - 02 - Features</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-03-help-pages/">Bash - 03 - help pages</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-04-variables-and-aliases/">Bash - 04 - Variables and Aliases</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-05-listing-files/">Bash - 05 - Listing Files</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-06-environment-and-subshell/">Bash - 06 - Environment and Subshell</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-08-basic-file-commands/">Bash - 08 - Basic File Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-07-storage-terminology-in-linux/">Bash - 07 - Storage Terminology in Linux</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-08.1-bc-and-date/">Bash - 08.1 - bc and date</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-09-file-movement-and-copy-commands/">Bash - 09 - File Movement and Copy Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-10-file-viewing-and-editing-commands/">Bash - 10 - File Viewing and Editing Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-11-file-permissions/">Bash - 11 - File Permissions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-12-hard-and-soft-links/">Bash - 12 - Hard and Soft Links</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13-regular-expressions/">Bash - 13 - Regular Expressions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13.1-regex-expanded/">Bash - 13.1 - regex Expanded</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13.2-regex-matching/">Bash - 13.2 - regex Matching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-14-file-searching/">Bash - 14 - File Searching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-15-neovim/">Bash - 15 - Neovim</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-16-egrep/">Bash - 16 - egrep</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-17-sed/">Bash - 17 - sed</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Database Management Systems</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Structured Query Language (SQL)</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-0-quering/">SQL - 0 Quering</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-01-relating/">SQL - 01 Relating</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-02-designing/">SQL - 02 Designing</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-03-writing/">SQL - 03 Writing</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-04-viewing/">SQL - 04 Viewing</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-05-optimizing/">SQL - 05 Optimizing</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-06-scaling/">SQL - 06 Scaling</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open open>
+      <summary>Operating System Concepts</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li class="active" >
+      <a aria-current="page" href="/personal-site/docs/os/0-os-short-notes-unit-1/">0 - OS - Short Notes (Unit 1)</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/0-os-short-notes-unit-2/">0 - OS - Short Notes (Unit 2)</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>OS - 01 - Operating Systems Introduction</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c01_introduction/os-1.01-operating-systems-introduction/">OS 1.01 - Operating Systems Introduction</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c01_introduction/os-1.05-os-operations/">OS 1.05 - OS Operations</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c01_introduction/os-1.11-computing-environments/">OS 1.11 - Computing Environments</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Chapter 02 - System Structure</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.01-os-services/">OS 2.01 - OS Services</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.03-system-calls/">OS 2.03 - System Calls</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.04-types-of-system-calls/">OS 2.04 - Types Of System Calls</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.05-system-programs/">OS 2.05 - System Programs</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.07-os-structure/">OS 2.07 - OS Structure</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.10-system-boot/">OS 2.10 - System Boot</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Chapter 03 - Process Concept</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c03_process_concept/os-3.01-process-concept/">OS 3.01 - Process Concept</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c03_process_concept/os-3.02-process-scheduling/">OS 3.02 - Process Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c03_process_concept/os-3.04-inter-process-communication/">OS 3.04 - Inter-Process Communication</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Chapter 05 - Process Scheduling</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.01-process-scheduling/">OS 5.01 - Process Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03-scheduling-algorithms/">OS 5.03 - Scheduling Algorithms</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03.02-shortest-job-first/">OS 5.03.02 - Shortest Job First</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03.03-priority-scheduling/">OS 5.03.03 - Priority Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03.04-round-robin-scheduling/">OS 5.03.04 - Round-Robin Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03.05-multi-level-queue-scheduling/">OS 5.03.05 - Multi-Level Queue Scheduling</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Chapter 6 -  Process Synchronization</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.01-process-synchronization/">OS 6.01 - Process Synchronization</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.02-critical-section-problem/">OS 6.02 - Critical-Section Problem</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.05-mutex-locks/">OS 6.05 - Mutex Locks</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.06-semaphores/">OS 6.06 - Semaphores</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.07-classic-problems/">OS 6.07 - Classic Problems</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/0-os-previous-questions-unit-1-2/">0 - OS - Previous Questions (Unit 1 &amp; 2)</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+          </nav>
+        </aside>
+      </div>
+    </div>
+    
+    <button class="btn btn-link nav-link mx-2 order-3 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavMain" aria-controls="offcanvasNavMain" aria-label="Open main navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <line x1="4" y1="8" x2="20" y2="8"></line>
+        <line x1="4" y1="16" x2="20" y2="16"></line>
+      </svg>
+    </button>
+
+    
+    <div class="offcanvas offcanvas-end h-auto" tabindex="-1" id="offcanvasNavMain" aria-labelledby="offcanvasNavMainLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavMainLabel">Sujith&#39;s Library</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+         </svg>
+        </button>
+      </div>
+      
+      <div class="offcanvas-body d-flex flex-column flex-lg-row justify-content-between">
+        <ul class="navbar-nav flex-grow-1"><li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/python/">Python</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/html-css/">HTML/CSS</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/java-script/">JavaScript</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/java-script-dom/">JS DOM</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/c/">C &amp; DSA</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/bash-linux/">Linux</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/os/">OS</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/dbms/">DBMS</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/docs/tools/">Tools</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:1313/personal-site/blog/">Blog</a>
+              </li>
+            </ul>
+
+        
+        
+        <button type="button" id="searchToggleDesktop" class="btn btn-link nav-link p-2 d-none d-lg-block" aria-label="Search website">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <circle cx="10" cy="10" r="7"></circle>
+            <line x1="21" y1="21" x2="15" y2="15"></line>
+          </svg>
+        </button>
+        
+        
+        
+        <button id="buttonColorMode" class="btn btn-link mx-auto nav-link p-0 ms-lg-2 me-lg-1" type="button" aria-label="Toggle theme">
+          <svg data-bs-theme-value="dark" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+          </svg>
+          <svg data-bs-theme-value="light" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0m-5 0h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+          </svg>
+        </button>
+        
+        <ul id="socialMenu" class="nav mx-auto flex-row order-lg-4">
+          <li class="nav-item">
+              <a class="nav-link social-link" href="https://github.com/sujith-eag"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg><small class="ms-2 visually-hidden">GitHub</small></a>
+            </li>
+          </ul>
+        
+        </div>
+    </div>
+
+    
+    </div>
+</header>
+</div>
+
+<div class="modal" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-md-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 visually-hidden" id="searchModalLabel">Search</h1>
+        <button type="button" class="btn-close visually-hidden" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="search-input flex-grow-1 d-none">
+          <form id="search-form" class="search-form" action="#" method="post" accept-charset="UTF-8" role="search">
+            <label for="query" class="visually-hidden">Search</label>
+            <div class="d-flex">
+              <input type="search" id="query" name="query" class="search-text form-control form-control-lg" placeholder="Search" aria-label="Search" maxlength="128" autocomplete="off">
+              <button type="button" class="btn btn-link text-decoration-none px-0 ms-3 d-md-none" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-body">
+        <p class="search-loading status message d-none mt-3 text-center">Loading search index…</p>
+        <p class="search-no-recent message d-none mt-3 text-center">No recent searches</p>
+        <p class="search-no-results message d-none mt-3 text-center">No results for "<strong><span class="query-no-results">Query here</span></strong>"</p>
+        <div id="searchResults" class="search-results"></div>
+        <template>
+          <article class="search-result list-view">
+            <div class="card my-3">
+              <div class="card-body">
+                <header>
+                  <h2 class="h5 title title-submitted mb-0"><a class="stretched-link text-decoration-none text-reset" href="#">Title here</a></h2>
+                  <div class="submitted d-none"><time class="created-date">Date here</time></div>
+                </header>
+                <div class="content">Summary here</div>
+              </div>
+            </div>
+          </article>
+        </template>
+      </div>
+      <div class="modal-footer">
+        <ul class="list-inline me-auto d-none d-md-block">
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Enter key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M12 3.53088v3c0 1-1 2-2 2H4M7 11.53088l-3-3 3-3"></path></g></svg></kbd><span class="DocSearch-Label">to select</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow down" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 3.5v8M10.5 8.5l-3 3-3-3"></path></g></svg></kbd><kbd class="me-2"><svg width="15" height="15" aria-label="Arrow up" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 11.5v-8M10.5 6.5l-3-3-3 3"></path></g></svg></kbd><span class="DocSearch-Label">to navigate</span></li>
+          <li class="list-inline-item"><kbd class="me-2"><svg width="15" height="15" aria-label="Escape key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M13.6167 8.936c-.1065.3583-.6883.962-1.4875.962-.7993 0-1.653-.9165-1.653-2.1258v-.5678c0-1.2548.7896-2.1016 1.653-2.1016.8634 0 1.3601.4778 1.4875 1.0724M9 6c-.1352-.4735-.7506-.9219-1.46-.8972-.7092.0246-1.344.57-1.344 1.2166s.4198.8812 1.3445.9805C8.465 7.3992 8.968 7.9337 9 8.5c.032.5663-.454 1.398-1.4595 1.398C6.6593 9.898 6 9 5.963 8.4851m-1.4748.5368c-.2635.5941-.8099.876-1.5443.876s-1.7073-.6248-1.7073-2.204v-.4603c0-1.0416.721-2.131 1.7073-2.131.9864 0 1.6425 1.031 1.5443 2.2492h-2.956"></path></g></svg></kbd><span class="DocSearch-Label">to close</span></li>
+        </ul>
+        <p class="d-md-none">Search by <a class="text-decoration-none" href="https://github.com/nextapps-de/flexsearch">FlexSearch</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="wrap container-lg" role="document">
+      <div class="content">
+      
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+    <details open>
+      <summary>Python</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/03-print-and-input/">03 - Print and Input</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Python Control Statements</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-01-conditional-branching/">04 Control-Flow - 01 Conditional Branching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-02-match-case/">04 Control-Flow - 02 Match-Case</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-03-range/">04 Control-Flow - 03 Range</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/4control_statements/04-control-flow-04-loops/">04 Control-Flow - 04 Loops</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Python Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Primitive Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-01-variables/">01 PDT - 01 Variables</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-02-datatypes/">01 PDT - 02 Datatypes</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-03-operators/">01 PDT - 03 Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-04-int-float/">01 PDT - 04 int &amp; float</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-05-string-manipulation/">01 PDT - 05 String Manipulation</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/primitive-types/01-pdt-06-string-methods/">01 PDT - 06 String Methods</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Complex Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-01-lists/">02 CDT - 01 Lists</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-02-list-methods/">02 CDT - 02 List Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-03-list-operators/">02 CDT - 03 List Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-04-list-vs-arrays/">02 CDT - 04 List Vs Arrays</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-05-tuples/">02 CDT - 05 Tuples</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-06-sets/">02 CDT - 06 Sets</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/1data-types/complex-types/02-cdt-07-dictinaries/">02 CDT - 07 Dictinaries</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>C and Data Structures</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>The C Programming Language by Kernighan and Ritchie</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-to-c-language/">K&amp;R - Chapter 0 - Introduction to C language</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-using-python-part-1/">K&amp;R - Chapter 0 - Introduction using Python (Part 1)</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-0-introduction-using-python-part-2/">K&amp;R - Chapter 0 - Introduction using Python (Part 2)</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-1-basic-syntax/">K&amp;R - Chapter 1 - Basic Syntax</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-2-types-operators-expressions/">K&amp;R - Chapter 2 - Types, Operators, Expressions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-3-control-flow/">K&amp;R - Chapter 3 - Control Flow</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-4-function-program-structure/">K&amp;R - Chapter 4 - Function, Program Structure</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-5-pointers-arrays/">K&amp;R - Chapter 5 - Pointers, Arrays</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-6-structures/">K&amp;R - Chapter 6 - Structures</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/kr_c_book/kr-chapter-6.1-structures/">K&amp;R - Chapter 6.1 - Structures</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Data Structures Using C</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/01-tower-of-hanoi/">01 - Tower of Hanoi</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/02-stack-operations/">02 - Stack Operations</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/03-infix-to-postfix-conversion/">03 - Infix to Postfix Conversion</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/04-postfix-expression-evaluation/">04 - Postfix Expression Evaluation</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/05-queue/">05 - Queue</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/06-circular-queue/">06 - Circular Queue</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/c/ds_using_c/07-singly-linked-list/">07 - Singly Linked List</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>JavaScript</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>JS Language</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Data Types</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.01-variables/">JS - 01.01 - Variables</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.02-values-and-types/">JS - 01.02 - Values and Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.03-number-types/">JS - 01.03 - Number Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.04-number-methods/">JS - 01.04 - Number Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.05-string-type/">JS - 01.05 - String Type</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.06-string-methods/">JS - 01.06 - String Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.07-modifying-string/">JS - 01.07 - Modifying String</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.08-boolean-type/">JS - 01.08 - Boolean Type</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.09-operators/">JS - 01.09 - Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/1-data-types/js-01.10-auto-type-conversions/">JS - 01.10 - Auto Type Conversions</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Control Flow</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Conditionals</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.01-if-else/">JS - 02.01 - if, else</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.02-switch-case/">JS - 02.02 - switch-case</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.03-ternary-operator/">JS - 02.03 - Ternary Operator</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.04-logical-operators/">JS - 02.04 - Logical Operators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.05-short-circuiting/">JS - 02.05 - Short Circuiting</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Loops</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.11-do-while-loop/">JS - 02.11 - do-while Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.12-for-loop/">JS - 02.12 - for Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.13-for-of-loop/">JS - 02.13 - for-of Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.14-for-in-loop/">JS - 02.14 - for-in Loop</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.15-break-continue-label/">JS - 02.15 - break-continue-label</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/2-control-flow/loops/js-02.16-iterables/">JS - 02.16 - Iterables</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Functions</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.01-function/">JS - 03.01 - Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.02-defining-function/">JS - 03.02 - Defining Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.03-arrow-function/">JS - 03.03 - Arrow Function</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.04-scope-of-variable/">JS - 03.04 - Scope of Variable</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.05-parameters-arguments/">JS - 03.05 - Parameters &amp; Arguments</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.06-return-recursion-call-stack/">JS - 03.06 - Return, Recursion, Call Stack</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.07-scheduling/">JS - 03.07 - Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.08-decorators/">JS - 03.08 - Decorators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/3-functions/js-03.09-function-object/">JS - 03.09 - Function Object</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Objects</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.01-object/">JS - 04.01 - Object</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.02-object-properties/">JS - 04.02 - Object Properties</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.03-cloning-object/">JS - 04.03 - Cloning Object</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.04-object.keys/">JS - 04.04 - Object.keys()</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.05-methods-this-chaining/">JS - 04.05 - Methods, this, Chaining</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/4-objects/js-04.06-constructor-new/">JS - 04.06 - Constructor new</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Arrays</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.01-array/">JS - 05.01 - Array</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.02-array-methods/">JS - 05.02 - Array Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.03-filter-method/">JS - 05.03 - Filter Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.04-map-method/">JS - 05.04 - Map Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.05-reduce-method/">JS - 05.05 - Reduce Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.06-sort-method/">JS - 05.06 - Sort Method</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script/js-language/5-arrays/js-05.07-rest-spread/">JS - 05.07 - Rest &amp; Spread</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/">JavaScript DOM Manipulation</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>HTML &amp; CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>HTML</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-01-boiler-plate/">HTML - 01 - Boiler Plate</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-02-texts-lists/">HTML - 02 - Texts &amp; Lists</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-03-links-images/">HTML - 03 - Links &amp; Images</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-04-input-types/">HTML - 04 - Input Types</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-05-button/">HTML - 05 - Button</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/html/html-06-dom-events/">HTML - 06 - DOM Events</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>CSS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-01-selectors/">CSS - 01 -Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-02-multiple-selecors/">CSS - 02 - Multiple Selecors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-03-declaration/">CSS - 03 - Declaration</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-04-adding-css/">CSS - 04 - Adding CSS</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-05-box-model/">CSS - 05 - Box Model</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-06-flexbox/">CSS - 06 - Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-07-flex-flexibility/">CSS - 07 - Flex Flexibility</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-08-axes-in-flexbox/">CSS - 08 - Axes in Flexbox</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css-09-utility-class-inheritance/">CSS - 09 - Utility Class &amp; Inheritance</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>CSS Reference</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css_resource/css-04.1-size-units/">CSS - 04.1 - Size Units</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/html-css/css/css_resource/css-04.2-color-values/">CSS - 04.2 - Color Values</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Tools &amp; Accesories</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/tools/obsidian/">Obsidian</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/vs-code/">VS Code</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/tools/git-github/">Git &amp; Github</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Linux - Bash &amp; OS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Linux OS</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-01-linux-kernel/">Linux OS - 01 - Linux Kernel</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-02-forms-of-process-management/">Linux OS - 02 - Forms of Process Management</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_os/linux-os-03-system-resources/">Linux OS - 03 System Resources</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Linx Bash</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-01-basics/">Bash - 01 - Basics</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-02-features/">Bash - 02 - Features</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-03-help-pages/">Bash - 03 - help pages</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-04-variables-and-aliases/">Bash - 04 - Variables and Aliases</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-05-listing-files/">Bash - 05 - Listing Files</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-06-environment-and-subshell/">Bash - 06 - Environment and Subshell</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-08-basic-file-commands/">Bash - 08 - Basic File Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-07-storage-terminology-in-linux/">Bash - 07 - Storage Terminology in Linux</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-08.1-bc-and-date/">Bash - 08.1 - bc and date</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-09-file-movement-and-copy-commands/">Bash - 09 - File Movement and Copy Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-10-file-viewing-and-editing-commands/">Bash - 10 - File Viewing and Editing Commands</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-11-file-permissions/">Bash - 11 - File Permissions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-12-hard-and-soft-links/">Bash - 12 - Hard and Soft Links</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13-regular-expressions/">Bash - 13 - Regular Expressions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13.1-regex-expanded/">Bash - 13.1 - regex Expanded</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-13.2-regex-matching/">Bash - 13.2 - regex Matching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-14-file-searching/">Bash - 14 - File Searching</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-15-neovim/">Bash - 15 - Neovim</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-16-egrep/">Bash - 16 - egrep</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-17-sed/">Bash - 17 - sed</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/">Bash - 18.2 - Shell Scripts - Loops</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Database Management Systems</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+    <details open>
+      <summary>Structured Query Language (SQL)</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-0-quering/">SQL - 0 Quering</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-01-relating/">SQL - 01 Relating</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-02-designing/">SQL - 02 Designing</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-03-writing/">SQL - 03 Writing</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-04-viewing/">SQL - 04 Viewing</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-05-optimizing/">SQL - 05 Optimizing</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/dbms/sql/sql-06-scaling/">SQL - 06 Scaling</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open open>
+      <summary>Operating System Concepts</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li class="active" >
+      <a aria-current="page" href="/personal-site/docs/os/0-os-short-notes-unit-1/">0 - OS - Short Notes (Unit 1)</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/0-os-short-notes-unit-2/">0 - OS - Short Notes (Unit 2)</a>
+  </li>
+
+  <li>
+    <details open>
+      <summary>OS - 01 - Operating Systems Introduction</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c01_introduction/os-1.01-operating-systems-introduction/">OS 1.01 - Operating Systems Introduction</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c01_introduction/os-1.05-os-operations/">OS 1.05 - OS Operations</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c01_introduction/os-1.11-computing-environments/">OS 1.11 - Computing Environments</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Chapter 02 - System Structure</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.01-os-services/">OS 2.01 - OS Services</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.03-system-calls/">OS 2.03 - System Calls</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.04-types-of-system-calls/">OS 2.04 - Types Of System Calls</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.05-system-programs/">OS 2.05 - System Programs</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.07-os-structure/">OS 2.07 - OS Structure</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.10-system-boot/">OS 2.10 - System Boot</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Chapter 03 - Process Concept</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c03_process_concept/os-3.01-process-concept/">OS 3.01 - Process Concept</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c03_process_concept/os-3.02-process-scheduling/">OS 3.02 - Process Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c03_process_concept/os-3.04-inter-process-communication/">OS 3.04 - Inter-Process Communication</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Chapter 05 - Process Scheduling</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.01-process-scheduling/">OS 5.01 - Process Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03-scheduling-algorithms/">OS 5.03 - Scheduling Algorithms</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03.02-shortest-job-first/">OS 5.03.02 - Shortest Job First</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03.03-priority-scheduling/">OS 5.03.03 - Priority Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03.04-round-robin-scheduling/">OS 5.03.04 - Round-Robin Scheduling</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c05_process_scheduling/os-5.03.05-multi-level-queue-scheduling/">OS 5.03.05 - Multi-Level Queue Scheduling</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>Chapter 6 -  Process Synchronization</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.01-process-synchronization/">OS 6.01 - Process Synchronization</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.02-critical-section-problem/">OS 6.02 - Critical-Section Problem</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.05-mutex-locks/">OS 6.05 - Mutex Locks</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.06-semaphores/">OS 6.06 - Semaphores</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/c06_synchronization/os-6.07-classic-problems/">OS 6.07 - Classic Problems</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/os/0-os-previous-questions-unit-1-2/">0 - OS - Previous Questions (Unit 1 &amp; 2)</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+		</div>
+		
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="page-links">
+  <h3>On this page</h3>
+    <nav id="toc">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#os-components">OS Components:</a></li>
+            <li><a href="#os-system-services">OS System Services:</a></li>
+            <li><a href="#user-interface">User Interface:</a></li>
+            <li><a href="#system-program-categories">System Program Categories:</a></li>
+            <li><a href="#system-calls">System Calls</a></li>
+            <li><a href="#common-system-calls">Common System Calls:</a></li>
+            <li><a href="#application-programming-interfaces-apis">Application Programming Interfaces (APIs):</a></li>
+            <li><a href="#dual-mode-user-1--kernel-mode-0">Dual Mode: User (1) / Kernel Mode (0)</a></li>
+            <li><a href="#timer">Timer:</a></li>
+          </ul>
+        </li>
+        <li><a href="#traditional-computing">Traditional Computing</a>
+          <ul>
+            <li><a href="#distributed-systems">Distributed Systems</a></li>
+            <li><a href="#client-server-computing">Client-Server Computing</a></li>
+            <li><a href="#peer-to-peer-computing">Peer-to-Peer Computing</a></li>
+            <li><a href="#cloud-computing">Cloud Computing</a></li>
+            <li><a href="#embedded-systems">Embedded Systems</a></li>
+            <li><a href="#system-boot">System Boot</a></li>
+          </ul>
+        </li>
+        <li><a href="#inter-process-communication"><strong>Inter Process Communication</strong></a></li>
+        <li><a href="#shared-memory-system"><strong>Shared Memory System</strong></a>
+          <ul>
+            <li><a href="#producer-consumer-problem"><strong>Producer-Consumer Problem</strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#message-passing-system"><strong>Message Passing System</strong></a>
+          <ul>
+            <li><a href="#message-passing-implementation-models"><strong>Message Passing Implementation Models</strong></a></li>
+            <li><a href="#direct-communication"><strong>Direct Communication</strong></a></li>
+            <li><a href="#indirect-communication"><strong>Indirect Communication</strong></a></li>
+            <li><a href="#synchronous-or-asynchronous-communication"><strong>Synchronous or Asynchronous Communication</strong></a></li>
+            <li><a href="#automatic-or-explicit-buffering"><strong>Automatic or Explicit Buffering</strong></a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+			<h1>0 - OS - Short Notes (Unit 1)</h1>
+			
+			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
+				<details>
+    <summary>On this page</summary>
+    <div class="page-links">
+      <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#os-components">OS Components:</a></li>
+            <li><a href="#os-system-services">OS System Services:</a></li>
+            <li><a href="#user-interface">User Interface:</a></li>
+            <li><a href="#system-program-categories">System Program Categories:</a></li>
+            <li><a href="#system-calls">System Calls</a></li>
+            <li><a href="#common-system-calls">Common System Calls:</a></li>
+            <li><a href="#application-programming-interfaces-apis">Application Programming Interfaces (APIs):</a></li>
+            <li><a href="#dual-mode-user-1--kernel-mode-0">Dual Mode: User (1) / Kernel Mode (0)</a></li>
+            <li><a href="#timer">Timer:</a></li>
+          </ul>
+        </li>
+        <li><a href="#traditional-computing">Traditional Computing</a>
+          <ul>
+            <li><a href="#distributed-systems">Distributed Systems</a></li>
+            <li><a href="#client-server-computing">Client-Server Computing</a></li>
+            <li><a href="#peer-to-peer-computing">Peer-to-Peer Computing</a></li>
+            <li><a href="#cloud-computing">Cloud Computing</a></li>
+            <li><a href="#embedded-systems">Embedded Systems</a></li>
+            <li><a href="#system-boot">System Boot</a></li>
+          </ul>
+        </li>
+        <li><a href="#inter-process-communication"><strong>Inter Process Communication</strong></a></li>
+        <li><a href="#shared-memory-system"><strong>Shared Memory System</strong></a>
+          <ul>
+            <li><a href="#producer-consumer-problem"><strong>Producer-Consumer Problem</strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#message-passing-system"><strong>Message Passing System</strong></a>
+          <ul>
+            <li><a href="#message-passing-implementation-models"><strong>Message Passing Implementation Models</strong></a></li>
+            <li><a href="#direct-communication"><strong>Direct Communication</strong></a></li>
+            <li><a href="#indirect-communication"><strong>Indirect Communication</strong></a></li>
+            <li><a href="#synchronous-or-asynchronous-communication"><strong>Synchronous or Asynchronous Communication</strong></a></li>
+            <li><a href="#automatic-or-explicit-buffering"><strong>Automatic or Explicit Buffering</strong></a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  </details>
+
+			</nav>
+			<p>The Operating System (OS) is the core software on a computer, often referred to as the <strong>Kernel</strong>, which manages hardware and system resources.</p>
+<ul>
+<li><strong>User-friendly intermediary</strong>: The OS acts as a bridge between the user and the hardware, ensuring a seamless user experience.</li>
+<li><strong>Resource allocator</strong>: Manages and allocates resources such as CPU, memory, I/O devices, and storage to processes and users.</li>
+<li><strong>Control program</strong>: Ensures correct execution of user programs by preventing errors that may arise from conflicting resource requests.</li>
+</ul>
+<h4 id="os-components">OS Components:<a href="#os-components" class="anchor" aria-hidden="true">#</a> </h4>
+<ul>
+<li><strong>Kernel</strong>: Handles low-level tasks such as process scheduling and memory management.</li>
+<li><strong>Process management</strong>: Manages process creation, scheduling, termination, inter-process communication (IPC), and synchronization.</li>
+<li><strong>Memory manager</strong>: Allocates and deallocates memory for processes, ensuring efficient use of RAM.</li>
+<li><strong>File system</strong>: Organizes, retrieves, and manipulates data stored in files and directories.</li>
+<li><strong>I/O System</strong>: Manages communication between the OS and external devices (e.g., keyboards, printers).</li>
+<li><strong>Security and Protection</strong>: Safeguards system integrity and protects against unauthorized access.</li>
+</ul>
+<h4 id="os-system-services">OS System Services:<a href="#os-system-services" class="anchor" aria-hidden="true">#</a> </h4>
+<ul>
+<li><strong>Resource Allocation</strong>: Handles allocation of resources in a multi-user environment.</li>
+<li><strong>Accounting</strong>: Tracks resource usage by processes and users for monitoring or billing.</li>
+<li><strong>Protection</strong>: Prevents interference between processes, ensuring that each process runs in isolation.</li>
+<li><strong>Security</strong>: Protects against external threats and unauthorized access to the system.</li>
+<li><strong>Program Execution</strong>: Loads, manages, and terminates processes, ensuring proper execution.</li>
+<li><strong>I/O Operations</strong>: Facilitates interactions between processes and hardware devices, ensuring safe and efficient data transfer.</li>
+<li><strong>File system manipulation</strong>: Enables the creation, reading, writing, deletion, and management of files and directories, ensuring data integrity.</li>
+<li><strong>Inter-Process Communication (IPC)</strong>: Allows processes to communicate with each other through shared memory or message passing.</li>
+<li><strong>Error Detection</strong>: Identifies errors in the system and initiates recovery mechanisms.</li>
+</ul>
+<h4 id="user-interface">User Interface:<a href="#user-interface" class="anchor" aria-hidden="true">#</a> </h4>
+<ul>
+<li><strong>CLI (Command Line Interface)</strong>: Text-based interface that allows users to interact with the system using commands.</li>
+<li><strong>GUI (Graphical User Interface)</strong>: Provides a graphical interface with windows, icons, menus, and pointers (WIMP) for easy user interaction.</li>
+<li><strong>Batch Interface</strong>: Executes a series of commands or scripts without requiring user interaction.</li>
+<li><strong>Hybrid Interface</strong>: A combination of multiple interfaces to provide flexibility and ease of use.</li>
+</ul>
+<hr>
+<p>The OS&rsquo;s <strong>system programs</strong> and <strong>application programs</strong> define the user experience, offering tools for interaction, system management, and program execution.</p>
+<h4 id="system-program-categories">System Program Categories:<a href="#system-program-categories" class="anchor" aria-hidden="true">#</a> </h4>
+<ul>
+<li><strong>File management</strong>: Operations on files and directories (e.g., <code>cp</code>, <code>mv</code>, <code>rm</code>, <code>ls</code>, <code>mkdir</code>, <code>rmdir</code>).</li>
+<li><strong>Status information</strong>: Displays system status, performance metrics, and resource usage (e.g., <code>free</code>, <code>df</code>, <code>uptime</code>, <code>ps</code>).</li>
+<li><strong>Programming support</strong>: Tools like compilers, interpreters, assemblers, and debuggers that help developers build software.</li>
+<li><strong>Communication</strong>: Manages system, process, and user interactions, such as file transfers, email, and logging in.</li>
+<li><strong>Background services</strong>: Includes network daemons, process schedulers, and error monitoring programs that run in the background.</li>
+</ul>
+<p>These system programs provide users and developers with an interface to interact with the underlying system resources.</p>
+<hr>
+<h4 id="system-calls">System Calls<a href="#system-calls" class="anchor" aria-hidden="true">#</a> </h4>
+<p>System calls allow user programs to request services from the OS to perform privileged operations on their behalf. These calls involve operations that are otherwise restricted to the OS for security and stability reasons.</p>
+<ul>
+<li><strong>Trap (Exception)</strong>: A software-generated interrupt triggered by errors or by the user program requesting an OS service (privileged process). Traps are synchronous.</li>
+<li><strong>Interrupt</strong>: A hardware-generated signal that indicates an event, prompting the OS to take specific actions (e.g., triggered by I/O, timers, or hardware). Interrupts are asynchronous.</li>
+</ul>
+<p>The OS is interrupt-driven, relying on interrupts and traps to perform tasks and handle events.</p>
+<h4 id="common-system-calls">Common System Calls:<a href="#common-system-calls" class="anchor" aria-hidden="true">#</a> </h4>
+<ul>
+<li><strong>Process control</strong>: Creating, scheduling, and terminating processes.</li>
+<li><strong>File management</strong>: Opening, reading, writing, and closing files.</li>
+<li><strong>Device management</strong>: Interacting with I/O devices (e.g., printers, disk drives).</li>
+<li><strong>Memory management</strong>: Allocating and deallocating memory for processes.</li>
+<li><strong>Communication</strong>: Facilitating inter-process communication.</li>
+<li><strong>Protection</strong>: Managing access control and permissions to prevent unauthorized access.</li>
+</ul>
+<h4 id="application-programming-interfaces-apis">Application Programming Interfaces (APIs):<a href="#application-programming-interfaces-apis" class="anchor" aria-hidden="true">#</a> </h4>
+<ul>
+<li><strong>API</strong>: Simplifies interaction with the OS kernel, abstracting system calls and improving portability across different platforms. Examples: Windows, POSIX, Java.</li>
+</ul>
+<h4 id="dual-mode-user-1--kernel-mode-0">Dual Mode: User (1) / Kernel Mode (0)<a href="#dual-mode-user-1--kernel-mode-0" class="anchor" aria-hidden="true">#</a> </h4>
+<p>To protect the OS, it operates in two modes:</p>
+<ul>
+<li><strong>Kernel Mode (privileged)</strong>: The OS runs with full access to system resources and can execute all instructions.</li>
+<li><strong>User Mode</strong>: User applications run in this mode with restricted access to system resources, ensuring they do not interfere with the OS.</li>
+</ul>
+<p>A mode bit indicates the current mode, preventing illegal instruction execution or unauthorized memory access. Mode transitions occur during system calls, interrupts, or exceptions.</p>
+<h4 id="timer">Timer:<a href="#timer" class="anchor" aria-hidden="true">#</a> </h4>
+<p>A timer periodically interrupts the system after a specified time period, preventing user programs from running indefinitely and allowing the OS to regain control.</p>
+<hr>
+<h3 id="traditional-computing">Traditional Computing<a href="#traditional-computing" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Traditional computing setups refer to systems where computing resources such as servers and workstations are located locally within an organization.</p>
+<ul>
+<li><strong>PC</strong>: A single-user system focused on ease of use and performance, but with less emphasis on resource utilization.</li>
+<li><strong>Mainframe</strong>: A multi-user system designed for resource maximization and efficient information sharing.</li>
+<li><strong>Workstations</strong>: Connected to servers via networks, offering a balance of performance and resource utilization.</li>
+<li><strong>Network Computers / Thin Clients</strong>: Focus on easy maintenance and security, with less local processing power.</li>
+</ul>
+<h4 id="distributed-systems">Distributed Systems<a href="#distributed-systems" class="anchor" aria-hidden="true">#</a> </h4>
+<p>A distributed system is a collection of independent computers that appear to users as a single system. These systems distribute workloads across multiple machines to enhance reliability, scalability, and performance.<br>
+<strong>Examples</strong>: Cloud services, large-scale web applications.</p>
+<h4 id="client-server-computing">Client-Server Computing<a href="#client-server-computing" class="anchor" aria-hidden="true">#</a> </h4>
+<p>This model divides tasks between requesters (clients) and service providers (servers), with servers offering services, data, or resources to clients over a network.</p>
+<h4 id="peer-to-peer-computing">Peer-to-Peer Computing<a href="#peer-to-peer-computing" class="anchor" aria-hidden="true">#</a> </h4>
+<p>A decentralized network model where each node functions as both a client and a server, sharing resources directly with other nodes, without a central server.</p>
+<h4 id="cloud-computing">Cloud Computing<a href="#cloud-computing" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Cloud computing delivers services over the internet, including storage, networking, databases, software applications, and processing power. Organizations rent computing resources from cloud service providers on-demand, rather than maintaining their own physical infrastructure.</p>
+<p><strong>Cloud Types</strong>:</p>
+<ul>
+<li><strong>Public Cloud</strong>: Resources owned and managed by third-party providers (e.g., AWS, Azure, Google Cloud).</li>
+<li><strong>Private Cloud</strong>: Cloud infrastructure used by a single organization, potentially hosted by a third-party provider.</li>
+<li><strong>Hybrid Cloud</strong>: A combination of public and private clouds, allowing for data sharing between them.</li>
+<li><strong>Community Cloud</strong>: Shared infrastructure used by several organizations with similar requirements.</li>
+</ul>
+<p><strong>Cloud Service Models</strong>:</p>
+<ul>
+<li><strong>IaaS (Infrastructure as a Service)</strong>: Provides virtualized computing resources like virtual machines, storage, and networks (e.g., Amazon EC2, Azure Virtual Machines).</li>
+<li><strong>PaaS (Platform as a Service)</strong>: Provides a platform for developers to build and deploy applications without managing the underlying infrastructure (e.g., Google App Engine, Azure App Services, Heroku).</li>
+<li><strong>SaaS (Software as a Service)</strong>: Delivers software applications over the internet on a subscription basis (e.g., Google Workspace, Salesforce).</li>
+<li><strong>DBaaS (Database as a Service)</strong>: Offers database hosting and management without requiring users to manage the infrastructure (e.g., Amazon RDS, Google Cloud SQL).</li>
+</ul>
+<h4 id="embedded-systems">Embedded Systems<a href="#embedded-systems" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Embedded systems are specialized computing systems designed to perform specific tasks with strict requirements, often in real-time environments.</p>
+<h5 id="real-time-operating-system-rtos"><strong>Real-Time Operating System (RTOS)</strong>:<a href="#real-time-operating-system-rtos" class="anchor" aria-hidden="true">#</a> </h5>
+<p>An OS designed to meet the timing constraints of real-time applications. These systems must process inputs and generate outputs within specified time limits to ensure reliability.<br>
+<strong>Examples</strong>: Medical devices (e.g., MRI machines, pacemakers), automotive systems (e.g., ABS, flight controllers).</p>
+<hr>
+<h4 id="system-boot">System Boot<a href="#system-boot" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Booting is the process of starting a computer system by loading the kernel into memory and initializing its execution. The process starts with a small piece of code called the <strong>bootstrap program</strong> or <strong>bootstrap loader</strong>, typically stored in ROM (firmware). This program locates and loads the OS kernel into the main memory.</p>
+<p>For modern OS like <strong>Windows</strong>, <strong>macOS</strong>, or <strong>UNIX</strong>, the <strong>bootstrap loader</strong> is stored in firmware, while the OS itself resides on disk.</p>
+<p><strong>Boot Disk/System Disk</strong>: The disk containing the OS and the boot partition, which is necessary to start the system.</p>
+<hr>
+<h3 id="inter-process-communication"><strong>Inter Process Communication</strong><a href="#inter-process-communication" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Processes executing concurrently in an operating system can be either <strong>independent</strong> or <strong>cooperating</strong>.</p>
+<ul>
+<li>
+<p><strong>Independent Process:</strong><br>
+A process that cannot affect or be affected by other processes. These processes do not share data with others. They operate in isolation and do not require synchronization with other processes.</p>
+</li>
+<li>
+<p><strong>Cooperating Process:</strong><br>
+A process that can be affected by or affect other processes as these processes share data. Cooperating processes typically require a mechanism to ensure safe and synchronized communication.</p>
+</li>
+</ul>
+<p>Cooperating processes require an <strong>Inter-Process Communication (IPC)</strong> mechanism to exchange information and synchronize their operations.</p>
+<p>Reasons for Process Cooperation:</p>
+<ul>
+<li><strong>Information Sharing</strong> - Processes need to share common data or results.</li>
+<li><strong>Computation Speedup</strong> - By dividing a large task into subtasks that can be run concurrently, the overall computation is sped up.</li>
+<li><strong>Modularity</strong> - Dividing complex functionalities into manageable, independent processes.</li>
+<li><strong>Convenience</strong> - Processes running concurrently can improve system throughput and responsiveness.</li>
+</ul>
+<hr>
+<h3 id="shared-memory-system"><strong>Shared Memory System</strong><a href="#shared-memory-system" class="anchor" aria-hidden="true">#</a> </h3>
+<p>In <strong>shared-memory systems</strong>, cooperating processes communicate by sharing a region of memory. This allows processes to exchange information by reading and writing data to the shared memory region. However, to avoid data inconsistencies, processes must ensure that they do not write to the same memory location simultaneously unless they use proper synchronization.</p>
+<h4 id="producer-consumer-problem"><strong>Producer-Consumer Problem</strong><a href="#producer-consumer-problem" class="anchor" aria-hidden="true">#</a> </h4>
+<p>One common problem in cooperative processes is the <strong>Producer-Consumer problem</strong>.</p>
+<ul>
+<li><strong>Producer Process:</strong> Produces data and stores it in a shared buffer.</li>
+<li><strong>Consumer Process:</strong> Consumes the data produced by the producer.</li>
+</ul>
+<p>For both processes to run concurrently, they need a <strong>shared buffer</strong> — a region of memory where the producer can place data, and the consumer can retrieve it. Synchronization between the producer and consumer is crucial to prevent problems like:</p>
+<ul>
+<li><strong>Buffer Overflow</strong>: If the buffer is full and the producer tries to add more data, it may overwrite existing data before the consumer can consume it.</li>
+<li><strong>Buffer Underflow</strong>: If the buffer is empty and the consumer tries to retrieve data, it may access non-existent data.</li>
+</ul>
+<p>To avoid these issues, synchronization mechanisms such as <strong>mutexes</strong>, <strong>semaphores</strong>, or <strong>monitors</strong> are commonly used to ensure mutual exclusion and avoid race conditions.</p>
+<hr>
+<p>There are two types of buffers used:</p>
+<ul>
+<li>
+<p><strong>Unbounded Buffer:</strong> No limit on the buffer size. The producer can continue producing items even if the consumer is slower in consuming.</p>
+<ul>
+<li>(The consumer may need to wait for new items, but the producer is not blocked.)</li>
+</ul>
+</li>
+<li>
+<p><strong>Bounded Buffer:</strong> The buffer has a fixed size.<br>
+(The producer must wait if the buffer is full, and the consumer must wait if the buffer is empty.)</p>
+</li>
+</ul>
+<p>A <strong>bounded buffer</strong> is more practical in real systems to prevent memory overload, while <strong>unbounded buffers</strong> are usually theoretical or abstract concepts.</p>
+<hr>
+
+<figure>
+  <img
+    srcset="data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAADwAQCdASoQAAoAAph8J6QAAxf1F9Jy3wAA/usvsXNZR4YDJmIwLj6vGws8Fz1voAA="
+        data-srcset="/personal-site/images/os/3_12_CommunicationsModels_hu_c3a39f43061a0e6.webp 480w,/personal-site/images/os/3_12_CommunicationsModels_hu_46b81ad055358619.webp 511w"
+        data-sizes="auto"
+    src="/personal-site/images/os/3_12_CommunicationsModels_hu_fc71439054efa85a.jpg"
+    width="511"
+    height="322"
+    decoding="async"
+    fetchpriority="auto"
+    loading="lazy"
+    alt="3.12 Communication Models"
+    class="lazyload blur-up"
+  ><figcaption>3.12 Communication Models</figcaption>
+</figure>
+<h3 id="message-passing-system"><strong>Message Passing System</strong><a href="#message-passing-system" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Message passing allows processes to communicate and synchronize without sharing the same address space. This makes message passing systems ideal for <strong>distributed systems</strong>, where processes may reside on different machines connected by a network.</p>
+<p>Message passing typically provides at least two operations:</p>
+<ul>
+<li><strong>send(message):</strong> Send a message to another process.</li>
+<li><strong>receive(message):</strong> Receive a message from another process.</li>
+</ul>
+<p>Message passing provides a more flexible way to synchronize and communicate, especially in distributed or parallel systems.</p>
+<h4 id="message-passing-implementation-models"><strong>Message Passing Implementation Models</strong><a href="#message-passing-implementation-models" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Message passing systems can be implemented using different methods, including:</p>
+<ul>
+<li><strong>Direct or Indirect Communication</strong>: Based on how processes identify each other.</li>
+<li><strong>Synchronous or Asynchronous Communication</strong>: Defines whether the sender or receiver waits for acknowledgment.</li>
+<li><strong>Automatic or Explicit Buffering</strong>: Relates to how messages are queued and managed.</li>
+<li><strong>Synchronization Mechanisms</strong>: Ensures that communication happens without data inconsistencies or race conditions.</li>
+</ul>
+<hr>
+<h4 id="direct-communication"><strong>Direct Communication</strong><a href="#direct-communication" class="anchor" aria-hidden="true">#</a> </h4>
+<p>In <strong>direct communication</strong>, each process explicitly names the sender or receiver, and the messages are sent directly between processes.</p>
+<ul>
+<li><strong>send(P, message):</strong> Send a message to process P.</li>
+<li><strong>receive(Q, message):</strong> Receive a message from process Q.</li>
+</ul>
+<p>Another version of direct communication is <strong>asymmetric addressing</strong>, where only the sender names the recipient.</p>
+<ul>
+<li><strong>send(P, message):</strong> Send a message to process P.</li>
+<li><strong>receive(id, message):</strong> Receive a message from any process, with <code>id</code> set to the name of the sender.</li>
+</ul>
+<p>This direct communication can sometimes lead to tighter coupling between processes, reducing flexibility in dynamic or distributed systems.</p>
+<h4 id="indirect-communication"><strong>Indirect Communication</strong><a href="#indirect-communication" class="anchor" aria-hidden="true">#</a> </h4>
+<p>In <strong>indirect communication</strong>, processes communicate via <strong>mailboxes</strong> (or ports), which are abstract objects where messages are placed and retrieved. These can be either process-owned or OS-managed.</p>
+<ul>
+<li><strong>send(A, message):</strong> Send a message to mailbox A.</li>
+<li><strong>receive(A, message):</strong> Receive a message from mailbox A.</li>
+</ul>
+<p>Indirect communication decouples the processes, making it more flexible and scalable, especially in distributed systems where processes may be spread across different machines.</p>
+<hr>
+<h4 id="synchronous-or-asynchronous-communication"><strong>Synchronous or Asynchronous Communication</strong><a href="#synchronous-or-asynchronous-communication" class="anchor" aria-hidden="true">#</a> </h4>
+<ul>
+<li>
+<p><strong>Synchronous (Blocking) Communication</strong>: The sender or receiver is blocked until the message is successfully sent or received. The sender waits until the receiver acknowledges receipt of the message.</p>
+</li>
+<li>
+<p><strong>Asynchronous (Non-blocking) Communication</strong>: The sender or receiver does not wait. Once the message is sent, the sender can continue its execution without waiting for an acknowledgment from the receiver.</p>
+</li>
+</ul>
+<p>Asynchronous communication is typically more efficient but requires additional mechanisms (like callback functions or notifications) to ensure proper synchronization.</p>
+<p>For example, in the <strong>Producer-Consumer</strong> problem:</p>
+<ul>
+<li>The producer sends a message using a <strong>blocking send</strong> and waits until the message is received by the consumer.</li>
+<li>The consumer receives a message via <strong>blocking receive</strong>, waiting until the message is available.</li>
+</ul>
+<hr>
+<h4 id="automatic-or-explicit-buffering"><strong>Automatic or Explicit Buffering</strong><a href="#automatic-or-explicit-buffering" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Messages exchanged between processes are temporarily stored in queues. These queues can be implemented in various ways depending on the system&rsquo;s requirements:</p>
+<ul>
+<li><strong>Zero-capacity Queue:</strong> No messages can be stored. The sender is blocked until the receiver retrieves the message.</li>
+<li><strong>Bounded-capacity Queue:</strong> The queue has a fixed size. The sender is blocked if the queue is full.</li>
+<li><strong>Unbounded-capacity Queue:</strong> The queue can hold an unlimited number of messages. The sender never blocks, regardless of the queue’s size.</li>
+</ul>
+<p>Systems with bounded or unbounded queues are referred to as <strong>automatic buffering systems</strong>, while a system with a zero-capacity queue is referred to as <strong>no buffering</strong>.</p>
+<hr>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="page-nav d-flex flex-column flex-sm-row">
+	
+	<div class="card w-100">
+			<div class="card-body d-flex">
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M5 12l6 6"></path>
+						<path d="M5 12l6 -6"></path>
+				 	</svg>
+				</div>
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Prev</div>
+					<a href="/personal-site/docs/dbms/sql/sql-06-scaling/" class="stretched-link text-reset text-decoration-none">SQL - 06 Scaling</a>
+				</div>
+			</div>
+		</div>
+	<div class="m-2"></div>
+	<div class="card text-end w-100">
+			<div class="card-body d-flex justify-content-end">
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Next</div>
+					<a href="/personal-site/docs/os/0-os-short-notes-unit-2/" class="stretched-link text-reset text-decoration-none">0 - OS - Short Notes (Unit 2)</a>
+				</div>
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M13 18l6 -6"></path>
+						<path d="M13 6l6 6"></path>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</div>
+
+			
+		</main>
+		
+	</div>
+
+      
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container-lg">
+    <div class="row">
+      <div class="col-lg-8 text-center text-lg-start">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a class="text-muted" href="/personal-site/privacy/">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 text-center text-lg-end">
+        <ul class="list-inline">
+          <li class="list-inline-item">Made by <a class="text-muted" href="https://sujith-eag.github.io/personal-site/">Sujith</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+<script async
+  src="/personal-site/js/app.ec98ea736af7f8f531281a21224330da682d1dc9973423443b3d5ce8c45c6ea1.js"
+  integrity="sha256-7Jjqc2r3&#43;PUxKBohIkMw2mgtHcmXNCNEOz1c6MRcbqE=">
+</script>
+
+
+
+
+
+<script async
+  src="/personal-site/js/flexsearch.8350d2f520e131f8552ed57c1eadd05c50eccf0427267781442dd8ddf8fdcdf7.js"
+  integrity="sha256-g1DS9SDhMfhVLtV8Hq3QXFDszwQnJneBRC3Y3fj9zfc=">
+</script>
+<script async
+  src="/personal-site/js/search-modal.877cece5b6bc789456f89fa1955ccfcd8a5acdb2179e7882e292a6caa49efe68.js"
+  integrity="sha256-h3zs5ba8eJRW&#43;J&#43;hlVzPzYpazbIXnniC4pKmyqSe/mg=">
+</script>
+
+    
+  </body>
+</html>

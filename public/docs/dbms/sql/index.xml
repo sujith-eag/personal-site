@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Structured Query Language (SQL) on Sujith&#39;s Library</title>
+    <link>http://localhost:1313/personal-site/docs/dbms/sql/</link>
+    <description>Recent content in Structured Query Language (SQL) on Sujith&#39;s Library</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2020-2024 Thulite</copyright>
+    <lastBuildDate>Sat, 01 Feb 2025 19:23:26 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/personal-site/docs/dbms/sql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SQL - 0 Quering</title>
+      <link>http://localhost:1313/personal-site/docs/dbms/sql/sql-0-quering/</link>
+      <pubDate>Sat, 01 Feb 2025 19:22:15 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/dbms/sql/sql-0-quering/</guid>
+      <description>&lt;h4 id=&#34;database&#34;&gt;&lt;strong&gt;Database&lt;/strong&gt;&lt;/h4&gt;&#xA;&lt;p&gt;A collection of data for Creating, Reading, Updating and Deleting.&lt;/p&gt;&#xA;&lt;p&gt;Every row in a table stores one item in that set. (Each book is a row)&#xA;Every column has some attribute of that item. (title, author)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SQL - 01 Relating</title>
+      <link>http://localhost:1313/personal-site/docs/dbms/sql/sql-01-relating/</link>
+      <pubDate>Sat, 01 Feb 2025 19:22:31 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/dbms/sql/sql-01-relating/</guid>
+      <description>&lt;p&gt;Databases can have multiple tables.&#xA;&lt;code&gt;sqlite longlist.db&lt;/code&gt;&#xA;&lt;code&gt;.tables&lt;/code&gt; is command used to view all the tables in the database.&lt;/p&gt;&#xA;&lt;p&gt;When there are some relationship between these tables, we call them &lt;em&gt;&lt;strong&gt;relational database&lt;/strong&gt;&lt;/em&gt;.&#xA;examples would be, Authors write books, publishers publish books, books are translated by translators.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SQL - 02 Designing</title>
+      <link>http://localhost:1313/personal-site/docs/dbms/sql/sql-02-designing/</link>
+      <pubDate>Sat, 01 Feb 2025 19:22:42 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/dbms/sql/sql-02-designing/</guid>
+      <description>&lt;p&gt;Deigning a Database&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;sqlite3 longlist.db&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;.schema&lt;/code&gt; is a &lt;code&gt;SQLite&lt;/code&gt; command, not SQL keyword that shows the structure of the tables in the database along with the types of data.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SQL - 03 Writing</title>
+      <link>http://localhost:1313/personal-site/docs/dbms/sql/sql-03-writing/</link>
+      <pubDate>Sat, 01 Feb 2025 19:22:51 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/dbms/sql/sql-03-writing/</guid>
+      <description>&lt;h3 id=&#34;inserting-data&#34;&gt;Inserting Data&lt;/h3&gt;&#xA;&lt;p&gt;&lt;code&gt;INSERT INTO&lt;/code&gt; is used to insert a row of data into a given table.&lt;/p&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;div class=&#34;expressive-code&#34;&gt;&#xD;&#xA;  &lt;figure class=&#34;frame not-content&#34;&gt;&#xD;&#xA;  &lt;figcaption class=&#34;header&#34;&gt;&#xD;&#xA;    &lt;span class=&#34;title&#34;&gt;&lt;/span&gt;&#xD;&#xA;  &lt;/figcaption&gt;&#xD;&#xA;  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;INSERT&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;INTO&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;table&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;column0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;...)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;VALUES&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;...);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xD;&#xA;  &lt;/figure&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;div class=&#34;expressive-code&#34;&gt;&#xD;&#xA;  &lt;figure class=&#34;frame not-content&#34;&gt;&#xD;&#xA;  &lt;figcaption class=&#34;header&#34;&gt;&#xD;&#xA;    &lt;span class=&#34;title&#34;&gt;&lt;/span&gt;&#xD;&#xA;  &lt;/figcaption&gt;&#xD;&#xA;  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;INSERT&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;INTO&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;collections&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;accession_number&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;acquired&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;VALUES&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Profusion&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;56.257&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;1996-04-12&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xD;&#xA;  &lt;/figure&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;p&gt;This command requires the list of columns in the table that will receive the values to be added to each column in the same order.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SQL - 04 Viewing</title>
+      <link>http://localhost:1313/personal-site/docs/dbms/sql/sql-04-viewing/</link>
+      <pubDate>Sat, 01 Feb 2025 19:23:04 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/dbms/sql/sql-04-viewing/</guid>
+      <description>&lt;p&gt;&lt;code&gt;JOIN&lt;/code&gt; can be used to join two tables according to their columns.&lt;/p&gt;&#xA;&lt;h2 id=&#34;views&#34;&gt;Views&lt;/h2&gt;&#xA;&lt;p&gt;A view is a virtual table defined by a query.&#xA;Views are useful for&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SQL - 05 Optimizing</title>
+      <link>http://localhost:1313/personal-site/docs/dbms/sql/sql-05-optimizing/</link>
+      <pubDate>Sat, 01 Feb 2025 19:23:16 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/dbms/sql/sql-05-optimizing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SQL - 06 Scaling</title>
+      <link>http://localhost:1313/personal-site/docs/dbms/sql/sql-06-scaling/</link>
+      <pubDate>Sat, 01 Feb 2025 19:23:26 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/dbms/sql/sql-06-scaling/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
