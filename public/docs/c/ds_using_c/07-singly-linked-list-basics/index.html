@@ -16,7 +16,7 @@
 
 <noscript><style>img.lazyload { display: none; }</style></noscript>
 	
-<title>OS 2.10 - System Boot</title>
+<title>07 - Singly Linked List - Basics</title>
   
 <meta name="description" content="A reference site with summary of various coding topics">
 
@@ -183,7 +183,7 @@
   </li>
 
   <li>
-    <details open>
+    <details open open>
       <summary>C and Data Structures</summary>
       <ul class="list-unstyled list-nested">
 
@@ -236,7 +236,7 @@
   </li>
 
   <li>
-    <details open>
+    <details open open>
       <summary>Data Structures Using C</summary>
       <ul class="list-unstyled list-nested">
 
@@ -264,8 +264,8 @@
       <a href="/personal-site/docs/c/ds_using_c/06-circular-queue/">06 - Circular Queue</a>
   </li>
 
-  <li>
-      <a href="/personal-site/docs/c/ds_using_c/07-singly-linked-list-basics/">07 - Singly Linked List - Basics</a>
+  <li class="active" >
+      <a aria-current="page" href="/personal-site/docs/c/ds_using_c/07-singly-linked-list-basics/">07 - Singly Linked List - Basics</a>
   </li>
 
   <li>
@@ -819,7 +819,7 @@
   </li>
 
   <li>
-    <details open open>
+    <details open>
       <summary>Operating System Concepts</summary>
       <ul class="list-unstyled list-nested">
 
@@ -852,7 +852,7 @@
   </li>
 
   <li>
-    <details open open>
+    <details open>
       <summary>Chapter 02 - System Structure</summary>
       <ul class="list-unstyled list-nested">
 
@@ -876,8 +876,8 @@
       <a href="/personal-site/docs/os/c02_system_structure/os-2.07-os-structure/">OS 2.07 - OS Structure</a>
   </li>
 
-  <li class="active" >
-      <a aria-current="page" href="/personal-site/docs/os/c02_system_structure/os-2.10-system-boot/">OS 2.10 - System Boot</a>
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.10-system-boot/">OS 2.10 - System Boot</a>
   </li>
       </ul>
     </details>
@@ -1243,7 +1243,7 @@
   </li>
 
   <li>
-    <details open>
+    <details open open>
       <summary>C and Data Structures</summary>
       <ul class="list-unstyled list-nested">
 
@@ -1296,7 +1296,7 @@
   </li>
 
   <li>
-    <details open>
+    <details open open>
       <summary>Data Structures Using C</summary>
       <ul class="list-unstyled list-nested">
 
@@ -1324,8 +1324,8 @@
       <a href="/personal-site/docs/c/ds_using_c/06-circular-queue/">06 - Circular Queue</a>
   </li>
 
-  <li>
-      <a href="/personal-site/docs/c/ds_using_c/07-singly-linked-list-basics/">07 - Singly Linked List - Basics</a>
+  <li class="active" >
+      <a aria-current="page" href="/personal-site/docs/c/ds_using_c/07-singly-linked-list-basics/">07 - Singly Linked List - Basics</a>
   </li>
 
   <li>
@@ -1879,7 +1879,7 @@
   </li>
 
   <li>
-    <details open open>
+    <details open>
       <summary>Operating System Concepts</summary>
       <ul class="list-unstyled list-nested">
 
@@ -1912,7 +1912,7 @@
   </li>
 
   <li>
-    <details open open>
+    <details open>
       <summary>Chapter 02 - System Structure</summary>
       <ul class="list-unstyled list-nested">
 
@@ -1936,8 +1936,8 @@
       <a href="/personal-site/docs/os/c02_system_structure/os-2.07-os-structure/">OS 2.07 - OS Structure</a>
   </li>
 
-  <li class="active" >
-      <a aria-current="page" href="/personal-site/docs/os/c02_system_structure/os-2.10-system-boot/">OS 2.10 - System Boot</a>
+  <li>
+      <a href="/personal-site/docs/os/c02_system_structure/os-2.10-system-boot/">OS 2.10 - System Boot</a>
   </li>
       </ul>
     </details>
@@ -2043,8 +2043,13 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#steps-in-the-boot-process">Steps in the Boot Process</a></li>
-        <li><a href="#key-concepts">Key Concepts:</a></li>
+        <li>
+          <ul>
+            <li><a href="#pointers-for-operations"><strong>Pointers for Operations</strong></a></li>
+            <li><a href="#creating-a-node">Creating a node</a></li>
+            <li><a href="#display-function"><strong>Display Function</strong></a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -2054,7 +2059,7 @@
 		</nav>
 		<main class="docs-content col-lg-11 col-xl-9">
 		
-			<h1>OS 2.10 - System Boot</h1>
+			<h1>07 - Singly Linked List - Basics</h1>
 			
 			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
 				<details>
@@ -2064,8 +2069,13 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#steps-in-the-boot-process">Steps in the Boot Process</a></li>
-        <li><a href="#key-concepts">Key Concepts:</a></li>
+        <li>
+          <ul>
+            <li><a href="#pointers-for-operations"><strong>Pointers for Operations</strong></a></li>
+            <li><a href="#creating-a-node">Creating a node</a></li>
+            <li><a href="#display-function"><strong>Display Function</strong></a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -2074,109 +2084,406 @@
   </details>
 
 			</nav>
-			<p>Booting a computer system refers to the process of starting it up by loading the kernel into memory and initiating its execution. This procedure is vital for initializing the operating system and setting up the system for user operations.</p>
-<p>The process begins with a small piece of code called the <strong>bootstrap program</strong> or <strong>bootstrap loader</strong>. This program is responsible for finding and loading the operating system kernel into the main memory and starting its execution.</p>
-<p>Some computer systems, such as PCs, use a two-step process in which a simple bootstrap loader fetches a more complex boot program from disk, which in turn loads the kernel.</p>
-<hr>
-<h3 id="steps-in-the-boot-process">Steps in the Boot Process<a href="#steps-in-the-boot-process" class="anchor" aria-hidden="true">#</a> </h3>
+			<p>A <code>node</code> data type is defined using a <code>struct</code> that contains two elements:</p>
 <ol>
-<li>
-<p><strong>Reset Event</strong>:</p>
-<ul>
-<li>When a computer is powered on or rebooted, the <strong>CPU</strong> receives a reset signal.</li>
-<li>The <strong>Instruction Register (IR)</strong> is loaded with a predefined memory location, and execution begins from that location.</li>
-</ul>
-</li>
-<li>
-<p><strong>Initial Bootstrap Program</strong>:</p>
-<ul>
-<li>The initial bootstrap program is stored in <strong>read-only memory (ROM)</strong> because at this stage, <strong>RAM</strong> is in an unknown state. ROM is used because it doesn&rsquo;t need initialization and is not easily infected by viruses.</li>
-<li>The bootstrap program is typically stored in a small, non-volatile storage like <strong>ROM</strong> or <strong>firmware</strong>.</li>
-</ul>
-</li>
-<li>
-<p><strong>Diagnostics and Initialization</strong>:</p>
-<ul>
-<li>The bootstrap program usually runs system diagnostics to check the machine’s hardware and ensure that all components are functioning properly.</li>
-<li>If diagnostics pass, the program continues to initialize the system, including the CPU registers, device controllers, and memory contents.</li>
-<li>Eventually, the program begins loading the <strong>operating system (OS)</strong>.</li>
-</ul>
-</li>
-<li>
-<p><strong>Firmware and Read-Only Memory (ROM)</strong>:</p>
-<ul>
-<li>
-<p>All forms of ROM are also known as ﬁrmware, since their characteristics fall somewhere between those of hardware and those of software.</p>
-</li>
-<li>
-<p>Some systems, especially simpler ones (like cell phones, tablets, or game consoles), may store the entire operating system in <strong>ROM</strong>. This is often done for simplicity and ruggedness.</p>
-</li>
-<li>
-<p>However, <strong>firmware</strong> (a combination of hardware and software) comes with limitations:</p>
-<ul>
-<li><strong>Speed</strong>: Executing code in ROM is slower than executing code in <strong>RAM</strong>.</li>
-<li><strong>Flexibility</strong>: Changing the firmware requires replacing the ROM hardware, which can be costly. To address this, <strong>EPROM (Erasable Programmable Read-Only Memory)</strong> is used, allowing the code to be rewritten.</li>
-</ul>
-</li>
-<li>
-<p>While firmware is durable, it typically provides only small amounts of storage and slower execution compared to RAM.</p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Bootloader on Disk for Larger OS</strong>:</p>
-<ul>
-<li>For larger or more dynamic operating systems (like <strong>Windows</strong>, <strong>macOS</strong>, or <strong>UNIX</strong>), the <strong>bootstrap loader</strong> is stored in <strong>firmware</strong>, but the operating system itself resides on a <strong>disk</strong>.</li>
-<li>The bootstrap program stored in the firmware runs diagnostics and reads a small <strong>boot block</strong> (often from the first block on disk).</li>
-<li>This boot block contains enough code to load the remaining bootstrap program into memory.</li>
-</ul>
-<p>The boot block itself is typically small and only contains instructions to load the remainder of the <strong>bootstrap program</strong> from a specific address on the disk.</p>
-</li>
-<li>
-<p><strong>Loading the Operating System</strong>:</p>
-<ul>
-<li>Once the bootstrap program has been loaded into memory, it traverses the file system on disk to find and load the kernel of the operating system.</li>
-<li>After locating the kernel, it is loaded into memory and execution starts, and the system begins to <strong>run</strong> the operating system.</li>
-</ul>
-</li>
+<li><strong>Data Element</strong>: An integer (<code>int</code>) to store the actual data of the node.</li>
+<li><strong>Next Pointer</strong>: A pointer (<code>next</code>) of type <code>struct node*</code> that holds the memory location of the next node in the list.</li>
 </ol>
-<div class="callout callout-note d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
-  
-  <div class="callout-content">
-    
-    <div class="callout-body">
-      <p><strong>GRUB (Grand Unified Bootloader)</strong>:<br>
-One of the most widely used bootstrap programs for Linux systems is <strong>GRUB</strong>, which helps manage the boot process and allows users to choose between different operating systems or kernel versions at startup.</p>
-
-    </div>
-  </div>
-</div>
-
-<div class="callout callout-note d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
-  
-  <div class="callout-content">
-    
-    <div class="callout-body">
-      <p><strong>Boot Disk</strong>:<br>
-The disk that contains the boot partition and the operating system is often referred to as the <strong>boot disk</strong> or <strong>system disk</strong>.<br>
-This disk is critical for loading the operating system during the boot process.</p>
-
-    </div>
-  </div>
-</div>
-
-<hr>
-<h3 id="key-concepts">Key Concepts:<a href="#key-concepts" class="anchor" aria-hidden="true">#</a> </h3>
+<h4 id="pointers-for-operations"><strong>Pointers for Operations</strong><a href="#pointers-for-operations" class="anchor" aria-hidden="true">#</a> </h4>
+<p>To manage the list, three pointers of type <code>struct node*</code> are used:</p>
 <ul>
-<li><strong>Bootstrap Loader</strong>: A small program responsible for loading the operating system kernel into memory.</li>
-<li><strong>ROM (Read-Only Memory)</strong>: Non-volatile memory used for storing the initial bootstrap program. It is essential for starting the system because it doesn&rsquo;t require initialization like RAM.</li>
-<li><strong>Firmware</strong>: Code stored in ROM or EPROM that can control hardware and run basic system functions.</li>
-<li><strong>Boot Block</strong>: A small, fixed location on the disk that contains the first part of the bootstrap program.</li>
-<li><strong>Boot Disk/System Disk</strong>: The disk that holds the operating system and contains the boot partition necessary for system startup.</li>
-<li><strong>GRUB (Grand Unified Bootloader)</strong>: A popular bootloader used in Linux systems for loading and managing multiple operating systems.</li>
+<li><code>*new</code>: Holds the address of a newly created node (allocated via <code>malloc</code>).</li>
+<li><code>*temp</code>: Holds and links the old node, used to link to the new node.</li>
+<li><code>*head</code>: Points to the first node of the list and is used for iteration. It is never incremented during traversal.
+Initially, all pointers (<code>head</code>, <code>temp</code>, <code>new</code>) are set to <code>NULL</code>.</li>
 </ul>
 <hr>
+<h4 id="creating-a-node">Creating a node<a href="#creating-a-node" class="anchor" aria-hidden="true">#</a> </h4>
+<p>The steps to create a new node using <code>create</code> function :</p>
+<ol>
+<li><strong>Memory Allocation</strong>:</li>
+</ol>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">new</span> <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">node</span><span class="o">*</span><span class="p">)</span> <span class="nf">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">node</span><span class="p">));</span></span></span></code></pre></div>
+  </figure>
+</div>
+<ul>
+<li>Using <code>malloc()</code> to allocate memory for the node with size of `struct node.</li>
+<li>The <code>malloc()</code> function returns a <code>void*</code>, which is typecasted into a <code>(struct node*)</code> and assigned to <code>new</code> pointer</li>
+<li><code>new</code> now points to the memory location where the new node is stored.</li>
+</ul>
+<ol start="2">
+<li><strong>Initializing  the Node</strong>:</li>
+</ol>
+<ul>
+<li>Accessing and assignng values to the node using dot<code>.</code> or <code>-&gt;</code> methods</li>
+<li><code>new-&gt;data</code>: Assign the value entered by the user.</li>
+<li><code>new-&gt;next</code>: Initialize to <code>NULL</code> since this is the only node at the moment.</li>
+</ul>
+<ol start="3">
+<li><strong>Linking the Node to Previous node</strong>:</li>
+</ol>
+<ul>
+<li><strong>For First Insertion</strong>: If <code>head == NULL</code> (i.e., the list is empty), <code>new</code> is assigned to <code>head</code> and <code>temp</code>.</li>
+</ul>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">head</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">head</span> <span class="o">=</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">new</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+  </figure>
+</div>
+<ul>
+<li>
+<p>This makes the newly created node the first node in the list and there is no further pointers inside to update.</p>
+</li>
+<li>
+<p><strong>Subsequent Insertions</strong>:</p>
+</li>
+<li>
+<p>For other insertions, <code>temp</code> holds the address of the previous node. The new node&rsquo;s address is assigned to the <code>next</code> pointer within the previous node:</p>
+</li>
+<li>
+<p>Then, <code>temp</code> is updated to point to the new node to be used for the next creation.</p>
+</li>
+</ul>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">new</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">temp</span> <span class="o">=</span> <span class="n">new</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+  </figure>
+</div>
 <hr>
+<h4 id="display-function"><strong>Display Function</strong><a href="#display-function" class="anchor" aria-hidden="true">#</a> </h4>
+<p>To traverse and display the elements of the linked list:</p>
+<ul>
+<li>Create a temporary pointer (<code>te</code>) to traverse the list, starting from <code>head</code>:</li>
+</ul>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">struct</span> <span class="n">node</span><span class="o">*</span> <span class="n">te</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">te</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span></span></span></code></pre></div>
+  </figure>
+</div>
+<ul>
+<li>If <code>head == NULL</code>, the list is empty, so nothing is displayed.</li>
+<li>If the list is not empty, a <code>while</code> loop is used to traverse the list and display the node data:</li>
+</ul>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">while</span> <span class="p">(</span><span class="n">te</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%d -&gt; &#34;</span><span class="p">,</span> <span class="n">te</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">te</span> <span class="o">=</span> <span class="n">te</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+  </figure>
+</div>
+<ul>
+<li>The loop continues until <code>te</code> becomes <code>NULL</code>, indicating the end of the list.</li>
+</ul>
+<hr>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">struct</span> <span class="n">node</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">data</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">struct</span> <span class="n">node</span> <span class="o">*</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="o">*</span><span class="n">new</span><span class="o">=</span><span class="nb">NULL</span><span class="p">,</span> <span class="o">*</span><span class="n">head</span><span class="o">=</span><span class="nb">NULL</span><span class="p">,</span> <span class="o">*</span><span class="n">temp</span><span class="o">=</span><span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">Create</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//struct node *temp;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">new</span> <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">node</span><span class="o">*</span><span class="p">)</span> <span class="nf">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">node</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">	<span class="n">new</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">new</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%d </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">new</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%d </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">new</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span><span class="n">head</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">head</span> <span class="o">=</span> <span class="n">new</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">temp</span> <span class="o">=</span> <span class="n">new</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">else</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">new</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">temp</span> <span class="o">=</span> <span class="n">new</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">Display</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">struct</span> <span class="n">node</span> <span class="o">*</span><span class="n">te</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">te</span><span class="o">=</span><span class="n">head</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span><span class="n">te</span> <span class="o">==</span><span class="nb">NULL</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Currently list is empty</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;***************************</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">else</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="k">while</span><span class="p">(</span><span class="n">te</span> <span class="o">!=</span><span class="nb">NULL</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%d--&gt;&#34;</span><span class="p">,</span><span class="n">te</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">			<span class="n">te</span><span class="o">=</span><span class="n">te</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	<span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="kt">int</span> <span class="n">ch</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">1.Creating Linked List</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;2.Display</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">Enter choice: &#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">ch</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="k">switch</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">				<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Enter the element to be inserted </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">				<span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">				<span class="nf">Create</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">				<span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">				<span class="nf">Display</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">				<span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">			<span class="k">default</span><span class="o">:</span> <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Enter the choice Correctly&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">			<span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>	
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+  </figure>
+</div>
+<hr>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">create</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">display</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">val</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="kt">int</span> <span class="n">ch</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Make a Choise:</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;0 = Exit</span><span class="se">\n</span><span class="s">1 = Add Value</span><span class="se">\t</span><span class="s">2 = Display all Values</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ch</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">		<span class="k">switch</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="k">case</span> <span class="mi">0</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">				<span class="nf">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">			<span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">				<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">Enter the value to be added: </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">				<span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">val</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">				<span class="nf">create</span><span class="p">(</span><span class="n">val</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">				<span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">				<span class="nf">display</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">				<span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="n">node</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">data</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">struct</span> <span class="n">node</span> <span class="o">*</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="o">*</span><span class="n">new</span><span class="o">=</span><span class="nb">NULL</span><span class="p">,</span> <span class="o">*</span><span class="n">temp</span><span class="o">=</span><span class="nb">NULL</span><span class="p">,</span> <span class="o">*</span><span class="n">head</span><span class="o">=</span><span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">create</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">new</span> <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">node</span><span class="o">*</span><span class="p">)</span> <span class="nf">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">node</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">	<span class="n">new</span><span class="o">-&gt;</span><span class="n">data</span><span class="o">=</span><span class="n">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">new</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">=</span><span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\t</span><span class="s">The Value %d has been inserted</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span><span class="n">head</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">head</span> <span class="o">=</span> <span class="n">new</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">temp</span> <span class="o">=</span> <span class="n">new</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">else</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\t</span><span class="s">%p is the previous node, &#34;</span><span class="p">,</span> <span class="n">temp</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;linked with new node %p. </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">new</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">=</span><span class="n">new</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">temp</span><span class="o">=</span><span class="n">new</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">display</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">struct</span> <span class="n">node</span> <span class="o">*</span><span class="n">tem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">tem</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">tem</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\t</span><span class="s">The List is empty</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">else</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\t</span><span class="s">The Values in the list are: &#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="k">while</span><span class="p">(</span><span class="n">tem</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%d  &#34;</span><span class="p">,</span> <span class="n">tem</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">			<span class="n">tem</span><span class="o">=</span><span class="n">tem</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+  </figure>
+</div>
+<hr>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">create</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">display</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">val</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">ch</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Make a Choice:</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;0 = Exit</span><span class="se">\n</span><span class="s">1 = Add Value</span><span class="se">\t</span><span class="s">2 = Display all Values</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ch</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="k">switch</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">case</span> <span class="mi">0</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">                <span class="nf">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">                <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">Enter the value to be added: </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">val</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="nf">create</span><span class="p">(</span><span class="n">val</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">                <span class="nf">display</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">                <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="n">node</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">data</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">node</span> <span class="o">*</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="o">*</span><span class="n">head</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">create</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">node</span> <span class="o">*</span><span class="n">new</span> <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">node</span><span class="o">*</span><span class="p">)</span> <span class="nf">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">node</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="n">new</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">new</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\t</span><span class="s">The Value %d has been inserted</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">head</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">head</span> <span class="o">=</span> <span class="n">new</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;New node %p is now the head of the list.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">new</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">struct</span> <span class="n">node</span> <span class="o">*</span><span class="n">temp</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="p">(</span><span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">new</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\t</span><span class="s">%p is the previous node, linked with new node %p. </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">temp</span><span class="p">,</span> <span class="n">new</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">display</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">node</span> <span class="o">*</span><span class="n">tem</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">tem</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;The List is empty</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\t</span><span class="s">The Values in the list are: &#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="p">(</span><span class="n">tem</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%d &#34;</span><span class="p">,</span> <span class="n">tem</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">tem</span> <span class="o">=</span> <span class="n">tem</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+  </figure>
+</div>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				</div>
@@ -2194,7 +2501,7 @@ This disk is critical for loading the operating system during the boot process.<
 				</div>
 				<div class="d-flex flex-column">
 					<div class="text-body-secondary">Prev</div>
-					<a href="/personal-site/docs/os/c02_system_structure/os-2.07-os-structure/" class="stretched-link text-reset text-decoration-none">OS 2.07 - OS Structure</a>
+					<a href="/personal-site/docs/c/ds_using_c/06-circular-queue/" class="stretched-link text-reset text-decoration-none">06 - Circular Queue</a>
 				</div>
 			</div>
 		</div>
@@ -2203,7 +2510,7 @@ This disk is critical for loading the operating system during the boot process.<
 			<div class="card-body d-flex justify-content-end">
 				<div class="d-flex flex-column">
 					<div class="text-body-secondary">Next</div>
-					<a href="/personal-site/docs/os/c03_process_concept/os-3.01-process-concept/" class="stretched-link text-reset text-decoration-none">OS 3.01 - Process Concept</a>
+					<a href="/personal-site/docs/c/ds_using_c/08-singly-linked-list-full-own-implementation/" class="stretched-link text-reset text-decoration-none">08 - Singly Linked List - Full - (Own Implementation)</a>
 				</div>
 				<div class="d-flex flex-column justify-content-center">
 					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">

@@ -1,5 +1,5 @@
 ---
-title: "07 - Singly Linked List"
+title: "07 - Singly Linked List - Basics"
 description: ""
 summary: ""
 date: 2025-01-01T16:00:52+05:30
