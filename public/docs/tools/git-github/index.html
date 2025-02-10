@@ -757,11 +757,11 @@
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
   </li>
 
   <li>
@@ -1817,11 +1817,11 @@
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/">Bash - 18 - Shell Scripts</a>
+      <a href="/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/">Bash - 18.1 - Shell Scripts - Conditionals</a>
   </li>
 
   <li>
@@ -2042,35 +2042,44 @@
     <nav id="toc">
   <ul>
     <li><a href="#introduction-to-git">Introduction to Git</a></li>
-    <li><a href="#basic-setup">Basic Setup</a></li>
-    <li><a href="#connecting-git-to-github-with-ssh">Connecting Git to GitHub with SSH</a>
-      <ul>
-        <li><a href="#setting-up-ssh-key">Setting Up SSH Key</a></li>
-        <li><a href="#adding-ssh-key-to-github">Adding SSH Key to GitHub</a></li>
-      </ul>
-    </li>
+    <li><a href="#basic-setup-after-downloading-git">Basic Setup after Downloading Git</a></li>
     <li><a href="#basic-git-commands">Basic Git Commands</a>
       <ul>
         <li><a href="#using-git-in-vs-code">Using Git in VS Code</a></li>
       </ul>
     </li>
-    <li><a href="#github-to-git">GitHub to Git</a>
+    <li><a href="#connecting-git-to-github-with-ssh">Connecting Git to GitHub with SSH</a>
       <ul>
-        <li><a href="#cloning-a-repository">Cloning a Repository</a></li>
+        <li>
+          <ul>
+            <li><a href="#setting-up-ssh-key">Setting Up SSH Key</a></li>
+            <li><a href="#adding-ssh-key-to-github">Adding SSH Key to GitHub</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
-    <li><a href="#pushing-local-repository-to-github">Pushing Local Repository to GitHub</a></li>
+    <li><a href="#connecting-from-github-to-git">Connecting from GitHub to Git</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#cloning-a-repository-from-github">Cloning a Repository from Github</a></li>
+          </ul>
+        </li>
+        <li><a href="#pushing-local-repository-to-github">Pushing Local Repository to GitHub</a></li>
+      </ul>
+    </li>
     <li><a href="#commit-messages">Commit Messages</a></li>
-    <li><a href="#branches">Branches</a></li>
-    <li><a href="#merging-branches">Merging Branches</a>
+    <li><a href="#branches">Branches</a>
       <ul>
-        <li><a href="#merge-conflicts">Merge Conflicts</a></li>
-        <li><a href="#deleting-a-branch">Deleting a Branch</a></li>
-        <li><a href="#pushing-a-new-branch-to-github">Pushing a New Branch to GitHub</a></li>
-      </ul>
-    </li>
-    <li><a href="#changing-to-an-old-commit">Changing to an Old Commit</a>
-      <ul>
+        <li>
+          <ul>
+            <li><a href="#merging-branches">Merging Branches</a></li>
+            <li><a href="#merge-conflicts">Merge Conflicts</a></li>
+            <li><a href="#deleting-a-branch">Deleting a Branch</a></li>
+            <li><a href="#pushing-a-new-branch-to-github">Pushing a New Branch to GitHub</a></li>
+            <li><a href="#changing-to-an-old-commit">Changing to an Old Commit</a></li>
+          </ul>
+        </li>
         <li><a href="#additional-topics-to-explore">Additional Topics to Explore</a></li>
       </ul>
     </li>
@@ -2090,35 +2099,44 @@
       <nav id="TableOfContents">
   <ul>
     <li><a href="#introduction-to-git">Introduction to Git</a></li>
-    <li><a href="#basic-setup">Basic Setup</a></li>
-    <li><a href="#connecting-git-to-github-with-ssh">Connecting Git to GitHub with SSH</a>
-      <ul>
-        <li><a href="#setting-up-ssh-key">Setting Up SSH Key</a></li>
-        <li><a href="#adding-ssh-key-to-github">Adding SSH Key to GitHub</a></li>
-      </ul>
-    </li>
+    <li><a href="#basic-setup-after-downloading-git">Basic Setup after Downloading Git</a></li>
     <li><a href="#basic-git-commands">Basic Git Commands</a>
       <ul>
         <li><a href="#using-git-in-vs-code">Using Git in VS Code</a></li>
       </ul>
     </li>
-    <li><a href="#github-to-git">GitHub to Git</a>
+    <li><a href="#connecting-git-to-github-with-ssh">Connecting Git to GitHub with SSH</a>
       <ul>
-        <li><a href="#cloning-a-repository">Cloning a Repository</a></li>
+        <li>
+          <ul>
+            <li><a href="#setting-up-ssh-key">Setting Up SSH Key</a></li>
+            <li><a href="#adding-ssh-key-to-github">Adding SSH Key to GitHub</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
-    <li><a href="#pushing-local-repository-to-github">Pushing Local Repository to GitHub</a></li>
+    <li><a href="#connecting-from-github-to-git">Connecting from GitHub to Git</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#cloning-a-repository-from-github">Cloning a Repository from Github</a></li>
+          </ul>
+        </li>
+        <li><a href="#pushing-local-repository-to-github">Pushing Local Repository to GitHub</a></li>
+      </ul>
+    </li>
     <li><a href="#commit-messages">Commit Messages</a></li>
-    <li><a href="#branches">Branches</a></li>
-    <li><a href="#merging-branches">Merging Branches</a>
+    <li><a href="#branches">Branches</a>
       <ul>
-        <li><a href="#merge-conflicts">Merge Conflicts</a></li>
-        <li><a href="#deleting-a-branch">Deleting a Branch</a></li>
-        <li><a href="#pushing-a-new-branch-to-github">Pushing a New Branch to GitHub</a></li>
-      </ul>
-    </li>
-    <li><a href="#changing-to-an-old-commit">Changing to an Old Commit</a>
-      <ul>
+        <li>
+          <ul>
+            <li><a href="#merging-branches">Merging Branches</a></li>
+            <li><a href="#merge-conflicts">Merge Conflicts</a></li>
+            <li><a href="#deleting-a-branch">Deleting a Branch</a></li>
+            <li><a href="#pushing-a-new-branch-to-github">Pushing a New Branch to GitHub</a></li>
+            <li><a href="#changing-to-an-old-commit">Changing to an Old Commit</a></li>
+          </ul>
+        </li>
         <li><a href="#additional-topics-to-explore">Additional Topics to Explore</a></li>
       </ul>
     </li>
@@ -2132,7 +2150,7 @@
 <ul>
 <li><strong><a href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control">Pro Git Book</a></strong>: A comprehensive guide to Git.</li>
 </ul>
-<h2 id="basic-setup">Basic Setup<a href="#basic-setup" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="basic-setup-after-downloading-git">Basic Setup after Downloading Git<a href="#basic-setup-after-downloading-git" class="anchor" aria-hidden="true">#</a> </h2>
 
 
 
@@ -2148,17 +2166,64 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">git config --global user.name <span class="s2">&#34;Your Name&#34;</span>  <span class="c1"># Set username</span>
 </span></span><span class="line"><span class="cl">git config --get user.name                   <span class="c1"># Retrieve username</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">git config --global user.email <span class="s2">&#34;mail@mail.com&#34;</span>  <span class="c1"># Set email</span>
 </span></span><span class="line"><span class="cl">git config --get user.email                   <span class="c1"># Retrieve email</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">git config --global color.ui auto             <span class="c1"># Enable colored output</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">git config --global pull.rebase <span class="nb">false</span>         <span class="c1"># Disable rebase on pull</span></span></span></code></pre></div>
   </figure>
 </div>
-<p>git pull: This command is used to fetch changes from a remote repository and merge them into your current branch. By default, it performs a merge.
-Rebasing: This is an alternative to merging where Git re-applies your local changes on top of the changes fetched from the remote.</p>
+<p><code>git pull</code>: This command is used to fetch changes from a remote repository and merge them into your current branch. By default, it performs a merge.</p>
+<p>Rebasing: This is an alternative to merging where Git re-applies your local changes on top of the changes fetched from the remote.</p>
+<hr>
+<h2 id="basic-git-commands">Basic Git Commands<a href="#basic-git-commands" class="anchor" aria-hidden="true">#</a> </h2>
+
+
+
+<div class="expressive-code">
+  <figure class="frame is-terminal not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git status       <span class="c1"># Show tracked, untracked, staged files</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git add <span class="o">[</span>file name<span class="o">]</span>       <span class="c1"># Add specific file to staging area</span>
+</span></span><span class="line"><span class="cl">git add .                 <span class="c1"># Add all files to staging area</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;message&#34;</span>   <span class="c1"># Commit staged files with a message</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git log        <span class="c1"># Show commit history</span>
+</span></span><span class="line"><span class="cl">q              <span class="c1"># Exit log view if it&#39;s too long</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git push                <span class="c1"># Push changes to the remote repository</span>
+</span></span><span class="line"><span class="cl">git push origin main    <span class="c1"># Push the main branch to origin in Github</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h3 id="using-git-in-vs-code">Using Git in VS Code<a href="#using-git-in-vs-code" class="anchor" aria-hidden="true">#</a> </h3>
+<ul>
+<li>Opening VS Code from terminal using: <code>code .</code></li>
+<li>To set VS Code as the default editor for commit messages:</li>
+</ul>
+
+
+
+<div class="expressive-code">
+  <figure class="frame is-terminal not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git config --global core.editor <span class="s2">&#34;code --wait&#34;</span></span></span></code></pre></div>
+  </figure>
+</div>
+<hr>
 <h2 id="connecting-git-to-github-with-ssh">Connecting Git to GitHub with SSH<a href="#connecting-git-to-github-with-ssh" class="anchor" aria-hidden="true">#</a> </h2>
-<h3 id="setting-up-ssh-key">Setting Up SSH Key<a href="#setting-up-ssh-key" class="anchor" aria-hidden="true">#</a> </h3>
+<h4 id="setting-up-ssh-key">Setting Up SSH Key<a href="#setting-up-ssh-key" class="anchor" aria-hidden="true">#</a> </h4>
 
 
 
@@ -2175,51 +2240,13 @@ Rebasing: This is an alternative to merging where Git re-applies your local chan
 </span></span><span class="line"><span class="cl">cat ~/.ssh/id_ed25519.pub  <span class="c1"># Copy the SSH key</span></span></span></code></pre></div>
   </figure>
 </div>
-<h3 id="adding-ssh-key-to-github">Adding SSH Key to GitHub<a href="#adding-ssh-key-to-github" class="anchor" aria-hidden="true">#</a> </h3>
+<h4 id="adding-ssh-key-to-github">Adding SSH Key to GitHub<a href="#adding-ssh-key-to-github" class="anchor" aria-hidden="true">#</a> </h4>
 <ol>
 <li>Go to <strong>Settings</strong> → <strong>SSH and GPG keys</strong>.</li>
 <li>Click <strong>New SSH key</strong> and paste the SSH key.</li>
 </ol>
-<h2 id="basic-git-commands">Basic Git Commands<a href="#basic-git-commands" class="anchor" aria-hidden="true">#</a> </h2>
-
-
-
-<div class="expressive-code">
-  <figure class="frame is-terminal not-content">
-  <figcaption class="header">
-    <span class="title"></span>
-  </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git status                          <span class="c1"># Show tracked, untracked, staged files</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">git add <span class="o">[</span>file name<span class="o">]</span>                 <span class="c1"># Add specific file to staging area</span>
-</span></span><span class="line"><span class="cl">git add .                           <span class="c1"># Add all files to staging area</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;message&#34;</span>             <span class="c1"># Commit staged files with a message</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">git log                             <span class="c1"># Show commit history</span>
-</span></span><span class="line"><span class="cl">q                                   <span class="c1"># Exit log view if it&#39;s too long</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">git push                            <span class="c1"># Push changes to the remote repository</span>
-</span></span><span class="line"><span class="cl">git push origin main                <span class="c1"># Push to the main branch</span></span></span></code></pre></div>
-  </figure>
-</div>
-<h3 id="using-git-in-vs-code">Using Git in VS Code<a href="#using-git-in-vs-code" class="anchor" aria-hidden="true">#</a> </h3>
-<ul>
-<li>Open the terminal in VS Code: <code>code .</code></li>
-<li>To set VS Code as the default editor for commit messages:</li>
-</ul>
-
-
-
-<div class="expressive-code">
-  <figure class="frame is-terminal not-content">
-  <figcaption class="header">
-    <span class="title"></span>
-  </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git config --global core.editor <span class="s2">&#34;code --wait&#34;</span></span></span></code></pre></div>
-  </figure>
-</div>
-<h2 id="github-to-git">GitHub to Git<a href="#github-to-git" class="anchor" aria-hidden="true">#</a> </h2>
+<hr>
+<h2 id="connecting-from-github-to-git">Connecting from GitHub to Git<a href="#connecting-from-github-to-git" class="anchor" aria-hidden="true">#</a> </h2>
 <ol>
 <li><strong>Creating a New Repository</strong>:
 <ul>
@@ -2228,7 +2255,7 @@ Rebasing: This is an alternative to merging where Git re-applies your local chan
 </ul>
 </li>
 </ol>
-<h3 id="cloning-a-repository">Cloning a Repository<a href="#cloning-a-repository" class="anchor" aria-hidden="true">#</a> </h3>
+<h4 id="cloning-a-repository-from-github">Cloning a Repository from Github<a href="#cloning-a-repository-from-github" class="anchor" aria-hidden="true">#</a> </h4>
 
 
 
@@ -2237,15 +2264,16 @@ Rebasing: This is an alternative to merging where Git re-applies your local chan
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir repos                      <span class="c1"># Create a new directory</span>
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> repos                         <span class="c1"># Navigate to that directory</span>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir repos       <span class="c1"># Create a new directory</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> repos          <span class="c1"># Navigate to that directory</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">git clone <span class="o">[</span>paste the ssh link<span class="o">]</span>  <span class="c1"># Clone the repo from GitHub</span>
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> <span class="o">[</span>the new folder<span class="o">]</span>             <span class="c1"># Navigate into the cloned folder</span>
-</span></span><span class="line"><span class="cl">git remote -v                    <span class="c1"># Show the linked GitHub repository</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl">git remote -v                   <span class="c1"># Show the linked GitHub repository</span></span></span></code></pre></div>
   </figure>
 </div>
-<h2 id="pushing-local-repository-to-github">Pushing Local Repository to GitHub<a href="#pushing-local-repository-to-github" class="anchor" aria-hidden="true">#</a> </h2>
+<hr>
+<h3 id="pushing-local-repository-to-github">Pushing Local Repository to GitHub<a href="#pushing-local-repository-to-github" class="anchor" aria-hidden="true">#</a> </h3>
 
 
 
@@ -2254,13 +2282,26 @@ Rebasing: This is an alternative to merging where Git re-applies your local chan
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git init                          <span class="c1"># Initialize a new Git repository</span>
-</span></span><span class="line"><span class="cl">git add .                         <span class="c1"># Stage all files</span>
-</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;message&#34;</span>          <span class="c1"># Commit the changes</span>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git init                  <span class="c1"># Initialize a new Git repository</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Create an empty repository on GitHub (without README or license)</span>
-</span></span><span class="line"><span class="cl">git remote add origin <span class="o">[</span>ssh key<span class="o">]</span>  <span class="c1"># Link to the GitHub repository</span>
+</span></span><span class="line"><span class="cl">git add .                 <span class="c1"># Stage all files</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;message&#34;</span>   <span class="c1"># Commit the changes</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Create an empty repository on GitHub (without README or license)</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame is-terminal not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git remote add origin <span class="o">[</span>ssh key<span class="o">]</span>  <span class="c1"># Link to the GitHub repository</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">git branch -M main               <span class="c1"># Rename current branch to main (if necessary)</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">git push -u origin main          <span class="c1"># Push changes to GitHub</span></span></span></code></pre></div>
   </figure>
 </div>
@@ -2295,13 +2336,18 @@ Rebasing: This is an alternative to merging where Git re-applies your local chan
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git branch &lt;branch_name&gt;              <span class="c1"># Create a new branch</span>
-</span></span><span class="line"><span class="cl">git checkout &lt;branch_name&gt;             <span class="c1"># Switch to the branch</span>
-</span></span><span class="line"><span class="cl">git checkout -b &lt;branch_name&gt;          <span class="c1"># Create and switch to a new branch</span>
-</span></span><span class="line"><span class="cl">git checkout main                      <span class="c1"># Switch back to the main branch</span></span></span></code></pre></div>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git branch &lt;branch_name&gt;       <span class="c1"># Create a new branch</span>
+</span></span><span class="line"><span class="cl">git checkout &lt;branch_name&gt;     <span class="c1"># Switch to the branch</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git checkout -b &lt;branch_name&gt;  <span class="c1"># Create and switch to a new branch</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git checkout main     <span class="c1"># Switch back to the main branch</span></span></span></code></pre></div>
   </figure>
 </div>
-<h2 id="merging-branches">Merging Branches<a href="#merging-branches" class="anchor" aria-hidden="true">#</a> </h2>
+<h4 id="merging-branches">Merging Branches<a href="#merging-branches" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Move to the branch you want to merge into</p>
 
 
 
@@ -2310,15 +2356,16 @@ Rebasing: This is an alternative to merging where Git re-applies your local chan
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Move to the branch you want to merge into</span>
-</span></span><span class="line"><span class="cl">git merge &lt;branch_name&gt;  <span class="c1"># Merge changes from &lt;branch_name&gt;</span></span></span></code></pre></div>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git merge &lt;branch_name&gt;  
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Merge changes from &lt;branch_name&gt;</span></span></span></code></pre></div>
   </figure>
 </div>
-<h3 id="merge-conflicts">Merge Conflicts<a href="#merge-conflicts" class="anchor" aria-hidden="true">#</a> </h3>
+<h4 id="merge-conflicts">Merge Conflicts<a href="#merge-conflicts" class="anchor" aria-hidden="true">#</a> </h4>
 <ul>
 <li>Occur when changes to the same line in a file are made in different branches.</li>
 </ul>
-<h3 id="deleting-a-branch">Deleting a Branch<a href="#deleting-a-branch" class="anchor" aria-hidden="true">#</a> </h3>
+<h4 id="deleting-a-branch">Deleting a Branch<a href="#deleting-a-branch" class="anchor" aria-hidden="true">#</a> </h4>
 
 
 
@@ -2327,11 +2374,14 @@ Rebasing: This is an alternative to merging where Git re-applies your local chan
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git branch -d &lt;branch_name&gt;  <span class="c1"># Delete a merged branch</span>
-</span></span><span class="line"><span class="cl">git branch -D &lt;branch_name&gt;  <span class="c1"># Force delete an unmerged branch</span></span></span></code></pre></div>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git branch -d &lt;branch_name&gt;  
+</span></span><span class="line"><span class="cl"><span class="c1"># Delete a merged branch</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git branch -D &lt;branch_name&gt;  
+</span></span><span class="line"><span class="cl"><span class="c1"># Force delete an unmerged branch</span></span></span></code></pre></div>
   </figure>
 </div>
-<h3 id="pushing-a-new-branch-to-github">Pushing a New Branch to GitHub<a href="#pushing-a-new-branch-to-github" class="anchor" aria-hidden="true">#</a> </h3>
+<h4 id="pushing-a-new-branch-to-github">Pushing a New Branch to GitHub<a href="#pushing-a-new-branch-to-github" class="anchor" aria-hidden="true">#</a> </h4>
 
 
 
@@ -2340,12 +2390,19 @@ Rebasing: This is an alternative to merging where Git re-applies your local chan
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git checkout -b &lt;branch_name&gt;    <span class="c1"># Create and switch to the new branch</span>
-</span></span><span class="line"><span class="cl">git push origin &lt;branch_name&gt;     <span class="c1"># Push the branch to GitHub</span>
-</span></span><span class="line"><span class="cl">git push -u origin &lt;branch_name&gt;  <span class="c1"># Link the local branch with the remote one</span></span></span></code></pre></div>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git checkout -b &lt;branch_name&gt;    
+</span></span><span class="line"><span class="cl"><span class="c1"># Create and switch to the new branch</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git push origin &lt;branch_name&gt;     
+</span></span><span class="line"><span class="cl"><span class="c1"># Push the branch to GitHub</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git push -u origin &lt;branch_name&gt;  
+</span></span><span class="line"><span class="cl"><span class="c1"># Link the local branch with the remote one</span></span></span></code></pre></div>
   </figure>
 </div>
-<h2 id="changing-to-an-old-commit">Changing to an Old Commit<a href="#changing-to-an-old-commit" class="anchor" aria-hidden="true">#</a> </h2>
+<h4 id="changing-to-an-old-commit">Changing to an Old Commit<a href="#changing-to-an-old-commit" class="anchor" aria-hidden="true">#</a> </h4>
 
 
 
@@ -2354,16 +2411,22 @@ Rebasing: This is an alternative to merging where Git re-applies your local chan
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git log --oneline                  <span class="c1"># View commit history</span>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git log --oneline        <span class="c1"># View commit history</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># Get the commit ID from the log</span>
-</span></span><span class="line"><span class="cl">git reset --hard <span class="o">[</span>9digitId<span class="o">]</span>       <span class="c1"># Reset to that commit (deletes progress)</span>
-</span></span><span class="line"><span class="cl">git checkout -b old-state <span class="o">[</span>id<span class="o">]</span>    <span class="c1"># Create a new branch at the old commit</span>
-</span></span><span class="line"><span class="cl">git revert <span class="o">[</span>commit_id<span class="o">]</span>             <span class="c1"># Revert a specific commit</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git reset --hard <span class="o">[</span>9digitId<span class="o">]</span>       
+</span></span><span class="line"><span class="cl"><span class="c1"># Reset to that commit (deletes progress)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git checkout -b old-state <span class="o">[</span>id<span class="o">]</span>    
+</span></span><span class="line"><span class="cl"><span class="c1"># Create a new branch at the old commit</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git revert <span class="o">[</span>commit_id<span class="o">]</span>             
+</span></span><span class="line"><span class="cl"><span class="c1"># Revert a specific commit</span></span></span></code></pre></div>
   </figure>
 </div>
 <hr>
 <h3 id="additional-topics-to-explore">Additional Topics to Explore<a href="#additional-topics-to-explore" class="anchor" aria-hidden="true">#</a> </h3>
-<ol>
+<ol start="2">
 <li>
 <p><strong>Git Workflow Models</strong>:</p>
 <ul>
@@ -2414,17 +2477,17 @@ Rebasing: This is an alternative to merging where Git re-applies your local chan
 </li>
 <li>
 <p><strong>Git GUI Clients</strong>:</p>
+</li>
+</ol>
 <ul>
 <li>Overview of popular GUI clients for Git and their features.</li>
 </ul>
-</li>
-<li>
-<p><strong>Troubleshooting Common Issues</strong>:</p>
+<ol start="11">
+<li><strong>Troubleshooting Common Issues</strong>:</li>
+</ol>
 <ul>
 <li>Tips for resolving common Git issues (merge conflicts, detached HEAD, etc.).</li>
 </ul>
-</li>
-</ol>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				</div>
