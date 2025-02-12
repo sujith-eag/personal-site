@@ -23,6 +23,34 @@
     </url>
     
     <url>
+      <loc>http://localhost:1313/personal-site/docs/python/6oop/</loc>
+      <lastmod>2025-02-11T23:52:39+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/python/7exceptions/</loc>
+      <lastmod>2025-02-11T23:54:44+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/python/8file_handling/</loc>
+      <lastmod>2025-02-11T23:57:57+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/python/9libraries/</loc>
+      <lastmod>2025-02-11T23:59:33+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
       <loc>http://localhost:1313/personal-site/docs/python/1data-types/</loc>
       <lastmod>2024-12-17T22:41:09+05:30</lastmod>
       <changefreq>monthly</changefreq>
@@ -77,8 +105,86 @@
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/personal-site/docs/python/5functions/05-functions-05-storing-and-importing-functions/</loc>
+        <loc>http://localhost:1313/personal-site/docs/python/5functions/05-functions-05-importing-functions/</loc>
         <lastmod>2025-02-11T19:58:45+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/python/5functions/05-functions-06-creating-functions/</loc>
+        <lastmod>2025-02-11T19:58:45+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/python/6oop/06-oop-01-oop-concepts/</loc>
+        <lastmod>2025-02-11T23:53:03+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/python/6oop/06-oop-02-classes/</loc>
+        <lastmod>2025-02-11T23:53:16+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/python/6oop/06-oop-03-class-attributes/</loc>
+        <lastmod>2025-02-11T23:53:35+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/python/7exceptions/07-exceptions-01-errors/</loc>
+        <lastmod>2025-02-11T23:55:10+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/python/7exceptions/07-exceptions-02-errors-handling/</loc>
+        <lastmod>2025-02-11T23:55:42+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/python/7exceptions/07-exceptions-03-unit-testing/</loc>
+        <lastmod>2025-02-11T23:56:06+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/python/7exceptions/07-exceptions-04---/</loc>
+        <lastmod>2025-02-11T23:56:41+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/python/8file_handling/08-file-i/o-01-file-handling/</loc>
+        <lastmod>2025-02-11T23:58:14+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/python/8file_handling/08-file-i/o-02-handling-file-content/</loc>
+        <lastmod>2025-02-11T23:58:33+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/python/9libraries/09-packages-01-random-and-statistics-basics/</loc>
+        <lastmod>2025-02-12T00:02:40+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/python/9libraries/09-packages-02-sys-library/</loc>
+        <lastmod>2025-02-12T00:03:07+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/python/9libraries/09-packages-03-working-with-3rd-party-libraries/</loc>
+        <lastmod>2025-02-12T00:04:42+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>

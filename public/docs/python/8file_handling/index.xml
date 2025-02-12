@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>File Input and Output in Python on Sujith&#39;s Library</title>
+    <link>http://localhost:1313/personal-site/docs/python/8file_handling/</link>
+    <description>Recent content in File Input and Output in Python on Sujith&#39;s Library</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2020-2024 Thulite</copyright>
+    <lastBuildDate>Tue, 11 Feb 2025 23:58:33 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/personal-site/docs/python/8file_handling/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>08 File I/O - 01 File Handling</title>
+      <link>http://localhost:1313/personal-site/docs/python/8file_handling/08-file-i/o-01-file-handling/</link>
+      <pubDate>Tue, 11 Feb 2025 23:58:14 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/python/8file_handling/08-file-i/o-01-file-handling/</guid>
+      <description>&lt;p&gt;Disk buffers are temporary memory locations used by the operating system to manage file input and output (I/O) operations. These buffers allow efficient reading and writing by minimizing the number of interactions between the program and the disk. When working with files, Python creates a temporary &amp;ldquo;buffer&amp;rdquo; that holds data being read or written to a disk. This buffer improves performance by reading and writing data in larger blocks instead of byte-by-byte.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>08 File I/O - 02 Handling File Content</title>
+      <link>http://localhost:1313/personal-site/docs/python/8file_handling/08-file-i/o-02-handling-file-content/</link>
+      <pubDate>Tue, 11 Feb 2025 23:58:33 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/python/8file_handling/08-file-i/o-02-handling-file-content/</guid>
+      <description>&lt;p&gt;Python offers powerful tools for working with files, for reading from them, writing to them, processing their contents, handling exceptions, analyzing text, and working with multiple files.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

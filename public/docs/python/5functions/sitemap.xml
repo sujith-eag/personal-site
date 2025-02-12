@@ -7,4 +7,39 @@
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/python/5functions/05-functions-02-scope/</loc>
+      <lastmod>2025-02-11T17:08:40+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/python/5functions/05-functions-03-arguments-parameters-1/</loc>
+      <lastmod>2025-02-11T19:58:34+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/python/5functions/05-functions-04-arguments-parameters-2/</loc>
+      <lastmod>2025-02-11T19:58:41+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/python/5functions/05-functions-05-importing-functions/</loc>
+      <lastmod>2025-02-11T19:58:45+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/python/5functions/05-functions-06-creating-functions/</loc>
+      <lastmod>2025-02-11T19:58:45+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
     </urlset>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/python/9libraries/09-packages-01-random-and-statistics-basics/</loc>
+      <lastmod>2025-02-12T00:02:40+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/python/9libraries/09-packages-02-sys-library/</loc>
+      <lastmod>2025-02-12T00:03:07+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/python/9libraries/09-packages-03-working-with-3rd-party-libraries/</loc>
+      <lastmod>2025-02-12T00:04:42+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    </urlset>
