@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/java-script-dom/4-ui_events/js-dom-04.01-mouse-events/</loc>
+      <lastmod>2025-02-12T14:03:31+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/java-script-dom/4-ui_events/js-dom-04.02-moving-mouse/</loc>
+      <lastmod>2025-02-12T14:03:46+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/java-script-dom/4-ui_events/js-dom-04.03-drag-drop/</loc>
+      <lastmod>2025-02-12T14:04:00+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/java-script-dom/4-ui_events/js-dom-04.04-pointer-events/</loc>
+      <lastmod>2025-02-12T14:04:16+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/java-script-dom/4-ui_events/js-dom-04.05-keyboard-events/</loc>
+      <lastmod>2025-02-12T14:04:28+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    </urlset>

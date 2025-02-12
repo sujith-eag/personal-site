@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DOM Events on Sujith&#39;s Library</title>
+    <link>http://localhost:1313/personal-site/docs/java-script-dom/3-dom_events/</link>
+    <description>Recent content in DOM Events on Sujith&#39;s Library</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2020-2024 Thulite</copyright>
+    <lastBuildDate>Wed, 12 Feb 2025 14:01:53 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/personal-site/docs/java-script-dom/3-dom_events/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JS DOM - 03.01 - Events</title>
+      <link>http://localhost:1313/personal-site/docs/java-script-dom/3-dom_events/js-dom-03.01-events/</link>
+      <pubDate>Wed, 12 Feb 2025 14:01:09 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/java-script-dom/3-dom_events/js-dom-03.01-events/</guid>
+      <description>&lt;p&gt;Manipulating DOM dynamically or on demand&lt;/p&gt;&#xA;&lt;h2 id=&#34;events&#34;&gt;Events&lt;/h2&gt;&#xA;&lt;p&gt;An event is a signal that something has happened. All DOM nodes generate such signals.&#xA;Using &lt;code&gt;js&lt;/code&gt; we can make the webpage listen and react to these events.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>JS DOM - 03.02 - Events Handlers</title>
+      <link>http://localhost:1313/personal-site/docs/java-script-dom/3-dom_events/js-dom-03.02-events-handlers/</link>
+      <pubDate>Wed, 12 Feb 2025 14:01:26 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/java-script-dom/3-dom_events/js-dom-03.02-events-handlers/</guid>
+      <description>&lt;p&gt;Handlers are functions that run &lt;code&gt;js&lt;/code&gt; code in case of user actions using events.&lt;/p&gt;&#xA;&lt;p&gt;Three ways of doing this&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;em&gt;&lt;strong&gt;HTML-attribute&lt;/strong&gt;&lt;/em&gt;: Specify function attributes directly on the HTML elements&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;&lt;strong&gt;DOM Property:&lt;/strong&gt;&lt;/em&gt; Set properties in the form of &lt;code&gt;on&amp;lt;eventType&amp;gt;&lt;/code&gt;, such as &lt;code&gt;onClick&lt;/code&gt; or &lt;code&gt;onmousedown&lt;/code&gt; on the DOM nodes in the JavaScript&lt;/li&gt;&#xA;&lt;li&gt;Attach &lt;em&gt;&lt;strong&gt;event listeners&lt;/strong&gt;&lt;/em&gt; to the DOM nodes in your JavaScript&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Event Listeners are the preferred method&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>JS DOM - 03.03 - Events Practice</title>
+      <link>http://localhost:1313/personal-site/docs/java-script-dom/3-dom_events/js-dom-03.03-events-practice/</link>
+      <pubDate>Wed, 12 Feb 2025 14:01:41 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/java-script-dom/3-dom_events/js-dom-03.03-events-practice/</guid>
+      <description>&lt;h4 id=&#34;attaching-listeners-to-group-of-nodes&#34;&gt;Attaching Listeners to group of nodes&lt;/h4&gt;&#xA;&lt;p&gt;We can get a NodeList of all the items matching a specific selector with &lt;code&gt;querySelectorAll(&amp;quot;selector&amp;quot;)&lt;/code&gt;.&#xA;In order to add listeners to each of them, we need to iterate through the whole list.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>JS DOM - 03.04 - Events Related</title>
+      <link>http://localhost:1313/personal-site/docs/java-script-dom/3-dom_events/js-dom-03.04-events-related/</link>
+      <pubDate>Wed, 12 Feb 2025 14:01:53 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/java-script-dom/3-dom_events/js-dom-03.04-events-related/</guid>
+      <description>&lt;h4 id=&#34;bubbling-and-capturinghttpsjavascriptinfobubbling-and-capturing&#34;&gt;&lt;a href=&#34;https://javascript.info/bubbling-and-capturing&#34;&gt;Bubbling and capturing&lt;/a&gt;&lt;/h4&gt;&#xA;&lt;p&gt;The bubbling principle is simple.&#xA;&lt;strong&gt;When an event happens on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors.&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

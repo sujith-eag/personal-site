@@ -130,6 +130,24 @@
         <priority>0.5</priority>
       </url>
       <url>
+        <loc>http://localhost:1313/personal-site/docs/java-script-dom/2-dom-modification/</loc>
+        <lastmod>2025-02-12T13:57:32+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/java-script-dom/3-dom_events/</loc>
+        <lastmod>2025-02-12T14:00:46+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/java-script-dom/4-ui_events/</loc>
+        <lastmod>2025-02-12T14:03:12+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
         <loc>http://localhost:1313/personal-site/docs/html-css/html/</loc>
         <lastmod>2024-10-22T14:34:12+05:30</lastmod>
         <changefreq>monthly</changefreq>

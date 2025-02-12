@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/java-script-dom/3-dom_events/js-dom-03.01-events/</loc>
+      <lastmod>2025-02-12T14:01:09+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/java-script-dom/3-dom_events/js-dom-03.02-events-handlers/</loc>
+      <lastmod>2025-02-12T14:01:26+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/java-script-dom/3-dom_events/js-dom-03.03-events-practice/</loc>
+      <lastmod>2025-02-12T14:01:41+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/java-script-dom/3-dom_events/js-dom-03.04-events-related/</loc>
+      <lastmod>2025-02-12T14:01:53+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    </urlset>
