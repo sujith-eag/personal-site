@@ -87,7 +87,7 @@ You can modify elements that satisfy a condition.
 
 ---
 
-### 5. **Masking with `np.where()`**
+### 5. **Masking with 'np.where()'**
 
 `np.where(condition, x, y)` returns an array where:
 
@@ -104,7 +104,7 @@ You can modify elements that satisfy a condition.
 
 ---
 
-### 6. **Masked Arrays with `numpy.ma`**
+### 6. **Masked Arrays with 'numpy.ma'**
 
 NumPy provides a `numpy.ma` module for handling masked (missing or invalid) data.
 
@@ -149,7 +149,7 @@ You can apply the same masking techniques to 2D arrays.
 
 ---
 
-### 9. **Using `np.where()` for Indexing**
+### 9. **Using 'np.where()' for Indexing**
 
 `np.where()` is also useful for obtaining the indices of elements that satisfy a given condition.
 

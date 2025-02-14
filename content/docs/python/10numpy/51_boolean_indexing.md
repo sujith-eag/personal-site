@@ -113,7 +113,7 @@ array([[  0,   2],
 
 ---
 
-#### Selecting Multiple Names Using Boolean Operators (`&`, `|`)
+#### Selecting Multiple Names Using Boolean Operators ('&', '|')
 
 combining conditions using the **bitwise** operators `&` (and) and `|` (or).
 

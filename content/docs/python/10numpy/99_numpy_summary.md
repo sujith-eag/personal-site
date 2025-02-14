@@ -18,7 +18,7 @@ seo:
 
 ### **Key Concepts and Features of NumPy**
 
-#### **1. NumPy Array (`ndarray`)**
+#### **1. NumPy Array ('ndarray')**
 
 The central feature of NumPy is its **N-dimensional array** object (`ndarray`). The `ndarray` is the most important object in NumPy and allows you to store and manipulate data in a multi-dimensional array.
 

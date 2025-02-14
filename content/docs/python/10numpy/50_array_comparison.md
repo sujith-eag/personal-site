@@ -57,7 +57,7 @@ Boolean values are coerced to `1` (True) and `0` (False), which allows for the u
 1
 ```
 
-### Using  ' any() ' &  ' all() ''
+### Using  'any()' &  'all()'
 
 - `any()` checks if at least one value in the array is `True`.
 - `all()` checks if all values are `True`.
@@ -111,7 +111,7 @@ These functions perform element-wise logical operations on arrays:
 >>> d = np.logical_and(a < b, a = 2)  # Error due to invalid syntax
 ```
 
-### Conditional Array Operations: `where()`
+### Conditional Array Operations: 'where()'
 
 The `np.where()` function can be used to create a new array based on a given condition. If the condition is true, it takes one value (expression1), otherwise another value (expression2).
 
@@ -145,7 +145,7 @@ You can also use `np.where()` to compare two arrays element-wise and choose the 
  [10 11 12  8]]
 ```
 
-### Replacing Values with `where()`
+### Replacing Values with 'where()'
 
 You can replace values based on a condition, such as replacing all positive values with `2` and negative values with `-2`:
 
@@ -161,7 +161,7 @@ You can also replace all positive values with `2` while leaving the negative one
 
 ___
 
-### Finding Non-Zero Elements: `nonzero()`
+### Finding Non-Zero Elements: 'nonzero()'
 
 The `nonzero()` function returns the indices of elements that are non-zero:
 
