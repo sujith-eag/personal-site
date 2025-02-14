@@ -106,6 +106,12 @@
         <priority>0.5</priority>
       </url>
       <url>
+        <loc>http://localhost:1313/personal-site/docs/python/10numpy/</loc>
+        <lastmod>2025-02-14T20:38:49+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
         <loc>http://localhost:1313/personal-site/docs/python/1data-types/</loc>
         <lastmod>2024-12-17T22:41:09+05:30</lastmod>
         <changefreq>monthly</changefreq>

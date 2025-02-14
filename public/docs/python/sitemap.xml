@@ -51,6 +51,13 @@
     </url>
     
     <url>
+      <loc>http://localhost:1313/personal-site/docs/python/10numpy/</loc>
+      <lastmod>2025-02-14T20:38:49+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
       <loc>http://localhost:1313/personal-site/docs/python/1data-types/</loc>
       <lastmod>2024-12-17T22:41:09+05:30</lastmod>
       <changefreq>monthly</changefreq>
@@ -185,6 +192,108 @@
       <url>
         <loc>http://localhost:1313/personal-site/docs/python/9libraries/09-packages-03-working-with-3rd-party-libraries/</loc>
         <lastmod>2025-02-12T00:04:42+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/python/10numpy/10-numpy-01-introduction-to-numpy/</loc>
+        <lastmod>2025-02-14T20:41:05+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/python/10numpy/10-numpy-02-dimensions-of-an-array/</loc>
+        <lastmod>2025-02-14T20:41:26+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/python/10numpy/10-numpy-03-array-atributes/</loc>
+        <lastmod>2025-02-14T20:41:41+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/python/10numpy/10-numpy-04-metods-of-creating-arrays/</loc>
+        <lastmod>2025-02-14T20:42:03+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/python/10numpy/10-numpy-05-modifying-arrays/</loc>
+        <lastmod>2025-02-14T20:42:37+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/python/10numpy/10-numpy-06-transposing-arrays/</loc>
+        <lastmod>2025-02-14T20:42:53+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/python/10numpy/10-numpy-07-array-indexing-and-slicing/</loc>
+        <lastmod>2025-02-14T20:43:12+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/python/10numpy/10-numpy-08-mathematical-operations/</loc>
+        <lastmod>2025-02-14T20:43:30+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/python/10numpy/10-numpy-09-unique-set-logic-linear-algebra/</loc>
+        <lastmod>2025-02-14T20:43:52+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/python/10numpy/10-numpy-10-array-comparison/</loc>
+        <lastmod>2025-02-14T20:44:20+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/python/10numpy/10-numpy-11-boolean-indexing/</loc>
+        <lastmod>2025-02-14T20:44:41+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/python/10numpy/10-numpy-12-numpy-masking/</loc>
+        <lastmod>2025-02-14T20:44:57+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/python/10numpy/10-numpy-13-fancy-indexing/</loc>
+        <lastmod>2025-02-14T20:45:11+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/python/10numpy/10-numpy-14-matrix-operations/</loc>
+        <lastmod>2025-02-14T20:45:31+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/python/10numpy/10-numpy-15-universal-functions/</loc>
+        <lastmod>2025-02-14T20:45:59+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/python/10numpy/10-numpy-16-broadcasting/</loc>
+        <lastmod>2025-02-14T20:46:20+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/python/10numpy/10-numpy-17-numpy-summary/</loc>
+        <lastmod>2025-02-14T20:46:42+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
