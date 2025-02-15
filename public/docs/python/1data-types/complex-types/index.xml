@@ -42,7 +42,7 @@
       <link>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-cdt-05-tuples/</link>
       <pubDate>Tue, 17 Dec 2024 22:46:50 +0530</pubDate>
       <guid>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-cdt-05-tuples/</guid>
-      <description>&lt;p&gt;A &lt;strong&gt;tuple&lt;/strong&gt; is similar to a list in that it contains a collection of elements, which can be of different types. However, unlike lists, &lt;strong&gt;tuples are immutable&lt;/strong&gt;, meaning that once a tuple is created, its elements cannot be modified. This makes tuples &lt;strong&gt;read-only&lt;/strong&gt; sequences, unlike lists, which are mutable.&lt;/p&gt;</description>
+      <description>&lt;p&gt;A &lt;strong&gt;tuple&lt;/strong&gt; is similar to a list in that it contains a collection of elements, which can be of different types.&lt;/p&gt;</description>
     </item>
     <item>
       <title>02 CDT - 06 Sets</title>

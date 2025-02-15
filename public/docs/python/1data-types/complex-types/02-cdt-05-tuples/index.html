@@ -2596,7 +2596,11 @@
     <li>
       <ul>
         <li><a href="#key-characteristics-of-tuples">Key Characteristics of Tuples:</a></li>
-        <li><a href="#use-cases-for-tuples">Use Cases for Tuples:</a></li>
+        <li><a href="#use-cases-for-tuples">Use Cases for Tuples:</a>
+          <ul>
+            <li><a href="#methods-for-tuples">Methods for tuples</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -2617,7 +2621,11 @@
     <li>
       <ul>
         <li><a href="#key-characteristics-of-tuples">Key Characteristics of Tuples:</a></li>
-        <li><a href="#use-cases-for-tuples">Use Cases for Tuples:</a></li>
+        <li><a href="#use-cases-for-tuples">Use Cases for Tuples:</a>
+          <ul>
+            <li><a href="#methods-for-tuples">Methods for tuples</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -2626,9 +2634,11 @@
   </details>
 
 			</nav>
-			<p>A <strong>tuple</strong> is similar to a list in that it contains a collection of elements, which can be of different types. However, unlike lists, <strong>tuples are immutable</strong>, meaning that once a tuple is created, its elements cannot be modified. This makes tuples <strong>read-only</strong> sequences, unlike lists, which are mutable.</p>
+			<p>A <strong>tuple</strong> is similar to a list in that it contains a collection of elements, which can be of different types.</p>
+<p>However, unlike lists, <strong>tuples are immutable</strong>, meaning that once a tuple is created, its elements cannot be modified. This makes tuples <strong>read-only</strong> sequences. So the methods to update the list like <code>append, extend, insert, remove, pop, clear</code> do not work.</p>
+<p>Tuple is meant for storing data which should not be modified and to retrieve data on demand.</p>
 <ul>
-<li><strong>Elements</strong> in a tuple are separated by commas and enclosed in <strong>parentheses</strong> <code>()</code>.</li>
+<li><strong>Elements</strong> in a tuple are separated by commas and enclosed in parentheses <code>()</code>.</li>
 </ul>
 
 
@@ -2638,7 +2648,39 @@
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">tpl</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&#34;apple&#34;</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">)</span></span></span></code></pre></div>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">tup</span> <span class="o">=</span> <span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">tup</span>
+</span></span><span class="line"><span class="cl"><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">tup</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">tup</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">tpl</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&#34;apple&#34;</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">tpl</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>A single element needs a <code>,</code> to be considered a tuple</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">tup</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mi">10</span><span class="p">,)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">tup</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">tuple</span><span class="s1">&#39;&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">tup</span>
+</span></span><span class="line"><span class="cl"><span class="mi">10</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">tup</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">int</span><span class="s1">&#39;&gt;</span></span></span></code></pre></div>
   </figure>
 </div>
 <h3 id="key-characteristics-of-tuples">Key Characteristics of Tuples:<a href="#key-characteristics-of-tuples" class="anchor" aria-hidden="true">#</a> </h3>
@@ -2646,7 +2688,7 @@
 <li><strong>Immutable</strong>: Once a tuple is created, you cannot change its elements. This makes it a <strong>read-only</strong> sequence.</li>
 </ol>
 <ul>
-<li>Example: <code>tpl[0] = 10</code> would raise an error because you can&rsquo;t modify a tuple&rsquo;s elements.</li>
+<li><code>tpl[0] = 10</code> trying to modify element will raise an error.</li>
 </ul>
 <ol start="2">
 <li><strong>Heterogeneous Elements</strong>: A tuple can contain elements of different types, just like a list.</li>
@@ -2659,11 +2701,11 @@
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">tpl</span> <span class="o">=</span> <span class="p">(</span><span class="mi">23</span><span class="p">,</span> <span class="s2">&#34;Kamal&#34;</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span></span></span></code></pre></div>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">tpl</span> <span class="o">=</span> <span class="p">(</span><span class="mi">23</span><span class="p">,</span> <span class="s2">&#34;Kamal&#34;</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span></span></span></code></pre></div>
   </figure>
 </div>
 <ol start="3">
-<li><strong>Accessing Elements</strong>: You can access and extract values from a tuple using <strong>indexing</strong> (with square brackets) or <strong>slicing</strong>.</li>
+<li><strong>Accessing Elements</strong>: Values can be accessed and extracted from a tuple using <strong>indexing</strong> (with square brackets) or <strong>slicing</strong>, similar to list.</li>
 </ol>
 
 
@@ -2673,9 +2715,11 @@
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">tpl</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&#34;apple&#34;</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">tpl</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># Output: 2</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">tpl</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># Output: 4.5 (negative index counts from the end)</span></span></span></code></pre></div>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">tpl</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&#34;apple&#34;</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">tpl</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="mi">2</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">tpl</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;apple&#39;</span></span></span></code></pre></div>
   </figure>
 </div>
 <ol start="4">
@@ -2689,9 +2733,15 @@
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">tpl</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&#34;apple&#34;</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">tpl</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>  <span class="c1"># Output: (2, 3)</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">tpl</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:])</span>  <span class="c1"># Output: (&#34;apple&#34;, 4.5)</span></span></span></code></pre></div>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">tpl</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&#34;apple&#34;</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">tpl</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">tpl</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">tpl</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">:]</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mf">4.5</span><span class="p">,)</span></span></span></code></pre></div>
   </figure>
 </div>
 <ol start="5">
@@ -2705,28 +2755,14 @@
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">tpl</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">tpl</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># Output: (1, 2, 3, 1, 2, 3)</span></span></span></code></pre></div>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">tpl</span><span class="o">*</span><span class="mi">2</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">)</span></span></span></code></pre></div>
   </figure>
 </div>
 <ol start="6">
 <li><strong>Simultaneous Assignment</strong>: Tuples are often used in Python for <strong>simultaneous assignment</strong>, where multiple variables can be assigned values from a tuple in a single statement.</li>
 </ol>
-
-
-
-<div class="expressive-code">
-  <figure class="frame not-content">
-  <figcaption class="header">
-    <span class="title"></span>
-  </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">age</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">primes</span> <span class="o">=</span> <span class="mi">23</span><span class="p">,</span> <span class="s2">&#34;Kamal&#34;</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span></span></span></code></pre></div>
-  </figure>
-</div>
 <p>This is very similar to using a list, but tuples are typically used when the values should remain constant.</p>
-<ol start="7">
-<li><strong>Tuple of Values</strong>: You can assign a tuple of values to a variable, which is useful for grouping related data.</li>
-</ol>
 
 
 
@@ -2735,12 +2771,23 @@
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">point</span> <span class="o">=</span> <span class="p">(</span><span class="mf">3.5</span><span class="p">,</span> <span class="mf">4.8</span><span class="p">)</span>  <span class="c1"># Tuple with two values</span>
-</span></span><span class="line"><span class="cl"><span class="n">date</span> <span class="o">=</span> <span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2023</span><span class="p">)</span> <span class="c1"># Tuple representing a date</span></span></span></code></pre></div>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="mi">23</span><span class="p">,</span> <span class="s1">&#39;Kamal&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">age</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">primes</span> <span class="o">=</span> <span class="n">tup</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">age</span>
+</span></span><span class="line"><span class="cl"><span class="mi">23</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">name</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;Kamal&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">primes</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">age</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">primes</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mi">23</span><span class="p">,</span> <span class="s1">&#39;Kamal&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span></span></span></code></pre></div>
   </figure>
 </div>
-<ol start="8">
-<li><strong>Extracting Values from Tuples</strong>: You can extract individual values or slices from a tuple.</li>
+<ol start="7">
+<li>Converting a list and range into a tuple</li>
 </ol>
 
 
@@ -2750,8 +2797,12 @@
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">xcoordinate</span> <span class="o">=</span> <span class="n">point</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>      <span class="c1"># Output: 3.5</span>
-</span></span><span class="line"><span class="cl"><span class="n">monthyear</span> <span class="o">=</span> <span class="n">date</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>        <span class="c1"># Output: (7, 2023)</span></span></span></code></pre></div>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span></span></span></code></pre></div>
   </figure>
 </div>
 <h3 id="use-cases-for-tuples">Use Cases for Tuples:<a href="#use-cases-for-tuples" class="anchor" aria-hidden="true">#</a> </h3>
@@ -2776,6 +2827,102 @@
 <ul>
 <li><strong>Performance</strong>: Since tuples are immutable, they are generally faster than lists for iteration and storage.</li>
 </ul>
+<p><strong>Tuple of Values</strong>: assigning a tuple of values to a variable, is useful for grouping related data.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">point</span> <span class="o">=</span> <span class="p">(</span><span class="mf">3.5</span><span class="p">,</span> <span class="mf">4.8</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">point</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mf">3.5</span><span class="p">,</span> <span class="mf">4.8</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">date</span> <span class="o">=</span> <span class="mi">16</span><span class="p">,</span> <span class="s1">&#39;Jan&#39;</span><span class="p">,</span> <span class="mi">2023</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">date</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="s1">&#39;Jan&#39;</span><span class="p">,</span> <span class="mi">2023</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">xcoordinate</span> <span class="o">=</span> <span class="n">point</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># 3.5</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">monthyear</span> <span class="o">=</span> <span class="n">date</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>   <span class="c1"># (7, 2023)</span></span></span></code></pre></div>
+  </figure>
+</div>
+<hr>
+<h4 id="methods-for-tuples">Methods for tuples<a href="#methods-for-tuples" class="anchor" aria-hidden="true">#</a> </h4>
+<p>repeated using <code>*</code>
+Concatenation using <code>+</code>
+<code>in</code> and <code>not in</code> membership operators</p>
+<p><code>len()</code><br>
+<code>min()</code><br>
+<code>max()</code>
+<code>count()</code>
+<code>index()</code>
+<code>sorted()</code> <code>sorted( tple, reverse=True)</code></p>
+<hr>
+<p>To accept a tuple and display their sum and average</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">num</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&#34;Enter elements in (): &#34;</span><span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Enter</span> <span class="n">elements</span> <span class="ow">in</span> <span class="p">():</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="nb">sum</span> <span class="o">+=</span> <span class="n">num</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span> 
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">sum</span>
+</span></span><span class="line"><span class="cl"><span class="mi">21</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">sum</span><span class="o">/</span><span class="n">n</span>   <span class="c1"># average</span>
+</span></span><span class="line"><span class="cl"><span class="mf">3.5</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>A program to find the first occurrence of an element in a tuple</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">str</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span> <span class="s1">&#39;Enter comma separated elements: &#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Enter</span> <span class="n">comma</span> <span class="n">separated</span> <span class="n">elements</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">tup</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">str</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span> <span class="s1">&#39;Enter comma separated elements: &#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Enter</span> <span class="n">comma</span> <span class="n">separated</span> <span class="n">elements</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">tup</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">ele</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&#34;Enter an element to search: &#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">Enter</span> <span class="n">an</span> <span class="n">element</span> <span class="n">to</span> <span class="n">search</span><span class="p">:</span> <span class="mi">20</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="n">pos</span> <span class="o">=</span> <span class="n">tup</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">ele</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Element was in position&#39;</span><span class="p">,</span> <span class="n">pos</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">exceptValueError</span><span class="p">:</span>  <span class="c1"># error if not found</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Element not found in tuple&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">str</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;20&#39;</span><span class="p">,</span> <span class="s1">&#39;30&#39;</span><span class="p">,</span> <span class="s1">&#39;40&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">tup</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;20&#39;</span><span class="p">,</span> <span class="s1">&#39;30&#39;</span><span class="p">,</span> <span class="s1">&#39;40&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">lst</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">tup</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span></span></span></code></pre></div>
+  </figure>
+</div>
 <hr>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
