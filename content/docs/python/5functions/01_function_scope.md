@@ -1,11 +1,11 @@
 ---
-title: "05 Functions - 02 Scope"
+title: "05 Functions - 02 Scope of Variables"
 description: ""
 summary: ""
 date: 2025-02-11T17:08:40+05:30
 lastmod: 2025-02-11T17:08:40+05:30
 draft: false
-weight: 47
+weight: 46
 toc: true
 seo:
   title: "" # custom title (optional)
@@ -14,63 +14,13 @@ seo:
   noindex: false # false (default) or true
 ---
 
-### Assigning Functions to Different Names
 
-A function can be assigned to another name, allowing it to be referenced differently.
 
-```python
-# Assigning a function to a new name
-def f(a, b, c):
-    ...
 
-g = f  # g is now another name for f
-```
+If a variable is defined inside a function, it cannot be accessed outside its scope.
 
-This technique is useful for passing functions as arguments to other functions.
 
-```python
-# Applying a function repeatedly
-def apply(f, x, n):
-    res = x
-    for i in range(n):
-        res = f(res)
-    return res
-
-def square(x):
-    return x * x
-
-print(apply(square, 5, 2))  # Output: 625
-```
-
-Here, `square` is passed as `f` to `apply()`.
-
----
-
-Function definitions can be conditionally assigned.
-
-```python
-if condition:
-    def f(a, b, c):
-        ...
-else:
-    def f(a, b, c):
-        ...
-```
-
----
-
-### Customizing Function Behavior
-
-Functions can be customized based on parameters, such as sorting based on a comparison function.
-
-```python
-def sort_function(l, cmp_fn=default_cmp_fn):
-    ...
-```
-
----
-
-## Function Calls and Scope Issues
+**Function Calls and Scope Issues**
 
 The `main()` function prompts for a name and calls another function to process it.
 
@@ -85,10 +35,6 @@ def hello(to="world"):
 
 main()
 ```
-
-### Scope Issue Example
-
-If a variable is defined inside a function, it cannot be accessed outside its scope.
 
 ```python
 # Scope issue example
@@ -109,8 +55,6 @@ When the value is handed to `hello()` within the `main()`, it can be used.
 Its for each function to name its own variable so the "name" variable in main can be passed to "hello" which becomes "to"
 
 ---
-
-## Returning Values and Scope Management
 
 Returning values allows functions to pass data back.
 
@@ -222,3 +166,42 @@ Here, `g()` and `h()` are only accessible within `f()`. Nested functions are use
 
 ---
 
+### **Global Keyword**
+
+The `global` keyword in Python allows you to modify a variable defined outside a function from within the function. Without using `global`, a variable inside a function would be considered local, and changes to it wouldn't affect the global variable.
+
+```python
+x = 5
+
+def modify_global():
+    global x
+    x = 10  # This modifies the global variable 'x'
+
+modify_global()
+print(x)  # Output: 10
+```
+
+- The `global x` statement inside the function tells Python to modify the global `x` variable, not a local one.
+- After calling `modify_global()`, the value of `x` is updated to `10`.
+
+---
+
+### **Passing a Group of Elements to a Function**
+
+To pass multiple elements (such as a list of numbers) to a function, you can group them together in a list or another collection type and pass that collection to the function.
+
+##### **Example: Passing a List to a Function**
+
+```python
+def process_numbers(lst):
+    total = sum(lst)
+    print("Total:", total)
+
+numbers = [int(x) for x in input().split()]
+process_numbers(numbers)
+```
+
+- The `process_numbers()` function accepts a list of numbers, calculates the total sum, and prints it.
+- The list `numbers` is created by reading space-separated input values, converting them to integers, and passing the list to the function.
+
+This approach is flexible and can be adapted to process any group of data.

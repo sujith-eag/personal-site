@@ -9,36 +9,64 @@
     </url>
     
     <url>
-      <loc>http://localhost:1313/personal-site/docs/python/5functions/05-functions-02-scope/</loc>
+      <loc>http://localhost:1313/personal-site/docs/python/5functions/05-functions-02-scope-of-variables/</loc>
       <lastmod>2025-02-11T17:08:40+05:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/personal-site/docs/python/5functions/05-functions-03-arguments-parameters-1/</loc>
+      <loc>http://localhost:1313/personal-site/docs/python/5functions/05-functions-03-arguments/</loc>
       <lastmod>2025-02-11T19:58:34+05:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/personal-site/docs/python/5functions/05-functions-04-arguments-parameters-2/</loc>
+      <loc>http://localhost:1313/personal-site/docs/python/5functions/05-functions-04-parameters/</loc>
       <lastmod>2025-02-11T19:58:41+05:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/personal-site/docs/python/5functions/05-functions-05-importing-functions/</loc>
+      <loc>http://localhost:1313/personal-site/docs/python/5functions/05-functions-05-importing-functions-from-modules/</loc>
       <lastmod>2025-02-11T19:58:45+05:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/personal-site/docs/python/5functions/05-functions-06-creating-functions/</loc>
+      <loc>http://localhost:1313/personal-site/docs/python/5functions/05-functions-06-generator-functions/</loc>
       <lastmod>2025-02-11T19:58:45+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/python/5functions/05-functions-07-lambda-functions/</loc>
+      <lastmod>2025-02-16T22:53:20+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/python/5functions/05-functions-08-decorator-functions/</loc>
+      <lastmod>2025-02-16T22:53:47+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/python/5functions/05-functions-09-built-in-decorators/</loc>
+      <lastmod>2025-02-16T22:54:05+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>http://localhost:1313/personal-site/docs/python/5functions/05-functions-10-third-party-decorators/</loc>
+      <lastmod>2025-02-16T22:54:25+05:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>

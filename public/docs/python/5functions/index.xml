@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright (c) 2020-2024 Thulite</copyright>
-    <lastBuildDate>Tue, 11 Feb 2025 19:58:45 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 16 Feb 2025 22:54:25 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/personal-site/docs/python/5functions/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>05 Functions - 01 Defining a Function</title>
@@ -17,39 +17,67 @@
       <description>&lt;p&gt;Functions are named blocks of code designed to perform a specific task. When you want to execute a task defined in a function, you call the function responsible for it.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>05 Functions - 02 Scope</title>
-      <link>http://localhost:1313/personal-site/docs/python/5functions/05-functions-02-scope/</link>
+      <title>05 Functions - 02 Scope of Variables</title>
+      <link>http://localhost:1313/personal-site/docs/python/5functions/05-functions-02-scope-of-variables/</link>
       <pubDate>Tue, 11 Feb 2025 17:08:40 +0530</pubDate>
-      <guid>http://localhost:1313/personal-site/docs/python/5functions/05-functions-02-scope/</guid>
-      <description>&lt;h3 id=&#34;assigning-functions-to-different-names&#34;&gt;Assigning Functions to Different Names&lt;/h3&gt;&#xA;&lt;p&gt;A function can be assigned to another name, allowing it to be referenced differently.&lt;/p&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;div class=&#34;expressive-code&#34;&gt;&#xD;&#xA;  &lt;figure class=&#34;frame not-content&#34;&gt;&#xD;&#xA;  &lt;figcaption class=&#34;header&#34;&gt;&#xD;&#xA;    &lt;span class=&#34;title&#34;&gt;&lt;/span&gt;&#xD;&#xA;  &lt;/figcaption&gt;&#xD;&#xA;  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Assigning a function to a new name&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;g&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# g is now another name for f&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xD;&#xA;  &lt;/figure&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;p&gt;This technique is useful for passing functions as arguments to other functions.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/personal-site/docs/python/5functions/05-functions-02-scope-of-variables/</guid>
+      <description>&lt;p&gt;If a variable is defined inside a function, it cannot be accessed outside its scope.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Function Calls and Scope Issues&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>05 Functions - 03 Arguments &amp; Parameters (1)</title>
-      <link>http://localhost:1313/personal-site/docs/python/5functions/05-functions-03-arguments-parameters-1/</link>
+      <title>05 Functions - 03 Arguments</title>
+      <link>http://localhost:1313/personal-site/docs/python/5functions/05-functions-03-arguments/</link>
       <pubDate>Tue, 11 Feb 2025 19:58:34 +0530</pubDate>
-      <guid>http://localhost:1313/personal-site/docs/python/5functions/05-functions-03-arguments-parameters-1/</guid>
-      <description>&lt;p&gt;Values are passed to functions similar to assigning values to a name.&lt;/p&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;div class=&#34;expressive-code&#34;&gt;&#xD;&#xA;  &lt;figure class=&#34;frame not-content&#34;&gt;&#xD;&#xA;  &lt;figcaption class=&#34;header&#34;&gt;&#xD;&#xA;    &lt;span class=&#34;title&#34;&gt;&lt;/span&gt;&#xD;&#xA;  &lt;/figcaption&gt;&#xD;&#xA;  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;power&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;power&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# Assigns values explicitly&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xD;&#xA;  &lt;/figure&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;p&gt;Immutable values remain unchanged at the calling point, while mutable values can be modified.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/personal-site/docs/python/5functions/05-functions-03-arguments/</guid>
+      <description>&lt;p&gt;In Python, the terms &lt;strong&gt;pass by value&lt;/strong&gt; and &lt;strong&gt;pass by reference&lt;/strong&gt; don&amp;rsquo;t apply in the same way as in some other languages. This is because everything in Python is an object, and functions always pass object references. However, the way mutable and immutable objects are handled differs.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>05 Functions - 04 Arguments &amp; Parameters (2)</title>
-      <link>http://localhost:1313/personal-site/docs/python/5functions/05-functions-04-arguments-parameters-2/</link>
+      <title>05 Functions - 04 Parameters</title>
+      <link>http://localhost:1313/personal-site/docs/python/5functions/05-functions-04-parameters/</link>
       <pubDate>Tue, 11 Feb 2025 19:58:41 +0530</pubDate>
-      <guid>http://localhost:1313/personal-site/docs/python/5functions/05-functions-04-arguments-parameters-2/</guid>
-      <description>&lt;p&gt;The optional parameter &lt;code&gt;age&lt;/code&gt; has a special value &lt;code&gt;None&lt;/code&gt; as a placeholder. In conditional tests, &lt;code&gt;None&lt;/code&gt; evaluates to &lt;code&gt;False&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Returning a dictionary:&lt;/p&gt;</description>
+      <guid>http://localhost:1313/personal-site/docs/python/5functions/05-functions-04-parameters/</guid>
+      <description>&lt;p&gt;In Python, parameters are used to pass values into functions. A parameter can have an &lt;strong&gt;optional&lt;/strong&gt; value, often represented by &lt;code&gt;None&lt;/code&gt;, which acts as a placeholder for an argument that may or may not be provided.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>05 Functions - 05 Importing Functions</title>
-      <link>http://localhost:1313/personal-site/docs/python/5functions/05-functions-05-importing-functions/</link>
+      <title>05 Functions - 05 Importing Functions from Modules</title>
+      <link>http://localhost:1313/personal-site/docs/python/5functions/05-functions-05-importing-functions-from-modules/</link>
       <pubDate>Tue, 11 Feb 2025 19:58:45 +0530</pubDate>
-      <guid>http://localhost:1313/personal-site/docs/python/5functions/05-functions-05-importing-functions/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Storing Functions in Modules&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;In Python, you can organize your code into separate modules for better structure, reusability, and easier sharing between different programs.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/personal-site/docs/python/5functions/05-functions-05-importing-functions-from-modules/</guid>
+      <description>&lt;p&gt;In Python, you can organize your code into separate modules for better structure, reusability, and easier sharing between different programs.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>05 Functions - 06 Creating Functions</title>
-      <link>http://localhost:1313/personal-site/docs/python/5functions/05-functions-06-creating-functions/</link>
+      <title>05 Functions - 06 Generator Functions</title>
+      <link>http://localhost:1313/personal-site/docs/python/5functions/05-functions-06-generator-functions/</link>
       <pubDate>Tue, 11 Feb 2025 19:58:45 +0530</pubDate>
-      <guid>http://localhost:1313/personal-site/docs/python/5functions/05-functions-06-creating-functions/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Creating and Importing Your Own Modules&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;You can organize your code by writing your own modules:&lt;/p&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;div class=&#34;expressive-code&#34;&gt;&#xD;&#xA;  &lt;figure class=&#34;frame not-content&#34;&gt;&#xD;&#xA;  &lt;figcaption class=&#34;header&#34;&gt;&#xD;&#xA;    &lt;span class=&#34;title&#34;&gt;&lt;/span&gt;&#xD;&#xA;  &lt;/figcaption&gt;&#xD;&#xA;  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# my_module.py&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;hello&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Hello, &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;goodbye&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Goodbye, &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xD;&#xA;  &lt;/figure&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;p&gt;You can then import these functions into another script:&lt;/p&gt;</description>
+      <guid>http://localhost:1313/personal-site/docs/python/5functions/05-functions-06-generator-functions/</guid>
+      <description>&lt;p&gt;A &lt;strong&gt;generator&lt;/strong&gt; is a special type of function in Python that allows you to iterate over a sequence of values lazily, meaning values are produced one at a time as needed, rather than all at once. This makes generators a memory-efficient way of dealing with large datasets or sequences.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>05 Functions - 07 Lambda Functions</title>
+      <link>http://localhost:1313/personal-site/docs/python/5functions/05-functions-07-lambda-functions/</link>
+      <pubDate>Sun, 16 Feb 2025 22:53:20 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/python/5functions/05-functions-07-lambda-functions/</guid>
+      <description>&lt;p&gt;An &lt;strong&gt;anonymous function&lt;/strong&gt; is a function that doesn&amp;rsquo;t have a name. In Python, these are commonly referred to as &lt;strong&gt;lambda functions&lt;/strong&gt;, and they are defined using the &lt;code&gt;lambda&lt;/code&gt; keyword, rather than the standard &lt;code&gt;def&lt;/code&gt; keyword.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>05 Functions - 08 Decorator Functions</title>
+      <link>http://localhost:1313/personal-site/docs/python/5functions/05-functions-08-decorator-functions/</link>
+      <pubDate>Sun, 16 Feb 2025 22:53:47 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/python/5functions/05-functions-08-decorator-functions/</guid>
+      <description>&lt;p&gt;A decorator accepts a function as an argument, modifies its behavior, and returns a new function.&lt;/p&gt;&#xA;&lt;p&gt;A &lt;strong&gt;decorator&lt;/strong&gt; is a special type of function in Python that allows you to modify or enhance the behavior of another function without changing the function&amp;rsquo;s code.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>05 Functions - 09 Built-in Decorators</title>
+      <link>http://localhost:1313/personal-site/docs/python/5functions/05-functions-09-built-in-decorators/</link>
+      <pubDate>Sun, 16 Feb 2025 22:54:05 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/python/5functions/05-functions-09-built-in-decorators/</guid>
+      <description>&lt;p&gt;Python provides several built-in function decorators that can be used to enhance functionality.&lt;/p&gt;&#xA;&lt;p&gt;Some of the commonly used &lt;strong&gt;Python-provided function decorators&lt;/strong&gt;, along with examples and use cases:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>05 Functions - 10 Third-Party Decorators</title>
+      <link>http://localhost:1313/personal-site/docs/python/5functions/05-functions-10-third-party-decorators/</link>
+      <pubDate>Sun, 16 Feb 2025 22:54:25 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/python/5functions/05-functions-10-third-party-decorators/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Third-party libraries&lt;/strong&gt; or &lt;strong&gt;custom decorators&lt;/strong&gt; can provide additional functionality. There are more &lt;strong&gt;decorators&lt;/strong&gt; available from &lt;strong&gt;third-party libraries&lt;/strong&gt; and &lt;strong&gt;custom implementations&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

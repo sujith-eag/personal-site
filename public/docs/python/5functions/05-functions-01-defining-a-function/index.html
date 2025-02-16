@@ -113,23 +113,39 @@
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/5functions/05-functions-02-scope/">05 Functions - 02 Scope</a>
+      <a href="/personal-site/docs/python/5functions/05-functions-02-scope-of-variables/">05 Functions - 02 Scope of Variables</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/5functions/05-functions-03-arguments-parameters-1/">05 Functions - 03 Arguments &amp; Parameters (1)</a>
+      <a href="/personal-site/docs/python/5functions/05-functions-03-arguments/">05 Functions - 03 Arguments</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/5functions/05-functions-04-arguments-parameters-2/">05 Functions - 04 Arguments &amp; Parameters (2)</a>
+      <a href="/personal-site/docs/python/5functions/05-functions-04-parameters/">05 Functions - 04 Parameters</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/5functions/05-functions-05-importing-functions/">05 Functions - 05 Importing Functions</a>
+      <a href="/personal-site/docs/python/5functions/05-functions-05-importing-functions-from-modules/">05 Functions - 05 Importing Functions from Modules</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/5functions/05-functions-06-creating-functions/">05 Functions - 06 Creating Functions</a>
+      <a href="/personal-site/docs/python/5functions/05-functions-06-generator-functions/">05 Functions - 06 Generator Functions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/5functions/05-functions-07-lambda-functions/">05 Functions - 07 Lambda Functions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/5functions/05-functions-08-decorator-functions/">05 Functions - 08 Decorator Functions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/5functions/05-functions-09-built-in-decorators/">05 Functions - 09 Built-in Decorators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/5functions/05-functions-10-third-party-decorators/">05 Functions - 10 Third-Party Decorators</a>
   </li>
       </ul>
     </details>
@@ -1485,23 +1501,39 @@
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/5functions/05-functions-02-scope/">05 Functions - 02 Scope</a>
+      <a href="/personal-site/docs/python/5functions/05-functions-02-scope-of-variables/">05 Functions - 02 Scope of Variables</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/5functions/05-functions-03-arguments-parameters-1/">05 Functions - 03 Arguments &amp; Parameters (1)</a>
+      <a href="/personal-site/docs/python/5functions/05-functions-03-arguments/">05 Functions - 03 Arguments</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/5functions/05-functions-04-arguments-parameters-2/">05 Functions - 04 Arguments &amp; Parameters (2)</a>
+      <a href="/personal-site/docs/python/5functions/05-functions-04-parameters/">05 Functions - 04 Parameters</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/5functions/05-functions-05-importing-functions/">05 Functions - 05 Importing Functions</a>
+      <a href="/personal-site/docs/python/5functions/05-functions-05-importing-functions-from-modules/">05 Functions - 05 Importing Functions from Modules</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/5functions/05-functions-06-creating-functions/">05 Functions - 06 Creating Functions</a>
+      <a href="/personal-site/docs/python/5functions/05-functions-06-generator-functions/">05 Functions - 06 Generator Functions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/5functions/05-functions-07-lambda-functions/">05 Functions - 07 Lambda Functions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/5functions/05-functions-08-decorator-functions/">05 Functions - 08 Decorator Functions</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/5functions/05-functions-09-built-in-decorators/">05 Functions - 09 Built-in Decorators</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/5functions/05-functions-10-third-party-decorators/">05 Functions - 10 Third-Party Decorators</a>
   </li>
       </ul>
     </details>
@@ -2668,6 +2700,7 @@
     <li>
       <ul>
         <li><a href="#why-use-functions">Why Use Functions?</a></li>
+        <li><a href="#functions-as-first-class-objects-in-python"><strong>Functions as First-Class Objects in Python</strong></a></li>
       </ul>
     </li>
     <li><a href="#defining-a-function">Defining a Function</a>
@@ -2676,8 +2709,22 @@
       </ul>
     </li>
     <li><a href="#function-parameters-and-arguments">Function Parameters and Arguments</a></li>
-    <li><a href="#default-parameter-values">Default Parameter Values</a></li>
-    <li><a href="#return-values">Return Values</a></li>
+    <li><a href="#default-parameter-values">Default Parameter Values</a>
+      <ul>
+        <li><a href="#return-values-in-python-functions"><strong>Return Values in Python Functions</strong></a></li>
+        <li><a href="#1-returning-a-single-value"><strong>1. Returning a Single Value</strong></a></li>
+        <li><a href="#2-returning-multiple-values"><strong>2. Returning Multiple Values</strong></a></li>
+        <li><a href="#3-returning-no-value-implicit-return"><strong>3. Returning No Value (Implicit Return)</strong></a></li>
+        <li><a href="#4-returning-values-in-expressions"><strong>4. Returning Values in Expressions</strong></a></li>
+        <li><a href="#assigning-functions-to-different-names">Assigning Functions to Different Names</a>
+          <ul>
+            <li><a href="#passing-functions-as-arguments"><strong>Passing Functions as Arguments</strong></a></li>
+            <li><a href="#returning-functions-from-functions"><strong>Returning Functions from Functions</strong></a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#customizing-function-behavior">Customizing Function Behavior</a></li>
   </ul>
 </nav>
 </div>
@@ -2696,6 +2743,7 @@
     <li>
       <ul>
         <li><a href="#why-use-functions">Why Use Functions?</a></li>
+        <li><a href="#functions-as-first-class-objects-in-python"><strong>Functions as First-Class Objects in Python</strong></a></li>
       </ul>
     </li>
     <li><a href="#defining-a-function">Defining a Function</a>
@@ -2704,8 +2752,22 @@
       </ul>
     </li>
     <li><a href="#function-parameters-and-arguments">Function Parameters and Arguments</a></li>
-    <li><a href="#default-parameter-values">Default Parameter Values</a></li>
-    <li><a href="#return-values">Return Values</a></li>
+    <li><a href="#default-parameter-values">Default Parameter Values</a>
+      <ul>
+        <li><a href="#return-values-in-python-functions"><strong>Return Values in Python Functions</strong></a></li>
+        <li><a href="#1-returning-a-single-value"><strong>1. Returning a Single Value</strong></a></li>
+        <li><a href="#2-returning-multiple-values"><strong>2. Returning Multiple Values</strong></a></li>
+        <li><a href="#3-returning-no-value-implicit-return"><strong>3. Returning No Value (Implicit Return)</strong></a></li>
+        <li><a href="#4-returning-values-in-expressions"><strong>4. Returning Values in Expressions</strong></a></li>
+        <li><a href="#assigning-functions-to-different-names">Assigning Functions to Different Names</a>
+          <ul>
+            <li><a href="#passing-functions-as-arguments"><strong>Passing Functions as Arguments</strong></a></li>
+            <li><a href="#returning-functions-from-functions"><strong>Returning Functions from Functions</strong></a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#customizing-function-behavior">Customizing Function Behavior</a></li>
   </ul>
 </nav>
     </div>
@@ -2719,6 +2781,17 @@
 <li>Improve readability and maintainability.</li>
 <li>Allow abstraction by breaking down complex logic into smaller parts.</li>
 </ul>
+<p>Function written inside a class becomes a method and is called by either  <code>objectname.methodname()</code> or <code>Classname.methodname()</code></p>
+<hr>
+<h3 id="functions-as-first-class-objects-in-python"><strong>Functions as First-Class Objects in Python</strong><a href="#functions-as-first-class-objects-in-python" class="anchor" aria-hidden="true">#</a> </h3>
+<p>In Python, <strong>functions are first-class objects</strong>, meaning they can be treated just like any other object. This includes the ability to:</p>
+<ul>
+<li>Assign functions to variables</li>
+<li>Pass functions as arguments to other functions</li>
+<li>Return functions from other functions</li>
+<li>Store functions in data structures like lists or dictionaries</li>
+</ul>
+<p>This characteristic of functions allows for great flexibility and the ability to create more abstract, reusable code.</p>
 <hr>
 <h2 id="defining-a-function">Defining a Function<a href="#defining-a-function" class="anchor" aria-hidden="true">#</a> </h2>
 <p>To define a function, use the <code>def</code> keyword, followed by the function name and parameters in parentheses <code>()</code> and <code>:</code> for the defining to begin.
@@ -2807,8 +2880,12 @@ The function body is indented (Whatever gets indented is the functions body).</p
 <p>Giving default value to the function like print had <code>sep=' '</code> and <code>end='\n'</code>.
 If no value is provided default can run, if defined it gets replaced.</p>
 <hr>
-<h2 id="return-values">Return Values<a href="#return-values" class="anchor" aria-hidden="true">#</a> </h2>
-<p>A function can return a value using the <code>return</code> statement. The returned value can be stored in a variable or used in expressions.</p>
+<h3 id="return-values-in-python-functions"><strong>Return Values in Python Functions</strong><a href="#return-values-in-python-functions" class="anchor" aria-hidden="true">#</a> </h3>
+<p>In Python, functions can return values using the <code>return</code> statement. This enables functions to produce results that can be stored, manipulated, or used in further calculations. When a function returns a value, it stops executing and hands over the result to the caller.</p>
+<p>A returned value can be stored in a variable, used in expressions, or even passed directly into other functions. This makes functions more flexible and powerful in Python programming.</p>
+<hr>
+<h3 id="1-returning-a-single-value"><strong>1. Returning a Single Value</strong><a href="#1-returning-a-single-value" class="anchor" aria-hidden="true">#</a> </h3>
+<p>You can define a function that performs some operation and returns a single result using the <code>return</code> statement.</p>
 
 
 
@@ -2817,17 +2894,208 @@ If no value is provided default can run, if defined it gets replaced.</p>
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Function Returning a Value</span>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Function that returns a formatted full name</span>
 </span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">format_name</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">last</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Returns a formatted full name.&#34;&#34;&#34;</span>
 </span></span><span class="line"><span class="cl">    <span class="n">full_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">first</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">last</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="si">}</span><span class="s2">&#34;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">full_name</span>
 </span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Call the function and store the returned value in a variable</span>
 </span></span><span class="line"><span class="cl"><span class="n">person</span> <span class="o">=</span> <span class="n">format_name</span><span class="p">(</span><span class="s2">&#34;michal&#34;</span><span class="p">,</span> <span class="s2">&#34;jackson&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Print the returned value</span>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="p">)</span>  <span class="c1"># Output: Michael Jackson</span></span></span></code></pre></div>
   </figure>
 </div>
 <hr>
+<h3 id="2-returning-multiple-values"><strong>2. Returning Multiple Values</strong><a href="#2-returning-multiple-values" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Python allows functions to return more than one value. When you return multiple values, Python actually returns them as a <strong>tuple</strong>. This is useful when you want to return several pieces of data from a single function.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Function that returns multiple values</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">calculate_area_and_perimeter</span><span class="p">(</span><span class="n">length</span><span class="p">,</span> <span class="n">width</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Returns both the area and perimeter of a rectangle.&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">area</span> <span class="o">=</span> <span class="n">length</span> <span class="o">*</span> <span class="n">width</span>
+</span></span><span class="line"><span class="cl">    <span class="n">perimeter</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">length</span> <span class="o">+</span> <span class="n">width</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">area</span><span class="p">,</span> <span class="n">perimeter</span>  <span class="c1"># Returning multiple values as a tuple</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Call the function and unpack the returned tuple into separate variables</span>
+</span></span><span class="line"><span class="cl"><span class="n">area</span><span class="p">,</span> <span class="n">perimeter</span> <span class="o">=</span> <span class="n">calculate_area_and_perimeter</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Print the results</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Area:&#34;</span><span class="p">,</span> <span class="n">area</span><span class="p">)</span>          <span class="c1"># Output: Area: 15</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Perimeter:&#34;</span><span class="p">,</span> <span class="n">perimeter</span><span class="p">)</span>  <span class="c1"># Output: Perimeter: 16</span></span></span></code></pre></div>
+  </figure>
+</div>
+<hr>
+<h3 id="3-returning-no-value-implicit-return"><strong>3. Returning No Value (Implicit Return)</strong><a href="#3-returning-no-value-implicit-return" class="anchor" aria-hidden="true">#</a> </h3>
+<p>A function does not always have to return a value. If a function does not include a <code>return</code> statement, or if it just has <code>return</code> without specifying any value, Python will implicitly return <code>None</code>. This is useful for situations where the function performs an action but doesn&rsquo;t need to return a result.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Function that performs an action without returning a value</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">print_message</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Prints the given message but returns nothing.&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">result</span> <span class="o">=</span> <span class="n">print_message</span><span class="p">(</span><span class="s2">&#34;Hello, World!&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># Output: None</span></span></span></code></pre></div>
+  </figure>
+</div>
+<hr>
+<h3 id="4-returning-values-in-expressions"><strong>4. Returning Values in Expressions</strong><a href="#4-returning-values-in-expressions" class="anchor" aria-hidden="true">#</a> </h3>
+<p>You can also use the return value of a function directly in expressions or as arguments to other functions, making the code more compact and expressive.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Function returning a value</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">add_numbers</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Returns the sum of two numbers.&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Using the returned value directly in an expression</span>
+</span></span><span class="line"><span class="cl"><span class="n">result</span> <span class="o">=</span> <span class="n">add_numbers</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span>  
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># Output: 16</span></span></span></code></pre></div>
+  </figure>
+</div>
+<hr>
+<h3 id="assigning-functions-to-different-names">Assigning Functions to Different Names<a href="#assigning-functions-to-different-names" class="anchor" aria-hidden="true">#</a> </h3>
+<p>A function can be assigned to another name (variable), allowing it to be referenced differently using the variable.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Assigning a function to a new name</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">g</span> <span class="o">=</span> <span class="n">f</span>  <span class="c1"># g is now another name for f</span></span></span></code></pre></div>
+  </figure>
+</div>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="sa">f</span><span class="s2">&#34;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Assigning the function to a variable</span>
+</span></span><span class="line"><span class="cl"><span class="n">greeting_function</span> <span class="o">=</span> <span class="n">greet</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Calling the function using the variable</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">greeting_function</span><span class="p">(</span><span class="s2">&#34;Alice&#34;</span><span class="p">))</span>  <span class="c1"># Output: Hello, Alice!</span></span></span></code></pre></div>
+  </figure>
+</div>
+<h4 id="passing-functions-as-arguments"><strong>Passing Functions as Arguments</strong><a href="#passing-functions-as-arguments" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Since functions are objects, you can pass them as arguments to other functions, which allows for higher-order functions (functions that take other functions as arguments).</p>
+<p>This technique is useful for passing functions as arguments to other functions.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Applying a function repeatedly</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">res</span> <span class="o">=</span> <span class="n">x</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">res</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">apply</span><span class="p">(</span><span class="n">square</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>  <span class="c1"># Output: 625</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Here, <code>square</code> is passed as <code>func</code> to <code>apply()</code>.</p>
+<hr>
+<h4 id="returning-functions-from-functions"><strong>Returning Functions from Functions</strong><a href="#returning-functions-from-functions" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Function definitions can be conditionally assigned.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">if</span> <span class="n">condition</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="o">...</span></span></span></code></pre></div>
+  </figure>
+</div>
+<p>Functions can also be returned from other functions. This is useful for scenarios where the returned function is created dynamically or customized based on input.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">multiplier</span><span class="p">(</span><span class="n">factor</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Returns a function that multiplies its argument by a given factor.&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">multiply</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">factor</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">multiply</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Create a function that multiplies by 3</span>
+</span></span><span class="line"><span class="cl"><span class="n">times_three</span> <span class="o">=</span> <span class="n">multiplier</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Use the returned function</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">times_three</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>  <span class="c1"># Output: 15</span></span></span></code></pre></div>
+  </figure>
+</div>
+<ul>
+<li>The <code>multiplier()</code> function returns a new function <code>multiply()</code> that multiplies its argument by a specific factor.</li>
+<li>We create a function <code>times_three</code> by calling <code>multiplier(3)</code>, and then use it to multiply <code>5</code> by <code>3</code>, resulting in <code>15</code>.</li>
+</ul>
+<hr>
+<h2 id="customizing-function-behavior">Customizing Function Behavior<a href="#customizing-function-behavior" class="anchor" aria-hidden="true">#</a> </h2>
+<p>Functions can be customized based on parameters, such as sorting based on a comparison function.</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">sort_function</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">cmp_fn</span><span class="o">=</span><span class="n">default_cmp_fn</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="o">...</span></span></span></code></pre></div>
+  </figure>
+</div>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				</div>
@@ -2854,7 +3122,7 @@ If no value is provided default can run, if defined it gets replaced.</p>
 			<div class="card-body d-flex justify-content-end">
 				<div class="d-flex flex-column">
 					<div class="text-body-secondary">Next</div>
-					<a href="/personal-site/docs/python/5functions/05-functions-02-scope/" class="stretched-link text-reset text-decoration-none">05 Functions - 02 Scope</a>
+					<a href="/personal-site/docs/python/5functions/05-functions-02-scope-of-variables/" class="stretched-link text-reset text-decoration-none">05 Functions - 02 Scope of Variables</a>
 				</div>
 				<div class="d-flex flex-column justify-content-center">
 					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
