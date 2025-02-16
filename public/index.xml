@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright (c) 2020-2024 Thulite</copyright>
-    <lastBuildDate>Tue, 17 Dec 2024 22:46:32 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 16 Feb 2025 18:53:59 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/personal-site/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01 PDT - 01 Variables</title>
@@ -53,31 +53,31 @@
     </item>
     <item>
       <title>02 CDT - 01 Lists</title>
-      <link>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-cdt-01-lists/</link>
+      <link>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/4list/02-cdt-01-lists/</link>
       <pubDate>Tue, 17 Dec 2024 22:45:42 +0530</pubDate>
-      <guid>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-cdt-01-lists/</guid>
+      <guid>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/4list/02-cdt-01-lists/</guid>
       <description>&lt;p&gt;Lists are collections of items arranged in a particular order. They allow you to store multiple pieces of information in a single structure.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>02 CDT - 02 List Methods</title>
-      <link>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-cdt-02-list-methods/</link>
+      <title>02 CDT - 02 List Updation</title>
+      <link>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/4list/02-cdt-02-list-updation/</link>
+      <pubDate>Tue, 17 Dec 2024 22:46:17 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/4list/02-cdt-02-list-updation/</guid>
+      <description>&lt;h3 id=&#34;topics-covered&#34;&gt;Topics covered&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Mutable Lists&lt;/strong&gt;: Lists are mutable and can be updated directly.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Equality vs Identity&lt;/strong&gt;: &lt;code&gt;==&lt;/code&gt; compares values, &lt;code&gt;is&lt;/code&gt; compares memory references.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;List Slicing&lt;/strong&gt;: &lt;code&gt;list[start:stop:step]&lt;/code&gt; to extract sublists. Supports reverse and step slicing.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Copying Lists&lt;/strong&gt;: Use slicing &lt;code&gt;[:]&lt;/code&gt; to copy a list.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Index Errors&lt;/strong&gt;: Out-of-range slices return empty lists, and negative indexing avoids errors.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Concatenation&lt;/strong&gt;: Use &lt;code&gt;+&lt;/code&gt; to combine lists.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;f-strings&lt;/strong&gt;: Embed list elements into strings using f-strings.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;updating-lists-mutable&#34;&gt;Updating Lists (Mutable)&lt;/h3&gt;&#xA;&lt;p&gt;Unlike strings, lists in Python are &lt;strong&gt;mutable&lt;/strong&gt;, meaning you can change their contents directly.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>02 CDT - 03 List Methods</title>
+      <link>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/4list/02-cdt-03-list-methods/</link>
       <pubDate>Tue, 17 Dec 2024 22:46:00 +0530</pubDate>
-      <guid>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-cdt-02-list-methods/</guid>
+      <guid>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/4list/02-cdt-03-list-methods/</guid>
       <description>&lt;p&gt;Index and short summary of the list methods and functions in this page:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Basic Statistics:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;min()&lt;/code&gt;: Returns the smallest value in the list.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;max()&lt;/code&gt;: Returns the largest value in the list.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;sum()&lt;/code&gt;: Returns the sum of all values in the list.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Adding Elements:&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>02 CDT - 03 List Operators</title>
-      <link>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-cdt-03-list-operators/</link>
-      <pubDate>Tue, 17 Dec 2024 22:46:17 +0530</pubDate>
-      <guid>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-cdt-03-list-operators/</guid>
-      <description>&lt;h2 id=&#34;operations-on-lists&#34;&gt;Operations on lists&lt;/h2&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;div class=&#34;expressive-code&#34;&gt;&#xD;&#xA;  &lt;figure class=&#34;frame not-content&#34;&gt;&#xD;&#xA;  &lt;figcaption class=&#34;header&#34;&gt;&#xD;&#xA;    &lt;span class=&#34;title&#34;&gt;&lt;/span&gt;&#xD;&#xA;  &lt;/figcaption&gt;&#xD;&#xA;  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;applylist&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xD;&#xA;  &lt;/figure&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;h3 id=&#34;map-&#34;&gt;&lt;code&gt;map( )&lt;/code&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Built in function to apply something to all the elements of &lt;code&gt;l&lt;/code&gt;.&#xA;&lt;code&gt;map(f, l)&lt;/code&gt; applies &lt;code&gt;f&lt;/code&gt; to each element of &lt;code&gt;l&lt;/code&gt; (entire list)&#xA;output of &lt;code&gt;map(f, l)&lt;/code&gt; is not a list but a sequence like &lt;code&gt;range(i, j)&lt;/code&gt; and &lt;code&gt;dict.keys( )&lt;/code&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>02 CDT - 04 List Vs Arrays</title>
-      <link>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-cdt-04-list-vs-arrays/</link>
-      <pubDate>Tue, 17 Dec 2024 22:46:32 +0530</pubDate>
-      <guid>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-cdt-04-list-vs-arrays/</guid>
-      <description>&lt;h3 id=&#34;arrays-vs-lists-in-python&#34;&gt;Arrays vs. Lists in Python&lt;/h3&gt;&#xA;&lt;p&gt;Python offers two primary ways to store a collection of data: &lt;strong&gt;arrays&lt;/strong&gt; and &lt;strong&gt;lists&lt;/strong&gt;. While they may seem similar, they have key differences in how they are implemented, how they behave, and their performance characteristics.&lt;/p&gt;</description>
+      <title>02 CDT - 04 Map and Filter Operations</title>
+      <link>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/4list/02-cdt-04-map-and-filter-operations/</link>
+      <pubDate>Sun, 16 Feb 2025 18:53:59 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/4list/02-cdt-04-map-and-filter-operations/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;&lt;code&gt;map(f, l)&lt;/code&gt;&lt;/strong&gt;: Transforms each element of &lt;code&gt;l&lt;/code&gt; using function &lt;code&gt;f&lt;/code&gt;. Returns an iterable, which can be converted into a list using &lt;code&gt;list()&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;&lt;code&gt;filter(p, l)&lt;/code&gt;&lt;/strong&gt;: Filters elements of &lt;code&gt;l&lt;/code&gt; based on function &lt;code&gt;p&lt;/code&gt;. Returns an iterable with only the elements for which &lt;code&gt;p&lt;/code&gt; evaluates to &lt;code&gt;True&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Combining &lt;code&gt;map()&lt;/code&gt; and &lt;code&gt;filter()&lt;/code&gt;&lt;/strong&gt;: Chaining &lt;code&gt;map()&lt;/code&gt; and &lt;code&gt;filter()&lt;/code&gt; to first filter and then transform data.&lt;/li&gt;&#xA;&lt;li&gt;This is useful for complex transformations like filtering even numbers and then squaring them.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;By using these higher-order functions, clean and efficient code can be written that works directly with iterables without the need for explicit loops or list comprehensions.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

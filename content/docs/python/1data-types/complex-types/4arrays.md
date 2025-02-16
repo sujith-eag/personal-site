@@ -5,7 +5,7 @@ summary: ""
 date: 2024-12-17T22:46:32+05:30
 lastmod: 2024-12-17T22:46:32+05:30
 draft: false
-weight: 23
+weight: 24
 toc: true
 seo:
   title: "" # custom title (optional)
@@ -15,7 +15,6 @@ seo:
 ---
 
 
-### Arrays vs. Lists in Python
 
 Python offers two primary ways to store a collection of data: **arrays** and **lists**. While they may seem similar, they have key differences in how they are implemented, how they behave, and their performance characteristics.
 

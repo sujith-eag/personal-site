@@ -5,7 +5,7 @@ summary: ""
 date: 2024-12-17T22:47:04+05:30
 lastmod: 2024-12-17T22:47:04+05:30
 draft: false
-weight: 25
+weight: 26
 toc: true
 seo:
   title: "" # custom title (optional)
@@ -16,89 +16,104 @@ seo:
 
 
 
+
 A **set** is an unordered collection of unique elements. Unlike sequences (such as lists or tuples), sets are **unordered** and do not store duplicate elements. Since sets are unordered, they do not support indexing, slicing, or other sequence-like behavior.
+
+Sets are commonly used for operations like checking membership, removing duplicates, and performing mathematical set operations.
 
 ### Key Characteristics of Sets:
 - **Mutable**: You can add or remove elements from a set after it is created.
 - **Unordered**: The elements in a set do not have a specific order, and you cannot access elements by index.
 - **No duplicates**: Sets automatically remove any duplicate elements, ensuring that all elements are unique.
 
-Example of creating a set:
+Creating a set looks similar to dictionary but is not having key value pairs.
 ```python
 s = {1, 2, 3, 4}
 ```
+
 
 ---
 
 ### Adding and Removing Elements
 
-#### **`set.update()`**
+- **`update()`**: Adds multiple elements to the set (from an iterable).
+- **`remove()`**: Removes a specific element from the set. Raises a `KeyError` if the element doesn't exist.
+- **`discard()`**: Removes a specific element from the set, but does **not raise an error** if the element doesn't exist.
+
+
+#### **'set.update()'**
 
 The `update()` method is used to **add multiple elements** to a set. You can pass any iterable (e.g., a list, tuple, or another set) to the `update()` method, and it will add all the elements from the iterable to the set.
 
 **Note**: `update()` does not add duplicates to the set, as sets do not allow duplicate elements.
 
-Example:
 ```python
-# Creating a set
-s = {1, 2, 3}
-
-# Adding multiple elements using update
-s.update([4, 5, 6])
-print(s)  # Output: {1, 2, 3, 4, 5, 6}
-
-# Adding elements from another set
-s.update({7, 8})
-print(s)  # Output: {1, 2, 3, 4, 5, 6, 7, 8}
-
-# Adding elements from a tuple
-s.update((9, 10))
-print(s)  # Output: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+>>> s = {1,2,3}
+>>> type(s)
+<class 'set'>
 ```
 
-#### **`set.remove()`**
+```python
+>>> s.update([4])
+>>> s   # passing list
+{1, 2, 3, 4}
+>>> s.update([5,6,7])
+
+>>> s.update({8,9})
+>>> s   # pssing set
+{1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+>>> s.update((9,10))
+>>> s   # passing tuple
+{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+
+
+>>> s.update(10)
+TypeError: 'int' object is not iterable
+```
+
+___
+
+#### **'set.remove()'**
 
 The `remove()` method is used to **remove a specific element** from the set. If the element is not found, it raises a `KeyError`.
 
-Example:
 ```python
-# Creating a set
-s = {1, 2, 3, 4, 5}
+>>> s = {1,2,3,4,5}
 
-# Removing an element using remove
-s.remove(3)
-print(s)  # Output: {1, 2, 4, 5}
+>>> s.remove(3)
+>>> s
+{1, 2, 4, 5}
 
+>>> s.remove(6)
+KeyError: 6
 # Trying to remove an element that does not exist raises an error
-# s.remove(10)  # Uncommenting this will raise: KeyError: 10
 ```
 
-#### **`set.discard()`**
+___
+
+#### **'set.discard()'**
 
 The `discard()` method is similar to `remove()`, but it does **not raise an error** if the element does not exist in the set. This makes it a safer option if you're unsure whether the element is in the set.
 
-Example:
 ```python
-# Using discard to remove an element (does not raise an error if the element is not found)
-s.discard(10)  # Does nothing since 10 is not in the set
-print(s)  # Output: {1, 2, 4, 5}
+>>> s = {1,2,3,4,5}
+
+>>> s.discard(5)
+>>> s
+{1, 2, 3, 4}
+
+>>> s.discard(10)
+>>> s
+{1, 2, 3, 4}
 ```
 
 ---
 
-### Summary of Methods:
-- **`update()`**: Adds multiple elements to the set (from an iterable).
-  - Example: `s.update([4, 5, 6])`
-- **`remove()`**: Removes a specific element from the set. Raises a `KeyError` if the element doesn't exist.
-  - Example: `s.remove(3)`
-- **`discard()`**: Removes a specific element from the set, but does **not raise an error** if the element doesn't exist.
-  - Example: `s.discard(10)`
-
----
 
 ### Set Operations
 
-Python provides a variety of operations to perform set-related tasks. Here are some of the most common set operations:
+Python provides a variety of operations to perform set-related tasks:
 
 - **Union** (`|`) : `set1 | set2` Combines two sets, returning all unique elements from both sets.
 - **Intersection** (`&`) : `set1 - set2` Returns only the elements that are present in both sets.
@@ -106,30 +121,31 @@ Python provides a variety of operations to perform set-related tasks. Here are s
 - **Symmetric Difference** (`^`) : `set1 ^ set2` Returns elements that are in either of the sets, but not in both.
 
 ```python
-a = {1, 2, 3}
-b = {3, 4, 5}
+>>> a = {1,2,3}
+>>> b = {3,4,5}
 
 # Intersection: Elements present in both sets
-print(a & b)  # Output: {3}
+>>> a & b
+{3}
 
 # Union: All unique elements from both sets
-print(a | b)  # Output: {1, 2, 3, 4, 5}
+>>> a | b
+{1, 2, 3, 4, 5}
 
 # Difference: Elements in 'a' but not in 'b'
-print(a - b)  # Output: {1, 2}
+>>> a - b
+{1, 2}
+
+# Difference: Elements in 'b' but not in 'a'
+>>> b - a
+{4, 5}
 
 # Symmetric Difference: Elements in either 'a' or 'b', but not both
-print(a ^ b)  # Output: {1, 2, 4, 5}
+>>> a ^ b
+{1, 2, 4, 5}
 ```
+
 
 ---
 
 
-- **Sets** in Python are unordered collections of **unique** elements. They are useful when you need to ensure that no duplicates exist in your collection.
-- You can **add** and **remove** elements using methods like `update()`, `remove()`, and `discard()`.
-- Set operations such as **union**, **intersection**, and **difference** allow you to easily manipulate and compare sets.
-
-Sets are commonly used for operations like checking membership, removing duplicates, and performing mathematical set operations.
-
-
-___
