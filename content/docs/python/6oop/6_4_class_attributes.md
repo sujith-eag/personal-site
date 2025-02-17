@@ -1,17 +1,102 @@
 ---
-title: "06 OOP - 03 Class Attributes"
+title: "06 OOP - 04 Changing Attriute and Using Class"
 description: ""
 summary: ""
-date: 2025-02-11T23:53:35+05:30
-lastmod: 2025-02-11T23:53:35+05:30
+date: 2025-02-11T23:54:04+05:30
+lastmod: 2025-02-11T23:54:04+05:30
 draft: false
-weight: 57
+weight: 58
 toc: true
 seo:
   title: "" # custom title (optional)
   description: "" # custom description (recommended)
   canonical: "" # custom canonical URL (optional)
   noindex: false # false (default) or true
+---
+
+
+### Creating and Using a Class
+
+#### Example 1 : **Restaurant Class**
+
+A class called `Restaurant`, which stores the name and type of cuisine of a restaurant, and has methods to describe and open the restaurant.
+
+```python
+# Defining the Restaurant class
+class Restaurant:
+    def __init__(self, restaurant_name, cuisine_type):
+        """
+        Initializing attributes for the restaurant.
+        """
+        self.restaurant_name = restaurant_name
+        self.cuisine_type = cuisine_type
+
+    def describe_restaurant(self):
+        """
+        Print a description of the restaurant.
+        """
+        print(f"{self.restaurant_name} has {self.cuisine_type} as its special cuisine.")
+
+    def open_restaurant(self):
+        """
+        Print a message indicating the restaurant is open.
+        """
+        print(f"\nThe {self.restaurant_name} is open now.")
+
+# Creating an instance of the Restaurant class
+restaurant = Restaurant("ACDC", "Chinese")
+
+# Calling methods on the instance
+restaurant.describe_restaurant()
+restaurant.open_restaurant()
+
+# Accessing attributes directly
+print(f"Where is {restaurant.restaurant_name} with its {restaurant.cuisine_type.title()} cuisine?")
+```
+
+- `__init__()` initializes the attributes `restaurant_name` and `cuisine_type`.
+- `describe_restaurant()` prints the description of the restaurant.
+- `open_restaurant()` prints a message indicating the restaurant is open.
+- The instance `restaurant` is created with `"ACDC"` as the name and `"Chinese"` as the cuisine type.
+- Methods are called to describe the restaurant and indicate it's open.
+
+---
+
+### Example 2: **Car Class**
+
+A `Car` class where each car has attributes for the make, model, and year, and includes a method to return a descriptive name for the car.
+
+```python
+# Defining the Car class
+class Car:
+    def __init__(self, make, model, year):
+        """
+        Initialize attributes for the car.
+        """
+        self.make = make
+        self.model = model
+        self.year = year
+
+    def descriptive_name(self):
+        """
+        Return a descriptive name for the car.
+        """
+        long_name = f"{self.year} {self.make} {self.model}"
+        return long_name  # Return the descriptive name
+
+# Creating an instance of the Car class
+new_car = Car('Audi', 'A4', '2024')
+
+# Calling the descriptive_name() method and printing car attributes
+print(new_car.descriptive_name())  # Prints: 2024 Audi A4
+print(new_car.make)                # Prints: Audi
+```
+
+- The `__init__()` method initializes the attributes `make`, `model`, and `year`.
+- The `descriptive_name()` method returns a string that combines the `year`, `make`, and `model` of the car.
+- `new_car` is an instance of `Car` with the make `'Audi'`, model `'A4'`, and year `'2024'`.
+- The descriptive name of the car is printed by calling `new_car.descriptive_name()`, and the `make` attribute is printed directly.
+
 ---
 
 

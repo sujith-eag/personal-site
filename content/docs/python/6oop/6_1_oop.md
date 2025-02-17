@@ -1,5 +1,5 @@
 ---
-title: "06 OOP - 01 OOP Concepts"
+title: "06 OOP - 01 Introduction to OOP Features"
 description: ""
 summary: ""
 date: 2025-02-11T23:53:03+05:30
@@ -15,88 +15,129 @@ seo:
 ---
 
 
-A **class** is a user-defined data type in Python. Classes allow you to construct new data types that go beyond Python's built-in types. 
 
-Essentially, a class is a **template** from which you can create objects (instances). Each class defines the structure (attributes) and behavior (methods) that the objects created from it will have.
+In traditional software development, tasks are divided into several sub-tasks, with each sub-task represented as a procedure or function. This approach is called the **Procedure-Oriented Approach**.
 
-### Key Features:
+In Object-Oriented Programming, the focus shifts from functions to objects. A **class** serves as a module that contains both **data** (variables) and **methods** (functions) to accomplish tasks. 
 
-- **Encapsulation**: A class can store data and also define functions (methods) that manipulate that data.
-- **Interface vs Implementation**: A class defines an interface (a set of functions that interact with the object). However, the implementation details of these functions should be hidden (private) to prevent direct manipulation like a black box. This allows for optimizations in the implementation without affecting how the class is used.
+The main task is divided into sub-tasks, and these sub-tasks are represented as **classes**. Each class contains methods to perform several interrelated tasks. This is known as the **Object-Oriented Programming (OOP)** approach.
 
-### Example Data Structures Implemented Using Classes:
+### Five Key Features of OOP
 
-- **Stack** (Last-In, First-Out):
-    - Operations: `push()` and `pop()`
-    - Example: `(s.push(v)).pop() == v` — the value pushed onto the stack is the first to be popped out.
-
-- **Queue** (First-In, First-Out):
-    - Operations: `addq()` and `removeq()`
-    - Example: `((q.addq(u)).addq(v)).removeq() == u` — the first item added will be the first to be removed.
-
-- **Heap**:    
-    - Operations: `insert()` and `delete_max()`
-
-In these examples, the list may serve as the internal structure for storing the data, but the implementation details should be kept hidden, allowing the class to be used with a well-defined public interface.
-
-___
-
-### OOP (Object-Oriented Programming) Concepts
-
-Object-Oriented Programming (OOP) allows you to define classes that represent real-world entities. Once you have a class, you can create objects (instances) based on that class, each of which can have unique attributes but share the same behavior as defined in the class.
-
-1. **Class**: A blueprint for creating objects. It defines the common behavior (methods) and attributes for the objects created from it.
-2. **Object (Instance)**: An individual, unique object created from a class.
-3. **Instantiation**: The process of creating an object from a class (We will work with instances of a class).
-
-
-## Class Definition in Python
-
-In Python, a **class** is used as a blueprint to create objects, which are instances of that class.
-
-### Basic Syntax and Naming Convention:
-
-- **Class names** are written in **CamelCase** (starting with a capital letter) as per the Python naming convention.
-- The class definition begins with the `class` keyword, followed by the class name and a colon (`:`).
-- Inside the class, you define **attributes** (variables) and **methods** (functions) that belong to the class.
-- The class does not require parentheses unless it inherits from a base class (this is a topic related to object inheritance).
-
-```python
-class Dog:
-    def __init__(self, name, age):  # Initialize attributes for each instance.
-        self.name = name
-        self.age = age
-
-    def sit(self):  # Method to make the dog sit.
-        print(f"{self.name} is now sitting.")
-
-    def roll_over(self):  # Method to make the dog roll over.
-        print(f"{self.name} rolled over!")
-```
-
-- **`__init__()`**: This is the **constructor** method, which initializes each new instance of the `Dog` class.
-- **Attributes (`self.name` and `self.age`)**: These store the state of the object. In this case, `name` and `age` are attributes of each individual dog.
-- **Methods (`sit()` and `roll_over()`)**: These define behaviors or actions that the `Dog` class can perform.
-
-### Class Instantiation:
-
-To create an instance (or object) of the class, you call the class as if it were a function, passing the required arguments.
-
-```python
-my_dog = Dog('Willie', 6)  # Creates an instance of Dog named Willie, age 6.
-your_dog = Dog('Lucy', 3)  # Creates another Dog named Lucy, age 3.
-```
-
-After creating the instances, you can access their attributes and methods like so:
-
-```python
-print(f"My dog's name is {my_dog.name}.")
-print(f"My dog is {my_dog.age} years old.")
-my_dog.sit()  # Calls the sit() method for my_dog.
-
-print(f"\nYour dog's name is {your_dog.name}.")
-print(f"Your dog is {your_dog.age} years old.")
-your_dog.sit()  # Calls the sit() method for your_dog.
-```
+1. **Classes and Objects**
+2. **Encapsulation**
+3. **Abstraction**
+4. **Inheritance**
+5. **Polymorphism**
 
 ---
+
+### 1. Classes and Objects
+
+The foundation of OOP is the concept of an **object**. An object is any entity that exists in the real world and can be distinguished from others. Everything that exists in the world can be considered an object.
+
+An object has:
+- **Attributes** of object represented by variables.
+- **Actions** performed by object are represented by methods (functions).
+
+Objects with similar behavior belong to the same category, called a **class**. For example, an individual person is an object, while the category "person" is a class.
+
+A **class** is a blueprint or template used to create objects. The attributes and methods of a class are inherited by its objects, which are also called **instances**. While a class does not physically exist, objects created from it do.
+
+### 2. Encapsulation
+
+**Encapsulation** is the process of binding the data (variables) and the methods (functions) that act on the data together in a single unit, called a class. This protects the data from external interference and misuse.
+
+In languages like **C++** and **Java**, class members (variables) are **private** by default, and methods are **public** by default. However, in Python, all members of a class are **public** by default unless specified otherwise.
+
+Encapsulation also isolates members of different classes from one another. Each object has its own memory, preventing data from being overwritten. This allows for the use of the same variable names in different classes (e.g., `id`, `name`, `address` in `Employee` and `Student` classes).
+
+**Example of Encapsulation:**
+If a method or variable name starts and ends with two underscores, it is a built-in method or variable designed for a specific purpose, such as `__init__()` or `__name__`.
+
+
+---
+
+### 3. Abstraction
+
+**Abstraction** is the process of hiding unnecessary details and only exposing the relevant parts of the data or functionality to the user. This helps reduce complexity and allows users to focus on essential information.
+
+In **Java**, abstraction is achieved using access specifiers like **private**, **protected**, and **public**. In **Python**, everything is public by default, but private members can be simulated by adding two underscores before a variable name (e.g., `__var`).
+
+**Example of Abstraction in Python:**
+
+```python
+class MyClass:
+    def __init__(self):
+        self.__y = 3  # Private variable
+
+# Accessing the private variable directly will result in an error
+inst = MyClass()
+print(inst.y)  # Error
+```
+
+However, this private variable can be accessed using **name mangling**:     
+Name mangling means using the class name differently by putting one underscore before the class name and two underscores after the class name.
+
+```python
+print(inst._MyClass__y)  # Access private variable
+```
+
+By convention, a single underscore (`_var`) indicates a protected member that should not be imported into other files.
+
+
+**Interface vs Implementation**: A class defines an interface (a set of functions that interact with the object). However, the implementation details of these functions should be hidden (private) to prevent direct manipulation like a black box. This allows for optimizations in the implementation without affecting how the class is used.
+
+
+---
+
+### 4. Inheritance
+
+Creating new classes from from existing classes so new classes will acquire all the features of the existing classes is called inheritance.
+
+**Inheritance** is a mechanism where one class (the **subclass**) inherits the attributes and methods of another class (the **superclass**). This allows the subclass to reuse code and add its own unique features.
+
+To create a subclass in Python, you define it as follows:
+
+```python
+class B(A):
+    pass
+```
+
+In this case, class `B` inherits the properties of class `A`. The subclass `B` can access the members of both class `A` and class `B`.
+
+The advantages of inheritance include:
+
+- Reusability of code.
+- Easier code maintenance and management.
+- A hierarchical organization of classes, which makes the code modular and well-structured.
+
+---
+
+### 5. Polymorphism
+
+**Polymorphism** means "many forms." It refers to the ability of a method or object to exhibit different behaviors depending on the context.
+
+In Python, polymorphism is commonly achieved by using the same method name with different arguments, enabling different operations based on the type of input.
+
+**Example of Polymorphism:**
+
+```python
+def add(a, b):
+    print(a + b)
+
+add(1, 2)         # Addition of two numbers
+add('Hello', 'World')  # Concatenation of two strings
+```
+
+This function will print addition of two numbers if numbers are passed and Concatenates strings if strings are passed. So it is exhibiting polymorphism.
+
+---
+
+The programming languages which follow all the five features of OOP are called object oriented programming languages.
+
+Object-Oriented Programming (OOP) languages, such as **C++**, **Java**, and **Python**, implement these five key features—**Classes and Objects**, **Encapsulation**, **Abstraction**, **Inheritance**, and **Polymorphism**—to provide a structured and modular approach to software development.
+
+
+---
+
