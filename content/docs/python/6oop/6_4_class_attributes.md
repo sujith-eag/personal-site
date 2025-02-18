@@ -1,5 +1,5 @@
 ---
-title: "06 OOP - 04 Changing Attriute and Using Class"
+title: "06 OOP - 04 Examples of Using Class and Changing Attriute"
 description: ""
 summary: ""
 date: 2025-02-11T23:54:04+05:30
@@ -17,41 +17,99 @@ seo:
 
 ### Creating and Using a Class
 
-#### Example 1 : **Restaurant Class**
+
+#### Example 1: A class to handle Bank withdrawal and Deposits
+
+```python
+>>> import sys
+>>> class Bank:
+...     """Bank related Transactions"""
+...     # to initialize name and bank balance instance variables
+...     def __init__(self, name, balance=0.0):
+...             self.name = name
+...             self.balance = balance
+...     def deposit(self, amount):
+...             self.balance += amount
+...             return self.balance
+...     def withdraw(self, amount):
+...             if amount > self.balance:
+...                     print('Low Balance')
+...             else:
+...                     self.balance -= amount
+...             return self.balance
+... 
+>>> 
+>>> name = input( 'Enter name: ' ) 
+Enter name: Sujith
+>>> b = Bank(name)
+>>> 
+>>> while(True):
+...     print("d -Deposit, w -Withdraw, e -Exit")
+...     choice = input("Your Choice: ")
+...     if choice == 'e' or choice == 'E':
+...             sys.exit()
+...     amt = float(input("Enter Amount: ") )
+...     if choice == 'd' or choice == 'D':
+...             print("Balance after Deposit: ", b.deposit(amt))
+...     elif choice == 'w' or choice == 'W':
+...             print('Balance after Withdraw: ', b.withdraw(amt))
+... 
+d -Deposit, w -Withdraw, e -Exit
+Your Choice: d
+Enter Amount: 1000
+Balance after Deposit:  1000.0
+
+d -Deposit, w -Withdraw, e -Exit
+Your Choice: d
+Enter Amount: 2050
+Balance after Deposit:  3050.0
+
+d -Deposit, w -Withdraw, e -Exit
+Your Choice: w
+Enter Amount: 1253
+Balance after Withdraw:  1797.0
+
+d -Deposit, w -Withdraw, e -Exit
+Your Choice: e
+```
+
+
+#### Example 2 : **Restaurant Class**
 
 A class called `Restaurant`, which stores the name and type of cuisine of a restaurant, and has methods to describe and open the restaurant.
 
 ```python
 # Defining the Restaurant class
-class Restaurant:
-    def __init__(self, restaurant_name, cuisine_type):
-        """
-        Initializing attributes for the restaurant.
-        """
-        self.restaurant_name = restaurant_name
-        self.cuisine_type = cuisine_type
+>>> class Restaurant:
+...     """Restaurant related functionality"""
+...     def __init__(self, restaurant_name, cuisine_type):
+...         """
+...         Initializing attributes for the restaurant.
+...         """
+...         self.restaurant_name = restaurant_name
+...         self.cuisine_type = cuisine_type
+...     def describe_restaurant(self):
+...         """
+...         Print a description of the restaurant.
+...         """
+...         print(f"{self.restaurant_name} has {self.cuisine_type} as its special cuisine.")
+...     def open_restaurant(self):
+...         """
+...         Print a message indicating the restaurant is open.
+...         """
+...         print(f"\nThe {self.restaurant_name} is open now.")
+>>> 
 
-    def describe_restaurant(self):
-        """
-        Print a description of the restaurant.
-        """
-        print(f"{self.restaurant_name} has {self.cuisine_type} as its special cuisine.")
+>>> restaurant = Restaurant("ACDC", "Chinese")
 
-    def open_restaurant(self):
-        """
-        Print a message indicating the restaurant is open.
-        """
-        print(f"\nThe {self.restaurant_name} is open now.")
+>>> restaurant.describe_restaurant()
+ACDC has Chinese as its special cuisine.
 
-# Creating an instance of the Restaurant class
-restaurant = Restaurant("ACDC", "Chinese")
+>>> restaurant.open_restaurant()
+The ACDC is open now.
 
-# Calling methods on the instance
-restaurant.describe_restaurant()
-restaurant.open_restaurant()
-
-# Accessing attributes directly
-print(f"Where is {restaurant.restaurant_name} with its {restaurant.cuisine_type.title()} cuisine?")
+>>> print(f"Where is {restaurant.restaurant_name} with its {restaurant.cuisine_type.title()} cuisine?")
+Where is ACDC with its Chinese cuisine?
 ```
 
 - `__init__()` initializes the attributes `restaurant_name` and `cuisine_type`.
@@ -62,34 +120,29 @@ print(f"Where is {restaurant.restaurant_name} with its {restaurant.cuisine_type.
 
 ---
 
-### Example 2: **Car Class**
+#### Example 3: **Car Class**
 
 A `Car` class where each car has attributes for the make, model, and year, and includes a method to return a descriptive name for the car.
 
 ```python
 # Defining the Car class
-class Car:
-    def __init__(self, make, model, year):
-        """
-        Initialize attributes for the car.
-        """
-        self.make = make
-        self.model = model
-        self.year = year
+>>> class Car:
+...     def __init__(self, make, model, year):
+...         self.make = make
+...         self.model = model
+...         self.year = year
+...     def descriptive_name(self):
+...         long_name = f"{self.year} {self.make} {self.model}"
+...         return long_name
+...
+>>> # Creating an instance of the Car class
+>>> new_car = Car('Audi', 'A4', '2024')
 
-    def descriptive_name(self):
-        """
-        Return a descriptive name for the car.
-        """
-        long_name = f"{self.year} {self.make} {self.model}"
-        return long_name  # Return the descriptive name
+>>> print(new_car.descriptive_name())
+2024 Audi A4
 
-# Creating an instance of the Car class
-new_car = Car('Audi', 'A4', '2024')
-
-# Calling the descriptive_name() method and printing car attributes
-print(new_car.descriptive_name())  # Prints: 2024 Audi A4
-print(new_car.make)                # Prints: Audi
+>>> print(new_car.make)
+Audi
 ```
 
 - The `__init__()` method initializes the attributes `make`, `model`, and `year`.
@@ -99,44 +152,33 @@ print(new_car.make)                # Prints: Audi
 
 ---
 
-
-
-**Setting a Default Value for an Attribute**
+##### **Setting a Default Value for an Attribute**
 
 In Python, you can set default values for attributes in the `__init__()` method. This allows you to initialize an attribute without having to pass it as a parameter when creating an instance.
 
 In the following example, we define an attribute `odometer_reading` that always starts at 0 by default. A method `read_odometer()` is provided to read the car’s odometer value.
 
 ```python
-class Car:
-    def __init__(self, make, model, year):
-        """
-        Initialize the car object with make, model, year, and a default odometer reading of 0.
-        """
-        self.make = make
-        self.model = model
-        self.year = year
-        self.odometer_reading = 0  # Default value for odometer reading
+>>> class Car:
+...     def __init__(self, make, model, year):
+...  """ Initialize the car object, default odometer reading of 0. """
+...         self.make = make
+...         self.model = model
+...         self.year = year
+...         self.odometer_reading = 0  # Default value for odometer reading
+...     def descriptive_name(self):
+...         long_name = f"{self.year} {self.make} {self.model}"
+...         return long_name
+...     def read_odometer(self):
+...         print(f"This car has {self.odometer_reading} miles on it.")
+...
+>>> # Create an instance of Car
+>>> new_car = Car('Audi', 'A4', '2024')
+>>> print(new_car.descriptive_name())
+2024 Audi A4
 
-    def descriptive_name(self):
-        """
-        Return a descriptive name for the car in the format 'year make model'.
-        """
-        long_name = f"{self.year} {self.make} {self.model}"
-        return long_name
-
-    def read_odometer(self):
-        """
-        Print the current odometer reading for the car.
-        """
-        print(f"This car has {self.odometer_reading} miles on it.")
-
-# Create an instance of Car
-new_car = Car('Audi', 'A4', '2024')
-
-# Print descriptive name and odometer reading
-print(new_car.descriptive_name())
-new_car.read_odometer()
+>>> new_car.read_odometer()
+This car has 0 miles on it.
 ```
 
 - `self.odometer_reading = 0`: This sets the default value of the `odometer_reading` attribute to 0 when a new instance of `Car` is created.
@@ -144,11 +186,10 @@ new_car.read_odometer()
 
 ---
 
-### **Modifying Attribute Values**
+#### **Ways of Modifying Attribute Values**
 
-You can modify the attributes of an instance in multiple ways:
 
-#### 1. **Modifying an Attribute's Value Directly**
+##### 1. **Modifying an Attribute's Value Directly**
 
 You can change the value of an attribute directly using dot notation.
 
@@ -156,69 +197,50 @@ You can change the value of an attribute directly using dot notation.
 new_car.odometer_reading = 23  # Direct modification of the odometer reading
 ```
 
-#### 2. **Modifying an Attribute's Value Through a Method**
+##### 2. **Modifying an Attribute's Value Through a Method**
 
 Instead of changing an attribute directly, you can use a method to update it. This approach allows you to add logic, such as validation, to ensure that values are correctly updated.
 
 ```python
-class Car:
-    def __init__(self, make, model, year):
-        """
-        Initialize the car with make, model, year, and default odometer reading.
-        """
-        self.make = make
-        self.model = model
-        self.year = year
-        self.odometer_reading = 0
+>>> class Car:
+...     def __init__(self, make, model, year):
+...         self.make = make
+...         self.model = model
+...         self.year = year
+...         self.odometer_reading = 0
+...     def descriptive_name(self):
+...         long_name = f"{self.year} {self.make} {self.model}"
+...         return long_name
+...     def read_odometer(self):
+...         print(f"This car has {self.odometer_reading} miles on it.")
+...     def update_odometer(self, mileage):
+...    """Updating after checking it is not being rolled back """
+...         if mileage >= self.odometer_reading:
+...             self.odometer_reading = mileage
+...         else:
+...             print("You can't roll back the odometer.")
+...     def increment_odometer(self, miles):
+...         if miles >= 0:
+...             self.odometer_reading += miles
+...         else:
+...             print("Odometer value cannot be reduced.")
 
-    def descriptive_name(self):
-        """
-        Return the descriptive name of the car.
-        """
-        long_name = f"{self.year} {self.make} {self.model}"
-        return long_name
 
-    def read_odometer(self):
-        """
-        Print the car's odometer reading.
-        """
-        print(f"This car has {self.odometer_reading} miles on it.")
+>>> new_car = Car('Audi', 'A4', '2024')
+>>> new_car.odometer_reading = 23 # Direct modification
+>>> new_car.update_odometer(2345)
 
-    def update_odometer(self, mileage):
-        """
-        Update the odometer reading, ensuring it cannot be rolled back.
-        """
-        if mileage >= self.odometer_reading:
-            self.odometer_reading = mileage
-        else:
-            print("You can't roll back the odometer.")
+>>> new_car.update_odometer(12)  # Invalid update, will print an error
+You can't roll back the odometer.
 
-    def increment_odometer(self, miles):
-        """
-        Increment the odometer reading by a certain number of miles.
-        Ensures that negative mileage is not added.
-        """
-        if miles >= 0:
-            self.odometer_reading += miles
-        else:
-            print("Odometer value cannot be reduced.")
+>>> new_car.increment_odometer(-12) # Invalid increment, will print an error
+Odometer value cannot be reduced.
 
-# Creating and modifying instances of the Car class
-new_car = Car('Audi', 'A4', '2024')
-new_car.odometer_reading = 23  # Direct modification
-new_car.update_odometer(2345)  # Update odometer with a valid value
-new_car.update_odometer(12)    # Invalid update, will print an error
-new_car.increment_odometer(-12)  # Invalid increment, will print an error
+>>> print(new_car.descriptive_name())
+2024 Audi A4
 
-print(new_car.descriptive_name())
-new_car.read_odometer()
-
-# Creating another car and updating its odometer
-old_car = Car('Subaru', 'Outback', '2017')
-old_car.update_odometer(20456)
-
-print(old_car.descriptive_name())
-old_car.read_odometer()
+>>> new_car.read_odometer()
+This car has 2345 miles on it.
 ```
 
 - **Direct modification**: `new_car.odometer_reading = 23` modifies the attribute directly.
@@ -227,7 +249,7 @@ old_car.read_odometer()
 
 ---
 
-### **Creating Points for 2D Representation**
+#### **Example 4: Creating Points for 2D Representation**
 
 Here, we create a `Point` class to represent points in a 2D space. This class has methods for translating the point and calculating its distance from the origin.
 
@@ -288,19 +310,5 @@ print(p3)  # Output: (6, 3)
 - `distance(self)`: Calculates the distance from the point to the origin `(0, 0)` using the Pythagorean theorem.
 - `__str__(self)`: This special method provides a string representation of the point, making it easier to print.
 - `__add__(self, p)`: This special method allows for adding two points together using the `+` operator.
-
----
-
-### **Operator Overloading (Additional Methods)**
-
-In Python, you can overload common operators for custom behavior. For example, you can overload the multiplication operator (`*`), comparison operators (`<`, `<=`, `>`, `>=`), and others.
-
-```python
-def __mul__(self, scalar):
-    """Multiply the point by a scalar value."""
-    return Point(self.x * scalar, self.y * scalar)
-```
-
-In this case, multiplying a point by a scalar value would scale both the `x` and `y` coordinates.
 
 ---
