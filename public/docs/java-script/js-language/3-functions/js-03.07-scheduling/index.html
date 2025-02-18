@@ -157,15 +157,19 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-01-oop-concepts/">06 OOP - 01 OOP Concepts</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-01-introduction-to-oop-features/">06 OOP - 01 Introduction to OOP Features</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-02-classes/">06 OOP - 02 Classes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-02-creating-class-and-instance-variables/">06 OOP - 02 Creating Class and Instance Variables</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-03-class-attributes/">06 OOP - 03 Class Attributes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-03-types-of-methods/">06 OOP - 03 Types of Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/6oop/06-oop-04-changing-attriute-and-using-class/">06 OOP - 04 Changing Attriute and Using Class</a>
   </li>
       </ul>
     </details>
@@ -1545,15 +1549,19 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-01-oop-concepts/">06 OOP - 01 OOP Concepts</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-01-introduction-to-oop-features/">06 OOP - 01 Introduction to OOP Features</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-02-classes/">06 OOP - 02 Classes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-02-creating-class-and-instance-variables/">06 OOP - 02 Creating Class and Instance Variables</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-03-class-attributes/">06 OOP - 03 Class Attributes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-03-types-of-methods/">06 OOP - 03 Types of Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/6oop/06-oop-04-changing-attriute-and-using-class/">06 OOP - 04 Changing Attriute and Using Class</a>
   </li>
       </ul>
     </details>
@@ -2697,7 +2705,7 @@
   <h3>On this page</h3>
     <nav id="toc">
   <ul>
-    <li><a href="#scheduling-function-calls-with-settimeout-and-setinterval"><strong>Scheduling Function Calls with <code>setTimeout</code> and <code>setInterval</code></strong></a>
+    <li><a href="#scheduling-function-calls-with"><strong>Scheduling Function Calls with <code>setTimeout</code> and <code>setInterval</code></strong></a>
       <ul>
         <li><a href="#settimeout-"><strong>setTimeout( )</strong></a>
           <ul>
@@ -2712,8 +2720,8 @@
           </ul>
         </li>
         <li><a href="#behavior-in-browsers"><strong>Behavior in Browsers:</strong></a></li>
-        <li><a href="#nested-settimeout"><strong>Nested <code>setTimeout()</code></strong></a></li>
-        <li><a href="#important-notes-on-settimeout-and-setinterval"><strong>Important Notes on <code>setTimeout</code> and <code>setInterval</code>:</strong></a></li>
+        <li><a href="#nested"><strong>Nested <code>setTimeout()</code></strong></a></li>
+        <li><a href="#important-notes-on"><strong>Important Notes on <code>setTimeout</code> and <code>setInterval</code>:</strong></a></li>
         <li><a href="#summary"><strong>Summary</strong></a></li>
       </ul>
     </li>
@@ -2732,7 +2740,7 @@
     <div class="page-links">
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#scheduling-function-calls-with-settimeout-and-setinterval"><strong>Scheduling Function Calls with <code>setTimeout</code> and <code>setInterval</code></strong></a>
+    <li><a href="#scheduling-function-calls-with"><strong>Scheduling Function Calls with <code>setTimeout</code> and <code>setInterval</code></strong></a>
       <ul>
         <li><a href="#settimeout-"><strong>setTimeout( )</strong></a>
           <ul>
@@ -2747,8 +2755,8 @@
           </ul>
         </li>
         <li><a href="#behavior-in-browsers"><strong>Behavior in Browsers:</strong></a></li>
-        <li><a href="#nested-settimeout"><strong>Nested <code>setTimeout()</code></strong></a></li>
-        <li><a href="#important-notes-on-settimeout-and-setinterval"><strong>Important Notes on <code>setTimeout</code> and <code>setInterval</code>:</strong></a></li>
+        <li><a href="#nested"><strong>Nested <code>setTimeout()</code></strong></a></li>
+        <li><a href="#important-notes-on"><strong>Important Notes on <code>setTimeout</code> and <code>setInterval</code>:</strong></a></li>
         <li><a href="#summary"><strong>Summary</strong></a></li>
       </ul>
     </li>
@@ -2758,7 +2766,7 @@
   </details>
 
 			</nav>
-			<h2 id="scheduling-function-calls-with-settimeout-and-setinterval"><strong>Scheduling Function Calls with <code>setTimeout</code> and <code>setInterval</code></strong><a href="#scheduling-function-calls-with-settimeout-and-setinterval" class="anchor" aria-hidden="true">#</a> </h2>
+			<h2 id="scheduling-function-calls-with"><strong>Scheduling Function Calls with <code>setTimeout</code> and <code>setInterval</code></strong><a href="#scheduling-function-calls-with" class="anchor" aria-hidden="true">#</a> </h2>
 <p>JavaScript provides the ability to schedule functions to be executed <strong>later</strong> or <strong>repeatedly</strong> using two methods: <strong><code>setTimeout</code></strong> and <strong><code>setInterval</code></strong>.</p>
 <ul>
 <li>
@@ -2946,7 +2954,7 @@
 <li>So, if you don’t dismiss the alert for a while, the next <code>&quot;tick&quot;</code> will be shown immediately after you close the current one, making the interval appear shorter.</li>
 </ul>
 <hr>
-<h3 id="nested-settimeout"><strong>Nested <code>setTimeout()</code></strong><a href="#nested-settimeout" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="nested"><strong>Nested <code>setTimeout()</code></strong><a href="#nested" class="anchor" aria-hidden="true">#</a> </h3>
 <p><a href="https://javascript.info/settimeout-setinterval#nested-settimeout">Nested setTimeout</a></p>
 <p>You can schedule the next function call <strong>within</strong> the function itself, creating a loop that behaves similarly to <code>setInterval()</code>, but with more flexibility.</p>
 
@@ -2966,7 +2974,7 @@
 <p>This method allows you to control when the next function is called based on the results of the current execution. For example, you might want to vary the interval or conditionally stop the execution.</p>
 <p>The key difference is that with <code>setInterval</code>, the next interval is always scheduled immediately, but with nested <code>setTimeout</code>, you can choose to delay the next call further or conditionally stop it based on some logic.</p>
 <hr>
-<h3 id="important-notes-on-settimeout-and-setinterval"><strong>Important Notes on <code>setTimeout</code> and <code>setInterval</code>:</strong><a href="#important-notes-on-settimeout-and-setinterval" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="important-notes-on"><strong>Important Notes on <code>setTimeout</code> and <code>setInterval</code>:</strong><a href="#important-notes-on" class="anchor" aria-hidden="true">#</a> </h3>
 <ol>
 <li>
 <p><strong>Timers are not guaranteed to be precise.</strong> The delay is the minimum time before execution, and the actual execution might happen later due to factors like system load, other running scripts, or the browser&rsquo;s event loop.</p>

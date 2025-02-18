@@ -7,28 +7,35 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright (c) 2020-2024 Thulite</copyright>
-    <lastBuildDate>Tue, 11 Feb 2025 23:53:35 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 11 Feb 2025 23:54:04 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/personal-site/docs/python/6oop/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>06 OOP - 01 OOP Concepts</title>
-      <link>http://localhost:1313/personal-site/docs/python/6oop/06-oop-01-oop-concepts/</link>
+      <title>06 OOP - 01 Introduction to OOP Features</title>
+      <link>http://localhost:1313/personal-site/docs/python/6oop/06-oop-01-introduction-to-oop-features/</link>
       <pubDate>Tue, 11 Feb 2025 23:53:03 +0530</pubDate>
-      <guid>http://localhost:1313/personal-site/docs/python/6oop/06-oop-01-oop-concepts/</guid>
-      <description>&lt;p&gt;A &lt;strong&gt;class&lt;/strong&gt; is a user-defined data type in Python. Classes allow you to construct new data types that go beyond Python&amp;rsquo;s built-in types.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/personal-site/docs/python/6oop/06-oop-01-introduction-to-oop-features/</guid>
+      <description>&lt;p&gt;In traditional software development, tasks are divided into several sub-tasks, with each sub-task represented as a procedure or function. This approach is called the &lt;strong&gt;Procedure-Oriented Approach&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>06 OOP - 02 Classes</title>
-      <link>http://localhost:1313/personal-site/docs/python/6oop/06-oop-02-classes/</link>
+      <title>06 OOP - 02 Creating Class and Instance Variables</title>
+      <link>http://localhost:1313/personal-site/docs/python/6oop/06-oop-02-creating-class-and-instance-variables/</link>
       <pubDate>Tue, 11 Feb 2025 23:53:16 +0530</pubDate>
-      <guid>http://localhost:1313/personal-site/docs/python/6oop/06-oop-02-classes/</guid>
-      <description>&lt;h2 id=&#34;the-__init__-method-constructor&#34;&gt;The &amp;lsquo;&lt;strong&gt;init&lt;/strong&gt;()&amp;rsquo; Method (Constructor)&lt;/h2&gt;&#xA;&lt;p&gt;The &lt;code&gt;__init__()&lt;/code&gt; method is a special method in Python that is automatically called when a new object of the class is created. It&amp;rsquo;s used to initialize the instance&amp;rsquo;s attributes and set up its initial state.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/personal-site/docs/python/6oop/06-oop-02-creating-class-and-instance-variables/</guid>
+      <description>&lt;p&gt;A class contains &lt;strong&gt;methods&lt;/strong&gt; and &lt;strong&gt;variables&lt;/strong&gt;, and it is used as a blueprint to create objects. An &lt;strong&gt;object&lt;/strong&gt; is an instance of a &lt;strong&gt;class&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>06 OOP - 03 Class Attributes</title>
-      <link>http://localhost:1313/personal-site/docs/python/6oop/06-oop-03-class-attributes/</link>
+      <title>06 OOP - 03 Types of Methods</title>
+      <link>http://localhost:1313/personal-site/docs/python/6oop/06-oop-03-types-of-methods/</link>
       <pubDate>Tue, 11 Feb 2025 23:53:35 +0530</pubDate>
-      <guid>http://localhost:1313/personal-site/docs/python/6oop/06-oop-03-class-attributes/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Setting a Default Value for an Attribute&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;In Python, you can set default values for attributes in the &lt;code&gt;__init__()&lt;/code&gt; method. This allows you to initialize an attribute without having to pass it as a parameter when creating an instance.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/personal-site/docs/python/6oop/06-oop-03-types-of-methods/</guid>
+      <description>&lt;p&gt;The purpose of a method is to process the variables provided in the class or in the method. Methods within a class define the behavior or actions that objects of that class can perform. A method is simply a function defined inside a class.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>06 OOP - 04 Changing Attriute and Using Class</title>
+      <link>http://localhost:1313/personal-site/docs/python/6oop/06-oop-04-changing-attriute-and-using-class/</link>
+      <pubDate>Tue, 11 Feb 2025 23:54:04 +0530</pubDate>
+      <guid>http://localhost:1313/personal-site/docs/python/6oop/06-oop-04-changing-attriute-and-using-class/</guid>
+      <description>&lt;h3 id=&#34;creating-and-using-a-class&#34;&gt;Creating and Using a Class&lt;/h3&gt;&#xA;&lt;h4 id=&#34;example-1--restaurant-class&#34;&gt;Example 1 : &lt;strong&gt;Restaurant Class&lt;/strong&gt;&lt;/h4&gt;&#xA;&lt;p&gt;A class called &lt;code&gt;Restaurant&lt;/code&gt;, which stores the name and type of cuisine of a restaurant, and has methods to describe and open the restaurant.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -157,15 +157,19 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-01-oop-concepts/">06 OOP - 01 OOP Concepts</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-01-introduction-to-oop-features/">06 OOP - 01 Introduction to OOP Features</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-02-classes/">06 OOP - 02 Classes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-02-creating-class-and-instance-variables/">06 OOP - 02 Creating Class and Instance Variables</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-03-class-attributes/">06 OOP - 03 Class Attributes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-03-types-of-methods/">06 OOP - 03 Types of Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/6oop/06-oop-04-changing-attriute-and-using-class/">06 OOP - 04 Changing Attriute and Using Class</a>
   </li>
       </ul>
     </details>
@@ -1545,15 +1549,19 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-01-oop-concepts/">06 OOP - 01 OOP Concepts</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-01-introduction-to-oop-features/">06 OOP - 01 Introduction to OOP Features</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-02-classes/">06 OOP - 02 Classes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-02-creating-class-and-instance-variables/">06 OOP - 02 Creating Class and Instance Variables</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-03-class-attributes/">06 OOP - 03 Class Attributes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-03-types-of-methods/">06 OOP - 03 Types of Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/6oop/06-oop-04-changing-attriute-and-using-class/">06 OOP - 04 Changing Attriute and Using Class</a>
   </li>
       </ul>
     </details>
@@ -2707,10 +2715,10 @@
           </ul>
         </li>
         <li><a href="#arrow-function-as-arguments"><strong>Arrow Function as Arguments</strong></a></li>
-        <li><a href="#arrow-functions-and-this"><strong>Arrow Functions and <code>this</code></strong></a>
+        <li><a href="#arrow-functions-and"><strong>Arrow Functions and <code>this</code></strong></a>
           <ul>
-            <li><a href="#arrow-functions-in-foreach-and-similar-methods"><strong>Arrow Functions in <code>forEach</code> and Similar Methods</strong></a></li>
-            <li><a href="#regular-function-in-foreach"><strong>Regular Function in <code>forEach</code></strong></a></li>
+            <li><a href="#arrow-functions-in"><strong>Arrow Functions in <code>forEach</code> and Similar Methods</strong></a></li>
+            <li><a href="#regular-function-in"><strong>Regular Function in <code>forEach</code></strong></a></li>
           </ul>
         </li>
         <li><a href="#arrow-functions-cannot-be-used-as-constructors"><strong>Arrow Functions Cannot Be Used as Constructors</strong></a></li>
@@ -2743,10 +2751,10 @@
           </ul>
         </li>
         <li><a href="#arrow-function-as-arguments"><strong>Arrow Function as Arguments</strong></a></li>
-        <li><a href="#arrow-functions-and-this"><strong>Arrow Functions and <code>this</code></strong></a>
+        <li><a href="#arrow-functions-and"><strong>Arrow Functions and <code>this</code></strong></a>
           <ul>
-            <li><a href="#arrow-functions-in-foreach-and-similar-methods"><strong>Arrow Functions in <code>forEach</code> and Similar Methods</strong></a></li>
-            <li><a href="#regular-function-in-foreach"><strong>Regular Function in <code>forEach</code></strong></a></li>
+            <li><a href="#arrow-functions-in"><strong>Arrow Functions in <code>forEach</code> and Similar Methods</strong></a></li>
+            <li><a href="#regular-function-in"><strong>Regular Function in <code>forEach</code></strong></a></li>
           </ul>
         </li>
         <li><a href="#arrow-functions-cannot-be-used-as-constructors"><strong>Arrow Functions Cannot Be Used as Constructors</strong></a></li>
@@ -2925,7 +2933,7 @@ If body is single expression, rather than a block in braces, that expression wil
 </span></span><span class="line"><span class="cl"><span class="p">);</span></span></span></code></pre></div>
   </figure>
 </div>
-<h3 id="arrow-functions-and-this"><strong>Arrow Functions and <code>this</code></strong><a href="#arrow-functions-and-this" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="arrow-functions-and"><strong>Arrow Functions and <code>this</code></strong><a href="#arrow-functions-and" class="anchor" aria-hidden="true">#</a> </h3>
 <p>Arrow functions behave differently from regular functions when it comes to the <code>this</code> keyword. They <strong>do not have their own <code>this</code></strong>. Instead, they inherit <code>this</code> from the <strong>lexical scope</strong> (i.e., the surrounding context).</p>
 <p><strong>Arrow Functions Inheriting <code>this</code></strong></p>
 
@@ -2949,7 +2957,7 @@ If body is single expression, rather than a block in braces, that expression wil
   </figure>
 </div>
 <p>In this example, the <code>arrow()</code> function inherits <code>this</code> from the <code>sayHi()</code> method, which refers to the <code>user</code> object.</p>
-<h4 id="arrow-functions-in-foreach-and-similar-methods"><strong>Arrow Functions in <code>forEach</code> and Similar Methods</strong><a href="#arrow-functions-in-foreach-and-similar-methods" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="arrow-functions-in"><strong>Arrow Functions in <code>forEach</code> and Similar Methods</strong><a href="#arrow-functions-in" class="anchor" aria-hidden="true">#</a> </h4>
 <p>Arrow functions are useful in methods like <code>forEach</code> because they <strong>preserve the <code>this</code> context</strong> from the surrounding code:</p>
 
 
@@ -2974,7 +2982,7 @@ If body is single expression, rather than a block in braces, that expression wil
   </figure>
 </div>
 <p>In this case, the arrow function inside <code>forEach</code> inherits <code>this</code> from the <code>showList()</code> method, which refers to the <code>group</code> object.</p>
-<h4 id="regular-function-in-foreach"><strong>Regular Function in <code>forEach</code></strong><a href="#regular-function-in-foreach" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="regular-function-in"><strong>Regular Function in <code>forEach</code></strong><a href="#regular-function-in" class="anchor" aria-hidden="true">#</a> </h4>
 <p>If we use a regular function inside <code>forEach</code>, the value of <code>this</code> changes to <code>undefined</code> in strict mode, or the global object (<code>window</code> in browsers) in non-strict mode:</p>
 
 

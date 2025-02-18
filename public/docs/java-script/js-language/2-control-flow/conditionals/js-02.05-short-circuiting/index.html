@@ -157,15 +157,19 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-01-oop-concepts/">06 OOP - 01 OOP Concepts</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-01-introduction-to-oop-features/">06 OOP - 01 Introduction to OOP Features</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-02-classes/">06 OOP - 02 Classes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-02-creating-class-and-instance-variables/">06 OOP - 02 Creating Class and Instance Variables</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-03-class-attributes/">06 OOP - 03 Class Attributes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-03-types-of-methods/">06 OOP - 03 Types of Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/6oop/06-oop-04-changing-attriute-and-using-class/">06 OOP - 04 Changing Attriute and Using Class</a>
   </li>
       </ul>
     </details>
@@ -1545,15 +1549,19 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-01-oop-concepts/">06 OOP - 01 OOP Concepts</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-01-introduction-to-oop-features/">06 OOP - 01 Introduction to OOP Features</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-02-classes/">06 OOP - 02 Classes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-02-creating-class-and-instance-variables/">06 OOP - 02 Creating Class and Instance Variables</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-03-class-attributes/">06 OOP - 03 Class Attributes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-03-types-of-methods/">06 OOP - 03 Types of Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/6oop/06-oop-04-changing-attriute-and-using-class/">06 OOP - 04 Changing Attriute and Using Class</a>
   </li>
       </ul>
     </details>
@@ -2699,10 +2707,10 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#1--or-operator"><strong>1. <code>||</code> (OR) Operator</strong></a></li>
+        <li><a href="#1"><strong>1. <code>||</code> (OR) Operator</strong></a></li>
         <li><a href="#fallback-to-default-values"><strong>Fallback to Default Values</strong></a></li>
-        <li><a href="#2--and-operator"><strong>2. <code>&amp;&amp;</code> (AND) Operator</strong></a></li>
-        <li><a href="#3--nullish-coalescing-operator"><strong>3. <code>??</code> (Nullish Coalescing) Operator</strong></a></li>
+        <li><a href="#2"><strong>2. <code>&amp;&amp;</code> (AND) Operator</strong></a></li>
+        <li><a href="#3"><strong>3. <code>??</code> (Nullish Coalescing) Operator</strong></a></li>
         <li><a href="#short-circuit-evaluation"><strong>Short-Circuit Evaluation</strong></a></li>
         <li><a href="#conditional-operator-ternary-and-short-circuiting"><strong>Conditional Operator (Ternary) and Short-Circuiting</strong></a></li>
         <li><a href="#summary-of-short-circuiting-behavior"><strong>Summary of Short-Circuiting Behavior:</strong></a></li>
@@ -2725,10 +2733,10 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#1--or-operator"><strong>1. <code>||</code> (OR) Operator</strong></a></li>
+        <li><a href="#1"><strong>1. <code>||</code> (OR) Operator</strong></a></li>
         <li><a href="#fallback-to-default-values"><strong>Fallback to Default Values</strong></a></li>
-        <li><a href="#2--and-operator"><strong>2. <code>&amp;&amp;</code> (AND) Operator</strong></a></li>
-        <li><a href="#3--nullish-coalescing-operator"><strong>3. <code>??</code> (Nullish Coalescing) Operator</strong></a></li>
+        <li><a href="#2"><strong>2. <code>&amp;&amp;</code> (AND) Operator</strong></a></li>
+        <li><a href="#3"><strong>3. <code>??</code> (Nullish Coalescing) Operator</strong></a></li>
         <li><a href="#short-circuit-evaluation"><strong>Short-Circuit Evaluation</strong></a></li>
         <li><a href="#conditional-operator-ternary-and-short-circuiting"><strong>Conditional Operator (Ternary) and Short-Circuiting</strong></a></li>
         <li><a href="#summary-of-short-circuiting-behavior"><strong>Summary of Short-Circuiting Behavior:</strong></a></li>
@@ -2741,7 +2749,7 @@
 
 			</nav>
 			<p>Logical operators like <code>&amp;&amp;</code>, <code>??</code>, and <code>||</code> handle values of different types in a unique way. They <strong>convert</strong> the left-hand value to a Boolean to decide how to proceed. These operators might <strong>return</strong> either the original left-hand value or the right-hand value, based on the evaluation.</p>
-<h3 id="1--or-operator"><strong>1. <code>||</code> (OR) Operator</strong><a href="#1--or-operator" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="1"><strong>1. <code>||</code> (OR) Operator</strong><a href="#1" class="anchor" aria-hidden="true">#</a> </h3>
 <p>The <code>||</code> (OR) operator will return the <strong>left-hand value</strong> if it <strong>can be converted to <code>true</code></strong>. If not, it returns the <strong>right-hand value</strong>.</p>
 <ul>
 <li>Values that are considered <strong>falsy</strong> in JavaScript (like <code>0</code>, <code>NaN</code>, <code>&quot;&quot;</code>, <code>null</code>, <code>undefined</code>) will cause <code>||</code> to return the <strong>right-hand value</strong>.</li>
@@ -2780,7 +2788,7 @@
 </div>
 <p>In this example, if <code>username</code> is falsy (empty string, <code>null</code>, etc.), <code>&quot;Guest&quot;</code> is used as a fallback value.</p>
 <hr>
-<h3 id="2--and-operator"><strong>2. <code>&amp;&amp;</code> (AND) Operator</strong><a href="#2--and-operator" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="2"><strong>2. <code>&amp;&amp;</code> (AND) Operator</strong><a href="#2" class="anchor" aria-hidden="true">#</a> </h3>
 <p>The <code>&amp;&amp;</code> (AND) operator works <strong>oppositely</strong> to <code>||</code> and <code>??</code>:</p>
 <ul>
 <li>If the value on the <strong>left</strong> side is <strong>falsy</strong> (like <code>0</code>, <code>null</code>, <code>undefined</code>), <code>&amp;&amp;</code> immediately returns the <strong>left-hand value</strong>.</li>
@@ -2817,7 +2825,7 @@
 </div>
 <p>If <code>user</code> is falsy (e.g., <code>null</code>, <code>undefined</code>, <code>&quot;&quot;</code>), <code>userRole</code> would be assigned the falsy value of <code>user</code>.</p>
 <hr>
-<h3 id="3--nullish-coalescing-operator"><strong>3. <code>??</code> (Nullish Coalescing) Operator</strong><a href="#3--nullish-coalescing-operator" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="3"><strong>3. <code>??</code> (Nullish Coalescing) Operator</strong><a href="#3" class="anchor" aria-hidden="true">#</a> </h3>
 <p>The <code>??</code> operator behaves similarly to <code>||</code>, but with a key difference: it <strong>only considers <code>null</code> and <code>undefined</code> as falsy</strong> values. Other falsy values like <code>0</code>, <code>false</code>, or <code>&quot;&quot;</code> are treated as valid values.</p>
 
 

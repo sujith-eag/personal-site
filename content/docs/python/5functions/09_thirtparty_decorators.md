@@ -15,6 +15,8 @@ seo:
 ---
 
 
+
+
 **Third-party libraries** or **custom decorators** can provide additional functionality. There are more **decorators** available from **third-party libraries** and **custom implementations**. 
 
 
@@ -34,12 +36,15 @@ ___
 - **Use Case:** When you want to cache the results of expensive or recursive functions.
 
 ```python
-from memoization import cached
-
-@cached
-def slow_function(n):
-	# Some time-consuming task
-	return n * n
+>>> from memoization import cached
+>>> 
+>>> @cached
+... def slow_function(n):
+...     # Some time-consuming task
+...     return n * n
+>>> 
+>>> print(slow_function(5)) # (cached result)
+25
 ```
 
 - **Install**: `pip install memoization`
@@ -51,12 +56,14 @@ def slow_function(n):
 - **Use Case:** Retry a function in case of failure, like when working with unreliable external services.
 
 ```python
-from tenacity import retry
-
-@retry
-def unreliable_function():
-	# This could raise an exception
-	pass
+>>> from tenacity import retry
+>>> 
+>>> @retry
+... def unreliable_function():
+...     # This could raise an exception
+...     pass
+>>> 
+>>> # This function will retry if it raises an exception
 ```
 
 - **Install**: `pip install tenacity`
@@ -69,21 +76,24 @@ def unreliable_function():
 - **Use Case:** Profiling a function to track how long it takes to execute.
 
 ```python
-import time
-
-def timer(func):
-	def wrapper(*args, **kwargs):
-		start_time = time.time()
-		result = func(*args, **kwargs)
-		end_time = time.time()
-		print(f"Execution time: {end_time - start_time} seconds")
-		return result
-	return wrapper
-
-@timer
-def my_function():
-	# Some operation
-	pass
+>>> import time
+>>> 
+>>> def timer(func):
+...     def wrapper(*args, **kwargs):
+...         start_time = time.time()
+...         result = func(*args, **kwargs)
+...         end_time = time.time()
+...         print(f"Execution time: {end_time - start_time} seconds")
+...         return result
+...     return wrapper
+>>> 
+>>> @timer
+... def my_function():
+...     # Some operation
+...     time.sleep(1)  # Simulating a delay
+>>> 
+>>> my_function()
+Execution time: 1.000123 seconds
 ```
 
 
@@ -93,21 +103,25 @@ def my_function():
 - **Use Case:** When you need to log function execution for tracking or debugging purposes.
 
 ```python
-import logging
-
-logging.basicConfig(level=logging.INFO)
-
-def log(func):
-	def wrapper(*args, **kwargs):
-		logging.info(f"Calling function {func.__name__} with arguments: {args}, {kwargs}")
-		result = func(*args, **kwargs)
-		logging.info(f"Function {func.__name__} returned {result}")
-		return result
-	return wrapper
-
-@log
-def add(a, b):
-	return a + b
+>>> import logging
+>>> logging.basicConfig(level=logging.INFO)
+>>> 
+>>> def log(func):
+...     def wrapper(*args, **kwargs):
+...         logging.info(f"Calling function {func.__name__} with arguments: {args}, {kwargs}")
+...         result = func(*args, **kwargs)
+...         logging.info(f"Function {func.__name__} returned {result}")
+...         return result
+...     return wrapper
+>>> 
+>>> @log
+... def add(a, b):
+...     return a + b
+>>> 
+>>> add(3, 4)
+INFO:root:Calling function add with arguments: (3, 4), {}
+INFO:root:Function add returned 7
+7
 ```
 
 5. **`@singleton` (Custom or third-party)**:
@@ -116,22 +130,23 @@ def add(a, b):
 - **Use Case:** When you need to ensure a class has only one instance, for example, managing global state.
 
 ```python
-def singleton(cls):
-	instances = {}
-	def wrapper(*args, **kwargs):
-		if cls not in instances:
-			instances[cls] = cls(*args, **kwargs)
-		return instances[cls]
-	return wrapper
-
-@singleton
-class Database:
-	def __init__(self):
-		self.connection = "Database Connection"
-
-db1 = Database()
-db2 = Database()
-print(db1 is db2)  # Output: True (Both are the same instance)
+>>> def singleton(cls):
+...     instances = {}
+...     def wrapper(*args, **kwargs):
+...         if cls not in instances:
+...             instances[cls] = cls(*args, **kwargs)
+...         return instances[cls]
+...     return wrapper
+>>> 
+>>> @singleton
+... class Database:
+...     def __init__(self):
+...         self.connection = "Database Connection"
+>>> 
+>>> db1 = Database()
+>>> db2 = Database()
+>>> print(db1 is db2)  # Output: True (Both are the same instance)
+True
 ```
 
 
@@ -142,22 +157,22 @@ In addition to third-party decorators, you can **create your own custom decorato
 - **Logging Decorator**: Logs the entry and exit of functions.
 
 ```python
-def log_function_call(func):
-def wrapper(*args, **kwargs):
-	print(f"Function {func.__name__} called with arguments {args} and {kwargs}")
-	result = func(*args, **kwargs)
-	print(f"Function {func.__name__} returned {result}")
-	return result
-return wrapper
-
-@log_function_call
-def add(a, b):
-return a + b
-
-add(3, 4)
-# Output:
-# Function add called with arguments (3, 4) and {}
-# Function add returned 7
+>>> def log_function_call(func):
+...     def wrapper(*args, **kwargs):
+...         print(f"Function {func.__name__} called with arguments {args} and {kwargs}")
+...         result = func(*args, **kwargs)
+...         print(f"Function {func.__name__} returned {result}")
+...         return result
+...     return wrapper
+>>> 
+>>> @log_function_call
+... def add(a, b):
+...     return a + b
+>>> 
+>>> add(3, 4)
+Function add called with arguments (3, 4) and {}
+Function add returned 7
+7
 ```
 
 

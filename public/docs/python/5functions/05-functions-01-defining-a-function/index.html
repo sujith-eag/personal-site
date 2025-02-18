@@ -157,15 +157,19 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-01-oop-concepts/">06 OOP - 01 OOP Concepts</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-01-introduction-to-oop-features/">06 OOP - 01 Introduction to OOP Features</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-02-classes/">06 OOP - 02 Classes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-02-creating-class-and-instance-variables/">06 OOP - 02 Creating Class and Instance Variables</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-03-class-attributes/">06 OOP - 03 Class Attributes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-03-types-of-methods/">06 OOP - 03 Types of Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/6oop/06-oop-04-changing-attriute-and-using-class/">06 OOP - 04 Changing Attriute and Using Class</a>
   </li>
       </ul>
     </details>
@@ -1545,15 +1549,19 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-01-oop-concepts/">06 OOP - 01 OOP Concepts</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-01-introduction-to-oop-features/">06 OOP - 01 Introduction to OOP Features</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-02-classes/">06 OOP - 02 Classes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-02-creating-class-and-instance-variables/">06 OOP - 02 Creating Class and Instance Variables</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-03-class-attributes/">06 OOP - 03 Class Attributes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-03-types-of-methods/">06 OOP - 03 Types of Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/6oop/06-oop-04-changing-attriute-and-using-class/">06 OOP - 04 Changing Attriute and Using Class</a>
   </li>
       </ul>
     </details>
@@ -2805,11 +2813,13 @@ The function body is indented (Whatever gets indented is the functions body).</p
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">to</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;hello,&#34;</span><span class="p">,</span> <span class="n">to</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl"><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span> <span class="p">(</span><span class="s2">&#34;whats your name? &#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">hello</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></span></span></code></pre></div>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">to</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;hello&#34;</span><span class="p">,</span> <span class="n">to</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span> 
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&#34;What&#39;s your name? : &#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">What</span><span class="s1">&#39;s your name? : Sujith</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">hello</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">hello</span> <span class="n">Sujith</span></span></span></code></pre></div>
   </figure>
 </div>
 
@@ -2820,12 +2830,12 @@ The function body is indented (Whatever gets indented is the functions body).</p
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">username</span><span class="p">):</span>  <span class="c1"># Function with a parameter</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Prints a greeting message.&#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Hello, </span><span class="si">{</span><span class="n">username</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="si">}</span><span class="s2">!&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">greet</span><span class="p">(</span><span class="s2">&#34;jess&#34;</span><span class="p">)</span>  
-</span></span><span class="line"><span class="cl"><span class="c1"># Function call with an argument</span></span></span></code></pre></div>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">username</span><span class="p">):</span>   <span class="c1"># Function with a parameter</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="s2">&#34;&#34;&#34;Prints a greeting message.&#34;&#34;&#34;</span>  
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Hello, </span><span class="si">{</span><span class="n">username</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="si">}</span><span class="s2">!&#34;</span><span class="p">)</span>  
+</span></span><span class="line"><span class="cl"><span class="o">...</span> 
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">greet</span><span class="p">(</span><span class="s2">&#34;jess&#34;</span><span class="p">)</span>  <span class="c1"># Function call with an argument</span>
+</span></span><span class="line"><span class="cl"><span class="n">Hello</span><span class="p">,</span> <span class="n">Jess</span><span class="err">!</span></span></span></code></pre></div>
   </figure>
 </div>
 <h3 id="function-components">Function Components:<a href="#function-components" class="anchor" aria-hidden="true">#</a> </h3>
@@ -2848,12 +2858,13 @@ The function body is indented (Whatever gets indented is the functions body).</p
     <span class="title"></span>
   </figcaption>
   <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Function with Multiple Parameters</span>
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Returns the sum of three numbers.&#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">result</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># Output: 10</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="s2">&#34;&#34;&#34;Returns the sum of three numbers.&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span> 
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  
+</span></span><span class="line"><span class="cl"><span class="mi">10</span></span></span></code></pre></div>
   </figure>
 </div>
 <hr>
@@ -2868,13 +2879,18 @@ The function body is indented (Whatever gets indented is the functions body).</p
     <span class="title"></span>
   </figcaption>
   <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Function with Default Argument</span>
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">to</span><span class="o">=</span><span class="s2">&#34;world&#34;</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Prints a greeting with a default name.&#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Hello,&#34;</span><span class="p">,</span> <span class="n">to</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">to</span><span class="o">=</span><span class="s2">&#34;world&#34;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="s2">&#34;&#34;&#34;Prints a greeting with a default name.&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Hello,&#34;</span><span class="p">,</span> <span class="n">to</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span> 
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">hello</span><span class="p">()</span>  
+</span></span><span class="line"><span class="cl"><span class="n">Hello</span><span class="p">,</span> <span class="n">world</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">hello</span><span class="p">()</span>  <span class="c1"># Output: Hello, world</span>
-</span></span><span class="line"><span class="cl"><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&#34;What&#39;s your name? &#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">hello</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>  <span class="c1"># Uses the user-provided name</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&#34;What&#39;s your name? &#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">What</span><span class="s1">&#39;s your name? : Alice</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">hello</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>  
+</span></span><span class="line"><span class="cl"><span class="n">Hello</span><span class="p">,</span> <span class="n">Alice</span></span></span></code></pre></div>
   </figure>
 </div>
 <p>Giving default value to the function like print had <code>sep=' '</code> and <code>end='\n'</code>.
@@ -2895,16 +2911,15 @@ If no value is provided default can run, if defined it gets replaced.</p>
     <span class="title"></span>
   </figcaption>
   <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Function that returns a formatted full name</span>
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">format_name</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">last</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Returns a formatted full name.&#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">full_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">first</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">last</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="si">}</span><span class="s2">&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">full_name</span>
-</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">format_name</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">last</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="s2">&#34;&#34;&#34;Returns a formatted full name.&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="n">full_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">first</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">last</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="k">return</span> <span class="n">full_name</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span> 
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">person</span> <span class="o">=</span> <span class="n">format_name</span><span class="p">(</span><span class="s2">&#34;michal&#34;</span><span class="p">,</span> <span class="s2">&#34;jackson&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># Call the function and store the returned value in a variable</span>
-</span></span><span class="line"><span class="cl"><span class="n">person</span> <span class="o">=</span> <span class="n">format_name</span><span class="p">(</span><span class="s2">&#34;michal&#34;</span><span class="p">,</span> <span class="s2">&#34;jackson&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Print the returned value</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="p">)</span>  <span class="c1"># Output: Michael Jackson</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="p">)</span>  
+</span></span><span class="line"><span class="cl"><span class="n">Michael</span> <span class="n">Jackson</span></span></span></code></pre></div>
   </figure>
 </div>
 <hr>
@@ -2919,18 +2934,18 @@ If no value is provided default can run, if defined it gets replaced.</p>
     <span class="title"></span>
   </figcaption>
   <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Function that returns multiple values</span>
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">calculate_area_and_perimeter</span><span class="p">(</span><span class="n">length</span><span class="p">,</span> <span class="n">width</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Returns both the area and perimeter of a rectangle.&#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">area</span> <span class="o">=</span> <span class="n">length</span> <span class="o">*</span> <span class="n">width</span>
-</span></span><span class="line"><span class="cl">    <span class="n">perimeter</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">length</span> <span class="o">+</span> <span class="n">width</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">area</span><span class="p">,</span> <span class="n">perimeter</span>  <span class="c1"># Returning multiple values as a tuple</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Call the function and unpack the returned tuple into separate variables</span>
-</span></span><span class="line"><span class="cl"><span class="n">area</span><span class="p">,</span> <span class="n">perimeter</span> <span class="o">=</span> <span class="n">calculate_area_and_perimeter</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Print the results</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Area:&#34;</span><span class="p">,</span> <span class="n">area</span><span class="p">)</span>          <span class="c1"># Output: Area: 15</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Perimeter:&#34;</span><span class="p">,</span> <span class="n">perimeter</span><span class="p">)</span>  <span class="c1"># Output: Perimeter: 16</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">calculate_area_and_perimeter</span><span class="p">(</span><span class="n">length</span><span class="p">,</span> <span class="n">width</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="s2">&#34;&#34;&#34;Returns both the area and perimeter of a rectangle.&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="n">area</span> <span class="o">=</span> <span class="n">length</span> <span class="o">*</span> <span class="n">width</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="n">perimeter</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">length</span> <span class="o">+</span> <span class="n">width</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="k">return</span> <span class="n">area</span><span class="p">,</span> <span class="n">perimeter</span>  <span class="c1"># Returning multiple values as a tuple</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span> 
+</span></span><span class="line"><span class="cl"><span class="o">...</span> <span class="c1"># Call the function and unpack the returned tuple into separate variables</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">area</span><span class="p">,</span> <span class="n">perimeter</span> <span class="o">=</span> <span class="n">calculate_area_and_perimeter</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Area:&#34;</span><span class="p">,</span> <span class="n">area</span><span class="p">)</span>  
+</span></span><span class="line"><span class="cl"><span class="n">Area</span><span class="p">:</span> <span class="mi">15</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Perimeter:&#34;</span><span class="p">,</span> <span class="n">perimeter</span><span class="p">)</span>  
+</span></span><span class="line"><span class="cl"><span class="n">Perimeter</span><span class="p">:</span> <span class="mi">16</span></span></span></code></pre></div>
   </figure>
 </div>
 <hr>
@@ -2945,12 +2960,14 @@ If no value is provided default can run, if defined it gets replaced.</p>
     <span class="title"></span>
   </figcaption>
   <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Function that performs an action without returning a value</span>
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">print_message</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Prints the given message but returns nothing.&#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">result</span> <span class="o">=</span> <span class="n">print_message</span><span class="p">(</span><span class="s2">&#34;Hello, World!&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># Output: None</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">print_message</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="s2">&#34;&#34;&#34;Prints the given message but returns nothing.&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span> 
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="n">print_message</span><span class="p">(</span><span class="s2">&#34;Hello, World!&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Hello</span><span class="p">,</span> <span class="n">World</span><span class="err">!</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  
+</span></span><span class="line"><span class="cl"><span class="kc">None</span></span></span></code></pre></div>
   </figure>
 </div>
 <hr>
@@ -2965,14 +2982,14 @@ If no value is provided default can run, if defined it gets replaced.</p>
     <span class="title"></span>
   </figcaption>
   <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Function returning a value</span>
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">add_numbers</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Returns the sum of two numbers.&#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Using the returned value directly in an expression</span>
-</span></span><span class="line"><span class="cl"><span class="n">result</span> <span class="o">=</span> <span class="n">add_numbers</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span>  
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># Output: 16</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">add_numbers</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="s2">&#34;&#34;&#34;Returns the sum of two numbers.&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span> 
+</span></span><span class="line"><span class="cl"><span class="o">...</span> <span class="c1"># Using the returned value directly in an expression</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="n">add_numbers</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span>  
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  
+</span></span><span class="line"><span class="cl"><span class="mi">16</span></span></span></code></pre></div>
   </figure>
 </div>
 <hr>
@@ -3001,14 +3018,14 @@ If no value is provided default can run, if defined it gets replaced.</p>
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="sa">f</span><span class="s2">&#34;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Assigning the function to a variable</span>
-</span></span><span class="line"><span class="cl"><span class="n">greeting_function</span> <span class="o">=</span> <span class="n">greet</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Calling the function using the variable</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">greeting_function</span><span class="p">(</span><span class="s2">&#34;Alice&#34;</span><span class="p">))</span>  <span class="c1"># Output: Hello, Alice!</span></span></span></code></pre></div>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="k">return</span> <span class="sa">f</span><span class="s2">&#34;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span> <span class="c1"># Assigning the function to a variable</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">greeting_function</span> <span class="o">=</span> <span class="n">greet</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="c1"># Calling the function using the variable</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">greeting_function</span><span class="p">(</span><span class="s2">&#34;Alice&#34;</span><span class="p">))</span>  
+</span></span><span class="line"><span class="cl"><span class="n">Hello</span><span class="p">,</span> <span class="n">Alice</span><span class="err">!</span></span></span></code></pre></div>
   </figure>
 </div>
 <h4 id="passing-functions-as-arguments"><strong>Passing Functions as Arguments</strong><a href="#passing-functions-as-arguments" class="anchor" aria-hidden="true">#</a> </h4>
@@ -3023,16 +3040,17 @@ If no value is provided default can run, if defined it gets replaced.</p>
     <span class="title"></span>
   </figcaption>
   <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Applying a function repeatedly</span>
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">res</span> <span class="o">=</span> <span class="n">x</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">res</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">apply</span><span class="p">(</span><span class="n">square</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>  <span class="c1"># Output: 625</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="n">res</span> <span class="o">=</span> <span class="n">x</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>         <span class="n">res</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="k">return</span> <span class="n">res</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span> 
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span> 
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">apply</span><span class="p">(</span><span class="n">square</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>  
+</span></span><span class="line"><span class="cl"><span class="mi">625</span></span></span></code></pre></div>
   </figure>
 </div>
 <p>Here, <code>square</code> is passed as <code>func</code> to <code>apply()</code>.</p>
@@ -3064,17 +3082,16 @@ If no value is provided default can run, if defined it gets replaced.</p>
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">multiplier</span><span class="p">(</span><span class="n">factor</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Returns a function that multiplies its argument by a given factor.&#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">multiply</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">factor</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">multiply</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Create a function that multiplies by 3</span>
-</span></span><span class="line"><span class="cl"><span class="n">times_three</span> <span class="o">=</span> <span class="n">multiplier</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Use the returned function</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">times_three</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>  <span class="c1"># Output: 15</span></span></span></code></pre></div>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">multiplier</span><span class="p">(</span><span class="n">factor</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="s2">&#34;&#34;&#34;Returns a function that multiplies its argument by a given factor.&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="k">def</span> <span class="nf">multiply</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>         <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">factor</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="k">return</span> <span class="n">multiply</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span> 
+</span></span><span class="line"><span class="cl"><span class="o">...</span> <span class="c1"># Create a function that multiplies by 3</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">times_three</span> <span class="o">=</span> <span class="n">multiplier</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">times_three</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>  
+</span></span><span class="line"><span class="cl"><span class="mi">15</span></span></span></code></pre></div>
   </figure>
 </div>
 <ul>
@@ -3092,10 +3109,11 @@ If no value is provided default can run, if defined it gets replaced.</p>
   <figcaption class="header">
     <span class="title"></span>
   </figcaption>
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">sort_function</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">cmp_fn</span><span class="o">=</span><span class="n">default_cmp_fn</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="o">...</span></span></span></code></pre></div>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">sort_function</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">cmp_fn</span><span class="o">=</span><span class="n">default_cmp_fn</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="k">pass</span></span></span></code></pre></div>
   </figure>
 </div>
+<hr>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				</div>

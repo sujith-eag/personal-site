@@ -16,7 +16,6 @@ seo:
 
 
 
-
 Python provides several built-in function decorators that can be used to enhance functionality. 
 
 Some of the commonly used **Python-provided function decorators**, along with examples and use cases:
@@ -27,21 +26,23 @@ Some of the commonly used **Python-provided function decorators**, along with ex
 - **Use Case:** Used when you need a method that belongs to the class, but does not access or modify the instance state.
 
 ```python
-class MyClass:
-	@staticmethod
-	def greet(name):
-		return f"Hello, {name}!"
-
-print(MyClass.greet("Alice"))  # Output: Hello, Alice!
+>>> class MyClass:
+...     @staticmethod
+...     def greet(name):
+...         return f"Hello, {name}!"
+>>> 
+>>> print(MyClass.greet("Alice"))
+Hello, Alice!
 ```
 
 ```python
-class MathUtility:
-	@staticmethod
-	def add(a, b):
-		return a + b
-
-print(MathUtility.add(5, 7))  # Output: 12
+>>> class MathUtility:
+...     @staticmethod
+...     def add(a, b):
+...         return a + b
+>>> 
+>>> print(MathUtility.add(5, 7))
+12
 ```
 
 
@@ -53,25 +54,28 @@ print(MathUtility.add(5, 7))  # Output: 12
 - **Use Case:** Useful for methods that need to operate on the class itself, rather than an instance.
 
 ```python
-class MyClass:
-	@classmethod
-	def class_info(cls):
-		return f"This is {cls.__name__} class."
-
-print(MyClass.class_info())  # Output: This is MyClass class.
+>>> class MyClass:
+...     @classmethod
+...     def class_info(cls):
+...         return f"This is {cls.__name__} class."
+>>> 
+>>> print(MyClass.class_info())
+This is MyClass class.
 ```
 
 ```python
-class MyClass:
-	count = 0
-	
-	@classmethod
-	def increment_count(cls):
-		cls.count += 1
-		return cls.count
-
-print(MyClass.increment_count())  # Output: 1
-print(MyClass.increment_count())  # Output: 2
+>>> class MyClass:
+...     count = 0
+...     
+...     @classmethod
+...     def increment_count(cls):
+...         cls.count += 1
+...         return cls.count
+>>> 
+>>> print(MyClass.increment_count())
+1
+>>> print(MyClass.increment_count())
+2
 ```
 
 
@@ -83,16 +87,17 @@ print(MyClass.increment_count())  # Output: 2
 - **Use Case:** Useful for defining read-only attributes or computing values on the fly.
 
 ```python
-class Circle:
-	def __init__(self, radius):
-		self._radius = radius
-	
-	@property
-	def area(self):
-		return 3.14 * (self._radius ** 2)
-	
-c = Circle(5)
-print(c.area)  # Output: 78.5 (accessed as an attribute)
+>>> class Circle:
+...     def __init__(self, radius):
+...         self._radius = radius
+...     
+...     @property
+...     def area(self):
+...         return 3.14 * (self._radius ** 2)
+>>> 
+>>> c = Circle(5)
+>>> print(c.area)  # (accessed as an attribute)
+78.5
 ```
 
 
@@ -104,15 +109,16 @@ print(c.area)  # Output: 78.5 (accessed as an attribute)
 - **Use Case:** Use it for functions that are called repeatedly with the same arguments, such as in recursive algorithms.
 
 ```python
-from functools import lru_cache
-
-@lru_cache(maxsize=None)  # No cache size limit
-def fibonacci(n):
-	if n <= 1:
-		return n
-	return fibonacci(n - 1) + fibonacci(n - 2)
-
-print(fibonacci(100))  # Fast calculation due to caching
+>>> from functools import lru_cache
+>>> 
+>>> @lru_cache(maxsize=None)  # No cache size limit
+... def fibonacci(n):
+...     if n <= 1:
+...         return n
+...     return fibonacci(n - 1) + fibonacci(n - 2)
+>>> 
+>>> print(fibonacci(100))  # Fast calculation due to caching
+354224848179261915075
 ```
 
 
@@ -124,24 +130,25 @@ print(fibonacci(100))  # Fast calculation due to caching
 - **Use Case:** Used to provide setter functionality for read-only properties.
 
 ```python
-class Circle:
-	def __init__(self, radius):
-		self._radius = radius
-	
-	@property
-	def radius(self):
-		return self._radius
-	
-	@radius.setter
-	def radius(self, value):
-		if value > 0:
-			self._radius = value
-		else:
-			raise ValueError("Radius must be positive")
-
-c = Circle(5)
-c.radius = 10  # Successfully sets the radius
-print(c.radius)  # Output: 10
+>>> class Circle:
+...     def __init__(self, radius):
+...         self._radius = radius
+...     
+...     @property
+...     def radius(self):
+...         return self._radius
+...     
+...     @radius.setter
+...     def radius(self, value):
+...         if value > 0:
+...             self._radius = value
+...         else:
+...             raise ValueError("Radius must be positive")
+>>> 
+>>> c = Circle(5)
+>>> c.radius = 10  # Successfully sets the radius
+>>> print(c.radius)
+10
 ```
 
 
@@ -153,22 +160,24 @@ print(c.radius)  # Output: 10
 - **Use Case:** Used when you write custom decorators to ensure the original function's name and docstring are not lost.
 
 ```python
-from functools import wraps
-
-def my_decorator(func):
-	@wraps(func)
-	def wrapper(*args, **kwargs):
-		print(f"Calling {func.__name__}")
-		return func(*args, **kwargs)
-	return wrapper
-
-@my_decorator
-def greet(name):
-	"""Greet a person."""
-	return f"Hello, {name}!"
-
-print(greet.__name__)  # Output: greet (not wrapper)
-print(greet.__doc__)   # Output: Greet a person (not the wrapper's docstring)
+>>> from functools import wraps
+>>> 
+>>> def my_decorator(func):
+...     @wraps(func)
+...     def wrapper(*args, **kwargs):
+...         print(f"Calling {func.__name__}")
+...         return func(*args, **kwargs)
+...     return wrapper
+>>> 
+>>> @my_decorator
+... def greet(name):
+...     """Greet a person."""
+...     return f"Hello, {name}!"
+>>> 
+>>> print(greet.__name__)  # (not wrapper)
+greet
+>>> print(greet.__doc__)   # Greet a person (not the wrapper's docstring)
+Greet a person
 ```
 
 
@@ -180,22 +189,26 @@ print(greet.__doc__)   # Output: Greet a person (not the wrapper's docstring)
 - **Use Case:** Used for method overloading, where the function behaves differently depending on the type of its first argument.
 
 ```python
-from functools import singledispatch
+>>> from functools import singledispatch
+>>> 
+>>> @singledispatch
+... def func(arg):
+...     print(f"Function for {type(arg)}: {arg}")
+>>> 
+>>> @func.register(int)
+... def _(arg):
+...     print(f"Function for int: {arg}")
+>>> 
+>>> @func.register(str)
+... def _(arg):
+...     print(f"Function for str: {arg}")
+>>> 
+>>> func(10)
+Function for int: 10
 
-@singledispatch
-def func(arg):
-	print(f"Function for {type(arg)}: {arg}")
+>>> func("hello")
+Function for str: hello
 
-@func.register(int)
-def _(arg):
-	print(f"Function for int: {arg}")
-
-@func.register(str)
-def _(arg):
-	print(f"Function for str: {arg}")
-
-func(10)  # Output: Function for int: 10
-func("hello")  # Output: Function for str: hello
 ```
 
 
@@ -207,20 +220,23 @@ func("hello")  # Output: Function for str: hello
 - **Use Case:** When you want to compute a property only once and cache its value for efficiency.
 
 ```python
-from functools import cached_property
-
-class Square:
-	def __init__(self, side):
-		self.side = side
-
-	@cached_property
-	def area(self):
-		print("Computing area...")
-		return self.side * self.side
-
-sq = Square(4)
-print(sq.area)  # Output: Computing area... 16
-print(sq.area)  # Output: 16 (cached, no "Computing area...")
+>>> from functools import cached_property
+>>> 
+>>> class Square:
+...     def __init__(self, side):
+...         self.side = side
+...     
+...     @cached_property
+...     def area(self):
+...         print("Computing area...")
+...         return self.side * self.side
+>>> 
+>>> sq = Square(4)
+>>> print(sq.area)
+Computing area...
+16
+>>> print(sq.area) # (cached, no "Computing area...")
+16
 ```
 
 

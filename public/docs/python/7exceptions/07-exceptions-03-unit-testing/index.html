@@ -157,15 +157,19 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-01-oop-concepts/">06 OOP - 01 OOP Concepts</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-01-introduction-to-oop-features/">06 OOP - 01 Introduction to OOP Features</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-02-classes/">06 OOP - 02 Classes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-02-creating-class-and-instance-variables/">06 OOP - 02 Creating Class and Instance Variables</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-03-class-attributes/">06 OOP - 03 Class Attributes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-03-types-of-methods/">06 OOP - 03 Types of Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/6oop/06-oop-04-changing-attriute-and-using-class/">06 OOP - 04 Changing Attriute and Using Class</a>
   </li>
       </ul>
     </details>
@@ -1545,15 +1549,19 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-01-oop-concepts/">06 OOP - 01 OOP Concepts</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-01-introduction-to-oop-features/">06 OOP - 01 Introduction to OOP Features</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-02-classes/">06 OOP - 02 Classes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-02-creating-class-and-instance-variables/">06 OOP - 02 Creating Class and Instance Variables</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-03-class-attributes/">06 OOP - 03 Class Attributes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-03-types-of-methods/">06 OOP - 03 Types of Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/6oop/06-oop-04-changing-attriute-and-using-class/">06 OOP - 04 Changing Attriute and Using Class</a>
   </li>
       </ul>
     </details>
@@ -2697,9 +2705,9 @@
   <h3>On this page</h3>
     <nav id="toc">
   <ul>
-    <li><a href="#1-basic-unit-test-using-assert"><strong>1. Basic Unit Test Using <code>assert</code></strong></a>
+    <li><a href="#1-basic-unit-test-using"><strong>1. Basic Unit Test Using <code>assert</code></strong></a>
       <ul>
-        <li><a href="#example-1-testing-a-simple-function-with-assert"><strong>Example 1: Testing a Simple Function with <code>assert</code></strong></a>
+        <li><a href="#example-1-testing-a-simple-function-with"><strong>Example 1: Testing a Simple Function with <code>assert</code></strong></a>
           <ul>
             <li><a href="#function-to-be-tested"><strong>Function to be tested</strong>:</a></li>
             <li><a href="#unit-test-code"><strong>Unit Test Code</strong>:</a></li>
@@ -2709,17 +2717,17 @@
         <li><a href="#outcome"><strong>Outcome</strong>:</a></li>
       </ul>
     </li>
-    <li><a href="#2-handling-errors-using-try-except"><strong>2. Handling Errors Using <code>try-except</code></strong></a>
+    <li><a href="#2-handling-errors-using"><strong>2. Handling Errors Using <code>try-except</code></strong></a>
       <ul>
-        <li><a href="#example-2-handling-assertion-errors-with-try-except"><strong>Example 2: Handling Assertion Errors with <code>try-except</code></strong></a></li>
+        <li><a href="#example-2-handling-assertion-errors-with"><strong>Example 2: Handling Assertion Errors with <code>try-except</code></strong></a></li>
         <li><a href="#explanation-1"><strong>Explanation</strong>:</a></li>
         <li><a href="#outcome-1"><strong>Outcome</strong>:</a></li>
       </ul>
     </li>
-    <li><a href="#3-using-pytest-for-automated-testing"><strong>3. Using <code>pytest</code> for Automated Testing</strong></a>
+    <li><a href="#3-using"><strong>3. Using <code>pytest</code> for Automated Testing</strong></a>
       <ul>
-        <li><a href="#installing-pytest"><strong>Installing <code>pytest</code></strong>:</a></li>
-        <li><a href="#example-3-testing-with-pytest"><strong>Example 3: Testing with <code>pytest</code></strong></a></li>
+        <li><a href="#installing-"><strong>Installing <code>pytest</code></strong>:</a></li>
+        <li><a href="#example-3-testing-with"><strong>Example 3: Testing with <code>pytest</code></strong></a></li>
         <li><a href="#running-the-test"><strong>Running the Test</strong>:</a></li>
         <li><a href="#explanation-2"><strong>Explanation</strong>:</a></li>
         <li><a href="#outcome-2"><strong>Outcome</strong>:</a></li>
@@ -2733,7 +2741,7 @@
             <li><a href="#after"><strong>After</strong>:</a></li>
           </ul>
         </li>
-        <li><a href="#example-5-testing-the-new-version-of-hello"><strong>Example 5: Testing the New Version of <code>hello()</code></strong></a></li>
+        <li><a href="#example-5-testing-the-new-version-of"><strong>Example 5: Testing the New Version of <code>hello()</code></strong></a></li>
         <li><a href="#explanation-3"><strong>Explanation</strong>:</a></li>
       </ul>
     </li>
@@ -2762,9 +2770,9 @@
     <div class="page-links">
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#1-basic-unit-test-using-assert"><strong>1. Basic Unit Test Using <code>assert</code></strong></a>
+    <li><a href="#1-basic-unit-test-using"><strong>1. Basic Unit Test Using <code>assert</code></strong></a>
       <ul>
-        <li><a href="#example-1-testing-a-simple-function-with-assert"><strong>Example 1: Testing a Simple Function with <code>assert</code></strong></a>
+        <li><a href="#example-1-testing-a-simple-function-with"><strong>Example 1: Testing a Simple Function with <code>assert</code></strong></a>
           <ul>
             <li><a href="#function-to-be-tested"><strong>Function to be tested</strong>:</a></li>
             <li><a href="#unit-test-code"><strong>Unit Test Code</strong>:</a></li>
@@ -2774,17 +2782,17 @@
         <li><a href="#outcome"><strong>Outcome</strong>:</a></li>
       </ul>
     </li>
-    <li><a href="#2-handling-errors-using-try-except"><strong>2. Handling Errors Using <code>try-except</code></strong></a>
+    <li><a href="#2-handling-errors-using"><strong>2. Handling Errors Using <code>try-except</code></strong></a>
       <ul>
-        <li><a href="#example-2-handling-assertion-errors-with-try-except"><strong>Example 2: Handling Assertion Errors with <code>try-except</code></strong></a></li>
+        <li><a href="#example-2-handling-assertion-errors-with"><strong>Example 2: Handling Assertion Errors with <code>try-except</code></strong></a></li>
         <li><a href="#explanation-1"><strong>Explanation</strong>:</a></li>
         <li><a href="#outcome-1"><strong>Outcome</strong>:</a></li>
       </ul>
     </li>
-    <li><a href="#3-using-pytest-for-automated-testing"><strong>3. Using <code>pytest</code> for Automated Testing</strong></a>
+    <li><a href="#3-using"><strong>3. Using <code>pytest</code> for Automated Testing</strong></a>
       <ul>
-        <li><a href="#installing-pytest"><strong>Installing <code>pytest</code></strong>:</a></li>
-        <li><a href="#example-3-testing-with-pytest"><strong>Example 3: Testing with <code>pytest</code></strong></a></li>
+        <li><a href="#installing-"><strong>Installing <code>pytest</code></strong>:</a></li>
+        <li><a href="#example-3-testing-with"><strong>Example 3: Testing with <code>pytest</code></strong></a></li>
         <li><a href="#running-the-test"><strong>Running the Test</strong>:</a></li>
         <li><a href="#explanation-2"><strong>Explanation</strong>:</a></li>
         <li><a href="#outcome-2"><strong>Outcome</strong>:</a></li>
@@ -2798,7 +2806,7 @@
             <li><a href="#after"><strong>After</strong>:</a></li>
           </ul>
         </li>
-        <li><a href="#example-5-testing-the-new-version-of-hello"><strong>Example 5: Testing the New Version of <code>hello()</code></strong></a></li>
+        <li><a href="#example-5-testing-the-new-version-of"><strong>Example 5: Testing the New Version of <code>hello()</code></strong></a></li>
         <li><a href="#explanation-3"><strong>Explanation</strong>:</a></li>
       </ul>
     </li>
@@ -2821,9 +2829,9 @@
 			<p>Unit testing is a software testing technique where individual units or components of a program are tested in isolation. The goal is to ensure that each function or module works as expected. Unit testing helps catch errors early, provides better documentation, and ensures that the code continues to work correctly as it evolves.</p>
 <p>Python provides several ways to perform unit testing. Here, we will focus on the <code>assert</code> keyword, manual error handling, and the powerful testing framework <code>pytest</code>.</p>
 <hr>
-<h2 id="1-basic-unit-test-using-assert"><strong>1. Basic Unit Test Using <code>assert</code></strong><a href="#1-basic-unit-test-using-assert" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="1-basic-unit-test-using"><strong>1. Basic Unit Test Using <code>assert</code></strong><a href="#1-basic-unit-test-using" class="anchor" aria-hidden="true">#</a> </h2>
 <p>The <code>assert</code> keyword is used to verify that an expression evaluates to <code>True</code>. If the expression is <code>False</code>, an <code>AssertionError</code> is raised. This is a simple way to test the correctness of your code.</p>
-<h3 id="example-1-testing-a-simple-function-with-assert"><strong>Example 1: Testing a Simple Function with <code>assert</code></strong><a href="#example-1-testing-a-simple-function-with-assert" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="example-1-testing-a-simple-function-with"><strong>Example 1: Testing a Simple Function with <code>assert</code></strong><a href="#example-1-testing-a-simple-function-with" class="anchor" aria-hidden="true">#</a> </h3>
 <p>Let&rsquo;s say we have a function <code>square(x)</code> that returns the square of a number.</p>
 <h4 id="function-to-be-tested"><strong>Function to be tested</strong>:<a href="#function-to-be-tested" class="anchor" aria-hidden="true">#</a> </h4>
 
@@ -2873,9 +2881,9 @@
 <li>If any assertion fails, an <code>AssertionError</code> will occur, and the test will be marked as failed.</li>
 </ul>
 <hr>
-<h2 id="2-handling-errors-using-try-except"><strong>2. Handling Errors Using <code>try-except</code></strong><a href="#2-handling-errors-using-try-except" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="2-handling-errors-using"><strong>2. Handling Errors Using <code>try-except</code></strong><a href="#2-handling-errors-using" class="anchor" aria-hidden="true">#</a> </h2>
 <p>While <code>assert</code> is simple and effective for basic testing, you might want to handle errors more explicitly. You can do this using <code>try-except</code> blocks.</p>
-<h3 id="example-2-handling-assertion-errors-with-try-except"><strong>Example 2: Handling Assertion Errors with <code>try-except</code></strong><a href="#example-2-handling-assertion-errors-with-try-except" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="example-2-handling-assertion-errors-with"><strong>Example 2: Handling Assertion Errors with <code>try-except</code></strong><a href="#example-2-handling-assertion-errors-with" class="anchor" aria-hidden="true">#</a> </h3>
 
 
 
@@ -2914,9 +2922,9 @@
 <li>This method gives you more control over the output, but it’s more verbose and less automated than using <code>assert</code> alone.</li>
 </ul>
 <hr>
-<h2 id="3-using-pytest-for-automated-testing"><strong>3. Using <code>pytest</code> for Automated Testing</strong><a href="#3-using-pytest-for-automated-testing" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="3-using"><strong>3. Using <code>pytest</code> for Automated Testing</strong><a href="#3-using" class="anchor" aria-hidden="true">#</a> </h2>
 <p><code>pytest</code> is a popular testing framework in Python that can be used to write more sophisticated tests. It handles error reporting, test isolation, and much more.</p>
-<h3 id="installing-pytest"><strong>Installing <code>pytest</code></strong>:<a href="#installing-pytest" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="installing-"><strong>Installing <code>pytest</code></strong>:<a href="#installing-" class="anchor" aria-hidden="true">#</a> </h3>
 <p>To use <code>pytest</code>, install it using pip:</p>
 
 
@@ -2929,7 +2937,7 @@
   <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pip install pytest</span></span></code></pre></div>
   </figure>
 </div>
-<h3 id="example-3-testing-with-pytest"><strong>Example 3: Testing with <code>pytest</code></strong><a href="#example-3-testing-with-pytest" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="example-3-testing-with"><strong>Example 3: Testing with <code>pytest</code></strong><a href="#example-3-testing-with" class="anchor" aria-hidden="true">#</a> </h3>
 
 
 
@@ -3012,7 +3020,7 @@
   </figure>
 </div>
 <p>Now, the <code>hello()</code> function returns the string, which makes it easy to test.</p>
-<h3 id="example-5-testing-the-new-version-of-hello"><strong>Example 5: Testing the New Version of <code>hello()</code></strong><a href="#example-5-testing-the-new-version-of-hello" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="example-5-testing-the-new-version-of"><strong>Example 5: Testing the New Version of <code>hello()</code></strong><a href="#example-5-testing-the-new-version-of" class="anchor" aria-hidden="true">#</a> </h3>
 
 
 

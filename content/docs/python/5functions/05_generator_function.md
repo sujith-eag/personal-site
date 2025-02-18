@@ -16,7 +16,6 @@ seo:
 
 
 
-
 A **generator** is a special type of function in Python that allows you to iterate over a sequence of values lazily, meaning values are produced one at a time as needed, rather than all at once. This makes generators a memory-efficient way of dealing with large datasets or sequences.
 
 Generators are written just like regular functions, but instead of using a `return` statement, they use the `yield` statement to return values one at a time. Each time `yield` is called, the function's state is saved, and the function's execution can be resumed later from where it left off.

@@ -19,9 +19,20 @@ seo:
 
 In Python, you can organize your code into separate modules for better structure, reusability, and easier sharing between different programs.
 
-### **What is a Module?**
+### **Module**
 
 A module is a `.py` file containing Python code (usually functions or classes) that can be imported and used in other scripts.
+
+```python
+>>> # my_module.py
+>>> def hello(name):
+...     """Prints a greeting to the user."""
+...     print(f"Hello, {name}!")
+... 
+>>> def goodbye(name):
+...     """Prints a goodbye message to the user."""
+...     print(f"Goodbye, {name}!")
+```
 
 ---
 
@@ -30,21 +41,28 @@ A module is a `.py` file containing Python code (usually functions or classes) t
 To use functions from a module, you first need to import it:
 
 ```python
-# pizza.py
-def make_pizza(size, *toppings):
-    print(f"\nMaking a {size}-inch pizza with the following toppings:")
-    for topping in toppings:
-        print(f"- {topping}")
+>>> # pizza.py
+>>> def make_pizza(size, *toppings):
+...    print(f"\nMaking a {size}-inch pizza with the following toppings:")
+...    for topping in toppings:
+...        print(f"- {topping}")
 ```
 
 You can then import and use the functions like so:
 
 ```python
-# making_pizzas.py
-import pizza
+>>> # making_pizzas.py
+>>> import pizza
+>>> pizza.make_pizza(16, 'pepperoni')
+Making a 16-inch pizza with the following toppings:
+- pepperoni
 
-pizza.make_pizza(16, 'pepperoni')
-pizza.make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
+>>> pizza.make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
+Making a 12-inch pizza with the following toppings:
+- mushrooms
+- green peppers
+- extra cheese
+
 ```
 
 ---
@@ -54,10 +72,17 @@ pizza.make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
 Instead of importing the entire module, you can import specific functions directly:
 
 ```python
-from pizza import make_pizza
+>>> from pizza import make_pizza
 
-make_pizza(16, 'pepperoni')
-make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
+>>> make_pizza(16, 'pepperoni')
+Making a 16-inch pizza with the following toppings:
+- pepperoni
+
+>>> make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
+Making a 12-inch pizza with the following toppings:
+- mushrooms
+- green peppers
+- extra cheese
 ```
 
 This allows you to call the function directly without needing to reference the module. The Syntax will be
@@ -72,18 +97,27 @@ from module_name import function_0, function_1, function_2
 If a function name is too long or conflicts with another function, you can give it a shorter alias using `as` keyword:
 
 ```python
-from pizza import make_pizza as mp
+>>> from pizza import make_pizza as mp
 
-mp(16, 'pepperoni')
-mp(12, 'mushrooms', 'green peppers', 'extra cheese')
+>>> mp(16, 'pepperoni')
+Making a 16-inch pizza with the following toppings:
+- pepperoni
+
+>>> mp(12, 'mushrooms', 'green peppers', 'extra cheese')
+Making a 12-inch pizza with the following toppings:
+- mushrooms
+- green peppers
+- extra cheese
 ```
 
 You can also assign an alias to the entire module for convenience:
 
 ```python
-import pizza as p
+>>> import pizza as p
 
-p.make_pizza(16, 'pepperoni')
+>>> p.make_pizza(16, 'pepperoni')
+Making a 16-inch pizza with the following toppings:
+- pepperoni
 ```
 
 General syntax for aliasing:
@@ -101,9 +135,18 @@ import module_name as mn
 You can import all functions from a module using the `*` wildcard:
 
 ```python
-from pizza import *
+>>> from pizza import *
 
-make_pizza(16, 'pepperoni')
+>>> make_pizza(16, 'pepperoni')
+Making a 16-inch pizza with the following toppings:
+- pepperoni
+
+>>> make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
+Making a 12-inch pizza with the following toppings:
+- mushrooms
+- green peppers
+- extra cheese
+
 ```
 
 However, this is not recommended for larger modules as it can lead to name conflicts, and it can make it harder to track where a function is coming from. 
@@ -125,14 +168,15 @@ A module is simply a Python file that contains functions, variables, and classes
 To create a module, write your Python functions or classes in a separate file. For example, let's create a file named `my_module.py` that contains two simple functions:
 
 ```python
-# my_module.py
-def hello(name):
-    """Prints a greeting to the user."""
-    print(f"Hello, {name}!")
+>>> # my_module.py
+>>> def hello(name):
+...     """Prints a greeting to the user."""
+...     print(f"Hello, {name}!")
+... 
+>>> def goodbye(name):
+...     """Prints a goodbye message to the user."""
+...     print(f"Goodbye, {name}!")
 
-def goodbye(name):
-    """Prints a goodbye message to the user."""
-    print(f"Goodbye, {name}!")
 ```
 
 #### **2. Importing and Using the Module**
@@ -140,15 +184,18 @@ def goodbye(name):
 Once you’ve created a module, you can import its functions into other Python scripts. Below is an example of how you can use the `hello` and `goodbye` functions in another script, say `main.py`:
 
 ```python
-# main.py
-from my_module import hello, goodbye  # Import specific functions from my_module
-
-def main():
-    hello("world")   # Calls the hello function
-    goodbye("world") # Calls the goodbye function
-
-if __name__ == "__main__":
-    main()
+>>> # main.py
+>>> from my_module import hello, goodbye  
+>>> # Import specific functions from my_module
+>>> 
+>>> def main():
+...     hello("world")   # Calls the hello function
+...     goodbye("world") # Calls the goodbye function
+... 
+>>> if __name__ == "__main__":
+...     main()
+Hello, world!
+Goodbye, world!
 ```
 
 The `if __name__ == "__main__":` block ensures that the `main()` function runs only when `main.py` is executed directly, not when it is imported as a module elsewhere.
@@ -177,18 +224,18 @@ The most common use of `__name__` is the `if __name__ == "__main__":` condition.
 #### **Example: Preventing Code Execution on Import**
 
 ```python
-# main.py
-def hello(name):
-    """Print a greeting message."""
-    print(f"Hello, {name}!")
-
-def main():
-    """Main function that runs when script is executed directly."""
-    hello("world")
-
-# Code under this block runs only if the script is executed directly
-if __name__ == "__main__":
-    main()  # Runs only if the script is executed directly
+>>> # main.py
+>>> def hello(name):
+...     """Print a greeting message."""
+...     print(f"Hello, {name}!")
+... 
+>>> def main():
+...     """Main function that runs when script is executed directly."""
+...     hello("world")
+... 
+>>> if __name__ == "__main__":
+...     main()  # Runs only if the script is executed directly
+Hello, world!
 ```
 
 - If `main.py` is executed directly (`python main.py`), the `main()` function will run and call `hello("world")`.
@@ -216,28 +263,18 @@ Python's `sys.argv` to pass command-line arguments to your script. This feature 
 #### **Example: Accepting Command-Line Arguments**
 
 ```python
-import sys
-from my_module import hello
-
-if len(sys.argv) == 2:  # Check if one argument (besides the script name) is passed
-    hello(sys.argv[1])  # Pass the argument to the hello function
+>>> import sys
+>>> from my_module import hello
+>>> 
+>>> if len(sys.argv) == 2:  # Check if one argument (besides the script name) is passed
+...     hello(sys.argv[1])  # Pass the argument to the hello function
+... 
+>>> # Running the script from the command line:
+>>> # python main.py John
+>>> Hello, John!
 ```
 
 - `sys.argv` is a list where the first element (`sys.argv[0]`) is the script name, and subsequent elements are the arguments passed.
 - The script checks if exactly one argument is provided and passes it to the `hello` function.
-
-#### **Running the Script**
-
-You can run the script from the command line as follows:
-
-```bash
-python main.py John
-```
-
-This will output:
-
-```
-Hello, John!
-```
 
 If no argument is passed or there are more than one, the script won't run the `hello` function.

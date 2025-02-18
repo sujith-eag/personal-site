@@ -157,15 +157,19 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-01-oop-concepts/">06 OOP - 01 OOP Concepts</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-01-introduction-to-oop-features/">06 OOP - 01 Introduction to OOP Features</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-02-classes/">06 OOP - 02 Classes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-02-creating-class-and-instance-variables/">06 OOP - 02 Creating Class and Instance Variables</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-03-class-attributes/">06 OOP - 03 Class Attributes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-03-types-of-methods/">06 OOP - 03 Types of Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/6oop/06-oop-04-changing-attriute-and-using-class/">06 OOP - 04 Changing Attriute and Using Class</a>
   </li>
       </ul>
     </details>
@@ -1545,15 +1549,19 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-01-oop-concepts/">06 OOP - 01 OOP Concepts</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-01-introduction-to-oop-features/">06 OOP - 01 Introduction to OOP Features</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-02-classes/">06 OOP - 02 Classes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-02-creating-class-and-instance-variables/">06 OOP - 02 Creating Class and Instance Variables</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-03-class-attributes/">06 OOP - 03 Class Attributes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-03-types-of-methods/">06 OOP - 03 Types of Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/6oop/06-oop-04-changing-attriute-and-using-class/">06 OOP - 04 Changing Attriute and Using Class</a>
   </li>
       </ul>
     </details>
@@ -2697,13 +2705,13 @@
   <h3>On this page</h3>
     <nav id="toc">
   <ul>
-    <li><a href="#1-working-with-a-files-contents"><strong>1. Working with a File&rsquo;s Contents</strong></a>
+    <li><a href="#1-working-with-a-file"><strong>1. Working with a File&rsquo;s Contents</strong></a>
       <ul>
         <li><a href="#reading-file-content"><strong>Reading File Content</strong></a></li>
         <li><a href="#handling-numbers-in-a-file"><strong>Handling Numbers in a File</strong></a></li>
       </ul>
     </li>
-    <li><a href="#2-string-manipulation-with-replace"><strong>2. String Manipulation with <code>replace()</code></strong></a>
+    <li><a href="#2-string-manipulation-with"><strong>2. String Manipulation with <code>replace()</code></strong></a>
       <ul>
         <li><a href="#example-replacing-words-in-a-string"><strong>Example: Replacing Words in a String</strong></a></li>
       </ul>
@@ -2717,7 +2725,7 @@
     <li><a href="#4-handling-exceptions"><strong>4. Handling Exceptions</strong></a>
       <ul>
         <li><a href="#basic-exception-handling-example"><strong>Basic Exception Handling Example</strong></a></li>
-        <li><a href="#general-rule-for-try-except-and-else"><strong>General Rule for <code>try</code>, <code>except</code>, and <code>else</code>:</strong></a></li>
+        <li><a href="#general-rule-for"><strong>General Rule for <code>try</code>, <code>except</code>, and <code>else</code>:</strong></a></li>
       </ul>
     </li>
     <li><a href="#5-analyzing-text-files"><strong>5. Analyzing Text Files</strong></a>
@@ -2754,13 +2762,13 @@
     <div class="page-links">
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#1-working-with-a-files-contents"><strong>1. Working with a File&rsquo;s Contents</strong></a>
+    <li><a href="#1-working-with-a-file"><strong>1. Working with a File&rsquo;s Contents</strong></a>
       <ul>
         <li><a href="#reading-file-content"><strong>Reading File Content</strong></a></li>
         <li><a href="#handling-numbers-in-a-file"><strong>Handling Numbers in a File</strong></a></li>
       </ul>
     </li>
-    <li><a href="#2-string-manipulation-with-replace"><strong>2. String Manipulation with <code>replace()</code></strong></a>
+    <li><a href="#2-string-manipulation-with"><strong>2. String Manipulation with <code>replace()</code></strong></a>
       <ul>
         <li><a href="#example-replacing-words-in-a-string"><strong>Example: Replacing Words in a String</strong></a></li>
       </ul>
@@ -2774,7 +2782,7 @@
     <li><a href="#4-handling-exceptions"><strong>4. Handling Exceptions</strong></a>
       <ul>
         <li><a href="#basic-exception-handling-example"><strong>Basic Exception Handling Example</strong></a></li>
-        <li><a href="#general-rule-for-try-except-and-else"><strong>General Rule for <code>try</code>, <code>except</code>, and <code>else</code>:</strong></a></li>
+        <li><a href="#general-rule-for"><strong>General Rule for <code>try</code>, <code>except</code>, and <code>else</code>:</strong></a></li>
       </ul>
     </li>
     <li><a href="#5-analyzing-text-files"><strong>5. Analyzing Text Files</strong></a>
@@ -2804,7 +2812,7 @@
 			</nav>
 			<p>Python offers powerful tools for working with files, for reading from them, writing to them, processing their contents, handling exceptions, analyzing text, and working with multiple files.</p>
 <hr>
-<h2 id="1-working-with-a-files-contents"><strong>1. Working with a File&rsquo;s Contents</strong><a href="#1-working-with-a-files-contents" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="1-working-with-a-file"><strong>1. Working with a File&rsquo;s Contents</strong><a href="#1-working-with-a-file" class="anchor" aria-hidden="true">#</a> </h2>
 <p>When Python reads from a text file, it interprets everything in the file as a string. If you’re reading numbers and need to work with them numerically, you must convert them to integers or floats using the <code>int()</code> or <code>float()</code> functions, respectively.</p>
 <h3 id="reading-file-content"><strong>Reading File Content</strong><a href="#reading-file-content" class="anchor" aria-hidden="true">#</a> </h3>
 
@@ -2854,7 +2862,7 @@
 </div>
 <p>If the file contains numbers and you need them in a numeric context, convert them with <code>int()</code> or <code>float()</code>.</p>
 <hr>
-<h2 id="2-string-manipulation-with-replace"><strong>2. String Manipulation with <code>replace()</code></strong><a href="#2-string-manipulation-with-replace" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="2-string-manipulation-with"><strong>2. String Manipulation with <code>replace()</code></strong><a href="#2-string-manipulation-with" class="anchor" aria-hidden="true">#</a> </h2>
 <p>You can manipulate strings by replacing parts of the text using the <code>replace()</code> method.</p>
 <h3 id="example-replacing-words-in-a-string"><strong>Example: Replacing Words in a String</strong><a href="#example-replacing-words-in-a-string" class="anchor" aria-hidden="true">#</a> </h3>
 
@@ -2945,7 +2953,7 @@
 <li><strong><code>except</code> block</strong>: Catches specific exceptions (e.g., <code>ZeroDivisionError</code> or <code>ValueError</code>) and handles them gracefully.</li>
 <li><strong><code>else</code> block</strong>: Executes if no exceptions are raised.</li>
 </ul>
-<h3 id="general-rule-for-try-except-and-else"><strong>General Rule for <code>try</code>, <code>except</code>, and <code>else</code>:</strong><a href="#general-rule-for-try-except-and-else" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="general-rule-for"><strong>General Rule for <code>try</code>, <code>except</code>, and <code>else</code>:</strong><a href="#general-rule-for" class="anchor" aria-hidden="true">#</a> </h3>
 <ul>
 <li>Only include code in the <code>try</code> block that might raise an exception.</li>
 <li>Use the <code>else</code> block for code that should run if no exceptions occur.</li>

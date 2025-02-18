@@ -157,15 +157,19 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-01-oop-concepts/">06 OOP - 01 OOP Concepts</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-01-introduction-to-oop-features/">06 OOP - 01 Introduction to OOP Features</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-02-classes/">06 OOP - 02 Classes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-02-creating-class-and-instance-variables/">06 OOP - 02 Creating Class and Instance Variables</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-03-class-attributes/">06 OOP - 03 Class Attributes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-03-types-of-methods/">06 OOP - 03 Types of Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/6oop/06-oop-04-changing-attriute-and-using-class/">06 OOP - 04 Changing Attriute and Using Class</a>
   </li>
       </ul>
     </details>
@@ -1545,15 +1549,19 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-01-oop-concepts/">06 OOP - 01 OOP Concepts</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-01-introduction-to-oop-features/">06 OOP - 01 Introduction to OOP Features</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-02-classes/">06 OOP - 02 Classes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-02-creating-class-and-instance-variables/">06 OOP - 02 Creating Class and Instance Variables</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-03-class-attributes/">06 OOP - 03 Class Attributes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-03-types-of-methods/">06 OOP - 03 Types of Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/6oop/06-oop-04-changing-attriute-and-using-class/">06 OOP - 04 Changing Attriute and Using Class</a>
   </li>
       </ul>
     </details>
@@ -2697,9 +2705,9 @@
   <h3>On this page</h3>
     <nav id="toc">
   <ul>
-    <li><a href="#iterablehttpsjavascriptinfoiterable"><a href="https://javascript.info/iterable"><strong>Iterable</strong></a></a>
+    <li><a href="#iterable"><a href="https://javascript.info/iterable"><strong>Iterable</strong></a></a>
       <ul>
-        <li><a href="#symboliterator-method"><strong><code>Symbol.iterator</code> Method</strong></a></li>
+        <li><a href="#symboliterator"><strong><code>Symbol.iterator</code> Method</strong></a></li>
       </ul>
     </li>
     <li><a href="#string-is-iterable"><strong>String is Iterable</strong></a>
@@ -2708,10 +2716,10 @@
       </ul>
     </li>
     <li><a href="#array-like-objects"><strong>Array-like Objects</strong></a></li>
-    <li><a href="#arrayfrom-method"><strong><code>Array.from</code> Method</strong></a>
+    <li><a href="#arrayfrom"><strong><code>Array.from</code> Method</strong></a>
       <ul>
-        <li><a href="#using-mapfn-with-arrayfrom"><strong>Using <code>mapFn</code> with <code>Array.from</code></strong></a></li>
-        <li><a href="#syntax-of-arrayfrom"><strong>Syntax of <code>Array.from</code>:</strong></a></li>
+        <li><a href="#using"><strong>Using <code>mapFn</code> with <code>Array.from</code></strong></a></li>
+        <li><a href="#syntax-of"><strong>Syntax of <code>Array.from</code>:</strong></a></li>
       </ul>
     </li>
     <li><a href="#summary"><strong>Summary</strong></a></li>
@@ -2730,9 +2738,9 @@
     <div class="page-links">
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#iterablehttpsjavascriptinfoiterable"><a href="https://javascript.info/iterable"><strong>Iterable</strong></a></a>
+    <li><a href="#iterable"><a href="https://javascript.info/iterable"><strong>Iterable</strong></a></a>
       <ul>
-        <li><a href="#symboliterator-method"><strong><code>Symbol.iterator</code> Method</strong></a></li>
+        <li><a href="#symboliterator"><strong><code>Symbol.iterator</code> Method</strong></a></li>
       </ul>
     </li>
     <li><a href="#string-is-iterable"><strong>String is Iterable</strong></a>
@@ -2741,10 +2749,10 @@
       </ul>
     </li>
     <li><a href="#array-like-objects"><strong>Array-like Objects</strong></a></li>
-    <li><a href="#arrayfrom-method"><strong><code>Array.from</code> Method</strong></a>
+    <li><a href="#arrayfrom"><strong><code>Array.from</code> Method</strong></a>
       <ul>
-        <li><a href="#using-mapfn-with-arrayfrom"><strong>Using <code>mapFn</code> with <code>Array.from</code></strong></a></li>
-        <li><a href="#syntax-of-arrayfrom"><strong>Syntax of <code>Array.from</code>:</strong></a></li>
+        <li><a href="#using"><strong>Using <code>mapFn</code> with <code>Array.from</code></strong></a></li>
+        <li><a href="#syntax-of"><strong>Syntax of <code>Array.from</code>:</strong></a></li>
       </ul>
     </li>
     <li><a href="#summary"><strong>Summary</strong></a></li>
@@ -2754,13 +2762,13 @@
   </details>
 
 			</nav>
-			<h2 id="iterablehttpsjavascriptinfoiterable"><a href="https://javascript.info/iterable"><strong>Iterable</strong></a><a href="#iterablehttpsjavascriptinfoiterable" class="anchor" aria-hidden="true">#</a> </h2>
+			<h2 id="iterable"><a href="https://javascript.info/iterable"><strong>Iterable</strong></a><a href="#iterable" class="anchor" aria-hidden="true">#</a> </h2>
 <p>Objects that can be used in <code>for..of</code> are called <em>iterable</em>.
 To be considered iterable, an object must implement the method <code>Symbol.iterator</code>, which returns an <strong>iterator</strong>.</p>
 <ul>
 <li><strong>Example:</strong> Arrays, Strings, Maps, Sets, and even custom objects that implement <code>Symbol.iterator</code>.</li>
 </ul>
-<h3 id="symboliterator-method"><strong><code>Symbol.iterator</code> Method</strong><a href="#symboliterator-method" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="symboliterator"><strong><code>Symbol.iterator</code> Method</strong><a href="#symboliterator" class="anchor" aria-hidden="true">#</a> </h3>
 <p>The <code>Symbol.iterator</code> method is a built-in symbol in JavaScript that returns an <strong>iterator</strong> object. This iterator object must have a method called <code>next()</code>, which provides the logic for iteration.</p>
 <ul>
 <li>The <code>next()</code> method returns an object with two properties:
@@ -2867,7 +2875,7 @@ To be considered iterable, an object must implement the method <code>Symbol.iter
 </div>
 <p>Although <code>arrayLike</code> looks like an array (because it has a <code>length</code> and indexed properties), it’s not a real array, so you can&rsquo;t call array methods like <code>.pop()</code> or <code>.push()</code> on it directly.</p>
 <hr>
-<h2 id="arrayfrom-method"><strong><code>Array.from</code> Method</strong><a href="#arrayfrom-method" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="arrayfrom"><strong><code>Array.from</code> Method</strong><a href="#arrayfrom" class="anchor" aria-hidden="true">#</a> </h2>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from">Array.from</a> is a <strong>universal method</strong> that allows you to convert an iterable or array-like object into a proper JavaScript <code>Array</code>. After conversion, the resulting array can use all the array methods like <code>.map()</code>, <code>.filter()</code>, <code>.reduce()</code>, etc.</p>
 <p><strong>Converting an Array-like Object to an Array</strong></p>
 
@@ -2906,7 +2914,7 @@ You can also use <code>Array.from</code> to convert a string into an array of it
 </span></span></span></code></pre></div>
   </figure>
 </div>
-<h3 id="using-mapfn-with-arrayfrom"><strong>Using <code>mapFn</code> with <code>Array.from</code></strong><a href="#using-mapfn-with-arrayfrom" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="using"><strong>Using <code>mapFn</code> with <code>Array.from</code></strong><a href="#using" class="anchor" aria-hidden="true">#</a> </h3>
 <p><code>Array.from</code> accepts a <strong>second argument</strong> called <code>mapFn</code>, which is a mapping function applied to each element before adding it to the resulting array.</p>
 
 
@@ -2925,7 +2933,7 @@ You can also use <code>Array.from</code> to convert a string into an array of it
 <ul>
 <li>In this example, <code>Array.from</code> creates an array from the <code>numbers</code> array and applies the <code>mapFn</code> to square each number before storing it in the new array.</li>
 </ul>
-<h3 id="syntax-of-arrayfrom"><strong>Syntax of <code>Array.from</code>:</strong><a href="#syntax-of-arrayfrom" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="syntax-of"><strong>Syntax of <code>Array.from</code>:</strong><a href="#syntax-of" class="anchor" aria-hidden="true">#</a> </h3>
 
 
 

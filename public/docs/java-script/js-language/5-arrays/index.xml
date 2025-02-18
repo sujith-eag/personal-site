@@ -56,7 +56,7 @@
       <link>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/js-05.07-rest-spread/</link>
       <pubDate>Sat, 09 Nov 2024 17:10:12 +0530</pubDate>
       <guid>http://localhost:1313/personal-site/docs/java-script/js-language/5-arrays/js-05.07-rest-spread/</guid>
-      <description>&lt;h3 id=&#34;rest-parameters--and-spread-syntax-httpsjavascriptinforest-parameters-spread&#34;&gt;&lt;a href=&#34;https://javascript.info/rest-parameters-spread&#34;&gt;Rest Parameters (&lt;code&gt;...&lt;/code&gt;) and Spread Syntax (&lt;code&gt;...&lt;/code&gt;)&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;p&gt;In JavaScript, the &lt;strong&gt;rest parameters&lt;/strong&gt; and &lt;strong&gt;spread syntax&lt;/strong&gt; both use the &lt;code&gt;...&lt;/code&gt; syntax, but they serve different purposes.&lt;/p&gt;</description>
+      <description>&lt;h3 id=&#34;rest-parameters-&#34;&gt;&lt;a href=&#34;https://javascript.info/rest-parameters-spread&#34;&gt;Rest Parameters (&lt;code&gt;...&lt;/code&gt;) and Spread Syntax (&lt;code&gt;...&lt;/code&gt;)&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;p&gt;In JavaScript, the &lt;strong&gt;rest parameters&lt;/strong&gt; and &lt;strong&gt;spread syntax&lt;/strong&gt; both use the &lt;code&gt;...&lt;/code&gt; syntax, but they serve different purposes.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

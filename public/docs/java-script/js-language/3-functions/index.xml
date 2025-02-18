@@ -56,7 +56,7 @@
       <link>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/js-03.07-scheduling/</link>
       <pubDate>Sat, 09 Nov 2024 17:03:35 +0530</pubDate>
       <guid>http://localhost:1313/personal-site/docs/java-script/js-language/3-functions/js-03.07-scheduling/</guid>
-      <description>&lt;h2 id=&#34;scheduling-function-calls-with-settimeout-and-setinterval&#34;&gt;&lt;strong&gt;Scheduling Function Calls with &lt;code&gt;setTimeout&lt;/code&gt; and &lt;code&gt;setInterval&lt;/code&gt;&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;p&gt;JavaScript provides the ability to schedule functions to be executed &lt;strong&gt;later&lt;/strong&gt; or &lt;strong&gt;repeatedly&lt;/strong&gt; using two methods: &lt;strong&gt;&lt;code&gt;setTimeout&lt;/code&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;code&gt;setInterval&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;scheduling-function-calls-with&#34;&gt;&lt;strong&gt;Scheduling Function Calls with &lt;code&gt;setTimeout&lt;/code&gt; and &lt;code&gt;setInterval&lt;/code&gt;&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;p&gt;JavaScript provides the ability to schedule functions to be executed &lt;strong&gt;later&lt;/strong&gt; or &lt;strong&gt;repeatedly&lt;/strong&gt; using two methods: &lt;strong&gt;&lt;code&gt;setTimeout&lt;/code&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;code&gt;setInterval&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>JS - 03.08 - Decorators</title>

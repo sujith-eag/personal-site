@@ -14,14 +14,14 @@
       <link>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.01-if-else/</link>
       <pubDate>Thu, 07 Nov 2024 20:46:23 +0530</pubDate>
       <guid>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.01-if-else/</guid>
-      <description>&lt;h2 id=&#34;conditional-execution--branching&#34;&gt;&lt;strong&gt;Conditional Execution / Branching&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;if-statement&#34;&gt;&lt;strong&gt;&lt;code&gt;if()&lt;/code&gt; Statement&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;The &lt;code&gt;if&lt;/code&gt; statement allows you to execute a block of code only if a specified condition is true. The condition is typically a Boolean expression that evaluates to either &lt;code&gt;true&lt;/code&gt; or &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;conditional-execution--branching&#34;&gt;&lt;strong&gt;Conditional Execution / Branching&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;if&#34;&gt;&lt;strong&gt;&lt;code&gt;if()&lt;/code&gt; Statement&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;The &lt;code&gt;if&lt;/code&gt; statement allows you to execute a block of code only if a specified condition is true. The condition is typically a Boolean expression that evaluates to either &lt;code&gt;true&lt;/code&gt; or &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>JS - 02.02 - switch-case</title>
       <link>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.02-switch-case/</link>
       <pubDate>Thu, 07 Nov 2024 20:47:19 +0530</pubDate>
       <guid>http://localhost:1313/personal-site/docs/java-script/js-language/2-control-flow/conditionals/js-02.02-switch-case/</guid>
-      <description>&lt;h2 id=&#34;switch-statements&#34;&gt;&lt;strong&gt;&lt;code&gt;switch&lt;/code&gt; Statements&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;p&gt;The &lt;code&gt;switch&lt;/code&gt; statement is a more concise and readable way to handle multiple conditional checks based on a single value. It is often used as an alternative to multiple &lt;code&gt;if...else if&lt;/code&gt; statements, particularly when you have many conditions to check against a single expression.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;switch&#34;&gt;&lt;strong&gt;&lt;code&gt;switch&lt;/code&gt; Statements&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;p&gt;The &lt;code&gt;switch&lt;/code&gt; statement is a more concise and readable way to handle multiple conditional checks based on a single value. It is often used as an alternative to multiple &lt;code&gt;if...else if&lt;/code&gt; statements, particularly when you have many conditions to check against a single expression.&lt;/p&gt;</description>
     </item>
     <item>
       <title>JS - 02.03 - Ternary Operator</title>

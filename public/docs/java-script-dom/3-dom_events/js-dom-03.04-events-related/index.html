@@ -157,15 +157,19 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-01-oop-concepts/">06 OOP - 01 OOP Concepts</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-01-introduction-to-oop-features/">06 OOP - 01 Introduction to OOP Features</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-02-classes/">06 OOP - 02 Classes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-02-creating-class-and-instance-variables/">06 OOP - 02 Creating Class and Instance Variables</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-03-class-attributes/">06 OOP - 03 Class Attributes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-03-types-of-methods/">06 OOP - 03 Types of Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/6oop/06-oop-04-changing-attriute-and-using-class/">06 OOP - 04 Changing Attriute and Using Class</a>
   </li>
       </ul>
     </details>
@@ -1545,15 +1549,19 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-01-oop-concepts/">06 OOP - 01 OOP Concepts</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-01-introduction-to-oop-features/">06 OOP - 01 Introduction to OOP Features</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-02-classes/">06 OOP - 02 Classes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-02-creating-class-and-instance-variables/">06 OOP - 02 Creating Class and Instance Variables</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-03-class-attributes/">06 OOP - 03 Class Attributes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-03-types-of-methods/">06 OOP - 03 Types of Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/6oop/06-oop-04-changing-attriute-and-using-class/">06 OOP - 04 Changing Attriute and Using Class</a>
   </li>
       </ul>
     </details>
@@ -2701,9 +2709,9 @@
       <ul>
         <li>
           <ul>
-            <li><a href="#bubbling-and-capturinghttpsjavascriptinfobubbling-and-capturing"><a href="https://javascript.info/bubbling-and-capturing">Bubbling and capturing</a></a></li>
-            <li><a href="#event-delegationhttpsjavascriptinfoevent-delegation"><a href="https://javascript.info/event-delegation">Event Delegation</a></a></li>
-            <li><a href="#browser-actionhttpsjavascriptinfodefault-browser-action"><a href="https://javascript.info/default-browser-action">Browser action</a></a></li>
+            <li><a href="#bubbling-and-capturing"><a href="https://javascript.info/bubbling-and-capturing">Bubbling and capturing</a></a></li>
+            <li><a href="#event-delegation"><a href="https://javascript.info/event-delegation">Event Delegation</a></a></li>
+            <li><a href="#browser-action"><a href="https://javascript.info/default-browser-action">Browser action</a></a></li>
           </ul>
         </li>
       </ul>
@@ -2727,9 +2735,9 @@
       <ul>
         <li>
           <ul>
-            <li><a href="#bubbling-and-capturinghttpsjavascriptinfobubbling-and-capturing"><a href="https://javascript.info/bubbling-and-capturing">Bubbling and capturing</a></a></li>
-            <li><a href="#event-delegationhttpsjavascriptinfoevent-delegation"><a href="https://javascript.info/event-delegation">Event Delegation</a></a></li>
-            <li><a href="#browser-actionhttpsjavascriptinfodefault-browser-action"><a href="https://javascript.info/default-browser-action">Browser action</a></a></li>
+            <li><a href="#bubbling-and-capturing"><a href="https://javascript.info/bubbling-and-capturing">Bubbling and capturing</a></a></li>
+            <li><a href="#event-delegation"><a href="https://javascript.info/event-delegation">Event Delegation</a></a></li>
+            <li><a href="#browser-action"><a href="https://javascript.info/default-browser-action">Browser action</a></a></li>
           </ul>
         </li>
       </ul>
@@ -2740,17 +2748,17 @@
   </details>
 
 			</nav>
-			<h4 id="bubbling-and-capturinghttpsjavascriptinfobubbling-and-capturing"><a href="https://javascript.info/bubbling-and-capturing">Bubbling and capturing</a><a href="#bubbling-and-capturinghttpsjavascriptinfobubbling-and-capturing" class="anchor" aria-hidden="true">#</a> </h4>
+			<h4 id="bubbling-and-capturing"><a href="https://javascript.info/bubbling-and-capturing">Bubbling and capturing</a><a href="#bubbling-and-capturing" class="anchor" aria-hidden="true">#</a> </h4>
 <p>The bubbling principle is simple.
 <strong>When an event happens on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors.</strong></p>
 <p>The process is called “bubbling”, because events “bubble” from the inner element up through parents like a bubble in the water.</p>
 <p>Bubbling and capturing lay the foundation for “event delegation” – an extremely powerful event handling pattern.</p>
 <hr>
-<h4 id="event-delegationhttpsjavascriptinfoevent-delegation"><a href="https://javascript.info/event-delegation">Event Delegation</a><a href="#event-delegationhttpsjavascriptinfoevent-delegation" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="event-delegation"><a href="https://javascript.info/event-delegation">Event Delegation</a><a href="#event-delegation" class="anchor" aria-hidden="true">#</a> </h4>
 <p>The idea is that if we have a lot of elements handled in a similar way, then instead of assigning a handler to each of them – we put a single handler on their common ancestor.</p>
 <p>In the handler we get <code>event.target</code> to see where the event actually happened and handle it.</p>
 <hr>
-<h4 id="browser-actionhttpsjavascriptinfodefault-browser-action"><a href="https://javascript.info/default-browser-action">Browser action</a><a href="#browser-actionhttpsjavascriptinfodefault-browser-action" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="browser-action"><a href="https://javascript.info/default-browser-action">Browser action</a><a href="#browser-action" class="anchor" aria-hidden="true">#</a> </h4>
 <p>There are many default browser actions:</p>
 <ul>
 <li><code>mousedown</code> – starts the selection (move the mouse to select).</li>

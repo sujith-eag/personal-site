@@ -157,15 +157,19 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-01-oop-concepts/">06 OOP - 01 OOP Concepts</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-01-introduction-to-oop-features/">06 OOP - 01 Introduction to OOP Features</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-02-classes/">06 OOP - 02 Classes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-02-creating-class-and-instance-variables/">06 OOP - 02 Creating Class and Instance Variables</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-03-class-attributes/">06 OOP - 03 Class Attributes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-03-types-of-methods/">06 OOP - 03 Types of Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/6oop/06-oop-04-changing-attriute-and-using-class/">06 OOP - 04 Changing Attriute and Using Class</a>
   </li>
       </ul>
     </details>
@@ -1545,15 +1549,19 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-01-oop-concepts/">06 OOP - 01 OOP Concepts</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-01-introduction-to-oop-features/">06 OOP - 01 Introduction to OOP Features</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-02-classes/">06 OOP - 02 Classes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-02-creating-class-and-instance-variables/">06 OOP - 02 Creating Class and Instance Variables</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-03-class-attributes/">06 OOP - 03 Class Attributes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-03-types-of-methods/">06 OOP - 03 Types of Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/6oop/06-oop-04-changing-attriute-and-using-class/">06 OOP - 04 Changing Attriute and Using Class</a>
   </li>
       </ul>
     </details>
@@ -2702,11 +2710,11 @@
         <li><a href="#method-shorthand"><strong>Method Shorthand</strong></a></li>
       </ul>
     </li>
-    <li><a href="#this-in-methods"><strong><code>this</code> in Methods</strong></a>
+    <li><a href="#this"><strong><code>this</code> in Methods</strong></a>
       <ul>
-        <li><a href="#this-is-not-bound-dynamic"><strong><code>this</code> is Not Bound (Dynamic)</strong></a></li>
-        <li><a href="#this-in-constructors"><strong><code>this</code> in Constructors</strong></a></li>
-        <li><a href="#arrow-functions-and-this"><strong>Arrow Functions and <code>this</code></strong></a></li>
+        <li><a href="#this-1"><strong><code>this</code> is Not Bound (Dynamic)</strong></a></li>
+        <li><a href="#this-2"><strong><code>this</code> in Constructors</strong></a></li>
+        <li><a href="#arrow-functions-and"><strong>Arrow Functions and <code>this</code></strong></a></li>
         <li><a href="#32_arrow_functionarrow-function-have-no-thisarrow-functions-have-no-this">[[3.2_arrow_function#Arrow function have no <code>this</code>.|Arrow functions have no &rsquo;this&rsquo;]]</a></li>
       </ul>
     </li>
@@ -2740,11 +2748,11 @@
         <li><a href="#method-shorthand"><strong>Method Shorthand</strong></a></li>
       </ul>
     </li>
-    <li><a href="#this-in-methods"><strong><code>this</code> in Methods</strong></a>
+    <li><a href="#this"><strong><code>this</code> in Methods</strong></a>
       <ul>
-        <li><a href="#this-is-not-bound-dynamic"><strong><code>this</code> is Not Bound (Dynamic)</strong></a></li>
-        <li><a href="#this-in-constructors"><strong><code>this</code> in Constructors</strong></a></li>
-        <li><a href="#arrow-functions-and-this"><strong>Arrow Functions and <code>this</code></strong></a></li>
+        <li><a href="#this-1"><strong><code>this</code> is Not Bound (Dynamic)</strong></a></li>
+        <li><a href="#this-2"><strong><code>this</code> in Constructors</strong></a></li>
+        <li><a href="#arrow-functions-and"><strong>Arrow Functions and <code>this</code></strong></a></li>
         <li><a href="#32_arrow_functionarrow-function-have-no-thisarrow-functions-have-no-this">[[3.2_arrow_function#Arrow function have no <code>this</code>.|Arrow functions have no &rsquo;this&rsquo;]]</a></li>
       </ul>
     </li>
@@ -2843,7 +2851,7 @@
   </figure>
 </div>
 <hr>
-<h2 id="this-in-methods"><strong><code>this</code> in Methods</strong><a href="#this-in-methods" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="this"><strong><code>this</code> in Methods</strong><a href="#this" class="anchor" aria-hidden="true">#</a> </h2>
 <p>The <code>this</code> keyword is commonly used inside methods to refer to the object the method belongs to.</p>
 <ul>
 <li><strong><code>this</code></strong> refers to the object that <strong>owns</strong> the method.</li>
@@ -2871,7 +2879,7 @@
 <p>During execution, the value of <code>this</code> will be <code>user</code>.
 <code>this</code> refers to the <code>user</code> object, and <code>this.name</code> accesses the <code>name</code> property.</p>
 <hr>
-<h3 id="this-is-not-bound-dynamic"><strong><code>this</code> is Not Bound (Dynamic)</strong><a href="#this-is-not-bound-dynamic" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="this-1"><strong><code>this</code> is Not Bound (Dynamic)</strong><a href="#this-1" class="anchor" aria-hidden="true">#</a> </h3>
 <p>In JavaScript, the value of <code>this</code> is <strong>determined at runtime</strong> and depends on how the function is <strong>called</strong>, not where it is declared.</p>
 <p>This means that if <code>this</code> is used in a method, its value can change based on the <strong>context</strong> of the call.
 Using <code>this</code>, it allows for same method definition to be used in multiple objects.</p>
@@ -2910,7 +2918,7 @@ Using <code>this</code>, it allows for same method definition to be used in mult
 </div>
 <p>In this case, <code>this</code> no longer refers to the <code>user</code> object because the function <code>introduce</code> was called without an object context.</p>
 <hr>
-<h3 id="this-in-constructors"><strong><code>this</code> in Constructors</strong><a href="#this-in-constructors" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="this-2"><strong><code>this</code> in Constructors</strong><a href="#this-2" class="anchor" aria-hidden="true">#</a> </h3>
 <p>You can use <code>this</code> to create methods inside a constructor function, which allows for <strong>object reuse</strong> across multiple instances:</p>
 
 
@@ -2937,7 +2945,7 @@ Using <code>this</code>, it allows for same method definition to be used in mult
 </div>
 <p>In this case, <code>this.name</code> and <code>this.introduceSelf</code> work because <code>this</code> refers to each specific instance of <code>Person</code>.</p>
 <hr>
-<h3 id="arrow-functions-and-this"><strong>Arrow Functions and <code>this</code></strong><a href="#arrow-functions-and-this" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="arrow-functions-and"><strong>Arrow Functions and <code>this</code></strong><a href="#arrow-functions-and" class="anchor" aria-hidden="true">#</a> </h3>
 <h3 id="32_arrow_functionarrow-function-have-no-thisarrow-functions-have-no-this">[[3.2_arrow_function#Arrow function have no <code>this</code>.|Arrow functions have no &rsquo;this&rsquo;]]<a href="#32_arrow_functionarrow-function-have-no-thisarrow-functions-have-no-this" class="anchor" aria-hidden="true">#</a> </h3>
 <p>Unlike regular functions, <strong>arrow functions</strong> do not have their own <code>this</code>. They inherit <code>this</code> from the surrounding context (lexical scoping). This can lead to unexpected behavior when used in methods.</p>
 

@@ -35,7 +35,7 @@
       <link>http://localhost:1313/personal-site/docs/java-script-dom/3-dom_events/js-dom-03.04-events-related/</link>
       <pubDate>Wed, 12 Feb 2025 14:01:53 +0530</pubDate>
       <guid>http://localhost:1313/personal-site/docs/java-script-dom/3-dom_events/js-dom-03.04-events-related/</guid>
-      <description>&lt;h4 id=&#34;bubbling-and-capturinghttpsjavascriptinfobubbling-and-capturing&#34;&gt;&lt;a href=&#34;https://javascript.info/bubbling-and-capturing&#34;&gt;Bubbling and capturing&lt;/a&gt;&lt;/h4&gt;&#xA;&lt;p&gt;The bubbling principle is simple.&#xA;&lt;strong&gt;When an event happens on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors.&lt;/strong&gt;&lt;/p&gt;</description>
+      <description>&lt;h4 id=&#34;bubbling-and-capturing&#34;&gt;&lt;a href=&#34;https://javascript.info/bubbling-and-capturing&#34;&gt;Bubbling and capturing&lt;/a&gt;&lt;/h4&gt;&#xA;&lt;p&gt;The bubbling principle is simple.&#xA;&lt;strong&gt;When an event happens on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors.&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

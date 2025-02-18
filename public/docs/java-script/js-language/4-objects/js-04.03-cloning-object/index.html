@@ -157,15 +157,19 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-01-oop-concepts/">06 OOP - 01 OOP Concepts</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-01-introduction-to-oop-features/">06 OOP - 01 Introduction to OOP Features</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-02-classes/">06 OOP - 02 Classes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-02-creating-class-and-instance-variables/">06 OOP - 02 Creating Class and Instance Variables</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-03-class-attributes/">06 OOP - 03 Class Attributes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-03-types-of-methods/">06 OOP - 03 Types of Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/6oop/06-oop-04-changing-attriute-and-using-class/">06 OOP - 04 Changing Attriute and Using Class</a>
   </li>
       </ul>
     </details>
@@ -1545,15 +1549,19 @@
       <ul class="list-unstyled list-nested">
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-01-oop-concepts/">06 OOP - 01 OOP Concepts</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-01-introduction-to-oop-features/">06 OOP - 01 Introduction to OOP Features</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-02-classes/">06 OOP - 02 Classes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-02-creating-class-and-instance-variables/">06 OOP - 02 Creating Class and Instance Variables</a>
   </li>
 
   <li>
-      <a href="/personal-site/docs/python/6oop/06-oop-03-class-attributes/">06 OOP - 03 Class Attributes</a>
+      <a href="/personal-site/docs/python/6oop/06-oop-03-types-of-methods/">06 OOP - 03 Types of Methods</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/python/6oop/06-oop-04-changing-attriute-and-using-class/">06 OOP - 04 Changing Attriute and Using Class</a>
   </li>
       </ul>
     </details>
@@ -2707,12 +2715,12 @@
     <li><a href="#cloning-and-merging-objects"><strong>Cloning and Merging Objects</strong></a>
       <ul>
         <li><a href="#shallow-copy-copying-references"><strong>Shallow Copy (Copying References)</strong></a></li>
-        <li><a href="#using-objectassign-for-shallow-copy"><strong>Using <code>Object.assign</code> for Shallow Copy</strong></a></li>
-        <li><a href="#using-objectassign-to-clone"><strong>Using <code>Object.assign()</code> to Clone</strong></a></li>
+        <li><a href="#using"><strong>Using <code>Object.assign</code> for Shallow Copy</strong></a></li>
+        <li><a href="#using-1"><strong>Using <code>Object.assign()</code> to Clone</strong></a></li>
         <li><a href="#deep-cloning-nested-objects"><strong>Deep Cloning (Nested Objects)</strong></a></li>
       </ul>
     </li>
-    <li><a href="#deep-cloning-with-structuredclone"><strong>Deep Cloning with <code>structuredClone()</code></strong></a></li>
+    <li><a href="#deep-cloning-with"><strong>Deep Cloning with <code>structuredClone()</code></strong></a></li>
     <li><a href="#summary"><strong>Summary</strong></a></li>
   </ul>
 </nav>
@@ -2739,12 +2747,12 @@
     <li><a href="#cloning-and-merging-objects"><strong>Cloning and Merging Objects</strong></a>
       <ul>
         <li><a href="#shallow-copy-copying-references"><strong>Shallow Copy (Copying References)</strong></a></li>
-        <li><a href="#using-objectassign-for-shallow-copy"><strong>Using <code>Object.assign</code> for Shallow Copy</strong></a></li>
-        <li><a href="#using-objectassign-to-clone"><strong>Using <code>Object.assign()</code> to Clone</strong></a></li>
+        <li><a href="#using"><strong>Using <code>Object.assign</code> for Shallow Copy</strong></a></li>
+        <li><a href="#using-1"><strong>Using <code>Object.assign()</code> to Clone</strong></a></li>
         <li><a href="#deep-cloning-nested-objects"><strong>Deep Cloning (Nested Objects)</strong></a></li>
       </ul>
     </li>
-    <li><a href="#deep-cloning-with-structuredclone"><strong>Deep Cloning with <code>structuredClone()</code></strong></a></li>
+    <li><a href="#deep-cloning-with"><strong>Deep Cloning with <code>structuredClone()</code></strong></a></li>
     <li><a href="#summary"><strong>Summary</strong></a></li>
   </ul>
 </nav>
@@ -2871,7 +2879,7 @@
 </div>
 </li>
 </ul>
-<h3 id="using-objectassign-for-shallow-copy"><strong>Using <code>Object.assign</code> for Shallow Copy</strong><a href="#using-objectassign-for-shallow-copy" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="using"><strong>Using <code>Object.assign</code> for Shallow Copy</strong><a href="#using" class="anchor" aria-hidden="true">#</a> </h3>
 <ul>
 <li><code>Object.assign()</code> performs a <strong>shallow copy</strong>. This means it copies the top-level properties, but nested objects are copied by reference.</li>
 </ul>
@@ -2906,7 +2914,7 @@
 </span></span></span></code></pre></div>
   </figure>
 </div>
-<h3 id="using-objectassign-to-clone"><strong>Using <code>Object.assign()</code> to Clone</strong><a href="#using-objectassign-to-clone" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="using-1"><strong>Using <code>Object.assign()</code> to Clone</strong><a href="#using-1" class="anchor" aria-hidden="true">#</a> </h3>
 <ul>
 <li>
 <p><code>Object.assign()</code> can also be used to create a clone of an object. However, it only performs a <strong>shallow copy</strong>.</p>
@@ -2936,7 +2944,7 @@
 </li>
 </ul>
 <hr>
-<h2 id="deep-cloning-with-structuredclone"><strong>Deep Cloning with <code>structuredClone()</code></strong><a href="#deep-cloning-with-structuredclone" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="deep-cloning-with"><strong>Deep Cloning with <code>structuredClone()</code></strong><a href="#deep-cloning-with" class="anchor" aria-hidden="true">#</a> </h2>
 <ul>
 <li>
 <p>The <code>structuredClone()</code> method performs <strong>deep cloning</strong> of objects, copying both the object and its nested properties.</p>
