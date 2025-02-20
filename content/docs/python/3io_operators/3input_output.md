@@ -35,7 +35,6 @@ print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)
 
 - `sep` is used to specify a separator between multiple values in the print function. By default, it is a space `' '`, but you can change it to any string you want.
   
-**Example:**
 ```python
 print("apple", "banana", "cherry", sep=", ")  # Output: apple, banana, cherry
 ```
@@ -44,7 +43,6 @@ print("apple", "banana", "cherry", sep=", ")  # Output: apple, banana, cherry
 
 - `end` is used to append a string after the printed output. By default, it is `'\n'` (a newline character), which means the next output will appear on a new line. You can modify this to print everything on the same line or add any custom string.
 
-**Example:**
 ```python
 print("Hello", end=" ")
 print("world!")  # Output: Hello world!
@@ -54,7 +52,6 @@ print("world!")  # Output: Hello world!
 
 - f-strings (formatted string literals) allow embedding expressions inside string literals using curly braces `{}`. Introduced in Python 3.6, f-strings provide an easy and efficient way to embed variable values into strings.
 
-**Example:**
 ```python
 name = "Alice"
 age = 30
@@ -64,7 +61,6 @@ print(f"My name is {name} and I am {age} years old.")
 
 You can also apply formatting options to the variables inside f-strings:
 
-**Example:**
 ```python
 pi = 3.14159265358979
 print(f"Pi to 2 decimal places: {pi:.2f}")  # Output: Pi to 2 decimal places: 3.14
@@ -86,7 +82,6 @@ user_input = input("Prompt message: ")
 
 You can get multiple inputs from the user using `split()` to split the input string into a list based on a delimiter.
 
-**Example:**
 ```python
 # Getting multiple inputs
 name, age = input("Enter your name and age: ").split()
@@ -99,7 +94,6 @@ In this case, the user would input a string like `Alice 25`, and the values woul
 
 Since `input()` always returns a string, you might need to cast the input to another data type (like `int`, `float`, etc.).
 
-**Example:**
 ```python
 age = int(input("Enter your age: "))  # Convert the string to an integer
 print(f"Next year, you'll be {age + 1} years old.")
@@ -115,7 +109,6 @@ height = float(input("Enter your height in meters: "))  # Convert to float
 
 The `eval()` function can evaluate a string as a Python expression. It allows you to execute more complex expressions or mathematical formulas input by the user. Be cautious when using `eval()` since it can execute arbitrary code, which may be unsafe if you're not in control of the input.
 
-**Example:**
 ```python
 result = eval(input("Enter a mathematical expression: "))
 print(f"The result is: {result}")
@@ -135,7 +128,6 @@ Python allows you to pass command-line arguments to your script, which can be ac
 
 2. **`sys.argv`**: This is a list containing all the command-line arguments passed to the Python script, where `sys.argv[0]` is the script name itself.
 
-**Example:**
 ```python
 import sys
 
@@ -165,7 +157,6 @@ First argument: arg1
 
 `len(sys.argv)` returns the number of arguments passed to the script, including the script name. This can be used to check if enough arguments are provided.
 
-**Example:**
 ```python
 import sys
 

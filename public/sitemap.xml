@@ -7,6 +7,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>http://localhost:1313/personal-site/docs/python/1data-types/</loc>
+    <lastmod>2024-12-17T22:41:09+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>http://localhost:1313/personal-site/docs/python/1data-types/primitive-types/01-pdt-01-variables/</loc>
     <lastmod>2024-12-17T22:32:32+05:30</lastmod>
     <changefreq>monthly</changefreq>
@@ -77,47 +82,52 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-cdt-04-list-vs-arrays/</loc>
-    <lastmod>2024-12-17T22:46:32+05:30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-cdt-05-tuples/</loc>
-    <lastmod>2024-12-17T22:46:50+05:30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-cdt-06-sets/</loc>
-    <lastmod>2024-12-17T22:47:04+05:30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/7dictionary/</loc>
+    <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/5tuple_set/</loc>
     <lastmod>2025-02-16T18:46:36+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/7dictionary/02-cdt-07-dictinaries/</loc>
+    <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/5tuple_set/02-cdt-04-list-vs-arrays/</loc>
+    <lastmod>2024-12-17T22:46:32+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/5tuple_set/02-cdt-05-tuples/</loc>
+    <lastmod>2024-12-17T22:46:50+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/5tuple_set/02-cdt-06-sets/</loc>
     <lastmod>2024-12-17T22:47:04+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/7dictionary/02-cdt-08-asccessing-dictionary-elements/</loc>
+    <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-cdt-07-dictinaries/</loc>
+    <lastmod>2024-12-17T22:47:04+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-cdt-08-asccessing-dictionary-elements/</loc>
     <lastmod>2025-02-16T18:49:10+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/7dictionary/02-cdt-09-dictionary-manipulation-methods/</loc>
+    <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-cdt-09-dictionary-manipulation-methods/</loc>
     <lastmod>2025-02-16T18:49:31+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/7dictionary/02-cdt-10-dictinaries-practice-questions/</loc>
+    <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-cdt-10-dictinaries-practice-questions/</loc>
     <lastmod>2025-02-16T18:49:48+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/python/03-print-and-input/</loc>
+    <loc>http://localhost:1313/personal-site/docs/python/3io_operators/</loc>
+    <lastmod>2024-12-17T22:41:09+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/personal-site/docs/python/3io_operators/03-print-and-input/</loc>
     <lastmod>2024-12-17T22:34:58+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -313,6 +323,11 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/personal-site/docs/python/10numpy/</loc>
+    <lastmod>2025-02-14T20:38:49+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/personal-site/docs/python/col_extra/</loc>
     <lastmod>2025-02-14T20:38:49+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -1154,11 +1169,6 @@
   </url><url>
     <loc>http://localhost:1313/personal-site/docs/bash-linux/command-docs/bash-commands/</loc>
     <lastmod>2024-10-22T09:32:39+05:30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/personal-site/docs/python/1data-types/</loc>
-    <lastmod>2024-12-17T22:41:09+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>

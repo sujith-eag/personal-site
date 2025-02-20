@@ -16,5 +16,5 @@ seo:
 
 # Surprised!!
 
-## Why are you even here??
+## Why are you even here?? It's for Educatoional Purpose, make use of it.
 
