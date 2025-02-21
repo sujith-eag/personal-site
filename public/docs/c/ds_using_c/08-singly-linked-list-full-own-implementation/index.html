@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2833,7 +2889,7 @@
 			<p>The goal of this implementation is to streamline the logic by separating the core operations from redundant checks and basic actions by introducing helper functions which are created when needed.</p>
 <p>Main functions just handle the main logic of creating, deleting, and updating nodes while Helper functions can handle the validations and basic actions (like memory allocation, empty checks, and position validation) separately from the main logic, keeping the code simple, linear without too many nested edge case checks.</p>
 <p>Priority also given to Presentation and Clarity of display after operations.</p>
-<h4 id="singly-linked-list-own-implementation">Singly Linked List Own Implementation<a href="#singly-linked-list-own-implementation" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="singly-linked-list-own-implementation">Singly Linked List Own Implementation</h4>
 
 
 
@@ -3162,108 +3218,108 @@
   </figure>
 </div>
 <hr>
-<h3 id="program-overview-and-general-logic">Program Overview and General Logic:<a href="#program-overview-and-general-logic" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="program-overview-and-general-logic">Program Overview and General Logic:</h3>
 <p>This program implements a <strong>single linked list</strong> in C, allowing the user to perform various operations on the list, such as inserting, deleting, displaying, and searching for nodes.</p>
 <p>A linked list is a linear data structure where each element (node) points to the next one, making it easier to insert or delete elements without needing to reorganize the entire structure, unlike arrays. Here, the list is implemented with nodes where each node has two parts:</p>
 <ol>
 <li><strong>Data</strong>: The actual value stored in the node.</li>
 <li><strong>Next</strong>: A pointer that refers to the next node in the list.</li>
 </ol>
-<h3 id="functions-and-their-descriptions">Functions and Their Descriptions:<a href="#functions-and-their-descriptions" class="anchor" aria-hidden="true">#</a> </h3>
-<h4 id="1-createnode">1. <strong>CreateNode()</strong>:<a href="#1-createnode" class="anchor" aria-hidden="true">#</a> </h4>
+<h3 id="functions-and-their-descriptions">Functions and Their Descriptions:</h3>
+<h4 id="1-createnode">1. <strong>CreateNode()</strong>:</h4>
 <p>This function handles node creation based on the choice the user makes (insertion at beginning, position, or end).</p>
 <ul>
 <li>It asks for the value to insert.</li>
 <li>If the list is empty (i.e., <code>head == NULL</code>), it creates the first node using <code>FirstNode()</code>.</li>
 <li>Otherwise, it calls the appropriate function (<code>InsertAtBeginning()</code>, <code>InsertAtPosition()</code>, <code>InsertAtEnd()</code>) based on user input.</li>
 </ul>
-<h4 id="2-firstnode">2. <strong>FirstNode()</strong>:<a href="#2-firstnode" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="2-firstnode">2. <strong>FirstNode()</strong>:</h4>
 <ul>
 <li>Creates the first node when the list is empty.</li>
 <li>Allocates memory dynamically for the node, sets its <code>data</code>, and its <code>next</code> pointer to <code>NULL</code> (because it&rsquo;s the only node in the list).</li>
 <li>Sets the <code>head</code> pointer to this new node.</li>
 </ul>
-<h4 id="3-insertatbeginning">3. <strong>InsertAtBeginning()</strong>:<a href="#3-insertatbeginning" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="3-insertatbeginning">3. <strong>InsertAtBeginning()</strong>:</h4>
 <ul>
 <li>Inserts a new node at the beginning of the list.</li>
 <li>Allocates memory for the new node, sets its <code>data</code>, and sets its <code>next</code> pointer to the current <code>head</code>.</li>
 <li>Updates <code>head</code> to point to the new node, making it the first node in the list.</li>
 </ul>
-<h4 id="4-insertatposition">4. <strong>InsertAtPosition()</strong>:<a href="#4-insertatposition" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="4-insertatposition">4. <strong>InsertAtPosition()</strong>:</h4>
 <ul>
 <li>Inserts a new node at a specific position in the list.</li>
 <li>It first checks the position using <code>GetPos()</code>, which validates if the position is within a valid range.</li>
 <li>If the position is valid, it traverses the list to the node just before the desired position.</li>
 <li>The new node&rsquo;s <code>next</code> pointer is set to the node after the desired position, and the previous node&rsquo;s <code>next</code> pointer is updated to point to the new node.</li>
 </ul>
-<h4 id="5-getpos">5. <strong>GetPos()</strong>:<a href="#5-getpos" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="5-getpos">5. <strong>GetPos()</strong>:</h4>
 <ul>
 <li>Prompts the user to enter the position where a node should be inserted or deleted.</li>
 <li>It checks if the position is valid (greater than 0 and within the bounds of the list, which is <code>length + 1</code> to allow insertion at the end).</li>
 <li>Returns the valid position if entered correctly; otherwise, it returns 0 to indicate an invalid position.</li>
 </ul>
-<h4 id="6-length">6. <strong>Length()</strong>:<a href="#6-length" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="6-length">6. <strong>Length()</strong>:</h4>
 <ul>
 <li>Traverses the linked list from the <code>head</code> and counts the number of nodes in the list.</li>
 <li>Returns the length (count of nodes) of the list.</li>
 </ul>
-<h4 id="7-insertatend">7. <strong>InsertAtEnd()</strong>:<a href="#7-insertatend" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="7-insertatend">7. <strong>InsertAtEnd()</strong>:</h4>
 <ul>
 <li>Inserts a new node at the end of the list.</li>
 <li>Allocates memory for the new node and sets its <code>next</code> pointer to <code>NULL</code>.</li>
 <li>It finds the last node of the list using <code>LastNode()</code> and updates its <code>next</code> pointer to point to the new node.</li>
 </ul>
-<h4 id="8-lastnode">8. <strong>LastNode()</strong>:<a href="#8-lastnode" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="8-lastnode">8. <strong>LastNode()</strong>:</h4>
 <ul>
 <li>Traverses the list starting from the <code>head</code> until it finds the last node (the node whose <code>next</code> pointer is <code>NULL</code>).</li>
 <li>Returns the pointer to the last node.</li>
 </ul>
-<h4 id="9-display">9. <strong>Display()</strong>:<a href="#9-display" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="9-display">9. <strong>Display()</strong>:</h4>
 <ul>
 <li>Prints all the elements in the list.</li>
 <li>Traverses from the <code>head</code>, printing the <code>data</code> of each node, followed by a <code>--&gt;</code> to represent the linkage.</li>
 <li>If the list is empty, it prints a message informing the user that there are no elements to display.</li>
 </ul>
-<h4 id="10-deletenode">10. <strong>DeleteNode()</strong>:<a href="#10-deletenode" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="10-deletenode">10. <strong>DeleteNode()</strong>:</h4>
 <ul>
 <li>Determines the deletion operation based on the input (<code>ch</code>).</li>
 <li>It first checks if the list is empty using <code>isEmpty()</code>.</li>
 <li>If the list has only one node, it calls <code>DelFirst()</code> to remove the first node.</li>
 <li>Otherwise, it calls the appropriate delete function (<code>DelB()</code>, <code>DelM()</code>, <code>DelE()</code>) based on the user&rsquo;s choice.</li>
 </ul>
-<h4 id="11-printdel">11. <strong>PrintDel()</strong>:<a href="#11-printdel" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="11-printdel">11. <strong>PrintDel()</strong>:</h4>
 <ul>
 <li>Prints the element being deleted and updates the display.</li>
 <li>It is called after a node is deleted to show the updated list and confirm the deletion of the specified node.</li>
 </ul>
-<h4 id="12-isempty">12. <strong>isEmpty()</strong>:<a href="#12-isempty" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="12-isempty">12. <strong>isEmpty()</strong>:</h4>
 <ul>
 <li>Checks if the list is empty by checking if <code>head</code> is <code>NULL</code>.</li>
 <li>Returns 1 (true) if the list is empty, otherwise 0 (false).</li>
 </ul>
-<h4 id="13-delfirst">13. <strong>DelFirst()</strong>:<a href="#13-delfirst" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="13-delfirst">13. <strong>DelFirst()</strong>:</h4>
 <ul>
 <li>Deletes the only node in the list when the list has only one element.</li>
 <li>Frees the memory allocated for the node and sets <code>head</code> to <code>NULL</code>, effectively emptying the list.</li>
 </ul>
-<h4 id="14-delb">14. <strong>DelB()</strong>:<a href="#14-delb" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="14-delb">14. <strong>DelB()</strong>:</h4>
 <ul>
 <li>Deletes the first node in the list.</li>
 <li>It updates the <code>head</code> pointer to the second node (i.e., <code>head = head-&gt;next</code>) and frees the memory allocated to the original first node.</li>
 </ul>
-<h4 id="15-delm">15. <strong>DelM()</strong>:<a href="#15-delm" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="15-delm">15. <strong>DelM()</strong>:</h4>
 <ul>
 <li>Deletes a node at a specified position.</li>
 <li>First, it gets the position using <code>GetPos()</code>.</li>
 <li>Then, it traverses the list to find the node just before the specified position and updates its <code>next</code> pointer to skip the node being deleted.</li>
 <li>It frees the memory allocated for the deleted node.</li>
 </ul>
-<h4 id="16-dele">16. <strong>DelE()</strong>:<a href="#16-dele" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="16-dele">16. <strong>DelE()</strong>:</h4>
 <ul>
 <li>Deletes the last node in the list.</li>
 <li>It traverses to the last node (the one with <code>next == NULL</code>), updates the second-to-last node&rsquo;s <code>next</code> pointer to <code>NULL</code>, and frees the memory for the last node.</li>
 </ul>
-<h4 id="17-search">17. <strong>Search()</strong>:<a href="#17-search" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="17-search">17. <strong>Search()</strong>:</h4>
 <ul>
 <li>If list is not empty, Gets the value of <code>ele</code></li>
 <li>Searches for a node with a specific value (<code>ele</code>).</li>
@@ -3271,7 +3327,7 @@
 <li>If a match is found, it prints the position of the node. If not, it informs the user that the value was not found in the list.</li>
 </ul>
 <hr>
-<h3 id="provided-code">Provided Code<a href="#provided-code" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="provided-code">Provided Code</h3>
 
 
 

@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2794,7 +2850,7 @@
 At minimum, every process has a PCB stores in the operating system&rsquo;s portion of memory and some amount of memory space allocated to it.
 plus a place in queue and access to CPU.</p>
 <p>Other resources may request are access to I/O, storage and communication devices, inter process communications with other processes through domain sockets, names pipes, remote procedure calls.</p>
-<h3 id="memory-and-virtual-memory">Memory and Virtual Memory<a href="#memory-and-virtual-memory" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="memory-and-virtual-memory">Memory and Virtual Memory</h3>
 <p>The OS maintains tables of process memory space in the the form of <code>memory maps</code>.</p>
 <p>As user processes are given their own memory space, the computer must ensure that one process does not try to access memory allocated to another process.</p>
 <p>DRAM is limited in size and the processes that needs to be done will not wholly fit in main memory as large number of programs are running.
@@ -2815,11 +2871,11 @@ Interrupt to let OS handle the page fault, obtaining the needed page from swap s
 <p><code>replacement strategy</code> to select  a page to discard from memory.
 removing the the one that wont be used again using prediction based on <code>least recently used</code> (LRU), or other approximation algorithms are used.
 Or the unmodified page, as modified page has to be moved to swap space before being removed.</p>
-<h3 id="linux-commands-to-inspect-system-resources">Linux commands to Inspect System Resources<a href="#linux-commands-to-inspect-system-resources" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="linux-commands-to-inspect-system-resources">Linux commands to Inspect System Resources</h3>
 <p><code>Sytem monitor</code> <code>top</code> <code>ps</code> were used to explore process usage.</p>
 <p><code>iostat</code> and <code>mpstat</code> might not come pre installed on Linux (its there)</p>
 <p>If not installed, then can be got by <code>-get install sysstat</code> when in <code>sudo</code></p>
-<h4 id="mpstat"><code>mpstat</code><a href="#mpstat" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="mpstat"><code>mpstat</code></h4>
 <p>is used to display multiprocessor statistics.
 It gives a snapshot of processor load.</p>
 
@@ -2837,14 +2893,14 @@ It gives a snapshot of processor load.</p>
 </span></span><span class="line"><span class="cl">07:58:15 PM  all    1.62    0.01    0.54    0.03    0.00    0.01    0.00    0.00    0.00   97.79</span></span></code></pre></div>
   </figure>
 </div>
-<h4 id="iostat"><code>iostat</code><a href="#iostat" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="iostat"><code>iostat</code></h4>
 <p>reports on both process and I/O statistics.
 Without options it outputs almost same info as <code>mpstat</code>
 It can also output various device several statistics.</p>
 <p>Two other instructions of use are to view memory and virtual memory usage are <code>free</code> and <code>vmstat</code>.
 <code>free</code> gives report on total amount of memory and swap space, amount currently using and amount free.
 <code>vmstat</code> provides average since last boot of virtual memory and CPU usage and process.</p>
-<h4 id="pmap"><code>pmap</code><a href="#pmap" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="pmap"><code>pmap</code></h4>
 <p>allows us to explore the memory map of a specified process. (needs PID)</p>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">

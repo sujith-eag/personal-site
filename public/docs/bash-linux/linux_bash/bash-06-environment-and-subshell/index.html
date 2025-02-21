@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2799,7 +2855,7 @@
 			<p>Computer&rsquo;s don&rsquo;t have the ability to translating the commands into action, it requires a <em><strong>Command Interpreter</strong></em>, which is handled by the outer part of the Operating system called <em><strong>Shell</strong></em> .<br>
 It is actually the interface between the user and the kernel.</p>
 <hr>
-<h3 id="shell">Shell<a href="#shell" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="shell">Shell</h3>
 <p>A shell session consists of an environment that includes all the variables, functions, and other entities defined during the session.</p>
 <p>When a session ends (using <code>exit</code>), or when a new session is started within a session (e.g., using <code>bash</code>), the entities defined in that session are no longer available.</p>
 <p>However, it is possible to create a new session inside the current one, which is referred to as a <strong>subshell</strong> or a <strong>nested shell</strong>.</p>
@@ -2823,21 +2879,21 @@ exporting variables from the parent shell to the subshell, ensuring that they ar
 <li><code>export -n</code>: Removes the export property from a variable.</li>
 </ul>
 <hr>
-<h3 id="configuration-files-for-shell-sessions"><strong>Configuration Files for Shell Sessions</strong><a href="#configuration-files-for-shell-sessions" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="configuration-files-for-shell-sessions"><strong>Configuration Files for Shell Sessions</strong></h3>
 <p>There are four important configuration files in Linux, two for users and two for system administrators:</p>
 <p>The two <code>profile</code> files execute for both interactive and non interactive sessions. Non interactive session is one where a shell is needed to run a script but there is no user interaction.</p>
 <p>When we login to Linux and open a window, we are running an interactive shell. Then both the <code>profile</code> and <code>bashrc</code> scripts will execute.</p>
-<h4 id="for-system-administrators">For System Administrators:<a href="#for-system-administrators" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="for-system-administrators">For System Administrators:</h4>
 <p><strong><code>/etc/profile</code></strong>: This file is executed for all users when they log in.<br>
 It defines a function called <code>pathmunge</code>.<br>
 It sets up environment variables such as <code>USER</code>, <code>LOGNAME</code>, <code>MAIL</code>, <code>HOSTNAME</code>, <code>PATH</code>, and other system-wide variables. It is primarily used for system-wide settings.<br>
 All defined variables are exported. A <code>umask</code> instruction is executed.</p>
 <p><strong><code>/etc/bashrc</code></strong>: This file is executed for interactive non-login shells. It sets additional environment variables, defines system-wide aliases, and modifies the <code>PATH</code> variable. It is a good place to define system-wide functions and aliases.</p>
-<h4 id="for-users">For Users:<a href="#for-users" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="for-users">For Users:</h4>
 <p><strong><code>~/.bash_profile</code></strong>: This file is executed for login shells. It typically contains an <code>if</code> statement that checks if the user’s <code>.bashrc</code> exists, and if so, runs it. It can also be used for user-specific environment variables.</p>
 <p><strong><code>~/.bashrc</code></strong>: This file is executed for non-login interactive shells. It is where users can define their own functions, aliases, and environment variables. It also sources <code>/etc/bashrc</code> to include system-wide settings.</p>
 <hr>
-<h3 id="how-shell-configuration-files-work"><strong>How Shell Configuration Files Work</strong><a href="#how-shell-configuration-files-work" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="how-shell-configuration-files-work"><strong>How Shell Configuration Files Work</strong></h3>
 <p>When a user logs in:</p>
 <ol>
 <li><strong><code>/etc/profile</code></strong> is executed first. This file typically contains functions like <code>pathmunge</code> to construct the <code>PATH</code> variable and defines environment variables like <code>USER</code>, <code>LOGNAME</code>, <code>MAIL</code>, and others. It also executes <code>umask</code> to set file creation permissions.</li>
@@ -2853,7 +2909,7 @@ All defined variables are exported. A <code>umask</code> instruction is executed
 <li>You can add custom aliases and functions in this file.</li>
 </ul>
 <hr>
-<h3 id="logout-and-session-cleanup"><strong>Logout and Session Cleanup</strong><a href="#logout-and-session-cleanup" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="logout-and-session-cleanup"><strong>Logout and Session Cleanup</strong></h3>
 <ul>
 <li><strong><code>~/.bash_logout</code></strong>: This file is invoked when a Bash session is closed. Users can define commands to run before the session ends, such as cleaning up temporary files or logging out of remote sessions.</li>
 </ul>
@@ -2870,14 +2926,14 @@ All defined variables are exported. A <code>umask</code> instruction is executed
   </figure>
 </div>
 <hr>
-<h3 id="internal-and-external-commands">Internal and External Commands<a href="#internal-and-external-commands" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="internal-and-external-commands">Internal and External Commands</h3>
 <p><code>$ type echo</code><br>
 <code>echo is a shell builtin</code></p>
 <p><code>echo</code> is not an external command, Shell won&rsquo;t look for it in the PATH variable to locate it when it is called. Rather it will execute it from its own set of built in commands that are not stored as separate files. These Built-in commands are called as Internal commands.</p>
 <p>Certain commands are built into the shell because it is difficult or impossible to implement them as separate external commands.<br>
 The child process inherits the current working directory from its parent as one of the environmental parameters. It is important for the <code>cd</code> command to not spawn any children to achieve a change of directory. If it did so through a separate process then after <code>cd</code> had completed its run, control would revert to the parent and the original directory would be restored. Then it would be impossible to change directory.</p>
 <hr>
-<h3 id="compiler-vs-interpreter"><strong>Compiler vs Interpreter</strong><a href="#compiler-vs-interpreter" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="compiler-vs-interpreter"><strong>Compiler vs Interpreter</strong></h3>
 <ul>
 <li><strong>Compiler</strong>: A compiler translates the entire source code of a program into machine code (binary code) that can be executed by the computer. It produces an independent executable file.</li>
 <li><strong>Interpreter</strong>: An interpreter directly executes instructions written in a programming language, without converting them into machine code beforehand. It processes the code line by line.</li>

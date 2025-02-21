@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2801,7 +2857,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="scheduling-among-queues">Scheduling Among Queues:<a href="#scheduling-among-queues" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="scheduling-among-queues">Scheduling Among Queues:</h4>
 <ul>
 <li>Scheduling between the different queues is usually implemented as <strong>fixed-priority preemptive scheduling</strong>.
 <ul>
@@ -2824,7 +2880,7 @@
 <li>A <strong>batch process</strong> (lowest priority) can only run when the queues for <strong>system</strong>, <strong>interactive</strong>, and <strong>interactive editing processes</strong> are empty.</li>
 <li>If a process from a <strong>higher-priority queue</strong> enters the ready queue, it will <strong>preempt</strong> processes from <strong>lower-priority queues</strong>.</li>
 </ul>
-<h4 id="time-slicing-among-queues">Time-Slicing Among Queues:<a href="#time-slicing-among-queues" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="time-slicing-among-queues">Time-Slicing Among Queues:</h4>
 <p>Another possibility is to allocate <strong>CPU time slices among the queues</strong>:</p>
 <ul>
 <li>Each queue receives a certain portion of the <strong>CPU time</strong>, which it can then schedule among its individual processes.</li>
@@ -2836,7 +2892,7 @@
 </ul>
 <hr>
 <p>In traditional <strong>multilevel queue scheduling</strong>, processes are permanently assigned to a specific queue when they enter the system. For example, if separate queues are used for <strong>foreground</strong> and <strong>background</strong> processes, the processes do not move from one queue to another. This setup is efficient with <strong>low scheduling overhead</strong>, but it is <strong>inflexible</strong>.</p>
-<h3 id="535-multilevel-feedback-queue-scheduling">5.3.5 Multilevel Feedback Queue Scheduling:<a href="#535-multilevel-feedback-queue-scheduling" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="535-multilevel-feedback-queue-scheduling">5.3.5 Multilevel Feedback Queue Scheduling:</h3>
 <p>Unlike the traditional approach, the <strong>multilevel feedback queue scheduling</strong> algorithm allows <strong>processes to move between queues</strong>. The primary idea is to separate processes based on the <strong>characteristics of their CPU bursts</strong>:</p>
 <ul>
 <li>If a process consumes too much <strong>CPU time</strong>, it is moved to a <strong>lower-priority queue</strong>.</li>
@@ -2851,7 +2907,7 @@
 <li><strong>Method for Demoting Processes:</strong> The criteria or mechanism used to determine when a process should be moved to a <strong>lower-priority queue</strong>.</li>
 <li><strong>Method for Assigning Processes to Queues:</strong> The criteria used to decide which queue a process will enter when it first arrives in the system or requires service.</li>
 </ol>
-<h3 id="advantages">Advantages:<a href="#advantages" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="advantages">Advantages:</h3>
 <ul>
 <li><strong>Flexibility:</strong> Unlike fixed multilevel queues, this algorithm adapts to the behavior of processes, allowing better handling of varying workloads.</li>
 <li><strong>Prevents Starvation:</strong> The aging mechanism ensures that processes in lower-priority queues will eventually be promoted to avoid indefinite waiting.</li>

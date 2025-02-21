@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2849,7 +2905,7 @@
 			<p><strong>Command-line arguments</strong> allow users to provide input to a program at the time of execution, without the need for interactive prompts. These arguments are passed directly in the terminal (or command prompt) when the script is executed. This allows programs to be more dynamic and flexible, acting based on the input provided at runtime.</p>
 <p>For example, when running a Python script, you can pass extra values (such as user input or configuration settings) after the script name. These values are then captured as arguments and processed by the program.</p>
 <hr>
-<h3 id="using-sysargv-to-handle-command-line-arguments">Using <code>sys.argv</code> to Handle Command-Line Arguments<a href="#using-sysargv-to-handle-command-line-arguments" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="using-sysargv-to-handle-command-line-arguments">Using <code>sys.argv</code> to Handle Command-Line Arguments</h3>
 <p>The <code>sys</code> module in Python allows interaction with the system and provides a variable <code>sys.argv</code>, which stores the arguments passed to the script. ( <code>argv</code> - argument vector)</p>
 <ul>
 <li><strong><code>sys.argv</code></strong> is a list containing the command-line arguments.
@@ -2859,7 +2915,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="example-1-accessing-command-line-arguments">Example 1: Accessing Command-Line Arguments<a href="#example-1-accessing-command-line-arguments" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="example-1-accessing-command-line-arguments">Example 1: Accessing Command-Line Arguments</h4>
 
 
 
@@ -2879,9 +2935,9 @@
 <li>If no arguments are passed, trying to access <code>sys.argv[1]</code> will result in an <strong>IndexError</strong> because the list will not have enough elements.</li>
 </ul>
 <hr>
-<h3 id="handling-errors-with-try-except">Handling Errors with Try-Except<a href="#handling-errors-with-try-except" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="handling-errors-with-try-except">Handling Errors with Try-Except</h3>
 <p>To handle cases where the user does not provide the expected arguments, you can use a <strong>try-except</strong> block to catch exceptions and display a custom error message.</p>
-<h4 id="example-2-handling-indexerror-with-try-except">Example 2: Handling <code>IndexError</code> with Try-Except<a href="#example-2-handling-indexerror-with-try-except" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="example-2-handling-indexerror-with-try-except">Example 2: Handling <code>IndexError</code> with Try-Except</h4>
 
 
 
@@ -2904,9 +2960,9 @@
 <li>If the user doesn&rsquo;t pass any arguments, an <strong>IndexError</strong> will be raised, and the program will print &ldquo;Too few arguments&rdquo; instead of crashing.</li>
 </ul>
 <hr>
-<h3 id="checking-the-length-of-arguments-using-len">Checking the Length of Arguments Using <code>len()</code><a href="#checking-the-length-of-arguments-using-len" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="checking-the-length-of-arguments-using-len">Checking the Length of Arguments Using <code>len()</code></h3>
 <p>You can use the <code>len()</code> function to check the number of arguments passed to the script. This helps in situations where the user might pass too few or too many arguments.</p>
-<h4 id="example-3-checking-argument-length">Example 3: Checking Argument Length<a href="#example-3-checking-argument-length" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="example-3-checking-argument-length">Example 3: Checking Argument Length</h4>
 
 
 
@@ -2930,9 +2986,9 @@
 <li>The program checks if the number of arguments is less than 2 (too few), greater than 2 (too many), or exactly 2 (correct), and handles each case accordingly.</li>
 </ul>
 <hr>
-<h3 id="handling-multiple-arguments">Handling Multiple Arguments<a href="#handling-multiple-arguments" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="handling-multiple-arguments">Handling Multiple Arguments</h3>
 <p>To handle multiple arguments, you can loop through all elements in <code>sys.argv</code> starting from <code>sys.argv[1]</code> (skipping the script name). This allows you to process any number of arguments.</p>
-<h4 id="example-4-accepting-multiple-arguments">Example 4: Accepting Multiple Arguments<a href="#example-4-accepting-multiple-arguments" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="example-4-accepting-multiple-arguments">Example 4: Accepting Multiple Arguments</h4>
 
 
 
@@ -2968,9 +3024,9 @@ Hello, my name is Alice</code></pre>
   </figure>
 </div>
 <hr>
-<h3 id="using-sysexit-for-early-program-termination">Using <code>sys.exit()</code> for Early Program Termination<a href="#using-sysexit-for-early-program-termination" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="using-sysexit-for-early-program-termination">Using <code>sys.exit()</code> for Early Program Termination</h3>
 <p>You can use <code>sys.exit()</code> to immediately terminate the program if there are too few or too many arguments. This function not only prints an error message but also stops the execution of the program.</p>
-<h4 id="example-5-exiting-on-invalid-arguments">Example 5: Exiting on Invalid Arguments<a href="#example-5-exiting-on-invalid-arguments" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="example-5-exiting-on-invalid-arguments">Example 5: Exiting on Invalid Arguments</h4>
 
 
 
@@ -2993,9 +3049,9 @@ Hello, my name is Alice</code></pre>
 <li>If the number of arguments doesn&rsquo;t match the expected amount (exactly 1 argument after the script name), the program will exit with a message, preventing further execution.</li>
 </ul>
 <hr>
-<h3 id="slicing-sysargv-to-handle-specific-arguments">Slicing <code>sys.argv</code> to Handle Specific Arguments<a href="#slicing-sysargv-to-handle-specific-arguments" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="slicing-sysargv-to-handle-specific-arguments">Slicing <code>sys.argv</code> to Handle Specific Arguments</h3>
 <p>You can use <strong>list slicing</strong> to process specific subsets of the arguments. This is useful when you want to handle only certain arguments or discard unwanted ones.</p>
-<h4 id="example-6-using-slicing-on-sysargv">Example 6: Using Slicing on <code>sys.argv</code><a href="#example-6-using-slicing-on-sysargv" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="example-6-using-slicing-on-sysargv">Example 6: Using Slicing on <code>sys.argv</code></h4>
 
 
 
@@ -3025,9 +3081,9 @@ Hello, my name is Alice</code></pre>
 </li>
 </ul>
 <hr>
-<h3 id="handling-arguments-as-full-names-or-phrases">Handling Arguments as Full Names or Phrases<a href="#handling-arguments-as-full-names-or-phrases" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="handling-arguments-as-full-names-or-phrases">Handling Arguments as Full Names or Phrases</h3>
 <p>If the user enters a full name with spaces (e.g., &ldquo;John Doe&rdquo;), each word will be treated as a separate argument. To pass the full name as a single argument, the user should enclose the name in quotes or join multiple arguments programmatically.</p>
-<h4 id="example-7-handling-full-names">Example 7: Handling Full Names<a href="#example-7-handling-full-names" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="example-7-handling-full-names">Example 7: Handling Full Names</h4>
 
 
 
@@ -3062,7 +3118,7 @@ Hello, my name is Alice</code></pre>
   </figure>
 </div>
 <hr>
-<h3 id="conclusion">Conclusion<a href="#conclusion" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="conclusion">Conclusion</h3>
 <ul>
 <li><strong>Command-line arguments</strong> allow programs to receive input at the time of execution, making them more dynamic.</li>
 <li>Use <strong><code>sys.argv</code></strong> to access these arguments, with <code>sys.argv[0]</code> being the script name and <code>sys.argv[1:]</code> containing the actual input.</li>

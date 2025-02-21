@@ -69,7 +69,6 @@
     "classes": [
       "DocSearch-Label",
       "active",
-      "anchor",
       "bg-dots",
       "blog",
       "blog-header",
@@ -2232,7 +2231,6 @@
       "where",
       "while",
       "while--looping",
-      "why-are-you-even-here",
       "why-are-you-even-here-its-for-educatoional-purpose-make-use-of-it",
       "why-choose-a-preemptive-kernel",
       "why-linux",

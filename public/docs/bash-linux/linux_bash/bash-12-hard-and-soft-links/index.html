@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2827,10 +2883,10 @@
 			<p>In a file system, directories store links to files and subdirectories.</p>
 <p>These links are primarily categorized into <strong>hard links</strong> and <strong>symbolic links</strong> (also called soft links). Both types of links allow files to have multiple names or references, but they function in different ways.</p>
 <hr>
-<h3 id="hard-links"><strong>Hard Links</strong><a href="#hard-links" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="hard-links"><strong>Hard Links</strong></h3>
 <p>A <strong>hard link</strong> is essentially an additional directory entry that associates a file name with the same inode number.</p>
 <p>An <strong>inode</strong> is a data structure that stores information about a file, including its physical location on the disk.</p>
-<h4 id="how-hard-links-work"><strong>How Hard Links Work</strong><a href="#how-hard-links-work" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="how-hard-links-work"><strong>How Hard Links Work</strong></h4>
 <ul>
 <li>A hard link consists of a file&rsquo;s <strong>name</strong> and its associated <strong>inode number</strong>.</li>
 <li>Each file and directory has at least one hard link that connects its name in the directory to the inode, which contains the pointers to the actual file data on disk.</li>
@@ -2838,40 +2894,40 @@
 <li>A directory typically contains links to files and other directories. These links are always associated with inodes.</li>
 <li>A file can have multiple hard links, meaning it can be referenced by different names from different locations in the filesystem. All links point to the same inode, and thus, the same data.</li>
 </ul>
-<h4 id="characteristics-of-hard-links"><strong>Characteristics of Hard Links</strong><a href="#characteristics-of-hard-links" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="characteristics-of-hard-links"><strong>Characteristics of Hard Links</strong></h4>
 <ul>
 <li>Hard links are efficient because they don’t require additional storage for the content of the file, only another directory entry pointing to the same inode.</li>
 <li>Hard links can only be created within the <strong>same partition</strong>. For example, a hard link in <code>/home</code> cannot point to a file in <code>/etc</code>, as these are typically separate partitions.</li>
 <li>Deleting one hard link does not delete the file. The file will remain in the filesystem until all hard links to it are removed.<br>
 Example: If a file has two hard links, the link count will be 2. Deleting one link reduces the count to 1, but the file still exists. Only when the last link is deleted does the file get removed from the filesystem.</li>
 </ul>
-<h4 id="permissions-with-hard-links"><strong>Permissions with Hard Links</strong><a href="#permissions-with-hard-links" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="permissions-with-hard-links"><strong>Permissions with Hard Links</strong></h4>
 <ul>
 <li>When creating a hard link, it <strong>inherits the permissions</strong> of the original file. The link does not have its own permissions; it simply points to the same inode, which determines access.</li>
 </ul>
 <hr>
-<h3 id="symbolic-links-soft-links"><strong>Symbolic Links (Soft Links)</strong><a href="#symbolic-links-soft-links" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="symbolic-links-soft-links"><strong>Symbolic Links (Soft Links)</strong></h3>
 <p>A <strong>symbolic link</strong> (also known as a <strong>soft link</strong>) is a special type of file that contains a reference to another file or directory in the form of a <strong>path</strong>. Unlike hard links, symbolic links can span across partitions and point to files or directories located elsewhere in the filesystem.</p>
-<h4 id="how-symbolic-links-work"><strong>How Symbolic Links Work</strong><a href="#how-symbolic-links-work" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="how-symbolic-links-work"><strong>How Symbolic Links Work</strong></h4>
 <ul>
 <li>A symbolic link is essentially a pointer to the <strong>original file or directory</strong>.</li>
 <li>It does not point directly to the inode of the target file; instead, it contains a <strong>path</strong> to the file or directory. This makes symbolic links more flexible but also less efficient than hard links.</li>
 <li>Symbolic links are identified by the <code>l</code> file type when viewed using the <code>ls -l</code> command.</li>
 <li>Symbolic links <strong>do not increase the link count</strong> of the original file, unlike hard links.</li>
 </ul>
-<h4 id="characteristics-of-symbolic-links"><strong>Characteristics of Symbolic Links</strong><a href="#characteristics-of-symbolic-links" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="characteristics-of-symbolic-links"><strong>Characteristics of Symbolic Links</strong></h4>
 <ul>
 <li>Symbolic links can point to <strong>files or directories</strong> that are located on different partitions or even remote systems.</li>
 <li>If the target of a symbolic link is deleted or moved, the symbolic link becomes a <strong>&ldquo;dead link&rdquo;</strong> (i.e., a broken reference that no longer points to an existing file).</li>
 <li>Deleting a symbolic link <strong>does not affect the target file or its link count</strong>, as the symbolic link is just a reference to the target, not part of the actual file structure.</li>
 </ul>
-<h4 id="permissions-with-symbolic-links"><strong>Permissions with Symbolic Links</strong><a href="#permissions-with-symbolic-links" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="permissions-with-symbolic-links"><strong>Permissions with Symbolic Links</strong></h4>
 <ul>
 <li>Symbolic links themselves have their own set of permissions, but they are typically not used to control access to the target file. Instead, permissions are controlled on the target file or directory.</li>
 <li>If a user does not have permission to access the <strong>original file</strong>, they won’t be able to follow the symbolic link to access it either.</li>
 </ul>
 <hr>
-<h2 id="creating-hard-and-symbolic-links"><strong>Creating Hard and Symbolic Links</strong><a href="#creating-hard-and-symbolic-links" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="creating-hard-and-symbolic-links"><strong>Creating Hard and Symbolic Links</strong></h2>
 <p>The <strong><code>ln</code></strong> command is used to create both hard and symbolic links.</p>
 
 
@@ -2916,7 +2972,7 @@ Example: If a file has two hard links, the link count will be 2. Deleting one li
 </div>
 <p>This creates a symbolic link pointing to <code>/path/to/original/file</code>.</p>
 <hr>
-<h2 id="key-differences-between-hard-and-symbolic-links"><strong>Key Differences Between Hard and Symbolic Links</strong><a href="#key-differences-between-hard-and-symbolic-links" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="key-differences-between-hard-and-symbolic-links"><strong>Key Differences Between Hard and Symbolic Links</strong></h2>
 <table>
   <thead>
       <tr>
@@ -2969,13 +3025,13 @@ Example: If a file has two hard links, the link count will be 2. Deleting one li
   </tbody>
 </table>
 <hr>
-<h3 id="common-use-cases"><strong>Common Use Cases</strong><a href="#common-use-cases" class="anchor" aria-hidden="true">#</a> </h3>
-<h4 id="hard-links-1"><strong>Hard Links</strong>:<a href="#hard-links-1" class="anchor" aria-hidden="true">#</a> </h4>
+<h3 id="common-use-cases"><strong>Common Use Cases</strong></h3>
+<h4 id="hard-links-1"><strong>Hard Links</strong>:</h4>
 <ul>
 <li><strong>Backup systems</strong>: Hard links are often used in backup systems to create multiple references to files, saving space without duplicating the data.</li>
 <li><strong>File management</strong>: Allowing multiple names for the same file, useful in cases where you want to organize or move files but keep the same content under different names.</li>
 </ul>
-<h4 id="symbolic-links"><strong>Symbolic Links</strong>:<a href="#symbolic-links" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="symbolic-links"><strong>Symbolic Links</strong>:</h4>
 <ul>
 <li><strong>Shortcut creation</strong>: Symbolic links are commonly used to create shortcuts to files or directories. For example, in user directories or for frequently used files.</li>
 <li><strong>Redirecting files</strong>: Symbolic links can be used to point to files that have been moved to a different location, helping maintain compatibility with existing scripts or applications.</li>

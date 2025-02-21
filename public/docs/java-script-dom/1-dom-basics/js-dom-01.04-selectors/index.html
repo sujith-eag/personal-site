@@ -792,6 +792,34 @@
       <ul class="list-unstyled list-nested">
 
   <li>
+    <details open open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li class="active" >
+      <a aria-current="page" href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
     <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
@@ -2204,6 +2232,34 @@
       <ul class="list-unstyled list-nested">
 
   <li>
+    <details open open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li class="active" >
+      <a aria-current="page" href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
     <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
@@ -2798,7 +2854,7 @@
   </details>
 
 			</nav>
-			<h3 id="documentgetelementbyid">&lsquo;document.getElementById&rsquo;<a href="#documentgetelementbyid" class="anchor" aria-hidden="true">#</a> </h3>
+			<h3 id="documentgetelementbyid">&lsquo;document.getElementById&rsquo;</h3>
 <p>If an element has the <code>id</code> attribute, we can get the element using the method <code>document.getElementById(id)</code>, no matter where it is.</p>
 
 
@@ -2816,7 +2872,7 @@
   </figure>
 </div>
 <p>The method <code>getElementById</code> can be called on <code>document</code> object. It looks for the given <code>id</code> in the whole document.</p>
-<h3 id="queryselectorall">&lsquo;querySelectorAll&rsquo;<a href="#queryselectorall" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="queryselectorall">&lsquo;querySelectorAll&rsquo;</h3>
 <p>By far, the most versatile method, <code>elem.querySelectorAll(css)</code> returns all elements inside <code>elem</code> matching the given CSS selector.</p>
 
 
@@ -2869,7 +2925,7 @@ It can be converted to an Array using <code>Array.from()</code> or <a href="http
 </div>
 <p>Pseudo-classes in the CSS selector like <code>:hover</code> and <code>:active</code> are also supported.</p>
 <p><code>document.querySelectorAll(':hover')</code> will return the collection with elements that the pointer is over now (in nesting order: from the outermost <code>&lt;html&gt;</code> to the most nested one).</p>
-<h3 id="queryselectorselector">querySelector(selector)<a href="#queryselectorselector" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="queryselectorselector">querySelector(selector)</h3>
 <p><code>elem.querySelector(css selector)</code> returns the first element for the given CSS selector.</p>
 
 
@@ -2887,10 +2943,10 @@ It can be converted to an Array using <code>Array.from()</code> or <a href="http
 <p>The result is the same as <code>elem.querySelectorAll(css)[0]</code>, but the latter is looking for <em>all</em> elements and picking one, while <code>elem.querySelector</code> just looks for one.
 So it’s faster and also shorter to write.</p>
 <hr>
-<h4 id="elemmatches">elem.matches<a href="#elemmatches" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="elemmatches">elem.matches</h4>
 <p>The <a href="https://dom.spec.whatwg.org/#dom-element-matches">elem.matches(css)</a> does not look for anything, it merely checks if <code>elem</code> matches the given CSS-selector. It returns <code>true</code> or <code>false</code>.</p>
 <hr>
-<h2 id="elements--tags">elements / tags<a href="#elements--tags" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="elements--tags">elements / tags</h2>
 <p>&ldquo;element&rdquo; nodes are primarily used for manipulating the DOM</p>
 
 
@@ -2907,7 +2963,7 @@ So it’s faster and also shorter to write.</p>
   </figure>
 </div>
 <p>Here there is a parent and its children which are on the next level, each on their own branch.</p>
-<h3 id="targeting-nodes-with-selectors">Targeting nodes with selectors<a href="#targeting-nodes-with-selectors" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="targeting-nodes-with-selectors">Targeting nodes with selectors</h3>
 <p>When working with DOM, &lsquo;selectors&rsquo; are used to target the nodes to be worked on.<br>
 Using CSS style selectors to target the <code>&lt;div class = &quot;display&quot;&gt; &lt;/div&gt;</code>:</p>
 

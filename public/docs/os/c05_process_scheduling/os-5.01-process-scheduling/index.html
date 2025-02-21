@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2803,18 +2859,18 @@
 			<p>In multiprogrammed OS, the aim of CPU scheduling is to maximize CPU utilization by switching between processes and have some process running all the time.</p>
 <p>The operating system allocates the CPU to processes, allowing for multiple processes to be in memory. When one process has to wait, the operating system takes the CPU away from that process and gives the CPU to another process. thus improving efficiency.</p>
 <p>Almost all computer resources are scheduled before use.</p>
-<h3 id="511-cpu-io-burst-cycle">5.1.1 CPU-I/O Burst Cycle<a href="#511-cpu-io-burst-cycle" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="511-cpu-io-burst-cycle">5.1.1 CPU-I/O Burst Cycle</h3>
 <p><strong>CPU-I/O Cycle</strong>: Process execution alternates between CPU bursts and I/O waits till the program terminates. This alternating cycle is crucial in choosing the right CPU scheduling algorithm.</p>
 <ul>
 <li><strong>I/O-bound programs</strong>: Short CPU bursts with frequent I/O operations.</li>
 <li><strong>CPU-bound programs</strong>: Few, long CPU bursts.</li>
 </ul>
-<h3 id="512-cpu-scheduler">5.1.2 CPU Scheduler<a href="#512-cpu-scheduler" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="512-cpu-scheduler">5.1.2 CPU Scheduler</h3>
 <ul>
 <li><strong>CPU Scheduler</strong> or <strong>Short-term Scheduler</strong>: Whenever the CPU becomes idle, a short-term scheduler selects processes from the ready queue and allocates the CPU to one of them.</li>
 <li><strong>Ready Queue</strong>: Stores processes in memory that are ready to execute, usually represented by <strong>Process Control Blocks (PCBs)</strong>.</li>
 </ul>
-<h3 id="513-preemptive-scheduling">5.1.3 Preemptive Scheduling<a href="#513-preemptive-scheduling" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="513-preemptive-scheduling">5.1.3 Preemptive Scheduling</h3>
 <p>CPU scheduling occurs in the following situations:</p>
 <ol>
 <li><strong>Running → Waiting</strong>: Process requests I/O or another resource.</li>
@@ -2826,7 +2882,7 @@
 <li><strong>Nonpreemptive Scheduling</strong>: Once a process gets the CPU, it holds it until it terminates or switches to waiting.</li>
 <li><strong>Preemptive Scheduling</strong>: CPU allocation can be interrupted, which may lead to race conditions if processes share data.</li>
 </ul>
-<h3 id="514-dispatcher">5.1.4 Dispatcher<a href="#514-dispatcher" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="514-dispatcher">5.1.4 Dispatcher</h3>
 <p>The <strong>dispatcher</strong> is responsible for transferring control of the CPU to the process selected by the short-term scheduler. Its functions include:</p>
 <ul>
 <li><strong>Switching context</strong>: Saving and loading the process states.</li>
@@ -2836,7 +2892,7 @@
 <p><strong>Dispatch Latency</strong>: The time it takes to switch from one process to another (time it takes for the dispatcher to stop one process and start another).</p>
 <p>The dispatcher should be as fast as possible, as it is invoked during every process switch.</p>
 <hr>
-<h2 id="52-scheduling-criteria">5.2 Scheduling Criteria<a href="#52-scheduling-criteria" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="52-scheduling-criteria">5.2 Scheduling Criteria</h2>
 <p>CPU-scheduling algorithms vary in performance, and the choice of algorithm depends on process characteristics. Key criteria for comparing these algorithms include:</p>
 <ul>
 <li><strong>CPU Utilization</strong>: Maximize CPU usage. In real systems, it should range from 40% (light load) to 90% (heavy load).</li>
@@ -2850,7 +2906,7 @@
 <li><strong>Maximize</strong>: CPU utilization and throughput.</li>
 <li><strong>Minimize</strong>: Turnaround time, waiting time, and response time.</li>
 </ul>
-<h4 id="performance-optimization">Performance Optimization<a href="#performance-optimization" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="performance-optimization">Performance Optimization</h4>
 <p>In most cases, <strong>average values</strong> are optimized, like minimizing average waiting or response time.</p>
 <p>In some cases (e.g., user fairness), it’s important to minimize the maximum waiting time or response time.</p>
 <hr>

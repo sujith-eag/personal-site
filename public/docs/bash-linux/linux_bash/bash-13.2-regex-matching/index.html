@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2798,7 +2854,7 @@
   </details>
 
 			</nav>
-			<h3 id="combining--with------">Combining [] with  *  +  ?<a href="#combining--with------" class="anchor" aria-hidden="true">#</a> </h3>
+			<h3 id="combining--with------">Combining [] with  *  +  ?</h3>
 <dl>
 <dt><code>[abc]+</code></dt>
 <dd>Matches one or more occurrences of <code>a</code>, <code>b</code>, or <code>c</code>. The sequence must contain at least one character from the set.
@@ -2826,13 +2882,13 @@ Does not match: <code>Hello</code>, <code>word123</code>, <code>!word</code></dd
 <p>If there is no middle name then the regex will be searching for two spaces, So for optional middle initial without extra spaces:<br>
 <code>^[A-Z][a-z]+( [A-Z]? [A-Z][a-z]+)?$</code>.</p>
 <hr>
-<h3 id="matching-characters-that-must-not-appear">Matching characters that Must Not appear<a href="#matching-characters-that-must-not-appear" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="matching-characters-that-must-not-appear">Matching characters that Must Not appear</h3>
 <p>To not contain a specific character. Like without any blank space in it. &ldquo;must not include&rdquo; using <code>[^ ]</code>.</p>
 <p>The <code>^</code>, when used inside of brackets means &ldquo;match if the next character in the string is not matching anything in the bracket&rdquo;.<br>
 The blank space indicates the only character we do not want to match against is a space.
 Adding <code>^$</code> to match entire string and to specify that it can contain multiple characters as long as it is not a space using <code>+</code> we will have <code>^[^ ]+$</code></p>
 <hr>
-<h3 id="matching-metacharacters-literally">Matching Metacharacters Literally<a href="#matching-metacharacters-literally" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="matching-metacharacters-literally">Matching Metacharacters Literally</h3>
 <p>When you need to use punctuation or special characters in a regular expression as literals (not as metacharacters), you can escape them using a backslash (<code>\</code>).</p>
 <p><code>\$[0-9]+\.[0-9][0-9]</code><br>
 A regex for a dollar and a cent amount. An alternative is to place the punctuation marks in the <code>[]</code><br>
@@ -2846,7 +2902,7 @@ Similarly <code>^</code> appearing anywhere other than the beginning is taken li
 <code>-</code> also should appear in the middle of the <code>[]</code><br>
 <code>$[0-9]+ [+] [0-9]+ \. [0-9][0-9]</code></p>
 <hr>
-<h3 id="more-precisely-controlling-repetition">More precisely controlling repetition<a href="#more-precisely-controlling-repetition" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="more-precisely-controlling-repetition">More precisely controlling repetition</h3>
 <p>With <code>* +</code> we can indicate that a pattern of characters can be repeated but cannot control the number of repetition.<br>
 with <code>?</code> we have slight control in that the number occurrences is limited to either 0 or 1.</p>
 <p>To control the number of repetitions we use <code>{}</code> within which we can specify one or two numbers which will represent the maximum or the minimum number of occurrences.</p>
@@ -2871,7 +2927,7 @@ means &ldquo;match any string that consists of zero or more non-digits followed 
 <strong>Correct</strong>:<br>
 <code>^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$</code></p>
 <hr>
-<h3 id="selecting-between-sequences">Selecting Between Sequences<a href="#selecting-between-sequences" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="selecting-between-sequences">Selecting Between Sequences</h3>
 <p><strong><code>|</code></strong> : The OR operator, used to match either of two patterns.<br>
 <code>(cat|dog)</code> matches either <code>cat</code> or <code>dog</code>.</p>
 <p><strong>Using <code>()</code></strong>:</p>
@@ -2881,8 +2937,8 @@ means &ldquo;match any string that consists of zero or more non-digits followed 
 </ul>
 <p><code>^[A-Z][a-z]+ ([A-Z]\. )?[A-Z][a-z]+$</code> : Matches a name like <code>John Doe</code> or <code>John A. Doe</code>, where the middle initial is optional.</p>
 <hr>
-<h3 id="sample-problems-for-regular-expressions">Sample Problems for Regular Expressions<a href="#sample-problems-for-regular-expressions" class="anchor" aria-hidden="true">#</a> </h3>
-<h4 id="1-regular-expressions-for-numbers">1. <strong>Regular Expressions for Numbers</strong><a href="#1-regular-expressions-for-numbers" class="anchor" aria-hidden="true">#</a> </h4>
+<h3 id="sample-problems-for-regular-expressions">Sample Problems for Regular Expressions</h3>
+<h4 id="1-regular-expressions-for-numbers">1. <strong>Regular Expressions for Numbers</strong></h4>
 <p><strong>Match a number</strong> :<br>
 <code>[0-9]+</code>  -  Matches a string that contains at least one number.</p>
 <p><strong>Match a string that consists only numbers</strong> :<br>
@@ -2902,7 +2958,7 @@ means &ldquo;match any string that consists of zero or more non-digits followed 
 <p><strong>Match a credit card number (16 digits)</strong> :<br>
 <code>^\d{4}-\d{4}-\d{4}-\d{4}$</code>  -  Matches: <code>1234-5678-9876-5432</code>,  Does not match: <code>1234-5678-9876-543</code>, <code>1234567898765432</code></p>
 <hr>
-<h4 id="2-regular-expressions-for-words">2. <strong>Regular Expressions for Words</strong><a href="#2-regular-expressions-for-words" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="2-regular-expressions-for-words">2. <strong>Regular Expressions for Words</strong></h4>
 <p><strong>Match a string that consists of any sequence of upper lower</strong> :<br>
 <code>^[A-Za-z]+$</code>  -  Matches: <code>Hello</code>, <code>world</code>, <code>hello</code>  Does not match: <code>world123</code></p>
 <p><strong>Match a word that starts with a capital letter</strong> :<br>
@@ -2922,7 +2978,7 @@ means &ldquo;match any string that consists of zero or more non-digits followed 
 <p><strong>Same as above but allows for words with hyphens and apostrophes <code>' -</code></strong> :<br>
 <code>^([A-Za-z'-]+[[:punct:]]? )+[A-Za-z'-]+[[:punct:]]?$</code>  -  Matches: <code>play-by-play</code>, <code>y'all's</code> (Care needed when placing hyphen in braces)</p>
 <hr>
-<h4 id="3-possible-regular-expressions-for-spam-terms">3. <strong>Possible Regular Expressions for Spam Terms</strong><a href="#3-possible-regular-expressions-for-spam-terms" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="3-possible-regular-expressions-for-spam-terms">3. <strong>Possible Regular Expressions for Spam Terms</strong></h4>
 <p><strong>Match common spam keywords like &ldquo;free&rdquo; or &ldquo;win&rdquo;</strong> :<br>
 <code>\b(free|win)\b</code>  -  Matches: <code>free</code>, <code>win</code>,   Does not match: <code>winner</code>, <code>freedom</code></p>
 <p><strong>Match email addresses containing &ldquo;offer&rdquo;</strong> :<br>

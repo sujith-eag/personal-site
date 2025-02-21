@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2847,9 +2903,9 @@
 			<p>Disk buffers are temporary memory locations used by the operating system to manage file input and output (I/O) operations. These buffers allow efficient reading and writing by minimizing the number of interactions between the program and the disk. When working with files, Python creates a temporary &ldquo;buffer&rdquo; that holds data being read or written to a disk. This buffer improves performance by reading and writing data in larger blocks instead of byte-by-byte.</p>
 <p>Breakdown of how file handling works in Python, from opening files to reading, writing, and closing them, as well as dealing with file paths.</p>
 <hr>
-<h2 id="1-file-opening-and-file-handles"><strong>1. File Opening and File Handles</strong><a href="#1-file-opening-and-file-handles" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="1-file-opening-and-file-handles"><strong>1. File Opening and File Handles</strong></h2>
 <p>When you open a file in Python, the operating system creates a file handle. A file handle provides an interface for interacting with the file. It allows Python to read from or write to the file, and it manages the data in memory before writing it to disk (this is done through the file buffer).</p>
-<h3 id="opening-a-file"><strong>Opening a File</strong><a href="#opening-a-file" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="opening-a-file"><strong>Opening a File</strong></h3>
 <p>To open a file, you use the <code>open()</code> function, which returns a file handle that you can use to perform operations on the file. The basic syntax is:</p>
 
 
@@ -2873,9 +2929,9 @@
 </li>
 </ul>
 <hr>
-<h2 id="2-reading-files"><strong>2. Reading Files</strong><a href="#2-reading-files" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="2-reading-files"><strong>2. Reading Files</strong></h2>
 <p>Once a file is opened, you can perform various read operations.</p>
-<h3 id="reading-entire-file-into-a-single-string"><strong>Reading Entire File into a Single String</strong><a href="#reading-entire-file-into-a-single-string" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="reading-entire-file-into-a-single-string"><strong>Reading Entire File into a Single String</strong></h3>
 
 
 
@@ -2888,7 +2944,7 @@
 </span></span><span class="line"><span class="cl"><span class="n">contents</span> <span class="o">=</span> <span class="n">hf</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>  <span class="c1"># Reads the entire file into a single string</span></span></span></code></pre></div>
   </figure>
 </div>
-<h3 id="reading-one-line-at-a-time"><strong>Reading One Line at a Time</strong><a href="#reading-one-line-at-a-time" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="reading-one-line-at-a-time"><strong>Reading One Line at a Time</strong></h3>
 
 
 
@@ -2904,7 +2960,7 @@
 <ul>
 <li><code>readline()</code> returns the line including the trailing newline (<code>\n</code>).</li>
 </ul>
-<h3 id="reading-all-lines-into-a-list"><strong>Reading All Lines into a List</strong><a href="#reading-all-lines-into-a-list" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="reading-all-lines-into-a-list"><strong>Reading All Lines into a List</strong></h3>
 
 
 
@@ -2920,7 +2976,7 @@
 <ul>
 <li>Each element in the list is a line from the file, and each line ends with a newline (<code>\n</code>).</li>
 </ul>
-<h3 id="moving-the-pointer"><strong>Moving the Pointer</strong><a href="#moving-the-pointer" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="moving-the-pointer"><strong>Moving the Pointer</strong></h3>
 
 
 
@@ -2937,9 +2993,9 @@
 <li>The pointer starts at the beginning of the file, and each read operation advances it until the end of the file.</li>
 </ul>
 <hr>
-<h2 id="3-writing-to-files"><strong>3. Writing to Files</strong><a href="#3-writing-to-files" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="3-writing-to-files"><strong>3. Writing to Files</strong></h2>
 <p>You can write to a file by opening it in write or append mode. Python provides methods to write data to a file handle.</p>
-<h3 id="writing-a-string"><strong>Writing a String</strong><a href="#writing-a-string" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="writing-a-string"><strong>Writing a String</strong></h3>
 
 
 
@@ -2955,7 +3011,7 @@
 <ul>
 <li>The <code>write()</code> method does not add a newline by default, so you need to add <code>\n</code> if you want the data to appear on a new line.</li>
 </ul>
-<h3 id="writing-a-list-of-lines"><strong>Writing a List of Lines</strong><a href="#writing-a-list-of-lines" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="writing-a-list-of-lines"><strong>Writing a List of Lines</strong></h3>
 
 
 
@@ -2968,7 +3024,7 @@
 </span></span><span class="line"><span class="cl"><span class="n">hf</span><span class="o">.</span><span class="n">writelines</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>  <span class="c1"># Writes each string in the list to the file (does not add \n)</span></span></span></code></pre></div>
   </figure>
 </div>
-<h3 id="flushing-and-closing-a-file"><strong>Flushing and Closing a File</strong><a href="#flushing-and-closing-a-file" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="flushing-and-closing-a-file"><strong>Flushing and Closing a File</strong></h3>
 <p>When you&rsquo;re done writing, you should close the file to ensure all data is saved and the resources are released.</p>
 
 
@@ -2997,8 +3053,8 @@
   </figure>
 </div>
 <hr>
-<h2 id="4-file-processing-techniques"><strong>4. File Processing Techniques</strong><a href="#4-file-processing-techniques" class="anchor" aria-hidden="true">#</a> </h2>
-<h3 id="processing-files-line-by-line"><strong>Processing Files Line by Line</strong><a href="#processing-files-line-by-line" class="anchor" aria-hidden="true">#</a> </h3>
+<h2 id="4-file-processing-techniques"><strong>4. File Processing Techniques</strong></h2>
+<h3 id="processing-files-line-by-line"><strong>Processing Files Line by Line</strong></h3>
 <p>You can process large files efficiently by reading and writing them line by line. This way, you don’t load the entire file into memory at once.</p>
 
 
@@ -3014,7 +3070,7 @@
 </span></span><span class="line"><span class="cl"><span class="n">hf</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></span></span></code></pre></div>
   </figure>
 </div>
-<h3 id="copying-files-line-by-line"><strong>Copying Files Line by Line</strong><a href="#copying-files-line-by-line" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="copying-files-line-by-line"><strong>Copying Files Line by Line</strong></h3>
 
 
 
@@ -3033,7 +3089,7 @@
 </span></span><span class="line"><span class="cl"><span class="n">outfile</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></span></span></code></pre></div>
   </figure>
 </div>
-<h3 id="copying-files-all-at-once"><strong>Copying Files All at Once</strong><a href="#copying-files-all-at-once" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="copying-files-all-at-once"><strong>Copying Files All at Once</strong></h3>
 <p>If the file is small and can be read all at once, you can use the <code>readlines()</code> or <code>read()</code> method to load the contents into memory and then write them out in one go:</p>
 
 
@@ -3054,9 +3110,9 @@
   </figure>
 </div>
 <hr>
-<h2 id="5-stripping-newline-characters"><strong>5. Stripping Newline Characters</strong><a href="#5-stripping-newline-characters" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="5-stripping-newline-characters"><strong>5. Stripping Newline Characters</strong></h2>
 <p>Files often contain newline characters (<code>\n</code>) that separate lines. You may want to remove these trailing characters when processing the file’s contents.</p>
-<h3 id="removing-the-trailing-newline"><strong>Removing the Trailing Newline</strong><a href="#removing-the-trailing-newline" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="removing-the-trailing-newline"><strong>Removing the Trailing Newline</strong></h3>
 
 
 
@@ -3070,7 +3126,7 @@
 </span></span><span class="line"><span class="cl">    <span class="n">s</span> <span class="o">=</span> <span class="n">line</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># Removes the last character (newline) from each line</span></span></span></code></pre></div>
   </figure>
 </div>
-<h3 id="using"><strong>Using <code>rstrip()</code> to Remove Trailing Whitespace</strong><a href="#using" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="using"><strong>Using <code>rstrip()</code> to Remove Trailing Whitespace</strong></h3>
 
 
 
@@ -3089,8 +3145,8 @@
 <li><strong><code>lstrip()</code></strong> removes whitespace from the left side of the string.</li>
 </ul>
 <hr>
-<h2 id="6-file-path-management"><strong>6. File Path Management</strong><a href="#6-file-path-management" class="anchor" aria-hidden="true">#</a> </h2>
-<h3 id="relative-vs-absolute-file-paths"><strong>Relative vs Absolute File Paths</strong><a href="#relative-vs-absolute-file-paths" class="anchor" aria-hidden="true">#</a> </h3>
+<h2 id="6-file-path-management"><strong>6. File Path Management</strong></h2>
+<h3 id="relative-vs-absolute-file-paths"><strong>Relative vs Absolute File Paths</strong></h3>
 <ul>
 <li>
 <p><strong>Relative Path</strong>: A relative file path is relative to the directory where the Python script is executed. For example, if your Python file is in <code>python_work</code>, and the text files are in a subfolder <code>text_files</code>, the relative path would be:</p>
@@ -3121,7 +3177,7 @@
 </div>
 </li>
 </ul>
-<h3 id="reading-files-using-pathlib"><strong>Reading Files Using Pathlib</strong><a href="#reading-files-using-pathlib" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="reading-files-using-pathlib"><strong>Reading Files Using Pathlib</strong></h3>
 <p>The <code>pathlib</code> module allows for easy handling of file paths. You can read a file directly using <code>read_text()</code> or <code>open()</code> methods.</p>
 
 

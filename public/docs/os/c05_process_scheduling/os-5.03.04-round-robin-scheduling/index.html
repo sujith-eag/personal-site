@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2805,7 +2861,7 @@
 <li><strong>Time Quantum (or Time Slice):</strong> A small unit of time (typically between <strong>10 to 100 milliseconds</strong>) that is defined to allocate CPU time to each process.</li>
 <li><strong>Preemption:</strong> No process is allocated the CPU for more than 1 time quantum in a row (unless it is the only runnable process).</li>
 </ul>
-<h3 id="rr-scheduling-process">RR Scheduling Process:<a href="#rr-scheduling-process" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="rr-scheduling-process">RR Scheduling Process:</h3>
 <ol>
 <li>The <strong>Ready Queue</strong> is treated as a <strong>circular queue</strong>.</li>
 <li>The CPU scheduler goes around the <strong>ready queue</strong>, allocating the CPU to each process for a time interval of <strong>up to 1 time quantum</strong>.</li>
@@ -2831,7 +2887,7 @@
 </li>
 </ol>
 <hr>
-<h3 id="performance-and-time-quantum">Performance and Time Quantum:<a href="#performance-and-time-quantum" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="performance-and-time-quantum">Performance and Time Quantum:</h3>
 <ul>
 <li>
 <p><strong>Impact of Time Quantum Size:</strong></p>
@@ -2848,7 +2904,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="average-waiting-time">Average Waiting Time:<a href="#average-waiting-time" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="average-waiting-time">Average Waiting Time:</h3>
 <ul>
 <li>
 <p>The <strong>average waiting time</strong> under RR scheduling is typically <strong>longer</strong> compared to other scheduling algorithms.</p>
@@ -2868,7 +2924,7 @@ Example:</p>
 </li>
 </ul>
 <hr>
-<h4 id="example-1-different-cpu-burst-times">Example 1: Different CPU Burst Times<a href="#example-1-different-cpu-burst-times" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="example-1-different-cpu-burst-times">Example 1: Different CPU Burst Times</h4>
 <p><strong>Assumptions:</strong></p>
 <ul>
 <li>4 processes: <strong>P1</strong>, <strong>P2</strong>, <strong>P3</strong>, <strong>P4</strong></li>
@@ -2883,7 +2939,7 @@ Example:</p>
 </li>
 </ul>
 <p><strong>Ready Queue:</strong> P1 → P2 → P3 → P4</p>
-<h4 id="step-by-step-execution">Step-by-Step Execution:<a href="#step-by-step-execution" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="step-by-step-execution">Step-by-Step Execution:</h4>
 <table>
   <thead>
       <tr>
@@ -2952,14 +3008,14 @@ Example:</p>
 </table>
 <p>Processes are rotated based on the time quantum, and processes that need more CPU time are repeatedly preempted and moved back to the end of the queue until they complete.</p>
 <hr>
-<h3 id="example-2-time-quantum-too-large-degenerating-to-fcfs">Example 2: Time Quantum Too Large (Degenerating to FCFS)<a href="#example-2-time-quantum-too-large-degenerating-to-fcfs" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="example-2-time-quantum-too-large-degenerating-to-fcfs">Example 2: Time Quantum Too Large (Degenerating to FCFS)</h3>
 <p><strong>Assumptions:</strong></p>
 <ul>
 <li>3 processes: <strong>P1</strong>, <strong>P2</strong>, <strong>P3</strong></li>
 <li>Time quantum = <strong>10 milliseconds</strong> (larger than the CPU bursts)</li>
 </ul>
 <p><strong>Ready Queue:</strong> P1 → P2 → P3</p>
-<h4 id="step-by-step-execution-1">Step-by-Step Execution:<a href="#step-by-step-execution-1" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="step-by-step-execution-1">Step-by-Step Execution:</h4>
 <table>
   <thead>
       <tr>

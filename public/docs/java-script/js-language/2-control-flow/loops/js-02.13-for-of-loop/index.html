@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2786,7 +2842,7 @@
 			</nav>
 			<p><a href="https://javascript.info/array#loops">for…of</a> and <a href="https://javascript.info/iterable">iterables</a> for looping over arrays and iterable objects.
 [[6_Iterables|Iterable]]</p>
-<h2 id="forof"><strong><code>for...of</code> Loop</strong><a href="#forof" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="forof"><strong><code>for...of</code> Loop</strong></h2>
 <p>The <code>for...of</code> loop is a convenient and modern syntax for iterating over <strong>iterable objects</strong> (e.g., arrays, strings, maps, sets). It&rsquo;s a simpler way to loop through elements in a collection, without needing to manually handle indices.</p>
 
 
@@ -2806,7 +2862,7 @@
 <li><code>element</code>: The variable that will hold the value of each item in the iterable on each iteration.</li>
 </ul>
 <hr>
-<h3 id="example-1-looping-through-an-array"><strong>Example 1: Looping Through an Array</strong><a href="#example-1-looping-through-an-array" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="example-1-looping-through-an-array"><strong>Example 1: Looping Through an Array</strong></h3>
 
 
 
@@ -2829,7 +2885,7 @@
 </div>
 <p>In this example, the <code>for...of</code> loop iterates through the array <code>cats</code>, logging each cat name to the console.</p>
 <hr>
-<h3 id="iterables"><strong>Iterables</strong><a href="#iterables" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="iterables"><strong>Iterables</strong></h3>
 <p>An <strong>iterable</strong> is any object that can be used in a <code>for...of</code> loop. While arrays are commonly iterated with <code>for...of</code>, other iterable objects include:</p>
 <ul>
 <li><strong>Strings</strong>: Each character can be iterated over.</li>
@@ -2898,7 +2954,7 @@
   </figure>
 </div>
 <hr>
-<h3 id="create-a-function"><strong>Create a Function <code>unique(arr)</code></strong><a href="#create-a-function" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="create-a-function"><strong>Create a Function <code>unique(arr)</code></strong></h3>
 <p>The <code>for...of</code> loop can be helpful for tasks such as removing duplicates from an array. Here&rsquo;s an example of a function that returns an array of unique items from the input array:</p>
 
 
@@ -2928,7 +2984,7 @@
 <p>This function iterates through the <code>arr</code> using <code>for...of</code> and checks if each element is already in the <code>result</code> array using the <code>includes()</code> method. If the element is not present, it&rsquo;s added to the <code>result</code>.</p>
 <p><strong>Note:</strong> This approach has repeated comparisons (<code>includes()</code>), which is inefficient for large arrays because <code>includes()</code> has a time complexity of O(n). A more optimized solution might involve using a <code>Set</code> (which guarantees uniqueness and has O(1) lookup time) or leveraging other data structures.</p>
 <hr>
-<h3 id="optimized-version-using"><strong>Optimized Version Using <code>Set</code></strong><a href="#optimized-version-using" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="optimized-version-using"><strong>Optimized Version Using <code>Set</code></strong></h3>
 <p>Instead of using an array and <code>includes()</code>, you can use a <code>Set</code>, which automatically handles uniqueness for you:</p>
 
 
@@ -2950,7 +3006,7 @@
 </div>
 <p>This version is much more efficient because the <code>Set</code> data structure automatically removes duplicates.</p>
 <hr>
-<h3 id="summary"><strong>Summary</strong><a href="#summary" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="summary"><strong>Summary</strong></h3>
 <ul>
 <li>The <code>for...of</code> loop is a great way to iterate over <strong>iterables</strong> such as arrays, strings, maps, and sets.</li>
 <li>It&rsquo;s simpler and cleaner than using traditional <code>for</code> loops when you don&rsquo;t need the index.</li>

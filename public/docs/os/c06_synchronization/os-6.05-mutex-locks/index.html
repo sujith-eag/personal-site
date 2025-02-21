@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2800,17 +2856,17 @@
 			</nav>
 			<p>Operating system designers use software tools to address the <strong>critical-section problem</strong>, and one of the simplest tools used is the <strong>mutex lock</strong>.</p>
 <p>The term <strong>mutex</strong> is short for <strong>mutual exclusion</strong>, and its purpose is to protect critical regions of code to prevent <strong>race conditions</strong>.</p>
-<h3 id="purpose-of-mutex-locks">Purpose of Mutex Locks:<a href="#purpose-of-mutex-locks" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="purpose-of-mutex-locks">Purpose of Mutex Locks:</h3>
 <ul>
 <li>A <strong>mutex lock</strong> ensures that only one process can access a critical section at a time.</li>
 <li>A process must <strong>acquire</strong> the lock before entering a critical section and must <strong>release</strong> the lock when it exits the critical section.</li>
 </ul>
-<h3 id="functions">Functions:<a href="#functions" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="functions">Functions:</h3>
 <ul>
 <li><strong>acquire()</strong>: This function is used to acquire the mutex lock before entering the critical section.</li>
 <li><strong>release()</strong>: This function is used to release the lock once the process exits the critical section.</li>
 </ul>
-<h3 id="mechanism">Mechanism:<a href="#mechanism" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="mechanism">Mechanism:</h3>
 <ul>
 <li>A mutex lock uses a boolean variable called <strong>available</strong> to track whether the lock is available or not.
 <ul>
@@ -2819,7 +2875,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="acquire-function">acquire() Function:<a href="#acquire-function" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="acquire-function">acquire() Function:</h3>
 <p>The definition of the <code>acquire()</code> function is as follows:</p>
 
 
@@ -2841,7 +2897,7 @@
 <li>If the lock is unavailable (<code>available == false</code>), the process enters a <strong>busy wait</strong>, meaning it continuously checks if the lock becomes available.</li>
 <li>Once the lock is available, the process acquires it by setting <code>available</code> to <strong>false</strong>, making the lock unavailable for other processes.</li>
 </ul>
-<h3 id="release-function">release() Function:<a href="#release-function" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="release-function">release() Function:</h3>
 <p>The definition of the <code>release()</code> function is as follows:</p>
 
 
@@ -2864,7 +2920,7 @@
 <p><strong>Atomicity</strong>: Calls to <code>acquire()</code> and <code>release()</code> must be <strong>atomic</strong> to avoid race conditions during the process of acquiring and releasing the lock.</p>
 </li>
 </ul>
-<h4 id="example-of-mutex-lock-usage">Example of Mutex Lock Usage:<a href="#example-of-mutex-lock-usage" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="example-of-mutex-lock-usage">Example of Mutex Lock Usage:</h4>
 
 
 
@@ -2881,7 +2937,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="nb">true</span><span class="p">);</span></span></span></code></pre></div>
   </figure>
 </div>
-<h3 id="disadvantages-of-mutex-locks">Disadvantages of Mutex Locks:<a href="#disadvantages-of-mutex-locks" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="disadvantages-of-mutex-locks">Disadvantages of Mutex Locks:</h3>
 <ol>
 <li>
 <p><strong>Busy Waiting</strong>:</p>
@@ -2898,7 +2954,7 @@
 </ul>
 </li>
 </ol>
-<h3 id="advantages-of-spinlocks">Advantages of Spinlocks:<a href="#advantages-of-spinlocks" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="advantages-of-spinlocks">Advantages of Spinlocks:</h3>
 <ul>
 <li>
 <p><strong>No Context Switching</strong>:</p>
@@ -2915,7 +2971,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="conclusion">Conclusion:<a href="#conclusion" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="conclusion">Conclusion:</h3>
 <ul>
 <li><strong>Mutex locks</strong> are essential tools for protecting critical sections and preventing race conditions in concurrent systems.</li>
 <li>While the <strong>busy-waiting</strong> nature of mutex locks (spinlocks) has drawbacks in terms of CPU resource usage, they offer benefits such as <strong>avoiding context switching</strong> and are suitable for situations where locks are held for short durations or in multiprocessor environments.</li>

@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2802,11 +2858,11 @@
 			</nav>
 			<p><strong>Decorators</strong> and function manipulation via methods like <code>call</code>, <code>apply</code>, and <code>bind</code>.</p>
 <hr>
-<h2 id="1-decorators-in-javascript"><strong>1. Decorators in JavaScript</strong><a href="#1-decorators-in-javascript" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="1-decorators-in-javascript"><strong>1. Decorators in JavaScript</strong></h2>
 <p>Decorators in JavaScript are a design pattern that allows you to add behavior to an existing function without modifying its structure.</p>
-<h3 id="transparent-caching-decorator"><strong>Transparent Caching Decorator</strong><a href="#transparent-caching-decorator" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="transparent-caching-decorator"><strong>Transparent Caching Decorator</strong></h3>
 <p>using a <strong>caching decorator</strong> to cache the results of a function call.</p>
-<h3 id="original-slow-function">Original <code>slow</code> Function:<a href="#original-slow-function" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="original-slow-function">Original <code>slow</code> Function:</h3>
 
 
 
@@ -2823,7 +2879,7 @@
   </figure>
 </div>
 <p>The function <code>slow(x)</code> simulates some slow operation and returns the value passed to it. We want to enhance it by caching the results of function calls to avoid redundant processing.</p>
-<h3 id="caching-decorator">Caching Decorator<a href="#caching-decorator" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="caching-decorator">Caching Decorator</h3>
 
 
 
@@ -2854,7 +2910,7 @@
 <li>If the result exists in the cache, it&rsquo;s returned directly.</li>
 <li>If not, the original function (<code>func(x)</code>) is called, the result is cached, and then the result is returned.</li>
 </ol>
-<h3 id="applying-the-decorator-to-slow">Applying the Decorator to <code>slow</code><a href="#applying-the-decorator-to-slow" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="applying-the-decorator-to-slow">Applying the Decorator to <code>slow</code></h3>
 
 
 
@@ -2878,7 +2934,7 @@
 <li>When you call <code>slow(1)</code> for the first time, the decorator caches the result.</li>
 <li>On subsequent calls with the same argument (like <code>slow(1)</code> again), the result is retrieved from the cache without re-running the <code>slow</code> function.</li>
 </ul>
-<h3 id="limitation-of-caching-decorators"><strong>Limitation of Caching Decorators</strong><a href="#limitation-of-caching-decorators" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="limitation-of-caching-decorators"><strong>Limitation of Caching Decorators</strong></h3>
 <p>As you pointed out, the caching decorator may not work well with <strong>object methods</strong>. This is because when you apply a decorator to a method, it may break the <code>this</code> context, which is particularly important for methods in objects.</p>
 
 
@@ -2903,9 +2959,9 @@
 </div>
 <p>To make the caching decorator work with object methods, you&rsquo;d need to preserve the <code>this</code> context, but that&rsquo;s a more advanced use case involving <code>bind</code>.</p>
 <hr>
-<h2 id="2"><strong>2. <code>call()</code>, <code>apply()</code>, and <code>bind()</code></strong><a href="#2" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="2"><strong>2. <code>call()</code>, <code>apply()</code>, and <code>bind()</code></strong></h2>
 <p>Now, let&rsquo;s go over the <strong><code>call</code></strong>, <strong><code>apply</code></strong>, and <strong><code>bind</code></strong> methods — they are all used to change the <strong><code>this</code></strong> context inside a function.</p>
-<h3 id="call"><strong><code>call()</code></strong><a href="#call" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="call"><strong><code>call()</code></strong></h3>
 <p>The <code>call()</code> method allows you to explicitly set the <code>this</code> value in a function. It also allows you to pass arguments one by one.</p>
 
 
@@ -2944,7 +3000,7 @@
 </div>
 <p>In this case, calling <code>sayHi.call(user)</code> changes the <code>this</code> inside <code>sayHi</code> to refer to the <code>user</code> object, and similarly for <code>admin</code>.</p>
 <p>If we call <code>sayHi()</code> directly, it would use the global <code>this</code> (which, in non-strict mode, would be the <code>window</code> object in browsers).</p>
-<h3 id="apply"><strong><code>apply()</code></strong><a href="#apply" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="apply"><strong><code>apply()</code></strong></h3>
 <p>The <code>apply()</code> method is very similar to <code>call()</code>, but instead of passing arguments one by one, you pass them as an array.</p>
 
 
@@ -2987,7 +3043,7 @@
   </figure>
 </div>
 <p><code>apply</code> is useful when you have an array or a list of arguments that you want to pass to the function.</p>
-<h3 id="bind"><strong><code>bind()</code></strong><a href="#bind" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="bind"><strong><code>bind()</code></strong></h3>
 <p>The <code>bind()</code> method is similar to <code>call</code> and <code>apply</code>, but instead of immediately invoking the function, it <strong>returns a new function</strong> with <code>this</code> bound to a specific value and optionally pre-defined arguments.</p>
 
 
@@ -3029,7 +3085,7 @@
 <p>https://javascript.info/bind
 <code>func.bind(user)</code></p>
 <hr>
-<h3 id="summary"><strong>Summary:</strong><a href="#summary" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="summary"><strong>Summary:</strong></h3>
 <ul>
 <li><strong><code>call()</code></strong> and <strong><code>apply()</code></strong> are used to invoke a function with a specific <code>this</code> context, but <code>apply()</code> takes an array of arguments while <code>call()</code> takes arguments one by one.</li>
 <li><strong><code>bind()</code></strong> creates a new function with a fixed <code>this</code> value and optional arguments, but does not invoke the function immediately.</li>

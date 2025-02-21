@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2814,7 +2870,7 @@
   </details>
 
 			</nav>
-			<h2 id="1-grouping-selectors"><strong>1. Grouping Selectors</strong><a href="#1-grouping-selectors" class="anchor" aria-hidden="true">#</a> </h2>
+			<h2 id="1-grouping-selectors"><strong>1. Grouping Selectors</strong></h2>
 <p>Grouping selectors allows for applying the same style rules to multiple elements. Instead of writing separate rules for similar selectors, they can be grouped together with a comma-separated list. This helps in reducing redundancy and makes your CSS more efficient.</p>
 <p>If the <code>.read</code> and <code>.unread</code> selectors share common style declarations, we can group them together:</p>
 <p><strong>Example 1: Grouping selectors without grouping</strong></p>
@@ -2865,7 +2921,7 @@
 </div>
 <p>By grouping them, you can apply common properties (like <code>color</code> and <code>background-color</code>) to both classes at once. This reduces repetition and makes your code easier to maintain.</p>
 <hr>
-<h2 id="2-chaining-selectors"><strong>2. Chaining Selectors</strong><a href="#2-chaining-selectors" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="2-chaining-selectors"><strong>2. Chaining Selectors</strong></h2>
 <p>Chaining selectors allows for targeting elements that match multiple conditions, such as an element that has both a specific class and an ID, or multiple classes. This technique can be used to apply styles more specifically without having to create new classes or IDs.</p>
 <p><strong>Example 1: Chaining two classes</strong>
 Chain class selectors to target elements that have both classes:</p>
@@ -2937,9 +2993,9 @@ Chaining a class and an ID to target a specific element:</p>
 </ul>
 <p><strong>Important</strong>: You cannot chain multiple type selectors (e.g., <code>div</code> and <code>p</code>) since an element can only be one type. For example, <code>divp</code> is not valid because it tries to target a non-existent <code>&lt;divp&gt;</code> element.</p>
 <hr>
-<h2 id="3-combinators"><strong>3. Combinators</strong><a href="#3-combinators" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="3-combinators"><strong>3. Combinators</strong></h2>
 <p>Combinators in CSS are used to describe relationships between elements. They allow us to select elements based on their position or relationship in the HTML structure.</p>
-<h3 id="31-descendant-combinator-a-b"><strong>3.1 Descendant Combinator (A B)</strong><a href="#31-descendant-combinator-a-b" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="31-descendant-combinator-a-b"><strong>3.1 Descendant Combinator (A B)</strong></h3>
 <p>Specifies that the element selected by <code>B</code> is a descendant of the element selected by <code>A</code>, but is not necessarily a direct child.<br>
 The <strong>descendant combinator</strong> (represented by a space between two selectors) selects an element that is a descendant of another element. This can be any level of nesting, not just direct children.</p>
 <p><code>child</code> class will only be selected if it is nested inside <code>ancestor</code>, regardless of how deep that nesting is.</p>
@@ -2977,7 +3033,7 @@ The <strong>descendant combinator</strong> (represented by a space between two s
 <li>There is no limit to how many nested elements you can select with descendant combinators, e.g., <code>.one .two .three .four</code>.</li>
 </ul>
 <hr>
-<h3 id="32-next-sibling-combinator-a--b"><strong>3.2 Next-Sibling Combinator (A + B)</strong><a href="#32-next-sibling-combinator-a--b" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="32-next-sibling-combinator-a--b"><strong>3.2 Next-Sibling Combinator (A + B)</strong></h3>
 <p>The <strong>next-sibling combinator</strong> specifies that the elements selected by both <code>A</code> and <code>B</code> have the same parent and selects the element <code>B</code> that immediately follows element <code>A</code> as a sibling.</p>
 
 
@@ -3008,7 +3064,7 @@ The <strong>descendant combinator</strong> (represented by a space between two s
 <li>This rule will apply <code>color: purple</code> to <code>.second</code> only if it directly follows <code>.first</code>.</li>
 </ul>
 <hr>
-<h3 id="33-subsequent-sibling-combinator-a-"><strong>3.3 Subsequent-Sibling Combinator (A ~ B)</strong><a href="#33-subsequent-sibling-combinator-a-" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="33-subsequent-sibling-combinator-a-"><strong>3.3 Subsequent-Sibling Combinator (A ~ B)</strong></h3>
 <p>The <strong>subsequent-sibling combinator</strong> selects all elements <code>B</code> that share the same parent as element <code>A</code> and come <strong>after</strong> it, but not necessarily immediately.</p>
 
 
@@ -3040,7 +3096,7 @@ The <strong>descendant combinator</strong> (represented by a space between two s
 <li>In this case, the rule will apply <code>color: orange</code> to <code>.third</code> because it follows <code>.first</code> and is within the same parent.</li>
 </ul>
 <hr>
-<h3 id="34-child-combinator-a--b"><strong>3.4 Child Combinator (A &gt; B)</strong><a href="#34-child-combinator-a--b" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="34-child-combinator-a--b"><strong>3.4 Child Combinator (A &gt; B)</strong></h3>
 <p>The <strong>child combinator</strong> selects element <code>B</code> only if it is a <strong>direct child</strong> of element <code>A</code>.</p>
 
 
@@ -3073,7 +3129,7 @@ The <strong>descendant combinator</strong> (represented by a space between two s
 <li>The <code>.parent &gt; .child</code> selector will only apply styles to <code>.child</code> elements that are direct children of <code>.parent</code>.</li>
 </ul>
 <hr>
-<h3 id="35-column-combinator-a--b"><strong>3.5 Column Combinator (A || B)</strong><a href="#35-column-combinator-a--b" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="35-column-combinator-a--b"><strong>3.5 Column Combinator (A || B)</strong></h3>
 <p>The <strong>column combinator</strong> is used in <strong>tables</strong> to target elements within a specific column.</p>
 
 
@@ -3113,9 +3169,9 @@ The <strong>descendant combinator</strong> (represented by a space between two s
 </ul>
 <hr>
 <h1 id="css-cascade-and-specificity"><strong>CSS Cascade and Specificity</strong></h1>
-<h3 id="specificity-in-css"><strong>Specificity in CSS</strong><a href="#specificity-in-css" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="specificity-in-css"><strong>Specificity in CSS</strong></h3>
 <p>The order of importance in CSS rules is determined by specificity. More specific selectors override less specific ones.</p>
-<h4 id="specificity-hierarchy"><strong>Specificity Hierarchy</strong>:<a href="#specificity-hierarchy" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="specificity-hierarchy"><strong>Specificity Hierarchy</strong>:</h4>
 <ol>
 <li><strong>Inline styles</strong>: Styles applied directly to an element via the <code>style</code> attribute.</li>
 <li><strong>ID selectors</strong>: <code>#idname</code> (more specific than classes or elements).</li>
@@ -3157,7 +3213,7 @@ The <strong>descendant combinator</strong> (represented by a space between two s
 <li><strong>Result</strong>: The text will appear in <strong>blue</strong> because the ID selector (<code>#subsection</code>) has higher specificity than the class selector (<code>.main .list</code>).</li>
 </ul>
 <hr>
-<h3 id="additional-resources">Additional resources<a href="#additional-resources" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="additional-resources">Additional resources</h3>
 <ul>
 <li>
 <p><a href="https://scrimba.com/scrim/co12d4cf99cf2776f19e84a9d">An interactive Scrim</a> 

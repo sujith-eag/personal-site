@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2791,7 +2847,7 @@
 
 			</nav>
 			<p>The <a href="https://javascript.info/object#forin">for…in</a> loop is used to iterate over the <strong>keys/properties</strong> of an object. It allows us to walk through the keys (or property names) in an object.</p>
-<h3 id="the"><strong>The <code>in</code> Operator</strong><a href="#the" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="the"><strong>The <code>in</code> Operator</strong></h3>
 <p>The <code>in</code> operator is used to check if a specific property exists in an object. It returns <code>true</code> if the property is present, and <code>false</code> otherwise.</p>
 
 
@@ -2858,7 +2914,7 @@ The <code>in</code> operator will return <code>true</code> even if a property ex
   </figure>
 </div>
 <hr>
-<h2 id="forin"><strong><code>for..in</code> Loop:</strong><a href="#forin" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="forin"><strong><code>for..in</code> Loop:</strong></h2>
 <p>The <code>for..in</code> loop is specifically designed for iterating over the <strong>keys</strong> of an object. It allows us to access each property name (key) one by one.</p>
 
 
@@ -2907,7 +2963,7 @@ The <code>in</code> operator will return <code>true</code> even if a property ex
 </div>
 <p><strong>Note:</strong> The looping variable (<code>key</code> in this case) can be named anything you prefer, such as <code>prop</code>, <code>field</code>, etc. The example <code>for (let prop in user)</code> is also widely used.</p>
 <hr>
-<h3 id="order-of-properties-in-objects"><strong>Order of Properties in Objects</strong><a href="#order-of-properties-in-objects" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="order-of-properties-in-objects"><strong>Order of Properties in Objects</strong></h3>
 <p>The order in which properties are looped over in an object depends on whether the property names are <strong>integers</strong> or <strong>non-integers</strong>.</p>
 <ul>
 <li><strong>Integer property names</strong> are ordered by their numeric value, regardless of whether they are stored as strings.</li>
@@ -2945,11 +3001,11 @@ The <code>in</code> operator will return <code>true</code> even if a property ex
 <li>In this case, if we want to preserve the order of non-integer property names, we can prefix the integer strings with a <code>+</code> (e.g., <code>&quot;+49&quot;</code> becomes <code>&quot;49&quot;</code>).</li>
 </ul>
 <hr>
-<h3 id="use-case-of"><strong>Use Case of <code>for..in</code></strong><a href="#use-case-of" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="use-case-of"><strong>Use Case of <code>for..in</code></strong></h3>
 <p>The <code>for..in</code> loop is typically used when you need to iterate over <strong>object properties</strong> and doesn&rsquo;t work with arrays in most cases (as array indices are considered numeric and <code>for..in</code> might return unexpected results).</p>
 <p>For arrays, the <code>for...of</code> loop is preferred since it directly iterates over the values rather than the keys.</p>
 <hr>
-<h2 id="summary"><strong>Summary</strong><a href="#summary" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="summary"><strong>Summary</strong></h2>
 <ul>
 <li><strong><code>in</code> operator</strong>: Used to check if a property exists in an object, even if its value is <code>undefined</code>.</li>
 <li><strong><code>for..in</code> loop</strong>: Loops through the <strong>keys</strong> of an object. It&rsquo;s useful for working with object properties but not typically used for arrays.</li>

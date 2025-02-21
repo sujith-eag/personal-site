@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2806,7 +2862,7 @@
   </details>
 
 			</nav>
-			<h2 id="scheduling-function-calls-with"><strong>Scheduling Function Calls with <code>setTimeout</code> and <code>setInterval</code></strong><a href="#scheduling-function-calls-with" class="anchor" aria-hidden="true">#</a> </h2>
+			<h2 id="scheduling-function-calls-with"><strong>Scheduling Function Calls with <code>setTimeout</code> and <code>setInterval</code></strong></h2>
 <p>JavaScript provides the ability to schedule functions to be executed <strong>later</strong> or <strong>repeatedly</strong> using two methods: <strong><code>setTimeout</code></strong> and <strong><code>setInterval</code></strong>.</p>
 <ul>
 <li>
@@ -2817,7 +2873,7 @@
 </li>
 </ul>
 <hr>
-<h3 id="settimeout-"><strong>setTimeout( )</strong><a href="#settimeout-" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="settimeout-"><strong>setTimeout( )</strong></h3>
 <p>The <strong><code>setTimeout()</code></strong> method allows you to schedule a function to run <strong>once</strong> after a specified delay.</p>
 
 
@@ -2870,7 +2926,7 @@
 </div>
 <p>Here, <code>sayHi</code> is called with <code>&quot;Hello&quot;</code> and <code>&quot;John&quot;</code> after 1 second.</p>
 <p>If the first argument is a string, the <code>js</code> creates a function from it.</p>
-<h4 id="using-arrow-functions-best-practice"><strong>Using Arrow Functions (Best Practice):</strong><a href="#using-arrow-functions-best-practice" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="using-arrow-functions-best-practice"><strong>Using Arrow Functions (Best Practice):</strong></h4>
 <p>It&rsquo;s better to use arrow functions rather than passing a string of code:</p>
 
 
@@ -2884,7 +2940,7 @@
   </figure>
 </div>
 <p>Passing a string is <strong>not recommended</strong> because it has security and performance issues. It is safer and clearer to use a function or an arrow function.</p>
-<h4 id="common-mistake-calling-function-immediately"><strong>Common Mistake (Calling Function Immediately):</strong><a href="#common-mistake-calling-function-immediately" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="common-mistake-calling-function-immediately"><strong>Common Mistake (Calling Function Immediately):</strong></h4>
 <p>When you <strong>call</strong> the function immediately, it doesn&rsquo;t work as expected. You need to pass the function reference, not the result of its execution.</p>
 
 
@@ -2904,7 +2960,7 @@
 <p><code>setTimeout</code> expects a reference to a function. And here <code>sayHi()</code> runs the function, and the <em>result of its execution</em> is passed to <code>setTimeout</code>.</p>
 <p>In the wrong example, <code>sayHi()</code> is executed immediately, and its return value (which is <code>undefined</code>) is passed to <code>setTimeout</code>. You should pass <code>sayHi</code> <strong>without parentheses</strong> to ensure it is executed later.</p>
 <hr>
-<h3 id="cleartimeout-"><strong>clearTimeout( )</strong><a href="#cleartimeout-" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="cleartimeout-"><strong>clearTimeout( )</strong></h3>
 <p>You can cancel a scheduled <code>setTimeout()</code> function before it executes by using <code>clearTimeout()</code>.</p>
 
 
@@ -2936,7 +2992,7 @@
 </div>
 <p>Even though <code>clearTimeout(timerId)</code> is called, the alert will never show because the execution was canceled.</p>
 <hr>
-<h3 id="setinterval-"><strong>setInterval( )</strong><a href="#setinterval-" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="setinterval-"><strong>setInterval( )</strong></h3>
 <p>The <strong><code>setInterval()</code></strong> method is similar to <code>setTimeout</code>, but it runs the function <strong>repeatedly</strong> at the specified interval.</p>
 
 
@@ -2966,7 +3022,7 @@
 </span></span></span></code></pre></div>
   </figure>
 </div>
-<h4 id="stopping-the-interval"><strong>Stopping the Interval:</strong><a href="#stopping-the-interval" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="stopping-the-interval"><strong>Stopping the Interval:</strong></h4>
 <p>You can stop the interval by calling <code>clearInterval()</code> and passing the <code>timerId</code> returned by <code>setInterval</code>.</p>
 
 
@@ -2988,13 +3044,13 @@
 <li>The <code>&quot;tick&quot;</code> alert happens every 2 seconds.</li>
 <li>After 5 seconds, the interval is cleared, and <code>&quot;stop&quot;</code> is shown.</li>
 </ul>
-<h3 id="behavior-in-browsers"><strong>Behavior in Browsers:</strong><a href="#behavior-in-browsers" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="behavior-in-browsers"><strong>Behavior in Browsers:</strong></h3>
 <ul>
 <li>In most browsers, including Chrome and Firefox, the internal timer continues to run even when a modal window (<code>alert</code>, <code>confirm</code>, etc.) is open.</li>
 <li>So, if you don’t dismiss the alert for a while, the next <code>&quot;tick&quot;</code> will be shown immediately after you close the current one, making the interval appear shorter.</li>
 </ul>
 <hr>
-<h3 id="nested"><strong>Nested <code>setTimeout()</code></strong><a href="#nested" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="nested"><strong>Nested <code>setTimeout()</code></strong></h3>
 <p><a href="https://javascript.info/settimeout-setinterval#nested-settimeout">Nested setTimeout</a></p>
 <p>You can schedule the next function call <strong>within</strong> the function itself, creating a loop that behaves similarly to <code>setInterval()</code>, but with more flexibility.</p>
 
@@ -3014,7 +3070,7 @@
 <p>This method allows you to control when the next function is called based on the results of the current execution. For example, you might want to vary the interval or conditionally stop the execution.</p>
 <p>The key difference is that with <code>setInterval</code>, the next interval is always scheduled immediately, but with nested <code>setTimeout</code>, you can choose to delay the next call further or conditionally stop it based on some logic.</p>
 <hr>
-<h3 id="important-notes-on"><strong>Important Notes on <code>setTimeout</code> and <code>setInterval</code>:</strong><a href="#important-notes-on" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="important-notes-on"><strong>Important Notes on <code>setTimeout</code> and <code>setInterval</code>:</strong></h3>
 <ol>
 <li>
 <p><strong>Timers are not guaranteed to be precise.</strong> The delay is the minimum time before execution, and the actual execution might happen later due to factors like system load, other running scripts, or the browser&rsquo;s event loop.</p>
@@ -3027,7 +3083,7 @@
 </li>
 </ol>
 <hr>
-<h3 id="summary"><strong>Summary</strong><a href="#summary" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="summary"><strong>Summary</strong></h3>
 <ul>
 <li><code>setTimeout(func, delay)</code> runs <code>func</code> once after <code>delay</code> milliseconds.</li>
 <li><code>setInterval(func, delay)</code> runs <code>func</code> repeatedly every <code>delay</code> milliseconds.</li>

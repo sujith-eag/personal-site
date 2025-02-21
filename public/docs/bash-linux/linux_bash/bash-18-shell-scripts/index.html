@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2796,7 +2852,7 @@
 			</nav>
 			<p>A shell program runs in interpretive mode. It is not compiled into a separate executable file as a C Program is.  Each statement is loaded into memory when it is executed.</p>
 <hr>
-<h2 id="shell-script">Shell Script<a href="#shell-script" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="shell-script">Shell Script</h2>
 <p>When a group of commands have to be executed regularly, they should be stored in a file, and the file itself is executed as <em><strong>Shell Script or Shell Program</strong></em>. Though it is not mandatory to use <code>.sh</code> extension for shell scripts, it is used to make it easy to match with wildcards.</p>
 <p>Shell scripts allow us to automate frequently used commands by saving them in a file, enabling us to execute them later with a single command. In essence, <strong>shell scripts</strong> are small programs.</p>
 <p>Shell scripts are executed in a separate child shell process, it need to be of the same type as the login shell. A Borne shell use a Korn sub-shell to run the script by giving a interpreter first line of the script.</p>
@@ -2821,7 +2877,7 @@
 The first line is the interpreter line which always begins with a <code>#!</code> and followed by the path- name of the shell to be running the script.<br>
 ( The file has to be made executable by giving permission to execute if it does&rsquo;t have it before running it  <code>chmod +x script.sh</code>)</p>
 <hr>
-<h3 id="creating-a-simple-shell-script">Creating a Simple Shell Script<a href="#creating-a-simple-shell-script" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="creating-a-simple-shell-script">Creating a Simple Shell Script</h3>
 <ol>
 <li>Navigate to the desired directory:</li>
 </ol>
@@ -2882,7 +2938,7 @@ The first line is the interpreter line which always begins with a <code>#!</code
   </figure>
 </div>
 <hr>
-<h3 id="using-command-line-arguments">Using Command line arguments<a href="#using-command-line-arguments" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="using-command-line-arguments">Using Command line arguments</h3>
 <p>Shell scripts can accept arguments from command line. Therefore they can run non-interactively and be used with redirection and pipelines.<br>
 When arguments are specified with a shell script, they are assigned to a special &ldquo;variables&rdquo; - rather a <em>positional parameters</em>.</p>
 <p>The first argument is read by the shell into the parameter <code>$1</code>, second into <code>$2</code> and so on.<br>
@@ -2934,7 +2990,7 @@ There are other parameters used by the shell.</p>
   </figure>
 </div>
 <hr>
-<h3 id="making-the-script-flexible">Making the Script Flexible<a href="#making-the-script-flexible" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="making-the-script-flexible">Making the Script Flexible</h3>
 <p>To make the script more versatile, replace the specific file name with <code>$1</code>, which represents the first argument passed to the script:</p>
 
 
@@ -2963,7 +3019,7 @@ There are other parameters used by the shell.</p>
 <p>Handling Spaces in Filenames:<br>
 To ensure the script works with filenames that contain spaces, always enclose <code>$1</code> in double quotes</p>
 <hr>
-<h3 id="using-additional-arguments">Using Additional Arguments<a href="#using-additional-arguments" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="using-additional-arguments">Using Additional Arguments</h3>
 <p>You can also modify the script to accept line numbers as arguments:<br>
 To make sure the numbers for head and tail can be altered by arguments, they can also be taken as <code>$1 $2 $3</code> in <code>middle.sh</code>.</p>
 
@@ -3008,7 +3064,7 @@ Comments are ignored by the shell but provide clarity for users.</p>
   </figure>
 </div>
 <hr>
-<h2 id="using--to-process-multiple-files">Using <code>$@</code> to Process Multiple Files<a href="#using--to-process-multiple-files" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="using--to-process-multiple-files">Using <code>$@</code> to Process Multiple Files</h2>
 <p>To handle multiple files, use <code>$@</code>, which represents all command-line arguments:</p>
 
 
@@ -3048,7 +3104,7 @@ Comments are ignored by the shell but provide clarity for users.</p>
   </figure>
 </div>
 <hr>
-<h3 id="exit-and-exit-status-of-command">exit and Exit status of command<a href="#exit-and-exit-status-of-command" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="exit-and-exit-status-of-command">exit and Exit status of command</h3>
 <p>To terminate a program shell scripts use <code>exit</code> which is similar to <code>exit()</code> in C.<br>
 The command is generally run with a numeric arguments:<br>
 <code>exit 0</code>  - Used when everything went fine.<br>
@@ -3057,7 +3113,7 @@ No Need to place them in script as shell understands when execution is complete.
 <p>It&rsquo;s through the exit command that every command returns an <em>exit status</em> to caller as true or false.    <code>$?</code> stores the exit status of the last command. <code>echo $?</code> showing 0 is success.<br>
 Exit status is important to devise program logic that branches into different paths on the success or failure of a command.</p>
 <hr>
-<h3 id="making-scripts-interactive-using-read">Making Scripts Interactive using read<a href="#making-scripts-interactive-using-read" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="making-scripts-interactive-using-read">Making Scripts Interactive using read</h3>
 <p><code>read</code> statement is the shell&rsquo;s internal tool for taking input from the user which makes the script interactive.<br>
 It is used with variables and the Input supplied through the standard input is real into these variables.<br>
 When <code>read name</code> statement is used, script pauses and takes input from keyboard and stores it in the variable <code>name</code>.<br>

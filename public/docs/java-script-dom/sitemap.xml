@@ -2,6 +2,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
+      <loc>http://localhost:1313/personal-site/docs/java-script-dom/1-dom-basics/</loc>
+      <lastmod>2024-11-09T17:12:50+05:30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
       <loc>http://localhost:1313/personal-site/docs/java-script-dom/2-dom-modification/</loc>
       <lastmod>2025-02-12T13:57:32+05:30</lastmod>
       <changefreq>monthly</changefreq>
@@ -22,6 +29,36 @@
       <priority>0.5</priority>
     </url>
     <url>
+        <loc>http://localhost:1313/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/</loc>
+        <lastmod>2024-11-09T17:13:17+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/</loc>
+        <lastmod>2024-11-09T17:13:52+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/</loc>
+        <lastmod>2024-11-09T17:14:26+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/</loc>
+        <lastmod>2024-11-09T17:14:43+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/</loc>
+        <lastmod>2024-11-09T17:15:01+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
         <loc>http://localhost:1313/personal-site/docs/java-script-dom/2-dom-modification/js-dom-02.01-alert-prompt-confirm/</loc>
         <lastmod>2025-02-12T13:59:59+05:30</lastmod>
         <changefreq>monthly</changefreq>

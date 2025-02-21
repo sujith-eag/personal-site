@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2829,7 +2885,7 @@
 examples would be, Authors write books, publishers publish books, books are translated by translators.</p>
 <p>The basic approach of organizing two or more tables can be using <em><strong>the honor system</strong></em> where the first row of one table will always correspond to the first row of another table. But there are possibility of mistakes in organizing it in this way.
 <em><strong>One table approach</strong></em> could solve this but can lead to redundancy (duplication of data) if there are one to many relationship between columns.</p>
-<h2 id="entity-relationship-diagram">Entity Relationship Diagram<a href="#entity-relationship-diagram" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="entity-relationship-diagram">Entity Relationship Diagram</h2>
 <p>One to one (author writes a book)
 One to many (author writes many books)
 Many to many (few authors together wrote many books)
@@ -2957,13 +3013,13 @@ Third with many branches means that the entity is related to many rows from anot
 </figure>
 For a translator, books do not need to have a translator so they could have zero or many translators so can be represented by the zero.</p>
 <hr>
-<h2 id="keys">Keys<a href="#keys" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="keys">Keys</h2>
 <p>To relate tables to one another.</p>
-<h3 id="primary-keys">Primary Keys<a href="#primary-keys" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="primary-keys">Primary Keys</h3>
 <p>ISBN is a unique identifier given to all books to make it easy to search and identify.
 Similarly, Primary key (like ISBN) is an identifier that is unique for every item in the table.
 Each ID given within different tables (authors, books, publishers) would be the primary key of the table it belongs to.</p>
-<h3 id="foreign-keys">Foreign Keys<a href="#foreign-keys" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="foreign-keys">Foreign Keys</h3>
 <p>A foreign key is a primary key taken from a different table. By referencing the primary key of a different table, it helps relate the tables by forming a link between them.
 
 <figure>
@@ -2984,7 +3040,7 @@ Each ID given within different tables (authors, books, publishers) would be the 
 <p>Representing the many to many relationship using foreign keys in <code>authored</code> table that maps the primary keys of <code>books (book_id)</code> to the primary key of  <code>authors (author_id)</code></p>
 <p>The tables like <code>authored</code> are called joint or junction tables.</p>
 <hr>
-<h2 id="subqueries">Subqueries<a href="#subqueries" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="subqueries">Subqueries</h2>
 <p>A subquery is a query inside another query. also called nested queries which allows for making the queries more dynamic when many id or names have to be accessed.</p>
 
 
@@ -3065,7 +3121,7 @@ To find the author(s) of book Flights</p>
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">);</span></span></span></code></pre></div>
   </figure>
 </div>
-<h4 id="in">IN<a href="#in" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="in">IN</h4>
 <p>This is the keyword used to check whether the desired <code>value</code> in <code>in</code> a given <code>set of values</code>.
 The relationship between the authors and books is many to many. This means there can be one or more authors for a book.
 To find the names of all the books written by an author, we would use <code>IN</code> keyword.</p>
@@ -3094,7 +3150,7 @@ To find the names of all the books written by an author, we would use <code>IN</
 <code>IN</code> is used as the <code>authored</code> table might give many <code>book_id</code> as a set.
 So searching <code>In</code> that to find all the id if they are present in <code>books</code>.</p>
 <hr>
-<h2 id="join">JOIN<a href="#join" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="join">JOIN</h2>
 <p>This allows to combine two or more tables together.</p>
 <p>We can join the tables using a common factor between the two tables (like id) to ensure correct rows are lined up against each other.</p>
 
@@ -3166,9 +3222,9 @@ This will be an <code>INNER JOIN</code> and also there will be no duplicate ID c
   </figure>
 </div>
 <hr>
-<h2 id="sets">Sets<a href="#sets" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="sets">Sets</h2>
 <p>On running a query, the results we see are called <code>result set</code>, which is a kind of set in SQL.</p>
-<h5 id="intersect">INTERSECT<a href="#intersect" class="anchor" aria-hidden="true">#</a> </h5>
+<h5 id="intersect">INTERSECT</h5>
 <p>Intersection of two sets (author, translator) when a person is in both.
 This can be done by using <code>INTERSECT</code> operations.</p>
 
@@ -3200,7 +3256,7 @@ This can be done by using <code>INTERSECT</code> operations.</p>
     class="lazyload blur-up"
   ><figcaption>s</figcaption>
 </figure>
-<h5 id="union">UNION<a href="#union" class="anchor" aria-hidden="true">#</a> </h5>
+<h5 id="union">UNION</h5>
 <p>If a person is either an author or translator or both, then they belong to the union of the two sets.
 So every author and translator is included but only once in this result.</p>
 
@@ -3248,7 +3304,7 @@ So every author and translator is included but only once in this result.</p>
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="s2">&#34;translators&#34;</span><span class="p">;</span></span></span></code></pre></div>
   </figure>
 </div>
-<h5 id="except">EXCEPT<a href="#except" class="anchor" aria-hidden="true">#</a> </h5>
+<h5 id="except">EXCEPT</h5>
 <p>Everyone who is only an author using <code>EXCEPT</code>.
 Which means the set of translators is subtracted from authors.</p>
 
@@ -3280,7 +3336,7 @@ Which means the set of translators is subtracted from authors.</p>
     class="lazyload blur-up"
   ><figcaption>s</figcaption>
 </figure>
-<h4 id="intersect-1">INTERSECT<a href="#intersect-1" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="intersect-1">INTERSECT</h4>
 <p>To find people who are either authors or translators but not both.</p>
 
 <figure>
@@ -3323,7 +3379,7 @@ The <code>INTERSECT</code> is used to intersect the resulting two sets to give t
   </figure>
 </div>
 <p>We have to make sure to have same number and type of columns in the sets to be combined using <code>INTERSECT</code> <code>UNION</code> etc</p>
-<h2 id="groups">Groups<a href="#groups" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="groups">Groups</h2>
 <p>We want to find the average rating if the book.
 First need the group ratings together by the book and then average the ratings out for each books(each group)</p>
 

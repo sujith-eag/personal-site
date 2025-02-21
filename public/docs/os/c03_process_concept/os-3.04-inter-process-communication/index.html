@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2849,7 +2905,7 @@ A process that cannot affect or be affected by other processes. These processes 
 A process that can be affected by or affect other processes. These processes share data and require communication to synchronize and exchange information.</p>
 </li>
 </ul>
-<h4 id="reasons-for-process-cooperation"><strong>Reasons for Process Cooperation:</strong><a href="#reasons-for-process-cooperation" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="reasons-for-process-cooperation"><strong>Reasons for Process Cooperation:</strong></h4>
 <ul>
 <li>
 <p><strong>Information Sharing:</strong><br>
@@ -2886,16 +2942,16 @@ Allows multiple tasks to run concurrently, improving system efficiency.</p>
   ><figcaption>3.12 Communication Models</figcaption>
 </figure>
 <hr>
-<h3 id="341-shared-memory-systems"><strong>3.4.1 Shared-Memory Systems</strong><a href="#341-shared-memory-systems" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="341-shared-memory-systems"><strong>3.4.1 Shared-Memory Systems</strong></h3>
 <p>In <strong>shared-memory systems</strong>, cooperating processes communicate by sharing a region of memory. This allows processes to exchange information by reading and writing data to the shared memory region.</p>
-<h4 id="how-shared-memory-works"><strong>How Shared Memory Works:</strong><a href="#how-shared-memory-works" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="how-shared-memory-works"><strong>How Shared Memory Works:</strong></h4>
 <ul>
 <li>A process creates a <strong>shared memory segment</strong> in its address space.</li>
 <li>Other processes that wish to communicate using this memory must attach the shared memory to their address space.</li>
 <li>These processes can then exchange data by reading and writing in the shared region.</li>
 <li>The OS does not control the data format or the memory location; this responsibility lies with the processes.</li>
 </ul>
-<h4 id="synchronization"><strong>Synchronization:</strong><a href="#synchronization" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="synchronization"><strong>Synchronization:</strong></h4>
 <p>Processes must ensure that they do not write to the same memory location simultaneously. One common problem in cooperative processes is the <strong>Producer-Consumer problem</strong>.</p>
 <ul>
 <li><strong>Producer Process:</strong> Produces data.</li>
@@ -2918,12 +2974,12 @@ The buffer has a fixed size. The producer must wait if the buffer is full, and t
 <li><strong>In Pointer:</strong> Points to the next available position in the buffer.</li>
 <li><strong>Out Pointer:</strong> Points to the next item to be consumed.</li>
 </ul>
-<h4 id="synchronization-mechanism"><strong>Synchronization Mechanism:</strong><a href="#synchronization-mechanism" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="synchronization-mechanism"><strong>Synchronization Mechanism:</strong></h4>
 <p>To ensure the producer and consumer operate efficiently, synchronization mechanisms such as <strong>mutexes</strong> or <strong>semaphores</strong> are often used to avoid race conditions and ensure mutual exclusion.</p>
 <hr>
-<h2 id="342-message-passing-systems"><strong>3.4.2 Message Passing Systems</strong><a href="#342-message-passing-systems" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="342-message-passing-systems"><strong>3.4.2 Message Passing Systems</strong></h2>
 <p>Message passing allows processes to communicate and synchronize without sharing the same address space, making it especially useful in <strong>distributed systems</strong> where processes may reside on different computers connected by a network.</p>
-<h3 id="message-passing-operations"><strong>Message Passing Operations</strong><a href="#message-passing-operations" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="message-passing-operations"><strong>Message Passing Operations</strong></h3>
 <p>Message passing typically provides at least two operations:</p>
 <ul>
 <li><strong>send(message):</strong> Send a message to another process.</li>
@@ -2934,7 +2990,7 @@ The buffer has a fixed size. The producer must wait if the buffer is full, and t
 <li><strong>Fixed-sized messages:</strong> Easier system implementation, but harder to program.</li>
 <li><strong>Variable-sized messages:</strong> More complex system-level implementation, but simpler for the programmer.</li>
 </ul>
-<h3 id="message-passing-implementation-models"><strong>Message Passing Implementation Models</strong><a href="#message-passing-implementation-models" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="message-passing-implementation-models"><strong>Message Passing Implementation Models</strong></h3>
 <p>Message passing systems can be implemented using different methods, including:</p>
 <ul>
 <li><strong>Direct or Indirect Communication</strong></li>
@@ -2942,9 +2998,9 @@ The buffer has a fixed size. The producer must wait if the buffer is full, and t
 <li><strong>Automatic or Explicit Buffering</strong></li>
 </ul>
 <hr>
-<h3 id="3421-naming"><strong>3.4.2.1 Naming</strong><a href="#3421-naming" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="3421-naming"><strong>3.4.2.1 Naming</strong></h3>
 <p>Processes communicating via message passing must refer to each other. This can be done via <strong>direct</strong> or <strong>indirect</strong> communication.</p>
-<h4 id="direct-communication"><strong>Direct Communication</strong><a href="#direct-communication" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="direct-communication"><strong>Direct Communication</strong></h4>
 <ul>
 <li>Each process explicitly names the sender or receiver.</li>
 <li><strong>send(P, message):</strong> Send a message to process P.</li>
@@ -2964,7 +3020,7 @@ The buffer has a fixed size. The producer must wait if the buffer is full, and t
 <p>The disadvantage of both symmetric and asymmetric communication schemes is the <strong>limited modularity</strong> of the resulting process definitions.<br>
 These schemes rely on <strong>hard-coding</strong> techniques, where identifiers must be explicitly stated, which reduces flexibility and makes the system less modular. Such hard-coding is generally less desirable than using techniques that involve <strong>indirection</strong>, where the identities of communicating processes are more dynamically determined.</p>
 <hr>
-<h4 id="indirect-communication"><strong>Indirect Communication</strong><a href="#indirect-communication" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="indirect-communication"><strong>Indirect Communication</strong></h4>
 <p>With indirect communication, processes communicate via <strong>mailboxes</strong> (or ports), which are abstract objects where messages are placed and retrieved.</p>
 <ul>
 <li><strong>send(A, message):</strong> Send a message to mailbox A.</li>
@@ -2981,7 +3037,7 @@ These schemes rely on <strong>hard-coding</strong> techniques, where identifiers
 <li><strong>OS-owned mailbox:</strong> A mailbox exists independently of any process, and the OS manages its creation, deletion, and message passing.</li>
 </ol>
 <hr>
-<h3 id="3422-synchronization"><strong>3.4.2.2 Synchronization</strong><a href="#3422-synchronization" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="3422-synchronization"><strong>3.4.2.2 Synchronization</strong></h3>
 <p>Synchronization determines how send and receive operations block or proceed.</p>
 <ul>
 <li><strong>Blocking Send:</strong> The sender is blocked until the message is received or placed in the mailbox.</li>
@@ -2995,7 +3051,7 @@ These schemes rely on <strong>hard-coding</strong> techniques, where identifiers
 <li>The consumer receives a message via a blocking receive, waiting until a message is available.</li>
 </ul>
 <hr>
-<h3 id="3423-buffering"><strong>3.4.2.3 Buffering</strong><a href="#3423-buffering" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="3423-buffering"><strong>3.4.2.3 Buffering</strong></h3>
 <p>Messages exchanged between processes are held in temporary queues. These queues can be implemented in three ways:</p>
 <ul>
 <li>
@@ -3013,7 +3069,7 @@ The queue can hold an unlimited number of messages. The sender never blocks, reg
 </ul>
 <p>Systems with bounded or unbounded queues are referred to as <strong>automatic buffering systems</strong>, while a zero-capacity queue system is referred to as having <strong>no buffering</strong>.</p>
 <hr>
-<h4 id="summary-for-ipc">Summary for IPC<a href="#summary-for-ipc" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="summary-for-ipc">Summary for IPC</h4>
 <ul>
 <li>
 <p><strong>Direct vs Indirect Communication:</strong><br>
@@ -3030,7 +3086,7 @@ Message queues can be zero-capacity (no buffering), bounded-capacity (limited st
 </ul>
 <p>Message passing is particularly advantageous in distributed systems and when small data exchanges between processes are needed. It is generally slower than shared memory communication because it requires kernel intervention, but it provides easier implementation and avoids synchronization issues.</p>
 <hr>
-<h3 id="summary-of-process-chapter"><strong>Summary of Process Chapter</strong><a href="#summary-of-process-chapter" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="summary-of-process-chapter"><strong>Summary of Process Chapter</strong></h3>
 <ul>
 <li>*<strong>Process Concept:</strong>
 <ul>
@@ -3108,7 +3164,7 @@ Message queues can be zero-capacity (no buffering), bounded-capacity (limited st
 </ul>
 <hr>
 <hr>
-<h3 id="summary--for-threads"><strong>Summary  for Threads</strong><a href="#summary--for-threads" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="summary--for-threads"><strong>Summary  for Threads</strong></h3>
 <ul>
 <li>
 <p><strong>Definition:</strong></p>

@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2891,9 +2947,9 @@ It is not a compiler, it is a C source code to C source code translator. It expa
   </figure>
 </div>
 <hr>
-<h2 id="chapter-4---function-and-program-structure">Chapter 4 - Function and Program Structure<a href="#chapter-4---function-and-program-structure" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="chapter-4---function-and-program-structure">Chapter 4 - Function and Program Structure</h2>
 <p>Functions break large computing tasks into smaller ones and enables others to build upon what others have done instead of starting over from scratch.</p>
-<h3 id="41-basics-of-functions">4.1 Basics of Functions<a href="#41-basics-of-functions" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="41-basics-of-functions">4.1 Basics of Functions</h3>
 <p>Each function definition has the form</p>
 
 
@@ -2918,7 +2974,7 @@ Control returns to the caller even when there is no expression.</p>
 <code>cc</code> command compiles the mentioned file or files.<br>
 <code>cc main.c getline.c strindex.c</code> , this compiles the source files into object files<br>
 <code>main.o getline.o strindex.o</code> and loads them all into an executable file called <code>a.out</code></p>
-<h3 id="42-functions-returning-non-integers">4.2 Functions Returning Non-integers<a href="#42-functions-returning-non-integers" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="42-functions-returning-non-integers">4.2 Functions Returning Non-integers</h3>
 <p>If a name which has not been previously declared occurs in an expression and followed by a left parenthesis, it is declared by context to be a function name.<br>
 <code>while (get_line(line, MAXLINE) &gt; 0)</code></p>
 <p>A type has to be declared to a function as to what it returns,<br>
@@ -2944,7 +3000,7 @@ Second, the calling routine must know that <code>atof</code> returns a non-int v
   </figure>
 </div>
 <p>Here the the return of <code>atof</code> which is a double is converted to <code>int</code> and returned from <code>atoi</code></p>
-<h3 id="43-external-variables">4.3 External Variables<a href="#43-external-variables" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="43-external-variables">4.3 External Variables</h3>
 <p>Internal which describes the arguments and automatic variables defined inside functions.
 External variables are globally accessible, they provide an alternative to function arguments and returned values for communicating data between functions. Any function can access this by referring to its name.</p>
 <p>C does not allow functions to be defined inside other functions, so functions are always external.<br>
@@ -2952,7 +3008,7 @@ Any function may access an eternal variable by referring to it by name.</p>
 <p>If a large number of variables have to be shared between functions, then external variables are more convenient than a long argument lists.</p>
 <p>External variables are also more useful because of their greater scope and lifetime.<br>
 Automatic variables are internal to a function which come into existence when the function is entered and disappears when it is left.</p>
-<h3 id="44-scope-rules">4.4 Scope Rules<a href="#44-scope-rules" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="44-scope-rules">4.4 Scope Rules</h3>
 <p>The scope of a name is the part of the program over which the name is defined.<br>
 For an automatic variable declared at the beginning of a function, the scope is the function in which the name is declared.<br>
 Variables of the same name in different functions are unrelated. Same is true for the arguments of a function.</p>
@@ -3012,7 +3068,7 @@ Any initialization of an external variable goes only with the definition. Array 
   </figure>
 </div>
 <p>Since <code>extern</code> declaration lies outside the function in file one, they apply to all functions; one set of declarations suffice for all file one.</p>
-<h3 id="45-header-files">4.5 Header Files<a href="#45-header-files" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="45-header-files">4.5 Header Files</h3>
 <p>It is probably best to have one header file that contains everything that is to be shared between any two parts of the program like definitions and declarations; So that there will be only one copy to get and keep right as the program evolves.</p>
 <p>These common material are placed in a <code>header</code> file <code>calc.h</code> which will be included as necessary in other files.</p>
 
@@ -3052,7 +3108,7 @@ Any initialization of an external variable goes only with the definition. Array 
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
   </figure>
 </div>
-<h3 id="46-static-variables">4.6 Static Variables<a href="#46-static-variables" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="46-static-variables">4.6 Static Variables</h3>
 <p>The <code>static</code> declaration, applied to an external variable or function, limits the scope of that object to the rest of the source file being compiled only.<br>
 So it provides a way to hide names which must be external but yet should not be visible to users of other files.</p>
 
@@ -3075,7 +3131,7 @@ So it provides a way to hide names which must be external but yet should not be 
 <p>Functions are global, visible to any part of the entire program. If a function is declared <code>static</code>, its name is invisible outside the file in which is declared.</p>
 <p>Internal <code>static</code> variables are local to a particular function just as automatic variables, but they remain in existence rather than coming and going each time the function is activated.
 This means that the internal <code>static</code> variables provide private, permanent storage within a single function.</p>
-<h3 id="47-register-variables">4.7 Register Variables<a href="#47-register-variables" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="47-register-variables">4.7 Register Variables</h3>
 <p><code>register</code> variables are to be placed in the machine registers which may result in faster programs. Which means <code>register</code> declaration advises the compiler that the variable will be heavily used.<br>
 But compilers are free to ignore the advice.</p>
 
@@ -3108,7 +3164,7 @@ But compilers are free to ignore the advice.</p>
 </div>
 <p>Due to hardware imitation, only few variables in each function may be kept in registers and only certain types are allowed.<br>
 It is not possible to take address of a register variable, regardless of it is placed in a register or not.</p>
-<h3 id="48-block-structure">4.8 Block Structure<a href="#48-block-structure" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="48-block-structure">4.8 Block Structure</h3>
 <p>Function cannot be defined within a function but a variable can be defined in a block-structured fashion within a function.<br>
 variables declared in this way hide any identically named variable in outer block, and remain in existence until the matching right brace.</p>
 
@@ -3128,7 +3184,7 @@ variables declared in this way hide any identically named variable in outer bloc
   </figure>
 </div>
 <p>Automatic variables and formal parameters also hide eternal variables and functions of the same name. Better to avoid using same names which conceal names in outer scope to avoid confusion.</p>
-<h3 id="49-initialization">4.9 Initialization<a href="#49-initialization" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="49-initialization">4.9 Initialization</h3>
 <p>In the absence of explicit initialization, external and static variables are guaranteed to be initialized to zero;<br>
 automatic and register variables have undefined (garbage) initial values.</p>
 <p><em><strong>Scalar variables</strong></em>, may be initialized when they are defined, by following the name with an equal sign and an expression.</p>
@@ -3154,7 +3210,7 @@ There is no way to initialize an element in the middle of an array without suppl
 <p>Character arrays are a special case of initialization; a string may be used instead of the braces and commas notation.<br>
 <code>char pattern = &quot;ould&quot;;</code><br>
 <code>char patter[] = { 'o', 'u', 'l', 'd', '\0' };</code></p>
-<h3 id="410-recursion">4.10 Recursion<a href="#410-recursion" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="410-recursion">4.10 Recursion</h3>
 <p>A function may call itself directly or indirectly.<br>
 When a function calls itself recursively, each invocation gets a fresh set of all the sutomatic variables independent of the previous set.</p>
 <p>Quick sort using the middle of array for partitioning.</p>
@@ -3197,18 +3253,18 @@ When a function calls itself recursively, each invocation gets a fresh set of al
   </figure>
 </div>
 <p>The standard library includes a version of <code>qsort</code> that can sort objects of any type.</p>
-<h3 id="411-the-c-preprocessor">4.11 The C Preprocessor<a href="#411-the-c-preprocessor" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="411-the-c-preprocessor">4.11 The C Preprocessor</h3>
 <p>Preprocessor is a separate first step in compilation.<br>
 examples, <code>#include</code> to include the contents of a file during compilation,<br>
 <code>#define</code> to replace a token by an arbitrary sequence of characters.</p>
-<h4 id="4111-file-inclusion">4.11.1 File Inclusion<a href="#4111-file-inclusion" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="4111-file-inclusion">4.11.1 File Inclusion</h4>
 <p><code>#include &quot;filename&quot;</code> or <code>#include &lt;filename&gt;</code> is replaced by the contents of the file name.</p>
 <p>If the file name is quoted, searching for the file typically begins where the source program was found; if it is not there, or file name has <code>&lt;&gt;</code>, searching follows an implementation defined rule to find the file.<br>
 An included file may itself contain <code>#include</code> lines.</p>
-<h4 id="4112-macro-substitution">4.11.2 Macro Substitution<a href="#4112-macro-substitution" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="4112-macro-substitution">4.11.2 Macro Substitution</h4>
 <p><code>#define name replacement text</code><br>
 subsequent occurrences of the token <code>name</code> will be replaced by the <code>replacement text</code>.</p>
-<h4 id="4113-conditional-inclusion">4.11.3 Conditional Inclusion<a href="#4113-conditional-inclusion" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="4113-conditional-inclusion">4.11.3 Conditional Inclusion</h4>
 <p>Controlling pre-processing itself with conditional statements that are evaluated during pre-processing.</p>
 
 

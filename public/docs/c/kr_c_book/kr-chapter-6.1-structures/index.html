@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2792,11 +2848,11 @@
   </details>
 
 			</nav>
-			<h2 id="chapter-6---structures">Chapter 6 - Structures<a href="#chapter-6---structures" class="anchor" aria-hidden="true">#</a> </h2>
+			<h2 id="chapter-6---structures">Chapter 6 - Structures</h2>
 <p>A structure is a collection of one or more variables, possibly of different types, grouped together under a single name for convenient handling.<br>
 Structures help to organize complicated data, allowing a group of related variables to be treated as a unit instead of separate entities.<br>
 Employee has many attributes, a point is a pair of co ordinates etc.</p>
-<h3 id="61-basics-of-structures">6.1 Basics of Structures<a href="#61-basics-of-structures" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="61-basics-of-structures">6.1 Basics of Structures</h3>
 <p>The keyword <code>struct</code> introduces a structure declaration, which is a list of declarations enclosed in braces.<br>
 An optional name called <code>structure tag</code> may follow the <code>struct</code> keyword. (here <code>point</code>) which can be used as shorthand.<br>
 The variables names in it are called <code>members</code>.</p>
@@ -2924,7 +2980,7 @@ A member of a structure is accessed / referred to in an expression by a construc
 <code>.</code> associates from left to right.</p>
 <p>If declared <code>screen</code> as  <code>struct rect screen;</code>, then<br>
 <code>screen.pt1.x</code> refers to x co ordinate of <code>pt1</code> member of <code>screen</code></p>
-<h3 id="62-structures-and-functions">6.2 Structures and Functions<a href="#62-structures-and-functions" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="62-structures-and-functions">6.2 Structures and Functions</h3>
 <p>There are number of restrictions on C structures.<br>
 The only legal operations on a structure are taking its address with <code>&amp;</code> and accessing its members, copying it, or assigning to it as a unit (as arguments),<br>
 (copying structures make a shallow copy, pointers are copied but does not make copy of the data to which the pointers point to. Structures in structures are also shallow copied)</p>
@@ -3046,7 +3102,7 @@ If <code>pp</code> points to a <code>point</code> structure, <code>*pp</code> is
 <code>*p-&gt;str++</code> increments <code>str</code> after accessing whatever it points to;<br>
 <code>(*p-&gt;str)++</code> increments whatever <code>str</code> points to;<br>
 <code>*p++-&gt;str</code> increments <code>p</code> after accessing whatever <code>str</code> points to.</p>
-<h3 id="63-arrays-of-structures">6.3 Arrays of Structures<a href="#63-arrays-of-structures" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="63-arrays-of-structures">6.3 Arrays of Structures</h3>
 <p>To count the occurrences of each keyword in C.<br>
 Each keyword is a pair of word and its count:</p>
 
@@ -3210,7 +3266,7 @@ Each element of the array is a structure. also written as.</p>
 <p><code>getword</code> uses <code>getch</code> and <code>ungetch</code> from chapter 4.<br>
 <code>isspace</code> to skip space and <code>isalpha</code> to identify letters, <code>isalnum</code> to identify letters and digits;
 all are from <code>&lt;ctype.h&gt;</code></p>
-<h3 id="64-pointers-to-structures">6.4 Pointers to Structures<a href="#64-pointers-to-structures" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="64-pointers-to-structures">6.4 Pointers to Structures</h3>
 <p>Rewriting the keyword counting program again using pointers instead of array indices.
 <code>main</code> and <code>binsearch</code> need modification.</p>
 
@@ -3307,7 +3363,7 @@ computation of <code>mid</code> has to change as it is illegal to to add pointer
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
   </figure>
 </div>
-<h3 id="65-self-referential-structures">6.5 Self-referential Structures<a href="#65-self-referential-structures" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="65-self-referential-structures">6.5 Self-referential Structures</h3>
 <p>When wanting to handle data where the words are not known beforehand and searching through the seen words everytime in a list is not time efficient.<br>
 Solution is to keep a set of seen words in a sorted order all the time and placing the words in proper position as they arrive. This can be done by <code>binary tree</code>.</p>
 <p>The <code>binary tree</code> node, with four components.</p>
@@ -3372,10 +3428,10 @@ Eventually, the word either match something or null pointer is encountered, indi
 .
 .</p>
 <p>If tree becomes unbalanced because the words do not come in random order(words are already in order) then the running time of the program can grow too much.</p>
-<h3 id="66-table-lookup">6.6 Table Lookup<a href="#66-table-lookup" class="anchor" aria-hidden="true">#</a> </h3>
-<h3 id="67-typedef">6.7 Typedef<a href="#67-typedef" class="anchor" aria-hidden="true">#</a> </h3>
-<h3 id="68-unions">6.8 Unions<a href="#68-unions" class="anchor" aria-hidden="true">#</a> </h3>
-<h3 id="69-bit-fields">6.9 Bit-fields<a href="#69-bit-fields" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="66-table-lookup">6.6 Table Lookup</h3>
+<h3 id="67-typedef">6.7 Typedef</h3>
+<h3 id="68-unions">6.8 Unions</h3>
+<h3 id="69-bit-fields">6.9 Bit-fields</h3>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				</div>

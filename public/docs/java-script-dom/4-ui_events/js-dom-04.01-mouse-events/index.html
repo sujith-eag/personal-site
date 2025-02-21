@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2792,7 +2848,7 @@
   </details>
 
 			</nav>
-			<h3 id="mouse-event-types">Mouse Event types<a href="#mouse-event-types" class="anchor" aria-hidden="true">#</a> </h3>
+			<h3 id="mouse-event-types">Mouse Event types</h3>
 <p><code>mousedown/mouseup</code>
 Mouse button is clicked/released over an element.</p>
 <p><code>mouseover/mouseout</code>
@@ -2805,13 +2861,13 @@ Triggers after <code>mousedown</code> and then <code>mouseup</code> over the
 Triggers after two clicks on the same element within a short time-frame. Rarely used nowadays.</p>
 <p><code>contextmenu</code>
 Triggers when the right mouse button is pressed.</p>
-<h3 id="event-order">Event order<a href="#event-order" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="event-order">Event order</h3>
 <p>A left-button click first triggers <code>mousedown</code>, then <code>mouseup</code> and <code>click</code> when it’s released.</p>
 <p>In cases when a single action initiates multiple events, their order is fixed. That is, the handlers are called in the order <code>mousedown</code> → <code>mouseup</code> → <code>click</code>.</p>
-<h3 id="mouse-button">Mouse button<a href="#mouse-button" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="mouse-button">Mouse button</h3>
 <p>Click-related events always have the <code>button</code> property, which allows to get the exact mouse button.
 <code>mousedown</code> and <code>mouseup</code> handlers may need <code>event.button</code>, because these events trigger on any button, so <code>button</code> allows to distinguish between “right-mousedown” and “left-mousedown”.</p>
-<h3 id="modifiers-shift-alt-ctrl-and-meta">Modifiers: shift, alt, ctrl and meta<a href="#modifiers-shift-alt-ctrl-and-meta" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="modifiers-shift-alt-ctrl-and-meta">Modifiers: shift, alt, ctrl and meta</h3>
 <p>All mouse events include the information about pressed modifier keys.
 They are <code>true</code> if the corresponding key was pressed during the event.</p>
 <p>Event properties:</p>
@@ -2840,7 +2896,7 @@ They are <code>true</code> if the corresponding key was pressed during the eve
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span></span></span></code></pre></div>
   </figure>
 </div>
-<h3 id="coordinates-clientxy-pagexy">Coordinates: clientX/Y, pageX/Y<a href="#coordinates-clientxy-pagexy" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="coordinates-clientxy-pagexy">Coordinates: clientX/Y, pageX/Y</h3>
 <p>All mouse events provide coordinates in two flavours:</p>
 <ol>
 <li>Window-relative: <code>clientX</code> and <code>clientY</code>.</li>
@@ -2850,7 +2906,7 @@ They are <code>true</code> if the corresponding key was pressed during the eve
 <p>while <code>clientX/Y</code> are counted from the current window left-upper corner. When the page is scrolled, they change.</p>
 <p>For instance, if we have a window of the size 500x500, and the mouse is in the left-upper corner, then <code>clientX</code> and <code>clientY</code> are <code>0</code>, no matter how the page is scrolled.</p>
 <p>And if the mouse is in the center, then <code>clientX</code> and <code>clientY</code> are <code>250</code>, no matter what place in the document it is. They are similar to <code>position:fixed</code> in that aspect.</p>
-<h4 id="preventing-selection-on-mousedown"><a href="https://javascript.info/mouse-events-basics#preventing-selection-on-mousedown">Preventing selection on mousedown</a><a href="#preventing-selection-on-mousedown" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="preventing-selection-on-mousedown"><a href="https://javascript.info/mouse-events-basics#preventing-selection-on-mousedown">Preventing selection on mousedown</a></h4>
 <p>The default browser action of <code>mousedown</code> is text selection, if it’s not good for the interface, then it should be prevented.</p>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">

@@ -142,6 +142,12 @@
         <priority>0.5</priority>
       </url>
       <url>
+        <loc>http://localhost:1313/personal-site/docs/java-script-dom/1-dom-basics/</loc>
+        <lastmod>2024-11-09T17:12:50+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
         <loc>http://localhost:1313/personal-site/docs/java-script-dom/2-dom-modification/</loc>
         <lastmod>2025-02-12T13:57:32+05:30</lastmod>
         <changefreq>monthly</changefreq>

@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2826,7 +2882,7 @@ Chapter 5 - Pointers and Arrays<br>
 Chapter 6 - Structures<br>
 Chapter 7-8 - Detailed C features</p>
 <hr>
-<h3 id="character-arrays">Character Arrays<a href="#character-arrays" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="character-arrays">Character Arrays</h3>
 <p>We must carefully understand the &lsquo;size&rsquo; of the character array and not exceed it. In C nothing is &lsquo;auto extended&rsquo;.</p>
 
 
@@ -2869,7 +2925,7 @@ Chapter 7-8 - Detailed C features</p>
 This is the reason why C is not used to write programs.</p>
 <p>&ldquo;Buffer Overrun Errors&rdquo;<br>
 90% all security holes are due to C code.</p>
-<h3 id="string--character-constants">String / Character Constants<a href="#string--character-constants" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="string--character-constants">String / Character Constants</h3>
 <p>In C single quotes <code>''</code> are a character and double quotes <code>&quot;&quot;</code> are a character array (neither are string) with a 0 character at the end of it.<br>
 A <code>&quot;&quot;</code> with one character in it is actually 2 bytes.</p>
 <p>A Character is a byte - a short(8-bit) integer.</p>
@@ -2910,7 +2966,7 @@ Hi
 Hi</code></pre>
   </figure>
 </div>
-<h3 id="character-sets">Character Sets<a href="#character-sets" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="character-sets">Character Sets</h3>
 <p>The C char type is just a number (8-bits long) usually ASCII.<br>
 Modern characters include multi-byte sequences using Unicode and <code>UTF-8</code></p>
 
@@ -2941,7 +2997,7 @@ A 65</code></pre>
   </figure>
 </div>
 <p>A character is more similar to an int than to a string.</p>
-<h4 id="terminating-a-string">Terminating a String<a href="#terminating-a-string" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="terminating-a-string">Terminating a String</h4>
 
 
 
@@ -3005,7 +3061,7 @@ So character arrays need to allocate extra byte to store the line end character.
 </span></span></span></code></pre></div>
   </figure>
 </div>
-<h4 id="string-length">String length<a href="#string-length" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="string-length">String length</h4>
 <p>In C string &ldquo;length&rdquo; must be computed in a loop that scans for a zero character.<br>
 There the <code>strlen()</code> function in <code>string.h</code> computes string length.</p>
 
@@ -3066,7 +3122,7 @@ There the <code>strlen()</code> function in <code>string.h</code> computes strin
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
   </figure>
 </div>
-<h4 id="reverse-a-string-in-place-in-c">Reverse a String in place in C<a href="#reverse-a-string-in-place-in-c" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="reverse-a-string-in-place-in-c">Reverse a String in place in C</h4>
 <p>Exercise 1-19 in K&amp;R<br>
 Reversing a string in place involves swapping characters from the start and end of the string until the middle is reached.</p>
 
@@ -3086,13 +3142,13 @@ Reversing a string in place involves swapping characters from the start and end 
   </figure>
 </div>
 <hr>
-<h2 id="chapter-1">Chapter 1<a href="#chapter-1" class="anchor" aria-hidden="true">#</a> </h2>
-<h3 id="11-getting-started">1.1 Getting started<a href="#11-getting-started" class="anchor" aria-hidden="true">#</a> </h3>
+<h2 id="chapter-1">Chapter 1</h2>
+<h3 id="11-getting-started">1.1 Getting started</h3>
 <p><code>int main() {}</code><br>
 <code>printf()</code><br>
 <code>\n</code> is the only way of adding a new line.<br>
 <code>\t</code> for tab, <code>\b</code> for backspace, <code>\&quot;</code> for double quotes, <code>\\</code> for back slash itself.</p>
-<h3 id="12-variables-and-arithmetic">1.2 Variables and Arithmetic<a href="#12-variables-and-arithmetic" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="12-variables-and-arithmetic">1.2 Variables and Arithmetic</h3>
 <p>Comments<br>
 Declaring variables<br>
 (when there is an error a Diagnostic message containing type and list of variables will be shown.)<br>
@@ -3159,7 +3215,7 @@ Indentation and white space is for readability, any position is permissible.</p>
 <p><code>printf</code> also recognizes <code>%d</code> for decimal integer, <code>%o</code> for octal, <code>%x</code> for hexadecimal, <code>%c</code> for character, <code>%s</code> for character string and <code>%%</code> for <code>%</code> itself.</p>
 <p>Each <code>%</code> constraint in first argument should pair with its corresponding second, third arguments, they must line up properly by number and type.</p>
 <p>If you have to input numbers, then consider function <code>scanf</code> which reads input instead of writing output like <code>printf</code></p>
-<h3 id="13-the-for-statement">1.3 The For Statement<a href="#13-the-for-statement" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="13-the-for-statement">1.3 The For Statement</h3>
 
 
 
@@ -3194,7 +3250,7 @@ Indentation and white space is for readability, any position is permissible.</p>
 <p>First part is done once, second part is the condition that is checked each iteration, and last is re-initialization step.</p>
 <p>While and for loops are in-determinant loops structure because they must be read closely to make sure they are properly constructed and not unintentionally a &ldquo;infinite loop&rdquo;.</p>
 <p><code>for</code> loop in python and <code>foreach</code> in PHP are determinant loops. They iterate over all of the elements in a collection which is not finite.</p>
-<h3 id="14-symbolic-constants">1.4 Symbolic Constants<a href="#14-symbolic-constants" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="14-symbolic-constants">1.4 Symbolic Constants</h3>
 <p>To avoid magic numbers like 300, 20 which are buried inside the code which might not convey any information while reading as to what they are.<br>
 With <code>#define</code> construction, at the beginning of the program a <em>symbolic name</em> or <em>symbolic constant</em> to be a particular string of characters.<br>
 The compiler will replace the unquoted occurrences of the name by corresponding string.</p>
@@ -3224,7 +3280,7 @@ The compiler will replace the unquoted occurrences of the name by corresponding 
 <p>The LOWER, UPPER, STEP are constants so they do not appear in declarations.<br>
 To separate them from lower case variable names they are made Fully upper.<br>
 There are no <code>;</code> after the definition because the whole line after the define will be copied, so to avoid too many semicolons in the <code>for</code>.</p>
-<h3 id="15-collection-of-useful-programs">1.5 Collection of Useful Programs<a href="#15-collection-of-useful-programs" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="15-collection-of-useful-programs">1.5 Collection of Useful Programs</h3>
 <p>Family of related programs for doing simple operations in character data.</p>
 <p><code>getchar()</code> and <code>putchar()</code> which are provided by the library.</p>
 <p><em><strong>File Copying</strong></em></p>
@@ -3397,7 +3453,7 @@ else
   </figure>
 </div>
 <p>One and only one of the two statements associated with <code>if-else</code> is done, not both.</p>
-<h3 id="16-arrays">1.6 Arrays<a href="#16-arrays" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="16-arrays">1.6 Arrays</h3>
 <p>The number of elements in an array declaration must be constant at compile time, and the size of the array cannot be adjusted using an array declaration while program is running.</p>
 <p>This leads to security flaws referred to as &ldquo;buffer overflow&rdquo; where a program reads mode data than it can fit into an array where it may overwrite the data or compromise the application.</p>
 
@@ -3440,7 +3496,7 @@ else
 If it is, then <code>c-'0'</code> is the digit.</p>
 <p>By definition, arithmetic involving char and int converts everything to int before proceeding.
 so <code>c-'0'</code> is an integer expression.</p>
-<h3 id="17-functions">1.7 Functions<a href="#17-functions" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="17-functions">1.7 Functions</h3>
 <p>In C, a function is equivalent to a subroutine or function, Encapsulate in a back box.</p>
 
 
@@ -3487,7 +3543,7 @@ so <code>c-'0'</code> is an integer expression.</p>
 </span></span><span class="line"><span class="cl">    <span class="n">statements</span></span></span></code></pre></div>
   </figure>
 </div>
-<h3 id="18-arguments---call-by-value">1.8 Arguments - Call by Value<a href="#18-arguments---call-by-value" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="18-arguments---call-by-value">1.8 Arguments - Call by Value</h3>
 <p>In C, function arguments are passed by value. This means the function is given the value of it&rsquo;s arguments in temporary variables (on a stack) rather than on their address.<br>
 Passing &lsquo;by value&rsquo; has become the norm after C as it doesn&rsquo;t allow the called code to mess with the arguments and create side effects.</p>
 <p>The call stack that made it possible to pass by value also made it possible for the function to call itself recursively.</p>
@@ -3512,7 +3568,7 @@ Passing &lsquo;by value&rsquo; has become the norm after C as it doesn&rsquo;t a
   </figure>
 </div>
 <p>The argument n is used as a temporary variable which counts down till it becomes 0. So no need of i.</p>
-<h3 id="19-character-arrays">1.9 Character Arrays<a href="#19-character-arrays" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="19-character-arrays">1.9 Character Arrays</h3>
 
 
 
@@ -3568,7 +3624,7 @@ Passing &lsquo;by value&rsquo; has become the norm after C as it doesn&rsquo;t a
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
   </figure>
 </div>
-<h3 id="110-scope-external-variable">1.10 Scope; External Variable<a href="#110-scope-external-variable" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="110-scope-external-variable">1.10 Scope; External Variable</h3>
 <p>The variables in main(line, save) are private or local to main as they are declared within main. No other functions have direct access to them.<br>
 The variable in a routine comes to life only if the function is called and disappears when the function exists.</p>
 <p>Global variables which are declared outside can be accessed by any function. They retain their value as they do not disappear.</p>

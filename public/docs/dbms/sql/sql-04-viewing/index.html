@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2795,7 +2851,7 @@
 
 			</nav>
 			<p><code>JOIN</code> can be used to join two tables according to their columns.</p>
-<h2 id="views">Views<a href="#views" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="views">Views</h2>
 <p>A view is a virtual table defined by a query.
 Views are useful for</p>
 <ul>
@@ -2804,7 +2860,7 @@ Views are useful for</p>
 <li>Partitioning: dividing data into logical pieces,</li>
 <li>Securing: hiding columns that should be kept secure.</li>
 </ul>
-<h3 id="simplifying">Simplifying<a href="#simplifying" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="simplifying">Simplifying</h3>
 
 <figure>
   <img
@@ -2909,7 +2965,7 @@ The primary key on one table is usually joined to the corresponding foreign key 
 <p>The data needed to make the view is stored in the underlying tables and this does not make a new table in memory.
 So the virtual table does not take up any memory, but is accessible through this simplified view.
 The data can be ordered also but cannot be edited.</p>
-<h3 id="aggregating">Aggregating<a href="#aggregating" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="aggregating">Aggregating</h3>
 
 
 
@@ -2955,7 +3011,7 @@ With <code>Group by</code> at the end to sort the joined table.</p>
 </div>
 <p>On adding more data on to the table, we can obtain an up to date data from the view because it generates the data newly from the underlying tables.
 The <code>average_book_ratings</code> is now part of the data base schema.</p>
-<h4 id="temporary-view">Temporary view<a href="#temporary-view" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="temporary-view">Temporary view</h4>
 <p>can be used to make a view temporarily which is not stored in the schema. It exists only till the duration of the connection to the database.</p>
 
 
@@ -2970,7 +3026,7 @@ The <code>average_book_ratings</code> is now part of the data base schema.</p>
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s2">&#34;year&#34;</span><span class="p">;</span></span></span></code></pre></div>
   </figure>
 </div>
-<h2 id="common-table-expression-cte">Common Table Expression (CTE)<a href="#common-table-expression-cte" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="common-table-expression-cte">Common Table Expression (CTE)</h2>
 <p>A regular view exists forever in our database schema.
 A temporary view exists for the duration of our connection with the database.
 A CTE is a view that exists for a single query alone.</p>
@@ -2993,7 +3049,7 @@ A CTE is a view that exists for a single query alone.</p>
   </figure>
 </div>
 <p>Creating a view containing the average books ratings per year using <code>CTE</code> instead of temporary view.</p>
-<h2 id="partitioning">Partitioning<a href="#partitioning" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="partitioning">Partitioning</h2>
 <p>Just to break up the data into smaller pieces that will be useful to an application.</p>
 
 
@@ -3019,7 +3075,7 @@ A CTE is a view that exists for a single query alone.</p>
   <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="s2">&#34;2022&#34;</span><span class="p">;</span></span></span></code></pre></div>
   </figure>
 </div>
-<h2 id="securing">Securing<a href="#securing" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="securing">Securing</h2>
 <p>Using <code>view</code> to limit the access to the database and certain data.</p>
 <p>A ride sharing app can change the data which is PII (personally Identifiable information) by creating a view which does not contain any PII.
 Or we can create a view where all the data in name is generated as <code>annoymous</code> to indicate that the data should not be accessed.</p>
@@ -3037,7 +3093,7 @@ Or we can create a view where all the data in name is generated as <code>annoymo
   </figure>
 </div>
 <p>SQLite does not allow access control so a direct query to the rides table will reveal the names.</p>
-<h2 id="soft-deletions">Soft Deletions<a href="#soft-deletions" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="soft-deletions">Soft Deletions</h2>
 <p>Involves marking the row as deleted instead of actually deleting it.</p>
 
 

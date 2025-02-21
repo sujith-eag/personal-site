@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2795,7 +2851,7 @@
 
 			</nav>
 			<p><code>#include &lt;ctype.h&gt;</code> to get the <code>isalnum()</code> function to check alphabets and numbers which returns false for any special characters.</p>
-<h3 id="logic-for-variables">Logic for Variables<a href="#logic-for-variables" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="logic-for-variables">Logic for Variables</h3>
 <ul>
 <li><code>char stack[100]</code>: A fixed-size array to store operators and operands for conversion.</li>
 <li><code>int top = -1</code>: This variable points to the top of the stack.</li>
@@ -2803,7 +2859,7 @@
 <li><code>char *e</code>: A pointer used to traverse the <code>exp[]</code> array.</li>
 <li><code>char x</code>: A variable to store the element popped from the stack.</li>
 </ul>
-<h3 id="implementation-logic">Implementation Logic<a href="#implementation-logic" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="implementation-logic">Implementation Logic</h3>
 <ul>
 <li>Declare a global stack (<code>stack[100]</code>) with <code>top = -1</code> to track the top of the stack.</li>
 <li>In the <code>main</code> function, declare the <code>exp[100]</code> array to capture the user input expression. Use <code>scanf(&quot;%s&quot;, exp)</code> to capture the entire expression (<code>%c</code> is for single <code>char</code>) (<code>&amp;exp</code> is not needed as it is an array).</li>
@@ -2812,7 +2868,7 @@
 <li>Use a <code>while</code> loop (<code>while(*e != '\0')</code>) to traverse the expression by incrementing pointer <code>e++</code>.</li>
 <li>Each iteration processes one character in <code>exp[]</code> and ends when the end of the array is reached which is signaled by <code>*e == '\0'</code></li>
 </ul>
-<h3 id="conversion-logic">Conversion Logic<a href="#conversion-logic" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="conversion-logic">Conversion Logic</h3>
 <p>As the <code>while</code> loop runs, <code>e</code> is incremented and it traverses the <code>exp</code> array elements.<br>
 <code>e</code> points at the location within the array and <code>*e</code> is element in that array location.</p>
 <ul>
@@ -2829,20 +2885,20 @@
 <p>After processing the entire expression, pop all remaining operators from the stack.
 After processing the entire expression the main <code>while</code> loop ends after <code>*e</code> reaches <code>\0</code>. There are still operators in the stack.
 pop all remaining operators from the stack. <code>while (top != -1 )</code> print all the popped items.</p>
-<h3 id="functions-logic">Functions logic<a href="#functions-logic" class="anchor" aria-hidden="true">#</a> </h3>
-<h4 id="push">Push<a href="#push" class="anchor" aria-hidden="true">#</a> </h4>
+<h3 id="functions-logic">Functions logic</h3>
+<h4 id="push">Push</h4>
 <ul>
 <li>push need the <code>char</code> that has to be pushed which is in the <code>*e</code></li>
 <li>Increment the top to next place <code>top++</code>, and assign the value to <code>stack[top]</code></li>
 <li><code>top++ ; stack[top] = x</code>   or <code>stack[++top]</code></li>
 </ul>
-<h4 id="pop">Pop<a href="#pop" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="pop">Pop</h4>
 <ul>
 <li>Edge case is <code>top = -1</code> then return <code>-1</code> to calling function. (This allows to know the end if the pop value is used in any checking)</li>
 <li>else, return the value which is at the <code>stack[top]</code> and then decrement <code>top</code></li>
 <li><code>stack[top--]</code></li>
 </ul>
-<h4 id="priority">Priority<a href="#priority" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="priority">Priority</h4>
 <ul>
 <li>Takes a <code>char</code> as parameter.</li>
 <li>Works by returning a value to reflect the operators precedence which allows the <code>while</code> loop to compare both operators based on their return value.</li>

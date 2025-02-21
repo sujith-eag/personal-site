@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2804,11 +2860,11 @@
   </details>
 
 			</nav>
-			<h3 id="sort-method"><code>sort()</code> Method<a href="#sort-method" class="anchor" aria-hidden="true">#</a> </h3>
+			<h3 id="sort-method"><code>sort()</code> Method</h3>
 <p>The <code>sort()</code> method in JavaScript is used to sort the elements of an array <strong>in place</strong>, meaning it changes the original array, and also returns the sorted array. By default, it converts array elements to strings and sorts them lexicographically (i.e., alphabetically or numerically in string order).</p>
 <p><a href="https://javascript.info/array-methods#sort-fn">sort(fn)</a>
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort">arr.sort()</a></p>
-<h4 id="basic-usage">Basic Usage<a href="#basic-usage" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="basic-usage">Basic Usage</h4>
 
 
 
@@ -2824,7 +2880,7 @@
   </figure>
 </div>
 <p>In this example, the <code>sort()</code> method sorts the numbers as if they were strings, which is why <code>1</code> comes first, then <code>15</code>, and finally <code>2</code>. This may not give the expected numeric order.</p>
-<h4 id="sorting-with-a-custom-comparator">Sorting with a Custom Comparator<a href="#sorting-with-a-custom-comparator" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="sorting-with-a-custom-comparator">Sorting with a Custom Comparator</h4>
 <p>To sort the array in a specific numeric or lexicographical order, we can pass a <strong>comparison function</strong> to <code>sort()</code>. The function should take two parameters (<code>a</code> and <code>b</code>) and return:</p>
 <ul>
 <li>A <strong>negative number</strong> if <code>a</code> should appear before <code>b</code>.</li>
@@ -2852,7 +2908,7 @@
   </figure>
 </div>
 <p>This comparison function returns the difference <code>a - b</code>, which effectively sorts the numbers numerically.</p>
-<h5 id="shorter-version-using-arrow-function">Shorter Version (Using Arrow Function)<a href="#shorter-version-using-arrow-function" class="anchor" aria-hidden="true">#</a> </h5>
+<h5 id="shorter-version-using-arrow-function">Shorter Version (Using Arrow Function)</h5>
 
 
 
@@ -2881,7 +2937,7 @@
   </figure>
 </div>
 <hr>
-<h3 id="sorting-strings">Sorting Strings<a href="#sorting-strings" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="sorting-strings">Sorting Strings</h3>
 <p>When sorting an array of strings, JavaScript compares them lexicographically (alphabetical order):</p>
 
 
@@ -2912,7 +2968,7 @@
   </figure>
 </div>
 <hr>
-<h3 id="copying-and-sorting-an-array">Copying and Sorting an Array<a href="#copying-and-sorting-an-array" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="copying-and-sorting-an-array">Copying and Sorting an Array</h3>
 <p>If you need to sort an array but want to keep the original array intact, you can first make a copy of the array using <code>slice()</code> or the spread operator, and then apply <code>sort()</code>:</p>
 
 
@@ -2943,7 +2999,7 @@
   </figure>
 </div>
 <hr>
-<h3 id="sorting-objects-by-a-property-eg-age">Sorting Objects by a Property (e.g., Age)<a href="#sorting-objects-by-a-property-eg-age" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="sorting-objects-by-a-property-eg-age">Sorting Objects by a Property (e.g., Age)</h3>
 <p>If you have an array of objects, and you want to sort by a specific property (e.g., <code>age</code>), you can pass a comparison function that compares the values of that property:</p>
 
 
@@ -2980,7 +3036,7 @@
   </figure>
 </div>
 <hr>
-<h3 id="shuffle-an-array">Shuffle an Array<a href="#shuffle-an-array" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="shuffle-an-array">Shuffle an Array</h3>
 <p>Shuffling is a way to randomly reorder the elements of an array. While you could use <code>sort()</code> with a random comparator to shuffle the array, this is not a perfect solution because <code>sort()</code> is not intended for randomness and can lead to non-uniform distributions.</p>
 <p>Here’s how to shuffle using a random comparison function (this is <em>not fully random</em>, but works for simple cases):</p>
 
@@ -3026,7 +3082,7 @@
   </figure>
 </div>
 <p>This method works by iterating over the array in reverse order and swapping each element with a randomly selected element from before it.</p>
-<h4 id="simulating-random-distribution">Simulating Random Distribution<a href="#simulating-random-distribution" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="simulating-random-distribution">Simulating Random Distribution</h4>
 <p>If you want to test how well the Fisher-Yates shuffle distributes the results, you can run the shuffle multiple times and count the results:</p>
 
 
@@ -3059,7 +3115,7 @@
 </div>
 <p>This will give you an idea of how evenly the shuffle distributes the different possible permutations of the array <code>[1, 2, 3]</code>.</p>
 <hr>
-<h3 id="key-points">Key Points:<a href="#key-points" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="key-points">Key Points:</h3>
 <ul>
 <li><strong><code>sort()</code></strong> sorts arrays <strong>in place</strong>, meaning it modifies the original array.</li>
 <li>By default, <code>sort()</code> converts array elements to strings and sorts them lexicographically.</li>

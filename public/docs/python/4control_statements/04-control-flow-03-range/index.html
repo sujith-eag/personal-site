@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2831,7 +2887,7 @@
 </span></span><span class="line"><span class="cl"><span class="c1"># Like slice(:j), starts from 0, ends at j-1</span></span></span></code></pre></div>
   </figure>
 </div>
-<h4 id="increment-with-range">Increment with <code>range()</code>:<a href="#increment-with-range" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="increment-with-range">Increment with <code>range()</code>:</h4>
 <ul>
 <li><strong><code>range(i, j, k)</code></strong><br>
 Adds an optional third argument <code>k</code> for defining the step increment, useful for sequences with a specific pattern, like arithmetic progressions (AP).</li>
@@ -2848,7 +2904,7 @@ Adds an optional third argument <code>k</code> for defining the step increment, 
 </span></span><span class="line"><span class="cl"><span class="c1"># Produces: i, i+k, i+2k, ..., i+nk</span></span></span></code></pre></div>
   </figure>
 </div>
-<h4 id="reverse-counting">Reverse Counting:<a href="#reverse-counting" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="reverse-counting">Reverse Counting:</h4>
 <ul>
 <li>To count in reverse, use a negative value for <code>k</code>. Ensure <code>i &gt; j</code> when using a negative step.</li>
 </ul>
@@ -2879,7 +2935,7 @@ Adds an optional third argument <code>k</code> for defining the step increment, 
 </span></span><span class="line"><span class="cl"><span class="c1"># Produces a valid range of indices for the list l</span></span></span></code></pre></div>
   </figure>
 </div>
-<h4 id="converting-range-to-a-list">Converting <code>range()</code> to a List:<a href="#converting-range-to-a-list" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="converting-range-to-a-list">Converting <code>range()</code> to a List:</h4>
 <ul>
 <li><strong><code>range()</code></strong> creates a <code>range</code> object, not a list. To convert it into a list, use the <code>list()</code> function:</li>
 </ul>
@@ -2895,7 +2951,7 @@ Adds an optional third argument <code>k</code> for defining the step increment, 
 </span></span><span class="line"><span class="cl"><span class="c1"># Converts range to list: [0, 1, 2, 3, 4]</span></span></span></code></pre></div>
   </figure>
 </div>
-<h4 id="skipping-numbers-in-sequences">Skipping Numbers in Sequences:<a href="#skipping-numbers-in-sequences" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="skipping-numbers-in-sequences">Skipping Numbers in Sequences:</h4>
 <ul>
 <li>Useful for generating sequences where numbers are skipped, such as even numbers or multiples:</li>
 </ul>
@@ -2913,9 +2969,9 @@ Adds an optional third argument <code>k</code> for defining the step increment, 
   </figure>
 </div>
 <hr>
-<h3 id="using-range-to-generate-sequences">Using <code>range()</code> to Generate Sequences<a href="#using-range-to-generate-sequences" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="using-range-to-generate-sequences">Using <code>range()</code> to Generate Sequences</h3>
 <p><code>range()</code> can be particularly useful in a variety of contexts, such as repeating actions or generating specific number sequences.</p>
-<h5 id="example-1-repeating-a-string-multiple-times">Example 1: Repeating a String Multiple Times<a href="#example-1-repeating-a-string-multiple-times" class="anchor" aria-hidden="true">#</a> </h5>
+<h5 id="example-1-repeating-a-string-multiple-times">Example 1: Repeating a String Multiple Times</h5>
 
 
 
@@ -2928,7 +2984,7 @@ Adds an optional third argument <code>k</code> for defining the step increment, 
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;meow&#34;</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>  <span class="c1"># Output: meowmeowmeow</span></span></span></code></pre></div>
   </figure>
 </div>
-<h5 id="example-2-using-newlines-with-range">Example 2: Using Newlines with <code>range()</code><a href="#example-2-using-newlines-with-range" class="anchor" aria-hidden="true">#</a> </h5>
+<h5 id="example-2-using-newlines-with-range">Example 2: Using Newlines with <code>range()</code></h5>
 
 
 
@@ -2941,7 +2997,7 @@ Adds an optional third argument <code>k</code> for defining the step increment, 
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;meow</span><span class="se">\n</span><span class="s2">&#34;</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>  <span class="c1"># Output: meow (with new line after each &#34;meow&#34;)</span></span></span></code></pre></div>
   </figure>
 </div>
-<h5 id="example-3-removing-the-default-newline-in-print">Example 3: Removing the Default Newline in <code>print()</code><a href="#example-3-removing-the-default-newline-in-print" class="anchor" aria-hidden="true">#</a> </h5>
+<h5 id="example-3-removing-the-default-newline-in-print">Example 3: Removing the Default Newline in <code>print()</code></h5>
 
 
 
@@ -2954,7 +3010,7 @@ Adds an optional third argument <code>k</code> for defining the step increment, 
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;meow</span><span class="se">\n</span><span class="s2">&#34;</span> <span class="o">*</span> <span class="mi">3</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">)</span>  <span class="c1"># Output: meowmeowmeow (without extra newline)</span></span></span></code></pre></div>
   </figure>
 </div>
-<h5 id="example-4-finding-all-factors-of-a-number-n">Example 4: Finding All Factors of a Number <code>n</code><a href="#example-4-finding-all-factors-of-a-number-n" class="anchor" aria-hidden="true">#</a> </h5>
+<h5 id="example-4-finding-all-factors-of-a-number-n">Example 4: Finding All Factors of a Number <code>n</code></h5>
 <p>You can use <code>range()</code> in a <code>for</code> loop to find all factors of a given number <code>n</code>:</p>
 
 

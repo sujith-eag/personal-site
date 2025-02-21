@@ -44,11 +44,11 @@ mainSections = ["docs"]
   bootstrapJavascript = false # false (default) or true
 
   # Nav
-  sectionNav = ["docs"] # ["docs"] (default) or list of sections (e.g. ["docs", "guides"])
-  # sectionNav = ["docs", "linux-terminal", "tools"]
+  # sectionNav = ["docs"] # ["docs"] (default) or list of sections (e.g. ["docs", "guides"])
+  sectionNav = ["docs", "linux-terminal", "tools"]
   toTopButton = false # false (default) or true
   breadcrumbTrail = false # false (default) or true
-  headlineHash = true # true (default) or false
+  headlineHash = false # true (default) or false
   scrollSpy = true # true (default) or false
 
   # Multilingual
@@ -80,7 +80,7 @@ mainSections = ["docs"]
   docsRepoSubPath = "" # "" (none, default) or <sub path>
 
   # SCSS colors
-  # backGround = "yellowgreen"
+  backGround = "yellowgreen"
   ## Dark theme
   # textDark = "#dee2e6" # "#dee2e6" (default), "#dee2e6" (orignal), or custom color
   # accentDark = "#5d2f86" # "#5d2f86" (default), "#5d2f86" (original), or custom color

@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2804,7 +2860,7 @@
   </details>
 
 			</nav>
-			<h3 id="variables-logic">Variables Logic<a href="#variables-logic" class="anchor" aria-hidden="true">#</a> </h3>
+			<h3 id="variables-logic">Variables Logic</h3>
 <ol>
 <li><code>int n</code>: The size of the stack (input by the user).</li>
 <li><code>int top=-1</code>: A variable to track the top of the stack. Initially set to <code>-1</code> to represent an empty stack.</li>
@@ -2816,7 +2872,7 @@
 <li><code>int ch</code>: A variable to capture the user&rsquo;s choice for selecting the stack operation (Push, Pop, Peep, Display, Exit).</li>
 </ol>
 <hr>
-<h2 id="logic-of-implementation">Logic of Implementation<a href="#logic-of-implementation" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="logic-of-implementation">Logic of Implementation</h2>
 <p><strong>Global Declaration of Variables</strong>:</p>
 <ul>
 <li><code>n</code> and <code>top = -1</code> are declared globally to handle the stack&rsquo;s size and top index throughout the functions.</li>
@@ -2842,8 +2898,8 @@
 <ul>
 <li>A choice of <code>0</code> (Exit) will trigger an exit from the loop using <code>exit(0)</code>.</li>
 </ul>
-<h3 id="stack-operations">Stack Operations<a href="#stack-operations" class="anchor" aria-hidden="true">#</a> </h3>
-<h4 id="push">Push<a href="#push" class="anchor" aria-hidden="true">#</a> </h4>
+<h3 id="stack-operations">Stack Operations</h3>
+<h4 id="push">Push</h4>
 <ul>
 <li>If push was the <code>ch</code> choice, then the <code>e</code> to be pushed has to be captured.</li>
 <li>push needs the <code>stack</code> and the item entered in <code>e</code> as parameters.</li>
@@ -2851,21 +2907,21 @@
 <li>otherwise increment top to next position <code>top++</code> and assign <code>e</code> in that place in the stack.</li>
 <li>Print that the element has been pushed into stack.</li>
 </ul>
-<h4 id="pop">Pop<a href="#pop" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="pop">Pop</h4>
 <ul>
 <li>If pop was the choice in <code>ch</code>, then just call pop with just the stack as parameter.</li>
 <li>Edge case - Stack is empty - checking if <code>top == -1</code></li>
 <li>If not empty, take the element at the place of <code>top</code> by <code>stack[top]</code>. Print it as popped.</li>
 <li>Decrement the top with <code>top--</code></li>
 </ul>
-<h4 id="peep">Peep<a href="#peep" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="peep">Peep</h4>
 <ul>
 <li>If option was peep, call peep with <code>stack</code> as parameter.</li>
 <li>Edge case - Stack is empty - Checking with <code>top == -1</code></li>
 <li>else, Printing <code>stack[top]</code></li>
 <li>No decrement.</li>
 </ul>
-<h4 id="display">Display<a href="#display" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="display">Display</h4>
 <ul>
 <li>If choice was display, call with <code>stack</code> as parameter.</li>
 <li>Edge case - Stack not empty - Checking with <code>top == -1</code></li>
@@ -2881,7 +2937,7 @@
 <p>To reduce three checks and print for if the stack is empty, <code>isempty()</code> is called to check if <code>top == -1</code> and print <code>it is empty</code> and return <code>1</code> if not empty return <code>0</code>.
 <code>if (! isempty)</code> return true when not empty, then code inside will run.</p>
 <hr>
-<h2 id="implementation-1-using-switch-case">Implementation 1 (Using Switch Case)<a href="#implementation-1-using-switch-case" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="implementation-1-using-switch-case">Implementation 1 (Using Switch Case)</h2>
 
 
 
@@ -3005,7 +3061,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
   </figure>
 </div>
-<h2 id="implementation-2-using-if-else">Implementation 2 (Using if else)<a href="#implementation-2-using-if-else" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="implementation-2-using-if-else">Implementation 2 (Using if else)</h2>
 
 
 

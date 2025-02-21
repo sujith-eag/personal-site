@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2823,7 +2879,7 @@
 
 			</nav>
 			<p>Key concepts related to storage and file management in Linux.</p>
-<h4 id="file-space"><strong>File Space</strong><a href="#file-space" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="file-space"><strong>File Space</strong></h4>
 <p>File space is the physical collection of storage devices (like hard drives or SSDs) used to store files and makes up the locations of all files and directories. This space can be viewed in two ways:</p>
 <ul>
 <li>
@@ -2835,8 +2891,8 @@
 </ul>
 <p>OS have commands to show both views but we prefer to see logical view.</p>
 <hr>
-<h2 id="files-and-directories"><strong>Files and Directories</strong><a href="#files-and-directories" class="anchor" aria-hidden="true">#</a> </h2>
-<h3 id="files"><strong>Files</strong>:<a href="#files" class="anchor" aria-hidden="true">#</a> </h3>
+<h2 id="files-and-directories"><strong>Files and Directories</strong></h2>
+<h3 id="files"><strong>Files</strong>:</h3>
 <p>A File is the smallest logical unit within the file space. It is a container for storing information or a sequence of characters. It has properties like name, type, and data.<br>
 The file will contain only what is written in it, there is no end-of-file (eof) mark. A file&rsquo;s size, nor even it&rsquo;s name is not stored in the file itself. It is all kept separately in the disk which is only accessible to the kernel.</p>
 <p>Files are stored as a collection of disk blocks. These blocks might not be stored contiguously on the disk and can be scattered.</p>
@@ -2850,11 +2906,11 @@ A directory contains no data but keeps the names of files / directories it conta
 <p><em><strong>Device files</strong></em> :<br>
 All devices and peripherals are represented by files. To read or write a device, operations has to be performed on its associated file.<br>
 Device file names are usually found within the <code>/dev</code> directory.</p>
-<h3 id="directories"><strong>Directories</strong>:<a href="#directories" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="directories"><strong>Directories</strong>:</h3>
 <p>Directories are a folder to store filenames and other directories.<br>
 Directories are used to organize files in a hierarchical structure. Sub-directories can be created within a directory to form a deeper organizational structure.</p>
 <hr>
-<h3 id="partitioning"><strong>Partitioning</strong><a href="#partitioning" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="partitioning"><strong>Partitioning</strong></h3>
 <p>A <strong>partition</strong> is a physical division of storage on a device. Linux allows partitions to be mounted into specific locations (directories) in the filesystem. Partitions can be used to separate system files, user files, and virtual memory (swap space).</p>
 <p><strong>Mounting</strong>: The process of associating a partition with a directory so that the files on the partition are accessible through that directory.
 For backing up, we can <code>unmount</code> a specific partition containing that content and while unmounted, no one can access it. Other partitions will not be affected.</p>
@@ -2862,7 +2918,7 @@ For backing up, we can <code>unmount</code> a specific partition containing that
 <p>Linux offers three separate partitions: <code>/boot</code>, <code>LVM</code> and <code>swap</code>
 <code>/boot</code> must be separated from <code>LVM</code> and also <code>swap</code> as swap space (virtual memory) is treated differently from rest of the file space and not directly accessed by the user.</p>
 <hr>
-<h3 id="inode"><strong>Inode</strong><a href="#inode" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="inode"><strong>Inode</strong></h3>
 <p>An <strong>inode</strong> is additional part of Linux file space, it is a data structure that doesn&rsquo;t contain the name and contents but stores all metadata about a file, such as:</p>
 <ul>
 <li>File type (regular file, directory, symbolic link, etc.)</li>
@@ -2875,7 +2931,7 @@ For backing up, we can <code>unmount</code> a specific partition containing that
 </ul>
 <p>Each file, directory, and symbolic link has an associated inode. The inode does not contain the file&rsquo;s name, but the name is associated with the inode through directory entries.</p>
 <hr>
-<h4 id="links"><strong>Links</strong><a href="#links" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="links"><strong>Links</strong></h4>
 <p><code>link</code> is a pointer which points from a file in a directory to its <code>inode</code> which contains pointers to point at the files&rsquo;s physical blocks.</p>
 <ul>
 <li>
@@ -2889,7 +2945,7 @@ For backing up, we can <code>unmount</code> a specific partition containing that
 </li>
 </ul>
 <hr>
-<h3 id="relative-and-absolute-paths"><strong>Relative and Absolute Paths</strong><a href="#relative-and-absolute-paths" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="relative-and-absolute-paths"><strong>Relative and Absolute Paths</strong></h3>
 <p>We will be in <code>current working directory</code> and accessing files in another directory needs specifying a directory path.</p>
 <p>There are two primary ways to access files:</p>
 <ol>
@@ -2908,7 +2964,7 @@ For backing up, we can <code>unmount</code> a specific partition containing that
 <li>The path can be omitted for executable files if the file is stored in our <code>PATH</code> variable.</li>
 </ul>
 <hr>
-<h4 id="path"><strong><code>PATH</code> Variable</strong><a href="#path" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="path"><strong><code>PATH</code> Variable</strong></h4>
 <p>The <code>PATH</code> environment variable holds a list of directories where executable files are located. When you type a command like <code>ls</code> or <code>cat</code>, the system checks these directories to find the corresponding executable.</p>
 
 
@@ -2936,7 +2992,7 @@ For backing up, we can <code>unmount</code> a specific partition containing that
   </figure>
 </div>
 <hr>
-<h4 id="filename-arguments-and-wildcards"><strong>Filename Arguments and Wildcards</strong><a href="#filename-arguments-and-wildcards" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="filename-arguments-and-wildcards"><strong>Filename Arguments and Wildcards</strong></h4>
 <ul>
 <li><strong>Wildcard Expansion (Globbing)</strong>: Bash allows the use of wildcards (also called globbing) to match multiple files.
 <ul>
@@ -2955,7 +3011,7 @@ For backing up, we can <code>unmount</code> a specific partition containing that
 <code>ls [abc][abc][abc]</code></p>
 <p><code>ls file?.{dat,txt}</code>: Lists files like <code>file1.dat</code>, <code>file2.txt</code>, etc.</p>
 <hr>
-<h4 id="the-top-level-directory-structure"><strong>The Top-Level Directory Structure</strong><a href="#the-top-level-directory-structure" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="the-top-level-directory-structure"><strong>The Top-Level Directory Structure</strong></h4>
 <p>[image of top-level directory structure of Linux]</p>
 <p>Every Linux distribution has a standard set of top-level directories. Some of the common top-level directories include:</p>
 <p><strong><code>/boot</code></strong>: Contains files required to boot the system, such as the Linux kernel.</p>

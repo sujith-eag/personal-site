@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2841,22 +2897,22 @@
 
 			</nav>
 			<p>Interrupts, System Calls, and Modes of Operation</p>
-<h3 id="interrupt-driven-systems"><strong>Interrupt-Driven Systems</strong><a href="#interrupt-driven-systems" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="interrupt-driven-systems"><strong>Interrupt-Driven Systems</strong></h3>
 <p>Modern Operating Systems are <strong>interrupt-driven</strong>, meaning they rely on <strong>interrupts</strong> to perform tasks. If there are no I/O devices to service or no user requests, the OS remains idle, waiting for events to occur.</p>
 <p>An <strong>interrupt</strong> is a signal to the processor indicating that an event has occurred, prompting the OS to take specific actions.</p>
 <p>A <strong>trap</strong> (or <strong>exception</strong>) is a software-generated interrupt triggered by errors (e.g., division by zero, invalid memory access) or by a user program requesting an operating system service.</p>
-<h3 id="interrupt-vs-trap"><strong>Interrupt vs. Trap</strong><a href="#interrupt-vs-trap" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="interrupt-vs-trap"><strong>Interrupt vs. Trap</strong></h3>
 <p>Both <strong>traps</strong> and <strong>interrupts</strong> allow the operating system to take control of the processor but are triggered differently and serve distinct purposes:</p>
 <ul>
 <li><strong>Interrupts</strong> are hardware-driven, typically caused by external events (e.g., I/O operations, timers), while <strong>traps</strong> are software-driven, usually caused by program errors or system service requests.</li>
 </ul>
-<h4 id="1-interrupt">1. <strong>Interrupt</strong>:<a href="#1-interrupt" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="1-interrupt">1. <strong>Interrupt</strong>:</h4>
 <ul>
 <li><strong>Cause</strong>: Hardware-driven events, such as I/O operations or timers.</li>
 <li><strong>Function</strong>: Temporarily halts the processor to handle the event, after which execution resumes.</li>
 <li><strong>Example</strong>: Keyboard press, network packet, disk I/O completion.</li>
 </ul>
-<h4 id="2-trap-exception">2. <strong>Trap (Exception)</strong>:<a href="#2-trap-exception" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="2-trap-exception">2. <strong>Trap (Exception)</strong>:</h4>
 <ul>
 <li><strong>Cause</strong>: Software-generated, typically due to errors or system calls during program execution.</li>
 <li><strong>Function</strong>: Signals the OS for special handling (e.g., error handling or service request).</li>
@@ -2895,7 +2951,7 @@
   </tbody>
 </table>
 <hr>
-<h3 id="interrupt-service-routine"><strong>Interrupt Service Routine</strong><a href="#interrupt-service-routine" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="interrupt-service-routine"><strong>Interrupt Service Routine</strong></h3>
 <p>For each type of interrupt, the OS contains specific code that determines the appropriate action. The OS uses an <strong>Interrupt Service Routine (ISR)</strong> to handle interrupts when they occur.</p>
 <p>Since both the OS and users share the hardware and software resources, any error in a user program should only affect that particular program, not the entire system. However, issues such as infinite loops or erroneous programs modifying data from other programs can cause system-wide problems.</p>
 <div class="callout callout-note d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
@@ -2910,8 +2966,8 @@
 </div>
 
 <hr>
-<h2 id="151-dual-mode-and-multi-mode-operation"><strong>1.5.1 Dual-Mode and Multi-Mode Operation</strong><a href="#151-dual-mode-and-multi-mode-operation" class="anchor" aria-hidden="true">#</a> </h2>
-<h3 id="user-mode-vs-kernel-mode"><strong>User Mode vs Kernel Mode</strong><a href="#user-mode-vs-kernel-mode" class="anchor" aria-hidden="true">#</a> </h3>
+<h2 id="151-dual-mode-and-multi-mode-operation"><strong>1.5.1 Dual-Mode and Multi-Mode Operation</strong></h2>
+<h3 id="user-mode-vs-kernel-mode"><strong>User Mode vs Kernel Mode</strong></h3>
 <p>To protect the OS from errant user programs and vice versa, the OS operates in two main modes: <strong>User Mode</strong> and <strong>Kernel Mode</strong> (also called <strong>system mode</strong>, <strong>privileged mode</strong>, or <strong>supervisor mode</strong>).</p>
 <ul>
 <li><strong>User Mode (1)</strong>: The mode in which user applications run.</li>
@@ -2952,7 +3008,7 @@
   ><figcaption>1.10 User Mode to Kernel Mode</figcaption>
 </figure>
 <hr>
-<h3 id="multi-mode-operation"><strong>Multi-Mode Operation</strong><a href="#multi-mode-operation" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="multi-mode-operation"><strong>Multi-Mode Operation</strong></h3>
 <p>Some CPU&rsquo;s support more than two modes of operation.<br>
 For example, systems supporting <strong>virtualization</strong> may have a mode for the <strong>Virtual Machine Manager (VMM)</strong> that has more privileges than user programs to create virtual machines and to change the state of CPU but fewer privileges than the Kernel.</p>
 <div class="callout callout-note d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
@@ -2967,7 +3023,7 @@ For example, systems supporting <strong>virtualization</strong> may have a mode 
 </div>
 
 <hr>
-<h4 id="mode-transition-and-control-flow"><strong>Mode Transition and Control Flow</strong><a href="#mode-transition-and-control-flow" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="mode-transition-and-control-flow"><strong>Mode Transition and Control Flow</strong></h4>
 <ol>
 <li><strong>Boot time</strong>: The system starts in <strong>Kernel Mode</strong>.</li>
 <li><strong>User applications</strong>: When the OS loads user applications, it switches to <strong>User Mode</strong>.</li>
@@ -2975,10 +3031,10 @@ For example, systems supporting <strong>virtualization</strong> may have a mode 
 <li><strong>Return to User Mode</strong>: Once the OS has completed the task, it returns to <strong>User Mode</strong> to resume the user application.</li>
 </ol>
 <hr>
-<h2 id="system-calls"><strong>System Calls</strong><a href="#system-calls" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="system-calls"><strong>System Calls</strong></h2>
 <p>A <strong>System Call</strong> is a mechanism that allows a user program to request services from the OS to perform tasks on the user program&rsquo;s behalf, typically involving privileged operations that are otherwise restricted.</p>
 <p>System calls are usually implemented as <strong>traps</strong> that transfer control to a specific location in the <strong>interrupt vector</strong>.</p>
-<h5 id="execution-of-a-system-call">Execution of a system call<a href="#execution-of-a-system-call" class="anchor" aria-hidden="true">#</a> </h5>
+<h5 id="execution-of-a-system-call">Execution of a system call</h5>
 <ul>
 <li>When a system call is executed, it is treated by the hardware as a <strong>software interrupt</strong>.</li>
 <li>The <strong>interrupt vector</strong> passes control to a <strong>service routine</strong> in the OS, and the system switches to <strong>Kernel Mode</strong>. (The <strong>system-call service routine</strong> is a part of the operating system. )</li>
@@ -3017,7 +3073,7 @@ For example, systems supporting <strong>virtualization</strong> may have a mode 
 </div>
 
 <hr>
-<h3 id="preventing-illegal-execution"><strong>Preventing Illegal Execution</strong><a href="#preventing-illegal-execution" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="preventing-illegal-execution"><strong>Preventing Illegal Execution</strong></h3>
 <p>Once hardware protection like mode bit is in place, it detects errors that violate modes.</p>
 <p>When the system is in <strong>Kernel Mode</strong>, it can detect errors that violate the operating modes, such as illegal instruction execution or unauthorized memory access. These errors are handled by the OS:</p>
 <ul>
@@ -3037,7 +3093,7 @@ For example, systems supporting <strong>virtualization</strong> may have a mode 
 </div>
 
 <hr>
-<h3 id="152-timer"><strong>1.5.2 Timer</strong><a href="#152-timer" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="152-timer"><strong>1.5.2 Timer</strong></h3>
 <p><strong>Timer</strong> is a component that can interrupt the system after a fixed or variable period, preventing user programs from running indefinitely.
 It is a critical component in the OS to maintain control over execution.</p>
 <ul>
@@ -3048,7 +3104,7 @@ It is a critical component in the OS to maintain control over execution.</p>
 <p>OS ensures that timer is set before transferring control to a user program. If the timer interrupts, control is passed back to the OS, which can either treat the interrupt as an error or extend the program&rsquo;s time.</p>
 <p>Instructions that modify the content of the timer are privileged.</p>
 <hr>
-<h4 id="timer-usage-example"><strong>Timer Usage Example</strong><a href="#timer-usage-example" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="timer-usage-example"><strong>Timer Usage Example</strong></h4>
 <ul>
 <li>A program with a 7-minute limit could have its timer initialized to <strong>420</strong> (7 minutes in seconds).</li>
 <li>Each second, the counter decrements by 1, and control returns to the user program as long as the counter is positive.</li>

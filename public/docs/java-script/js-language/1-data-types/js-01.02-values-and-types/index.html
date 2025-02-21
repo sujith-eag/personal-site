@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2822,8 +2878,8 @@ Each value has a specific <strong>type</strong> that defines how it behaves and 
   </figure>
 </div>
 <hr>
-<h2 id="types-of-values">Types of Values<a href="#types-of-values" class="anchor" aria-hidden="true">#</a> </h2>
-<h3 id="primitive-types">Primitive Types<a href="#primitive-types" class="anchor" aria-hidden="true">#</a> </h3>
+<h2 id="types-of-values">Types of Values</h2>
+<h3 id="primitive-types">Primitive Types</h3>
 <p>Primitive types can hold <strong>only one value</strong> at a time, and they are <strong>immutable</strong> (i.e., they can&rsquo;t be changed). These types include:</p>
 <p><strong>String</strong>: Represents a sequence of characters.
 <code>let name = &quot;Eag&quot;;</code></p>
@@ -2839,7 +2895,7 @@ Each value has a specific <strong>type</strong> that defines how it behaves and 
 <code>let largeNumber = 1234567890123456789012345678901234567890n; // BigInt</code></p>
 <p><strong>Symbol</strong>: Represents a unique and immutable value, often used to create unique identifiers.
 <code>let sym = Symbol(&quot;id&quot;);</code></p>
-<h3 id="reference-types">Reference Types<a href="#reference-types" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="reference-types">Reference Types</h3>
 <p>Reference types can store <strong>collections of data</strong> and <strong>more complex entities</strong>. These include:</p>
 <ul>
 <li>
@@ -2871,7 +2927,7 @@ Each value has a specific <strong>type</strong> that defines how it behaves and 
 <li><strong><code>symbol</code></strong>: Used to create unique identifiers, ensuring no collisions in object properties.</li>
 </ul>
 <hr>
-<h3 id="typeof-operator">&rsquo;typeof&rsquo; Operator<a href="#typeof-operator" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="typeof-operator">&rsquo;typeof&rsquo; Operator</h3>
 <p>The <code>typeof</code> operator is used to determine the <strong>type</strong> of a value or variable. It returns a string indicating the type of the operand.<br>
 The type can change based on the value it holds.</p>
 
@@ -2896,7 +2952,7 @@ The type can change based on the value it holds.</p>
 <blockquote>
 <p><strong>Note</strong>: The behavior of <code>typeof</code> with <code>null</code> is incorrect — it returns <code>&quot;object&quot;</code>, which is a <strong>known issue</strong> in JavaScript, but it&rsquo;s kept for compatibility reasons. <code>null</code> is not an object; it is its own unique type.</p></blockquote>
 <hr>
-<h2 id="methods-of-primitives">Methods of Primitives<a href="#methods-of-primitives" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="methods-of-primitives">Methods of Primitives</h2>
 <p>Methods are part of objects.  While primitives (like strings, numbers, booleans) are not objects by themselves, JavaScript allows them to <strong>behave like objects</strong> in certain situations. This is done through <strong>&ldquo;wrapper objects&rdquo;</strong> that temporarily convert the primitive to an object for method access.</p>
 <p>When you call a method on a primitive value, JavaScript <strong>wraps</strong> the primitive in an appropriate <strong>object wrapper</strong> (e.g., <code>String</code>, <code>Number</code>, <code>Boolean</code>, <code>Symbol</code>, or <code>BigInt</code>). After the method call, the wrapper is discarded.</p>
 
@@ -2916,14 +2972,14 @@ The type can change based on the value it holds.</p>
 <li><code>str</code> is a primitive string.</li>
 <li>JavaScript temporarily wraps it in a <code>String</code> object to call the <code>toUpperCase</code> method, and then the wrapper is discarded. So primitives can provide methods yet still remain lightweight.</li>
 </ul>
-<h3 id="wrappers-for-each-primitive-type">Wrappers for Each Primitive Type:<a href="#wrappers-for-each-primitive-type" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="wrappers-for-each-primitive-type">Wrappers for Each Primitive Type:</h3>
 <ul>
 <li><strong>String</strong> has methods like <code>.toUpperCase()</code>, <code>.toLowerCase()</code>, etc.</li>
 <li><strong>Number</strong> has methods like <code>.toFixed()</code>, <code>.toPrecision()</code>, etc.</li>
 <li><strong>Boolean</strong> has methods like <code>.toString()</code> to convert it into a string.</li>
 </ul>
 <p>However, <strong><code>null</code></strong> and <strong><code>undefined</code></strong> do not have object wrappers, so they <strong>cannot</strong> be used with methods.</p>
-<h4 id="converting-primitive-types">Converting primitive types:<a href="#converting-primitive-types" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="converting-primitive-types">Converting primitive types:</h4>
 
 
 
@@ -2947,7 +3003,7 @@ The type can change based on the value it holds.</p>
 <li><strong>Wrapper objects</strong>: Allow primitives to behave like objects when methods are invoked on them (e.g., <code>String</code>, <code>Number</code>, <code>Boolean</code>).</li>
 </ul>
 <hr>
-<h3 id="empty-values">Empty values<a href="#empty-values" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="empty-values">Empty values</h3>
 <p><code>null</code> is used to assign an <code>empty</code>, <code>nothing</code> or <code>value unkown</code> value to a variable.</p>
 <p><code>undefined</code> means <code>value is not assigned</code>
 It as a default initial value when variable is declared but value is not assigned.

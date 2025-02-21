@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2806,7 +2862,7 @@
 			</nav>
 			<p>Logical operators are used to reason about <strong>Boolean</strong> values. They can be applied to values of any type, not just Boolean.
 <code>||(OR)  &amp;&amp;(AND)  !(NOT)  ??(Nullish Coalescing)</code></p>
-<h3 id="1"><strong>1. <code>||</code> (OR)</strong><a href="#1" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="1"><strong>1. <code>||</code> (OR)</strong></h3>
 <p>The <code>||</code> (OR) operator evaluates to <code>true</code> if <strong>any</strong> of its operands are true.</p>
 <p>Returns the first truthy value.</p>
 
@@ -2891,7 +2947,7 @@ Used to execute the command only if the left is false/falsey.</p>
   </figure>
 </div>
 <hr>
-<h3 id="2"><strong>2. <code>&amp;&amp;</code> (AND)</strong><a href="#2" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="2"><strong>2. <code>&amp;&amp;</code> (AND)</strong></h3>
 <p><code>&amp;&amp;</code> finds the first falsy value.</p>
 <ul>
 <li>The operator returns the <strong>first falsy value</strong> it encounters, or the last value if all operands are truthy.</li>
@@ -2936,7 +2992,7 @@ If all are truthy, then the last one is returned.</p>
 </span></span></span></code></pre></div>
   </figure>
 </div>
-<h4 id="operator-precedence"><strong>Operator Precedence:</strong><a href="#operator-precedence" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="operator-precedence"><strong>Operator Precedence:</strong></h4>
 <ul>
 <li>The <code>&amp;&amp;</code> operator has <strong>higher precedence</strong> than <code>||</code>, so it is evaluated first in expressions.</li>
 </ul>
@@ -2959,7 +3015,7 @@ If all are truthy, then the last one is returned.</p>
   </figure>
 </div>
 <hr>
-<h3 id="3"><strong>3. <code>!</code> (NOT)</strong><a href="#3" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="3"><strong>3. <code>!</code> (NOT)</strong></h3>
 <p>The <code>!</code> (NOT) operator negates the Boolean value of its operand. It flips <code>true</code> to <code>false</code> and <code>false</code> to <code>true</code>.</p>
 
 
@@ -3002,7 +3058,7 @@ If all are truthy, then the last one is returned.</p>
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span></span></span></code></pre></div>
   </figure>
 </div>
-<h4 id="operator-precedence-1"><strong>Operator Precedence:</strong><a href="#operator-precedence-1" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="operator-precedence-1"><strong>Operator Precedence:</strong></h4>
 <ul>
 <li>The <code>!</code> operator has <strong>higher precedence</strong> than both <code>&amp;&amp;</code> and <code>||</code>, so it is evaluated first.</li>
 </ul>
@@ -3027,7 +3083,7 @@ If all are truthy, then the last one is returned.</p>
 <li>Logical operators are often used for short-circuit evaluations, not for complex branching. It’s recommended to use <code>if...else</code> when the logic requires more than just a true/false check.</li>
 </ul>
 <hr>
-<h3 id="4-nullish-coalescing-"><strong>4. Nullish Coalescing (<code>??</code>)</strong><a href="#4-nullish-coalescing-" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="4-nullish-coalescing-"><strong>4. Nullish Coalescing (<code>??</code>)</strong></h3>
 <p>The <code>??</code> (Nullish Coalescing) operator returns the <strong>right-hand operand</strong> if the left-hand operand is <strong>null</strong> or <strong>undefined</strong>.
 A value is considered “<strong>defined</strong>” when it’s <strong>neither <code>null</code> nor <code>undefined</code></strong>.</p>
 
@@ -3103,7 +3159,7 @@ A value is considered “<strong>defined</strong>” when it’s <strong>neither
   </figure>
 </div>
 <hr>
-<h3 id="difference-between"><strong>Difference between <code>??</code> and <code>||</code> (OR Operator)</strong><a href="#difference-between" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="difference-between"><strong>Difference between <code>??</code> and <code>||</code> (OR Operator)</strong></h3>
 <p>While both the nullish coalescing operator (<code>??</code>) and the logical OR operator (<code>||</code>) check for <strong>falsy</strong> values, there is an important difference:</p>
 <ul>
 <li><code>??</code> only returns the <strong>right operand</strong> if the left operand is either <code>null</code> or <code>undefined</code>.</li>
@@ -3125,7 +3181,7 @@ A value is considered “<strong>defined</strong>” when it’s <strong>neither
 </span></span></span></code></pre></div>
   </figure>
 </div>
-<h3 id="using"><strong>Using <code>??</code> with <code>&amp;&amp;</code> or <code>||</code></strong><a href="#using" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="using"><strong>Using <code>??</code> with <code>&amp;&amp;</code> or <code>||</code></strong></h3>
 <p>For safety reasons, JavaScript <strong>forbids</strong> combining <code>??</code> with <code>&amp;&amp;</code> or <code>||</code> <strong>without explicitly specifying precedence</strong> using parentheses. This is because the behavior of the combined operators can be ambiguous.</p>
 
 
@@ -3221,7 +3277,7 @@ A value is considered “<strong>defined</strong>” when it’s <strong>neither
   </figure>
 </div>
 <hr>
-<h3 id="summary-of-logical-operators"><strong>Summary of Logical Operators:</strong><a href="#summary-of-logical-operators" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="summary-of-logical-operators"><strong>Summary of Logical Operators:</strong></h3>
 <ul>
 <li><strong><code>||</code> (OR):</strong> Returns the right operand if the left operand is any <strong>falsy</strong> value (including <code>0</code>, <code>false</code>, <code>&quot;&quot;</code>, etc.).</li>
 <li><strong><code>&amp;&amp;</code> (AND):</strong> Returns the first falsy value, or the last operand if all are truthy.</li>

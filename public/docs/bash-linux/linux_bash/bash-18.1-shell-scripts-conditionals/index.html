@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2802,7 +2858,7 @@
   </details>
 
 			</nav>
-			<h3 id="logical-operators--for-conditional-execution">Logical Operators  for Conditional Execution<a href="#logical-operators--for-conditional-execution" class="anchor" aria-hidden="true">#</a> </h3>
+			<h3 id="logical-operators--for-conditional-execution">Logical Operators  for Conditional Execution</h3>
 <p><code>&amp;&amp;</code>, <code>||</code> which is used to allow conditional execution of things.</p>
 <p><code>cmd1 &amp;&amp; cmd2</code>  The <code>cmd2</code> is executed only when the <code>cmd1</code> succeeds.</p>
 <p><code>cmd1 || cmd2</code> plays an inverse role, where <code>cmd2</code> is executed if <code>cmd1</code> fails. Here the exit status of <code>grep</code> is being used to redirect the command execution.</p>
@@ -2834,7 +2890,7 @@
 </div>
 <p>These two are enough for basic decision making but <code>if</code> is needed to handle complex ones.</p>
 <hr>
-<h3 id="if-conditional">if conditional<a href="#if-conditional" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="if-conditional">if conditional</h3>
 <p>The <code>if</code> statement makes two-way decision depending on the fulfillment of a certain condition.  <code>if</code> also requires <code>then</code> to execute. <code>else</code> and <code>elif</code> are not always required.<br>
 <code>if</code> is closed with corresponding <code>fi</code>.<br>
 The basic forms are:</p>
@@ -2903,7 +2959,7 @@ The basic forms are:</p>
   </figure>
 </div>
 <hr>
-<h3 id="using-test-to-evaluate-expressions">Using test to evaluate expressions<a href="#using-test-to-evaluate-expressions" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="using-test-to-evaluate-expressions">Using test to evaluate expressions</h3>
 <p>The <code>test</code> statement is needed because the true or false values returned by the expressions can&rsquo;t be handles by the <code>if</code>.<br>
 <code>test</code> doesn&rsquo;t display any output but simply sets the parameter <code>$?</code>.</p>
 <p>Tests work in three ways:</p>
@@ -2913,7 +2969,7 @@ The basic forms are:</p>
 <li>Checks a file&rsquo;s attributes</li>
 </ul>
 <hr>
-<h4 id="numeric-comparison">Numeric Comparison<a href="#numeric-comparison" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="numeric-comparison">Numeric Comparison</h4>
 <p>They always begin with a hyphen <code>-</code>, followed by a two letter string enclosed on either side by whitespace.</p>
 <table>
   <thead>
@@ -2998,7 +3054,7 @@ The basic forms are:</p>
 There must be white space around operators like <code>-eq</code> and operands like <code>$x</code> and inside <code>[ ]</code>.</p>
 <p>Shorthand for testing if a number is greater than zero can be <code>if [ $x -gt 0 ]</code> can be written as <code>if [ $x ]</code></p>
 <hr>
-<h4 id="string-comparison">String Comparison<a href="#string-comparison" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="string-comparison">String Comparison</h4>
 <p><code>test</code> can used to compare strings too using another set of operators like <code>=</code> where equality is performed and <code>!=</code> for inequality and <code>!</code> for negation also.<br>
 Also <code>-n stg</code> is String <code>stg</code> is a not a null string.  <code>-z stg</code> is String <code>stg</code> is a null string.<br>
 <code>stg</code> when String <code>stg</code> is assigned and not null.</p>
@@ -3044,14 +3100,14 @@ Also <code>-n stg</code> is String <code>stg</code> is a not a null string.  <co
   </figure>
 </div>
 <hr>
-<h3 id="file-tests">File Tests<a href="#file-tests" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="file-tests">File Tests</h3>
 <p><code>test</code> can be used to test the various file attributes like its type or its permissions.</p>
 <p>.
 .
 .
 .</p>
 <hr>
-<h3 id="the-case-conditional">The case Conditional<a href="#the-case-conditional" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="the-case-conditional">The case Conditional</h3>
 <p>The <code>case</code> statement is the second conditional offered by the shell. The statement matches an expression for more than one alternative, and uses a compact construction to permit multiway branching.<br>
 <code>case</code> also handles string tests better than <code>if</code>.</p>
 
@@ -3110,7 +3166,7 @@ Also <code>-n stg</code> is String <code>stg</code> is a not a null string.  <co
   </figure>
 </div>
 <hr>
-<h4 id="expr--computation-and-string-handling">expr : Computation and String Handling<a href="#expr--computation-and-string-handling" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="expr--computation-and-string-handling">expr : Computation and String Handling</h4>
 <p>Not needed for Korn or Bash shell</p>
 <hr>
 

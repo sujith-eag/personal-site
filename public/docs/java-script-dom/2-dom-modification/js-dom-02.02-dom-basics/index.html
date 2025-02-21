@@ -792,6 +792,34 @@
       <ul class="list-unstyled list-nested">
 
   <li>
+    <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
     <details open open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
@@ -2204,6 +2232,34 @@
       <ul class="list-unstyled list-nested">
 
   <li>
+    <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
     <details open open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
@@ -2812,7 +2868,7 @@ This stored reference can be manipulated using properties and methods available 
   </figure>
 </div>
 <hr>
-<h2 id="creating-an-element">Creating an element<a href="#creating-an-element" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="creating-an-element">Creating an element</h2>
 <p>Two methods are there to create a new element</p>
 <ul>
 <li><code>documnet.createElement(tag)</code> creates a new element node with given tag.</li>
@@ -2863,7 +2919,7 @@ It can be manipulated by adding style, classes, ids, text, etc before placing it
 </span></span><span class="line"><span class="cl"><span class="nx">div</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">&#34;&lt;strong&gt;Hi there&lt;/strong&gt; important message.&#34;</span><span class="p">;</span></span></span></code></pre></div>
   </figure>
 </div>
-<h2 id="inserting-element-into-dom">inserting element into DOM<a href="#inserting-element-into-dom" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="inserting-element-into-dom">inserting element into DOM</h2>
 <p><code>document.body.append(div);</code> appending a div directly to the body tag of document.
 Here are more insertion methods, they specify different places where to insert:</p>
 
@@ -2892,7 +2948,7 @@ Here are more insertion methods, they specify different places where to insert:<
   </figure>
 </div>
 <p>These methods can only be used to insert DOM nodes or text but not HTML as it will get converted to text including <code>&lt;&gt;</code></p>
-<h4 id="eleminsertadjacenthtmlwhere-html">&rsquo;elem.insertAdjacentHTML(where, html)'<a href="#eleminsertadjacenthtmlwhere-html" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="eleminsertadjacenthtmlwhere-html">&rsquo;elem.insertAdjacentHTML(where, html)'</h4>
 <p>To insert HTML string as HTML with all tags similar to <code>elem.innerHTML</code> another method can be used</p>
 
 
@@ -2951,7 +3007,7 @@ Here are more insertion methods, they specify different places where to insert:<
 </div>
 <p>[[2.2 modifying Practice#Insert the HTML in the list|Another example]]</p>
 <hr>
-<h3 id="node-removal-noderemove">Node removal &rsquo;node.remove()'<a href="#node-removal-noderemove" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="node-removal-noderemove">Node removal &rsquo;node.remove()'</h3>
 <p>To make message disappear after a second</p>
 
 
@@ -3006,7 +3062,7 @@ Here are more insertion methods, they specify different places where to insert:<
 <p>Please note: if we want to <em>move</em> an element to another place – there’s no need to remove it from the old one.
 <strong>All insertion methods automatically remove the node from the old place.</strong></p>
 <hr>
-<h2 id="cloning-nodes-clonenodedeep">cloning nodes &lsquo;cloneNode(deep)&rsquo;<a href="#cloning-nodes-clonenodedeep" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="cloning-nodes-clonenodedeep">cloning nodes &lsquo;cloneNode(deep)&rsquo;</h2>
 <p>The call <code>elem.cloneNode(true)</code> creates a “deep” clone of the element – with all attributes and sub elements.
 If we call <code>elem.cloneNode(false)</code>, then the clone is made without child elements.</p>
 
@@ -3057,7 +3113,7 @@ If we call <code>elem.cloneNode(false)</code>, then the clone is made without c
   </figure>
 </div>
 <hr>
-<h2 id="old-school-methods-for-dom-manipulation">old school methods for DOM manipulation<a href="#old-school-methods-for-dom-manipulation" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="old-school-methods-for-dom-manipulation">old school methods for DOM manipulation</h2>
 <ul>
 <li><code>parent.appendChild(node)</code></li>
 <li><code>parent.insertBefore(node, nextSibling)</code></li>

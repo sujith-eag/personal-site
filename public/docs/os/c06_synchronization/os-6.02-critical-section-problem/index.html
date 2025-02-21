@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2786,7 +2842,7 @@
 <p>The key requirement is that <strong>no two processes</strong> can be executing in their critical sections at the same time. In other words, if one process is in its critical section, no other process can enter its critical section simultaneously. The challenge is to design a protocol that coordinates access to the critical section.</p>
 <p>Each process must request permission to enter its critical section, and this request is handled in the <strong>entry section</strong> of the code.<br>
 The <strong>exit section</strong> follows the critical section, and any remaining code is called the <strong>remainder section</strong>.</p>
-<h3 id="requirements-for-a-solution">Requirements for a Solution:<a href="#requirements-for-a-solution" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="requirements-for-a-solution">Requirements for a Solution:</h3>
 <p>A solution to the critical-section problem must meet the following three conditions:</p>
 <ol>
 <li>
@@ -2810,7 +2866,7 @@ The <strong>exit section</strong> follows the critical section, and any remainin
 </li>
 </ol>
 <hr>
-<h3 id="race-conditions-in-operating-systems">Race Conditions in Operating Systems:<a href="#race-conditions-in-operating-systems" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="race-conditions-in-operating-systems">Race Conditions in Operating Systems:</h3>
 <p>At any given time, many kernel-mode processes might be active in the operating system, and kernel code is prone to <strong>race conditions</strong>.</p>
 <p>Example:</p>
 <ul>
@@ -2826,7 +2882,7 @@ The <strong>exit section</strong> follows the critical section, and any remainin
 <li><strong>Process lists</strong></li>
 <li><strong>Interrupt handling mechanisms</strong></li>
 </ul>
-<h3 id="approaches-to-handling-critical-sections">Approaches to Handling Critical Sections:<a href="#approaches-to-handling-critical-sections" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="approaches-to-handling-critical-sections">Approaches to Handling Critical Sections:</h3>
 <ol>
 <li>
 <p><strong>Preemptive Kernels:</strong></p>
@@ -2843,7 +2899,7 @@ The <strong>exit section</strong> follows the critical section, and any remainin
 </ul>
 </li>
 </ol>
-<h3 id="why-choose-a-preemptive-kernel">Why Choose a Preemptive Kernel?<a href="#why-choose-a-preemptive-kernel" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="why-choose-a-preemptive-kernel">Why Choose a Preemptive Kernel?</h3>
 <ul>
 <li>A <strong>preemptive kernel</strong> may be preferred because it ensures that no process can run for an arbitrarily long period, improving <strong>system responsiveness</strong>.</li>
 <li>It is particularly beneficial in <strong>real-time systems</strong>, where a real-time process may need to <strong>preempt</strong> a kernel-mode process.</li>

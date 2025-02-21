@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2786,9 +2842,9 @@
   </details>
 
 			</nav>
-			<h2 id="bindings-and-scopes"><strong>Bindings and Scopes</strong><a href="#bindings-and-scopes" class="anchor" aria-hidden="true">#</a> </h2>
+			<h2 id="bindings-and-scopes"><strong>Bindings and Scopes</strong></h2>
 <p>In JavaScript, the <strong>scope</strong> refers to the context in which variables (bindings) are accessible.</p>
-<h3 id="local-variables"><strong>Local Variables</strong><a href="#local-variables" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="local-variables"><strong>Local Variables</strong></h3>
 <p>A <strong>local variable</strong> is declared inside a function or block (e.g., <code>{}</code>) and is only accessible within that function or block. Each time the function is called, a new instance of the local variables is created.</p>
 
 
@@ -2827,7 +2883,7 @@
   </figure>
 </div>
 <p>Variables declared using <code>var</code>, however, have a function scope, meaning they are visible within the function and outside of it if not enclosed in any other block.</p>
-<h3 id="outer-variables-closure"><strong>Outer Variables (Closure)</strong><a href="#outer-variables-closure" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="outer-variables-closure"><strong>Outer Variables (Closure)</strong></h3>
 <p>A function in JavaScript can access variables from its <strong>outer scope</strong> (the scope in which it was defined). This allows functions to modify and use variables from the outer environment. This concept is often called <strong>closure</strong>.</p>
 
 
@@ -2894,7 +2950,7 @@
 </span></span></span></code></pre></div>
   </figure>
 </div>
-<h3 id="nested-scope"><strong>Nested Scope</strong><a href="#nested-scope" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="nested-scope"><strong>Nested Scope</strong></h3>
 <p>In JavaScript, functions and blocks can be nested within other functions and blocks, creating <strong>nested scopes</strong>. Each function or block can access variables from its outer scope, but outer scopes cannot access variables from inner scopes.</p>
 
 
@@ -2927,7 +2983,7 @@
 <li>The <strong>outer function</strong> cannot access the local bindings of the inner function, such as <code>ingredientAmount</code>.</li>
 </ul>
 <p>This form of scoping is called <strong>lexical scoping</strong>, meaning that the scope of variables is determined by the position of functions and blocks in the code.</p>
-<h3 id="making-a-counter-closure-example"><strong>Making a Counter (Closure Example)</strong><a href="#making-a-counter-closure-example" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="making-a-counter-closure-example"><strong>Making a Counter (Closure Example)</strong></h3>
 <p>A common example of using closures is creating a <strong>counter function</strong>, which keeps track of the count even after the function has returned. This works because the inner function maintains a reference to the variables in the outer function&rsquo;s scope.</p>
 
 
@@ -2955,7 +3011,7 @@
 </div>
 <p>Here, the inner function &ldquo;remembers&rdquo; the <code>count</code> variable even after the <code>makeCounter()</code> function has finished executing. This is an example of a closure, where the inner function has access to the variables of its outer function.
 <a href="https://en.wikipedia.org/wiki/Pseudorandom_number_generator">random number generator</a></p>
-<h3 id="global-variables-and-the-global-object"><strong>Global Variables and the Global Object</strong><a href="#global-variables-and-the-global-object" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="global-variables-and-the-global-object"><strong>Global Variables and the Global Object</strong></h3>
 <p>A <strong>global variable</strong> is a variable that is declared outside any function or block. Its scope is the entire program, meaning it is accessible from any function or block within that program (unless shadowed by a local variable with the same name).</p>
 
 
@@ -3002,7 +3058,7 @@
 <li>Local variables should be preferred wherever possible to avoid polluting the global scope.</li>
 </ul>
 <hr>
-<h3 id="summary-of-scoping-rules"><strong>Summary of Scoping Rules</strong><a href="#summary-of-scoping-rules" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="summary-of-scoping-rules"><strong>Summary of Scoping Rules</strong></h3>
 <ol>
 <li><strong>Local Scope</strong>: Variables declared inside a function or block are <strong>local</strong> and only accessible within that function or block.</li>
 <li><strong>Outer Scope</strong>: Functions can access variables from their outer scope. This is known as <strong>lexical scoping</strong>.</li>

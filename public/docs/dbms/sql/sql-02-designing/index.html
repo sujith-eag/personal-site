@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2818,12 +2874,12 @@
 <p><code>sqlite3 longlist.db</code></p>
 <p><code>.schema</code> is a <code>SQLite</code> command, not SQL keyword that shows the structure of the tables in the database along with the types of data.</p>
 <p><code>.schema books</code> to view schema of a specific table.</p>
-<h2 id="creating-a-database-schema">Creating a Database Schema<a href="#creating-a-database-schema" class="anchor" aria-hidden="true">#</a> </h2>
-<h4 id="normalizing">Normalizing<a href="#normalizing" class="anchor" aria-hidden="true">#</a> </h4>
+<h2 id="creating-a-database-schema">Creating a Database Schema</h2>
+<h4 id="normalizing">Normalizing</h4>
 <p>Reducing the redundancies in the table which happens by using a single table, names can be made into their own tables with unique id. and making use of foreign keys.
 The process of separating our data in this manner is called <em><strong>normalizing</strong></em>.</p>
 <p>While normalizing, each entity is put in its own table and any information about a specific entity goes into the entity&rsquo;s own table.</p>
-<h4 id="relating">Relating<a href="#relating" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="relating">Relating</h4>
 <p>Deciding how the entities are related. in one to one or one to many relationship using a ER diagram.</p>
 
 <figure>
@@ -2843,7 +2899,7 @@ The process of separating our data in this manner is called <em><strong>normaliz
 </figure>
 <p>Rider must visit at least one station or many.
 Station can have zero riders or many.</p>
-<h2 id="create-table">CREATE TABLE<a href="#create-table" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="create-table">CREATE TABLE</h2>
 <p>Once there is a schema for a table, it can be used to create a table.</p>
 <p>Creating a new data base
 <code>sqlite3 mbta.db</code>
@@ -2886,7 +2942,7 @@ If doesn&rsquo;t exist, it will create a new one.</p>
   </figure>
 </div>
 <p>Each row indicates the station visited by each rider.</p>
-<h2 id="data-types-and-storage-classes">Data Types and Storage Classes<a href="#data-types-and-storage-classes" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="data-types-and-storage-classes">Data Types and Storage Classes</h2>
 <p>SQLite has five storage classes:
 Null: Noting, empty
 Integer: Numbers without decimal points
@@ -2913,13 +2969,13 @@ Blob: Binary Large Object, for storing objects in binary like image, audio etc.<
 <p>SQLite takes care of storing the input values under the right data type.
 So a programmer only need to choose a storage class.
 Each class has its own advantages and limitations so has to be chosen carefully.</p>
-<h3 id="type-affinities">Type Affinities<a href="#type-affinities" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="type-affinities">Type Affinities</h3>
 <p>It is possible to specify the data type of a column while creating a table but the columns in SQLite don&rsquo;t always store one particular data type.
 They are said to have <em><strong>type affinities</strong></em>, meaning they try to convert an input value into the type they have an affinity for.</p>
 <p>The five type affinities in SQLite are:
 Text, Numeric (integer or real), Integer, Real and Blob.</p>
 <p>If a column with type affinity for integer is given <code>&quot;25&quot;</code>, then it converts it into <code>25</code> which is an integer data type. Similarly <code>25</code> becomes <code>&quot;25&quot;</code> in a column with type affinity for text.</p>
-<h3 id="adding-types-to-tables">Adding Types to Tables<a href="#adding-types-to-tables" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="adding-types-to-tables">Adding Types to Tables</h3>
 <p>To delete the old tables before adding new tables with types.</p>
 
 
@@ -2979,7 +3035,7 @@ Text, Numeric (integer or real), Integer, Real and Blob.</p>
     class="lazyload blur-up"
   ><figcaption>s</figcaption>
 </figure>
-<h2 id="table-constraints">Table Constraints<a href="#table-constraints" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="table-constraints">Table Constraints</h2>
 <p>These are used to impose restrictions on certain values in the table.</p>
 <p><code>PRIMARY KEY</code> column must have a unique value, and it cannot be null.
 similarly for
@@ -3033,7 +3089,7 @@ Even though row ID is implicit, it can be queried.</p>
   </figure>
 </div>
 <p>This is not preferable here since the constraint will be that the combination of these id should be unique, so each rider cannot visit a station more than once as it will not be unique.</p>
-<h3 id="column-constraints">Column Constraints<a href="#column-constraints" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="column-constraints">Column Constraints</h3>
 <p>This applies to a specific column, there are four column constraints in SQLite:
 <code>CHECK</code>  allows for checking a condition, (values &gt; 0)
 <code>DEFAULT</code>  uses a default value if none is supplied for a row
@@ -3070,7 +3126,7 @@ Even though row ID is implicit, it can be queried.</p>
   </figure>
 </div>
 <p>No need to add column constraints to <code>id</code> which are already under <code>primary key or foreign key</code> as they will have to be <code>NOT NULL</code> and primary key has to be <code>UNIQUE</code>.</p>
-<h3 id="altering-tables">Altering Tables<a href="#altering-tables" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="altering-tables">Altering Tables</h3>
 <p>Changing the tables to include charlie cards instead of riders.</p>
 
 <figure>
@@ -3152,7 +3208,7 @@ Also adding, renaming and dropping a column.</p>
 <p><code>CHECK(&quot;type&quot; IN ('enter', 'exit', 'deposit')),</code> is used to make sure it is one of these three.</p>
 <p><code>DEFAULT CURRENT_TIMESTAMP</code> adds the current date and time if not provided. has numeric type</p>
 <p><code>CHECK(&quot;amount&quot; != 0)</code> to make sure the amount is not 0 in a swipe.</p>
-<h3 id="dropping-a-primary-key-which-is-refereed">Dropping a Primary key which is refereed<a href="#dropping-a-primary-key-which-is-refereed" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="dropping-a-primary-key-which-is-refereed">Dropping a Primary key which is refereed</h3>
 <p>When a table, column or row has to be dropped which has a primary key which is referred as foreign key in some other table, it will throw an error.
 First we have to drop the foreign key column, or remove the association before removing the primary key.</p>
 <hr>

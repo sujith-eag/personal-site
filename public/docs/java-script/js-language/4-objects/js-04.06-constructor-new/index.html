@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2806,13 +2862,13 @@
   </details>
 
 			</nav>
-			<h3 id="constructor-functions-and-the-new-operator">Constructor Functions and the <code>new</code> Operator<a href="#constructor-functions-and-the-new-operator" class="anchor" aria-hidden="true">#</a> </h3>
+			<h3 id="constructor-functions-and-the-new-operator">Constructor Functions and the <code>new</code> Operator</h3>
 <p>Constructor functions are used to create multiple similar objects with the same properties and methods, without having to manually repeat the object structure each time.</p>
 <p>By using a constructor function, you define the blueprint for creating objects, allowing you to instantiate them efficiently using the <code>new</code> operator.</p>
 <p>The regular <code>{...}</code> syntax allows us to create one object.</p>
 <p>Using <em><strong>constructor functions</strong></em> and the <code>&quot;new&quot;</code> operator, many similar objects, like multiple users or menu items can be made.</p>
 <hr>
-<h3 id="constructor-function-basics"><strong>Constructor Function Basics</strong><a href="#constructor-function-basics" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="constructor-function-basics"><strong>Constructor Function Basics</strong></h3>
 <ol>
 <li><strong>Naming Convention</strong>: Constructor functions should be named with an uppercase letter to distinguish them from regular functions.</li>
 <li><strong>Usage with <code>new</code></strong>: Constructor functions are meant to be invoked with the <code>new</code> operator.</li>
@@ -2848,7 +2904,7 @@
 </li>
 </ul>
 <hr>
-<h3 id="creating-multiple-similar-objects"><strong>Creating Multiple Similar Objects</strong><a href="#creating-multiple-similar-objects" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="creating-multiple-similar-objects"><strong>Creating Multiple Similar Objects</strong></h3>
 <p>A constructor function allows you to create multiple similar objects by defining the properties and methods that each object will share. For instance, you can create multiple users using the same constructor function.</p>
 
 
@@ -2873,7 +2929,7 @@
 </div>
 <p>In this case, <code>user1</code> and <code>user2</code> are separate objects with the same constructor (<code>User</code>), but they have different values for the <code>name</code> property.</p>
 <hr>
-<h3 id="constructor-vs-regular-function-for-object-creation"><strong>Constructor vs Regular Function for Object Creation</strong><a href="#constructor-vs-regular-function-for-object-creation" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="constructor-vs-regular-function-for-object-creation"><strong>Constructor vs Regular Function for Object Creation</strong></h3>
 <p>Before the introduction of constructor functions, people would use regular functions to create objects manually:</p>
 
 
@@ -2899,7 +2955,7 @@
 </div>
 <p>This approach works but is less efficient compared to using a constructor function. If multiple objects need the same <code>introduceSelf</code> method, it will be recreated each time an object is created. This can lead to inefficient memory usage.</p>
 <hr>
-<h3 id="benefits-of-constructor-functions"><strong>Benefits of Constructor Functions</strong><a href="#benefits-of-constructor-functions" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="benefits-of-constructor-functions"><strong>Benefits of Constructor Functions</strong></h3>
 <p>By using a constructor function, you can define methods that are shared by all instances, without having to recreate them for each individual object. Constructor functions allow you to define the <strong>shape</strong> of the object and instantiate multiple objects with the same properties and methods.</p>
 
 
@@ -2923,7 +2979,7 @@
 </div>
 <p>Here, <code>Person</code> acts as a blueprint for creating new objects, each with their own <code>name</code> property and <code>introduceSelf</code> method.</p>
 <hr>
-<h3 id="understanding"><strong>Understanding <code>this</code> in Constructors</strong><a href="#understanding" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="understanding"><strong>Understanding <code>this</code> in Constructors</strong></h3>
 <p>Inside a constructor function, the <code>this</code> keyword refers to the newly created object. You can use <code>this</code> to set properties and methods for that object.</p>
 <p>For example:</p>
 
@@ -2951,7 +3007,7 @@
 <li>The properties and methods (<code>name</code> and <code>introduceSelf</code>) are assigned to that new object.</li>
 </ul>
 <hr>
-<h3 id="constructor-for-accumulator-example"><strong>Constructor for Accumulator Example</strong><a href="#constructor-for-accumulator-example" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="constructor-for-accumulator-example"><strong>Constructor for Accumulator Example</strong></h3>
 <p>Here’s an example of a constructor that uses a method to accumulate values:</p>
 
 
@@ -2981,7 +3037,7 @@
 </ul>
 <p>Each time a new instance of <code>Accumulator</code> is created, the <code>value</code> property and <code>read</code> method are set on the object, allowing for different instances with their own accumulated values.</p>
 <hr>
-<h3 id="objects-are-everywhere"><strong>Objects Are Everywhere</strong><a href="#objects-are-everywhere" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="objects-are-everywhere"><strong>Objects Are Everywhere</strong></h3>
 <p>JavaScript is an object-oriented language, and even primitive types like strings, numbers, and arrays are automatically wrapped in their respective object types. This allows them to have methods and properties associated with them.</p>
 <p>For example, strings are objects, and they have methods like <code>.split()</code>:</p>
 
@@ -3000,8 +3056,8 @@
 </div>
 <p>Here, <code>myString</code> is treated as a <code>String</code> object, and the <code>.split()</code> method is available because strings in JavaScript are instances of the <code>String</code> object.</p>
 <hr>
-<h3 id="additional-features-of-objects"><strong>Additional Features of Objects</strong><a href="#additional-features-of-objects" class="anchor" aria-hidden="true">#</a> </h3>
-<h4 id="optional-chaining-">Optional Chaining (<code>?.</code>)<a href="#optional-chaining-" class="anchor" aria-hidden="true">#</a> </h4>
+<h3 id="additional-features-of-objects"><strong>Additional Features of Objects</strong></h3>
+<h4 id="optional-chaining-">Optional Chaining (<code>?.</code>)</h4>
 <p>The optional chaining operator (<code>?.</code>) allows you to access deeply nested properties of an object without worrying about whether intermediate properties exist. If any property in the chain is <code>null</code> or <code>undefined</code>, it safely returns <code>undefined</code> instead of throwing an error.</p>
 <p>Example:</p>
 
@@ -3019,7 +3075,7 @@
 </span></span></span></code></pre></div>
   </figure>
 </div>
-<h4 id="symbol-type-as-property-key">Symbol Type as Property Key<a href="#symbol-type-as-property-key" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="symbol-type-as-property-key">Symbol Type as Property Key</h4>
 <p><code>Symbol</code> is a unique and immutable data type that can be used as a property key in objects. It is often used to create private object properties.</p>
 
 
@@ -3039,7 +3095,7 @@
   </figure>
 </div>
 <p>Each <code>Symbol</code> is unique, so even if two symbols have the same description, they will not be equal.</p>
-<h4 id="object-to-primitive-conversion">Object to Primitive Conversion<a href="#object-to-primitive-conversion" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="object-to-primitive-conversion">Object to Primitive Conversion</h4>
 <p>JavaScript allows objects to be converted into primitive values when needed. This is achieved via special methods like <code>valueOf()</code> and <code>toString()</code>.</p>
 <p>Example:</p>
 
@@ -3071,7 +3127,7 @@ Feature to access properties without throwing error of it doesn&rsquo;t exist.
 use when needed for &rsquo;non existing user problem&rsquo;</p>
 <p><a href="https://javascript.info/symbol">Symbol type as property key</a></p>
 <p><a href="https://javascript.info/object-toprimitive">Object to primitive conversion</a></p>
-<h3 id="summary"><strong>Summary</strong><a href="#summary" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="summary"><strong>Summary</strong></h3>
 <ul>
 <li><strong>Constructor Functions</strong>: Used to create multiple instances of similar objects. These functions define the properties and methods shared across all objects.</li>
 <li><strong><code>this</code> in Constructors</strong>: Refers to the newly created object inside a constructor, allowing you to set its properties and methods.</li>

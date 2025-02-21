@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2814,7 +2870,7 @@
 			</nav>
 			<p>Concepts of <strong>methods</strong>, <strong><code>this</code></strong>, and <strong>chaining</strong> in JavaScript:</p>
 <hr>
-<h2 id="methods"><strong>Methods</strong><a href="#methods" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="methods"><strong>Methods</strong></h2>
 <ul>
 <li><strong>Method</strong>: A method is a function that is a property of an object. Methods allow objects to &ldquo;act&rdquo; in a specific way by performing actions based on the object’s properties or behavior.</li>
 </ul>
@@ -2857,7 +2913,7 @@
 </span></span></span></code></pre></div>
   </figure>
 </div>
-<h3 id="method-shorthand"><strong>Method Shorthand</strong><a href="#method-shorthand" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="method-shorthand"><strong>Method Shorthand</strong></h3>
 <p>In ES6, there’s a shorthand for defining methods within an object literal. You can omit the <code>function</code> keyword and just use the method name followed by parentheses:</p>
 
 
@@ -2891,7 +2947,7 @@
   </figure>
 </div>
 <hr>
-<h2 id="this"><strong><code>this</code> in Methods</strong><a href="#this" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="this"><strong><code>this</code> in Methods</strong></h2>
 <p>The <code>this</code> keyword is commonly used inside methods to refer to the object the method belongs to.</p>
 <ul>
 <li><strong><code>this</code></strong> refers to the object that <strong>owns</strong> the method.</li>
@@ -2919,7 +2975,7 @@
 <p>During execution, the value of <code>this</code> will be <code>user</code>.
 <code>this</code> refers to the <code>user</code> object, and <code>this.name</code> accesses the <code>name</code> property.</p>
 <hr>
-<h3 id="this-1"><strong><code>this</code> is Not Bound (Dynamic)</strong><a href="#this-1" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="this-1"><strong><code>this</code> is Not Bound (Dynamic)</strong></h3>
 <p>In JavaScript, the value of <code>this</code> is <strong>determined at runtime</strong> and depends on how the function is <strong>called</strong>, not where it is declared.</p>
 <p>This means that if <code>this</code> is used in a method, its value can change based on the <strong>context</strong> of the call.
 Using <code>this</code>, it allows for same method definition to be used in multiple objects.</p>
@@ -2958,7 +3014,7 @@ Using <code>this</code>, it allows for same method definition to be used in mult
 </div>
 <p>In this case, <code>this</code> no longer refers to the <code>user</code> object because the function <code>introduce</code> was called without an object context.</p>
 <hr>
-<h3 id="this-2"><strong><code>this</code> in Constructors</strong><a href="#this-2" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="this-2"><strong><code>this</code> in Constructors</strong></h3>
 <p>You can use <code>this</code> to create methods inside a constructor function, which allows for <strong>object reuse</strong> across multiple instances:</p>
 
 
@@ -2985,8 +3041,8 @@ Using <code>this</code>, it allows for same method definition to be used in mult
 </div>
 <p>In this case, <code>this.name</code> and <code>this.introduceSelf</code> work because <code>this</code> refers to each specific instance of <code>Person</code>.</p>
 <hr>
-<h3 id="arrow-functions-and"><strong>Arrow Functions and <code>this</code></strong><a href="#arrow-functions-and" class="anchor" aria-hidden="true">#</a> </h3>
-<h3 id="32_arrow_functionarrow-function-have-no-thisarrow-functions-have-no-this">[[3.2_arrow_function#Arrow function have no <code>this</code>.|Arrow functions have no &rsquo;this&rsquo;]]<a href="#32_arrow_functionarrow-function-have-no-thisarrow-functions-have-no-this" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="arrow-functions-and"><strong>Arrow Functions and <code>this</code></strong></h3>
+<h3 id="32_arrow_functionarrow-function-have-no-thisarrow-functions-have-no-this">[[3.2_arrow_function#Arrow function have no <code>this</code>.|Arrow functions have no &rsquo;this&rsquo;]]</h3>
 <p>Unlike regular functions, <strong>arrow functions</strong> do not have their own <code>this</code>. They inherit <code>this</code> from the surrounding context (lexical scoping). This can lead to unexpected behavior when used in methods.</p>
 
 
@@ -3009,7 +3065,7 @@ Using <code>this</code>, it allows for same method definition to be used in mult
 </div>
 <p>In the example above, <code>this</code> in the arrow function is inherited from the global context (or undefined in strict mode), not from the <code>user</code> object.</p>
 <hr>
-<h2 id="a-simple-calculator-object"><strong>A Simple Calculator Object</strong><a href="#a-simple-calculator-object" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="a-simple-calculator-object"><strong>A Simple Calculator Object</strong></h2>
 <p>Here&rsquo;s an example of how you can use methods and <code>this</code> to create a simple calculator object with <code>read()</code>, <code>sum()</code>, and <code>multiply()</code> methods:</p>
 
 
@@ -3038,14 +3094,14 @@ Using <code>this</code>, it allows for same method definition to be used in mult
 </span></span></span></code></pre></div>
   </figure>
 </div>
-<h3 id="method-explanation"><strong>Method Explanation:</strong><a href="#method-explanation" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="method-explanation"><strong>Method Explanation:</strong></h3>
 <ul>
 <li><code>read()</code>: Prompts the user for two values and stores them as properties <code>a</code> and <code>b</code> of the <code>calculator</code> object.</li>
 <li><code>sum()</code>: Returns the sum of <code>a</code> and <code>b</code>.</li>
 <li><code>multiply()</code>: Returns the product of <code>a</code> and <code>b</code>.</li>
 </ul>
 <hr>
-<h2 id="method-chaining"><strong>Method Chaining</strong><a href="#method-chaining" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="method-chaining"><strong>Method Chaining</strong></h2>
 <p>JavaScript allows for <strong>method chaining</strong>, where multiple method calls are linked together in a single line. For this to work, each method must return the object itself (<code>this</code>), so the next method can be called on it.</p>
 <p>Here&rsquo;s an example using an object that represents a ladder:</p>
 
@@ -3085,7 +3141,7 @@ Using <code>this</code>, it allows for same method definition to be used in mult
 <li>By returning <code>this</code> from each method, you can chain calls together.</li>
 </ul>
 <hr>
-<h3 id="summary"><strong>Summary:</strong><a href="#summary" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="summary"><strong>Summary:</strong></h3>
 <ul>
 <li><strong>Methods</strong>: Functions that are properties of an object.</li>
 <li><strong><code>this</code></strong>: Refers to the object that owns the method and allows access to its properties.</li>

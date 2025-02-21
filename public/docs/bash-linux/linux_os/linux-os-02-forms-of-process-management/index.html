@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2883,7 +2939,7 @@ PCB collects the most important data about the running process.</p>
 <li>Resource allocation : I/O devices currently allocated to the process; memory in use; page table.</li>
 </ul>
 <p>The operating system is also in charge of scheduling when process run, and of changing the process status as needed doing <code>process management</code>.</p>
-<h3 id="single-process-execution">Single process execution<a href="#single-process-execution" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="single-process-execution">Single process execution</h3>
 <p>OS starts a process and the CPU attention is entirely held by that one running process until it terminates or requests some operation from OS.</p>
 <p>Batch processing, scheduling programs, process requests (jobs)</p>
 <p>During batch processing era, different scheduling algorithms were developed.
@@ -2892,7 +2948,7 @@ Simplest and fairest is <code>first come first serve</code> <code>FCFS</code> or
 opposite would be <code>longest-job first</code>
 A <code>priority</code> schedule may be used with <code>FIFO</code>.
 A series of queues are used to order the process by priority</p>
-<h3 id="concurrent-processing">Concurrent Processing<a href="#concurrent-processing" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="concurrent-processing">Concurrent Processing</h3>
 <p>It is to switch from a waiting process to a process ready to execute leading to improved form of process management called <code>multiprogramming</code>.
 CPU executes single process but if that process needs to perform time-consuming I/O then that process is set aside and another process is executed.</p>
 <p>There will be atleast two queues, ready queue and wait queue. There might be multiple I/O wait queues. It is the OS job (scheduler) to choose which process the CPU should switch to.
@@ -2914,7 +2970,7 @@ Priority 1 gets 1000 each time while priority 10 gets 10,000 each time to finish
 <p>Linux by default uses cooperative and preemptive multitasking and multi-threading.
 It can also perform batch processing on request using <code>batch</code> instruction.</p>
 <hr>
-<h3 id="interrupt-handling">Interrupt Handling<a href="#interrupt-handling" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="interrupt-handling">Interrupt Handling</h3>
 <p>CPU repeatedly fetches and runs program instructions (fetch-execute cycle) until it finishes executing the current process.
 The timer reaching 0 is an example where some hardware component needs the CPU&rsquo;s attention, where it can interrupt the CPU&rsquo;s fetch-execute cycle and request the CPU focus its attention on hardware component to handle whatever situation arose.
 Naturally, interrupting the CPU is called <code>interrupt</code>,
@@ -2937,20 +2993,20 @@ requiring that CPU saves what it was doing with respect to the user process.</p>
 The information about the interrupt is recorded in <code>/proc/interrupts</code></p>
 <p>The file <code>/proc/stat</code> also contains interrupt information.</p>
 <hr>
-<h2 id="process-monitering">Process Monitering<a href="#process-monitering" class="anchor" aria-hidden="true">#</a> </h2>
-<h3 id="ownership-of-running-processes">Ownership of running processes<a href="#ownership-of-running-processes" class="anchor" aria-hidden="true">#</a> </h3>
-<h3 id="launching-a-process-from-command-line">Launching a process from command line<a href="#launching-a-process-from-command-line" class="anchor" aria-hidden="true">#</a> </h3>
+<h2 id="process-monitering">Process Monitering</h2>
+<h3 id="ownership-of-running-processes">Ownership of running processes</h3>
+<h3 id="launching-a-process-from-command-line">Launching a process from command line</h3>
 <p><code>control + c</code>
 <code>control + z</code></p>
-<h3 id="monitoring-process">Monitoring Process<a href="#monitoring-process" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="monitoring-process">Monitoring Process</h3>
 <p>To see what the a process is doing.</p>
-<h3 id="gui-monitoring-tools">GUI Monitoring Tools<a href="#gui-monitoring-tools" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="gui-monitoring-tools">GUI Monitoring Tools</h3>
 <p>System Monitor
 <code>gnome-system-monitor</code> command to launch from CLI</p>
 <p>There are two versions, one for Gnome and another for KDE.</p>
-<h3 id="command-line-monitoring-tools">Command line monitoring tools<a href="#command-line-monitoring-tools" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="command-line-monitoring-tools">Command line monitoring tools</h3>
 <p><code>top</code> <code>ps</code></p>
-<h4 id="top"><code>top</code><a href="#top" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="top"><code>top</code></h4>
 <p><code>top</code> program when launched outputs and remains running. It is an interactive program that updates its output in specified refresh rate (default 3 sec).
 This can be altered using <code>-d s.t</code>  s is seconds and t is tenth of second
 <code>-d 1</code> update every second
@@ -3007,7 +3063,7 @@ H - Show threads
 U - show specified user owned processes only
 n - show only specified number of processes</p>
 <p>q - quit</p>
-<h4 id="ps"><code>ps</code><a href="#ps" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="ps"><code>ps</code></h4>
 <p><code>ps</code> command provides a detailed examination of the running process as a snapshot and is not interactive. Displays and exits.
 Without any options, the only process displayed is <code>bash</code></p>
 <p>Lots of options to get what is needed but complex</p>

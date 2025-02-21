@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2825,8 +2881,8 @@
 
 			</nav>
 			<p><strong>returning values</strong>, <strong>callback functions</strong>, <strong>recursion</strong>, and <strong>closures</strong>.</p>
-<h2 id="returning-a-value"><strong>Returning a Value</strong><a href="#returning-a-value" class="anchor" aria-hidden="true">#</a> </h2>
-<h3 id="functions-and-side-effects"><strong>Functions and Side Effects</strong><a href="#functions-and-side-effects" class="anchor" aria-hidden="true">#</a> </h3>
+<h2 id="returning-a-value"><strong>Returning a Value</strong></h2>
+<h3 id="functions-and-side-effects"><strong>Functions and Side Effects</strong></h3>
 <p>Functions can serve two purposes: they can produce <strong>side effects</strong> (such as modifying a variable, printing to the console, or changing the DOM) or they can <strong>return values</strong>.</p>
 <p>Functions that <strong>return values</strong> are more useful because their output can be reused in other parts of the program.</p>
 
@@ -2846,7 +2902,7 @@
   </figure>
 </div>
 <p>Here, <code>sum</code> returns a value (<code>3</code>) that is then stored in the variable <code>result</code>. This value can be used or passed around later.</p>
-<h4 id="returning-early"><strong>Returning Early</strong><a href="#returning-early" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="returning-early"><strong>Returning Early</strong></h4>
 <p>The <code>return</code> statement immediately stops the function&rsquo;s execution and optionally returns a value. If no value is returned, the function returns <code>undefined</code> by default.</p>
 
 
@@ -2864,7 +2920,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
   </figure>
 </div>
-<h4 id="pure-functions"><strong>Pure Functions</strong><a href="#pure-functions" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="pure-functions"><strong>Pure Functions</strong></h4>
 <p>A <strong>pure function</strong> is one that:</p>
 <ul>
 <li>Returns a value based only on its input arguments.</li>
@@ -2872,14 +2928,14 @@
 </ul>
 <p>Pure functions are easy to test and reason about, as their output depends only on the input.</p>
 <hr>
-<h2 id="functions-as-values"><strong>Functions as Values</strong><a href="#functions-as-values" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="functions-as-values"><strong>Functions as Values</strong></h2>
 <p>In JavaScript, <strong>functions are first-class citizens</strong>. This means they can be:</p>
 <ul>
 <li>Assigned to variables.</li>
 <li>Passed as arguments to other functions.</li>
 <li>Returned from other functions.</li>
 </ul>
-<h3 id="functions-as-values-1"><strong>Functions as Values</strong><a href="#functions-as-values-1" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="functions-as-values-1"><strong>Functions as Values</strong></h3>
 <p>A function can be treated as a value (like a string or a number), meaning you can assign it to a variable and execute it later.</p>
 
 
@@ -2901,7 +2957,7 @@
 <p>Regular values like strings or numbers represent the <em>data</em>.
 A function can be perceived as an <em>action</em>.
 We can pass it between variables and run when we want.</p>
-<h3 id="passing-functions-as-arguments"><strong>Passing Functions as Arguments</strong><a href="#passing-functions-as-arguments" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="passing-functions-as-arguments"><strong>Passing Functions as Arguments</strong></h3>
 <p>You can pass functions as arguments to other functions. These are often called <strong>callback functions</strong>.</p>
 
 
@@ -2932,7 +2988,7 @@ We can pass it between variables and run when we want.</p>
 <li>The <code>ask</code> function takes two callback functions (<code>showOk</code> and <code>showCancel</code>).</li>
 <li>The appropriate callback is executed based on the user&rsquo;s response.</li>
 </ul>
-<h3 id="anonymous-functions-as-callbacks"><strong>Anonymous Functions as Callbacks</strong><a href="#anonymous-functions-as-callbacks" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="anonymous-functions-as-callbacks"><strong>Anonymous Functions as Callbacks</strong></h3>
 <p>You can also pass <strong>anonymous functions</strong> directly as arguments to another function.</p>
 
 
@@ -2951,7 +3007,7 @@ We can pass it between variables and run when we want.</p>
 </div>
 <p>These <strong>anonymous functions</strong> are called immediately when the <code>ask</code> function executes. They are not assigned to any variables, so they exist only within the scope of the <code>ask</code> call.</p>
 <hr>
-<h2 id="the-call-stack"><strong>The Call Stack</strong><a href="#the-call-stack" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="the-call-stack"><strong>The Call Stack</strong></h2>
 <p>When a function is called, the program must &ldquo;remember&rdquo; where it left off in order to return to that point after the function finishes executing. This is handled by the <strong>call stack</strong>.</p>
 <ul>
 <li>Every time a function is called, its execution context is pushed onto the stack.</li>
@@ -2977,10 +3033,10 @@ We can pass it between variables and run when we want.</p>
   </figure>
 </div>
 <p>This code causes <strong>infinite recursion</strong>. The functions <code>chicken</code> and <code>egg</code> keep calling each other, filling up the call stack until it overflows.</p>
-<h4 id="stack-overflow"><strong>Stack Overflow</strong><a href="#stack-overflow" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="stack-overflow"><strong>Stack Overflow</strong></h4>
 <p>If the call stack grows too large (due to excessive function calls like the example above), a <strong>stack overflow</strong> error occurs. This happens when the computer runs out of space to store execution contexts.</p>
 <hr>
-<h2 id="closures"><strong>Closures</strong><a href="#closures" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="closures"><strong>Closures</strong></h2>
 <p>A <strong>closure</strong> is a function that retains access to variables from its <strong>lexical scope</strong>, even after the function that created those variables has finished executing.</p>
 
 
@@ -3027,7 +3083,7 @@ We can pass it between variables and run when we want.</p>
 <li>The <code>twice</code> function retains the environment where <code>factor</code> was set to <code>2</code>.</li>
 </ul>
 <hr>
-<h2 id="recursion"><strong>Recursion</strong><a href="#recursion" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="recursion"><strong>Recursion</strong></h2>
 <p>A function is <strong>recursive</strong> if it calls itself in order to solve a problem. Recursive functions are commonly used to solve problems that involve repetitive sub-problems (e.g., calculating factorials, traversing trees, etc.).</p>
 
 
@@ -3080,7 +3136,7 @@ The problem asks for a sequence of operations (adding 5 or multiplying by 3) to 
 </div>
 <p>Here, the function <code>findSolution</code> uses recursion to explore two possible operations at each step: adding 5 or multiplying by 3. It keeps track of the operations in the <code>history</code> variable.</p>
 <hr>
-<h2 id="growing-functions"><strong>Growing Functions</strong><a href="#growing-functions" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="growing-functions"><strong>Growing Functions</strong></h2>
 <p>When working with larger functions, it&rsquo;s best to break them down into smaller, reusable pieces.</p>
 <p><strong>Formatting Output</strong>
 To print the number of cows, chickens, and pigs on a farm, formatted with leading zeros.</p>

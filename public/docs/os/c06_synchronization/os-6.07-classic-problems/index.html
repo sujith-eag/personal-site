@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2824,7 +2880,7 @@
 			</nav>
 			<p>Synchronization problems as examples of a large class of concurrency-control problems. These problems are used for testing nearly every newly proposed synchronization scheme.</p>
 <hr>
-<h3 id="672-reader-writers-problem">6.7.2 Reader-Writers Problem<a href="#672-reader-writers-problem" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="672-reader-writers-problem">6.7.2 Reader-Writers Problem</h3>
 <p>The <strong>Reader-Writers problem</strong> is a classic synchronization issue that arises when multiple processes share access to a database. Some processes may need only read access (readers), while others require both read and write access (writers).</p>
 <ul>
 <li><strong>Reading:</strong> If two readers access the shared database simultaneously, no conflicts occur.</li>
@@ -2832,7 +2888,7 @@
 </ul>
 <p>The goal of the Reader-Writers problem is to manage access to the shared resource (the database) in a way that ensures no conflicts occur, while also balancing fairness between readers and writers.</p>
 <hr>
-<h4 id="variants-of-the-reader-writers-problem">Variants of the Reader-Writers Problem<a href="#variants-of-the-reader-writers-problem" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="variants-of-the-reader-writers-problem">Variants of the Reader-Writers Problem</h4>
 <ol>
 <li>
 <p><strong>First Readers-Writers Problem:</strong></p>
@@ -2855,7 +2911,7 @@
 <li>In the second case, <strong>readers may starve</strong> if writers continuously prevent new readers from starting.</li>
 </ul>
 <hr>
-<h3 id="solution-to-the-first-readers-writers-problem">Solution to the First Readers-Writers Problem<a href="#solution-to-the-first-readers-writers-problem" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="solution-to-the-first-readers-writers-problem">Solution to the First Readers-Writers Problem</h3>
 <p>The solution to the first readers-writers problem involves the following key data structures shared by reader and writer processes:</p>
 
 
@@ -2936,7 +2992,7 @@
 </li>
 </ul>
 <hr>
-<h3 id="reader-writer-locks">Reader-Writer Locks<a href="#reader-writer-locks" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="reader-writer-locks">Reader-Writer Locks</h3>
 <p>The Reader-Writers problem and its solutions have been extended into <strong>reader-writer locks</strong>, which are implemented in some systems to simplify synchronization. A <strong>reader-writer lock</strong> can be acquired in one of two modes:</p>
 <ol>
 <li><strong>Read Mode:</strong> For processes that only need to read shared data.</li>
@@ -2952,9 +3008,9 @@
 <li><strong>There are more readers than writers</strong>, as allowing multiple readers to access the data concurrently significantly improves performance. While the overhead of establishing a reader-writer lock is higher than using semaphores or mutual-exclusion locks, the increased concurrency of multiple readers justifies the overhead.</li>
 </ol>
 <hr>
-<h3 id="673-dining-philosophers-problem">6.7.3 Dining-Philosophers Problem<a href="#673-dining-philosophers-problem" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="673-dining-philosophers-problem">6.7.3 Dining-Philosophers Problem</h3>
 <p>Consider five philosophers who spend their lives thinking and eating. These philosophers share a circular table with five chairs, each belonging to one philosopher. In the center of the table is a bowl of rice, and five chopsticks are laid out for use.</p>
-<h4 id="problem-setup">Problem Setup:<a href="#problem-setup" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="problem-setup">Problem Setup:</h4>
 <ul>
 <li>When a philosopher is thinking, she does not interact with her neighbors.</li>
 <li>From time to time, a philosopher gets hungry and tries to pick up the two chopsticks closest to her: one between her and the philosopher on her left, and the other between her and the philosopher on her right.</li>
@@ -2964,9 +3020,9 @@
 </ul>
 <p>This scenario is a simple model for the problem of allocating resources (chopsticks) among competing processes (philosophers) in a <strong>deadlock-free</strong> and <strong>starvation-free</strong> manner.</p>
 <hr>
-<h3 id="solution-using-semaphores">Solution Using Semaphores<a href="#solution-using-semaphores" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="solution-using-semaphores">Solution Using Semaphores</h3>
 <p>One straightforward solution involves representing each chopstick with a semaphore. The philosopher attempts to grab a chopstick by executing a <code>wait()</code> operation on the corresponding semaphore. When finished eating, she releases the chopsticks by executing the <code>signal()</code> operation on the respective semaphores.</p>
-<h4 id="shared-data">Shared Data:<a href="#shared-data" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="shared-data">Shared Data:</h4>
 
 
 
@@ -2982,7 +3038,7 @@
 <ul>
 <li>All elements of <code>chopstick</code> are initialized to 1, representing that each chopstick is available.</li>
 </ul>
-<h4 id="philosopher-process">Philosopher Process:<a href="#philosopher-process" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="philosopher-process">Philosopher Process:</h4>
 
 
 
@@ -3008,16 +3064,16 @@
 <li>Each philosopher executes this loop, trying to pick up chopsticks, eat, and then think.</li>
 </ul>
 <hr>
-<h3 id="problems-with-the-simple-solution">Problems with the Simple Solution<a href="#problems-with-the-simple-solution" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="problems-with-the-simple-solution">Problems with the Simple Solution</h3>
 <p>Although this solution ensures that no two neighboring philosophers eat at the same time, it has the potential to lead to <strong>deadlock</strong>.</p>
-<h4 id="deadlock-scenario">Deadlock Scenario:<a href="#deadlock-scenario" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="deadlock-scenario">Deadlock Scenario:</h4>
 <ul>
 <li>Suppose all five philosophers become hungry at the same time.</li>
 <li>Each philosopher picks up her left chopstick (the one between her and her left neighbor).</li>
 <li>Now, all chopsticks are in use (value = 0), and when each philosopher tries to pick up her right chopstick, she will be blocked, waiting forever. This leads to a deadlock where no philosopher can proceed.</li>
 </ul>
 <hr>
-<h3 id="possible-remedies-for-deadlock">Possible Remedies for Deadlock<a href="#possible-remedies-for-deadlock" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="possible-remedies-for-deadlock">Possible Remedies for Deadlock</h3>
 <p>Several solutions can be applied to avoid the deadlock problem:</p>
 <ol>
 <li>

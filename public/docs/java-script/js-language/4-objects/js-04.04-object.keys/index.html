@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2790,7 +2846,7 @@
   </details>
 
 			</nav>
-			<h2 id="objectkeysobj"><strong><code>Object.keys(obj)</code> Method</strong><a href="#objectkeysobj" class="anchor" aria-hidden="true">#</a> </h2>
+			<h2 id="objectkeysobj"><strong><code>Object.keys(obj)</code> Method</strong></h2>
 <ul>
 <li><strong><code>Object.keys(obj)</code></strong> is a method that returns an <strong>array</strong> of the <strong>own enumerable property names (keys)</strong> of an object <code>obj</code>.</li>
 <li>This means it will list all the keys in the object, excluding any keys in the object&rsquo;s prototype chain.</li>
@@ -2811,7 +2867,7 @@
 <ul>
 <li>The object <code>obj</code> has two keys: <code>&quot;a&quot;</code> and <code>&quot;b&quot;</code>. The <code>Object.keys(obj)</code> method returns an array of those keys.</li>
 </ul>
-<h3 id="length-of-the-keys-array"><strong>Length of the Keys Array</strong>:<a href="#length-of-the-keys-array" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="length-of-the-keys-array"><strong>Length of the Keys Array</strong>:</h3>
 <ul>
 <li>The <code>.length</code> property of the array returned by <code>Object.keys(obj)</code> gives the number of keys (properties) in the object.</li>
 <li>If the object has no properties, the length will be <code>0</code>.</li>
@@ -2830,7 +2886,7 @@
   </figure>
 </div>
 <hr>
-<h2 id="usage-in-code"><strong>Usage in Code:</strong><a href="#usage-in-code" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="usage-in-code"><strong>Usage in Code:</strong></h2>
 <p>Consider the following code:</p>
 
 
@@ -2843,7 +2899,7 @@
   <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">obj</span><span class="p">).</span><span class="nx">length</span><span class="p">)</span> <span class="k">return</span> <span class="kc">null</span><span class="p">;</span></span></span></code></pre></div>
   </figure>
 </div>
-<h3 id="role-of-objectkeys-in-the-code">Role of <code>Object.keys()</code> in the Code:<a href="#role-of-objectkeys-in-the-code" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="role-of-objectkeys-in-the-code">Role of <code>Object.keys()</code> in the Code:</h3>
 <ul>
 <li>
 <p><strong><code>Object.keys(obj)</code></strong> is used to get an array of the object&rsquo;s own keys.</p>
@@ -2867,7 +2923,7 @@
 </li>
 </ul>
 <p>[[2.2 modifying Practice#Create a tree from object|Question that uses this]]</p>
-<h3 id="example-use-case">Example Use Case:<a href="#example-use-case" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="example-use-case">Example Use Case:</h3>
 <p>This pattern is commonly used in scenarios where you need to create or process elements based on the properties of an object. For example, if you&rsquo;re creating a DOM tree from an object and encounter an empty object, you might want to avoid creating any unnecessary DOM nodes.</p>
 
 
@@ -2896,7 +2952,7 @@
 </div>
 <p>In this example, if the <code>obj</code> passed to <code>createTree()</code> is empty, <code>Object.keys(obj).length</code> will be <code>0</code>, and the function will return <code>null</code>, avoiding any DOM manipulation.</p>
 <hr>
-<h2 id="summary"><strong>Summary:</strong><a href="#summary" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="summary"><strong>Summary:</strong></h2>
 <ul>
 <li><strong><code>Object.keys(obj)</code></strong> provides a convenient way to obtain all the keys of an object.</li>
 <li>You can check if an object is <strong>empty</strong> by checking if the length of the keys array is <code>0</code>.</li>

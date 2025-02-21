@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2857,7 +2913,7 @@
 </li>
 <li><strong>Heap Section:</strong> Dynamically allocated memory during runtime that grows and shrinks as the program executes.</li>
 </ul>
-<h4 id="structure-of-a-process-in-memory"><strong>Structure of a Process in Memory:</strong><a href="#structure-of-a-process-in-memory" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="structure-of-a-process-in-memory"><strong>Structure of a Process in Memory:</strong></h4>
 
 <figure>
   <img
@@ -2883,7 +2939,7 @@
 <p>In these cases, each process is independent, even though their text sections (program code) may be identical. The <strong>data</strong>, <strong>heap</strong>, and <strong>stack</strong> sections will differ for each process.</p>
 <p>Modern computer systems enable multiple programs to be loaded and executed concurrently. This requires tighter control and better compartmentalization of resources, leading to the concept of a <strong>process</strong>, which is a program in execution.</p>
 <hr>
-<h3 id="process-state"><strong>Process State</strong><a href="#process-state" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="process-state"><strong>Process State</strong></h3>
 <p>As a process runs, it transitions through various <strong>states</strong> depending on its current activity. A process can be in one of the following states:</p>
 <ul>
 <li><strong>New:</strong> The process is in the process of being created.</li>
@@ -2914,7 +2970,7 @@
 <li>Multiple processes can be in the <strong>ready</strong> or <strong>waiting</strong> states at the same time.</li>
 </ul>
 <hr>
-<h3 id="process-control-block-pcb"><strong>Process Control Block (PCB)</strong><a href="#process-control-block-pcb" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="process-control-block-pcb"><strong>Process Control Block (PCB)</strong></h3>
 <p>Every process in an operating system is represented by a <strong>Process Control Block (PCB)</strong>, also known as a <strong>Task Control Block</strong>.</p>
 
 <figure>
@@ -2960,12 +3016,12 @@
   ><figcaption>3.04 Process Switching</figcaption>
 </figure>
 <hr>
-<h3 id="process-scheduling"><strong>Process Scheduling</strong><a href="#process-scheduling" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="process-scheduling"><strong>Process Scheduling</strong></h3>
 <p>The goal of <strong>multiprogramming</strong> is to ensure that the CPU is always being utilized, thereby maximizing <strong>CPU utilization</strong>. The objective of <strong>time-sharing systems</strong> is to switch the CPU between processes rapidly enough that users can interact with each program while it runs.</p>
 <p>The <strong>Process Scheduler</strong> selects an available process from the set of processes waiting for execution on the CPU whenever one process must wait, improving system efficiency.</p>
 <p>When there are more processes than available CPU time, some processes will have to wait until the CPU becomes free again.</p>
 <hr>
-<h4 id="scheduling-queues"><strong>Scheduling Queues</strong><a href="#scheduling-queues" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="scheduling-queues"><strong>Scheduling Queues</strong></h4>
 <ul>
 <li>
 <p><strong>Job Queue:</strong><br>
@@ -3001,7 +3057,7 @@ If a process requests I/O (e.g., disk access) and the device is busy, it enters 
 <li><strong>I/O-bound programs</strong>: These programs tend to have short CPU bursts and frequent I/O operations.</li>
 <li><strong>CPU-bound programs</strong>: These have long CPU bursts and minimal I/O operations.</li>
 </ul>
-<h4 id="schedulers"><strong>Schedulers</strong><a href="#schedulers" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="schedulers"><strong>Schedulers</strong></h4>
 <ol>
 <li>
 <p><strong>Long-Term Scheduler (Job Scheduler):</strong></p>
@@ -3040,7 +3096,7 @@ If a process requests I/O (e.g., disk access) and the device is busy, it enters 
   ><figcaption>3.07 Medium Term Scheduling in Queueing Diagram</figcaption>
 </figure>
 <hr>
-<h4 id="context-switching"><strong>Context Switching</strong><a href="#context-switching" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="context-switching"><strong>Context Switching</strong></h4>
 <p>A <strong>context switch</strong> occurs when the operating system switches from one process to another. The current process’s state (including CPU registers and other information in the PCB) is saved, and the state of the next process is loaded.</p>
 <p>Context switching happens frequently as the CPU alternates between tasks.</p>
 <ul>
@@ -3052,11 +3108,11 @@ If a process requests I/O (e.g., disk access) and the device is busy, it enters 
 </li>
 </ul>
 <hr>
-<h4 id="dispatcher"><strong>Dispatcher</strong><a href="#dispatcher" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="dispatcher"><strong>Dispatcher</strong></h4>
 <p>The <strong>dispatcher</strong> is responsible for transferring control of the CPU to the process selected by the short-term scheduler. The dispatcher performs operations like context switching, switching to user mode, and jumping to the correct program location.</p>
 <p><strong>Dispatch Latency</strong> is the time taken to perform a context switch and start executing a new process. This latency is crucial for optimizing process scheduling efficiency.</p>
 <hr>
-<h3 id="cpu-scheduling"><strong>CPU Scheduling</strong><a href="#cpu-scheduling" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="cpu-scheduling"><strong>CPU Scheduling</strong></h3>
 <p>CPU scheduling happens in the following situations:</p>
 <ol>
 <li><strong>Running → Waiting:</strong> A process requests I/O or another resource.</li>
@@ -3073,7 +3129,7 @@ If a process requests I/O (e.g., disk access) and the device is busy, it enters 
 </li>
 </ul>
 <hr>
-<h4 id="scheduling-criteria"><strong>Scheduling Criteria</strong><a href="#scheduling-criteria" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="scheduling-criteria"><strong>Scheduling Criteria</strong></h4>
 <p>To compare different scheduling algorithms, the following criteria are considered:</p>
 <ul>
 <li><strong>CPU Utilization:</strong> The goal is to maximize CPU usage (e.g., from 40% to 90%).</li>
@@ -3088,11 +3144,11 @@ If a process requests I/O (e.g., disk access) and the device is busy, it enters 
 <li><strong>Minimize</strong> turnaround time, waiting time, and response time.</li>
 </ul>
 <hr>
-<h3 id="scheduling-algorithms"><strong>Scheduling Algorithms</strong><a href="#scheduling-algorithms" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="scheduling-algorithms"><strong>Scheduling Algorithms</strong></h3>
 <p>CPU scheduling involves determining which process from the ready queue should be allocated CPU time.</p>
-<h4 id="first-come-first-served-scheduling-fcfs"><strong>First-Come, First-Served Scheduling (FCFS)</strong><a href="#first-come-first-served-scheduling-fcfs" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="first-come-first-served-scheduling-fcfs"><strong>First-Come, First-Served Scheduling (FCFS)</strong></h4>
 <p>The <strong>FCFS</strong> scheduling algorithm allocates CPU to processes in the order they arrive, using a <strong>FIFO queue</strong>. The process at the front of the queue gets the CPU, and when it completes, it is removed.</p>
-<h5 id="drawbacks-of-fcfs"><strong>Drawbacks of FCFS</strong><a href="#drawbacks-of-fcfs" class="anchor" aria-hidden="true">#</a> </h5>
+<h5 id="drawbacks-of-fcfs"><strong>Drawbacks of FCFS</strong></h5>
 <ol>
 <li>
 <p><strong>Monopolization of CPU:</strong> A CPU-bound process consumes the CPU while I/O-bound processes, which could proceed with little CPU time, wait. This leads to inefficient use of I/O devices.</p>
@@ -3105,7 +3161,7 @@ If a process requests I/O (e.g., disk access) and the device is busy, it enters 
 </li>
 </ol>
 <hr>
-<h4 id="shortest-job-first-scheduling"><strong>Shortest Job First Scheduling</strong><a href="#shortest-job-first-scheduling" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="shortest-job-first-scheduling"><strong>Shortest Job First Scheduling</strong></h4>
 <p>The <strong>Shortest Job First (SJF)</strong> scheduling algorithm assigns the CPU to the process with the shortest CPU burst.<br>
 If two processes have the same burst, <strong>FCFS</strong> is used to break the tie.</p>
 <ul>
@@ -3117,7 +3173,7 @@ If two processes have the same burst, <strong>FCFS</strong> is used to break the
 </li>
 </ul>
 <hr>
-<h4 id="priority-scheduling"><strong>Priority Scheduling</strong><a href="#priority-scheduling" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="priority-scheduling"><strong>Priority Scheduling</strong></h4>
 <p>The <strong>Priority Scheduling</strong> algorithm allocates CPU time based on process priority. The process with the highest priority gets the CPU.<br>
 If two processes have the same priority, <strong>FCFS</strong> is used.</p>
 <ul>
@@ -3128,11 +3184,11 @@ If two processes have the same priority, <strong>FCFS</strong> is used.</p>
 <p><strong>Nonpreemptive Priority Scheduling:</strong> A higher-priority process waits until the current process completes or blocks before it executes.</p>
 </li>
 </ul>
-<h5 id="major-issues"><strong>Major Issues:</strong><a href="#major-issues" class="anchor" aria-hidden="true">#</a> </h5>
+<h5 id="major-issues"><strong>Major Issues:</strong></h5>
 <p><strong>Indefinite Blocking (Starvation):</strong> Low-priority processes may never get to execute because higher-priority processes continuously preempt them.</p>
 <p><strong>Aging</strong> is used to solve starvation by gradually increasing the priority of long-waiting processes, ensuring that they eventually get executed.</p>
 <hr>
-<h4 id="round-robin-scheduling"><strong>Round Robin Scheduling</strong><a href="#round-robin-scheduling" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="round-robin-scheduling"><strong>Round Robin Scheduling</strong></h4>
 <p>The <strong>Round-Robin (RR)</strong> scheduling algorithm is a variant of <strong>FCFS</strong>, but with preemption.</p>
 <ul>
 <li><strong>Time Quantum (or Time Slice):</strong> A small time unit (typically between 10 to 100 milliseconds) allocated to each process.</li>
@@ -3145,14 +3201,14 @@ If two processes have the same priority, <strong>FCFS</strong> is used.</p>
 </ol>
 <p>This approach prevents any single process from monopolizing the CPU, allowing for better time-sharing.</p>
 <hr>
-<h3 id="process-synchronization"><strong>Process Synchronization</strong><a href="#process-synchronization" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="process-synchronization"><strong>Process Synchronization</strong></h3>
 <p><strong>Process synchronization</strong> involves ensuring that cooperating processes maintain data consistency when accessing shared resources. This is crucial for maintaining the integrity of shared data.</p>
-<h5 id="problems-from-concurrent-execution"><strong>Problems from Concurrent Execution</strong><a href="#problems-from-concurrent-execution" class="anchor" aria-hidden="true">#</a> </h5>
+<h5 id="problems-from-concurrent-execution"><strong>Problems from Concurrent Execution</strong></h5>
 <p>A <strong>race condition</strong> occurs when multiple processes or threads concurrently access and modify shared data, leading to inconsistent or incorrect results, depending on the timing of the operations.</p>
-<h4 id="critical-section-problem"><strong>Critical Section Problem</strong><a href="#critical-section-problem" class="anchor" aria-hidden="true">#</a> </h4>
+<h4 id="critical-section-problem"><strong>Critical Section Problem</strong></h4>
 <p>In a system with <strong>n processes</strong> ({P0, P1, &hellip;, Pn-1}), each process has a <strong>critical section</strong>—a segment of code where the process manipulates shared resources. The challenge is ensuring that <strong>no two processes</strong> execute their critical sections simultaneously.</p>
 <p>The critical-section problem requires that each process requests permission to enter its critical section, usually in the <strong>entry section</strong> of its code. After executing the critical section, the process enters the <strong>exit section</strong>, followed by the <strong>remainder section</strong>.</p>
-<h5 id="requirements-for-a-solution"><strong>Requirements for a Solution:</strong><a href="#requirements-for-a-solution" class="anchor" aria-hidden="true">#</a> </h5>
+<h5 id="requirements-for-a-solution"><strong>Requirements for a Solution:</strong></h5>
 <p>A valid solution to the critical-section problem must satisfy:</p>
 <ol>
 <li><strong>Mutual Exclusion:</strong> If one process is in its critical section, no other process can enter its critical section at the same time.</li>

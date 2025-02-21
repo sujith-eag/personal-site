@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2782,7 +2838,7 @@
   </details>
 
 			</nav>
-			<h3 id="controlling-repeated-characters-through"><strong>Controlling Repeated Characters Through <code>*</code>, <code>+</code>, <code>?</code></strong><a href="#controlling-repeated-characters-through" class="anchor" aria-hidden="true">#</a> </h3>
+			<h3 id="controlling-repeated-characters-through"><strong>Controlling Repeated Characters Through <code>*</code>, <code>+</code>, <code>?</code></strong></h3>
 <p>These are used to express a variable number of times that <code>preceding character</code> in regex can appear in the string.</p>
 <p><code>*</code>: The preceding character can appear <strong>0 or more times</strong>.<br>
 <code>1*0*</code> matches <code>11111000000</code>, <code>111111110</code>, <code>10</code>, <code>0</code>, or even an <strong>empty string</strong>.</p>
@@ -2800,7 +2856,7 @@ None will match with <code>abaaabc</code>as the letters are not in correct seque
 <code>jpe?g</code> : Matches <code>jpeg</code> or <code>jpg</code> (with <code>e</code> being optional and <code>j,p, g</code> a must).<br>
 <code>hello!?</code> : Matches <code>hello</code> or <code>hello!</code> (with <code>!</code> being optional).</p>
 <hr>
-<h3 id="using"><strong>Using <code>.</code> (Dot)</strong><a href="#using" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="using"><strong>Using <code>.</code> (Dot)</strong></h3>
 <p><strong><code>.</code></strong> matches any single character except a newline.</p>
 <p><code>b.t</code> will match any string that has <code>b</code> followed by <strong>any one character</strong>, followed by <code>t</code>.</p>
 <ul>
@@ -2818,7 +2874,7 @@ It will <strong>not</strong> match:  <code>bt</code> (since there must be at lea
 <p><strong><code>.?</code></strong>: Matches zero or one character of any kind.<br>
 <code>b.?t</code> will match: <code>bt</code>, <code>bat</code>, <code>b?t</code>, <code>b#t</code>, etc.</p>
 <hr>
-<h3 id="controlling-where-a-pattern-matches">Controlling Where a Pattern Matches<a href="#controlling-where-a-pattern-matches" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="controlling-where-a-pattern-matches">Controlling Where a Pattern Matches</h3>
 <p>A regular expression need not match the full string, it can match <strong>any substring</strong> within a string, which is a contiguous sequence of characters found within the larger string.</p>
 <ul>
 <li><code>a*b*c*</code> will match <code>abacab</code> because it looks for <strong>zero or more occurrences</strong> of <code>a</code>, <code>b</code>, and <code>c</code> in any order.</li>
@@ -2867,7 +2923,7 @@ To control where the regex matches, we can use anchors to enforce specific posit
 <li>This matches the <strong>empty string</strong>. It asserts that there is nothing between the start and end of the string.</li>
 </ul>
 <hr>
-<h3 id="matching-from-a-list-of-options">Matching From a List of Options<a href="#matching-from-a-list-of-options" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="matching-from-a-list-of-options">Matching From a List of Options</h3>
 <p>When we want to match a <strong>set of characters</strong> without caring about their specific order to indicate &ldquo;any of these&rdquo;, we can use <strong>character classes</strong>.<br>
 These are defined with <strong>square brackets</strong> (<code>[]</code>), which specify that the next character in the string must match <strong>any single character</strong> from the list of options inside the brackets.</p>
 <p><em><strong>Types of Lists:</strong></em> as given by the notation inside the bracket.</p>

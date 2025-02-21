@@ -793,6 +793,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2205,6 +2233,34 @@
 
   <li>
     <details open>
+      <summary>JavaScript DOM Basics</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.01-dom/">JS DOM - 01.01 - DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.02-navigating-dom/">JS DOM - 01.02 - Navigating DOM</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.03-text-and-html-content/">JS DOM - 01.03 - Text and Html Content</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.04-selectors/">JS DOM - 01.04 - Selectors</a>
+  </li>
+
+  <li>
+      <a href="/personal-site/docs/java-script-dom/1-dom-basics/js-dom-01.05-attributes-properties/">JS DOM - 01.05 - Attributes Properties</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
       <summary>DOM Modification</summary>
       <ul class="list-unstyled list-nested">
 
@@ -2806,7 +2862,7 @@
 			</nav>
 			<p>There are three primary methods to add CSS to an HTML document: <strong>External CSS</strong>, <strong>Internal CSS</strong>, and <strong>Inline CSS</strong>. Let’s break down each method:</p>
 <hr>
-<h2 id="1-external-css"><strong>1. External CSS</strong><a href="#1-external-css" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="1-external-css"><strong>1. External CSS</strong></h2>
 <p>External CSS involves creating a separate CSS file and linking it to HTML document. This is done using the void <code>&lt;link&gt;</code> element inside the <code>&lt;head&gt;</code> section of the HTML.</p>
 <p>The <code>href</code> attribute specifies the location of the CSS file, and the <code>rel</code> attribute defines the relationship between the HTML file and the linked CSS file (which will always be <code>stylesheet</code>).</p>
 
@@ -2842,13 +2898,13 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
   </figure>
 </div>
-<h3 id="advantages-of-external-css"><strong>Advantages of External CSS</strong>:<a href="#advantages-of-external-css" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="advantages-of-external-css"><strong>Advantages of External CSS</strong>:</h3>
 <ol>
 <li><strong>Separation of concerns</strong>: Keeps HTML and CSS files separate, making the HTML cleaner and smaller.</li>
 <li><strong>Reusability</strong>: You only need to edit the CSS in one place, and those styles will apply to every HTML page linked to that CSS file. This is especially useful for websites with multiple pages that share similar styles.</li>
 </ol>
 <hr>
-<h2 id="2-internal-css"><strong>2. Internal CSS</strong><a href="#2-internal-css" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="2-internal-css"><strong>2. Internal CSS</strong></h2>
 <p>Internal CSS, or embedded CSS, involves placing the CSS rules directly inside the HTML document. The CSS is placed within the <code>&lt;style&gt;</code> tag inside the <code>&lt;head&gt;</code> section of the HTML.</p>
 <ol>
 <li>Place your CSS rules between the opening and closing <code>&lt;style&gt;</code> tags in the <code>&lt;head&gt;</code> section of your HTML document.</li>
@@ -2882,20 +2938,20 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span></span></span></code></pre></div>
   </figure>
 </div>
-<h3 id="advantages-of-internal-css"><strong>Advantages of Internal CSS</strong>:<a href="#advantages-of-internal-css" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="advantages-of-internal-css"><strong>Advantages of Internal CSS</strong>:</h3>
 <ul>
 <li>Ideal for applying styles to a single page or when you&rsquo;re testing out different styles quickly.</li>
 <li>No need to create and maintain a separate CSS file for simple styles on one page.</li>
 </ul>
-<h3 id="disadvantages-of-internal-css"><strong>Disadvantages of Internal CSS</strong>:<a href="#disadvantages-of-internal-css" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="disadvantages-of-internal-css"><strong>Disadvantages of Internal CSS</strong>:</h3>
 <ul>
 <li>Does not keep styles separate from content, which can make the HTML file larger and less maintainable, especially for larger projects.</li>
 <li>Not reusable across multiple pages (unlike External CSS).</li>
 </ul>
 <hr>
-<h2 id="3-inline-css"><strong>3. Inline CSS</strong><a href="#3-inline-css" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="3-inline-css"><strong>3. Inline CSS</strong></h2>
 <p>Inline CSS applies styles directly to individual HTML elements using the <code>style</code> attribute. This method allows you to specify styles directly within the HTML tag itself.</p>
-<h3 id="how-to-use-inline-css"><strong>How to Use Inline CSS</strong><a href="#how-to-use-inline-css" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="how-to-use-inline-css"><strong>How to Use Inline CSS</strong></h3>
 <ol>
 <li>Add the <code>style</code> attribute to an HTML element.</li>
 <li>Place the CSS declaration(s) within the <code>style</code> attribute. Each declaration is separated by a semicolon.</li>
@@ -2915,19 +2971,19 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span></span></span></code></pre></div>
   </figure>
 </div>
-<h3 id="advantages-of-inline-css"><strong>Advantages of Inline CSS</strong>:<a href="#advantages-of-inline-css" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="advantages-of-inline-css"><strong>Advantages of Inline CSS</strong>:</h3>
 <ul>
 <li>Useful for quickly testing or applying one-off styles to specific elements.</li>
 <li>No need to write separate CSS files or use <code>&lt;style&gt;</code> tags.</li>
 </ul>
-<h3 id="disadvantages-of-inline-css"><strong>Disadvantages of Inline CSS</strong>:<a href="#disadvantages-of-inline-css" class="anchor" aria-hidden="true">#</a> </h3>
+<h3 id="disadvantages-of-inline-css"><strong>Disadvantages of Inline CSS</strong>:</h3>
 <ul>
 <li><strong>Poor maintainability</strong>: Styles are applied directly to elements, which can make the HTML messy and harder to maintain.</li>
 <li><strong>Redundancy</strong>: You’ll need to repeat the same styles across different elements if they share the same styling, which can lead to repetitive code.</li>
 <li><strong>Overrides other styles</strong>: Inline styles have the highest specificity, meaning they can override other CSS rules (including external and internal styles).</li>
 </ul>
 <hr>
-<h2 id="summary-of-methods"><strong>Summary of Methods</strong><a href="#summary-of-methods" class="anchor" aria-hidden="true">#</a> </h2>
+<h2 id="summary-of-methods"><strong>Summary of Methods</strong></h2>
 <table>
   <thead>
       <tr>
