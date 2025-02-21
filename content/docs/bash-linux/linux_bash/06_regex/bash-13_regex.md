@@ -35,6 +35,7 @@ While wildcards, such as `*` or `?`, can be used to express basic patterns, rege
 
 
 ___
+
 ### Metacharacters in Regex
 
 The **regex** used in Linux was adopted from **POSIX** (Portable Operating System Interface for Unix), a series of standards that OS developers followed to ensure Unix and Unix-like systems shared features.

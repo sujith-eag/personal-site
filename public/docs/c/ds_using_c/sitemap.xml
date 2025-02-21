@@ -9,43 +9,22 @@
     </url>
     
     <url>
-      <loc>http://localhost:1313/personal-site/docs/c/ds_using_c/02-stack-operations/</loc>
-      <lastmod>2025-01-01T16:00:28+05:30</lastmod>
+      <loc>http://localhost:1313/personal-site/docs/c/ds_using_c/stack_array/</loc>
+      <lastmod>2025-01-01T15:50:43+05:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/personal-site/docs/c/ds_using_c/03-infix-to-postfix-conversion/</loc>
-      <lastmod>2025-01-01T16:00:34+05:30</lastmod>
+      <loc>http://localhost:1313/personal-site/docs/c/ds_using_c/quequ_stack/</loc>
+      <lastmod>2025-01-01T15:50:43+05:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/personal-site/docs/c/ds_using_c/04-postfix-expression-evaluation/</loc>
-      <lastmod>2025-01-01T16:00:40+05:30</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.5</priority>
-    </url>
-    
-    <url>
-      <loc>http://localhost:1313/personal-site/docs/c/ds_using_c/05-queue/</loc>
-      <lastmod>2025-01-01T16:00:44+05:30</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.5</priority>
-    </url>
-    
-    <url>
-      <loc>http://localhost:1313/personal-site/docs/c/ds_using_c/06-circular-queue/</loc>
-      <lastmod>2025-01-01T16:00:48+05:30</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.5</priority>
-    </url>
-    
-    <url>
-      <loc>http://localhost:1313/personal-site/docs/c/ds_using_c/07-singly-linked-list-basics/</loc>
-      <lastmod>2025-01-01T16:00:52+05:30</lastmod>
+      <loc>http://localhost:1313/personal-site/docs/c/ds_using_c/linked_list/</loc>
+      <lastmod>2025-01-01T15:50:43+05:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
@@ -56,4 +35,40 @@
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
-    </urlset>
+    <url>
+        <loc>http://localhost:1313/personal-site/docs/c/ds_using_c/stack_array/02-stack-operations/</loc>
+        <lastmod>2025-01-01T16:00:28+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/c/ds_using_c/stack_array/03-infix-to-postfix-conversion/</loc>
+        <lastmod>2025-01-01T16:00:34+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/c/ds_using_c/stack_array/04-postfix-expression-evaluation/</loc>
+        <lastmod>2025-01-01T16:00:40+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/c/ds_using_c/quequ_stack/05-queue/</loc>
+        <lastmod>2025-01-01T16:00:44+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/c/ds_using_c/quequ_stack/06-circular-queue/</loc>
+        <lastmod>2025-01-01T16:00:48+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/c/ds_using_c/linked_list/07-singly-linked-list-basics/</loc>
+        <lastmod>2025-01-01T16:00:52+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      </urlset>

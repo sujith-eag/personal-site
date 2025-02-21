@@ -1,5 +1,5 @@
 ---
-title: "Linx Bash"
+title: "Linx and Bash"
 description: ""
 summary: ""
 date: 2024-12-29T16:34:09+05:30

@@ -1,6 +1,6 @@
 # Hugo
 title = "Sujith's Notes"
-description = "A reference site with summary of various coding topics"
+description = "Reference site with summary on Programming Concepts"
 images = ["cover.png"]
 
 # mainSections
@@ -45,7 +45,7 @@ mainSections = ["docs"]
 
   # Nav
   # sectionNav = ["docs"] # ["docs"] (default) or list of sections (e.g. ["docs", "guides"])
-  sectionNav = ["docs", "linux-terminal", "tools"]
+  #sectionNav = ["docs", "linux-terminal", "tools"]
   toTopButton = false # false (default) or true
   breadcrumbTrail = false # false (default) or true
   headlineHash = false # true (default) or false
@@ -72,15 +72,15 @@ mainSections = ["docs"]
   imageSingle = true # true (default) or false
 
   # Repository
-  editPage = false # false (default) or true
-  lastMod = false # false (default) or true
+  editPage = true # false (default) or true
+  lastMod = true # false (default) or true
   repoHost = "GitHub" # GitHub (default), Gitea, GitLab, Bitbucket, or BitbucketServer
-  docsRepo = "https://github.com/h-enk/doks"
+  docsRepo = "https://github.com/sujith-eag/personal-site"   # docsRepo = "https://github.com/h-enk/doks"
   docsRepoBranch = "main" # main (default), master, or <branch name>
   docsRepoSubPath = "" # "" (none, default) or <sub path>
 
   # SCSS colors
-  backGround = "yellowgreen"
+  # backGround = "yellowgreen"
   ## Dark theme
   # textDark = "#dee2e6" # "#dee2e6" (default), "#dee2e6" (orignal), or custom color
   # accentDark = "#5d2f86" # "#5d2f86" (default), "#5d2f86" (original), or custom color

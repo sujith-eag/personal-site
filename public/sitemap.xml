@@ -482,33 +482,48 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/c/ds_using_c/02-stack-operations/</loc>
+    <loc>http://localhost:1313/personal-site/docs/c/ds_using_c/stack_array/02-stack-operations/</loc>
     <lastmod>2025-01-01T16:00:28+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/c/ds_using_c/03-infix-to-postfix-conversion/</loc>
+    <loc>http://localhost:1313/personal-site/docs/c/ds_using_c/stack_array/</loc>
+    <lastmod>2025-01-01T15:50:43+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/personal-site/docs/c/ds_using_c/stack_array/03-infix-to-postfix-conversion/</loc>
     <lastmod>2025-01-01T16:00:34+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/c/ds_using_c/04-postfix-expression-evaluation/</loc>
+    <loc>http://localhost:1313/personal-site/docs/c/ds_using_c/stack_array/04-postfix-expression-evaluation/</loc>
     <lastmod>2025-01-01T16:00:40+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/c/ds_using_c/05-queue/</loc>
+    <loc>http://localhost:1313/personal-site/docs/c/ds_using_c/quequ_stack/05-queue/</loc>
     <lastmod>2025-01-01T16:00:44+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/c/ds_using_c/06-circular-queue/</loc>
+    <loc>http://localhost:1313/personal-site/docs/c/ds_using_c/quequ_stack/</loc>
+    <lastmod>2025-01-01T15:50:43+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/personal-site/docs/c/ds_using_c/quequ_stack/06-circular-queue/</loc>
     <lastmod>2025-01-01T16:00:48+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/c/ds_using_c/07-singly-linked-list-basics/</loc>
+    <loc>http://localhost:1313/personal-site/docs/c/ds_using_c/linked_list/07-singly-linked-list-basics/</loc>
     <lastmod>2025-01-01T16:00:52+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/personal-site/docs/c/ds_using_c/linked_list/</loc>
+    <lastmod>2025-01-01T15:50:43+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -942,7 +957,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/html-css/css/css-01-selectors/</loc>
+    <loc>http://localhost:1313/personal-site/docs/html-css/css/css_basics/css-01-selectors/</loc>
     <lastmod>2024-11-06T14:58:36+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -952,57 +967,77 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/html-css/css/css-02-multiple-selecors/</loc>
+    <loc>http://localhost:1313/personal-site/docs/html-css/css/css_basics/</loc>
+    <lastmod>2024-10-22T14:34:20+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/personal-site/docs/html-css/css/css_grid/</loc>
+    <lastmod>2024-10-22T14:34:20+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/personal-site/docs/html-css/css/css_basics/css-02-multiple-selecors/</loc>
     <lastmod>2024-11-06T14:59:06+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/html-css/css/css-03-declaration/</loc>
+    <loc>http://localhost:1313/personal-site/docs/html-css/css/css_basics/css-03-declaration/</loc>
     <lastmod>2024-11-06T14:59:30+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/html-css/css/css-04-adding-css/</loc>
+    <loc>http://localhost:1313/personal-site/docs/html-css/css/css_basics/css-04-adding-css/</loc>
     <lastmod>2024-11-06T15:00:00+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/html-css/css/css-05-box-model/</loc>
+    <loc>http://localhost:1313/personal-site/docs/html-css/css/box_model/css-05-box-model/</loc>
     <lastmod>2024-11-06T15:00:25+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/html-css/css/css-06-flexbox/</loc>
+    <loc>http://localhost:1313/personal-site/docs/html-css/css/box_model/</loc>
+    <lastmod>2024-10-22T14:34:20+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/personal-site/docs/html-css/css/flex_box/css-06-flexbox/</loc>
     <lastmod>2024-11-06T15:01:00+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/html-css/css/css-07-flex-flexibility/</loc>
+    <loc>http://localhost:1313/personal-site/docs/html-css/css/flex_box/</loc>
+    <lastmod>2024-10-22T14:34:20+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/personal-site/docs/html-css/css/flex_box/css-07-flex-flexibility/</loc>
     <lastmod>2024-11-06T15:01:39+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/html-css/css/css-08-axes-in-flexbox/</loc>
+    <loc>http://localhost:1313/personal-site/docs/html-css/css/flex_box/css-08-axes-in-flexbox/</loc>
     <lastmod>2024-11-06T15:02:27+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/html-css/css/css-09-utility-class-inheritance/</loc>
+    <loc>http://localhost:1313/personal-site/docs/html-css/css/css_basics/css-09-utility-class-inheritance/</loc>
     <lastmod>2024-11-06T15:03:01+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/html-css/css/css_resource/css-04.1-size-units/</loc>
+    <loc>http://localhost:1313/personal-site/docs/html-css/css/css_values_units/css-04.1-size-units/</loc>
     <lastmod>2024-11-07T10:54:56+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/html-css/css/css_resource/css-04.2-color-values/</loc>
+    <loc>http://localhost:1313/personal-site/docs/html-css/css/css_values_units/css-04.2-color-values/</loc>
     <lastmod>2024-11-07T10:54:40+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/html-css/css/css_resource/</loc>
+    <loc>http://localhost:1313/personal-site/docs/html-css/css/css_values_units/</loc>
     <lastmod>2024-11-07T10:54:12+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -1052,122 +1087,152 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/01_bash_basics/</loc>
+    <lastmod>2024-12-29T16:34:09+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/</loc>
     <lastmod>2024-12-29T16:34:09+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-01-basics/</loc>
+    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/01_bash_basics/bash-01-basics/</loc>
     <lastmod>2024-10-22T09:32:39+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-02-features/</loc>
+    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/01_bash_basics/bash-02-features/</loc>
     <lastmod>2024-10-22T09:33:16+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-03-help-pages/</loc>
+    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/01_bash_basics/bash-03-help-pages/</loc>
     <lastmod>2024-10-22T09:33:44+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-04-variables-and-aliases/</loc>
+    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/01_bash_basics/bash-04-variables-and-aliases/</loc>
     <lastmod>2024-10-22T09:34:02+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-05-listing-files/</loc>
+    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/02_basic_commands/</loc>
+    <lastmod>2024-12-29T16:34:09+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/02_basic_commands/bash-05-listing-files/</loc>
     <lastmod>2024-10-22T09:34:28+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-06-environment-and-subshell/</loc>
+    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/01_bash_basics/bash-06-environment-and-subshell/</loc>
     <lastmod>2024-10-22T09:34:55+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-08-basic-file-commands/</loc>
+    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/02_basic_commands/bash-08-basic-file-commands/</loc>
     <lastmod>2024-12-29T16:48:46+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-07-storage-terminology-in-linux/</loc>
+    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/02_basic_commands/bash-07-storage-terminology-in-linux/</loc>
     <lastmod>2024-12-29T16:48:21+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-08.1-bc-and-date/</loc>
+    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/02_basic_commands/bash-08.1-bc-and-date/</loc>
     <lastmod>2025-01-01T15:23:35+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-09-file-movement-and-copy-commands/</loc>
+    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/02_basic_commands/bash-09-file-movement-and-copy-commands/</loc>
     <lastmod>2024-12-29T16:49:18+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-10-file-viewing-and-editing-commands/</loc>
+    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/04_file_search_edit/bash-10-file-viewing-and-editing-commands/</loc>
     <lastmod>2024-12-29T16:49:46+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-11-file-permissions/</loc>
+    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/04_file_search_edit/</loc>
+    <lastmod>2024-12-29T16:34:09+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/04_file_search_edit/bash-11-file-permissions/</loc>
     <lastmod>2024-12-29T16:50:02+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-12-hard-and-soft-links/</loc>
+    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/04_file_search_edit/bash-12-hard-and-soft-links/</loc>
     <lastmod>2024-12-29T16:50:24+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-13-regular-expressions/</loc>
+    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/06_regex/bash-13-regular-expressions/</loc>
     <lastmod>2024-12-29T16:50:36+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-13.1-regex-expanded/</loc>
+    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/06_regex/</loc>
+    <lastmod>2024-12-29T16:34:09+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/06_regex/bash-13.1-regex-expanded/</loc>
     <lastmod>2025-01-01T15:24:12+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-13.2-regex-matching/</loc>
+    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/06_regex/bash-13.2-regex-matching/</loc>
     <lastmod>2025-01-01T15:24:34+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-14-file-searching/</loc>
+    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/04_file_search_edit/bash-14-file-searching/</loc>
     <lastmod>2024-12-29T16:50:54+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-15-neovim/</loc>
+    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/03_neovim/bash-15-neovim/</loc>
     <lastmod>2025-01-01T15:29:36+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-16-egrep/</loc>
+    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/03_neovim/</loc>
+    <lastmod>2024-12-29T16:34:09+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/04_file_search_edit/bash-16-egrep/</loc>
     <lastmod>2024-12-29T16:51:37+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-17-sed/</loc>
+    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/04_file_search_edit/bash-17-sed/</loc>
     <lastmod>2024-12-29T16:51:47+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-18-shell-scripts/</loc>
+    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/07_shell_scripting/bash-18-shell-scripts/</loc>
     <lastmod>2024-12-29T16:51:59+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-18.1-shell-scripts-conditionals/</loc>
+    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/07_shell_scripting/</loc>
+    <lastmod>2024-12-29T16:51:59+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/07_shell_scripting/bash-18.1-shell-scripts-conditionals/</loc>
     <lastmod>2024-12-29T16:53:05+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/bash-18.2-shell-scripts-loops/</loc>
+    <loc>http://localhost:1313/personal-site/docs/bash-linux/linux_bash/07_shell_scripting/bash-18.2-shell-scripts-loops/</loc>
     <lastmod>2024-12-29T16:52:30+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
