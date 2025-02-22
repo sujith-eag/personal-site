@@ -1,11 +1,11 @@
 ---
-title: "C08_memory_management"
+title: "Memory Management"
 description: ""
 summary: ""
 date: 2025-01-12T21:16:29+05:30
 lastmod: 2025-01-12T21:16:29+05:30
-draft: true
-weight: 999
+draft: false
+weight: 2050
 toc: true
 seo:
   title: "" # custom title (optional)

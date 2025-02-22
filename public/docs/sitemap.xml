@@ -214,20 +214,14 @@
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/personal-site/docs/os/0-os-short-notes-unit-1/</loc>
-        <lastmod>2025-01-12T21:20:56+05:30</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-      </url>
-      <url>
-        <loc>http://localhost:1313/personal-site/docs/os/0-os-short-notes-unit-2/</loc>
-        <lastmod>2025-01-12T21:20:56+05:30</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-      </url>
-      <url>
         <loc>http://localhost:1313/personal-site/docs/os/c01_introduction/</loc>
         <lastmod>2025-01-12T21:13:14+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/os/os_mca/</loc>
+        <lastmod>2025-01-12T21:11:03+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
@@ -256,8 +250,14 @@
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/personal-site/docs/os/0-os-previous-questions-unit-1-2/</loc>
-        <lastmod>2025-01-12T21:27:49+05:30</lastmod>
+        <loc>http://localhost:1313/personal-site/docs/os/c07_deadlocks/</loc>
+        <lastmod>2025-01-12T21:16:01+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/os/c08_memory_management/</loc>
+        <lastmod>2025-01-12T21:16:29+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>

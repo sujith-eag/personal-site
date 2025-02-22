@@ -1,11 +1,11 @@
 ---
-title: "C07_deadlocks"
+title: "Deadlocks"
 description: ""
 summary: ""
 date: 2025-01-12T21:16:01+05:30
 lastmod: 2025-01-12T21:16:01+05:30
-draft: true
-weight: 999
+draft: false
+weight: 2040
 toc: true
 seo:
   title: "" # custom title (optional)
