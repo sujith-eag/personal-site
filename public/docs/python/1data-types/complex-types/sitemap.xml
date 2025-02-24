@@ -16,29 +16,8 @@
     </url>
     
     <url>
-      <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-cdt-07-dictinaries/</loc>
-      <lastmod>2024-12-17T22:47:04+05:30</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.5</priority>
-    </url>
-    
-    <url>
-      <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-cdt-08-asccessing-dictionary-elements/</loc>
-      <lastmod>2025-02-16T18:49:10+05:30</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.5</priority>
-    </url>
-    
-    <url>
-      <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-cdt-09-dictionary-manipulation-methods/</loc>
-      <lastmod>2025-02-16T18:49:31+05:30</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.5</priority>
-    </url>
-    
-    <url>
-      <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/02-cdt-10-dictinaries-practice-questions/</loc>
-      <lastmod>2025-02-16T18:49:48+05:30</lastmod>
+      <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/7dictionary/</loc>
+      <lastmod>2025-02-16T18:46:36+05:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
@@ -87,6 +66,30 @@
       <url>
         <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/5tuple_set/02-cdt-06-sets/</loc>
         <lastmod>2024-12-17T22:47:04+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/7dictionary/02-cdt-07-dictinaries/</loc>
+        <lastmod>2024-12-17T22:47:04+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/7dictionary/02-cdt-08-asccessing-dictionary-elements/</loc>
+        <lastmod>2025-02-16T18:49:10+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/7dictionary/02-cdt-09-dictionary-manipulation-methods/</loc>
+        <lastmod>2025-02-16T18:49:31+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/python/1data-types/complex-types/7dictionary/02-cdt-10-dictinaries-practice-questions/</loc>
+        <lastmod>2025-02-16T18:49:48+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
