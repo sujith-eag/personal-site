@@ -142,14 +142,14 @@
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/personal-site/docs/java-script/2-expressions_operators/</loc>
-        <lastmod>2024-11-07T14:51:09+05:30</lastmod>
+        <loc>http://localhost:1313/personal-site/docs/java-script/3-control-flow/</loc>
+        <lastmod>2024-11-07T20:42:45+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/personal-site/docs/java-script/3-control-flow/</loc>
-        <lastmod>2024-11-07T20:42:45+05:30</lastmod>
+        <loc>http://localhost:1313/personal-site/docs/java-script/2-expressions_operators/</loc>
+        <lastmod>2024-11-07T14:51:09+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>

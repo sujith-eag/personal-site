@@ -9,15 +9,15 @@
     </url>
     
     <url>
-      <loc>http://localhost:1313/personal-site/docs/java-script/2-expressions_operators/</loc>
-      <lastmod>2024-11-07T14:51:09+05:30</lastmod>
+      <loc>http://localhost:1313/personal-site/docs/java-script/3-control-flow/</loc>
+      <lastmod>2024-11-07T20:42:45+05:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
     
     <url>
-      <loc>http://localhost:1313/personal-site/docs/java-script/3-control-flow/</loc>
-      <lastmod>2024-11-07T20:42:45+05:30</lastmod>
+      <loc>http://localhost:1313/personal-site/docs/java-script/2-expressions_operators/</loc>
+      <lastmod>2024-11-07T14:51:09+05:30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
@@ -68,7 +68,7 @@
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>http://localhost:1313/personal-site/docs/java-script/1-data-types/data-types/</loc>
+        <loc>http://localhost:1313/personal-site/docs/java-script/1-data-types/boolean-type/</loc>
         <lastmod>2024-11-07T14:51:09+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
@@ -76,36 +76,6 @@
       <url>
         <loc>http://localhost:1313/personal-site/docs/java-script/1-data-types/05-type_conversion/</loc>
         <lastmod>2024-11-07T14:51:09+05:30</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-      </url>
-      <url>
-        <loc>http://localhost:1313/personal-site/docs/java-script/2-expressions_operators/js-01.09-operators/</loc>
-        <lastmod>2024-11-07T14:47:05+05:30</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-      </url>
-      <url>
-        <loc>http://localhost:1313/personal-site/docs/java-script/2-expressions_operators/js-01.09-operators/</loc>
-        <lastmod>2024-11-07T14:47:05+05:30</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-      </url>
-      <url>
-        <loc>http://localhost:1313/personal-site/docs/java-script/2-expressions_operators/js-01.09-operators/</loc>
-        <lastmod>2024-11-07T14:47:05+05:30</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-      </url>
-      <url>
-        <loc>http://localhost:1313/personal-site/docs/java-script/2-expressions_operators/js-01.09-operators/</loc>
-        <lastmod>2024-11-07T14:47:05+05:30</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-      </url>
-      <url>
-        <loc>http://localhost:1313/personal-site/docs/java-script/2-expressions_operators/js-01.09-operators/</loc>
-        <lastmod>2024-11-07T14:47:05+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
@@ -118,6 +88,42 @@
       <url>
         <loc>http://localhost:1313/personal-site/docs/java-script/3-control-flow/loops/</loc>
         <lastmod>2024-11-07T20:49:54+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/java-script/3-control-flow/jump_statements/</loc>
+        <lastmod>2024-11-07T20:49:54+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/java-script/2-expressions_operators/01-expressions/</loc>
+        <lastmod>2024-11-07T14:47:05+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/java-script/2-expressions_operators/02-operators/</loc>
+        <lastmod>2024-11-07T14:47:05+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/java-script/2-expressions_operators/03-ternary-operator/</loc>
+        <lastmod>2024-11-07T14:47:05+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/java-script/2-expressions_operators/04-logical-operators/</loc>
+        <lastmod>2024-11-07T14:47:05+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/java-script/2-expressions_operators/05-nullish-coalescing/</loc>
+        <lastmod>2024-11-07T14:47:05+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>
@@ -176,6 +182,18 @@
         <priority>0.5</priority>
       </url>
       <url>
+        <loc>http://localhost:1313/personal-site/docs/java-script/4-objects/js-04.05-methods-this-chaining/</loc>
+        <lastmod>2024-11-09T17:07:30+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>http://localhost:1313/personal-site/docs/java-script/4-objects/js-04.06-constructor-new/</loc>
+        <lastmod>2024-11-09T17:07:54+05:30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
         <loc>http://localhost:1313/personal-site/docs/java-script/4-objects/js-04.01-object/</loc>
         <lastmod>2024-11-09T17:05:46+05:30</lastmod>
         <changefreq>monthly</changefreq>
@@ -196,18 +214,6 @@
       <url>
         <loc>http://localhost:1313/personal-site/docs/java-script/4-objects/js-04.04-object.keys/</loc>
         <lastmod>2024-11-09T17:07:07+05:30</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-      </url>
-      <url>
-        <loc>http://localhost:1313/personal-site/docs/java-script/4-objects/js-04.05-methods-this-chaining/</loc>
-        <lastmod>2024-11-09T17:07:30+05:30</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-      </url>
-      <url>
-        <loc>http://localhost:1313/personal-site/docs/java-script/4-objects/js-04.06-constructor-new/</loc>
-        <lastmod>2024-11-09T17:07:54+05:30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
       </url>

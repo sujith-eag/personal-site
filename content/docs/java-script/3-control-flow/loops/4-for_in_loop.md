@@ -1,5 +1,5 @@
 ---
-title: "JS - 02.14 - for-in Loop"
+title: "04 - for-in Loop"
 description: ""
 summary: ""
 date: 2024-11-07T20:51:38+05:30
@@ -15,49 +15,59 @@ seo:
 ---
 
 
-The [for…in](https://javascript.info/object#forin) loop is used to iterate over the **keys/properties** of an object. It allows us to walk through the keys (or property names) in an object.
 
-### **The `in` Operator**
-
-The `in` operator is used to check if a specific property exists in an object. It returns `true` if the property is present, and `false` otherwise.
+The `in` operator is used to check if a specific property exists in an object. It returns `true` if the property is present and `false` otherwise.
 
 ```js
 "property" in object
 ```
+
 - `"property"`: The name of the property as a string (it can also be a variable holding the name).
 - `object`: The object to check for the property.
 
 ```js
-let user = {name: "John", age: 30};
+let user = { name: "John", age: 30 };
 
 alert("age" in user);  // true (the property 'age' exists in user)
 alert("bla" in user);  // false (the property 'bla' does not exist in user)
 ```
 
-**Using Variables with `in`:**
-If we omit quotes it refers to a variable, that variable should contain the actual name to be tested.
+#### **Using Variables with 'in':**
+
+If we omit the quotes, it refers to a variable. That variable should contain the actual name to be tested.
+
 ```js
-let user = {age: 30};
+let user = { age: 30 };
 let key = "age";
 
 alert(key in user);  // true (the property 'age' exists in user)
 ```
 
-**Handling `undefined`:**
+#### **Handling 'undefined':**
+
 The `in` operator will return `true` even if a property exists but its value is `undefined`.
 
 ```js
 let obj = { test: undefined };
 
-alert(obj.test); // undefined (the property exists with value 'undefined')
-alert("test" in obj); // true (the property 'test' exists)
+alert(obj.test);  
+// undefined (the property exists with value 'undefined')
+alert("test" in obj);  
+// true (the property 'test' exists)
 ```
 
 ---
 
-## **`for..in` Loop:**
+### **'for / in' Loop:**
 
-The `for..in` loop is specifically designed for iterating over the **keys** of an object. It allows us to access each property name (key) one by one.
+The `for...in` loop has been part of JavaScript since the beginning, unlike the `for/of` loop, which is new in ES6. The `for/in` loop works with any object after the `in`, while `for/of` requires an iterable object.
+
+The [for…in](https://javascript.info/object#forin) loop is used to iterate over the **keys/properties** of an object. It allows us to walk through the keys (or property names) in an object.
+
+```js
+for (variable in object)
+  statement
+```
 
 ```js
 for (key in object) {
@@ -67,8 +77,36 @@ for (key in object) {
 - `key`: The variable that will hold the name of the current property.
 - `object`: The object whose properties are being iterated.
 
+```js
+for (let p in o) {
+       // Assign property names of o to variable p
+  console.log(o[p]);  
+      // Print the value of each property
+}
+```
 
-To iterate over the properties of an object and output both the property names (keys) and their corresponding values:
+**Note:** The `variable` typically names a variable, but it can be an arbitrary expression, as long as it evaluates to something suitable for the left side of an assignment.
+
+**Example: Copying property names into an array:**
+
+```js
+let o = { x: 1, y: 2, z: 3 };
+let a = [], i = 0;
+for (a[i++] in o) /* empty */;
+```
+
+#### **Common Mistake:**
+
+A common source of bugs in code is the accidental use of `for/in` with arrays instead of `for/of`. When working with arrays, you almost always want to use `for/of` instead of `for/in`.
+
+The `for/in` loop does not enumerate all properties of an object. It does not loop through properties whose names are symbols. Additionally, it only loops over **enumerable properties**.
+
+Many developers prefer using `for/of` in combination with `Object.keys()` instead of `for/in`.
+
+____
+
+#### **Iterating over properties of an object:**
+
 ```js
 let user = {
   name: "John",
@@ -80,6 +118,7 @@ for (let key in user) {
   alert(key);  // Outputs the name of the property
   alert(user[key]);  // Outputs the value of the property
 }
+// Output:
 // name
 // John
 // age
@@ -100,6 +139,7 @@ The order in which properties are looped over in an object depends on whether th
 - **Non-integer property names** (i.e., strings that are not numbers) are listed in the order they were created.
 
 **Example of Integer vs Non-integer Order:**
+
 ```js
 let codes = {
   "+49": "Germany",
@@ -123,18 +163,12 @@ for (let code in codes) {
 
 ---
 
-### **Use Case of `for..in`**
+### **Use Case of 'for/in'**
 
-The `for..in` loop is typically used when you need to iterate over **object properties** and doesn't work with arrays in most cases (as array indices are considered numeric and `for..in` might return unexpected results).
+The `for..in` loop is typically used when you need to iterate over **object properties** and doesn't work well with arrays in most cases (since array indices are considered numeric, and `for..in` might return unexpected results).
 
 For arrays, the `for...of` loop is preferred since it directly iterates over the values rather than the keys.
 
 ---
 
-## **Summary**
-
-- **`in` operator**: Used to check if a property exists in an object, even if its value is `undefined`.
-- **`for..in` loop**: Loops through the **keys** of an object. It's useful for working with object properties but not typically used for arrays.
-- **Order of object properties**: Properties with numeric-like names are sorted numerically, while other properties are listed in the creation order.
 - **Integer properties**: JavaScript automatically converts string numbers into integers and sorts them accordingly.
-

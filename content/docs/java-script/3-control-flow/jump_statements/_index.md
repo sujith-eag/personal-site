@@ -1,11 +1,11 @@
 ---
-title: "Expressions, Operators and Logical Operators"
+title: "Jump Statements in JavaScript"
 description: ""
 summary: ""
-date: 2024-11-07T14:51:09+05:30
-lastmod: 2024-11-07T14:51:09+05:30
+date: 2024-11-07T20:49:54+05:30
+lastmod: 2024-11-07T20:49:54+05:30
 draft: false
-weight: 336
+weight: 370
 toc: true
 seo:
   title: "" # custom title (optional)

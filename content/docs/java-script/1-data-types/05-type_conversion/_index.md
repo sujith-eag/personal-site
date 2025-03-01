@@ -1,5 +1,5 @@
 ---
-title: "Type Conversion"
+title: "Data Type Conversion"
 description: ""
 summary: ""
 date: 2024-11-07T14:51:09+05:30
