@@ -1,11 +1,11 @@
 ---
-title: "JS - 04.05 - Methods, this, Chaining"
+title: "04 - Using 'this' in Object method"
 description: ""
 summary: ""
-date: 2024-11-09T17:07:30+05:30
-lastmod: 2024-11-09T17:07:30+05:30
+date: 2024-11-09T17:07:07+05:30
+lastmod: 2024-11-09T17:07:07+05:30
 draft: false
-weight: 374
+weight: 406
 toc: true
 seo:
   title: "" # custom title (optional)
@@ -15,66 +15,9 @@ seo:
 ---
 
 
-Concepts of **methods**, **`this`**, and **chaining** in JavaScript:
 
----
+The `this` keyword is commonly used inside methods to refer to the object the method belongs to.  `this` refers to the object that **owns** the method.
 
-## **Methods**
-
-- **Method**: A method is a function that is a property of an object. Methods allow objects to "act" in a specific way by performing actions based on the object’s properties or behavior.
- 
-```js
-let user = {
-  name: "John",
-  sayHi: function() {
-    alert("Hello");
-  }
-};
-
-user.sayHi(); // Hello
-```
-`sayHi` is a method of the `user` object. When `user.sayHi()` is called, it alerts `"Hello"`.
-
-Pre-Declaring a Function and Adding it as a Method:
-```js
-function sayHi() {
-  alert("Hello");
-}
-
-let user = {};
-user.sayHi = sayHi;
-user.sayHi(); // Hello
-```
-
-### **Method Shorthand**
-In ES6, there’s a shorthand for defining methods within an object literal. You can omit the `function` keyword and just use the method name followed by parentheses:
-
-```js
-let user = {
-  sayHi() {
-    alert("Hello");
-  }
-};
-```
-
-This is equivalent to the following, but shorter:
-
-```js
-let user = {
-  sayHi: function() {
-    alert("Hello");
-  }
-};
-```
-
----
-
-## **`this` in Methods**
-
-The `this` keyword is commonly used inside methods to refer to the object the method belongs to. 
-
-- **`this`** refers to the object that **owns** the method.
-  
 In the following example, the `sayHi` method uses `this.name` to access the `name` property of the `user` object:
 
 ```js
@@ -87,17 +30,15 @@ let user = {
 
 user.sayHi(); // John
 ```
-During execution, the value of `this` will be `user`.
-`this` refers to the `user` object, and `this.name` accesses the `name` property.
+During execution, the value of `this` will be `user`. `this` refers to the `user` object, and `this.name` accesses the `name` property.
 
 ---
 
-### **`this` is Not Bound (Dynamic)**
+### 'this' is Not Bound (Dynamic)
 
 In JavaScript, the value of `this` is **determined at runtime** and depends on how the function is **called**, not where it is declared. 
 
-This means that if `this` is used in a method, its value can change based on the **context** of the call.
-Using `this`, it allows for same method definition to be used in multiple objects. 
+This means that if `this` is used in a method, its value can change based on the **context** of the call. Using `this`, it allows for same method definition to be used in multiple objects. 
 
 ```js
 let user = {
@@ -113,13 +54,14 @@ user.introduceSelf(); // "Hi! I'm John"
 However, if you call the method in a different context, `this` will refer to the new context:
 ```js
 let introduce = user.introduceSelf;
+
 introduce(); // "Hi! I'm undefined" or throws an error in strict mode.
 ```
 In this case, `this` no longer refers to the `user` object because the function `introduce` was called without an object context.
 
 ---
 
-### **`this` in Constructors**
+### 'this' in Constructors
 
 You can use `this` to create methods inside a constructor function, which allows for **object reuse** across multiple instances:
 
@@ -144,8 +86,6 @@ In this case, `this.name` and `this.introduceSelf` work because `this` refers to
 
 ### **Arrow Functions and `this`**
 
-### [[3.2_arrow_function#Arrow function have no `this`.|Arrow functions have no 'this']]
-
 Unlike regular functions, **arrow functions** do not have their own `this`. They inherit `this` from the surrounding context (lexical scoping). This can lead to unexpected behavior when used in methods.
 
 ```js
@@ -163,9 +103,9 @@ In the example above, `this` in the arrow function is inherited from the global 
 
 ---
 
-## **A Simple Calculator Object**
+### **A Simple Calculator Object**
 
-Here's an example of how you can use methods and `this` to create a simple calculator object with `read()`, `sum()`, and `multiply()` methods:
+Using methods and `this` to create a simple calculator object with `read()`, `sum()`, and `multiply()` methods:
 
 ```js
 let calculator = {
@@ -186,14 +126,9 @@ alert(calculator.sum()); // Show the sum
 alert(calculator.multiply()); // Show the product
 ```
 
-### **Method Explanation:**
-- `read()`: Prompts the user for two values and stores them as properties `a` and `b` of the `calculator` object.
-- `sum()`: Returns the sum of `a` and `b`.
-- `multiply()`: Returns the product of `a` and `b`.
-
 ---
 
-## **Method Chaining**
+### **Method Chaining**
 
 JavaScript allows for **method chaining**, where multiple method calls are linked together in a single line. For this to work, each method must return the object itself (`this`), so the next method can be called on it.
 
@@ -227,10 +162,3 @@ In the example:
 - By returning `this` from each method, you can chain calls together.
 
 ---
-
-### **Summary:**
-
-- **Methods**: Functions that are properties of an object.
-- **`this`**: Refers to the object that owns the method and allows access to its properties.
-- **Arrow Functions**: Do not have their own `this`; they inherit it from the surrounding context.
-- **Chaining**: Multiple method calls on the same object can be chained by returning `this` from each method.

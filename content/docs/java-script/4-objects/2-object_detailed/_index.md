@@ -1,11 +1,11 @@
 ---
-title: "Objects in JavaScript"
+title: "JavaScript Objects Detailed"
 description: ""
 summary: ""
 date: 2024-11-07T20:43:49+05:30
 lastmod: 2024-11-07T20:43:49+05:30
 draft: false
-weight: 380
+weight: 398
 toc: true
 seo:
   title: "" # custom title (optional)

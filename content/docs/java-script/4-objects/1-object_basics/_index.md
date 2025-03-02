@@ -1,11 +1,11 @@
 ---
-title: "e"
+title: "JavaScript Objects Basics"
 description: ""
 summary: ""
-date: 2024-10-22T14:50:48+05:30
-lastmod: 2024-10-22T14:50:48+05:30
+date: 2024-11-07T20:43:49+05:30
+lastmod: 2024-11-07T20:43:49+05:30
 draft: false
-weight: 
+weight: 380
 toc: true
 seo:
   title: "" # custom title (optional)
