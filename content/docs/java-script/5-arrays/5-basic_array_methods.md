@@ -1,11 +1,11 @@
 ---
-title: "JS - 05.02 - Array Methods"
+title: "05 - Basic Array Methods"
 description: ""
 summary: ""
-date: 2024-11-09T17:08:52+05:30
-lastmod: 2024-11-09T17:08:52+05:30
+date: 2024-11-09T17:09:41+05:30
+lastmod: 2024-11-09T17:09:41+05:30
 draft: false
-weight: 422
+weight: 428
 toc: true
 seo:
   title: "" # custom title (optional)
@@ -15,14 +15,35 @@ seo:
 ---
 
 
+
+
+Arrays inherit properties from Array.prototype, which defines a rich set of array
+manipulation methods, Most of these methods are generic, which means that they work correctly not only for true arrays, but for any “array-like object.”
+
+
 # Basic Array Methods
 
 Properties that contain functions are called methods of the value they belong to, 
 as in `.toUpperCase` is a method of a string.
 
 ```js
+// Covered in Previous note of Inserion
 
-length  // gives lengt of array
+length  // gives length of array
+
+// To Add and remove items at end
+push()   pop()
+
+// To Add and remove at beginning
+shift()  unshift()	
+
+delete()  // makes things undefined
+
+splice() // used to insert, remove, replace elements
+toSpliced()
+```
+
+```js
 at()  // getting element with index
 
 // String to array with delimeted
@@ -31,30 +52,23 @@ at()  // getting element with index
 	concat()  // new array including other arrays
 	reverse()  // reverses order of array
 
-// Add remove items
-	// to remove and add to end
-	pop()    push()      
-	// to remove and ad to beginning
-	shift()  unshift()	
-	delete()   // makes things undefined
 
 // extracting parts of array
 	slice()  // make new subarray
-	splice() // used to insert, remove, replace elements
-	toSpliced()
 
+	
 // searching in array
 	indexOf()  lastIndexOf()   includes()
 	find()  findIndex()  findLastIndex()
+
 
 copyWithin()  // copy elements to other positions in array
 flat()  flatMap()  // flaten multidimensional array
 ```
 
 __________________________
-### `arr.length`
 
-### `arr.at(pos)`
+### arr.at(pos)
 
 `at()` method returns an indexed element from an array. 
 similar to `[]` but `[]` does not allow getting the last index using `[-1]`, since `[]` is used for both objects and arrays, `obj[-1]` refers to key -1, not last property of object.
@@ -73,7 +87,7 @@ _________________________
 
 # split and join
 
-### `str.split(delim)`
+### str.split(delim)
 comma-delimited string of receivers: `John, Pete, Mary`
 To get an array of names from this string.
 
@@ -96,7 +110,7 @@ alert( str.split('') );  // t, e, s, t
 ```
 
 
-### `arr.join(glue)`
+### arr.join(glue)
 
 The call [arr.join(glue)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join) does the reverse to `split`. 
 It creates a string of `arr` items joined by `glue` between them.
@@ -112,7 +126,7 @@ alert(str);  // Bannana;Orange;Mango
 ```
 
 
-### `toString()`
+### toString()
 
 Converting an Array to String of comma separated values. This is an automatic process when an outputting an array. All JavaScript objects have `toString()` method.
 ```js
@@ -124,7 +138,7 @@ alert(fruits) // same as above
 ```
 
 
-### `concat()`
+### concat()
 
 `arr.concat` creates a new array that includes values from other arrays and additional items.
 ```js
@@ -147,7 +161,7 @@ It can take strings also as arguments.
 Normally, it only copies elements from arrays. Other objects, even if they look like arrays, are added as a whole.
 
 
-### `arr.reverse()`
+### arr.reverse()
 
 The method [arr.reverse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse) reverses the order of elements in `arr`.
 It also returns the array after the reversal.
@@ -159,74 +173,11 @@ alert( arr );  // 5, 4, 3, 2, 1
 ```
 
 
-________________
-
-
-# Add / remove items
-
-### `push(...items) pop()`
-
-The `push` method adds value to the end of an array, also returns new array length.
-The `pop` method removes the last value in the array and returns it.
-These are names used for `stack` data structure.
-```js
-let sequence = [1, 2, 3];
-sequence.push(4);
-sequence.push("Banana");
-
-console.log(sequence);  // [1, 2, 3, 4, Banana]
-let length = sequence.push("Mango");  // 6
-
-console.log(sequence.pop());  // Mango
-let num = sequence.pop(); // Bannana
-sequence.pop();
-```
-
-### `unshift(...items)` and `shift()`
-
-For adding and removing things at the start of an array.
-`shift()` method removes the first array element and shifts all other elements to a lower index. `shift()` returns the value that was shifted out.
-
-`unshift()` adds element to the beginning of an array and unshifts older elements.
-`unshift()` returns the new array length.
-
-```js
-const fruits = ["Bannana", "Orange", "Mango", "Kiwi"];
-
-fruits.shift();   // removes Banana
-let fruit = fruits.shift();  // Orange
-
-fruits.unshift("Lemon"); // adds lemon at front
-let num = fruits.unshift("Lemon"); // 5
-```
-
-***A To do list***    Managing a queue of stack
-```js
-let todoList = [];
-
-function remember(task) {
-	todoList.push(task);
-}
-function getTask() {
-	return todoList.shift();
-}
-function rememberUrgently(task) {
-	todoList.unshift(task);
-}
-```
-
-
-### `delete()`
-
-Using delete leaves `undefined` holes in the array. 
-better to use `pop or shift`
-
-
 _____________
 
 # Extracting parts of array
 
-### `slice()`
+### slice()
 ```js
 arr.slice([start], [end])
 ```
@@ -259,131 +210,13 @@ alert( arr.slice(1, 3) );  // e, s
 ```
 
 
-### `splice()`
-
-Used to Remove elements, Add new items to an array and Returns an array with deleted items (if any)
-```js
-arr.splice(start[, deleteCount, elem1, ..., eleN])
-```
-It modifies `arr` starting from the index `start`: removes `deleteCount` elements and then inserts `elem1, ..., elemN` at their place. Returns the array of removed elements.
-
-***Using for deletion***
-```js
-let arr = ["I", "study", "JS"];
-// from index 1 remove 1 element
-arr.splice(1, 1); 
-
-alert( arr ); // ["I", "JS"]
-```
-
-***Using for deletion and replacing***
-```js
-let arr = ["I", "study", "JS", "right", "Now"];
-
-// remove starting from index 0, 3 elements and replace them with these
-arr.splice( 0, 3, "Let's", "Dance");
-
-alert(arr)  // ["Let's", "Dance", "right", "Now"]
-```
-
-***Returning Deleted Items***
-```js
-let arr = ["I", "study", "JS", "right", "Now"];
-
-// remove starting from index 0, 2 elements.
-arr.splice( 0, 2);
-
-alert(arr)  // ["I", "study"]
-```
-
-***Inserting without removing elements***
-```js
-let arr = ["I", "study", "JS", "right", "Now"];
-
-// starting from index 2, delete nothing, inser two elements there
-arr.splice(2, 0, "right", "Now")
-
-alert( arr);  // ["I", "study", "JS", "right", "Now"]
-```
-
-***Negative index is allowed*** to count from the end
-```js
-let arr = [1, 2, 5];
-
-// from index -1 (onestep from the end), delete nothing, insert 3, 4
-arr.splice(-1, 0, 3, 4);   // [1,2,3,4,5]
-```
-
-The first parameter defines the index in which the new element should be added (spliced).
-The second parameter defines how many elements should be removed.
-The rest of the parameters define the new elements to be added.
-```js
-const fruits = ["Banana", "Orange", "Apple", "Mango"];
-
-// starting from index 2, remove nothing, add these two
-fruits.splice(2, 0, "Lemon", "Kiwi");
-// ["Banana", "Orange", 'Lemon', 'kiwi' "Apple", "Mango"]
-```
-
-```js
-const fruits = ["Banana", "Orange", "Apple", "Mango"];
-
-// starting from index 2, remove 2, add these two
-fruits.splice(2, 2, "Lemon", "kiwi");  
-			// [Banana, Orange, Lemon, Kiwi]
- // removed items [apple, mango]
-```
-
-
-***finding range in place***
-```js
-// iterate using for loop
-// if any one is true remove that one lement from that index
-// to avoid skipping an element as one element gets moved to left, move the pointer back
-
-function findInRange(arr, a, b) {
-	for(let i =0; i<arr.length; i++) {
-		if(arr[i] <a || arr[i] >b) {
-			arr.splice(i, 1);
-			i--;
-			}
-	}
-}
-// or do reverse looping using negative index
-function findRangeInPlace(arr, a, b) {
-	for (let i = arr.length - 1; i >= 0; i--) {
-		if (arr[i] < a || arr[i] > b) {
-			arr.splice(i, 1);
-		}
-	}
-}
-
-let arr = [5, 3, 8, 1];
-findRangeInPlace(arr, 1, 4);
-console.log(arr); // Output: [3, 1]
-```
-
-
-## `arr.toSpliced()`
-
-```js
-arr.splice(start[, deleteCount, elem1, ..., eleN])
-```
-Is a safe way to splice an array without altering the original array. It creates a new array without changing the old one.
-
-```js
-const fruits = ["Banana", "Orange", "Apple", "Mango"];
-
-const spliced = fruits.toSpliced (2,0,"Lemon","Kiwi");
-// ["Banana", "Orange", 'Lemon', 'kiwi' "Apple", "Mango"]
-```
 
 
 ______________
 
 # Searching in array
 
-### `indexOf()` `lastIndexOf()`    `includes()`
+### indexOf() lastIndexOf()    includes()
 
 Usually these methods are used with only one argument, the item to be found.
 ```js
@@ -415,7 +248,7 @@ alert( arr.includes(NaN));  // true
 ```
 
 
-###  `find()` `findIndex()`  `findLastIndex()`
+###  find() findIndex()  findLastIndex()
 
 In an array of objects, to find an object with a specific condition.
 
@@ -449,7 +282,8 @@ alert(users.findLastIndex(user => user.name == "John"));  // 2
 __________________
 
 
-### `copyWithin()`
+### copyWithin()
+
 [arr.copyWithin(target, start, end)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin) – copies its elements from position `start` till position `end` into _itself_, at position `target` (overwrites existing).
 ```js
 arr.copyWithin(target, start, end)
@@ -472,7 +306,8 @@ fruits.copyWithin(2,0,2); //copy to index 2, the elements from 0 to 2
 _______________
 
 [arr.flat(depth)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)/[arr.flatMap(fn)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap) create a new flat array from a multidimensional array.
-### `flat(depth)`
+
+### flat(depth)
 
 Creates a new flat array from a multidimensional array.
 The flat method creates a new array with sub-array elements concatenated to a specified depth.
@@ -483,7 +318,7 @@ const newArray = myArray.flat();
 // 1,2,3,4,5,6
 ```
 
-### `flatMap(fn)`
+### flatMap(fn)
 
 it first maps all elements of an array and then creates a new array by flattening the array.
 
