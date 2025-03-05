@@ -16,7 +16,6 @@ seo:
 
 
 
-
 As of ES6, the easiest way to loop through each element of an array (or any iterable object) is with the `for/of` loop.
 
 ---
@@ -112,7 +111,6 @@ for (let i = 0; i < a.length; i++) {
 
 ---
 
-
 ## for/of Loop
 
 The `for..of` loop is a simpler way to iterate over array elements. It directly gives you the value without needing the index.
@@ -132,7 +130,7 @@ for (let entry of journal) {
 let letters = [..."Hello world"];  // An array of letters
 let string = "";
 for (let letter of letters) {
-    string += letter;
+	string += letter;
 }
 console.log(string);  
 // => "Hello world";       we reassembled the original text
@@ -154,62 +152,4 @@ console.log(everyOther);
 
 ---
 
-## forEach() Method
-
-The `forEach()` method allows you to run a function for each item in the array. This is an array method that offers a functional approach to array iteration. 
-
-You pass a function to the `forEach()` method of an array, and `forEach()` invokes your function once for each element of the array.
-
-```js
-arr.forEach(function(item, index, array) {
-	// Do something with item
-});
-```
-
-Unlike the `for/of` loop, `forEach()` is aware of sparse arrays and does not invoke your function for elements that are not present.
-
-#### Converting Letters to Uppercase
-
-```js
-let uppercase = "";
-letters.forEach(letter => {  // Note arrow function syntax
-	uppercase += letter.toUpperCase();
-});
-console.log(uppercase);  
-// => "HELLO WORLD"
-```
-
-```js
-["Banana", "Orange", "Mango"].forEach(alert);
-// This will alert each fruit in the array
-```
-or
-```js
-const fruits = ["Bannana", "Orange", "Mango"];
-fruits.forEach(alert);
-```
-
-#### Making an HTML List from Array Elements
-
-```js
-const fruits = ["Banana", "Orange", "Mango"];
-
-function myFunction(value) {
-	text += "<li>" + value + "</li>";
-}
-
-fruits.forEach(myFunction);
-```
-
-### **Accessing the Index and Full Array**
-
-You can also access the current index and the full array within the callback function:
-
-```js
-fruits.forEach((item, index, array) => {
-	alert(`${item} is at index ${index} in ${array}`);
-});
-```
-
----
 

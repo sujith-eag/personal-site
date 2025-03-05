@@ -64,10 +64,6 @@ The point of Symbols is not to provide security but to define a safe extension m
 
 By using `Symbol()`, you can safely add new properties to an object without worrying about overwriting an existing property with the same name. Similarly, when you use symbolic property names and keep your symbols private, you can be confident that other code modules in your program won’t accidentally overwrite your properties.
 
-#### 'Symbol.iterator'
-
-`Symbol.iterator` is a special Symbol value that can be used as a method name to make an object iterable.
-
 ---
 
 ### The Global Symbol Registry
@@ -102,5 +98,56 @@ Symbol.keyFor(p);
 Symbol.keyFor(q);
 // undefined
 ```
+
+---
+
+
+#### Symbol.iterator
+
+
+Objects that can be used in `for..of` loops are called [iterable](https://javascript.info/iterable).
+`Symbol.iterator` is a special Symbol value that can be used as a method name to make an object iterable. To be considered iterable, an object must implement the `Symbol.iterator` method, which returns an **iterator**.
+
+**Examples:** Arrays, Strings, Maps, Sets, and even custom objects that implement `Symbol.iterator`.
+
+### Symbol.iterator Method
+
+The `Symbol.iterator` method is a built-in symbol in JavaScript that returns an **iterator** object. This iterator object must have a method called `next()`, which provides the logic for iteration.
+
+The `next()` method returns an object with two properties:
+
+- **`done`**: A boolean that indicates whether the iteration has completed.
+- **`value`**: The current value of the iteration.
+
+If `done` is `true`, the iterator has finished iterating; otherwise, `done` will be `false`, and `value` will hold the next item in the iteration.
+
+```js
+let range = {
+  from: 1,
+  to: 5,
+
+  [Symbol.iterator]() {
+    this.current = this.from;  // Start from "from"
+    return this;
+  },
+
+  next() {
+    if (this.current <= this.to) {
+      return { done: false, value: this.current++ };  // Return value and increment
+    } else {
+      return { done: true };  // End of iteration
+    }
+  }
+};
+
+for (let num of range) {
+  console.log(num);  // Outputs: 1, 2, 3, 4, 5
+}
+```
+
+In this example, `range` is an object that implements `Symbol.iterator`.
+
+- The `next()` method returns each number from 1 to 5.
+- Once the value exceeds `to`, `done: true` is returned to signal the end of the iteration.
 
 ---

@@ -1,11 +1,11 @@
 ---
-title: "02 - Acessing and Writing Array Elements"
+title: "02 - map() Method"
 description: ""
 summary: ""
 date: 2024-11-09T17:08:52+05:30
 lastmod: 2024-11-09T17:08:52+05:30
 draft: false
-weight: 422
+weight: 436
 toc: true
 seo:
   title: "" # custom title (optional)
@@ -16,11 +16,10 @@ seo:
 
 
 
-Elements of an array can be accessed using the `[]` operator.
 
-Array elements are accessed using their **index values**. Arrays in JavaScript are **zero-indexed**, meaning the first element has an index of `0`. You can also use arithmetic expressions or arbitrary expression that results in a non-negative integer value can be used inside the brackets as indices.
+Elements of an array can be accessed using the `[]` operator using their **index values**. Arrays in JavaScript are **zero-indexed**, meaning the first element has an index of `0`. 
 
-This applies to both reading and writing of elements of an array by assigning values to specific indices in an array.:
+You can also use arithmetic expressions or arbitrary expression that results in a non-negative integer value can be used inside the brackets as indices. This applies to both reading and writing of elements of an array by assigning values to specific indices in an array.:
 
 ```js
 const cars = ["Volvo", "BMW", "Tata"];
@@ -33,7 +32,7 @@ cars[0] = "Volvo"; // Add "Volvo" at index 0
 cars[1] = "BMW";   // Add "BMW" at index 1
 ```
 
-You can also use variables or expressions as indices to read or write array elements.
+Using variables and expressions as indices to read or write array elements.
 
 ```js
 let a = ["world"];  // Starts with a one-element array
@@ -51,7 +50,7 @@ a[a[i]] = a[0];     // Read elements at indexes 0 and 2, write element at index 
 
 ### Arrays are Special Objects
 
-Remember, arrays in JavaScript are a specialized kind of **object**. The square brackets used to access array elements work in the same way as square brackets used to access object properties. JavaScript converts the numeric array index you specify into a string—the index `1` becomes the string `"1"`—and then uses that string as a property name.
+Arrays in JavaScript are a specialized kind of **object**. The square brackets used to access array elements work in the same way as square brackets used to access object properties. JavaScript converts the specified numeric array index into a string—the index `1` becomes the string `"1"`—and then uses that string as a property name.
 
 ```js
 let o = {};  // Create a plain object
@@ -82,22 +81,11 @@ a[1.000] = 1;
 // This is equivalent to a[1] = 1; (same as a[1] = 1)
 ```
 
-### No "Out of Bounds" Errors
+#### **Associative Arrays in JavaScript (not supported)**
 
-The fact that JavaScript array indexes are simply a special type of object name means that there is no concept of **out-of-bounds** error when trying to access an element that does not exist. When you query a nonexistent property of an array (or any object), you get `undefined`. This behavior is the same for both arrays and regular objects.
+Although arrays in JavaScript are **indexed by numbers**, you can technically assign a value to a string index. Arrays with named indexes are called **associative arrays** or **hashes** in other languages, but JavaScript **does not support** associative arrays. 
 
-```js
-let a = [true, false]; // Array with elements at indexes 0 and 1
-console.log(a[2]);     // => undefined (no element at this index)
-console.log(a[-1]);    // => undefined (no property with this name)
-```
-
-
-### **Associative Arrays in JavaScript**
-
-Although arrays in JavaScript are **indexed by numbers**, you can technically assign a value to a string index.
-
-Arrays with named indexes are called **associative arrays** or **hashes**, but JavaScript **does not support** associative arrays. When you use named indexes with arrays, JavaScript internally converts the array to an **object**, and array methods and properties may behave incorrectly.
+When you use named indexes with arrays, JavaScript internally converts the array to an **object**, and array methods and properties may behave incorrectly.
 
 ***Example of incorrect usage (associative arrays):***
 ```js
@@ -113,7 +101,23 @@ console.log(person[0]);  // undefined
 ```
 
 If you need associative arrays, consider using an **object** instead.
+```js
+const person = {
+  first: "John",
+  last: "Doe"
+};
 
+```
+
+#### No "Out of Bounds" Errors
+
+The fact that JavaScript array indexes are simply a special type of object name means that there is no concept of **out-of-bounds** error when trying to access an element that does not exist. When you query a nonexistent property of an array (or any object), you get `undefined`. This behavior is the same for both arrays and regular objects.
+
+```js
+let a = [true, false]; // Array with elements at indexes 0 and 1
+console.log(a[2]);     // => undefined (no element at this index)
+console.log(a[-1]);    // => undefined (no property with this name)
+```
 
 ---
 
@@ -142,7 +146,7 @@ let fruit = fruits[ fruits.length - 1 ];  // "Mango"
 
 JavaScript arrays may be **sparse**, meaning that the elements don't need to have contiguous indexes, and there may be gaps. For sparse arrays, the `length` is larger than the highest index of any element.
 
-### Behavior when modifying the length:
+#### Behavior when modifying the length:
 
 No index of element can be equal or larger than the array's length. If you assign a value to an array at an index greater than its current length, the `length` property is updated accordingly (set to `i + 1`), making the array sparse.
 

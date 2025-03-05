@@ -104,6 +104,7 @@ delete user.age;  // Deletes the 'age' property
 **Note**: Property names can be any string, number, or symbol, including reserved words or multi-word names. Properties with invalid binding names or multi-word names need to be quoted (e.g., `"touch wood": "touched"`).
 
 ---
+
 #### 2. Creating Objects with new
 
 The new operator creates and initializes a new object. The new keyword must be followed by a function invocation. A function used in this way is called a constructor and serves to initialize a newly created object. JavaScript includes constructors for its built-in types. For example:
