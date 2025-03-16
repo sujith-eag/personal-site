@@ -1,5 +1,5 @@
 ---
-title: "01 - Array Iterator Methods - froEach()"
+title: "01 - Array Iterator Methods - forEach()"
 description: ""
 summary: ""
 date: 2024-11-09T17:08:28+05:30
