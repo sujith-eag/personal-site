@@ -48,23 +48,26 @@ Define **two** Python functions to determine the largest of three numbers.
 ...     a = int(input("Enter a: "))
 ...     b = int(input("Enter b: "))
 ...     c = int(input("Enter c: "))
-...     def compare(a,b,c):
-...             return max(a,b,c)
-...     max_val = compare(a,b,c)
-...     return max_val
+...     def max_of_two(a,b):
+...             if a>b:
+...                     return a
+...             else:
+...                     return b
+...
+...     larger_of_two = max_of_two(a,b)
+...     return max_of_two(larger_of_two,  c)
 ... 
-
->>> main()
-Enter a: 1
-Enter b: 2
-Enter c: 3
-3
-
 >>> main()
 Enter a: 3
-Enter b: 16
-Enter c: 1
-16
+Enter b: 4
+Enter c: 5
+5
+
+>>> main()
+Enter a: 12
+Enter b: 4
+Enter c: 77
+77
 ```
 
 ____
