@@ -1,5 +1,5 @@
 ---
-title: "08 - Singly Linked List - Full - (Own Implementation)"
+title: "08 - Singly Linked List - Full (Own Implementation)"
 description: ""
 summary: ""
 date: 2025-01-01T16:00:52+05:30
@@ -20,7 +20,6 @@ The goal of this implementation is to streamline the logic by separating the cor
 Main functions just handle the main logic of creating, deleting, and updating nodes while Helper functions can handle the validations and basic actions (like memory allocation, empty checks, and position validation) separately from the main logic, keeping the code simple, linear without too many nested edge case checks. 
 
 Priority also given to Presentation and Clarity of display after operations. 
-
 
 #### Singly Linked List Own Implementation
 
@@ -135,19 +134,27 @@ void InsertAtBeginning(int ele)
 void InsertAtPosition(int ele)
 {
 	int pos = GetPos();   // Getting input of position
-	
-	if( pos == 1 ) 
+
+	if (pos == -1)
+		return;
+		
+	if( pos == 0)
 	{
 		InsertAtBeginning(ele);
 		return;
 	}
-	
+	if (pos == length()+1)
+	{
+		InsertAtEnd(ele);
+		return;
+	}
+
 	new = (Node*) malloc(sizeof(Node));
 	new->data = ele;
 
 	int i = 1;  // temp is at head so at position 1
 	Node* temp = head; 
-	while( i < pos-1 )  // -1 to stop before pos to insert at pos
+	while( i < pos) // pos-1  ??
 	{
 		i++;
 		temp = temp->next;
@@ -164,10 +171,10 @@ int GetPos()
 	scanf("%d", &pos);
 
 	// If value is negative, 0 or More than last insert point. 
-	if(pos <= 0 || pos > len+1)  // len+1 to allow insert and delete at end
+	if(pos < 0 || pos > len+1)  // len+1 to allow insert and delete at end
 	{
 		printf("Position is larger than the length\n");
-		return 0;
+		return -1;
 	}
 	return pos;
 }
@@ -463,7 +470,7 @@ This function handles node creation based on the choice the user makes (insertio
 
 ____
 
-### Provided Code 
+### Provided Code
 
 ```c
 #include<stdio.h>
@@ -708,8 +715,10 @@ void main()
                 printf("Enter the choice Correctly\n");
                 break;
 		}
-			
+		
+		
 	}
 	
+
 }
 ```
