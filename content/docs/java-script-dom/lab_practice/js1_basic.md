@@ -39,9 +39,64 @@ console.log(reversedString);
 //"!dlroW ,olleH"
 ```
 
+Full Program
+```js
+<body>
+    <label for="str">Enter Text: </label>
+    <input id="str" type="text" placeholder="Enter string to reverse"><br>
+    <input type="button" value="Reverse" id="subButton">
+    
+    <h3 class="displayResult"></h3>
+    
+<script>
+let subButton = document.getElementById("subButton");
+subButton.addEventListener("click", revString);
+
+function revString() {
+		let str = document.getElementById("str").value;
+		let reversed = "";
+		
+		for(let i = str.length-1; i >= 0 ; i--) {
+				reversed += str[i];
+		}
+		
+		let result = document.querySelector(".displayResult");
+		result.textContent = reversed;
+		alert(reversed);
+}
+</script>
+</body>
+</html>
+```
+
 ##### Question 2
 Develop a JavaScript code to count the number of vowels using loops and if statement.
 
+
+```js
+<body>
+    <label for="str">Enter String</label>
+    <input id="str" type="text" placeholder="Enter string">
+    <br><button id="get">Check</button>
+    
+    
+<script>
+let get = document.getElementById("get");
+get.addEventListener("click", checkVowels);
+
+function checkVowels(){
+		let str = document.getElementById("str").value;
+		let count = 0;
+		for (let i = 0 ; i < str.length ; i++ ){
+				if(str[i] === 'a' || str[i] === 'e' || str[i] === 'i' || str[i] === 'o' || str[i] === 'u') {
+						count++;
+				}
+		}
+		alert(count);
+		}
+</script>
+</body>
+```
 ```js
 function countVowels(str) {
 	let count = 0;
