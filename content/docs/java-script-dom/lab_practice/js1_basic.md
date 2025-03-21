@@ -40,40 +40,39 @@ console.log(reversedString);
 ```
 
 Full Program
-```js
+```html
 <body>
-    <label for="str">Enter Text: </label>
-    <input id="str" type="text" placeholder="Enter string to reverse"><br>
-    <input type="button" value="Reverse" id="subButton">
-    
-    <h3 class="displayResult"></h3>
+	<label for="str">Enter Text: </label>
+	<input id="str" type="text" placeholder="Enter string to reverse"><br>
+	<input type="button" value="Reverse" id="subButton">
+	
+	<h3 class="displayResult"></h3>
     
 <script>
 let subButton = document.getElementById("subButton");
 subButton.addEventListener("click", revString);
 
 function revString() {
-		let str = document.getElementById("str").value;
-		let reversed = "";
-		
-		for(let i = str.length-1; i >= 0 ; i--) {
-				reversed += str[i];
-		}
-		
-		let result = document.querySelector(".displayResult");
-		result.textContent = reversed;
-		alert(reversed);
+	let str = document.getElementById("str").value;
+	let reversed = "";
+	
+	for(let i = str.length-1; i >= 0 ; i--) {
+		reversed += str[i];
+	}
+	
+	let result = document.querySelector(".displayResult");
+	result.textContent = reversed;
+	alert(reversed);
 }
 </script>
 </body>
-</html>
 ```
 
 ##### Question 2
 Develop a JavaScript code to count the number of vowels using loops and if statement.
 
 
-```js
+```html
 <body>
     <label for="str">Enter String</label>
     <input id="str" type="text" placeholder="Enter string">
@@ -165,8 +164,33 @@ console.log("The largest number is:", largest);
 // "The largest number is: 25"
 ```
 
+```html
+<body>
+
+<script>
+	let val1 = 20;
+	let val2 = 70;
+	let val3 = 40;
+	
+	alert(findLargest(val1, val2, val3));
+	function findLargest(a,b,c){   
+		if( a >= b && a >= c){
+				return a; }
+		else if( b>= c && b>= a){
+				return b;
+		}
+		else{
+				return c;
+		}
+	}
+	</script>    
+</body>
+```
+
+
 ##### Question 4
 Develop a JavaScript code to print even and odd numbers from 1 – 10.
+
 ```js
 function EvenOdd() {
 	for (let i = 1; i <= 10; i++) {
@@ -179,6 +203,42 @@ function EvenOdd() {
 }
 
 EvenOdd();
+```
+
+Full Program
+```html
+<body>
+
+	<h3 id="even"></h3><br>
+	<h3 id="odd"></h3> 
+    
+<script>
+let evenList = [];
+let oddList = [];
+
+for( let i = 1; i<=10 ; i++ ){
+	if( i%2 === 0 ){
+		evenList.push(i);
+	}
+	else{
+		oddList.push(i);
+	}
+}
+
+let oddString = "These are Odd: ";
+let evenString = "These are Even: ";
+
+oddList.forEach(element => {
+    oddString += ` ${element} ,`;
+});
+evenList.forEach(element => {
+    evenString += ` ${element} ,`;
+});
+
+document.getElementById("odd").textContent = oddString;
+document.getElementById("even").textContent = evenString;
+</script>
+</body>
 ```
 
 ##### Question 5
@@ -207,6 +267,34 @@ function fizzBuzz() {
 fizzBuzz();
 ```
 
+```html
+<body>
+    <h4 id="display"></h4>
+<script>
+    
+function fizzbuzz(){
+	let res = []
+	for(let i =1; i <=20; i++){
+		if(i%3==0 && i%5==0){
+			res.push(" FizzBuzz ");
+		}
+		else if(i%3 == 0){
+			res.push(" Fizz ");
+		}
+		else if(i%5==0){
+			res.push(" Buzz ");
+		}
+		else{
+			res.push(` ${i} `);
+		}
+	}
+document.getElementById("display").textContent = res;
+}
+fizzbuzz();
+
+</script>
+</body>
+```
 
 ___
 
@@ -283,25 +371,25 @@ console.log(result);
 
 ```html
 <body>
-    <h3>String Slice Examples</h3>
+	<h3>String Slice Examples</h3>
     
-    <div id="output"></div>
+	<div id="output"></div>
 
-    <script>
-        let str = "Hello, World!";
+	<script>
+		let str = "Hello, World!";
 
-        let noParams = str.slice();
-        let oneParam = str.slice(7);
-        let twoParams = str.slice(0, 5);
-        let negativeParams = str.slice(-6, -1);
+		let noParams = str.slice();
+		let oneParam = str.slice(7);
+		let twoParams = str.slice(0, 5);
+		let negativeParams = str.slice(-6, -1);
 
-        document.getElementById("output").innerHTML = `
-            <p>No parameters: ${noParams}</p>
-            <p>One parameter: ${oneParam}</p>
-            <p>Two parameters: ${twoParams}</p>
-            <p>Negative parameters: ${negativeParams}</p>
-        `;
-    </script>
+		document.getElementById("output").innerHTML = `
+			<p>No parameters: ${noParams}</p>
+			<p>One parameter: ${oneParam}</p>
+			<p>Two parameters: ${twoParams}</p>
+			<p>Negative parameters: ${negativeParams}</p>
+		`;
+	</script>
 </body>
 </html>
 ```
@@ -345,28 +433,31 @@ console.log(result);
 
 ```js
 <body>
-    <h3>String Substr Examples</h3>
-    <div id="output"></div>
+	<h3>String Substr Examples</h3>
+	<div id="output"></div>
 
-    <script>
-        let str = "Hello, World!";
+<script>
+	let str = "Hello, World!";
 		
-		let noParams = str.substr();
-        let oneParam = str.substr(7);
-        let twoParams = str.substr(0, 5);
-        let negativeParams = str.substr(-6, 5);
+	let noParams = str.substr();
+	let oneParam = str.substr(7);
+	let twoParams = str.substr(0, 5);
+	let negativeParams = str.substr(-6, 5);
 
-        document.getElementById("output").innerHTML = `
-            <p>No parameters: ${noParams}</p>
-            <p>One parameter: ${oneParam}</p>
-            <p>Two parameters: ${twoParams}</p>
-            <p>Negative parameters: ${negativeParams}</p>
-        `;
-    </script>
+	document.getElementById("output").innerHTML = `
+		<p>No parameters: ${noParams}</p>
+		<p>One parameter: ${oneParam}</p>
+		<p>Two parameters: ${twoParams}</p>
+		<p>Negative parameters: ${negativeParams}</p>
+	`;
+</script>
+
 </body>
 </html>
 ```
+
 ##### Question 5
+
 Demonstrate the `replace()` and `replaceAll()` methods
 
 ```js
