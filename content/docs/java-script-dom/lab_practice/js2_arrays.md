@@ -75,6 +75,7 @@ function printElement(element) {
 ##### Question 3
 Create an array of numbers and print the Fibonacci series with the help of `forEach()`
 method.
+
 ```html
 <body>
     <h3>Fibonacci Series:</h3>
@@ -90,20 +91,21 @@ method.
 
     let n = 10;
     let fibArray = [];
+
     for (let i = 0; i < n; i++) {
         fibArray.push(fibonacci(i));
     }
-    console.log(fibArray);
+    fibArray.forEach(element => console.log(element));
+
+    let outputDiv = document.getElementById("output");
+    outputDiv.innerHTML = fibArray.join(", ");
 </script>
-
 </body>
-</html>
-
 ```
 
 ##### Question 4
-Create an array of numbers and print the sum of numbers with the help of `forEach()`
-method.
+
+Create an array of numbers and print the sum of numbers with the help of `forEach()` method.
 ```html
 <body>
     <h3>Sum of Numbers:</h3>

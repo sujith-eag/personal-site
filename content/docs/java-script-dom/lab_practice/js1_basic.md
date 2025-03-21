@@ -301,6 +301,7 @@ ___
 ### JavaScript Strings (Data Sheet 14)
 
 ##### Question 1
+
 Declare a string and display it using `innerHTML`.
 ```html
 <body>
@@ -316,6 +317,7 @@ Declare a string and display it using `innerHTML`.
 ```
 
 ##### Question 2
+
 Display the string containing special characters(quotes) using backslash escape
 character.
 ```html
@@ -331,9 +333,25 @@ character.
 </html>
 ```
 
+```html
+<body>
+	<h3 id="one"></h3> <br>
+	<div id="two"></div> <br>
+    
+<script>
+	let str1 = "A basic String";
+	let str2 = "A string with \"Quotes\" and \\ backslash";
+	
+	document.getElementById("one").innerHTML = str1;
+	document.getElementById("two").innerHTML = `<h3>${str2}</h3>`;    
+</script>
+</body>
+```
+
 ##### Question 3
+
 Demonstrate the `slice()` with no parameters, one parameter, two parameters and
-negative parameters
+negative parameters.
 
 Slice is used to extract a portion of string or array.
 ```js
@@ -395,8 +413,9 @@ console.log(result);
 ```
 
 ##### Question 4
+
 Demonstrate the `substr()` with no parameters, one parameter, two parameters and
-negative parameters
+negative parameters.
 
 `substr()` method extracts a portion of a string starting from a specified index and for a specified length.
 ```js
@@ -428,7 +447,7 @@ console.log(result);
 let str = "Hello, World!";
 let result = str.substr(-6, 5);
 console.log(result);  
-// "World"
+// "Hello"
 ```
 
 ```js
