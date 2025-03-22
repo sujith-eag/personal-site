@@ -44,25 +44,45 @@ The `moveTo()` and `moveBy()` methods of the `Window` object are used to move a 
 </head>
 <body>
 
-    <h1>Demonstrating `moveTo()` and `moveBy()` Methods</h1>
+    <h1>Demonstrating `moveTo()` and `moveBy()` Methods with New Window</h1>
     
-    <button onclick="moveToPosition()">Move Window to (200, 200)</button>
-    <button onclick="moveByPosition()">Move Window by (100, 100)</button>
+    <button onclick="moveToPosition()">Move New Window to (200, 200)</button>
+    <button onclick="moveByPosition()">Move New Window by (100, 100)</button>
 
     <script>
+        let newWindow;
+
+        function openNewWindow() {
+            // Open a new window
+            newWindow = window.open("", "newWindow", "width=400,height=400");
+            newWindow.document.write("<h1>This is a new window!</h1>");
+        }
+
         function moveToPosition() {
-            window.moveTo(200, 200);  
-            // Move window to the coordinates (200, 200)
+            if (newWindow) {
+                newWindow.moveTo(200, 200);  
+                // Move the new window to coordinates (200, 200)
+            } else {
+                alert("Please open a new window first!");
+            }
         }
 
         function moveByPosition() {
-            window.moveBy(100, 100);  
-            // Move window by 100 pixels right and 100 pixels down
+            if (newWindow) {
+                newWindow.moveBy(100, 100);  
+                // Move the new window by 100 pixels right and 100 pixels down
+            } else {
+                alert("Please open a new window first!");
+            }
         }
+
+        // Open a new window when the page loads
+        openNewWindow();
     </script>
 
 </body>
 </html>
+
 ```
 
 ##### Question 2
@@ -93,22 +113,38 @@ The `resizeTo()` and `resizeBy()` methods are used to change the size of the bro
 
     <h1>Demonstrating `resizeTo()` and `resizeBy()` Methods</h1>
     
-    <button onclick="resizeToWindow()">Resize Window to 600x400</button>
-    <button onclick="resizeByWindow()">Resize Window by 200x100</button>
+    <button onclick="openAndResizeWindow()">Open and Resize Window</button>
+    <button onclick="resizeToWindow()">Resize Pop-up to 600x400</button>
+    <button onclick="resizeByWindow()">Resize Pop-up by 200x100</button>
 
     <script>
-        function resizeToWindow() {
-            window.resizeTo(600, 400);
+        let popupWindow;
+
+        function openAndResizeWindow() {
+            popupWindow = window.open('', '', 'width=400,height=300');  // Open a new pop-up window
+            popupWindow.document.write('<h1>This is a pop-up window!</h1>');
         }
-        
+
+        function resizeToWindow() {
+            if (popupWindow) {
+                popupWindow.resizeTo(600, 400);  // Resize the pop-up window to 600x400
+            } else {
+                alert('Open a pop-up window first!');
+            }
+        }
+
         function resizeByWindow() {
-            window.resizeBy(200, 100);
-            // Increase window size by 200px width and 100px height
+            if (popupWindow) {
+                popupWindow.resizeBy(200, 100);  // Resize the pop-up window by 200x100
+            } else {
+                alert('Open a pop-up window first!');
+            }
         }
     </script>
 
 </body>
 </html>
+
 ```
 
 ##### Question 3
