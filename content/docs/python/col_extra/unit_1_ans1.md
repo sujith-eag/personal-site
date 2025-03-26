@@ -383,8 +383,43 @@ ___
 
 - `break` – Exits the loop immediately and transfers control to the next statement after the loop.
 - `continue` – Skips the rest of the current loop iteration and moves to the next iteration.
-- `pass` – It is a do nothing statement,  used as a placeholder.
+- `pass` – It is a do nothing statement, used as a placeholder.
 
+```python
+for i in range(5):
+   if i == 3:
+	   break
+   print(i)
+# Output: 0 1 2
+```
+
+```python
+for i in range(5):
+   if i == 3:
+	   continue
+   print(i)
+# Output: 0 1 2 4
+```
+
+```python
+for i in range(10):
+    if i == 4:
+        pass  # Do nothing when i is 4
+    elif i == 6:
+        continue  # Skip printing when i is 6
+    elif i == 8:
+        break  # Exit the loop when i is 8
+    else:
+        print(f"Current value of i: {i}")
+```
+
+```python
+for i in range(5):
+   if i == 3:
+	   pass  # Do nothing for 3
+   print(i)
+# Output: 0 1 2 3 4
+```
 ```python
 prompt = "\nEnter the city you have visited:"
 prompt += "\nUse 'quit' to exit. "
@@ -408,17 +443,6 @@ while number < 10:
         print(number)  # Prints only odd numbers
 ```
 
-```python
-for i in range(10):
-    if i == 4:
-        pass  # Do nothing when i is 4
-    elif i == 6:
-        continue  # Skip printing when i is 6
-    elif i == 8:
-        break  # Exit the loop when i is 8
-    else:
-        print(f"Current value of i: {i}")
-```
 
 ___
 
@@ -755,6 +779,3 @@ for i in range(n-1, 0, -1):
     * 
 
 ```
-
-____
-
