@@ -47,7 +47,6 @@ print(factorial(3))  # Output: 6
 ```
 
 ___
-
  
 ##### Write a function to display the Fibonacci sequence up to nth term where n is provided by the user.
 
@@ -128,29 +127,49 @@ ___
 ##### Develop a recursive function to generate prime numbers in a given range.
 
 ```python
-def is_prime(num, divisor=2):
-    if num <= 1:  # Base case for prime check
+import math
+
+def is_prime(num):
+    if num <= 1:
         return False
-    if divisor == num:
-        return True
-    if num % divisor == 0:
-        return False
-    return is_prime(num, divisor + 1)  # Recursive check
+
+# Check divisibility from 2 to the square root of num
+    for i in range(2, int(math.sqrt(num)) + 1):
+        if num % i == 0:
+            return False
+    return True
 
 def generate_primes_in_range(start, end):
-    # Base case for recursion
-    if start > end:
-        return
-    if is_prime(start):
-        print(start, end=" ")
-    generate_primes_in_range(start + 1, end)  
-    # Recursive call for next number
+    for num in range(start, end + 1):
+        if is_prime(num):
+            print(num, end=" ")
 
 
 start = int(input("Enter the starting number: "))
+
 end = int(input("Enter the ending number: "))
+
 print(f"Prime numbers between {start} and {end}:")
+
 generate_primes_in_range(start, end)
+```
+
+
+Filtering out prime numbers from a list using filter and lambda function:
+
+```python
+>>> def is_prime(n):
+...     if n < 2:
+...         return False
+...     for i in range(2, n):
+...         if n % i == 0:
+...             return False
+...     return True
+
+>>> numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+>>> prime_numbers = list(filter(is_prime, numbers))
+>>> prime_numbers
+[2, 3, 5, 7]
 ```
 
 _____
@@ -200,11 +219,10 @@ print("Estimate e for 10 terms:", estimate_e(10))
 # Estimation e for 10 terms: 2.7182815255731922
 ```
 
-
 ___
 
 
-## Map, Filter, Lambda, List Comprehension
+## Lambda, Map, Filter, List Comprehension
 
 
 ##### Discuss lambda function with suitable examples.
@@ -216,6 +234,37 @@ ___
 
 **Answer :**
 
+An **anonymous function** is a function that doesn't have a name. In Python, these are commonly referred to as **lambda functions**, and they are defined using the `lambda` keyword, rather than the standard `def` keyword.
+
+Lambda functions are useful for short-lived operations or when a function need to be passed as an argument to another function. They can only consist of a single **expression**.
+
+There is no need to use the `return` statement. The value of the expression is automatically returned.
+
+The general syntax of a lambda function is:
+```python
+lambda argument_list : expression
+```
+
+- **`argument_list`**: A comma-separated list of parameters for the function (similar to function arguments).
+- **`expression`**: A single expression that the function evaluates. It’s automatically returned.
+
+You can assign the lambda function to a variable and then call it like any regular function:
+
+Lambda is assigned to `square` so it is a lambda function call that returns the square of a number.
+```python
+>>> square = lambda x: x * x
+>>> square(5)
+25
+```
+
+
+Using a lambda function to filter even numbers from a list:
+```python
+>>> lst = [10, 11, 12, 13, 14, 15, 16, 17]
+>>> lst_even = list(filter(lambda x: (x % 2 == 0), lst))
+>>> lst_even
+[10, 12, 14, 16]
+```
 
 ____
 
@@ -228,22 +277,66 @@ ____
 
 **Answer :**
 
-- **`map()`** applies a function to every item in an iterable (like a list) and returns a new iterable (map object).
+`map()` function applies a given function to each item in a list (or other iterable) and returns a map object, which is an iterator that yields the results.
+
+```python
+map(function, list1, list2, ...)
+```
+
+- **`function`**: A function that is applied to each item of the lists.
+- **`list1, list2, ...`**: The lists (or other iterables) to which the function is applied.
+
  ```python
  nums = [1, 2, 3, 4]
  result = map(lambda x: x ** 2, nums)
  print(list(result))  # Output: [1, 4, 9, 16]
  ```
- 
-- **`reduce()`** applies a function cumulatively to the items of an iterable, reducing it to a single value.
- ```python
- from functools import reduce
- nums = [1, 2
 
-, 3, 4]
- result = reduce(lambda x, y: x + y, nums)
- print(result)  # Output: 10
- ```
+`map()` can be used with multiple lists (of the same length), where the lambda function takes arguments from each list simultaneously.
+
+Multiply corresponding elements from two lists using a lambda function:
+```python
+>>> lst1 = [10, 11, 12, 13, 14, 15, 16, 17]
+>>> lst2 = [2, 1, 0, 33, 1, 45, 236, 23]
+>>> result = list(map(lambda x, y: x * y, lst1, lst2))
+>>> result
+[20, 11, 0, 429, 14, 675, 3776, 391]
+```
+
+___
+
+`filter()` function is used to **filter out elements** from a sequence (such as a list, string, or tuple) based on a function's result. The function is applied to each element of the sequence, and the elements for which the function returns `True` are included in the result.
+
+```python
+filter(function, sequence)
+```
+
+**`function`**: A function that returns `True` or `False` for each element in the sequence.
+**`sequence`**: A list, string, or tuple that the function will be applied to.
+
+Using filter and lambda function to get even numbers from a list:
+```python
+>>> lst = [10, 11, 12, 13, 14, 15, 16, 17]
+>>> lst_even = list(filter(lambda x: (x % 2 == 0), lst))
+>>> lst_even
+[10, 12, 14, 16]
+```
+
+___
+
+
+`reduce()` function is used to apply a binary function (a function that takes two arguments) cumulatively to the items of an iterable, reducing to a single value. 
+ 
+This function is from the `functools` module, so it needs to be imported.
+```python
+from functools import reduce
+
+nums = [1, 2 , 3, 4]
+result = reduce(lambda x, y: x + y, nums)
+
+print(result)  
+# Output: 10
+```
 
 
 ____
@@ -256,7 +349,59 @@ ____
 
 **Answer :**
 
+List comprehension in Python provides a concise way to create lists based on existing iterables. It represents the creation of a new list from an iterable object (like a list, set, tuple, dictionary, or range) that satisfies a given condition. 
 
+It is very compact code, usually a single line, and simplifies loops, as well as the process of filtering or transforming data into a new list. 
+
+The syntax is readable and efficient, making it one of the most powerful features of Python when working with lists.
+
+List comprehension consists of `[]` square braces, containing an expression up front. after the expression, a for loop and then zero or more if statements can be written.
+```python
+[expression for item1 in iterable1 if statement1
+        for item2 in iterable2 if statement2
+        for item3 in iterable3 if statement3 ...]
+```
+
+- **expression**: The value or operation that will be applied to each item.
+- **item**: The variable that takes each value from the iterable.
+- **iterable**: The collection (list, set, dict, tuple, range) that provides the values.
+- **condition (optional)**: A filter that only includes items that satisfy the condition.
+
+The result is a new list which contains elements formed as a result of executing the expression according to the for loop and if statements.
+
+
+Square only even numbers:
+```python
+>>> [x**2 for x in range(1, 11) if x % 2 == 0]
+[4, 16, 36, 64, 100]
+```
+
+Printing prime numbers in a given range using comprehension :
+```python
+import math
+
+def is_prime(num):
+    if num <= 1:
+        return False
+    for i in range(2, int(math.sqrt(num)) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+# To generate prime numbers in given range using list comprehension
+def generate_primes_in_range(start, end):
+    primes = [num for num in range(start, end + 1) if is_prime(num)]
+    return primes
+
+
+start = int(input("Enter the starting number: "))
+end = int(input("Enter the ending number: "))
+
+
+primes = generate_primes_in_range(start, end)
+print(f"Prime numbers between {start} and {end}: {primes}")
+
+```
 
 ____
 
@@ -283,7 +428,6 @@ print(even_numbers)
 
 ___
 
-
 ##### Write a lambda function for each of the following: -
 
 i.Take one argument and return true if it is nonzero
@@ -291,22 +435,33 @@ ii.Take one argument and return true if it is odd
 iii.Take two arguments and return their sum
 iv.Take two arguments and return true if their sum is odd
 v.That three arguments and return true if the produce of the first two is less than or equal to the third.
-
-**Answer :**
-
-
-
-___
-
-##### Write a lambda function for each of the following:
-i) Take one argument and return true if it is nonzero
-ii) Take one argument and return true if it is odd
-iii) Take a list as argument and return sum of the elements of the list
+vi. Take a list as argument and return sum of the elements of the list
 
 
 **Answer :**
 
+```python
+# Take one argument and return true if it is nonzero
+non_zero = lambda x : x != 0
 
+# Take one argument and return true if it is odd
+is_odd = lambda x: x%2 != 0
+
+# Take two arguments and return their sum
+num_sum = lambda x, y: x+y
+
+# Take two arguments and return true if their sum is odd
+sum_odd = lambda x,y: (x+y)%2 != 0
+
+# That three arguments and return true if the product of the first two is less than or equal to the third.
+so_check = lambda x,y,z : (x*y)<=z
+
+# Take a list as argument and return sum of the elements of the list
+my_list = [1, 2, 3, 4, 5]
+total = sum([x for x in my_list])
+
+print(total)  # Output: 15
+```
 
 ___
 
@@ -318,47 +473,40 @@ To convert Celsius to Fahrenheit, we use the formula:
 `f = (c * 9/5) + 32`
 
 ```python
-# Celsius to Fahrenheit table
-print("Celsius\tFahrenheit")
-for c in range(0, 101, 10):
-    f = (c * 9/5) + 32
-    print(f"{c}\t\t{f:.2f}")
+# Function to convert Celsius to Fahrenheit
+def celsius_to_fahrenheit(celsius):
+    return (celsius * 9/5) + 32
+
+# Function to convert Fahrenheit to Celsius
+def fahrenheit_to_celsius(fahrenheit):
+    return (fahrenheit - 32) * 5/9
+
+
+celsius_values = [0, 10, 20, 30, 40, 50]
+fahrenheit_values = list(map(celsius_to_fahrenheit, celsius_values))
+print("Celsius to Fahrenheit:", fahrenheit_values)
+
+fahrenheit_values_2 = [32, 50, 68, 86, 104, 122]
+celsius_values_2 = list(map(fahrenheit_to_celsius, fahrenheit_values_2))
+print("Fahrenheit to Celsius:", celsius_values_2)
 ```
 
-```
-Celsius	Fahrenheit
-0		32.00
-10		50.00
-20		68.00
-30		86.00
-40		104.00
-50		122.00
-60		140.00
-70		158.00
-80		176.00
-90		194.00
-100		212.00
-```
+___
+
+##### Analyze and write the output for the following code snippets:
 
 ```python
-# Fahrenheit to Celcius
-
-
+>>>filter(lambda x:x,[4,0,6,3,0,2])
 ```
+It will produce a filter object by taking only the non-zero elements
 
-___
-
-Analyze and write the output for the following code snippets:
-```
-i.
->>>filter (lambda x:x,[4,0,6,3,0,2])
-
-ii.
+```python
 >>>reduce(lambda x, y: x and y, filter(lambda x:x%2==0,a))
 ```
-
+The result of this will be a filtered list of even numbers from `a`.
 
 ___
+
 
 Let a be the list of values produced by range(1,11). Using the function filter and a lambda argument, write the expression that will produce each of the following.
 (i) A list of even numbers in a
