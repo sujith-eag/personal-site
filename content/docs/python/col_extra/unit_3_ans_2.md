@@ -15,76 +15,218 @@ seo:
 ---
 
 
+
 ## Recursion
 
 
-Explain recursion in Python functions. Provide an example illustrating the use of recursion to solve a specific problem.
+##### Explain recursion in Python functions. Provide an example illustrating the use of recursion to solve a specific problem.
+
+* Discuss recursion? Explain the working of recursion using factorial program.
+* What is recursion? Find the factorial of a number using recursive function.
+
+**Answer :**
+
+Recursion is a programming technique where a function calls itself to solve a smaller problem of the initial problem. A recursive function typically has two parts:
+
+1. **Base case**: The condition under which the recursion ends.
+2. **Recursive case**: The function calls itself with a modified argument.
+
+```python
+def factorial(n):
+    # Base case: factorial of 0 or 1 is 1
+    if n == 0 or n == 1:
+        return 1
+    # Recursive case: n * factorial(n-1)
+    return n * factorial(n - 1)
 
 
-Develop a recursive function to generate prime numbers in a given range.
+print(factorial(5))  # Output: 120
+print(factorial(0))  # Output: 1
+print(factorial(3))  # Output: 6
+
+```
+
+___
+
+ 
+##### Write a function to display the Fibonacci sequence up to nth term where n is provided by the user.
+
+Basic Logic for Fibonacci
+```python
+def fibonacci(n):
+    a, b = 0, 1
+    for _ in range(n):
+        print(a, end=" ")
+        a, b = b, a + b
+
+n = int(input("Enter number of terms: "))
+fibonacci(n)
+```
+
+With validation and handling input 1 and 0
+```python
+def fibonacci(n):
+    a, b = 0, 1  # Starting values
+    
+    if n <= 0:
+        print("Please enter a positive integer.")
+    elif n == 1:
+        print("Fibonacci sequence up to", n, "term: 0")
+    else:
+        print("Fibonacci sequence up to", n, "terms:")
+        print(a, end=" ")  # Print first number
+        for _ in range(1, n):
+            print(b, end=" ")
+            a, b = b, a + b
+        print()
+
+n = int(input("Enter number of terms: "))
+fibonacci(n)
+```
+
+____
+
+##### Write a Python recursive function Hanoi which implements a recursive solution for Towers of Hanoi.
+
+```python
+def hanoi(n, source, auxiliary, destination):
+
+    if n == 1:
+        print(f"Move disk 1 from {source} to {destination}")
+        return
+        
+    hanoi(n - 1, source, destination, auxiliary)
+    
+    print(f"Move disk {n} from {source} to {destination}")
+    
+    hanoi(n - 1, auxiliary, source, destination)
+
+n = int(input("Enter the number of disks: "))
+hanoi(n, 'A', 'B', 'C')
+# A = source, B = auxiliary, C = destination
+```
+
+____
+
+##### Demonstrate recursion in Python. Write a recursive function to find sum of n numbers.
+
+```python
+def sum_of_n(n):
+    if n == 0:
+        return 0
+    else:
+        return n + sum_of_n(n - 1)
 
 
-Discuss recursion? Explain the working of recursion using factorial program.
+n = int(input("Enter a number: "))
+result = sum_of_n(n)
+print(f"The sum of the first {n} numbers is: {result}")
+```
 
-Write a function to find the factorial of a number using functional programming.
+___
 
-What is recursion? Find the factorial of a number using recursive function.
+##### Develop a recursive function to generate prime numbers in a given range.
+
+```python
+def is_prime(num, divisor=2):
+    if num <= 1:  # Base case for prime check
+        return False
+    if divisor == num:
+        return True
+    if num % divisor == 0:
+        return False
+    return is_prime(num, divisor + 1)  # Recursive check
+
+def generate_primes_in_range(start, end):
+    # Base case for recursion
+    if start > end:
+        return
+    if is_prime(start):
+        print(start, end=" ")
+    generate_primes_in_range(start + 1, end)  
+    # Recursive call for next number
 
 
+start = int(input("Enter the starting number: "))
+end = int(input("Enter the ending number: "))
+print(f"Prime numbers between {start} and {end}:")
+generate_primes_in_range(start, end)
+```
 
-Demonstrate recursion in Python. Write a recursive function to find sum of n numbers.
+_____
 
-
-Write a function to display the Fibonacci sequence up to nth term where n is provided by the user.
-
-
-Write a Python recursive function `hanoi` which implements a recursive solution for Towers of hanoi.
-
-
-Develop a recursive Python function that recursively computes sum of elements in a list of lists. 
+##### Develop a recursive Python function that recursively computes sum of elements in a list of lists. 
 `Input: [1, 2, [3,4], [5,6]]`
 Expected Result: 21.
 
+```python
+def sum_of_elements(lst):
+    total = 0
+    for item in lst:
+        if isinstance(item, list):
+            total += sum_of_elements(item)
+        else:
+            total += item
+    return total
 
-Develop a factorial function which returns the factorial of a number. Using the factorial function, develop another function that estimates the value of mathematical constant e using this formula :
+input_list = [1, 2, [3, 4], [5, 6]]
+result = sum_of_elements(input_list)
+print("Sum of elements:", result)
+```
+
+___
+
+##### Develop a factorial function which returns the factorial of a number. 
+Using the factorial function, develop another function that estimates the value of mathematical constant e using this formula :
 `e = 1 + 1/1! + 1/2! + 1/3! + 1/4! + 1/5! + . . . . . . . .`
+
+```python
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n - 1)
+
+
+def estimate_e(terms=10):
+    e_value = 1  # Start with 1
+    for i in range(1, terms):
+        e_value += 1 / factorial(i)
+    return e_value
+
+print("Factorial of 5:", factorial(5))  
+# Output: 120
+
+print("Estimate e for 10 terms:", estimate_e(10))  
+# Estimation e for 10 terms: 2.7182815255731922
+```
 
 
 ___
 
+
 ## Map, Filter, Lambda, List Comprehension
 
 
-Describe the purpose and usage of lambda functions in Python. Provide an example to illustrate the use of lambda functions.
+##### Discuss lambda function with suitable examples.
 
-Discuss lambda function with suitable examples.
+* Describe the purpose and usage of lambda functions in Python. Provide an example to illustrate the use of lambda functions.
+* Write short notes on anonymous functions in python.
+* Explain lambda functions with example.
+* What is lambda function? What are the characteristics of a lambda function? Give an example.
 
-Write short notes on anonymous functions in python.
-
-Explain lambda functions with example.
-
-What is lambda function? What are the characteristics of a lambda function? Give an example.
-
+**Answer :**
 
 
-What is the significance of :  map and reduce functions.
+____
 
-Write short notes on the following: (i) Mapping (ii) Filtering (iii) Anonymous functions.
+##### Write a Note on the following
 
-Write a short notes on the following: i) Mapping ii) Filtering iii) List Comprehension.
+* What is the significance of :  map and reduce functions.
+* Write short notes on the following: (i) Mapping (ii) Filtering (iii) Anonymous functions.
+* Write a short notes on the following: i) Mapping ii) Filtering iii) List Comprehension.
+* Write short notes on the following: (i) Mapping (ii) Filtering (iii) List comprehension.
 
-Write short notes on the following: (i) Mapping (ii) Filtering (iii) List comprehension.
-
-Discuss list comprehension with example.
-
-What is List Comprehension? Describe with examples.
-
-Explain list comprehension with example.
-
-Explain list comprehension with example. Also develop a python script to print prime numbers in the given range using comprehension.
-
-
-
+**Answer :**
 
 - **`map()`** applies a function to every item in an iterable (like a list) and returns a new iterable (map object).
  ```python
@@ -104,8 +246,19 @@ Explain list comprehension with example. Also develop a python script to print p
  ```
 
 
+____
+
+##### Discuss list comprehension with example.
+
+* What is List Comprehension? Describe with examples.
+* Explain list comprehension with example.
+* Explain list comprehension with example. Also develop a python script to print prime numbers in the given range using comprehension.
+
+**Answer :**
 
 
+
+____
 
 ##### Create a list of even numbers from 1 to 10 using the loop and filter method.
 
@@ -128,23 +281,38 @@ print(even_numbers)
 # Output: [2, 4, 6, 8, 10]
 ```
 
+___
 
 
-Write a lambda function for each of the following: -
+##### Write a lambda function for each of the following: -
+
 i.Take one argument and return true if it is nonzero
 ii.Take one argument and return true if it is odd
 iii.Take two arguments and return their sum
 iv.Take two arguments and return true if their sum is odd
 v.That three arguments and return true if the produce of the first two is less than or equal to the third.
 
+**Answer :**
 
-Write a lambda function for each of the following:
+
+
+___
+
+##### Write a lambda function for each of the following:
 i) Take one argument and return true if it is nonzero
 ii) Take one argument and return true if it is odd
 iii) Take a list as argument and return sum of the elements of the list
 
 
+**Answer :**
+
+
+
+___
+
 ##### Write a program using map function to convert the temperature from Celsius to Fahrenheit and vice versa.
+
+**Answer :**
 
 To convert Celsius to Fahrenheit, we use the formula:  
 `f = (c * 9/5) + 32`
@@ -172,6 +340,13 @@ Celsius	Fahrenheit
 100		212.00
 ```
 
+```python
+# Fahrenheit to Celcius
+
+
+```
+
+___
 
 Analyze and write the output for the following code snippets:
 ```
@@ -182,6 +357,8 @@ ii.
 >>>reduce(lambda x, y: x and y, filter(lambda x:x%2==0,a))
 ```
 
+
+___
 
 Let a be the list of values produced by range(1,11). Using the function filter and a lambda argument, write the expression that will produce each of the following.
 (i) A list of even numbers in a
@@ -194,7 +371,6 @@ Let a be the list of values produced by range(1,11). Using the functions map and
 (iii) A list where each element is larger by one than the corresponding element in the original list.
 
 
-
 Implement anonymous(lambda) functions for the following:
 i) Filter out only even numbers from the given list.
 ii) Reduce the given list of numbers to its sum.
@@ -202,7 +378,6 @@ ii) Reduce the given list of numbers to its sum.
 
 Use list comprehension to create a list of integers which specify the length of each word in a certain sentence, but only if the word is not the word "the".
 text =”the students of MCA study the programming language python as part of the curriculum”
-
 
 
 Let ‘a’ be the list of integer values in the range(1,11). Explain what the following expression is returning:
@@ -226,7 +401,6 @@ Let a be the list of values produced by range(1,50). Using the function filter a
 
 
 Explain list comprehension with example. Write a python program that initializes a list with numbers from 1 to 20 using list comprehension. Print how many odd numbers present in the list and sum of even numbers in the list.
-
 
 
 ___

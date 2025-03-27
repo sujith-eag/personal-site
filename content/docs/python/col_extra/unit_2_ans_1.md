@@ -15,6 +15,7 @@ seo:
 ---
 
 
+
 ## String
 
 ##### What is a string? Discuss the different ways of representing a string in Python.
@@ -270,6 +271,8 @@ The condition `a or b and c` is evaluated as `True or (False and False)`, which 
 ____
 
 ##### Write a python program to count number of vowels and consonants, identify numbers, uppercase letters, lowercase letters and special characters in a given string.
+
+* Write a python function that accepts a sentence containing alpha numeric characters and calculates the number of digits, uppercase and lowercase letters. Return the calculated values.
 
 **Answer :**
 

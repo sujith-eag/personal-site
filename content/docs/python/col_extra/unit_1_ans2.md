@@ -67,6 +67,29 @@ ___
 (22, 64)
 ```
 
+As a function, Complete Program
+```python
+def sum_even_odd(numbers):
+    even_sum = 0
+    odd_sum = 0
+    for num in numbers:
+        if num % 2 == 0:
+            even_sum += num
+        else:
+            odd_sum += num
+            
+	return even_sum, odd_sum
+
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+even_sum, odd_sum = sum_even_odd(numbers)
+
+print(f"Sum of even numbers: {even_sum}")
+print(f"Sum of odd numbers: {odd_sum}")
+```
+
+
 ___
 
 ##### Develop a python program to sum the digits of a given number.
@@ -211,6 +234,17 @@ ___
 
 ##### Write a Python program to count the palindrome words in a line of text.
 
+* Develop a python function to return the number of palindrome words in a line of text.
+
+Logic for palindrome check 
+```python
+def is_palindrome( s = "MADAM"):
+    return s == s[::-1]
+
+print(is_palindrome())  
+# Output: True
+```
+
 ```python
 >>> text = "Madam the racecar and the level of civic duty were admired by the radar"
 >>> words = text.split(" ")
@@ -225,11 +259,59 @@ ___
 5
 ```
 
+```python
+def count_palindromes(text):
+    words = text.split()
+    count = 0
+    
+    for word in words:
+        if word == word[::-1]:
+            count += 1
+    return count
+
+text = "madam racecar level world"
+print(count_palindromes(text))  
+# Output: 3
+```
+
+___
+
+
+##### Design a simple calculator with different mathematical operations using python script.
+
+ ```python
+ def calculator():
+	 print("Select operation:")
+	 print("1. Add")
+	 print("2. Subtract")
+	 print("3. Multiply")
+	 print("4. Divide")
+	 
+	 choice = input("Enter choice (1/2/3/4): ")
+
+	 num1 = float(input("Enter first number: "))
+	 num2 = float(input("Enter second number: "))
+
+	 if choice == '1':
+		 print(f"The result is: {num1 + num2}")
+	 elif choice == '2':
+		 print(f"The result is: {num1 - num2}")
+	 elif choice == '3':
+		 print(f"The result is: {num1 * num2}")
+	 elif choice == '4':
+		 if num2 != 0:
+			 print(f"The result is: {num1 / num2}")
+		 else:
+			 print("Error! Division by zero.")
+	 else:
+		 print("Invalid input.")
+
+ calculator()
+ ```
+
 ___
 
 Develop a Python program to find roots of a quadratic equation with necessary validation.
-
-Design a simple calculator with different mathematical operations using python script.
 
 Using for loop, print of table of Celsius/Fahrenheit equivalences. Let c be the Celsius temperatures, ranging from 0 to 100. For each value of c, print the corresponding Fahrenheit temperature.
 
