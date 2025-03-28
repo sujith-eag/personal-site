@@ -747,7 +747,6 @@ odd = [ x for x in range(1,50) if x%2!=0]
 
 (iii) Sum of list of odd numbers of a
 ```python
-
 odd = [ x for x in range(1,50) if x%2!=0]
 total = sum(odd)
 
@@ -779,11 +778,10 @@ for i in cubes:
 	cube_sum += i
 ```
 
-
 (v) A list of values in a divisible by 3 and not divisible by 7
 ```python
->>> lis = list(range(1,50))
->>> three_not_seven = list( filter( lambda x: x%3==0 and x%7!=0,  lis) )
+>>> a = list(range(1,50))
+>>> three_not_seven = list( filter( lambda x: x%3==0 and x%7!=0, a))
 >>> three_not_seven
 [3, 6, 9, 12, 15, 18, 24, 27, 30, 33, 36, 39, 45, 48]
 
@@ -799,8 +797,8 @@ for i in cubes:
 
 ```python
 # Using filter map
-lis = list(range(1,50))
-div_5_total = sum(map(lambda x: x**2, filter(lambda x : x%5==0, lis)))
+a = list(range(1,50))
+div_5_total = sum(map(lambda x: x**2, filter(lambda x : x%5==0, a)))
 
 # using comprehension
 div_5 = [x**2 for x in range(1,50) if x%5==0]
@@ -813,11 +811,33 @@ total = sum([x**2 for x in range(1,50) if x%5==0])
 ____
 
 
-Use list comprehension to create a list of integers which specify the length of each word in a certain sentence, but only if the word is not the word "the".
-text =”the students of MCA study the programming language python as part of the curriculum”
+##### Use list comprehension to create a list of integers
+which specify the length of each word in a certain sentence, but only if the word is not the word "the".
 
+text ="the students of MCA study the programming language python as part of the curriculum"
+
+```python
+>>> text = "the students of MCA study the programming language python as part of the curriculum"
+>>> lis = text.split()
+>>> lis
+['the', 'students', 'of', 'MCA', 'study', 'the', 'programming', 'language', 'python', 'as', 'part', 'of', 'the', 'curriculum']
+
+>>> count = [ len(x) for x in lis if x != "the" ]
+>>> count
+[8, 2, 3, 5, 11, 8, 6, 2, 4, 2, 10]
+```
+
+In one line
+```python
+>>> text = "the students of MCA study the programming language python as part of the curriculum"
+>>> 
+>>> count = [len(x) for x in text.split() if x != "the"]
+>>> count
+[8, 2, 3, 5, 11, 8, 6, 2, 4, 2, 10]
+```
 
 
 ___
+
 
 
