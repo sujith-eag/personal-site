@@ -16,6 +16,7 @@ seo:
 
 
 
+
 ## Recursion
 
 
@@ -36,14 +37,13 @@ def factorial(n):
     # Base case: factorial of 0 or 1 is 1
     if n == 0 or n == 1:
         return 1
-    # Recursive case: n * factorial(n-1)
+    # Recursive case: n * (n-1)!
     return n * factorial(n - 1)
 
 
 print(factorial(5))  # Output: 120
 print(factorial(0))  # Output: 1
 print(factorial(3))  # Output: 6
-
 ```
 
 ___
@@ -380,6 +380,7 @@ Printing prime numbers in a given range using comprehension :
 ```python
 import math
 
+# Function to check if number is prime
 def is_prime(num):
     if num <= 1:
         return False
@@ -426,6 +427,13 @@ print(even_numbers)
 # Output: [2, 4, 6, 8, 10]
 ```
 
+Using List comprehension
+```python
+>>> evens = [ x for x in range(1,11) if x%2==0 ]
+>>> evens
+[2, 4, 6, 8, 10]
+```
+
 ___
 
 ##### Write a lambda function for each of the following: -
@@ -436,7 +444,6 @@ iii.Take two arguments and return their sum
 iv.Take two arguments and return true if their sum is odd
 v.That three arguments and return true if the produce of the first two is less than or equal to the third.
 vi. Take a list as argument and return sum of the elements of the list
-
 
 **Answer :**
 
@@ -474,21 +481,39 @@ To convert Celsius to Fahrenheit, we use the formula:
 
 ```python
 # Function to convert Celsius to Fahrenheit
-def celsius_to_fahrenheit(celsius):
-    return (celsius * 9/5) + 32
+def celsius_to_fahrenheit(c):
+    return (c * 9/5) + 32
 
 # Function to convert Fahrenheit to Celsius
-def fahrenheit_to_celsius(fahrenheit):
-    return (fahrenheit - 32) * 5/9
+def fahrenheit_to_celsius(f):
+    return (f - 32) * 5/9
 
 
-celsius_values = [0, 10, 20, 30, 40, 50]
-fahrenheit_values = list(map(celsius_to_fahrenheit, celsius_values))
-print("Celsius to Fahrenheit:", fahrenheit_values)
+celsius = [0, 10, 20, 30, 40, 50]
+c_to_f = list(map(celsius_to_fahrenheit, celsius))
 
-fahrenheit_values_2 = [32, 50, 68, 86, 104, 122]
-celsius_values_2 = list(map(fahrenheit_to_celsius, fahrenheit_values_2))
-print("Fahrenheit to Celsius:", celsius_values_2)
+print("Celsius to Fahrenheit:", c_to_f)
+# Celsius to Fahrenheit: [32.0, 50.0, 68.0, 86.0, 104.0, 122.0]
+
+fahrenheit = [32, 50, 68, 86, 104, 122]
+f_to_c = list(map(fahrenheit_to_celsius, fahrenheit))
+
+print("Fahrenheit to Celsius:", f_to_c)
+# Fahrenheit to Celsius: [0.0, 10.0, 20.0, 30.0, 40.0, 50.0]
+```
+
+Using list comprehension
+```python
+>>> celsius = [0, 10, 20, 30, 40, 50]
+>>> fahrenheit = [32, 50, 68, 86, 104, 122]
+>>> 
+>>> C_to_F = [ (x*9/5)+32 for x in celsius]
+>>> F_to_C = [ (x-32)*5/9 for x in fahrenheit]
+>>> 
+>>> C_to_F
+[32.0, 50.0, 68.0, 86.0, 104.0, 122.0]
+>>> F_to_C
+[0.0, 10.0, 20.0, 30.0, 40.0, 50.0]
 ```
 
 ___
@@ -503,52 +528,294 @@ It will produce a filter object by taking only the non-zero elements
 ```python
 >>>reduce(lambda x, y: x and y, filter(lambda x:x%2==0,a))
 ```
-The result of this will be a filtered list of even numbers from `a`.
+The result of inner filter will be a filtered object of even numbers from the list `a`.
+
+In the reduce function, two numbers from the even list are compared using `and` which will return the second number when both are true and repeats till the last item on the even list, so will return last even number of the list.
+
+```python
+>>> a = list(range(1,50))
+>>> reduce(lambda x, y: x and y, filter(lambda x:x%2==0,a))
+48
+>>> b = [4,6,2,10,15,4,33]
+>>> reduce(lambda x, y: x and y, filter(lambda x:x%2==0,b))
+4
+```
+
+##### Let a be the list of integer values in the range(1,11). 
+Explain what the following expression is returning:     
+`reduce(lambda x, y: x and y, filter(lambda x: x % 2!= 0, a))`
+
+What would the function be returning if the lambda used ‘or’ operator rather than ‘and’ operator?
+
+```python
+a = list(range(1,11))
+
+reduce(lambda x, y: x and y, filter(lambda x: x % 2!= 0, a))
+```
+Similar to above problem but change in condition in filter, the filter is selecting only the odd elements from the list.
+
+The function `lambda x, y: x and y` returns y always so at the end of the reduce function on list of odd numbers, the final output will be the last odd number in the list which is 9.
+
+If `or` was used in `lamda x, y: x or y`, then it would return the first value of the two so in the end the output will be the first element in the list which is 1.
 
 ___
 
+##### Let a be the list of values produced by range(1,11). 
 
-Let a be the list of values produced by range(1,11). Using the function filter and a lambda argument, write the expression that will produce each of the following.
+Using the function filter and a lambda argument, write the expression that will produce each of the following.
 (i) A list of even numbers in a
 (ii) A list of values in a divisible by 3.
 
+**Answer :**
 
-Let a be the list of values produced by range(1,11). Using the functions map and a lamda argument, write an expression that will produce each of the following.
+```python
+>>> a = list(range(1,11))
+>>> 
+>>> even_list = list(filter( lambda x : x%2==0, a))
+>>> 
+>>> div_three = list(filter( lambda x: x%3==0, a ))
+>>> 
+>>> even_list
+[2, 4, 6, 8, 10]
+>>> div_three
+[3, 6, 9]
+```
+
+Using list comprehension
+```python
+a = list(range(1,11))
+
+even_list = [ x for x in a if x%2==0 ]
+div_three = [ x for x in a if x%3==0]
+```
+____
+
+##### Let a be the list of values produced by range(1,11). 
+
+Using the functions map and a lamda argument, write an expression that will produce each of the following.
 (i) A list of squares of the values
 (ii) A list of cubes of the values
 (iii) A list where each element is larger by one than the corresponding element in the original list.
 
+**Answer :**
 
-Implement anonymous(lambda) functions for the following:
+```python
+a = list(range(1,11))
+
+squares_1 = list( map( lambda x: x*x , a ) )
+squares_2 = list( map( lambda x: x**2, a ) )
+
+cubes_1 = list( map (lambda x, y: x*y, squares, a))
+cubes_2 = list( map(lambda x:(x*x)*x, a))
+cubes_3 = list( map(lambda x: x**3, a))
+
+one_large = list( map(lambda x: x+1 , a))
+```
+
+```
+>>> squares_1
+[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
+>>> cubes_1
+[1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]
+
+>>> one_large
+[2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+```
+
+Same Using List comprehension
+```python
+a = list(range(1,11))
+
+squares = [ x**2 for x in a ]
+squares = [ x*x for x in a ]
+
+cubes = [ x**3 for x in a]
+cubes = [ x*y for x,y in zip(a, squares) ]
+
+one_large = [ x+1 for x in a]
+```
+
+_____
+
+##### Implement anonymous(lambda) functions for the following:
+
+
 i) Filter out only even numbers from the given list.
+
+**Answer :**
+
+Using list comprehension
+```python
+>>> lis = [1,2,3,4,5,6]
+>>> evens = [ x for x in lis if x%2==0]
+>>> evens
+[2, 4, 6]
+```
+
+Using filter and lambda
+```python
+>>> lis = [1,2,3,4,5,6]
+>>> evens = list( filter( lambda x: x%2==0, lis ) )
+>>> evens
+[2, 4, 6]
+```
+
+
 ii) Reduce the given list of numbers to its sum.
 
+**Answer :**
 
-Use list comprehension to create a list of integers which specify the length of each word in a certain sentence, but only if the word is not the word "the".
-text =”the students of MCA study the programming language python as part of the curriculum”
+Using Reduce and lambda
+```python
+>>> from functools import reduce
+>>> 
+>>> lis = [1,2,3,4,5,6]
+>>> total = reduce( lambda x,y:x+y, lis )
+>>> total
+21
+```
 
+Using filter and sum
+```python
+lis = [1,2,3,4,5,6]
+total = sum(lis)
+total # 21
 
-Let ‘a’ be the list of integer values in the range(1,11). Explain what the following expression is returning:
-`reduce(lambda x, y: x and y, filter(lambda x: x % 2!= 0, a))`
-What would the function be returning if the lambda used ‘or’ operator rather than ‘and’ operator?
+evens = list( filter( lambda x: x%2==0, lis ) )
+even_total = sum(evens)
+even_total  # 12
 
+even_total = sum( list( filter( lambda x: x%2==0, lis ) ) )
+total  # 12 
+```
 
-Let a be the list of values produced by range(1,50). Using the function map, filter, reduce and a lambda argument, write the expression that will produce each of the following.
+___
+
+##### Explain list comprehension with example. 
+Write a python program that initializes a list with numbers from 1 to 20 using list comprehension. Print how many odd numbers present in the list and sum of even numbers in the list.
+
+```python
+>>> lis = list(range(1,21)) # or
+>>> lis = [x for x in range(1,21)]
+>>> 
+>>> odd = [x for x in lis if x%2!=0]
+>>> len(odd)
+10
+
+>>> even = [x for x in lis if x%2==0]
+>>> sum(even)
+110
+
+>>> from functools import reduce
+>>> sum_even = reduce( lambda x,y:x+y , even)
+>>> sum_even
+110
+```
+
+___
+
+##### Let a be the list of values produced by range(1,50). 
+Using the function map, filter, reduce and a lambda argument, write the expression that will produce each of the following.
+(i) A list of odd numbers in a
+(ii) A list of even numbers in a
 (i) A list of values in a divisible by 3 and not divisible by 7
 (ii) Sum of list of odd numbers of a
 (iii) Sum of list of cubes of all numbers of a
 (iv)Sum of list of squares of numbers which are divisible by 5 in a.
 Rewrite the same using list comprehension.
 
+**Answer :**
 
-Let a be the list of values produced by range(1,50). Using the function filter and a lamda argument, write the expression that will produce each of the following.
 (i) A list of odd numbers in a
 (ii) A list of even numbers in a
-(iii) A list of values in a divisible by 3 and not divisible by 7.
+```python
+lis = list(range(1,50))
+lis = [x for x in range(1,50)]
+
+# Using Filter and lambda
+evens = list( filter( lambda x: x%2==0 , lis))
+odd = list( filter( lambda x: x%2!= 0, lis))
+
+# Using list comprehension
+evens = [ x for x in lis if x%2==0]
+odd = [ x for x in lis if x%2!=0]
+
+evens = [ x for x in range(1,50) if x%2==0]
+odd = [ x for x in range(1,50) if x%2!=0]
+```
+
+(iii) Sum of list of odd numbers of a
+```python
+
+odd = [ x for x in range(1,50) if x%2!=0]
+total = sum(odd)
+
+# or
+from functools import reduce 
+total = reduce( lambda x, y = x+y, odd )
+
+# or
+total = 0
+for i in odd:
+	total += i
+```
+
+(iv) Sum of list of cubes of all numbers of a
+```python
+lis = list(range(1,50))
+cubes = list( map( lambda x: x**3, lis ))
+
+# using list comprehension
+cubes = [ x**3 for i in range(1,50)]
+
+# Taking total
+cube_sum = reduce(lambda x,y : x+y, cubes)
+#or
+cube_sum = sum(cubes)
+#or
+cube_sum = 0
+for i in cubes:
+	cube_sum += i
+```
 
 
+(v) A list of values in a divisible by 3 and not divisible by 7
+```python
+>>> lis = list(range(1,50))
+>>> three_not_seven = list( filter( lambda x: x%3==0 and x%7!=0,  lis) )
+>>> three_not_seven
+[3, 6, 9, 12, 15, 18, 24, 27, 30, 33, 36, 39, 45, 48]
 
-Explain list comprehension with example. Write a python program that initializes a list with numbers from 1 to 20 using list comprehension. Print how many odd numbers present in the list and sum of even numbers in the list.
+
+# Using list Comprehension
+>>> three_not_seven = [ x for x in lis if x%3==0 and x%7!=0 ]
+>>> 
+>>> three_not_seven
+[3, 6, 9, 12, 15, 18, 24, 27, 30, 33, 36, 39, 45, 48]
+```
+
+(vi) Sum of list of squares of numbers which are divisible by 5 in a.
+
+```python
+# Using filter map
+lis = list(range(1,50))
+div_5_total = sum(map(lambda x: x**2, filter(lambda x : x%5==0, lis)))
+
+# using comprehension
+div_5 = [x**2 for x in range(1,50) if x%5==0]
+total = reduce( lambda x,y: x+y, div_5 )
+
+# Single line
+total = sum([x**2 for x in range(1,50) if x%5==0])
+```
+
+____
+
+
+Use list comprehension to create a list of integers which specify the length of each word in a certain sentence, but only if the word is not the word "the".
+text =”the students of MCA study the programming language python as part of the curriculum”
+
 
 
 ___
