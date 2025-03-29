@@ -217,15 +217,17 @@ def third_person_singular(verb):
     else:
         return verb + 's'
 
-print(third_person_singular("play"))   # Output: plays
+
 print(third_person_singular("go"))     # Output: goes
 print(third_person_singular("brush"))  # Output: brushes
 print(third_person_singular("fly"))    # Output: flies
 ```
 
 ___
+
 ##### Predict the output of the following and justify your answer:
-```
+
+```python
 i)
 S="Vishweswaraiah"
 print(s[4:])
@@ -238,7 +240,7 @@ Vishw
 # from beginning, to 4th, excluding 5th
 ```
 
-```
+```python
 ii)
 str1 = "Bangalore"
 str1[1] = "e"
@@ -248,7 +250,7 @@ print(str1)
 # TypeError: 'str' does not support assignment
 ```
 
-```
+```python
 iii)
 a = -45
 print(--a)
@@ -257,7 +259,7 @@ print(--a)
 # Double negation gets same value
 ```
 
-```
+```python
 iv) a, b, c = True, False, False
 if a or b and c:
 	print "MSRIT"

@@ -15,9 +15,9 @@ seo:
 ---
 
 
-
 ##### Write a program using a while loop that asks the user for a number, and prints a countdown from that number to zero.
 
+Reverse iterating to zero from a number using `-1` step
 ```python
 >>> while True:
 ...     num = int(input("Num : "))
@@ -38,11 +38,12 @@ ___
 
 ##### Develop a program to print the sum of n natural numbers.
 
+Accumulating the values into `total = 0` using `+= num` 
 ```python
 >>> n = 10
 >>> total = 0
->>> for i in range(n+1):
-...     total += i
+>>> for num in range(n+1):
+...     total += num
 ... 
 >>> total
 55
@@ -67,7 +68,7 @@ ___
 (22, 64)
 ```
 
-As a function, Complete Program
+Same logic in a function, Complete Program
 ```python
 def sum_even_odd(numbers):
     even_sum = 0
@@ -94,6 +95,10 @@ ___
 
 ##### Develop a python program to sum the digits of a given number.
 
+Logic to iterate over a number:
+* Dividing number with modulus 10 to get the number in unit place (last position)
+* Accumulating that digit in total
+* Reassigning the number by doing a floor division with 10 to remove the unit place number 
 ```python
 >>> num = 45743
 >>> total = 0
@@ -275,7 +280,6 @@ print(count_palindromes(text))
 ```
 
 ___
-
 
 ##### Design a simple calculator with different mathematical operations using python script.
 

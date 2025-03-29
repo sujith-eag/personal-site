@@ -25,7 +25,7 @@ seo:
 
 **Identical Objects** (Same Object Identity)
 - **Identical objects** are two references that point to the exact same object in memory.
-- Two objects are identical can be checked using the `is` operator. This operator checks if two references point to the same memory location (i.e., the same object).
+- Two objects are identical can be checked using the `is` operator which checks if two references point to the same memory location (i.e., the same object).
 
 ```python
 a = [1, 2, 3]
@@ -36,7 +36,8 @@ print(a is b)  # True
 
 ```python
 a = [1, 2, 3]
-b = [1, 2, 3]  # b is a new list with the same contents as a
+b = [1, 2, 3]  
+# b is a new list with the same contents as a
 
 print(a is b)  # False
 ```
@@ -106,7 +107,6 @@ print(a ** b) # 1000 (Exponentiation)
 ---
 
 ##### 2. Assignment Operators
-
 Assignment operators are used to assign values to variables, sometimes in a shorthand way.
 - **`=`**: Simple assignment
 - **`+=`**: Add and assign (e.g., `x += 1` is the same as `x = x + 1`)
@@ -126,11 +126,9 @@ x *= 2  # x = x * 2 => x = 16
 ---
 
 ##### 3. Unary Operators
-
 A **unary operator** operates on a single operand (value).
 
-**Unary Minus (`-`)**    
-The **unary minus operator** negates the value of a variable (changes a positive value to negative and vice versa).
+**Unary Minus (`-`)**  operator negates the value of a variable (changes a positive value to negative and vice versa).
 
 ```python
 x = 10
@@ -140,7 +138,6 @@ y = -x  # y = -10
 ---
 
 ##### 4. Relational Operators
-
 Relational (or comparison) operators are used to compare two values. They return a boolean value (`True` or `False`).
 - **`>`**: Greater than
 - **`<`**: Less than
@@ -168,7 +165,6 @@ print(10 < 5 < 20)  # False
 ---
 
 ##### 5. Logical Operators
-
 Logical operators are used to combine conditional statements. They are commonly used in `if` statements.
 - **`and`**: Returns `True` if both operands are `True`
 - **`or`**: Returns `True` if at least one operand is `True`
@@ -185,7 +181,6 @@ print(not x)    # False
 ---
 
 ##### 6. Membership Operators
-
 Membership operators are used to check if a value is present in a sequence (like a string, list, tuple, etc.).
 - **`in`**: Returns `True` if the value is found in the sequence
 - **`not in`**: Returns `True` if the value is **not** found in the sequence
@@ -199,7 +194,6 @@ print('grapes' not in fruits)  # True
 ---
 
 ##### 7. Identity Operators
-
 Identity operators are used to compare the memory locations of two objects. These operators help check if two variables point to the same object in memory.
 - **`is`**: Returns `True` if both operands refer to the same object in memory
 - **`is not`**: Returns `True` if both operands do not refer to the same object
@@ -222,7 +216,6 @@ print(id(y))
 ---
 
 ##### 8. Bitwise Operators
-
 Bitwise operators are used to perform bit-level operations on integers. These operations work at the binary level.
 - **`&`**: Bitwise AND
 - **`|`**: Bitwise OR
@@ -306,19 +299,6 @@ else:
 ```
 
 ```python
-x = 3
-
-if x == 1:
-    y = f1(x)
-elif x == 2:
-    y = f2(x)
-elif x == 3:
-    y = f3(x)
-else:
-    y = f4(x)
-```
-
-```python
 name = input("What is your name? ")
 
 if name == "Harry" or name == "Hermione" or name == "Ron":
@@ -345,16 +325,17 @@ for item in iterable:
 ```
 
 ```python
+# Iterate over a list
 for i in [0, 1, 2]:
     print("Meow")
 
-# Iterates over a range of 3 numbers (0, 1, 2)
+# Iterates over a range (0, 1, 2)
 for i in range(3):  
     print("Meow")
 
 # Sequence from 0 to n-1
 for i in range(0, n):  
-    # Code to execute
+    print("Meow")
 ```
 
 
@@ -398,6 +379,7 @@ ___
 - `continue` – Skips the rest of the current loop iteration and moves to the next iteration.
 - `pass` – It is a do nothing statement, used as a placeholder.
 
+Breaking when i becomes 3
 ```python
 for i in range(5):
    if i == 3:
@@ -406,6 +388,7 @@ for i in range(5):
 # Output: 0 1 2
 ```
 
+Skipping iteration when i becomes 3
 ```python
 for i in range(5):
    if i == 3:
@@ -515,12 +498,24 @@ for letter in'Python':
 
 i) The Loop terminates when letter becomes 'h' so only two letters are printed
 ```python
+for letter in 'Python':
+	if letter == 'h':
+		break
+	print 'Current Letter :', letter
+
+
 Current Letter : P
 Current Letter : y
 ```
 
 ii) The letter h will not be printed because when letter becomes 'h', the loop is passed to next iteration without printing the h.
 ```python
+for letter in'Python':
+	if letter =='h':
+		continue
+	print'Current Letter :', letter
+
+
 Current Letter : P
 Current Letter : y
 Current Letter : t
@@ -530,6 +525,13 @@ Current Letter : n
 
 iii) All letters are printed because pass does nothing even when letter is 'h' so execution continues and 'This is pass block' and letter 'h' are both printed.
 ```python
+for letter in'Python':
+	if letter =='h':
+		pass
+		print'This is pass block'
+	print'Current Letter :', letter
+	
+
 Current Letter : P
 Current Letter : y
 Current Letter : t
@@ -564,6 +566,7 @@ range(i, j, k)
 # Produces: i, i+k, i+2k, ..., i+nk
 ```
 
+Using length of a list as range input to iterate over the list.
 ```python
 >>> lis = [3,4,5,6,7]
 >>> n = len(lis)
@@ -577,13 +580,14 @@ range(i, j, k)
 7
 ```
 
+Finding all the divisors of a given number using range
 ```python
 def factors(n):
 	flist = []
 	for i in range(1, n + 1):
 		if n % i == 0:
 			flist.append(i)  
-			# Or flist = flist + [i]
+		# Or flist = flist + [i]
 	return flist
 ```
 
@@ -629,25 +633,37 @@ Enter width: 5
 
 **Answer :**
 
-Easy Method(doesn't work in terminal without function)
+Easy Method is to print top, print middle and print bottom.
+(doesn't work in terminal without function)
 
 ```python
 width = int(input("Enter a width: "))
 height = int(input("Enter a height: "))
 
+# Printing top
 print('@' * width)
 
+# Printing middle
 for i in range(height - 2):
     print('@' + ' ' * (width - 2) + '@')
 
+# Printing Bottom if height was not 1
 if height > 1:
     print('@' * width)
+
 
 @@@@
 @  @
 @  @
 @@@@
 ```
+
+
+Proper method using double loop, one to print the height and another to print the width.
+
+`if (i == 0 or i == height - 1):` is used to check if it is first or last line and print the full width and go to next iteration.
+
+Else, the second loop moves horizontally (using end as "") and prints character only when it is first and last element., otherwise prints space.
 
 ```python
 >>> height = 4
@@ -716,7 +732,6 @@ Enter a height: 4
 ___
 
 #### Additional Patterns for Practice
-
 
 
 ##### Define a function that takes a positive integer n, and then produces n lines of output in the following pattern
@@ -826,3 +841,7 @@ for i in range(n-1, 0, -1):
     * 
 
 ```
+
+
+
+____
