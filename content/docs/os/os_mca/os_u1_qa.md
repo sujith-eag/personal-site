@@ -1,11 +1,11 @@
 ---
-title: "0 - OS - Short Notes (Unit 1)"
+title: "OS - Unit-1 - Answered"
 description: ""
 summary: ""
 date: 2025-01-12T21:20:56+05:30
 lastmod: 2025-01-12T21:20:56+05:30
 draft: false
-weight: 1998
+weight: 1981
 toc: true
 seo:
   title: "" # custom title (optional)

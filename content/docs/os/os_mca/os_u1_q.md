@@ -1,11 +1,11 @@
 ---
-title: "0 - OS - Previous Questions (Unit 1 & 2)"
+title: "OS - Unit-1 - Previous Questions"
 description: ""
 summary: ""
 date: 2025-01-12T21:27:49+05:30
 lastmod: 2025-01-12T21:27:49+05:30
 draft: false
-weight: 2500
+weight: 1980
 toc: true
 seo:
   title: "" # custom title (optional)
@@ -14,7 +14,6 @@ seo:
   noindex: false # false (default) or true
 ---
 
-## Unit 1
 
 ### **Operating System Services**
 
@@ -131,113 +130,3 @@ seo:
     c) Is cooperation among processes necessary? Justify.  
     d) Elaborate briefly on the benefits obtained from multiprocessor systems.  
     e) Define Operating Systems. What are the various operations of Operating Systems?
-
-
-
-___
-
-## Unit 2
-
-
-### **Process Management**
-1. a) Write a short note on the following with respect to processes:  
-   i) Process State  
-   ii) Process Control Block (PCB)  
-   b) Define a process. List the different fields of a process control block.  
-   c) Define a process and present its various states.  
-   d) What is the critical section problem? Explain the requirements that must be satisfied by its solution.  
-   e) What are the requirements for providing a solution to the critical section problem? Explain.  
-
----
-
-### **CPU Scheduling**
-1. a) Why is it important for the scheduler to distinguish I/O-bound programs and CPU-bound programs?  
-   b) Consider the following set of processes:  
-
-| Process | Priority | Arrival Time (ms) | Burst Time (ms) |
-|---------|----------|--------------------|-----------------|
-| P1      | 2        | 0                  | 10              |
-| P2      | 1        | 2                  | 4               |
-| P3      | 4        | 0                  | 2               |
-| P4      | 1        | 5                  | 1               |
-| P5      | 3        | 4                  | 6               |
-
-   i) Draw Gantt charts for SJF and Preemptive-Priority scheduling algorithms.  
-   ii) Calculate the waiting time and average waiting time for each algorithm.  
-   iii) Calculate the turnaround time and average turnaround time for each algorithm.  
-   iv) Which is the more efficient algorithm?  
-
-   c) Consider the following processes:  
-
-| Process | Arrival Time (ms) | CPU Time (ms) |
-|---------|--------------------|---------------|
-| P1      | 0                  | 3             |
-| P2      | 2                  | 3             |
-| P3      | 3                  | 5             |
-| P4      | 4                  | 2             |
-| P5      | 8                  | 3             |
-
-   i) Draw the Gantt chart for the SJF algorithm.  
-   ii) Calculate the average waiting and turnaround times for FCFS and Round-Robin scheduling (time slice = 1 ms).  
-
----
-
-### **Scheduling Algorithms**
-1. a) Assume the following jobs are executed with one processor:  
-
-| Process | Burst Time |
-|---------|------------|
-| P0      | 80         |
-| P1      | 20         |
-| P2      | 10         |
-| P3      | 20         |
-| P4      | 50         |
-
-   i) Draw a Gantt chart for FCFS scheduling.  
-   ii) Calculate the turnaround time for process P3.  
-   iii) Determine the average waiting time.  
-
-   b) Five batch jobs arrive simultaneously. Their estimated running times (in milliseconds) and priorities are:  
-
-| Job | Estimated Time | Priority |
-|-----|----------------|----------|
-| A   | 10             | 3        |
-| B   | 6              | 5        |
-| C   | 2              | 2        |
-| D   | 4              | 1        |
-| E   | 8              | 4        |
-
-   i) Draw Gantt charts for Round Robin (Quantum = 5 ms), Priority Scheduling, and SJF algorithms.  
-   ii) Determine average waiting and turnaround times for each algorithm.  
-
-   c) Present criteria to evaluate the best CPU scheduling algorithm.  
-
----
-
-### **Synchronization**
-1. a) Write the code snippets for hardware-based lock instructions `TestAndSet()` and `Swap()`.  
-   b) Describe the N-process solution to the critical section problem using `test()` and `set()` atomic instructions.  
-   c) What is a semaphore? Discuss the Dining Philosophers problem.  
-   d) Provide the solution for the Dining Philosophers problem using semaphores.  
-
----
-
-### **Multiprocessing**
-1. a) Describe the differences between symmetric and asymmetric multiprocessing.  
-   b) What are the advantages and disadvantages of multiprocessor systems?  
-   c) Explain processor affinity. How is it useful in multiprocessor scheduling?  
-   d) Discuss load balancing and symmetric multithreading in multiprocessor scheduling.  
-
----
-
-### **Interprocess Communication (IPC)**
-1. a) Explain IPC using message passing with an example.  
-   b) Define the following terms:  
-      i) Dispatcher  
-      ii) Short-term scheduler  
-      iii) Context switching  
-      iv) CPU-bound processes  
-      v) I/O-bound processes  
-      vi) Device queue  
-
----

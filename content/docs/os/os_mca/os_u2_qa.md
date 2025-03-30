@@ -1,11 +1,11 @@
 ---
-title: "0 - OS - Short Notes (Unit 2)"
+title: "OS - Unit-2 - Answered"
 description: ""
 summary: ""
 date: 2025-01-12T21:20:56+05:30
 lastmod: 2025-01-12T21:20:56+05:30
 draft: false
-weight: 1999
+weight: 1983
 toc: true
 seo:
   title: "" # custom title (optional)
@@ -98,7 +98,6 @@ When there are more processes than available CPU time, some processes will have 
 
 ---
 
-
 #### **Scheduling Queues**
 
 - **Job Queue:**  
@@ -120,15 +119,17 @@ When there are more processes than available CPU time, some processes will have 
 - **CPU-bound programs**: These have long CPU bursts and minimal I/O operations.
 
 
+___
+
 #### **Schedulers**
 
 1. **Long-Term Scheduler (Job Scheduler):**
     - Selects processes from a pool and loads them into memory for execution, controlling the **degree of multiprogramming** (the number of processes in memory).
     
-2. **Short-Term Scheduler (CPU Scheduler):**    
+1. **Short-Term Scheduler (CPU Scheduler):**    
     - When the CPU is idle, it selects a process from the **ready queue** and allocates CPU time to it. This ensures that CPU time is used efficiently.
 
-3. **Medium-Term Scheduling:**
+2. **Medium-Term Scheduling:**
 	- In multiprogramming systems, sometimes it’s beneficial to remove processes from main memory (swapping them to disk) to reduce the level of multiprogramming and manage system resources.
 
 Swapping allows processes to be later reintroduced into memory and continue execution from where they left off, helping balance memory load and system performance.
@@ -169,9 +170,9 @@ CPU scheduling happens in the following situations:
 4. **Process Termination:** The process completes its execution.
 
 - **Nonpreemptive Scheduling:** Once a process is running, it holds the CPU until it terminates or blocks (e.g., for I/O).
-    
+
 - **Preemptive Scheduling:** The OS can interrupt a running process to allocate CPU time to another process, allowing higher-priority processes to execute. This can lead to race conditions if multiple processes share data.
-    
+
 
 ---
 
