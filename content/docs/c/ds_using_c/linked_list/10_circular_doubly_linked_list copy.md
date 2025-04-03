@@ -1,5 +1,5 @@
 ---
-title: "11 - Circular Doubly Linked List -(Own Implementation)"
+title: "05 - Circular Doubly Linked List -(Own Implementation)"
 description: ""
 summary: ""
 date: 2025-01-01T16:00:52+05:30
@@ -16,31 +16,371 @@ seo:
 
 
 
+Fixed Insert and Delete Middle Traversal :
+* The issue of Traversing for Insertion at middle and deletion was handled by shifting to index 1 instead of mixing 0 and 1 index.
+
+Length Function:
+* Length gives the actual number of elements so it is 1 index.
+* Length checks no nodes in list with `head == NULL` and returns 0
+* So 0 become no node, 1 is first node
+* Length also handles 1 element, that is if `head == tail`, returns 1
+* `while()` loop traverses the list, runs for list with at least 2 elements, till `temp != tail`. (Last one length has to incremented outside the loop to include tail)
+
+Function to Get Position and Check is it Valid:
+*  Position to delete and insert at, both need to be at different locations, for insertion just behind the place of insertion and for deletion on the node (two nodes for singly linked lists)
+* `getPos` should not accept `-1, 0 and len+2` and return `-1` for these values so it can be neglected in the code.
+* If it is 1, insert at beginning or delete at beginning.
+* for insertion if `pos == len+1` then insert at end 
+* but for deletion `len+1` should be discarded. if it is `len` then delete at end.
+* So After handling these edge cases, the range of traversal will be from `2` to `len`.
+
+All `while()` loops can be replaced with `for()` loop (except in length function) for better readable and error less code.
+
+For insertion taking `i = 2` and `i < pos` will iterate to node just before the place, 
+* Example: Input of `pos = 2` will keep temp at head so insertion can happen in 2nd place and so on.
+
+For deletion temp needs to be on the node, so `i = 1` and `i < pos` will place temp in the needed node so `free(temp)` will delete the node (Works well in Doubly Linked Lists).
+* In singly linked list, two nodes need to be selected for linking and deleting a node.
+* better to take `i = 2`, move `temp` to node just before the node to be deleted and assign `temp->next` which can be linked and deleted.
+
+For Search :
+* key `found = 0` switch is used to signal if it is found so Exit message can be printed.
+* Using `for()` loop for iteration since length is known, so last element can also be accessed.
+* No need to check last element outside the loop using `if(temp->data == ele && found == 0)`.
+
+___
+
 ### Final Implementation
 
-The issue of Traversing for Insertion at middle and deletion was handled by shifting to 1 index instead of mixing 0 and 1 index.
+Generalized Rules for List Traversal
+* `while(temp != tail)` used only in `length()` function.
+* `for(i=2; i<pos; i++)` will put temp on node just before position( for `inserMiddle()` in doubly linked list).
+* `for(i=1; i<pos; i++)` will put temp on the node ( for `deleteMiddle()`)
+* `for(i=0; i<length(); i++)` to iterate through whole list ( for `display()` and `search()`) 
 
-Length gives the actual number of elements so it is 1 index.
-It handles no elements `head == NULL` and returns 0
-handles 1 element `head == tail` and returns 1
-So loop runs for list with at least 2 elements till `temp != tail`
-(using head does't work so last one length has to incremented outside the loop)
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+struct node
+{
+	int data;
+	struct node *prev;
+	struct node *next;
+}*head = NULL, *tail=NULL, *new=NULL;
 
 
-For getting the `position` from the user to delete and insert at, both need to be at different locations, for insertion just behind the place of insertion and on the node for deletion.
+void Inserter(int ch, int ele);
+void Deleter(int ch);
+void Display();
+void Search();
+int length();
 
-So `getPos` should not accept `-1, 0 and len+2` and return `-1` so it can be neglected.
-If it is 1, insert at beginning or delete at beginning.
-If it is `len+1` then insert at end but for deletion `len+1` it should be discarded.
-if it is `len` then delete at end
 
-So only from `2 to len` is range for traversal.
-For insert taking `i=2` and `i < pos` will iterate to node just before the place, `pos = 2` will keep temp at head and so on.
+int main()
+{
+	int ch, ele;
+	while(1)
+	{
+		printf("\n1. Insert at Beginning\t2. Insert inBetween\t3. Insert at End\n");
+		printf("4. Display\t5. Search\n");
+		printf("6. Delete Beginning\t7. Delete inBetween\t8. Delete End\n");
+		printf("0. Exit\n");
+		printf("Enter a Choice: ");
+		scanf("%d", &ch);
+		printf("\n");
 
-for deletion temp needs to be on the node, so `i = 1` and `i<pos` will keep temp in the needed node so `free(temp)` will delete the node.
+		switch(ch)
+		{
+			case 0:
+				exit(0);
+			case 1:
+			case 2:
+			case 3:
+				printf("\nEnter the value to Insert: ");
+				scanf("%d", &ele);
+				Inserter(ch, ele);
+			case 4:
+				Display();
+				printf("\nLength is: %d\n", length());
+				break;
+			case 5:
+				Search();
+				break;
+			case 6:
+			case 7:
+			case 8:
+				Deleter(ch);
+				Display();
+				break;
+		}
+	}
+	return 0;
+}
+void firstNode(int ele)
+{
+	new = (struct node*) malloc(sizeof(struct node));
+	new->data = ele;
+	
+	new->next = new->prev = new;
+	head = tail = new;
+}
+void inB(int ele)
+{
+	new = (struct node*) malloc(sizeof(struct node));
+	new->data = ele;
+	
+	new->next = head;
+	new->prev = tail;
+	
+	head->prev = new;
+	tail->next = new;
+	
+	head = new;
+}
+void inE(int ele)
+{
+	new = (struct node*) malloc(sizeof(struct node));
+	new->data = ele;
+	
+	new->next = head;
+	new->prev = tail;
+	
+	head->prev = new;
+	tail->next = new;
+	
+	tail = new;
+}
+int length()
+{
+	if(head == NULL)
+		return 0;  // No element
+		
+	if(head == tail)
+		return 1; // One Element
+		
+	struct node *temp = head;
+	int len = 0;
+	while(temp != tail)
+	{
+		len++;
+		temp = temp->next;
+	}
+	len++;  // Adding 1 for tail node
+	return len;
+}
+int getPos()
+{
+	int len = length();
 
-For Search, a key `found=0` switch is used to signal if it is found or not.
-Check happens in the loop, but one element is left out of search so `if(temp->data == ele && found == 0)` is satisfied then last element is checked.
+	int pos;
+	printf("\nEnter position: ");
+	scanf("%d", &pos);
+
+	// Regect Invalid positions -1, 0, len+2
+	if(pos <= 0 || pos > len+1) 
+	{
+		printf("\nInvalid Location\n");
+		return -1;
+	}
+	return pos;
+}
+void inM(int ele)
+{
+	int pos = getPos();
+	int len = length();
+	
+	if(pos == -1) // Handling invalid Position
+		return;
+		
+	if(pos == 1) // Handling 1st Position
+	{
+		inB(ele);
+		return;
+	}
+	if(pos == len+1) // Handling len+1
+	{
+		inE(ele);
+		return;
+	}
+
+	// Inserting at Middle Positions
+	struct node *temp = head;
+	
+	for(int i=2; i<pos; i++)
+	{
+		temp = temp->next;		
+	}
+	// temp is one node behind where new node has to be inserted 
+	// for pos = 2, temp will be head
+	
+	new = (struct node*) malloc(sizeof(struct node));
+	new->data = ele;
+	
+	new->next = temp->next;
+	new->prev = temp;
+	
+	temp->next->prev = new;
+	temp->next = new;
+}
+void Inserter(int ch, int ele)
+{
+	if(head == NULL)
+	{
+		firstNode(ele);
+		return;
+	}
+	switch(ch)
+	{
+		case 1:
+			inB(ele);		
+			break;
+		case 3:
+			inE(ele);
+			break;
+		case 2:
+			inM(ele);
+			break;
+	}
+}
+void Display()
+{
+	if(head == NULL)
+	{
+		printf("\nNo Elements\n");
+		return;
+	}
+	// Traverse till end using length
+	int len = length();
+	
+	struct node *temp = head;
+	for(int i = 0; i<len ; i++)
+	{
+		printf("%d <-> ", temp->data);
+		temp = temp->next;
+	}
+	printf("Head\n");
+	
+	printf("\nTotal elements are : %d\n\n", len );
+}
+void delB()
+{
+	struct node *temp = head;
+	
+	head = head->next;
+	head->prev = tail;
+	tail->next = head;
+	free(temp);
+}
+void delE()
+{
+	struct node *temp = tail;
+	
+	tail = tail->prev;
+	tail->next = head;
+	head->prev = tail;
+	free(temp);
+}
+void delM()
+{
+	int pos = getPos();
+	int len = length();
+	
+	// Handle invalid possitions, -1, 0, len+2
+	// Also handle len+1, no node to delete there 
+	if(pos == -1 || pos == len+1)
+		return;
+		
+	if(pos == 1) // Delete First
+	{
+		delB();
+		return;
+	}
+	if(pos == len) // Delete Last
+	{
+		delE();
+		return;
+	}
+	
+	struct node *temp = head;
+	
+	for( int i=1 ; i<pos ; i++)
+	{
+		temp = temp->next;
+	}
+	// Used i=1 so temp is on the node to be deleted
+	// Works in Doubly linked list only because prev can be accessed
+	// in Singly linked i=2 works better to stop before node
+	
+	temp->prev->next = temp->next;
+	temp->next->prev = temp->prev;
+	free(temp);
+}
+void Deleter(int ch)
+{
+	if(head == NULL) // No Elements
+	{
+		printf("\nNothing to delete\n");
+		return;
+	}
+	if(head == tail) // One Element
+	{
+		struct node *temp = head;
+		head = tail = NULL;  // Reset
+		free(temp);
+		return;
+	}
+	
+	// There are More than 1 elements
+	switch(ch)
+	{
+		case 6:
+				delB();
+				break;
+		case 7:
+				delM();
+				break;
+		case 8:
+				delE();
+				break;
+	}
+}
+void Search()
+{
+	if(head == NULL)
+	{
+		printf("\nNo Elements in List.\n");
+		return;
+	}
+	
+	int ele;
+	printf("\nEnter the element to search: ");
+	scanf("%d", &ele);
+	
+	int found = 0;	
+	struct node *temp = head;
+	
+	for(int i=0 ; i<length() ; i++ )
+	{
+		if (temp->data == ele)
+		{
+			printf("\nElement %d found at index %d\n", ele, i);
+			found =1;
+			break;
+		}
+		// Moving temp to next node
+		temp = temp->next;		
+	}
+	// if found still 0, No Match Found
+	if(!found)
+		printf("\nElement %d was not found.\n", ele);
+}
+```
+
+
+_____
+
+### Fixed Code for Insert(But While Loops)
 
 ```c
 #include <stdio.h>
@@ -342,16 +682,13 @@ void Search()
 	}
 	if(!found)
 		printf("\nElement %d was not found.\n", ele);
-
 }
 ```
 
 
+___
 
-
-
-
-Still issue with Delete in middle
+#### Still issue with Delete in middle
 
 ```c
 #include <stdio.h>
@@ -579,12 +916,10 @@ void delM()
 	temp->next->prev = temp->prev;
 
 	free(temp);
-	
-
 }
+
 void Deleter(int ch)
 {
-	
 	if(head == NULL)
 	{
 		printf("\nThe list has no elements to delete\n");
@@ -648,6 +983,11 @@ void Search()
 	printf("\nThe value %d was not found\n", val);
 }
 ```
+
+
+____
+
+#### Early Code 
 
 ```c
 #include <stdio.h>
@@ -976,3 +1316,5 @@ void Display() {
 }
 ```
 
+
+____

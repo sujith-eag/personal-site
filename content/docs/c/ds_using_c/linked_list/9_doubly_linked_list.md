@@ -1,5 +1,5 @@
 ---
-title: "10 - Doubly Linked List -(Own Implementation)"
+title: "04 - Doubly Linked List -(Own Implementation)"
 description: ""
 summary: ""
 date: 2025-01-01T16:00:52+05:30
@@ -15,11 +15,347 @@ seo:
 ---
 
 
+* Using tail to reduce the loops for reaching last node for insertion and deletion.
+* With `NULL` available at end of Last node, `while(temp != NULL)` can be used to iterate over the full length of the list in `length()`.
+* The length counter need not be incremented after the loop ends since it is Going till `NULL` which is next of tail so count will be right.
+* This iterates over all values of list without leaving the last node also, so it useful for `Display()` and `Search()` functions.
+* Or `for(let i=0; i<length() ; i++)` for similar result.
+* Check Circular Doubly Linked List for More Info on changes and reasons.
 
-The Length counter need not be incremented after the loop since it is Going till `NULL` which is next of tail so count will be right.
-For Display also there is no need to print the last element separately after the loop.
 
-Using tail to reduce the loops for reaching last node for insertion and deletion.
+___
+
+#### Final Implementation
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+struct node
+{
+	int data;
+	struct node *prev;
+	struct node *next;
+} *head = NULL, *tail = NULL, *new = NULL;
+
+void Inserter(int ch, int ele);
+void Deleter(int ch);
+void Display();
+void Search();
+int length();
+
+int main()
+{
+	int ch, ele;
+	while(1)
+	{
+		printf("\n1. Insert at Beginning\t2. Insert inBetween\t3. Insert at End\n");
+		printf("4. Delete Beginning\t5. Delete inBetween\t6. Delete End\n");
+		printf("7. Display\t8. Search\t0. Exit\n");
+		printf("Enter a Choice: ");
+		
+		scanf("%d", &ch);
+		printf("\n");
+		
+		switch(ch)
+		{
+			case 0:
+				exit(0);
+			case 1:
+			case 2:
+			case 3:
+				printf("\nEnter the value to Insert: ");
+				scanf("%d", &ele);
+				Inserter(ch, ele);
+				Display();
+				break;
+			case 4:
+			case 5:
+			case 6:
+				Deleter(ch);
+				Display();
+				break;
+			case 7:
+				Display();
+				printf("\nLength is: %d\n", length());
+				break;
+			case 8:
+				Search();
+				break;
+		}
+	}
+	return 0;
+}
+void firstNode(int ele)
+{
+	new = (struct node*) malloc(sizeof(struct node));
+	new->data = ele;
+	
+	new->next = new->prev = NULL;
+	head = tail = new;
+}
+void inB(int ele)
+{
+	new = (struct node*) malloc(sizeof(struct node));
+	new->data = ele;
+
+	new->next = head;
+	new->prev = NULL;
+
+	head->prev = new;
+	head = new;
+}
+void inE(int ele)
+{
+	new = (struct node*) malloc(sizeof(struct node));
+	new->data = ele;
+
+	new->prev = tail;
+	new->next = NULL;
+	
+	tail->next = new;
+	tail = new;
+}
+int length()
+{
+	if(head == NULL)
+		return 0; // No Element
+
+	if(head == tail)
+		return 1; // One Element
+
+	struct node *temp = head;
+	int len = 0;
+	while(temp != NULL) // (temp != tail) can also be used
+	{
+		len++;
+		temp = temp->next;
+	}
+	// No need of len++, All elements traversed 
+	return len; 
+}
+int getPos()
+{
+	int len = length();
+	
+	int pos;
+	printf("\nEnter Position: ");
+	scanf("%d", &pos);
+	
+	// Regect Invalid positions -1, 0, len+2
+	if(pos <= 0 || pos > len+1)
+	{
+		printf("\nInvalid Location \n");
+		return -1;
+	}
+	return pos;
+}
+void inM(int ele)
+{
+	int pos = getPos();
+	int len = length();
+	
+	if(pos == -1) // handling Invalid Positons
+		return;
+		
+	if(pos == 1) // Handling 1st Position
+	{
+		inB(ele);
+		return;
+	}
+	if(pos == len+1) // Last position len+1
+	{
+		inE(ele);
+		return;
+	}
+	
+	// Inserting at Middle Positions
+	struct node *temp = head;
+	
+	for(int i=2; i<pos; i++)
+	{
+		temp = temp->next;		
+	}
+	
+	new = (struct node*) malloc(sizeof(struct node));
+	new->data = ele;
+
+	new->next = temp->next;
+	new->prev = temp;
+	
+	temp->next->prev = new;
+	temp->next = new;
+}
+void Inserter(int ch, int ele)
+{
+	if(head == NULL)
+	{
+		firstNode(ele);
+		return;
+	}
+	switch(ch)
+	{
+		case 1:
+			inB(ele);
+			break;
+		case 2:
+			inM(ele);
+			break;
+		case 3:
+			inE(ele);
+			break;
+	}
+}
+void Display()
+{
+	if(head == NULL)
+	{
+		printf("\nNo Elements to display\n");
+		return;
+	}
+	// Traverse till end using length
+	int len = length();
+	
+	struct node *temp = head;
+	for(int i = 0; i<length(); i++)
+	{
+		printf("%d <-> ", temp->data);
+		temp = temp->next;
+	}
+	printf("Null\n");
+	
+	printf("\nTotal elements are : %d\n\n", length());
+}
+void delB()
+{
+	struct node *temp = head;
+	
+	head = head->next;
+	head->prev = NULL;
+	free(temp);
+}
+void delE()
+{
+	struct node *temp = tail;
+	
+	tail = tail->prev;
+	tail->next = NULL;
+	free(temp);
+}
+void delM()
+{
+	int pos = getPos();
+	int len = length();
+
+	// Handle invalid possitions, -1, 0, len+2
+	// Also handle len+1, no node to delete there 
+	if(pos == -1 || pos == len+1)
+		return;
+
+	if(pos == 1) // Delete First
+	{
+		delB();
+		return;
+	}
+	if(pos == len) // Delete Last
+	{
+		delE();
+		return;
+	}
+
+	struct node *temp = head;
+
+	for( int i=1 ; i<pos ; i++)
+	{
+		temp = temp->next;
+	}
+	// Used i=1 so temp is on the node to be deleted
+	// Works in Doubly linked list only because prev can be accessed
+	// in Singly linked i=2 works better to stop before node
+	
+	temp->prev->next = temp->next;
+	temp->next->prev = temp->prev;
+	free(temp);
+}
+void Deleter(int ch)
+{
+	if(head == NULL)  // No Elements
+	{
+		printf("\nNothing to delete\n");
+		return;
+	}
+	if( head == tail) // One Element
+	{
+		struct node *temp = head;
+		head = tail = NULL;  // Reset
+		free(temp);	
+		return;
+	}
+
+	// There are more than 1 elements
+	switch(ch)
+	{
+		case 4:
+			delB();
+			break;
+		case 5:
+			delM();
+			break;
+		case 6:
+			delE();
+			break;
+	}
+}
+
+
+void Search()
+{
+	if(head == NULL)
+	{
+		printf("\nNo values\n");
+		return;
+	}
+	
+	int ele;
+	printf("\nEnter the Value to search: ");
+	scanf("%d", &ele);
+	
+	int found = 0;	
+	struct node *temp = head;
+	
+	for(int i=0 ; i<length() ; i++ )
+	{
+		if (temp->data == ele)
+		{
+			printf("\nElement %d found at index %d\n", ele, i);
+			found =1;
+			break;
+		}
+		// Moving temp to next node
+		temp = temp->next;		
+	}
+	// if found still 0, No Match Found
+	if(!found)
+		printf("\nElement %d was not found.\n", ele);
+}
+
+// Since NULL is available while() can be used similar to length()
+
+//	int pos = 0;
+//	while(temp != NULL)
+//	{
+//		if(temp->data == ele)
+//		{
+//			printf("\nValue %d found at %d location\n", ele, pos);
+//			return;
+//		}
+//		pos++;
+//		temp = temp->next;
+//	}
+//	printf("\nElement %d not found in list\n", ele);
+```
+
+____
 
 
 ```c
@@ -85,6 +421,7 @@ void firstNode(int ele)
 {
 	new = (struct node*) malloc(sizeof(struct node));
 	new->data = ele;
+	
 	new->next = NULL;
 	new->prev = NULL;
 	head = new;
@@ -291,27 +628,25 @@ void Search()
 	printf("\nEnter the Value to search: ");
 	scanf("%d", &ele);
 
-	int pos = 0, found = 0;
+	int pos = 0;
 	struct node *temp = head;
 	while(temp != NULL)
 	{
 		if(temp->data == ele)
 		{
 			printf("\nValue %d found at %d location\n", ele, pos);
-			found = 1;
-			break;
+			return;
 		}
 		pos++;
 		temp = temp->next;
 	}
-	if(!found)
-	{
-		printf("\nElement %d not found in list\n", ele);	
-	}
+	printf("\nElement %d not found in list\n", ele);
 }
 ```
 
 
+
+____
 
 
 ```c
@@ -603,3 +938,5 @@ int main() {
     }
 }
 ```
+
+___

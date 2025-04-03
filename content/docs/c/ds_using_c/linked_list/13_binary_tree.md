@@ -1,11 +1,11 @@
 ---
-title: "13 - Binary Tree"
+title: "08 - Binary Tree (Recursive)"
 description: ""
 summary: ""
 date: 2025-01-01T16:00:52+05:30
 lastmod: 2025-01-01T16:00:52+05:30
 draft: false
-weight: 273
+weight: 274
 toc: true
 seo:
   title: "" # custom title (optional)
@@ -13,7 +13,6 @@ seo:
   canonical: "" # custom canonical URL (optional)
   noindex: false # false (default) or true
 ---
-
 
 
 ```c
@@ -145,6 +144,10 @@ int main()
 ```
 
 
+
+____
+
+
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -263,3 +266,8 @@ void postorderTraversal(struct node* root)
 	}
 }
 ```
+
+
+____
+
+

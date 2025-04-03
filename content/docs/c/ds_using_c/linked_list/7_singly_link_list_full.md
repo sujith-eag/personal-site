@@ -1,5 +1,5 @@
 ---
-title: "08 - Singly Linked List - Full (Own Implementation)"
+title: "02 - Singly Linked List - Full (Own Implementation)"
 description: ""
 summary: ""
 date: 2025-01-01T16:00:52+05:30
@@ -15,13 +15,328 @@ seo:
 ---
 
 
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+struct node 
+{
+	int data;
+	struct node* next;
+} *head = NULL, *tail=NULL, *new = NULL;
+
+void Inserter(int ch, int ele);
+void Deleter(int ch);
+void Display();
+void Search();
+int Length();
+
+
+void main()
+{
+	int ch, ele;
+	
+	while(1)
+	{
+		printf("#############################################################");
+		printf("\n\t\t\t0: Exit\n");
+		printf("Insert at Position\t1: Beginning\t2: Position\t3: End\n");
+		printf("Delete from position\t4: Beginning\t5: Position\t6: End\n");
+		printf("\t\t\t7: Display List\t\t8: Search Value\n");
+		printf("#############################################################\n");
+		printf("Choice:\t");
+		scanf("%d", &ch);
+		
+		printf("\n");
+
+		switch(ch)
+		{
+			case 0: exit(0);
+			case 1:
+			case 2:
+			case 3:
+				printf("\nEnter the value to Insert: ");
+				scanf("%d", &ele);
+				Inserter(ch, ele);  printf("\n\n");
+			case 7:
+				Display(); break;
+			case 4:
+			case 5:
+			case 6:
+				Deleter(ch);
+				Display();
+				break;
+			case 8:
+				Search(); 
+				break;	
+			default:
+				printf("Not a Valid Choice, try again.\n");
+		}
+		printf("\n");
+	}
+}
+void FirstNode(int ele)
+{
+	new = (struct node*) malloc(sizeof(struct node));
+	new->data = ele;
+	
+	new->next = NULL;  // No other nodes exist
+	head = tail = new;
+}
+void InsertAtBeginning(int ele)
+{
+	new = (struct node*) malloc(sizeof(struct node));
+	new->data = ele;
+	
+	new->next = head;
+	head = new;
+}
+void InsertAtEnd(int ele)
+{
+	new = (struct node*) malloc(sizeof(struct node));
+	new->data = ele;
+	
+	new->next = NULL;
+	tail->next = new;
+	
+	tail = new;
+}
+int Length()
+{
+	if(head == NULL)
+		return 0;
+
+	if(head == tail)
+		return 1;
+
+	struct node *temp = head;
+	int len = 0;	
+	while( temp != NULL ) // till end
+	{
+		len++;
+		temp = temp->next;
+	}
+	// NULL used, no need for len++
+	return len;
+}
+int GetPos()
+{	
+	int len = Length();
+	int pos;
+	printf("\nEnter the Position: ");
+	scanf("%d", &pos);
+	 
+	if(pos <= 0 || pos > len+1) //
+	{
+		printf("\nInvalid Position\n");
+		return -1;
+	}
+	return pos;
+}
+void InsertAtPosition(int ele)
+{
+	int pos = GetPos();
+	int len = Length();
+
+	if (pos == -1)
+		return;
+		
+	if( pos == 1)
+	{
+		InsertAtBeginning(ele);
+		return;
+	}
+	if (pos == len+1)
+	{
+		InsertAtEnd(ele);
+		return;
+	}
+	
+	struct node* temp = head; 
+	for(int i =2 ; i<pos ; i++)
+	{
+		temp = temp->next;
+	}
+	
+	new = (struct node*) malloc(sizeof(struct node));
+	new->data = ele;
+
+	new->next = temp->next;
+	temp->next = new;
+}
+void Inserter(int ch, int ele)
+{	
+	if (head == NULL) // If No elements
+	{
+		FirstNode(ele);  // Make first node
+		return;
+	}
+	switch(ch)
+	{
+		case 1: 
+			InsertAtBeginning(ele); break;
+		case 2: 
+			InsertAtPosition(ele); break;
+		case 3: 
+			InsertAtEnd(ele); break;
+	}
+}
+
+void Display()
+{
+	if (head == NULL)
+	{
+		printf("\nNothing to Display\n");
+		return;
+	}
+
+	int len = Length();
+	
+	struct node* temp = head;
+	while(temp != NULL)  // to stop on last node
+	{
+		printf( "%d-->", temp->data );
+		temp = temp->next;
+	}
+	
+	printf("Null\n");
+	printf("\nList has %d Elements.\n\n", len );
+}
+void DelB()
+{	
+	struct node *temp = head;
+	
+	head = head->next;
+	free(temp);
+}
+void DelE()
+{
+	struct node *temp = tail;
+	struct node* tempPrev = head;
+	int len = Length();
+	
+	for(int i=2 ; i<len ; i++ )
+	{
+		tempPrev = tempPrev->next;
+	}
+	
+	tail = tempPrev;
+	tail->next = NULL;
+	
+	free(temp);
+}
+
+void DelM()
+{
+	int pos = GetPos();
+	int len = Length();
+	
+	if(pos == -1 || pos == len+1)
+		return;
+		
+	if(pos == 1)
+	{
+		DelB();
+		return;
+	}
+	if(pos == len)
+	{
+		DelE();
+		return;
+	}
+
+	struct node *temp = head;
+	for (int i=2; i<pos; i++)
+	{
+		temp = temp->next;
+	}
+	// Node Next to temp has to be deleted 
+	struct node *delNode = temp->next;
+	
+	temp->next = delNode->next;
+	free(delNode);
+}
+void Deleter(int ch)
+{
+	if( head == NULL )
+	{
+		printf("\nNothing to delete\n");
+		return;
+	}	
+	if ( head == tail )
+	{	
+		struct node* temp = head;
+		head = tail = NULL;
+		free(temp);
+		printf("\t>>This List is Empty now\n");
+		return;
+	}
+	// more than 1 nodes exist
+	switch(ch)
+	{
+		case 4: DelB(); break;
+		case 5: DelM(); break;
+		case 6: DelE(); break;
+	}
+}
+void Search()
+{
+	if(head == NULL)
+	{
+		printf("\nNo elements to search\n");
+		return;
+	}
+	
+	int ele;
+	printf("\nEnter the value to be Searched: ");
+	scanf("%d", &ele);
+
+	int found = 0;
+	struct node *temp = head;
+	
+	for(int i=0 ; i<Length() ; i++)
+	{
+		if (temp->data == ele)
+		{
+			printf("\nElement %d found at index %d\n", ele, i);
+			found =1;
+			break;
+		}
+		// Moving temp to next node
+		temp = temp->next;
+	}
+	if(!found)
+		printf("\nElement %d was not found.\n", ele);
+}
+
+// Since NULL is available while() can be used similar to length()
+
+//	int pos = 0;
+//	while(temp != NULL)
+//	{
+//		if(temp->data == ele)
+//		{
+//			printf("\nValue %d found at %d location\n", ele, pos);
+//			return;
+//		}
+//		pos++;
+//		temp = temp->next;
+//	}
+//	printf("\nElement %d not found in list\n", ele);
+```
+
+
+____
+
+#### Singly Linked List Own Implementation (First Try)
+
 The goal of this implementation is to streamline the logic by separating the core operations from redundant checks and basic actions by introducing helper functions which are created when needed.
 
 Main functions just handle the main logic of creating, deleting, and updating nodes while Helper functions can handle the validations and basic actions (like memory allocation, empty checks, and position validation) separately from the main logic, keeping the code simple, linear without too many nested edge case checks. 
 
 Priority also given to Presentation and Clarity of display after operations. 
 
-#### Singly Linked List Own Implementation
 
 ```c
 #include <stdio.h>
@@ -722,3 +1037,8 @@ void main()
 
 }
 ```
+
+
+____
+
+

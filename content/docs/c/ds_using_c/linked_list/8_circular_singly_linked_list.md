@@ -1,5 +1,5 @@
 ---
-title: "09 - Circular Singly Linked List -(Own Implementation)"
+title: "03 - Circular Singly Linked List -(Own Implementation)"
 description: ""
 summary: ""
 date: 2025-01-01T16:00:52+05:30
@@ -15,6 +15,11 @@ seo:
 ---
 
 
+
+#### Final Implementation
+
+Refer to Doubly Circular List and Doubly Linked List for Break down of logic and Reasons for the code.
+
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -25,7 +30,317 @@ struct node
 	struct node *next;
 }*head = NULL, *tail = NULL, *new=NULL;
 
+void Inserter(int ch, int ele);
+void Deleter(int ch);
+void Display();
+void Search();
+int length();
 
+
+int main()
+{
+	int ch, ele;
+	while(1)
+	{
+		printf("\n1. Insert at Beginning\t2. Insert inBetween\t3. Insert at End\n");
+		printf("4. Delete Beginning\t5. Delete inBetween\t6. Delete End\n");
+		printf("7. Display\t8. Search\t0. Exit\n");
+		printf("Enter a Choice: ");
+		
+		scanf("%d", &ch);
+		printf("\n");
+		
+		switch(ch)
+		{
+			case 0:
+				exit(0);
+			case 1:
+			case 2:
+			case 3:
+				printf("\nEnter the value to Insert: ");
+				scanf("%d", &ele);
+				Inserter(ch, ele);
+				Display();
+				break;
+			case 4:
+			case 5:
+			case 6:
+				Deleter(ch);
+				Display();
+				break;
+			case 7:
+				Display();
+				printf("\nLength is: %d\n", length());
+				break;
+			case 8:
+				Search();
+				break;
+		}
+	}
+	return 0;
+}
+void firstNode(int ele)
+{
+	new = (struct node*) malloc(sizeof(struct node));
+	new->data = ele;
+	
+	new->next = new;
+	head = tail = new;
+}
+void inB(int ele)
+{
+	new = (struct node*) malloc(sizeof(struct node));
+	new->data = ele;
+	
+	new->next = head;
+	tail->next = new;
+	
+	head = new;
+}
+void inE(int ele)
+{
+	new = (struct node*) malloc(sizeof(struct node));
+	new->data = ele;
+
+	new->next = head;
+	tail->next = new;
+	
+	tail = new;
+}
+int length()
+{
+	if(head == NULL)
+		return 0;
+		
+	if(head == tail)
+		return 1;
+		
+	struct node *temp = head;
+	int len = 0;
+	while(temp != tail)
+	{
+		len++;
+		temp = temp->next;
+	}
+	len++;
+	return len;
+}
+int getPos()
+{
+	int len = length();
+
+	int pos;
+	printf("\nEnter Position: ");
+	scanf("%d", &pos);
+
+	if(pos <= 0 || pos > len+1)
+	{
+		printf("\nInvalid Location\n");
+		return -1;
+	}
+	return pos;
+}
+void inM(int ele)
+{
+	int pos = getPos();
+	int len = length();
+
+	if(pos == -1)
+		return;
+	if(pos == 1)
+	{
+		inB(ele);
+		return;
+	}
+	if(pos == len+1)
+	{
+		inE(ele);
+		return;
+	}
+
+	struct node *temp = head;
+	for(int i=2; i<pos ; i++)
+	{
+		temp = temp->next;
+	}
+	
+	new = (struct node*) malloc(sizeof(struct node));
+	new->data = ele;
+	
+	new->next = temp->next;
+	temp->next = new;
+}
+void Inserter(int ch, int ele)
+{
+	if(head == NULL)
+	{
+		firstNode(ele);
+		return;
+	}
+	switch(ch)
+	{
+		case 1:
+			inB(ele);
+			break;
+		case 2:
+			inM(ele);
+			break;
+		case 3:
+			inE(ele);
+			break;
+	}
+}
+void Display()
+{
+	if(head == NULL)
+	{
+		printf("\nNothing to Display\n");
+		return;
+	}
+
+	int len = length();
+	
+	struct node *temp = head;
+	for(int i = 0; i<len ; i++)
+	{
+		printf("%d -> ", temp->data);
+		temp = temp->next;
+	}
+
+	printf(" Head\n\nList has %d Nodes", len );
+}
+void delB()
+{
+	struct node *temp = head;
+	
+	head = head->next;
+	tail->next = head;
+	
+	free(temp);
+}
+void delE()
+{
+	// Need two Nodes to delete
+	struct node* temp = tail;
+	struct node *tempPrev = head;
+	int len = length();
+	
+// using i=2, starts from head, stop just before Tail
+// Gives Node just before Tail
+	for(int i=2 ; i<len ; i++ )
+	{
+		tempPrev = tempPrev->next;
+	}
+//	while( tempPrev->next != tail)
+//	{ tempPrev = tempPrev->next;}
+
+	tail = tempPrev;
+	tail->next = head;
+	
+	free(temp);
+}
+void delM()
+{
+	int pos = getPos();
+	int len = length();
+	
+	if(pos == -1 || pos == len+1)
+		return;
+
+	if(pos == 1)
+	{
+		delB();
+		return;
+	}
+	if(pos == len)
+	{
+		delE();
+		return;
+	}
+	
+	struct node *temp = head;
+	for (int i=2; i<pos; i++)
+	{
+		temp = temp->next;
+	}
+	// Node Next to temp has to be deleted 
+	struct node *delNode = temp->next;
+	
+	temp->next = delNode->next;
+	free(delNode); 
+}
+void Deleter(int ch)
+{
+	if(head == NULL)
+	{
+		printf("\nNothing to Delete\n");
+		return;
+	}
+	if(head == tail)
+	{
+		struct node *temp = head;
+		head = tail = NULL;
+		free(temp);
+		return;
+	}
+	switch(ch)
+	{
+		case 4:
+			delB();
+			break;
+		case 5:
+			delM();
+			break;
+		case 6:
+			delE();
+			break;
+	}
+}
+void Search()
+{
+	if(head == NULL)
+	{
+		printf("\nNo elements to search\n");
+		return;
+	}
+	
+	int ele;
+	printf("\nEnter the number to be Searched: ");
+	scanf("%d", &ele);
+
+	int found = 0;
+	struct node *temp = head;
+	
+	for(int i=0 ; i<length() ; i++ )
+	{
+		if (temp->data == ele)
+		{
+			printf("\nElement %d found at index %d\n", ele, i);
+			found =1;
+			break;
+		}
+		temp = temp->next;		
+	}
+	// if found still 0, No Match Found
+	if(!found)
+		printf("\nElement %d was not found.\n", ele);
+}
+```
+
+____
+
+
+### Almost Final
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+struct node
+{
+	int data;
+	struct node *next;
+}*head = NULL, *tail = NULL, *new=NULL;
 
 void Inserter(int ch, int ele);
 void Deleter(int ch);
@@ -88,6 +403,7 @@ void inB(int ele)
 {
 	new = (struct node*) malloc(sizeof(struct node));
 	new->data = ele;
+	
 	new->next = head;
 	tail->next = new;
 	head = new;
@@ -97,6 +413,7 @@ void inE(int ele)
 {
 	new = (struct node*) malloc(sizeof(struct node));
 	new->data = ele;
+	
 	tail->next = new;
 	new->next = head;
 	tail = new;
@@ -139,7 +456,7 @@ void inM(int ele)
 
 	if(pos == -1)
 		return;
-	if(pos == 0)
+	if(pos == 1)
 	{
 		inB(ele);
 		return;
@@ -158,6 +475,7 @@ void inM(int ele)
 	}
 	new = (struct node*) malloc(sizeof(struct node));
 	new->data = ele;
+	
 	new->next = temp->next;
 	temp->next = new;
 }
@@ -226,7 +544,12 @@ void delM()
 		temp = temp->next;
 		i++;
 	}
+	for (int i =2; i <pos; i++)
+	{
+		temp = temp->next
+	}
 	struct node *delNode = temp->next;
+	
 	temp->next = delNode->next;
 	free(delNode); 
 }
@@ -307,6 +630,10 @@ void Search()
 	printf("\nElement %d was not found\n", ele);
 }
 ```
+
+
+____
+
 
 ```c
 #include <stdio.h>

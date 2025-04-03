@@ -1,5 +1,5 @@
 ---
-title: "03 - Infix to Postfix Conversion"
+title: "02 - Infix to Postfix Conversion"
 description: ""
 summary: ""
 date: 2025-01-01T16:00:34+05:30

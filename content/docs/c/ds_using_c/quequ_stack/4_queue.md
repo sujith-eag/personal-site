@@ -1,5 +1,5 @@
 ---
-title: "05 - Queue"
+title: "01 - Queue using Array"
 description: ""
 summary: ""
 date: 2025-01-01T16:00:44+05:30

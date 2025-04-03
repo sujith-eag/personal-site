@@ -1,5 +1,5 @@
 ---
-title: "12 - Stack Using Linked List"
+title: "06 - Stack Using Linked List"
 description: ""
 summary: ""
 date: 2025-01-01T16:00:52+05:30
@@ -16,12 +16,12 @@ seo:
 
 
 
-Data structure with One node linking to next node.
-Top is holding value of the last added element.
-Element pushed is given top as next and top is given new node so stack grows with new node on top.
-When deleting, temp holds top, top changed to previous one and temp is released.
-
-display is traversing till temp is NULL to mark end of Stack.
+* Data structure with One node linking to next node.
+* `top -> next -> next -> next -> NULL`
+* Top is holding value of the last added element.
+* Element is pushed in, giving top as next to new node so stack grows with new node on top.
+* When deleting, temp holds top, top shifted to previous one and temp is released.
+* Display is traversing till temp is NULL to mark end of Stack.
 
 ```c
 #include <stdio.h>
@@ -78,10 +78,11 @@ void push(int ele)
 {
 	struct node* new;
 	new = (struct node*) malloc(sizeof(struct node));
+	
 	new->data = ele;
 	new->next = top;
 	top = new;
-
+	
 	printf("Element %d is pushed in.\n", ele);
 }
 void pop()
@@ -122,6 +123,9 @@ void display()
 }
 ```
 
+
+
+____
 
 
 ```c
@@ -234,3 +238,8 @@ int main() {
     return 0;
 }
 ```
+
+
+____
+
+

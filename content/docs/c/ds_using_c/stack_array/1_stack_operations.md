@@ -1,5 +1,5 @@
 ---
-title: "02 - Stack Operations"
+title: "01 - Stack Operations"
 description: ""
 summary: ""
 date: 2025-01-01T16:00:28+05:30
