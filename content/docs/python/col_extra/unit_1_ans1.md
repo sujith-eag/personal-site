@@ -23,13 +23,14 @@ seo:
 - Identical objects: They are the same object in memory.
 - Equivalent objects: They have the same content or value.
 
-**Identical Objects** (Same Object Identity)
-- **Identical objects** are two references that point to the exact same object in memory.
-- Two objects are identical can be checked using the `is` operator which checks if two references point to the same memory location (i.e., the same object).
+
+* **Identical Objects** ( having Same Object Identity) are two references that point to the exact same object in memory.
+- Using the `is` operator we can check if two references point to the same memory location (i.e., the same object).
 
 ```python
 a = [1, 2, 3]
-b = a  # b is assigned the same reference as a
+b = a  
+# b is assigned the same reference as a
 
 print(a is b)  # True
 ```
@@ -42,8 +43,7 @@ b = [1, 2, 3]
 print(a is b)  # False
 ```
 
-**Equivalent Objects** (Same Value)
-- **Equivalent objects** refer to two objects that have the same value or content, but they may be stored at different memory locations (i.e., they are not identical).
+* ***Equivalent Objects** (Same Value) refer to two objects that have the same value or content, but they may be stored at different memory locations (i.e., they are not identical).
 - Two objects are equivalent (i.e., have the same value) can be checked using the `==` operator. This compares the values or content of the objects.
 
 ```python
@@ -69,7 +69,7 @@ ____
 
 An **operator** is a symbol that performs an operation on one or more operands (variables or values).
 
-**Classification Based on Nature:**
+Classification Based on Nature:
 - Arithmetic Operators : `+`, `-`, `*`, `/`, `%`, `//`, `**`
 - Assignment Operators : `=`, `+=`, `-=`, `*=`, `/=`, `%=` , `**=`, `//=`
 - Relational Operators : `>`, `<`, `==`, `!=`, `<=`, `>=`
@@ -126,9 +126,7 @@ x *= 2  # x = x * 2 => x = 16
 ---
 
 ##### 3. Unary Operators
-A **unary operator** operates on a single operand (value).
-
-**Unary Minus (`-`)**  operator negates the value of a variable (changes a positive value to negative and vice versa).
+A unary operator operates on a single operand (value). Unary Minus (`-`)  operator negates the value of a variable (changes a positive value to negative and vice versa).
 
 ```python
 x = 10
@@ -166,9 +164,9 @@ print(10 < 5 < 20)  # False
 
 ##### 5. Logical Operators
 Logical operators are used to combine conditional statements. They are commonly used in `if` statements.
-- **`and`**: Returns `True` if both operands are `True`
-- **`or`**: Returns `True` if at least one operand is `True`
-- **`not`**: Reverses the boolean value (returns `True` if the operand is `False`, and vice versa)
+- `and`: Returns `True` if both operands are `True`
+- `or`: Returns `True` if at least one operand is `True`
+- `not`: Reverses the boolean value (returns `True` if the operand is `False`, and vice versa)
 
 ```python
 x = True
@@ -182,8 +180,8 @@ print(not x)    # False
 
 ##### 6. Membership Operators
 Membership operators are used to check if a value is present in a sequence (like a string, list, tuple, etc.).
-- **`in`**: Returns `True` if the value is found in the sequence
-- **`not in`**: Returns `True` if the value is **not** found in the sequence
+- `in`: Returns `True` if the value is found in the sequence
+- `not in`: Returns `True` if the value is **not** found in the sequence
 
 ```python
 fruits = ['apple', 'banana', 'orange']
@@ -195,8 +193,8 @@ print('grapes' not in fruits)  # True
 
 ##### 7. Identity Operators
 Identity operators are used to compare the memory locations of two objects. These operators help check if two variables point to the same object in memory.
-- **`is`**: Returns `True` if both operands refer to the same object in memory
-- **`is not`**: Returns `True` if both operands do not refer to the same object
+- `is`: Returns `True` if both operands refer to the same object in memory
+- `is not`: Returns `True` if both operands do not refer to the same object
 
 ```python
 x = [1, 2, 3]
@@ -316,7 +314,9 @@ ___
 
 #### Illustrate the different types of iterative statements available in Python.
 
-- `for` loop – Used to repeatedly execute a code block for a fixed number of times, often iterating over a sequence (like a list, tuple, string, range).
+**Answer :**
+
+`for` loop – Used to repeatedly execute a code block for a fixed number of times, often iterating over a sequence (like a list, tuple, string, range).
 
 Syntax:
 ```python
@@ -379,7 +379,7 @@ ___
 - `continue` – Skips the rest of the current loop iteration and moves to the next iteration.
 - `pass` – It is a do nothing statement, used as a placeholder.
 
-Breaking when i becomes 3
+Breaking out of the the loop when `i == 3`
 ```python
 for i in range(5):
    if i == 3:
@@ -388,7 +388,7 @@ for i in range(5):
 # Output: 0 1 2
 ```
 
-Skipping iteration when i becomes 3
+Skipping only current iteration when `i == 3`
 ```python
 for i in range(5):
    if i == 3:
@@ -416,6 +416,7 @@ for i in range(5):
    print(i)
 # Output: 0 1 2 3 4
 ```
+
 ```python
 prompt = "\nEnter the city you have visited:"
 prompt += "\nUse 'quit' to exit. "
@@ -496,7 +497,7 @@ for letter in'Python':
 
 **Answer :**
 
-i) The Loop terminates when letter becomes 'h' so only two letters are printed
+i) The Loop terminates when letter reaches `h` so only two letters are printed
 ```python
 for letter in 'Python':
 	if letter == 'h':
@@ -508,7 +509,7 @@ Current Letter : P
 Current Letter : y
 ```
 
-ii) The letter h will not be printed because when letter becomes 'h', the loop is passed to next iteration without printing the h.
+ii) The letter `h` will not be printed as the loop gets passed to next iteration when `letter == h` without printing `h`.
 ```python
 for letter in'Python':
 	if letter =='h':
@@ -523,7 +524,7 @@ Current Letter : o
 Current Letter : n
 ```
 
-iii) All letters are printed because pass does nothing even when letter is 'h' so execution continues and 'This is pass block' and letter 'h' are both printed.
+iii) All letters are printed because pass does nothing even when `letter == h` . So execution continues and 'This is pass block' and letter 'h' are both printed.
 ```python
 for letter in'Python':
 	if letter =='h':
@@ -559,8 +560,7 @@ range(j)
 # starts from 0, ends at j-1
 ```
 
-- `range(i, j, k)`  
-Adds an optional third argument `k` for defining the step increment, useful for sequences with a specific pattern, like arithmetic progressions (AP).
+- `range(i, j, k)`  Adds an optional third argument `k` for step increment, useful for sequences with a specific pattern, like arithmetic progressions (AP).
 ```python
 range(i, j, k)
 # Produces: i, i+k, i+2k, ..., i+nk
@@ -661,9 +661,33 @@ if height > 1:
 
 Proper method using double loop, one to print the height and another to print the width.
 
-`if (i == 0 or i == height - 1):` is used to check if it is first or last line and print the full width and go to next iteration.
+`if (i == 0 or i == height-1):` is used to check if it is first or last line and print the full width and go to next iteration. (Printing row at a time)
 
-Else, the second loop moves horizontally (using end as "") and prints character only when it is first and last element., otherwise prints space.
+```python
+n = int(input("Enter a width: "))
+m = int(input("Enter a height: "))
+
+for i in range(m):
+    if i == 0 or i == m-1:  # First and last row
+        print('@' * n)
+    else:                   # Middle rows
+        print('@' + ' ' * (n - 2) + '@')
+```
+
+```
+Enter a width: 5
+Enter a height: 4
+
+@@@@@
+@   @
+@   @
+@@@@@
+```
+
+
+Another method: 
+
+Second loop moves horizontally (using `end = ""`) and prints character only when it is first and last element., otherwise prints space. (Printing character one at a time)
 
 ```python
 >>> height = 4
@@ -674,9 +698,9 @@ Else, the second loop moves horizontally (using end as "") and prints character 
 ...     else:
 ...         for j in range(width):
 ...             if (j == 0 or j == width - 1):
-...                 print("* ", end="")
+...                 print("* ", end="") # * in beginnig end
 ...             else:
-...                 print("  ", end="")
+...                 print("  ", end="") # blank in middle
 ...         print()
 ... 
 * * * * * 
@@ -705,27 +729,6 @@ for i in range(height):
 @       @ 
 @       @ 
 @ @ @ @ @
-```
-
-```python
-n = int(input("Enter a width: "))
-m = int(input("Enter a height: "))
-
-for i in range(m):
-    if i == 0 or i == m-1:  # First and last row
-        print('@' * n)
-    else:  # Middle rows
-        print('@' + ' ' * (n - 2) + '@')
-```
-
-```
-Enter a width: 5
-Enter a height: 4
-
-@@@@@
-@   @
-@   @
-@@@@@
 ```
 
 

@@ -90,7 +90,6 @@ print(f"Sum of even numbers: {even_sum}")
 print(f"Sum of odd numbers: {odd_sum}")
 ```
 
-
 ___
 
 ##### Develop a python program to sum the digits of a given number.
@@ -99,6 +98,7 @@ Logic to iterate over a number:
 * Dividing number with modulus 10 to get the number in unit place (last position)
 * Accumulating that digit in total
 * Reassigning the number by doing a floor division with 10 to remove the unit place number 
+
 ```python
 >>> num = 45743
 >>> total = 0
@@ -111,7 +111,7 @@ Logic to iterate over a number:
 23
 ```
 
-Shortcut with string to iterate using for loop
+Shortcut by converting number to string and iterating using `for()` loop
 ```python
 >>> num = 45743
 >>> num_str = str(num)
@@ -161,7 +161,7 @@ ____
 
 ##### Implement a Python Program to reverse a number and also find the number of digits and Sum of digits in the reversed number. Prompt the user for input.
 
-Logic to reverse Number
+Logic to reverse Number with place manipulation.
 ```python
 >>> num = 45743
 >>> rev = 0
@@ -315,12 +315,161 @@ ___
 
 ___
 
-Develop a Python program to find roots of a quadratic equation with necessary validation.
+##### Using for loop, print of table of Celsius/Fahrenheit equivalences. Let c be the Celsius temperatures, ranging from 0 to 100. For each value of c, print the corresponding Fahrenheit temperature.
 
-Using for loop, print of table of Celsius/Fahrenheit equivalences. Let c be the Celsius temperatures, ranging from 0 to 100. For each value of c, print the corresponding Fahrenheit temperature.
+
+```python
+print("Celsius\tFahrenheit")
+
+# Loop through Celsius values from 0 to 100
+for celsius in range(0, 101):
+    fahrenheit = (9/5) * celsius + 32
+    print(f"{celsius}\t{fahrenheit}")
+
+```
+
+____
+
+##### Develop a script to read n values into a list. Separate the numbers in the list into two new lists, first contains all prime numbers and second contains all non-prime numbers.
+
+Steps: 
+* Input to accept n values from the user and store them in a list.
+* A Prime Check function to check if a number is prime.
+* Traversing through the list and classifying each number as prime or non-prime, and storing them in two separate lists.
+
+```python
+import math
+
+def is_prime(num):
+    if num <= 1:
+        return False
+    for i in range(2, int(math.sqrt(num)) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+def separate_numbers():
+    values = []
+	n = int(input("Enter the number of values: "))
+	
+    for i in range(n):
+        try:
+            value = int(input(f"Enter value {i+1}: "))
+            values.append(value)
+        except ValueError:
+            print("Invalid input, please enter an integer.")
+            return
+            
+    primes = []
+    non_primes = []
+    
+    for num in values:
+        if is_prime(num):
+            primes.append(num)
+        else:
+            non_primes.append(num)
+    
+    # Print the results
+    print("\nPrime Numbers:", primes)
+    print("Non-Prime Numbers:", non_primes)
+
+separate_numbers()
+```
+
+The last section can be done with list comprehension also
+```python
+primes = [ num for num in values if is_prime(num) ]
+non_primes = [ num for num in values if not is_prime(num) ]
+```
+
+____
 
 Develop a Python program that will accept, as input, a series of names and salaries. Use the name ‘End’ to mark the end of the sequence of values. After the values have been entered, print the average salary and the names and salaries of those individuals with the highest and lowest salaries.
 
-Develop a script to read n values into a list. Separate the numbers in the list into two new lists, first contains all prime numbers and second contains all non-prime numbers.
+```python
+names = []
+salaries = []
 
-___
+while True:
+	name = input("Enter name (or 'End' to exit) :")
+
+	if name.lower() == "end":
+		break;
+	
+	try:
+		salary = float(input(f"Enter salary for {name}") )
+	except ValueError:
+		print("Invlaid Salary, Inter a Number")
+		continue
+
+	names.append(name)
+	salaries.append(salary)
+
+
+average_salary = sum(salaries) / len(salaries)
+index_high = salaries.index(max(salaries))
+index_low = salaries.index(min(salaries))
+
+print(f"Average will be {average_salary:.2f}")
+print(f"Person: {names[index_high]} has Hight salary of {max(salaries)}")
+print(f"Person: {names[index_low]} has Low salary of {min[salaries]}")
+```
+
+
+____
+
+##### Develop a Python program to find roots of a quadratic equation with necessary validation.
+
+To develop a Python program that finds the roots of a quadratic equation ( ax^2 + bx + c = 0 ), we need to use the quadratic formula:
+
+1. Input Validation: to ensure `a, b, c`  are numbers and `a` is not zero.
+ 
+2. **Discriminant Calculation**: The discriminant ( `b^2 - 4ac` ) will determine the nature of the roots.
+
+3. If the discriminant is negative, the program should calculate and display the complex roots.
+
+```python
+import math
+
+def find_roots():
+    print("Enter the coefficients of the quadratic equation (ax^2 + bx + c = 0):")
+    
+    # Input coefficients and validate them
+    try:
+        a = float(input("Enter coefficient a (must not be zero): "))
+        if a == 0:
+            print("Coefficient a cannot be zero. Exiting the program.")
+            return
+
+        b = float(input("Enter coefficient b: "))
+        c = float(input("Enter coefficient c: "))
+    except ValueError:
+        print("Invalid input! Please enter numerical values.")
+        return
+
+    # Calculate the discriminant
+    discriminant = b**2 - 4*a*c
+    
+    # Check the discriminant and find roots
+    if discriminant > 0:
+        # Two real and distinct roots
+        root1 = (-b + math.sqrt(discriminant)) / (2 * a)
+        root2 = (-b - math.sqrt(discriminant)) / (2 * a)
+        print(f"The roots are real and distinct: {root1} and {root2}")
+    elif discriminant == 0:
+        # One real and repeated root
+        root = -b / (2 * a)
+        print(f"The root is real and repeated: {root}")
+    else:
+        # Complex roots
+        real_part = -b / (2 * a)
+        imaginary_part = math.sqrt(-discriminant) / (2 * a)
+        print(f"The roots are complex: {real_part} + {imaginary_part}i and {real_part} - {imaginary_part}i")
+
+# Run the function to find roots
+find_roots()
+```
+
+
+____
+
