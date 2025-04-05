@@ -35,8 +35,9 @@ s2 = "World"
 s3 = '''Hello
 World
 with three lines'''
+```
 
-
+```python
 # String concatenation
 full_string = "Hello" + " " + "World"  
 # Hello World
@@ -63,8 +64,9 @@ print(lst)  # Output: [4, 2, 3, 5]
 tup = (1, 2, 3)
 tup[0] = 4  
 # TypeError: 'tuple' object does not support item assignment
+```
 
-
+```python
 str1 = "hello"
 str1[0] = "H"  
 # TypeError: 'str' object does not support item assignment
@@ -74,7 +76,7 @@ ___
 
 ##### Demonstrate slicing on strings. Also explain the use of join() and split() string methods with examples.
 
-* Explain the use of join() and split() string methods with examples. What does it mean strings are immutable? Explain with an example.
+* Explain the use of `join()` and `split()` string methods with examples. What does it mean strings are immutable? Explain with an example.
 
 **Answer :**
 
@@ -93,23 +95,28 @@ words = ["Python", "is", "fun"]
 result = " ".join(words)
 
 print(result)  
-# Output: Python is fun
+# Python is fun
 ```
 
 **`split()`**: Divides a string into a list of substrings based on a delimiter.
+
+Splitting by Space (default) :
 ```python
 sentence = "Python is fun"
 words = sentence.split()  
-# Splits by spaces by default
+
 print(words)  
-# Output: ['Python', 'is', 'fun']
+# ['Python', 'is', 'fun']
+```
 
-
+Splitting by specified delimiter : 
+```python
 sentence = "apple,orange,banana"
 fruits = sentence.split(",")  
 # Splits by comma
+
 print(fruits)  
-# Output: ['apple', 'orange', 'banana']
+# ['apple', 'orange', 'banana']
   ```
 
 ___
@@ -118,7 +125,7 @@ ___
 
 **Answer :**
 
-Reverse the string and compare if it is equal
+Logic is to reverse the string and compare if it is equal to original string.
 ```python
 if s == s[::-1]:
     print("Palindrome")
@@ -130,7 +137,7 @@ ___
 
 ##### Slicing Questions
 
-Assume that the name t is assigned a value ‘Programming with Python’ what will be the output when we execute the following commands and explain.
+Assume that the name `t` is assigned a value ‘Programming with Python’ what will be the output when we execute the following commands and explain.
 ```
 t[13:], t[:9], t[:], t[7:16], t[5:-10], t[6:-6:], t[-2::-1], t[::-2], t[-2:1:-2], t[:-8]
 ```
@@ -162,7 +169,9 @@ t[13:], t[:9], t[:], t[7:16], t[5:-10], t[6:-6:], t[-2::-1], t[::-2], t[-2:1:-2]
 'Programming wit'
 ```
 
-Assume that the name a is assigned a value `‘mca@rit’` what will be the output when we execute the following commands and explain.
+___
+
+Assume that the name `a` is assigned a value `‘mca@rit’` what will be the output when we execute the following commands and explain.
 ```
 a[5:], t[:4], t[2:-2:2], t[3:4], t[2:-2], t[1:-2:], t[-3::-2], t[::-4], t[-4:1:-4], t[:-3]
 ```
@@ -198,15 +207,15 @@ ___
 
 ##### Program to write third person singular form verb
 
-The third person singular verb form in English is distinguished by the suffix -s, which is added to the stem of the infinitive form: run -> runs. A simple set of rules can be given as follows:
-* If the verb ends in y, remove it and add ies
-* If the verb ends in o, ch, s, sh, x or z, add es
-* By default just add s
+The third person singular verb form in English is distinguished by the suffix `-s`, which is added to the stem of the infinitive form: run -> runs. A simple set of rules can be given as follows:
+* If the verb ends in `y`, remove it and add `ies`
+* If the verb ends in `o, ch, s, sh, x` or `z`,  add `es`
+* By default just add `s`
 Develop a Python Script for the rules above
 
 **Answer :**
 
-Logic is to check the last letters using `endswith()` method and since string is immutable, the value is changed by taking slice to remove last letter and concatenating with the plural letters.
+Logic is to check the last letters using `endswith()` method and since string is immutable, the value is changed by taking slice to remove last letter and concatenating with the plural letters according to what it ends with.
 
 ```python
 def third_person_singular(verb):
@@ -237,7 +246,7 @@ weswaraiah
 # from index 4 to end
 
 Vishw   
-# from beginning, to 4th, excluding 5th
+# from start, to 4th, excluding 5th
 ```
 
 ```python
@@ -268,7 +277,9 @@ else:
 
 # output: MSRIT
 ```
-The condition `a or b and c` is evaluated as `True or (False and False)`, which is `True`. Hence, the `if` condition is `True`.
+The condition `a or b and c` is evaluated according to precedence of operators as `True or (False and False)`, which will evaluate to `True`. 
+
+Hence, the `if` condition is `True` and `MSRIT` gets printed.
 
 ____
 
@@ -277,6 +288,48 @@ ____
 * Write a python function that accepts a sentence containing alpha numeric characters and calculates the number of digits, uppercase and lowercase letters. Return the calculated values.
 
 **Answer :**
+
+
+Logic would be:
+* A character can be a special character (not a number or letter) then it will not be lower upper vowel consonant ( so can be in if else block)
+* If it is not a special character then it can be a Number so can check that next.
+* If it is not a Number or special character, then it is a 
+```python
+def analyze_string(input_string):
+    vowels = "aeiouAEIOU"
+    vowel_count = 0
+    consonant_count = 0
+    number_count = 0
+    uppercase_count = 0
+    lowercase_count = 0
+    special_char_count = 0
+    
+    
+    for char in input_string:
+        # if not a alnum it is special character
+        if ( not char.isalnum() ):
+            special_char_count += 1
+        # character is a number
+        elif char.isdigit():
+            number_count += 1
+        # character is uppercase
+        elif char.isupper():
+            uppercase_count += 1
+        # character is lowercase
+        elif char.islower():
+            lowercase_count += 1
+    
+# Seperate conditional for vowels, consonents  
+        if char in vowels:
+            vowel_count += 1
+        # letter but not a vowel, so consonent
+        elif char.isalpha():
+            consonant_count += 1
+```
+
+Another Logic
+* Check if it is a `alnum()`, if true, check if it is a `isdigit()`, if false then check for vowels and upper.
+* If `not alnum` then it will be a special character.
 
 ```python
 def analyze_string(input_string):
@@ -287,41 +340,23 @@ def analyze_string(input_string):
     uppercase_count = 0
     lowercase_count = 0
     special_char_count = 0
-
-    # Loop through each character in the input string
-    for char in input_string:
-        # Check if the character is a special character
-        if not char.isalnum():
-            special_char_count += 1
-        # Check if the character is a number
-        elif char.isdigit():
-            number_count += 1
-        # Check if the character is uppercase
-        elif char.isupper():
-            uppercase_count += 1
-        # Check if the character is lowercase
-        elif char.islower():
-            lowercase_count += 1
     
-# Seperate conditional for vowels, consonents  
-        if char in vowels:
-            vowel_count += 1
-        # letter but not a vowel, so consonent
-        elif char.isalpha():
-            consonant_count += 1
+    for char in input_string:
+        if char.isalnum():
+            if char.isdigit():
+                number_count += 1
+            else:
+                if char in vowels:
+                    vowel_count += 1
+                else:
+                    consonant_count += 1
 
-
-    print(f"Vowels: {vowel_count}")
-    print(f"Consonants: {consonant_count}")
-    print(f"Numbers: {number_count}")
-    print(f"Uppercase Letters: {uppercase_count}")
-    print(f"Lowercase Letters: {lowercase_count}")
-    print(f"Special Characters: {special_char_count}")
-
-
-input_string = input("Enter a string: ")
-analyze_string(input_string)
-
+                if char.isupper():
+                    uppercase_count += 1
+                elif char.islower():
+                    lowercase_count += 1
+        else:
+            special_char_count += 1
 ```
 
 ____
@@ -397,8 +432,7 @@ ____
 
 **Answer :**
 
-Although tuples are immutable and cannot be modified, there are few methods that can be useful:
-
+Although tuples are immutable and cannot be modified, there are few methods:
 * `len()` :  Returns the number of elements in the tuple.
 * `count(x)`  : Returns the number of occurrences of the element `x` in the tuple.
 * `index(x)`  : Returns the index of the first occurrence of element `x` in the tuple. Raises a `ValueError` if `x` is not found.
@@ -465,13 +499,13 @@ def longest_word(words):
         word_lengths.append((word, len(word)))
     
     longest = word_lengths[0]
+    # assuming first value is longest
     
     for word, length in word_lengths:
         if length > longest[1]:
             longest = (word, length)
             
     return longest_word[1]
-
 
 words = ["apple", "banana", "grapefruit", "kiwi", "mango"]
 
