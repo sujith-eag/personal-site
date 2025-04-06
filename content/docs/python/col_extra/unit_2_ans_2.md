@@ -850,7 +850,7 @@ arr2d = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
 print(arr2d[1, 2])  # 6
 ```
 
-2. Splitting Arrays is useful when you want to break down a large array into smaller ones. NumPy provides the `split()` function to divide an array into multiple sub-arrays.
+2. Splitting Arrays is useful to break down a large array into smaller ones. NumPy provides the `split()` function to divide an array into multiple sub-arrays.
 
 ```python
 arr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9])
@@ -861,16 +861,17 @@ print(split_arr)
 # [array([1, 2, 3]), array([4, 5, 6]), array([7, 8, 9])]
 ```
 
-
 3. Shape and Reshape in NumPy
-The shape of an array tells you how many elements are present along each axis (dimension). The `reshape()` function allows you to change the shape of an array without changing its data.
+The shape of an array tells how many elements are present along each axis (dimension). 
 
 ```python
 arr = np.array([1, 2, 3, 4, 5, 6])
 
-# Get the shape of the array
 print(arr.shape)  # Output: (6,)
+```
 
+The `reshape()` function allows you to change the shape of an array without changing its data.
+```python
 # Reshape the array into a 2x3 matrix
 reshaped_arr = arr.reshape(2, 3)
 print(reshaped_arr)
@@ -887,17 +888,7 @@ i) reshape ii) resize iii) unique iv) append v) insert.
 
 **Answer :**
 
-i) `reshape()`: Changes the shape of an array without changing its data.
-```python
-arr = np.array([1, 2, 3, 4, 5, 6])
-reshaped = arr.reshape(2, 3)
-print(reshaped)
-# Output: 
-# [[1 2 3]
-#  [4 5 6]]
-```
-
-ii) `resize()`: Changes the size of the array. If the new size is larger, the array is padded with zeroes. If it's smaller, the array is truncated.
+i) `resize()`: Changes the size of the array. If the new size is larger, the array is padded with zeroes. If it's smaller, the array is truncated.
 ```python
 arr = np.array([1, 2, 3, 4, 5])
 arr.resize(2, 3)  # Resize to 2x3
@@ -907,21 +898,21 @@ print(arr)
 #  [4 5 0]]
 ```
 
-iii) `unique()`: Finds the unique elements in an array.
+ii) `unique()`: Finds the unique elements in an array.
 ```python
 arr = np.array([1, 2, 2, 3, 4, 4, 5])
 unique_arr = np.unique(arr)
 print(unique_arr)  # Output: [1 2 3 4 5]
 ```
 
-iv) `append()`: Adds values to the end of an array.
+iii) `append()`: Adds values to the end of an array.
 ```python
 arr = np.array([1, 2, 3])
 arr_appended = np.append(arr, [4, 5])
 print(arr_appended)  # Output: [1 2 3 4 5]
 ```
 
-v) `insert()`: Inserts values into an array at specified positions.
+iv) `insert()`: Inserts values into an array at specified positions.
 ```python
 arr = np.array([1, 2, 3, 5])
 arr_inserted = np.insert(arr, 3, 4)  # Insert 4 at index 3
@@ -959,7 +950,23 @@ print(f"Array multiplied by 2: {multiplied_arr}")
 
 ____
 
-* Write a program to create NumPy array and get the smallest and largest element from the array and display them.
+##### Write a program to create NumPy array and get the smallest and largest element from the array and display them.
+
+```python
+import numpy as np
+
+arr = np.array([15, 2, 45, 67, 23, 89, 12, 8])
+
+smallest = np.min(arr)
+largest = np.max(arr)
+
+print(f"Array: {arr}")
+print(f"Smallest element: {smallest}")
+print(f"Largest element: {largest}")
+```
+
+
+____
 
 * Illustrate 2-D and 3-D array iterating with respect to numpy.
 

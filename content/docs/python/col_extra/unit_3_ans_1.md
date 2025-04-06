@@ -20,16 +20,31 @@ seo:
 
 ##### What are DOC strings? Illustrate with an example.
 
-* Discuss the importance of using docstrings in Python functions. Explain how docstrings enhance code readability and maintainability. Provide an example demonstrating the use of docstrings in a Python function.
+* Discuss the importance of using docstrings in Python functions. Explain how docstrings enhance code readability and maintainability. 
+* Provide an example demonstrating the use of docstrings in a Python function.
 * What are DOC strings?
 
 **Answer :**
 
-**DOC Strings**: Documentation strings (or docstrings) are used to document Python code. They are placed at the beginning of modules, functions, classes, or methods to describe their purpose. Docstrings are accessible via the `help()` function.
+**DOC Strings**: Documentation strings (or docstrings) are used to document the code in Python. They are placed at the beginning of modules, functions, classes, or methods to describe their purpose. 
+
+These are different from regular comments, they are stored as the `__doc__` attribute of the object being documented.
+hey are accessible at runtime via the `help()` function or `__doc__` attribute and are part of code's documentation which can be used auto generate documentations.
 ```python
 def my_function():
    """This function does nothing."""
    pass
+```
+
+```
+help(my_function)
+print(my_function.__doc__)
+```
+
+```python
+def add(a, b):
+    """Return the sum of a and b."""
+    return a + b
 ```
 
 ___
@@ -44,9 +59,7 @@ ___
 
 **Answer :**
 
-**Local and Global Variables**: Local variables are used within a function or block, whereas global variables are accessible across the entire program. Local variables have function-specific scope, while global variables are accessible throughout the program.
-
-**Local Variable**: A variable defined inside a function or block, accessible only within that function. If a variable is defined inside a function, it cannot be accessed outside its scope.
+**Local Variable**: A variable defined inside a function or block, accessible only within that function block. If a variable is defined inside a function, it cannot be accessed outside its scope.
 
 ```python
 def my_function():
@@ -75,13 +88,13 @@ ___
 
 The **LEGB Rule** stands for **Local, Enclosing, Global, and Built-in**. This is the rule Python follows to resolve variable names and determine their scope when searching for the value of a variable.
 
-* ***Local (L)**: refers to the current function's scope. If the variable is defined inside a function, Python will first look here.
+* *Local (L): refers to the current function's scope. If the variable is defined inside a function, Python will first look here.
 
-* **Enclosing (E)**: refers to any enclosing functions that are not the current function but are within the function being executed (nested functions). Python checks this scope next, moving outwards.
+* Enclosing (E): refers to any enclosing functions that are not the current function but are within the function being executed (nested functions). Python checks this scope next, moving outwards.
 
-* **Global (G)**: refers to the top-level scope of the module. If the variable is not found locally or in enclosing functions, Python will look for it in the global scope (the script or module level).
+* Global (G): refers to the top-level scope of the module. If the variable is not found locally or in enclosing functions, Python will look for it in the global scope (the script or module level).
 
-* **Built-in (B)**: refers to Python’s built-in names (such as `print`, `len`, etc.). If Python doesn't find the variable in any of the above scopes, it will check the built-in scope.
+* Built-in (B): refers to Python’s built-in names (such as `print`, `len`, etc.). If Python doesn't find the variable in any of the above scopes, it will check the built-in scope.
 
 ```python
 x = "Global x"

@@ -15,195 +15,144 @@ seo:
 ---
 
 
-Virtual memory is a technique that allows the execution of processes that
-are not completely in memory. One major advantage of this scheme is that programs can be larger than physical memory. 
+### Virtual Memory
 
-Virtual memory abstracts main memory into an extremely large, uniform array of storage, separating logical memory as viewed by the programmer from physical memory.  
+**Virtual memory** is a technique that allows processes to execute even if they are not entirely loaded into memory. One of the major advantages of this scheme is that programs can be larger than the available physical memory. 
 
-This separation allows an extremely large virtual memory to be provided for programmers when only a smaller physical memory is available, frees programmers from the concerns of memory-storage limitations. 
+Virtual memory abstracts the physical memory into a large, uniform array of storage, thereby separating the **logical memory** as viewed by the programmer from the **physical memory**. This separation provides an extremely large virtual memory to programmers, even when the system has only a smaller physical memory. As a result, programmers are freed from concerns about memory-storage limitations.
 
-Virtual memory also allows processes to share files and libraries, and to implement shared memory. In addition, it provides an efficient mechanism for process creation.
+Moreover, virtual memory allows processes to share files and libraries, facilitates shared memory between processes, and provides an efficient mechanism for process creation.
 
-Virtual memory allows one process to create a region of memory that it can
-share with another process. Processes sharing this region consider it part
-of their virtual address space, yet the actual physical pages of memory are
-shared,
+A key benefit of virtual memory is that it enables one process to create a region of memory that it can share with another process. These processes treat the shared region as part of their virtual address space, but the physical memory pages that back this shared memory are actually shared between them.
 
-___
+---
 
-The virtual address space of a process refers to the logical (or virtual) view
-of how a process is stored in memory. this view is that a process begins at a certain logical address—say, address 0—and exists in contiguous memory.
+### Virtual Address Space vs. Physical Memory
 
-physical memory is organized in page frames and that the physical page
-frames assigned to a process may not be contiguous
+The **virtual address space** of a process refers to the logical (or virtual) view of how a process is stored in memory. In this model, a process appears to begin at a certain logical address (often 0) and occupy a contiguous region of memory. 
 
-____
+On the other hand, **physical memory** is organized into **page frames**, and the page frames allocated to a process may not be contiguous in physical memory.
 
-The ability to execute a program that is only partially in memory would
-confer many benefits:
-• A program would no longer be constrained by the amount of physical
-memory that is available. Users would be able to write programs for an
-extremely large virtual address space, simplifying the programming task.
-• Because each program could take less physical memory, more programs
-could be run at the same time, with a corresponding increase in CPU utilization and throughput but with no increase in response time or turnaround
-time.
-• Less I/O would be needed to load or swap portions of programs into
-memory, so each program would run faster.
+---
 
-____
+### Benefits of Virtual Memory
 
+Executing a program that is only partially in memory brings many benefits:
+
+- A program is no longer constrained by the amount of physical memory available. Users can write programs that fit into an extremely large virtual address space, simplifying programming tasks.
+  
+- Because each program can take up less physical memory, more programs can run simultaneously, increasing **CPU utilization** and throughput without increasing **response time** or **turnaround time**.
+  
+- Less **I/O** is needed to load or swap portions of programs into memory, making each program run faster.
+
+---
 
 ### Demand Paging
 
-Usual way of getting an executable program from to secondary memory, we may not initially need the entire program in memory to run the program,.
+In traditional systems, the entire executable program is loaded into memory from secondary storage before it begins execution. However, in many cases, we don’t need the entire program in memory at once.
 
-A Strategy is to load pages only as they are needed. This technique is known as demand paging and is commonly used in virtual memory systems.
+A technique known as **demand paging** is used in virtual memory systems. With demand paging, pages of a program are loaded into memory only when they are actually needed during execution. Pages that are never accessed are never loaded into physical memory.
 
-With demand-paged virtual memory, pages are loaded only when they are demanded during program execution. Pages that are never accessed are thus never loaded into physical memory. A demand-paging system is similar to a paging system with swapping.
+A demand-paging system is similar to a paging system with swapping.
 
+In a demand-paged system, while a process is executing, some pages will be in memory, and others will be in secondary storage. To track the location of each page, a **valid-invalid bit** scheme is used.
 
-while a process is executing, some pages will be in memory, and some will be in secondary storage. Thus, we need some form of hardware support to distinguish between the two. The valid–invalid bit scheme can be used for this purpose.
+- When the bit is set to **valid**, the associated page is in memory.
+- When the bit is set to **invalid**, the page is either not in the process's address space or it is in secondary storage.
 
-when the bit is set to “valid,” the associated page is both legal and in memory. If the bit is set to “invalid,” the page either is not valid (that
-is, not in the logical address space of the process) or is valid but is currently in secondary storage.
+{{< figure src="images/os/8_15_ValidBits-min.jpg" alt="Valid-Invalid Bits" caption="Valid-Invalid Bit Scheme" >}}
 
-{{< figure  src="images/os/8_15_ValidBits-min.jpg"  alt="."  caption="." >}}
+If a page is marked **invalid** and a process tries to access it, a **page fault** occurs. The page-table hardware, while translating the address, will detect the invalid bit and cause a **trap** to the operating system, indicating that the required page needs to be loaded into memory.
 
+The procedure for handling a page fault is as follows:
 
+1. Check an internal table (usually maintained in the **process control block**) to determine whether the memory access is valid or invalid.
+2. If the reference is invalid, terminate the process. If valid but the page has not yet been brought into memory, load the page.
+3. Find a free memory frame (by taking one from the free-frame list).
+4. Schedule a secondary storage operation to read the desired page into the allocated frame.
+5. Once the read is complete, update the internal table and page table to indicate that the page is now in memory.
+6. Restart the instruction that caused the page fault. The process can now continue as if the page had always been in memory.
 
-The page-table entry for a page that is brought into memory is set as usual, but the page-table entry for a page that is not currently in memory is simply marked invalid.
+{{< figure src="images/os/9_06_PageFaultSteps-min.jpg" alt="Page Fault Handling" caption="Steps in Handling a Page Fault" >}}
 
-{{< figure  src="images/os/9_05_PageTable-min.jpg"  alt="."  caption="." >}}
+The hardware to support demand paging is similar to that for paging and swapping:
 
-Access to a page marked invalid causes a page fault. 
-The paging hardware, in translating the address through the page table, will notice that the invalid bit is set, causing a trap to the operating system. This trap is the result of the operating system’s failure to bring the desired page into memory.
+- **Page table**: Tracks whether a page is in memory or on secondary storage, with the ability to mark an entry invalid using a valid-invalid bit or special protection bits.
+- **Secondary memory**: Holds pages that are not currently in main memory. This is usually a high-speed disk or non-volatile memory (NVM), often referred to as the **swap device**, with the storage area called **swap space**.
 
-
-
-The procedure for handling this page fault is: 
-1. We check an internal table (usually kept with the process control block) for this process to determine whether the reference was a valid or an invalid memory access.
-2. If the reference was invalid, we terminate the process. If it was valid but we have not yet brought in that page, we now page it in.
-3. We find a free frame (by taking one from the free-frame list).
-4. We schedule a secondary storage operation to read the desired page into the newly allocated frame.
-5. When the storage read is complete, we modify the internal table kept with the process and the page table to indicate that the page is now in memory.
-6. We restart the instruction that was interrupted by the trap. The process can now access the page as though it had always been in memory.
-
-{{< figure  src="images/os/9_06_PageFaultSteps-min.jpg"  alt="."  caption="." >}}
-
-The hardware to support demand paging is the same as the hardware for
-paging and swapping:
-
-• Page table. This table has the ability to mark an entry invalid through a
-valid –invalid bit or a special value of protection bits.
-• Secondary memory. This memory holds those pages that are not present
-in main memory. The secondary memory is usually a high-speed disk or
-NVM device. It is known as the swap device, and the section of storage
-used for this purpose is known as swap space.
-
-___
-
+---
 
 ### Page Replacement
 
-Deciding how much memory to allocate to I/O and how much to program pages is a significant challenge.
+When memory is over-allocated, page faults can occur. If a process requires a page that is not in memory, the operating system must find a free frame. However, if all frames are in use, the operating system must use a **page replacement algorithm** to select an existing page to replace.
 
+The page-fault service routine, which includes page replacement, follows these steps:
 
-When Memory is over allocated. While a process is executing, a page fault occurs. The operating system determines where the desired page is residing on secondary storage but then finds that there are no free frames on the free-frame list; all memory is in use.
-
-Most operating systems now combine swapping pages with page replacement.
-
-
-modify the
-page-fault service routine to include page replacement:
-1. Find the location of the desired page on secondary storage.
+1. Determine the location of the desired page on secondary storage.
 2. Find a free frame:
-a. If there is a free frame, use it.
-b. If there is no free frame, use a page-replacement algorithm to select a victim frame.
-c. Write the victim frame to secondary storage (if necessary); change
-the page and frame tables accordingly.
-3. Read the desired page into the newly freed frame; change the page and frame tables.
-4. Continue the process from where the page fault occurred.
+   - If a free frame is available, use it.
+   - If no free frame is available, select a **victim page** using a page-replacement algorithm.
+   - Write the victim page to secondary storage if necessary and update the page and frame tables.
+3. Load the desired page into the newly freed frame and update the page and frame tables.
+4. Resume the process from where the page fault occurred.
 
+If no frames are free, two page transfers (one for writing the page out and one for reading the new page in) are required, effectively doubling the page-fault service time and increasing the overall access time.
 
+Page replacement is a key feature of demand paging, completing the separation between logical and physical memory.
 
-if no frames are free, two page transfers (one for the page-out and one for the page-in) are required. This situation effectively doubles the page-fault service time and increases the effective access time accordingly.
+To implement demand paging, two critical problems must be addressed:
+1. **Frame-allocation algorithm**: Deciding how to allocate frames to processes.
+2. **Page-replacement algorithm**: Choosing which pages to replace when new pages need to be loaded.
 
-Page replacement is basic to demand paging. It completes the separation
-between logical memory and physical memory.
+---
 
+### Page Replacement Algorithms
 
-
-We must solve two major problems to implement demand paging: we must
-develop a frame-allocation algorithm and a page-replacement algorithm. That is, if we have multiple processes in memory, we must decide how many frames to allocate to each process; and when page replacement is required, we must select the frames that are to be replaced
-
+Various page-replacement algorithms exist to determine which page to swap out when a page fault occurs. These include:
 
 #### FIFO Page Replacement
 
-The simplest page-replacement algorithm is a first-in, first-out (FIFO) algorithm. A FIFO replacement algorithm associates with each page the time when that page was brought into memory. When a page must be replaced, the oldest page is chosen.
+The simplest page-replacement algorithm is **First-In-First-Out (FIFO)**. The FIFO algorithm associates each page with the time it was brought into memory. When a page must be replaced, the oldest page is selected.
 
-{{< figure  src="images/os/9_12_FIFO_PageReplacement-min.jpg"  alt="."  caption="." >}}
+{{< figure src="images/os/9_12_FIFO_PageReplacement-min.jpg" alt="FIFO Page Replacement" caption="FIFO Page Replacement Algorithm" >}}
 
 #### Optimal Page Replacement
 
-Replace the page that will not be used for the longest period of time. Use of this page-replacement algorithm guarantees the lowest possible page-
-fault rate for a fixed number of frames.
+The **optimal page-replacement** algorithm selects the page that will not be used for the longest time in the future. This approach guarantees the lowest possible page-fault rate but requires knowledge of future page references, which makes it impractical for real-world systems. As such, it is typically used for comparison studies.
 
-{{< figure  src="images/os/9_14_OptimalPageReplacement-min.jpg"  alt="."  caption="." >}}
-
-Unfortunately, the optimal page-replacement algorithm is difficult to implement, because it requires future knowledge of the reference string.
-As a result, the optimal algorithm is used mainly for comparison
-studies.
-
+{{< figure src="images/os/9_14_OptimalPageReplacement-min.jpg" alt="Optimal Page Replacement" caption="Optimal Page Replacement Algorithm" >}}
 
 #### LRU Page Replacement
 
-FIFO algorithm uses the time when a page was brought into memory, whereas the OPT algorithm uses the time when a page is to be used. 
+The **Least Recently Used (LRU)** algorithm approximates the optimal page-replacement strategy. It replaces the page that has not been used for the longest period of time, using past access patterns to predict future behavior.
 
-If we use the recent past as an approximation of the near future, then we can replace the page that has - not been used for the longest period of time. This approach is the least recently used (LRU) algorithm.
+{{< figure src="images/os/9_15_LRU_PageReplacement-min.jpg" alt="LRU Page Replacement" caption="LRU Page Replacement Algorithm" >}}
 
-When a page must be replaced, LRU chooses the page that has not been used for the longest period of time.
-This strategy as the optimal page-replacement algorithm looking backward in time, rather than forward.
+LRU is widely used as a page-replacement algorithm and is considered to be effective.
 
-{{< figure  src="images/os/9_15_LRU_PageReplacement-min.jpg"  alt="."  caption="." >}}
+---
 
-The LRU policy is often used as a page-replacement algorithm and is considered to be good.
+### Thrashing
 
-____
+**Thrashing** occurs when a process does not have enough frames to hold all the pages it needs, resulting in excessive page faults. When a process must constantly replace pages, it spends more time paging than executing, severely degrading performance. Thrashing results in high paging activity and leads to significant performance issues.
 
-## Thrashing
+---
 
-if a process does not have “enough” frames—that is, it does not have the minimum number of frames it needs to support pages in the working set. The process will quickly page-fault. At this point, it must replace some page. However, since all its pages are in active use, it must replace a page that will be needed again right away. Consequently, it quickly faults again, and again, and again, replacing pages that it must bring back in immediately.
+### Unit Summary
 
-This high paging activity is called thrashing. A process is thrashing if it
-is spending more time paging than executing. As you might expect, thrashing results in severe performance problems.
+- **Virtual memory** abstracts physical memory into a large, uniform array of storage, providing benefits such as:
+  1. Programs can be larger than the available physical memory.
+  2. Programs do not need to be fully loaded into memory to execute.
+  3. Processes can share memory.
+  4. Processes can be created more efficiently.
 
-____
+- **Demand paging** loads pages only when they are required during program execution. Pages that are not needed are never loaded into memory.
 
-## Unit Summary
+- A **page fault** occurs when a page not currently in memory is accessed. The operating system then loads the page from secondary storage into an available page frame in memory.
 
-Virtual memory abstracts physical memory into an extremely large uni-
-form array of storage.
-• The benefits of virtual memory include the following: (1) a program can be
-larger than physical memory, (2) a program does not need to be entirely in
-memory, (3) processes can share memory, and (4) processes can be created
-more efficiently.
-• Demand paging is a technique whereby pages are loaded only when they
-are demanded during program execution. Pages that are never demanded
-are thus never loaded into memory.
-• A page fault occurs when a page that is currently not in memory is
-accessed. The page must be brought from the backing store into an avail-
-able page frame in memory.
+- **Page replacement algorithms** manage how memory is allocated when there is no free frame. Common algorithms include FIFO, Optimal, and LRU. Most systems use **LRU-approximation algorithms** due to the impracticality of implementing pure LRU.
 
-• When available memory runs low, a page-replacement algorithm
-selects an existing page in memory to replace with a new page. Page-
-replacement algorithms include FIFO, optimal, and LRU. Pure LRU
-algorithms are impractical to implement, and most systems instead use
-LRU-approximation algorithms.
-• Global page-replacement algorithms select a page from any process in the
-system for replacement, while local page-replacement algorithms select a
-page from the faulting process.
+- **Global page-replacement algorithms** select pages from any process for replacement, while **local page-replacement algorithms** replace pages from the faulting process.
 
 
-____
-
-
+--- 

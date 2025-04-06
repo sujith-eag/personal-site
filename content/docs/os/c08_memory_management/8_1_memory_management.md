@@ -15,219 +15,131 @@ seo:
 ---
 
 
+### Memory Access and Protection
+
+Main memory and the registers built into each processing core are the only general-purpose storage that the CPU can access directly. If the data are not in memory, they must be moved there before the CPU can operate on them.
+
+Registers that are built into each CPU core are generally accessible within one cycle of the CPU clock. On the other hand, completing a memory access may take many cycles of the CPU clock. In such cases, the processor normally needs to stall, since it does not have the data required to complete the instruction it is executing.
+
+To mitigate this, fast memory, typically on the CPU chip, is added between the CPU and main memory for quick access. This fast memory is called a **cache**.
+
+Not only are we concerned with the relative speed of accessing physical memory, but we also need to ensure correct operation. To maintain proper system operation, we must protect the operating system from access by user processes and protect user processes from one another. This protection must be provided by the hardware, as the operating system does not typically intervene between the CPU and memory accesses.
+
+---
+
+### Process Separation and Memory Protection
+
+First, we need to ensure that each process has a separate memory space. This separate memory space protects processes from each other and is fundamental for having multiple processes loaded in memory for concurrent execution.
+
+To achieve separate memory spaces, we must have the ability to determine the range of legal addresses a process may access and ensure the process can access only these legal addresses.
+
+This protection can be provided by using two registers: a **base register** and a **limit register**. The base register holds the smallest legal physical memory address, and the limit register specifies the size of the range for logical addresses.
+
+For example, if the base register holds `300040` and the limit register is `120900`, the program can legally access all addresses from `300040` through `420939` (inclusive).
+
+{{< figure src="images/os/8_01_LogicalAddressSpace-min.jpg"  alt="."  caption="." >}}
+
+Protection of memory space is achieved by having the CPU hardware compare every address generated in user mode with the values in the registers. Any attempt by a program executing in user mode to access operating-system memory or another user’s memory results in a trap to the operating system, which treats the attempt as a fatal error.
 
 
-Main memory and the registers built into each processing core are the only general-purpose storage that the cpu can access directly.
+{{< figure src="images/os/8_02_HardwareAddressProtection-min.jpg" alt="."  caption="." >}}
 
-If the data are not in memory, they must be moved there before the CPU can operate on them.
+The operating system, executing in **kernel mode**, is granted unrestricted access to both operating-system memory and user memory.
 
+---
 
-Registers that are built into each CPU core are generally accessible within one cycle of the CPU clock.
+### Memory Protection
 
+Each logical address must fall within the range specified by the limit register. The **Memory Management Unit (MMU)** maps the logical address dynamically by adding the value in the relocation register. This mapped address is then sent to memory.
 
-Completing a memory access may take many cycles of the CPU clock. In such cases, the processor normally needs to stall, since it does not have the data required to complete the instruction that it
-is executing. 
-
-The remedy is to add fast memory between the CPU and main memory, typically on the CPU chip for fast access. Such a cache.
-
-
-Not only are we concerned with the relative speed of accessing physical memory, but we also must ensure correct operation. For proper system operation, we must protect the operating system from access by user processes, as well as protect user processes from one another. This protection must be provided by the hardware, because the operating system doesn’t usually intervene between the CPU and its memory accesses.
-
-____
-
-We first need to make sure that each process has a separate memory space. Separate per-process memory space protects the processes from each other and is fundamental to having multiple processes loaded in memory for concurrent execution.
-
-
-To separate memory spaces, we need the ability to determine the
-range of legal addresses that the process may access and to ensure that the process can access only these legal addresses.
-
-We can provide this protection by using two registers, usually a base and a limit. The base register holds the smallest legal physical memory address; the limit register specifies the size of the range for logical address. 
-
-For example, if the base register holds 300040 and the limit register is 120900, then the program can legally access all addresses from 300040 through 420939 (inclusive).
-
-
-{{< figure  src="images/os/8_01_LogicalAddressSpace-min.jpg"  alt="."  caption="." >}}
-
-
-Protection of memory space is accomplished by having the CPU hardware compare every address generated in user mode with the registers. Any attempt by a program executing in user mode to access operating-system memory or other users’ memory results in a trap to the operating system, which treats the attempt as a fatal error.
-
-{{< figure  src="images/os/8_02_HardwareAddressProtection-min.jpg"  alt="."  caption="." >}}
-
-
-The operating system, executing in kernel mode, is given unrestricted access to both operating-system memory and users’ memory.
-
-
-#### Memory Protection
-
-Each logical address must fall within the range specified by the limit register. The MMU maps the logical address dynamically by adding the value in the relocation register. This mapped address is sent to memory.
-
-When the CPU scheduler selects a process for execution, the dispatcher loads the relocation and limit registers with the correct values as part of the context switch. Because every address generated by a CPU is checked against these registers, we can protect both the operating system and the other users’ programs and data from being modified by this running process.
-
+When the CPU scheduler selects a process for execution, the dispatcher loads the relocation and limit registers with the correct values as part of the context switch. Since every address generated by the CPU is checked against these registers, both the operating system and other users' programs and data are protected from being modified by the running process.
 
 {{< figure  src="images/os/8_06_HardwareSupport-min.jpg"  alt="Hardware Support for relocation and limit registers"  caption="Hardware Support for relocation and limit registers" >}}
 
+---
 
-___
+### Address Binding
 
-#### Address Binding
+A program resides on disk as a binary executable file. To run, the program must be brought into memory and placed within the context of a process, making it eligible for execution on an available CPU.
 
-program resides on a disk as a binary executable file. To run, the
-program must be brought into memory and placed within the context of a process where it becomes eligible for execution on an available CPU.
+When the process terminates, its memory is reclaimed for use by other processes.
 
-Eventually, the process terminates, and its memory is reclaimed
-for use by other processes.
+- **Compile Time**: If the memory address is known at compile time, absolute code can be generated.
 
-Compile time. If you know at compile time where the process will reside in memory, then absolute code can be generated.
+- **Load Time**: If the memory address is not known at compile time, the compiler generates relocatable code, and final binding is delayed until load time.
 
-Load time. If it is not known at compile time where the process will reside in memory, then the compiler must generate relocatable code. In this case, final binding is delayed until load time.
-
-
-Execution time. If the process can be moved during its execution from one memory segment to another, then binding must be delayed until run time. Special hardware must be available for this scheme to work. Most operating systems use this method.
+- **Execution Time**: If the process can be moved during execution from one memory segment to another, binding is delayed until runtime. This requires special hardware and is the method most operating systems use.
 
 
-#### Logical Vs Physical Memory
+---
 
-An address generated by the CPU is commonly referred to as a logical address, whereas an address seen by the memory unit—that is, the one loaded into the memory-address register of the memory—is commonly referred to as a physical address.
+### Logical vs. Physical Memory
 
+An address generated by the CPU is called a **logical address**, whereas an address seen by the memory unit (the address loaded into the memory-address register of the memory) is called a **physical address**.
 
-The set of all logical addresses generated
-by a program is a logical address space. The set of all physical addresses
-corresponding to these logical addresses is a physical address space.
+The set of all logical addresses generated by a program is the **logical address space**. The set of all physical addresses corresponding to these logical addresses is the **physical address space**.
 
-The run-time mapping from virtual to physical addresses is done by a
-hardware device called the memory-management unit (MMU)
+The run-time mapping from virtual to physical addresses is done by the **Memory Management Unit (MMU)**. The base register is now referred to as the **relocation register**. The value in the relocation register is added to every address generated by a user process before the address is sent to memory.
 
-The base register is now called a relocation register. The value in the relocation register is added to every address generated by a user process at the time the address is sent to memory
+---
 
-___
+### Dynamic Loading
 
-##### Dynamic Loading
+In the past, it was necessary for the entire program and all data of a process to be in physical memory for the process to execute. This limited the size of a process to the size of physical memory. To optimize memory space utilization, we use **dynamic loading**.
 
-it has been necessary for the entire program and all
-data of a process to be in physical memory for the process to execute. The size
-of a process has thus been limited to the size of physical memory. To obtain
-better memory-space utilization, we can use dynamic loading. With dynamic
-loading, a routine is not loaded until it is called. All routines are kept on disk
-in a relocatable load format. The main program is loaded into memory and
-is executed. When a routine needs to call another routine, the calling routine
-first checks to see whether the other routine has been loaded. If it has not, the
-relocatable linking loader is called to load the desired routine into memory and
-to update the program’s address tables to reflect this change. Then control is
-passed to the newly loaded routine.
+With dynamic loading, a routine is not loaded until it is called. All routines are kept on disk in a relocatable load format. The main program is loaded into memory and executed. When a routine needs to call another routine, the calling routine first checks whether the other routine has been loaded. If it hasn't, the **relocatable linking loader** is called to load the desired routine into memory and update the program’s address tables. Control is then passed to the newly loaded routine.
 
-____
-### 9.2 Contiguous Memory Allocation
+---
 
+### Contiguous Memory Allocation
 
-The memory is usually divided into two partitions: one for the operating system and one for the user processes.
+Memory is typically divided into two partitions: one for the operating system and one for user processes.
 
-In contiguous mem-
-ory allocation, each process is contained in a single section of memory that
-is contiguous to the section containing the next process.
+In **contiguous memory allocation**, each process is assigned a single section of memory that is contiguous to the section containing the next process. One of the simplest methods of allocating memory is to assign processes to variably sized partitions in memory, where each partition contains exactly one process.
 
+In this **variable-partition scheme**, the operating system maintains a table that indicates which parts of memory are available and which are occupied. Initially, all memory is available for user processes and is considered a large block of available memory (a "hole"). As memory is used, it is divided into a set of holes of various sizes.
 
-One of the simplest methods of allocating memory is to assign processes to variably sized partitions in memory, where each partition may contain exactly one process. 
+#### Variable Partition
 
-In this variable-partition scheme, the operating system keeps a table indicating which parts of memory are available and which are occupied. 
+When memory blocks are allocated, they comprise a set of holes of various sizes scattered throughout memory. When a process arrives and requires memory, the system searches for a hole large enough to accommodate it. If the hole is too large, it is split into two parts. One part is allocated to the process, and the other is returned to the set of holes.
 
-Initially, all memory is available for user processes and is considered one large block of available memory, a hole. Eventually, memory contains a set of holes of various sizes.
+This procedure is a particular instance of the **dynamic storage-allocation problem**, which concerns how to satisfy a request of size n from a list of free holes. The most commonly used strategies for selecting a free hole are:
 
-> 9.7 Variable Partition
+- **First Fit**: Allocate the first hole that is large enough. Searching can start either at the beginning of the set or at the location where the previous search ended. The search stops once a free hole large enough is found.
+
+- **Best Fit**: Allocate the smallest hole that is large enough. This requires searching the entire list unless the list is ordered by size. This strategy minimizes leftover space in the hole.
+
+- **Worst Fit**: Allocate the largest hole. The entire list must be searched unless it is sorted by size. This strategy leaves the largest possible leftover hole, which may be more useful than the smaller leftover hole from a best-fit approach.
 
 
-the memory blocks available comprise a set of
-holes of various sizes scattered throughout memory. When a process arrives
-and needs memory, the system searches the set for a hole that is large enough
-for this process. If the hole is too large, it is split into two parts. One part is
-allocated to the arriving process; the other is returned to the set of holes.
+---
 
+### Fragmentation
 
-This procedure is a particular instance of the general dynamic storage-
-allocation problem, which concerns how to satisfy a request of size n from a
-list of free holes. There are many solutions to this problem. The first-fit, best-fi ,
-and worst-fi strategies are the ones most commonly used to select a free hole
-from the set of available holes.
+Both the **first-fit** and **best-fit** strategies for memory allocation suffer from **external fragmentation**, where the free memory space is broken into small, scattered pieces. External fragmentation occurs when there is enough total memory space to satisfy a request, but the available spaces are not contiguous.
 
-First fit. Allocate the first hole that is big enough. Searching can start either
-at the beginning of the set of holes or at the location where the previous
-first-fit search ended. We can stop searching as soon as we find a free hole
-that is large enough.
-• Best fi . Allocate the smallest hole that is big enough. We must search the
-entire list, unless the list is ordered by size. This strategy produces the
-smallest leftover hole.
-• Worst fit. Allocate the largest hole. Again, we must search the entire list,
-unless it is sorted by size. This strategy produces the largest leftover hole,
-which may be more useful than the smaller leftover hole from a best-fit
-approach.
+To address this issue, the physical memory can be divided into fixed-sized blocks, and memory is allocated in units based on block size. This method can result in **internal fragmentation**, where the memory allocated to a process is slightly larger than the requested memory, leaving unused space inside the partition.
 
+One solution to external fragmentation is **compaction**, where memory contents are rearranged to create one large block of free memory.
 
-___
-
-#### Fragmentation
-
-Both the first-fit and best-fit strategies for memory allocation suffer from exter-nal fragmentation.
-
-the free memory space is broken into little pieces. External fragmentation exists when there is enough total memory space to satisfy a request but the available spaces are not contiguous: storage is fragmented into a large number of small holes.
-
-
-The general approach to avoiding this problem is to break the physical memory into fixed-sized blocks and allocate memory in units based on block size. With this approach, the memory allocated to a process may be slightly larger than the requested memory. The difference between these two numbers is internal fragmentation —unused memory that is internal to a partition.
-
-One solution to the problem of external fragmentation is compaction. The goal is to shuffle the memory contents so as to place all free memory together in one large block.
-
-
-___
-
+---
 
 ### Segmentation
 
+Segmentation is a memory-management scheme that maps the programmer’s view of memory to the actual physical memory. It allows the system to manage memory while providing the programmer with a more natural programming environment.
 
-If the hardware could provide a memory mechanism that mapped the programmer’s view to the actual physical memory.
+A programmer typically views memory as a collection of variable-sized segments, each defined by its purpose in the program. These segments might include the main program, methods, procedures, functions, and various data structures (e.g., objects, arrays, stacks, and variables).
 
-The system would have more freedom to manage memory, while the programmer would have a more natural programming environment. Segmentation provides such a mechanism.
+Each segment in a logical address space has a name and a length. The logical address consists of two parts: a **segment number** and an **offset** within that segment. The segment number is used as an index to the segment table.
 
+#### Segmentation Hardware
 
-A programmers view of memory is as a collection of variable-sized segments, with no necessary ordering among the segments
+To map two-dimensional user-defined addresses (segment number and offset) into a one-dimensional physical address, a **segment table** is used. Each entry in the segment table has a **segment base** (the starting physical address of the segment in memory) and a **segment limit** (the length of the segment).
 
+{{< figure src="images/os/8_08_SegmentationHardware-min.jpg" alt="." caption="." >}}
 
-When writing a program, a programmer thinks of it as a main program
-with a set of methods, procedures, or functions. It may also include various data
-structures: objects, arrays, stacks, variables, and so on
+A logical address consists of two parts: a segment number (s) and an offset (d). The segment number is used to index the segment table. The offset d must be between 0 and the segment limit. If the offset is invalid, the system triggers a trap to the operating system. When the offset is valid, it is added to the segment base to produce the physical memory address of the desired byte.
 
-Segments vary in length,
-and the length of each is intrinsically deﬁned by its purpose in the program.
-Elements within a segment are identiﬁed by their offset from the beginning of
-the segment: the ﬁrst statement of the program,
-
-Segmentation is a memory-management scheme that supports this pro-
-grammer view of memory.
-
-A logical address space is a collection of segments. Each segment has a name and a length. The addresses specify both the segment
-name and the offset within the segment.
-
-
-For simplicity of implementation, segments are numbered and are referred to by a segment number, rather than by a segment name. Thus, a logical address consists of a two tuple:
-<segment-number, offset>.
-
-
-##### Segmentation Hardware
-
-an implementation to
-map two-dimensional user-deﬁned addresses into one-dimensional physical address, this mapping is effected by a segment table.
-
-Each entry in the segment table has a segment base and a segment limit. The segment base contains the starting physical address where the segment resides in memory, and the segment limit speciﬁes the length of the segment.
-
-{{< figure  src="images/os/8_08_SegmentationHardware-min.jpg"  alt="."  caption="." >}}
-
-{{< figure  src="images/os/8_09_Segmentation-min.jpg"  alt="."  caption="." >}}
-
-
-
-
-A logical address consists of two parts: a segment number, s, and an offset into that segment, d.
-The segment number is used as an index to the segment table. The offset d of the logical address must be between 0 and the segment limit. If it is not, we trap to the operating system (logical addressing attempt beyond end of segment).
-When an offset is legal, it is added to the segment base to produce the address
-in physical memory of the desired byte. The segment table is thus essentially
-an array of base –limit register pairs.
+{{< figure src="images/os/8_09_Segmentation-min.jpg" alt="." caption="." >}}
 
 ___
-

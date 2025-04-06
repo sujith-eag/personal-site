@@ -17,68 +17,99 @@ seo:
 
 
 
-### Deadlock Detection
+If a system does not employ either a deadlock-prevention or deadlock-avoidance algorithm, then a deadlock situation may occur. In such an environment, the system may provide:
 
-If a system does not employ either a deadlock-prevention or a deadlock avoidance algorithm, then a deadlock situation may occur. In this environment, the system may provide:
-• An algorithm that examines the state of the system to determine whether a deadlock has occurred
-• An algorithm to recover from the deadlock
+- An algorithm to examine the state of the system and determine whether a deadlock has occurred.
 
-A deadlock-detection algorithm can evaluate processes and resources on a running system to determine if a set of processes is in a deadlocked state.
+- An algorithm to recover from the deadlock.
 
 
-#### 1 Single Instance of Each Resource Type
+A **deadlock-detection algorithm** can evaluate processes and resources on a running system to determine if a set of processes is in a deadlocked state.
 
-If all resources have only a single instance, then we can define a deadlock-detection algorithm that uses a variant of the resource-allocation graph, called a wait-for graph. We obtain this graph from the resource-allocation graph by removing the resource nodes and collapsing the appropriate edges.
+---
+
+#### 1. Single Instance of Each Resource Type
+
+When all resources have only a single instance, we can use a variant of the **resource-allocation graph**, called a **wait-for graph**, to detect deadlocks. This graph is derived from the resource-allocation graph by removing the resource nodes and collapsing the appropriate edges.
+
+
+
+In a **wait-for graph**:
+
+- An edge from Ti to Tj implies that thread Ti is waiting for thread Tj to release a resource that Ti needs.
+
+- A deadlock exists in the system if and only if the wait-for graph contains a cycle.
+
+
+To detect deadlocks, the system needs to maintain the wait-for graph and periodically invoke an algorithm that searches for a cycle in the graph. A cycle detection algorithm requires O(n²) operations, where n is the number of vertices (processes) in the graph.
+
+The **wait-for graph** scheme is not applicable to systems with multiple instances of each resource type.
+
 
 {{< figure  src="images/os/7_09_TwoGraphs-min.jpg"  alt="."  caption="." >}}
 
+---
 
-an edge from Ti to Tj in a wait-for graph implies that thread Ti is waiting for thread Tj to release a resource that Ti needs.
+#### 2. Multiple Instances of a Resource Type
 
-a deadlock exists in the system if and only if the wait-for graph contains a cycle. To detect deadlocks, the system needs to maintain the wait-for graph and periodically invoke an algorithm that searches for a cycle in the graph. An algorithm to detect a cycle in a graph requires O(n2 ) operations, where n is the number of vertices in the graph.
+The **wait-for graph** approach is not suitable for systems with multiple instances of each resource type. In such cases, other detection algorithms must be used that account for the possibility of multiple resources of the same type being requested by different processes.
 
-The wait-for graph scheme is not applicable to a resource-allocation system with multiple instances of each resource type.
+These algorithms need to track the allocation and request of resources, considering scenarios where multiple processes may be waiting for shared resources.
 
+---
 
-#### 2 Several Instance of a Resource Type
+#### 3. Detection-Algorithm Usage
 
+If deadlocks occur frequently in the system, the deadlock-detection algorithm should be invoked more often.
 
+The algorithm can be invoked each time a request for resource allocation cannot be granted immediately. This allows the system to detect any deadlock as soon as it happens and take corrective actions.
 
-
-#### 3 Detection-Algorithm Usage
-
-If deadlocks occur frequently, then the detection algorithm should be invoked frequently.
-
-we can invoke the deadlock-detection algorithm every time a request for allocation cannot be granted immediately.
-
-
-____
+---
 
 ### Recovery from Deadlock
 
-When a detection algorithm determines that a deadlock exists, there are two options for breaking a deadlock.
+When a deadlock is detected, the system must decide how to recover from the deadlock situation. There are two main options for breaking a deadlock:
 
-If deadlock does occur, a system can attempt to recover from the deadlock by either aborting one of the processes in the circular wait or preempting resources that have been assigned to a deadlocked process.
+1. Abort one or more processes involved in the deadlock.
 
-#### 1 Process termination
-
-Abort all deadlocked processes. This method clearly will break the dead-lock cycle, but at great expense. The deadlocked processes may have computed for a long time, and the results of these partial computations must be discarded and probably will have to be recomputed later.
-
-• Abort one process at a time until the deadlock cycle is eliminated. This method incurs considerable overhead, since after each process is aborted, a deadlock-detection algorithm must be invoked to determine whether any processes are still deadlocked.
+2. Preempt resources from the deadlocked processes and allocate them to other processes to break the deadlock cycle.
 
 
+---
 
-#### 2 Resource Preemption
+#### 1. Process Termination
 
-To eliminate deadlocks using resource preemption, we successively preempt some resources from processes and give these resources to other processes until the deadlock cycle is broken.
+One way to recover from deadlock is to abort one or more deadlocked processes. This will break the circular wait cycle, but it comes with significant overhead, as partial computations may need to be discarded, and the processes may need to be recomputed later.
 
-Three issues need to be addressed if preemption is required to deal with deadlocks.
+- **Abort all deadlocked processes**: This method is guaranteed to break the deadlock cycle, but at a high cost.
 
-1. Selecting a victim :  As in process termination, we must determine the order of pre-emption to minimize cost. Cost factors may include such parameters as the number of resources a deadlocked process is holding and the amount of time the process has thus far consumed.
+- **Abort one process at a time**: This method involves aborting one process at a time until the deadlock cycle is eliminated. However, it incurs considerable overhead since after each process is aborted, the deadlock-detection algorithm must be invoked to check if any processes are still deadlocked.
 
-2. Rollback : If we preempt a resource from a process, what should be done with that process? Clearly, it cannot continue with its normal execution; it is missing some needed resource. We must roll back the process to some safe state and restart it from that state. Since, in general, it is difficult to determine what a safe state is, the simplest solution is a total rollback: abort the process and then restart it. 
 
-3. Starvation : how can we guarantee that resources will not always be preempted from the same process? In a system where victim selection is based primarily on cost factors, it may happen that the same process is always picked as a victim. As a result, this process never completes its designated task, a starvation situation any practical system must address.
+---
 
+#### 2. Resource Preemption
+
+Another way to resolve deadlocks is through **resource preemption**. This involves preempting resources from processes and reallocating them to other processes until the deadlock cycle is broken.
+
+Three issues must be addressed when using resource preemption to resolve deadlocks:
+
+1. **Selecting a victim**:
+    - As in process termination, we need to determine the order of preemption to minimize cost. Cost factors include the number of resources a deadlocked process is holding and the amount of time the process has consumed.
+	
+2. **Rollback**:
+    - When a resource is preempted from a process, the process cannot continue as it is missing a required resource. In such cases, the process must be rolled back to a **safe state** and restarted from there.
+	
+    - Since it can be difficult to determine a safe state, a simple solution is to perform a **total rollback**, which involves aborting the process and restarting it from scratch.
+	
+3. **Starvation**:
+    - It is important to ensure that resources are not always preempted from the same process, as this could result in **starvation**, where the process is never able to complete its task.
+	
+    - In systems where victim selection is based primarily on cost factors, it may happen that the same process is always chosen as a victim. This can result in starvation, which is a situation that must be avoided in practical systems.
+
+---
+
+By addressing these issues, systems can recover from deadlocks while minimizing the associated costs and risks.
 
 ____
+

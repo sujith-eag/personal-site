@@ -497,7 +497,7 @@ for letter in'Python':
 
 **Answer :**
 
-i) The Loop terminates when letter reaches `h` so only two letters are printed
+i) The Loop terminates when letter reaches `h` so only three letters are printed
 ```python
 for letter in 'Python':
 	if letter == 'h':
@@ -507,6 +507,7 @@ for letter in 'Python':
 
 Current Letter : P
 Current Letter : y
+Current Letter : t
 ```
 
 ii) The letter `h` will not be printed as the loop gets passed to next iteration when `letter == h` without printing `h`.
