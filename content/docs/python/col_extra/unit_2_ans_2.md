@@ -15,7 +15,6 @@ seo:
 ---
 
 
-
 ## Lists
 
 
@@ -265,6 +264,9 @@ ____
 
 **Answer :**
 
+The program is asking to find the index of the even numbers in the list.
+* iterate over the list with for or while loop with `i=0` to be used as index.
+* if  element at `lis[i]` is even then store `i`
 ```python
 def even_indices(numbers):
     indices = []
@@ -726,6 +728,33 @@ while count > 0:
 
 ```
 
+Storing marks as key and then sorting based on keys using sorted
+```python
+count = 10
+dict_1 = {}
+
+while count > 0:
+    name = input("Name: ")
+
+    try:   # checking marks is numeric
+        marks = int(input("Marks: "))
+    except ValueError:
+        print("Please enter numeric marks.")
+        continue
+	# making dictionary entry
+    dict_1[marks] = name
+    count -= 1
+
+# Sort the dictionary by marks
+sorted_dict = dict(sorted( dict_1.items() ) )
+
+print("\nSorted list of students by marks:")
+
+for marks, name in sorted_dict.items():
+    print(f"{name}: {marks}")
+```
+
+Same logic but keys are names, so sorting needs lambda function.
 ```python
 count = 10
 dict_1 = {}
@@ -764,7 +793,7 @@ ___
 
 ##### Design a Python program to create a dictionary containing the names and ages of five people. Determine the name of the oldest person in the dictionary.
 
-Logic would be to iterate through the dictionary and store only the largest value and it's corresponding key by comparision.
+Logic would be to iterate through the dictionary and store only the largest value and it's corresponding key by comparison.
 ```python
 people = {
     'Alice': 30,
@@ -795,12 +824,22 @@ people = {
     35: 'Eve'
 }
 
+max_age = max(people.keys())
+oldest = people[max_age]
+print(f"Oldest person is {oldest} at {max_age} age")
+print("")
+
+
 # Sorting dictionary by age in ascending order
 sorted_people = dict(sorted(people.items()))
 
 print("People sorted by age (ascending):")
 for age, name in sorted_people.items():
     print(f"Age: {age}, Name: {name}")
+
+
+sorted_people = dict(sorted(people.items() , reverse=True ))
+# Used to sort in Descending
 ```
 
 There is method to sort the dictionary itself by its values but complicated.

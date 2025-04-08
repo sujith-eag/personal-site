@@ -15,7 +15,6 @@ seo:
 ---
 
 
-
 ## String
 
 ##### What is a string? Discuss the different ways of representing a string in Python.
@@ -89,7 +88,7 @@ print(s[:5])   # Output: Hello
 print(s[-1])   # Output: !
 ```
 
-**`join()`**: Combines elements of an iterable (list, tuple) into a single string, using the string as a separator.
+**`join()`**: Combines elements of an iterable (list, tuple) into a single string, using the string as a separator. join is an string method, called upon string, so the elements in the list to be joined also have to be strings.
 ```python
 words = ["Python", "is", "fun"]
 result = " ".join(words)
@@ -125,7 +124,7 @@ ___
 
 **Answer :**
 
-Logic is to reverse the string and compare if it is equal to original string.
+Logic is to reverse the string and compare if it is equal to original string. ( Program already in Unit 1 answers)
 ```python
 if s == s[::-1]:
     print("Palindrome")
@@ -289,7 +288,6 @@ ____
 
 **Answer :**
 
-
 Logic would be:
 * A character can be a special character (not a number or letter) then it will not be lower upper vowel consonant ( so can be in if else block)
 * If it is not a special character then it can be a Number so can check that next.
@@ -382,25 +380,26 @@ ____
 ##### Find the biggest word(s) in a string
 
 ```python
-str_1 = input("Enter a string:")
-lis = s.split() # get words in list
-b = lis[0] # consider first word
-x = len(b) # len of first word
+str_in = input("Enter a string : ")
+lis = str_in.split() # get words in list
+biggest = lis[0] # consider first word
+x = len(biggest) # len of first word
 
 for i in range(1, len(lis)):
-    if len(lis[i]) > x:  # change if anything else is larger
-        b = lis[i]  
-        x = len(b)
-    elif len(lis[i]) == x: # if same length word
-        b = b + ', ' + lis[i]
+    word = lis[i]
+    if len(word) > x:  # change if anything else is larger
+        biggest = word
+        x = len(biggest)
+    elif len(word) == x: # if same length word
+        biggest = f"{biggest}, {word}"
 
-print("The biggest word(s) is/are:", b)
+print("The biggest word(s) is/are:", biggest)
 ```
 
-Same thing with usage of list to store multiple values
+Same thing with usage of list to store multiple values when length is same.
 
 ```python
-inputStr = input("Enter a string:")
+inputStr = input("Enter a string: ")
 wordList = inputStr.split()
 multipleMaxWordList = []  
 # List to store more than one maximum length words
@@ -414,12 +413,11 @@ for i in wordList:
         # Store only the maxWord in the list
     elif len(i) == len(maxLenWord):
         maxLenWord = i
-        multipleMaxWordList += [maxLenWord]  
+        multipleMaxWordList.append(i)  
         # Keep adding all occurrences of maxWords in the list
 
 print(multipleMaxWordList)
 ```
-
 
 ____
 
