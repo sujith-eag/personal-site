@@ -15,10 +15,9 @@ seo:
 ---
 
 
-
 #### SEMESTER END EXAMINATIONS – JUNE 2024
 
-Write a Python function named calculate sum that takes two integers as input and returns their sum. Then, write another function called calculate product that takes two integers as input and returns their product. Demonstrate both functions by providing suitable inputs.
+Write a Python function named `calculate_sum` that takes two integers as input and returns their sum. Then, write another function called `calculate_product` that takes two integers as input and returns their product. Demonstrate both functions by providing suitable inputs.
 
 Explain recursion in Python functions. Provide an example illustrating the use of recursion to solve a specific problem.
 
@@ -39,13 +38,15 @@ ___
 Explain the following arguments to functions in python with examples. (i) Keyword arguments (ii) Default arguments (iii) Variable length arguments.
 
 Write a Python function that takes two lists and returns True if they have at least one common member
+```
 Input: `list1=[1,2,3,4,5], list2=[5,6,7,8,9])`
 Output: True
+
 Input: `list3=[1,2,3,4,5], list4=[6,7,8,9])`
 Output: None.
+```
 
 What are DOC strings? Illustrate with an example.
-
 
 ____
 
@@ -65,8 +66,7 @@ Develop a python program to calculate and return the average of given list of in
 
 ___
 
-Write a short notes on the following:
-i) Mapping ii) Filtering iii) List Comprehension.
+Write a short notes on the following: i) Mapping ii) Filtering iii) List Comprehension.
 
 Discuss lambda function with suitable examples.
 
@@ -83,15 +83,13 @@ Let a be the list of values produced by range(1,50). Using the function map, fil
 (iv)Sum of list of squares of numbers which are divisible by 5 in a.
 Rewrite the same using list comprehension.
 
-Write a Python recursive function, hanoi, which implements a recursive solution for Towers of hanoi
+Write a Python recursive function, Hanoi, which implements a recursive solution for Towers of Hanoi.
 
 ___
 
-Illustrate the following with example:
-i) DOC strings ii) local and global variables iii) pass by value and pass by object reference in python iv) Variable length arguments.
+Illustrate the following with example: i) DOC strings ii) local and global variables iii) pass by value and pass by object reference in python iv) Variable length arguments.
 
 What will be the output of the following code snippets:
-
 ```
 def test(n):
 	for x in [2,5,8]:
@@ -135,10 +133,7 @@ ___
 
 #### SUPPLEMENTARY SEMESTER EXAMINATIONS - NOVEMBER 2022
 
-
-Develop a recursive Python function that recursively computes sum of elements in a list of lists. 
-`Sample Input: [1, 2, [3,4], [5,6]]`
-Expected Result: 21.
+Develop a recursive Python function that recursively computes sum of elements in a list of lists.   `Sample Input: [1, 2, [3,4], [5,6]]`  Expected Result: 21.
 
 What is lambda function? What are the characteristics of a lambda function? Give an example.
 
@@ -159,8 +154,7 @@ ___
 
 #### SEMESTER END EXAMINATIONS – JUNE 2022
 
-Explain the following arguments to functions in python with
-examples. (i) Keyword arguments (ii) Default arguments (iii) Variable length arguments.
+Explain the following arguments to functions in python with examples. (i) Keyword arguments (ii) Default arguments (iii) Variable length arguments.
 
 Explain the scope of local and global variables.
 
@@ -203,8 +197,7 @@ ___
 
 #### EXAMINATIONS SEPTEMBER /OCTOBER 2021 SUPPLEMENTARY
 
-
-Define a Python function isAscending(L) that returns True if the input list L is in ascending order, otherwise returns False. For empty list, it should return True.
+Define a Python function `isAscending(L)` that returns True if the input list L is in ascending order, otherwise returns False. For empty list, it should return True.
 
 Trace the function call and find the output of the following code:
 ```
@@ -251,8 +244,8 @@ ___
 Write Python function to calculate sum and product of two arguments, return them.
 
 Explain the following with sample code for each one:
-i. Keyword arguments
-ii. Variable length arguments
+i. Keyword arguments 
+ii. Variable length arguments 
 iii. Default arguments.
 
 ___
@@ -283,8 +276,7 @@ ____
 Let a be the list of values produced by range(1,11). Using the functions map and a lamda argument, write an expression that will produce each of the following.
 (i) A list of squares of the values
 (ii) A list of cubes of the values
-(iii) A list where each element is larger by one than the
-corresponding element in the original list.
+(iii) A list where each element is larger by one than the corresponding element in the original list.
 
 What is LEGB rule? Explain LEGB rule with an example.
 
@@ -353,8 +345,8 @@ Is it possible to get the same output using a single loop?Justify.
 Illustrate the following with example:
 i) DOC strings ii) local and global variables iii) pass by reference and pass by value in python
 
-
 ___
+
 #### SEMESTER END EXAMINATIONS – MAY/JUNE 2018
 
 Write a lambda function for each of the following:

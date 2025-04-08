@@ -17,29 +17,29 @@ seo:
 
 #### SEMESTER END EXAMINATIONS – JUNE 2024
 
-1. Describe logical operators and relational operators in python with suitable examples.
+Describe logical operators and relational operators in python with suitable examples.
 
-2. Write a python script to demonstrate `if..elif...else` statement in python.
+Write a python script to demonstrate `if..elif...else` statement in python.
 
-3. Demonstrate the usage of pass, break and continue statement in python using suitable examples.
+Demonstrate the usage of pass, break and continue statement in python using suitable examples.
 
 ___
 
-4. Describe membership operator and identity operator in python with suitable examples.
+Describe membership operator and identity operator in python with suitable examples.
 
-5. Give the syntax of range() function and discuss its importance. Write a python script to demonstrate for loop statement with range() function.
+Give the syntax of `range()` function and discuss its importance. Write a python script to demonstrate for loop statement with `range()` function.
 
-6. Demonstrate the usage of while statement in python. Write a python script to demonstrate while concept to add 5 numbers.
+Demonstrate the usage of `while` statement in python. Write a python script to demonstrate `while` concept to add 5 numbers.
 
 ___
 
 #### BACKLOG SUBJECT EXAMINATIONS – SEPTEMBER / OCTOBER 2023
 
-7. Illustrate conditions and looping statements in python with suitable examples.
+Illustrate conditions and looping statements in python with suitable examples.
 
-8. Develop a Python program to find roots of a quadratic equation with necessary validation.
+Develop a Python program to find roots of a quadratic equation with necessary validation.
 
-9. Develop a python program to sum the digits of a given number.
+Develop a python program to sum the digits of a given number.
 
 ___
 
@@ -51,6 +51,7 @@ Write a program to display only those numbers from a list that satisfy the follo
 *  The number must be divisible by five.
 * If the number is greater than 100, then skip it and move to the next number.
 * If the number is greater than 600, then stop the loop.
+
 ___
 
 Write a program to count the total number of digits and sum of digits in a number using a while loop.
@@ -61,12 +62,11 @@ ___
 
 #### SUPPLEMENTARY SEMESTER EXAMINATIONS – SEPTEMBER 2022
 
-
-Explain the usage of chr() and ord() functions. Develop a script to read a string and convert all uppercase letters to lowercase and vice versa using chr() and ord() functions.
+Explain the usage of `chr()` and `ord()` functions. Develop a script to read a string and convert all uppercase letters to lowercase and vice versa using `chr()` and `ord()` functions.
 
 ___
 
-Develop a python program that takes two positive integers m and n, and then produces a box of mXn dimension as shown below.
+Develop a python program that takes two positive integers m and n, and then produces a box of `mXn` dimension as shown below.
 Enter height: 4
 Enter width: 5
 ```
@@ -105,7 +105,6 @@ Illustrate the different types of iterative statements available in Python.
 ___
 
 #### SEMESTER END EXAMINATIONS – JUNE 2022
-
 
 List the operators supported in Python? Describe specifically about identity and membership operator with a suitable example?
 
@@ -189,8 +188,7 @@ Using for loop, print of table of Celsius/Fahrenheit equivalences. Let c be the 
 
 ___
 
-Examine each of the following expressions. Predict what the result would be? Explain what the type is for each expression. If an expression is illegal,
-explain why?
+Examine each of the following expressions. Predict what the result would be? Explain what the type is for each expression. If an expression is illegal, explain why?
 ```
 i. 10 / 5
 ii. 5 / 10
@@ -199,9 +197,11 @@ iv. 10 % 4 + 8 / 4
 v. 3 ** 10 / 3.
 ```
 
-Explain what ord() and chr() function is used for. Using the same, Write a function that takes a string input and converts all uppercase letters to lowercase and vise versa.
+Explain what `ord()` and `chr()` function is used for. Using the same, Write a function that takes a string input and converts all uppercase letters to lowercase and vise versa.
+```
 Sample input: I love PyTHon
 Sample output: i LOVE pYthON.
+```
 
 ___
 
@@ -211,36 +211,35 @@ What is the output of the following code segments? Explain the causes.
 ```
 i) 
 for letter in 'Python':
-if letter == 'h':
-break
-print 'Current Letter :', letter
+	if letter == 'h':
+		break
+	print 'Current Letter :', letter
 
 ii) 
 for letter in'Python':
-if letter =='h':
-continue
-print'Current Letter :', letter
+	if letter =='h':
+		continue
+	print'Current Letter :', letter
 
 iii) 
 for letter in'Python':
-if letter =='h':
-pass
-print'This is pass block'
-print'Current Letter :', letter
+	if letter =='h':
+		pass
+		print'This is pass block'
+	print'Current Letter :', letter
 ```
 
 ___
 
 #### SUPPLEMENTARY SEMESTER EXAMINATIONS – AUGUST 2017
 
-When you use the + operator to concatenate two lists, does it make a copy or a reference of the arguments? Explain with the help of an example.
+When you use the `+` operator to concatenate two lists, does it make a copy or a reference of the arguments? Explain with the help of an example.
 
-Develop a Python program that will accept, as input, a series of names and salaries. Usethe name ‘End’ to mark the end of the sequence of values. After the values have beenentered, print the average salary and the names and
-salaries of those individuals with thehighest and lowest salaries.
+Develop a Python program that will accept, as input, a series of names and salaries. Use the name ‘End’ to mark the end of the sequence of values. After the values have been entered, print the average salary and the names and salaries of those individuals with the highest and lowest salaries.
 
 ___
 
-Develop a python program that takes two positive integers m and n, and then produces a box of mXn dimension as shown below.
+Develop a python program that takes two positive integers m and n, and then produces a box of `mXn` dimension as shown below.
 Enter height: 4
 Enter width: 5
 ```

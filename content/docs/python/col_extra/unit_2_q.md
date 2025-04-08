@@ -17,8 +17,7 @@ seo:
 
 #### SEMESTER END EXAMINATIONS – JUNE 2024
 
-Write a Python function named average_list that takes a list of numbers as input and returns their average. Additionally, include a condition to ensure that the input is a list of numeric values only that are >=1).
-What is the output when this list average_list is:
+Write a Python function named average_list that takes a list of numbers as input and returns their average. Additionally, include a condition to ensure that the input is a list of numeric values only that are >=1). What is the output when this list average_list is:
 (i) An empty list
 (ii) a list containing non-numeric values
 (iii) -1
@@ -41,17 +40,17 @@ ___
 
 #### BACKLOG SUBJECT EXAMINATIONS – SEPTEMBER / OCTOBER 2023
 
-Consider the list sub1={ANM,Py,DS,ASE,Java,OOPS } perform the following operations and show the output
-i) Insert the Sub AWP at the position 3
-ii) Insert the DMS at the position 2 from the last.
+Consider the list `sub1={ANM,Py,DS,ASE,Java,OOPS }` perform the following operations and show the output
+i) Insert the Sub `AWP` at the position 3
+ii) Insert the `DMS` at the position 2 from the last.
 iii) Return the list from the index position 1 to 5
-iv) Change the value of the Subject in the index 5 to BigData
-v) Check whether java is present in subj1
+iv) Change the value of the Subject in the index 5 to `BigData`
+v) Check whether `java` is present in `subj1`
 vi) Print the list in the reverse order
 vii) Delete the element at the index position 6
 viii) Return the total elements in the list
 
-Write a python program to count number of ovels and consonants, identify numbers, uppercase letters, lowercase letters and special characters in a given string.
+Write a python program to count number of vowels and consonants, identify numbers, uppercase letters, lowercase letters and special characters in a given string.
 
 Discuss the significance of dictionary. Develop a python program to simulate language dictionary.
 
@@ -64,7 +63,6 @@ Illustrate 2-D and 3-D array iterating with respect to numpy.
 ___
 
 #### SEMESTER END EXAMINATIONS – MAY / JUNE 2023
-
 
 Develop a python program for the following: Create a dictionary by asking the user to give the name and marks of 10 different students. Sort the dictionary created according to marks.
 
@@ -91,12 +89,11 @@ ii)
 >>> ls.sort()
 ```
 
-Explain the use of join() and split() string methods with examples. What does it mean strings are immutable? Explain with an example.
+Explain the use of `join()` and `split()` string methods with examples. What does it mean strings are immutable? Explain with an example.
 
 _____
 
 Write a program to create NumPy array and get the smallest and largest element from the array and display them.
-
 
 Explain the following routines of NumPy with examples:
 i) reshape ii) resize iii) unique iv) append v) insert.
@@ -125,9 +122,9 @@ ___
 
 List and describe any five methods on tuples.
 
-How do you create and access dictionaries in Python? Explain the operations len(), copy(), clear(), items() on dictionaries.
+How do you create and access dictionaries in Python? Explain the operations `len(), copy(), clear(), items()` on dictionaries.
 
-Demonstrate slicing on strings. Also explain the use of join() and split() string methods with examples.
+Demonstrate slicing on strings. Also explain the use of `join()` and `split()` string methods with examples.
 
 ___
 
@@ -148,9 +145,9 @@ ___
 #### EXAMINATIONS SEPTEMBER /OCTOBER 2021 SUPPLEMENTARY
 
 Explain the usage of the following methods with examples:
-i) Extend() ii) pop() iii) sort() iv) split() v) join()
+i) extend() ii) pop() iii) sort() iv) split() v) join()
 
-Explain what ord() and chr() function is used for. Using the same, Write a function that takes a string input and converts all uppercase letters to lowercase and vice versa
+Explain what `ord()` and `chr()` function is used for. Using the same, Write a function that takes a string input and converts all uppercase letters to lowercase and vice versa
 Sample input: I love PyTHon
 Sample output: i LOVE pYthON
 
@@ -166,7 +163,7 @@ ___
 
 Demonstrate any five list functions with the help of an example.
 
-Demonstrate the usage of update( ) function to update one dictionary with another dictionary.
+Demonstrate the usage of `update( )` function to update one dictionary with another dictionary.
 
 ___
 
@@ -180,7 +177,6 @@ Develop a script for filtering odd and even numbers into two separate lists from
 
 ___
 
-
 #### EXAMINATIONS SEPTEMBER /OCTOBER 2020 SUPPLEMENTARY
 
 List and describe any five functions to operate Tuples.
@@ -193,7 +189,7 @@ ___
 
 When you use the + operator to concatenate two lists, does it make a copy or a reference of the arguments? Explain with the help of an example.
 
-____
+___
 
 #### SEMESTER END EXAMINATIONS – JUNE 2019
 
@@ -242,7 +238,6 @@ ___
 What do you mean by mutable and immutable data structures? Explain with examples.
 
 Predict the output of the following and justify your answer:
-
 ```
 i) 
 a = -45
@@ -270,7 +265,6 @@ What is a string? Discuss the different ways of representing a string in Python.
 ____
 
 #### MAKEUP EXAMINATIONS – JULY 2019
-
 
 Explain the usage any 5 list operating methods with examples. 
 
@@ -304,12 +298,11 @@ Japan 9
 
 ____
 
-Consider the list `scores = [5, 4, 7, 3, 6, 2, 1]` and write the python instruction
-to perform the following operations:
-i)Insert an element 9 at the beginning of the list.
-ii)Insert an element 8 at the index position 3 of the list.
-iii)Delete an element at the end of the list.
-iv)Delete an element at the index position 3.
+Consider the list `scores = [5, 4, 7, 3, 6, 2, 1]` and write the python instruction to perform the following operations:
+i) Insert an element 9 at the beginning of the list.
+ii) Insert an element 8 at the index position 3 of the list.
+iii) Delete an element at the end of the list.
+iv) Delete an element at the index position 3.
 
 Predict the output of the following and justify your answer:
 ```
@@ -360,7 +353,4 @@ Develop a python program to print unique elements in a list.
 
 ____
 
-#### SUPPLEMENTARY SEMESTER EXAMINATIONS – AUGUST 2017
 
-
-____

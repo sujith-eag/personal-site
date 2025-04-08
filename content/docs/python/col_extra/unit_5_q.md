@@ -17,30 +17,30 @@ seo:
 
 #### SEMESTER END EXAMINATIONS – JUNE 2024
 
-1. List and describe ANY FIVE file open modes in python.
+List and describe ANY FIVE file open modes in python.
 
-2. Explain exception handling in python in detail with the help of an example.
+Explain exception handling in python in detail with the help of an example.
 
-3. Develop a python program that will prompt the user for a file name, read all the numbers from the file into a list, separate positive and negative numbers from the list, and store them in separate files.
+Develop a python program that will prompt the user for a file name, read all the numbers from the file into a list, separate positive and negative numbers from the list, and store them in separate files.
 
 ___
 
-4. Write a program that will prompt the user for a file name, read all the lines from the file into a list, sort the list, and then print the lines in sorted order.
+Write a program that will prompt the user for a file name, read all the lines from the file into a list, sort the list, and then print the lines in sorted order.
 
-5. Discover what exception is produced by each of the following points. Then develop small example program that illustrates catching the exceptions using try statement(s) and continuing with execution after the interrupt.
+Discover what exception is produced by each of the following points. Then develop small example program that illustrates catching the exceptions using try statement(s) and continuing with execution after the interrupt.
 *  Division by zero
 *  Opening a file that does not exist
 *  Indexing a list with an illegal value
 
 ___
 
-BACKLOG SUBJECT EXAMINATIONS – SEPTEMBER / OCTOBER 2023
+#### BACKLOG SUBJECT EXAMINATIONS – SEPTEMBER / OCTOBER 2023
 
-6. Illustrate “catching an exception is programmatically good and necessary mechanism” with exception handling mechanism in python. Demonstrate the working of any six exceptions in python.
+Illustrate “catching an exception is programmatically good and necessary mechanism” with exception handling mechanism in python. Demonstrate the working of any six exceptions in python.
 
-7. Discuss all the file accessing modes and also write python program to count the number of words, characters and lines from the files and also copy the contents of the file into another file.
+Discuss all the file accessing modes and also write python program to count the number of words, characters and lines from the files and also copy the contents of the file into another file.
 
-8. Illustrate user defined exceptions with suitable examples.
+Illustrate user defined exceptions with suitable examples.
 
 ___
 
@@ -63,16 +63,11 @@ How do you handle an exception? Explain all the three keywords in exception hand
 ___
 
 Discover the exception produced by each of the following points. Then, for each, develop a small script that illustrates catching the exception using a try statement and continuing with execution after the interrupt.
-Division by zero, Opening a file that does not exist, Indexing a list with an illegal value, Using improper key with a dictionary, Using unindented code.
-
+i) Division by zero ii) Opening a file that does not exist iii) Indexing a list with an illegal value iv) Using improper key with a dictionary v) Using un-indented code.
 
 ___
 
 #### SUPPLEMENTARY SEMESTER EXAMINATIONS - NOVEMBER 2022
-
-
-Develop regular expressions to match the following patterns,
-Email Address, Mobile number, USN.
 
 Develop a Python program to demonstrate user defined exception.
 
@@ -81,8 +76,6 @@ Write a program that will prompt the user for a file name, read all the lines fr
 List and describe different file open modes in python.
 
 ___
-
-List any four regular expression patterns in python along with their meaning and example.
 
 Construct a python program to read a text file and display first 5 lines and last five lines.
 
@@ -93,20 +86,15 @@ iii. Indexing a list with an illegal value
 iv. Using an improper key with a dictionary
 v. Passing an improperly formatted expression to the function expr( )
 
-
 ___
 
 #### SEMESTER END EXAMINATIONS – JUNE 2022
-
-List any five regular expression patterns in python and write the meaning of each.
 
 Develop a script that will prompt the user for a file name, then print all lines from the file that contain the Python comment character #.
 
 List and describe the file open modes in python.
 
 ___
-
-Demonstrate match() and search() methods w.r.t regular expressions in python.
 
 Explain user defined exceptions in python with an example.
 
@@ -133,15 +121,11 @@ ___
 
 #### EXAMINATIONS SEPTEMBER /OCTOBER 2021 SUPPLEMENTARY
 
-List any 6 regular expression patterns in python and write the meaning of each.
-
 Demonstrate the methods to read and write text files in python. 
 
 List and describe the file open modes in python.
 
 ___
-
-Demonstrate match() and search() methods w.r.t regular expressions in python.
 
 Explain exception handling in python with an example.
 
@@ -201,16 +185,14 @@ ___
 
 #### SUPPLEMENTARY SEMESTER EXAMINATIONS – JULY 2019
 
-
 Develop a python program that will prompt the user for a file name, read all the numbers from the file into a list, separate positive and negative numbers from the list, and store them in separate files.
 
-Discover the exception produced by each of the following points. Then, for each, develop a small script that illustrates catching the exception using a try
-statement and continuing with execution after the interrupt.
-Division by zero
-Opening a file that does not exist
-Indexing a list with an illegal value
-Using improper key with a dictionary
-Using unindented code.
+Discover the exception produced by each of the following points. Then, for each, develop a small script that illustrates catching the exception using a try statement and continuing with execution after the interrupt. 
+i) Division by zero
+ii ) Opening a file that does not exist
+iii) Indexing a list with an illegal value
+iv) Using improper key with a dictionary
+v) Using unindented code.
 
 ___
 
@@ -236,7 +218,6 @@ Write a program that asks the user for a file name, then prints the number of ch
 Explain exception handling in python in detail with the help of an example.
 
 ___
-
 #### SUPPLEMENTARY SEMESTER EXAMINATIONS – JULY/AUGUST 2018
 
 Why is exception handling required? Write a Python program to demonstrate user defined exception.
@@ -267,11 +248,6 @@ Develop a script to open a file and count number of lines in the file. Find the 
 Develop a program that asks the user for a file name, then prints the number of special characters, words and lines in the file.
 
 Explain exception handling in python in detail with the help of an example.
-
-___
-
-#### SUPPLEMENTARY SEMESTER EXAMINATIONS – AUGUST 2017
-
 
 ___
 
