@@ -1,5 +1,5 @@
 ---
-title: "10 NumPy - 06 Transposing Arrays"
+title: "NumPy - 06 Transposing Arrays"
 description: ""
 summary: ""
 date: 2025-02-14T20:42:53+05:30

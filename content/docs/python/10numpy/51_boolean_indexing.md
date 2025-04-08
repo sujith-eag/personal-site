@@ -1,5 +1,5 @@
 ---
-title: "10 NumPy - 11 Boolean Indexing"
+title: "NumPy - 11 Boolean Indexing"
 description: ""
 summary: ""
 date: 2025-02-14T20:44:41+05:30

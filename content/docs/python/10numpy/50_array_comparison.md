@@ -1,5 +1,5 @@
 ---
-title: "10 NumPy - 10 Array Comparison"
+title: "NumPy - 10 Array Comparison"
 description: ""
 summary: ""
 date: 2025-02-14T20:44:20+05:30

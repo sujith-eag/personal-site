@@ -1,5 +1,5 @@
 ---
-title: "10 NumPy - 01 Introduction to Numpy"
+title: "NumPy - 01 Introduction to Numpy"
 description: ""
 summary: ""
 date: 2025-02-14T20:41:05+05:30

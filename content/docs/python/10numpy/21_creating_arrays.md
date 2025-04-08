@@ -1,5 +1,5 @@
 ---
-title: "10 NumPy - 04 Metods of Creating Arrays"
+title: "NumPy - 04 Metods of Creating Arrays"
 description: ""
 summary: ""
 date: 2025-02-14T20:42:03+05:30

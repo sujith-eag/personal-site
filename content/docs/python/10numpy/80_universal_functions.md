@@ -1,5 +1,5 @@
 ---
-title: "10 NumPy - 15 Universal Functions"
+title: "NumPy - 15 Universal Functions"
 description: ""
 summary: ""
 date: 2025-02-14T20:45:59+05:30

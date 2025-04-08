@@ -1,5 +1,5 @@
 ---
-title: "10 NumPy - 09 Unique, Set Logic, Linear Algebra"
+title: "NumPy - 09 Unique, Set Logic, Linear Algebra"
 description: ""
 summary: ""
 date: 2025-02-14T20:43:52+05:30

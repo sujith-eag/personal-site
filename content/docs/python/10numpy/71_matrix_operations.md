@@ -1,5 +1,5 @@
 ---
-title: "10 NumPy - 14 Matrix Operations"
+title: "NumPy - 14 Matrix Operations"
 description: ""
 summary: ""
 date: 2025-02-14T20:45:31+05:30

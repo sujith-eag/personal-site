@@ -1,5 +1,5 @@
 ---
-title: "10 NumPy - 05 Modifying Arrays"
+title: "NumPy - 05 Modifying Arrays"
 description: ""
 summary: ""
 date: 2025-02-14T20:42:37+05:30

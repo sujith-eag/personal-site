@@ -1,5 +1,5 @@
 ---
-title: "10 NumPy - 03 Array Atributes"
+title: "NumPy - 03 Array Atributes"
 description: ""
 summary: ""
 date: 2025-02-14T20:41:41+05:30

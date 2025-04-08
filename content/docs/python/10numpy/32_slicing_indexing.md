@@ -1,5 +1,5 @@
 ---
-title: "10 NumPy - 07 Array Indexing and Slicing"
+title: "NumPy - 07 Array Indexing and Slicing"
 description: ""
 summary: ""
 date: 2025-02-14T20:43:12+05:30

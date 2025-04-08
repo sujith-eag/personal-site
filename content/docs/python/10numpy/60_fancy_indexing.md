@@ -1,5 +1,5 @@
 ---
-title: "10 NumPy - 13 Fancy Indexing"
+title: "NumPy - 13 Fancy Indexing"
 description: ""
 summary: ""
 date: 2025-02-14T20:45:11+05:30

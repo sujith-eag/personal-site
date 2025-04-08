@@ -1,5 +1,5 @@
 ---
-title: "10 NumPy - 16 Broadcasting"
+title: "NumPy - 16 Broadcasting"
 description: ""
 summary: ""
 date: 2025-02-14T20:46:20+05:30

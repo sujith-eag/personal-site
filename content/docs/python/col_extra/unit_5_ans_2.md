@@ -15,8 +15,9 @@ seo:
 ---
 
 
-
 ##### Develop a script that will prompt the user for a file name, then print all lines from the file that contain the Python comment character #.
+
+**Answer :**
 
 ```python
 file_name = input("Please enter the file name: ")
@@ -55,6 +56,8 @@ ___
 
 ##### Develop a python script that will prompt the user for a string and a file name, and then print all lines in the file that contains the string entered by the user.
 
+**Answer :**
+
 ```python
 file_name = input("Please enter the file name: ")
 se_pattern = input("Enter Pattern to search: ")
@@ -79,8 +82,9 @@ ____
 
 * Discuss all the file accessing modes and also write python program to count the number of words, characters and lines from the files and also copy the contents of the file into another file.
 
-```python
+**Answer :**
 
+```python
 file_name = input("Enter file name to read from: ")
 
 output_file_name = input("Enter file name to copy contents into: ")
@@ -120,7 +124,6 @@ finally:
 
 Same but with `with - as ` to handle file open and close.
 ```python
-
 file_name = input("Enter file name to read from: ")
 
 output_file_name = input("Enter file name to copy contents into: ")
@@ -147,17 +150,17 @@ except FileNotFoundError:
     print(f"Error: The file '{file_name}' was not found.")
 ```
 
-
 ___
 
-Develop a python program that will prompt the user for a file name, read all the numbers from the file into a list, separate positive and negative numbers from the list, and store them in separate files.
+##### Develop a python program that will prompt the user for a file name, read all the numbers from the file into a list, separate positive and negative numbers from the list, and store them in separate files.
+
+**Answer :**
 
 ```python
-file_name = input("Please enter the file name to read from: ")
+file_name = input("File name to read from: ")
 
-
-positive_file_name = input("Please enter the file name to store positive numbers: ")
-negative_file_name = input("Please enter the file name to store negative numbers: ")
+positive_file_name = input("File to store positive numbers: ")
+negative_file_name = input("File to store negative numbers: ")
 
 try:
     file = open(file_name, 'r')
@@ -193,7 +196,9 @@ except FileNotFoundError:
 
 ____
 
-Develop a script that will prompt the user for a file name, read all the lines from the file into a list, sort the list, then print the lines in sorted order as well as write to a file.
+##### Develop a script that will prompt the user for a file name, read all the lines from the file into a list, sort the list, then print the lines in sorted order as well as write to a file.
+
+**Answer :**
 
 ```python
 # Ask for the input file name
@@ -228,7 +233,9 @@ except FileNotFoundError:
 
 ___
 
-Write a python program to sort the file contents in reverse order and write the sorted contents along with line number.
+##### Write a python program to sort the file contents in reverse order and write the sorted contents along with line number.
+
+**Answer :**
 
 ```python
 # Ask for the input file name
@@ -261,7 +268,9 @@ except FileNotFoundError:
 
 _____
 
-Construct a python program to read a text file and display first 5 lines and last five lines.
+##### Construct a python program to read a text file and display first 5 lines and last five lines.
+
+**Answer :**
 
 ```python
 file_name = input("Please enter the file name to read from: ")
@@ -298,6 +307,8 @@ num_pairs.txt
 -1   1
 ```
 
+**Answer :**
+
 ```python
 # Ask for the input and output file names
 input_file_name = "num_pairs.txt"
@@ -323,7 +334,8 @@ except ValueError:
 
 ___
 
-Consider the following program which contains some errors. You may assume that the comments within the program accurately describe the program’s intended behavior.
+##### Consider the following program which contains some errors. You may assume that the comments within the program accurately describe the program’s intended behavior.
+
 ```
 # Get two numbers from the user
 n1, n2 = eval(input()) # 1
@@ -344,5 +356,10 @@ For each line listed in the comments, indicate whether or not an interpreter err
 
 ___
 
-Develop a script to open a file and count number of lines in the file. Find the middle 3 lines in the file and write it on to another file. Repeat the same steps until there are only 3 lines are left.
+##### Develop a script to open a file and count number of lines in the file. Find the middle 3 lines in the file and write it on to another file. Repeat the same steps until there are only 3 lines are left.
+
+
+
+____
+
 

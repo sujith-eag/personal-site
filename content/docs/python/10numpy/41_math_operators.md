@@ -1,5 +1,5 @@
 ---
-title: "10 NumPy - 08 Mathematical Operations"
+title: "NumPy - 08 Mathematical Operations"
 description: ""
 summary: ""
 date: 2025-02-14T20:43:30+05:30

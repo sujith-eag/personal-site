@@ -15,7 +15,6 @@ seo:
 ---
 
 
-
 ## OOP
 
 
@@ -50,6 +49,7 @@ numbers.remove(3)  # Removes the first occurrence of 3
 print(numbers)
 ```
 
+
 **`dict` (Dictionary) :** The dict class represents key-value pairs. Each key is unique, and values can be of any data type. Used for fast lookups and data storage where the data is organized as key-value pairs.
 
 ```python
@@ -61,7 +61,7 @@ person["age"] = 31
 ```
 
 
-**`tuple` (Tuple) :** The `tuple` class is used to represent an ordered collection of items that are immutable (unchangeable). Once a tuple is created, its values cannot be modified. Used when you want to store a collection of items that should not be modified.
+**`tuple` (Tuple) :** The `tuple` class is used to represent an ordered collection of items that are immutable (unchangeable). Once a tuple is created, its values cannot be modified. Used to store a collection of items that should not be modified.
 
 ```python
 coordinates = (10, 20, 30)  # A tuple representing a 3D point
@@ -101,11 +101,11 @@ ____
 
 **Answer :**
 
-A class contains **methods** and **variables**, and it is used as a blueprint to create objects. An **object** is an instance of a **class**.
+A class contains **methods** and **variables**, and it is used as a blueprint to create objects. An **object** is an instance of a **class** from which it is created from.
 
 #### Basic Structure of a Class in Python
 
-A class in Python is defined using the class keyword. It typically includes:
+A class in Python is defined using the `class` keyword and It typically includes:
 * Attributes: Variables that belong to the class or instance.
 * Methods: Functions defined within the class that can operate on attributes or perform other tasks.
 * Constructor (__init__): Special method for initializing new instances of the class.
@@ -121,6 +121,36 @@ class Classname:
 The class does not require parentheses unless it inherits from a base class.
 
 ___
+
+#### Constructor 
+
+The `__init__()` method is a special method referred to as the **constructor**. It is automatically called when a new object of the class is created. 
+
+The purpose of the `__init__()` method is to initialize the instance’s attributes and set up the initial state of the new object. It is called only once during the creation of the instance. `__init__()` method does **not** create an instance; instead, it initializes the instance by assigning the beginning values to its attributes. 
+
+The first parameter of `__init__()` is always **self**, which represents the instance of the class itself. This is true for all methods inside the class for allowing access to instance itself.
+
+Destructor (`__del__`): is invoked when an object is destroyed or removed. It is useful for cleaning up resources or performing any cleanup operations.
+
+`del`: is the keyword Used to delete an object or an attribute.
+
+```python
+class Animal:
+    def __init__(self, name):
+        self.name = name
+        print(f"An animal named {self.name} has been created.")
+
+    def __del__(self):
+        print(f"An animal named {self.name} has been deleted.")
+
+# Creating and deleting object
+dog = Animal("Dog")
+del dog  
+# Destructor is called when object is deleted
+```
+
+____
+
 #### self keyword
 
 When an object is created, `self` will allow us to access the attributes and methods of that particular object.
@@ -137,49 +167,18 @@ In addition to its use in the `__init__()` method, **`self`** is also used as th
 
 ____
 
-#### Constructor 
-
-The `__init__()` method is a special method in Python, referred to as the **constructor**. It is automatically called when a new object of the class is created. The purpose of the `__init__()` method is to initialize the instance’s attributes and set up the initial state of the new object.
-
-It is called only once during the creation of the instance. `__init__()` method does **not** create an instance; instead, it initializes the instance by assigning the beginning values to its attributes. 
-
-The first parameter of `__init__()` is always **self**, which represents the instance of the class itself. This is true for all methods inside the class to allowing access to instance itself.
-
-Destructor (`__del__`): is invoked when an object is destroyed or removed. It is useful for cleaning up resources or performing any cleanup operations.
-
-`del`: Used to delete an object or an attribute.
-
-```python
-class Animal:
-    def __init__(self, name):
-        self.name = name
-        print(f"An animal named {self.name} has been created.")
-
-    def __del__(self):
-        print(f"An animal named {self.name} has been deleted.")
-
-# Creating and deleting object
-dog = Animal("Dog")
-del dog  # Destructor is called when object is deleted
-```
-
-____
-
 #### Types of Variable / Attributes
 
 In Python, there are two types of variables used inside a class:
 1. **Instance variables**
 2. **Class variables** (also called **Static variables**)
 
-**Instance variables** are variables that have a separate copy for each instance (object) of the class. If multiple copies of an object are created, each object will have its own independent copy of the instance variables. 
-Modifying the instance variable in one object will not affect the other objects.
-
-- **Instance Variables** are defined inside the `__init__()` method using the `self` keyword.
-- **Instance Variables** can be accessed using dot notation, inside the class using `self.variable`, and outside the class using `instanceName.variable`.
+**Instance variables** are variables that have a separate copy for each instance (object) of the class. If multiple copies of an object are created, each object will have its own independent copy of the instance variables.  Modifying the instance variable in one object will not affect the other objects.
+- Instance Variables are defined inside the `__init__()` method using the `self` keyword.
+- Instance Variables can be accessed using dot notation, inside the class using `self.variable`, and outside the class using `instanceName.variable`.
 
 
 **Class variables** / **Static Members** are shared among all instances of a class. There is only one copy of the class variable, and if it is modified in one instance, it gets modified for all instances.
-
 * Class variables are defined directly in the class without using the `self` keyword.
 * To access and modify a class variable, the `cls` reference (instead of `self`)  is used or the Class name is used, since class variables are tied to the class, not the individual instance. 
 
@@ -289,7 +288,7 @@ ____
 
 These are the various ways to interact with the attributes of a class in Python.
 
-1. Direct access using instance (`my_car.brand`): Access instance attributes directly.
+1. Direct access using instance (`my_car.brand`): Access instance attributes or class attributes directly.
 2. Accessing using class name (`Car.wheels`): Access class attributes using the class name.
 3. `getattr()`: Access attributes dynamically.
 4. `setattr()`: Set or modify attributes dynamically.
@@ -369,7 +368,6 @@ ____
 
 **Answer :**
 
-
 Creating new classes from from existing classes so new classes will acquire all the features of the existing classes is called inheritance.
 
 * **Inheritance** is a mechanism where one class (the **subclass**) inherits the attributes and methods of another class (the **superclass**). This allows the subclass to reuse code and add its own unique features.
@@ -387,7 +385,7 @@ class Subclass(BaseClass):
 
 ___
 
-`Child` that inherits from both. `Child` class will override a method that is common in both parent classes.
+`Child` that inherits from `parent` class will override a method that is common in both parent classes.
 ```python
 class Parent1:
     def speak(self):
@@ -515,7 +513,7 @@ ____
 
 ##### Create a class Rectangle. 
 
-The constructor for this class should take two numeric arguments, which are the width and height. Add methods to compute the area and perimeter of the rectangle, as well as methods that simply return the height and width. Add a method is Square that returns a Boolean value if the rectangle is a square.
+The constructor for this class should take two numeric arguments, which are the width and height. Add methods to compute the area and perimeter of the rectangle, as well as methods that simply return the height and width. Add a method `is_Square` that returns a Boolean value if the rectangle is a square.
 
 ```python
 class Rectangle:
@@ -547,9 +545,9 @@ class Rectangle:
 
 
 h = float(input("Enter Hight: "))
-w = float(input("Enter width: "))
-
+w = float(input("Enter Width: "))
 r1 = Rectangle(w,h)
+
 print(f"\nFor Rectangle having hight: {r1.height}, width: {r1.width}")
 
 print(f"The Area will be : {r1.area()}")
@@ -646,9 +644,8 @@ class BankAccount:
 			self.balance += self.balance * 0.05
 		else:
 			self.balance += self.balance * 0.08
-			
-			
-			
+
+
 account1 = BankAccount(1000.0)
 
 account1.read("John Doe", "johndoe@example.com", "1234567890", "SB")

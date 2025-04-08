@@ -1,5 +1,5 @@
 ---
-title: "09 Packages - 01 Random and Statistics (Basics)"
+title: "Packages - 01 Random and Statistics (Basics)"
 description: ""
 summary: ""
 date: 2025-02-12T00:02:40+05:30

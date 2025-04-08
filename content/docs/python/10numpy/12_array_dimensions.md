@@ -1,5 +1,5 @@
 ---
-title: "10 NumPy - 02 Dimensions of an Array"
+title: "NumPy - 02 Dimensions of an Array"
 description: ""
 summary: ""
 date: 2025-02-14T20:41:26+05:30

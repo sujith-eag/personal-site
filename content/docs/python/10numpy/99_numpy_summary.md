@@ -1,5 +1,5 @@
 ---
-title: "10 NumPy - 17 NumPy Summary"
+title: "NumPy - 17 NumPy Summary"
 description: ""
 summary: ""
 date: 2025-02-14T20:46:42+05:30

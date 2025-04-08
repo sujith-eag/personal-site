@@ -1,5 +1,5 @@
 ---
-title: "10 NumPy - 12 NumPy Masking"
+title: "NumPy - 12 NumPy Masking"
 description: ""
 summary: ""
 date: 2025-02-14T20:44:57+05:30

@@ -1,5 +1,5 @@
 ---
-title: "09 Packages - 03 Working with 3rd Party Libraries"
+title: "Packages - 03 Working with 3rd Party Libraries"
 description: ""
 summary: ""
 date: 2025-02-12T00:04:42+05:30

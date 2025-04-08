@@ -25,7 +25,6 @@ seo:
 * How do you handle an exception? Explain all the three keywords in exception handling. Write a simple program to show how an except clause is used for handing multiple exceptions.
 * Discover what exception is produced by each of the following points. Then develop small example program that illustrates catching the exceptions using try statement(s) and continuing with execution after the interrupt.  (Division by zero, Opening a file that does not exist, Indexing a list with an illegal value,  Using an improper key with a dictionary,  Passing an improperly formatted expression to the function `expr( )`,  Using unindented code.)
 
-
 **Answer :**
 
 Exceptions are events that occur during the execution of a program that disrupt the normal flow of instructions. Exception handling in Python is a mechanism to handle these runtime errors, also known as exceptions. 
@@ -252,7 +251,6 @@ except ValueError:
 `try` block: Accepts the user input for age, calls the `validate_age` function, and handles exceptions.
 
 `except` block: Catches the custom `InvalidAgeError` and prints the error message, or catches `ValueError` if the user enters non-numeric input.
-
 
 ___
 

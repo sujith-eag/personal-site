@@ -1,5 +1,5 @@
 ---
-title: "09 Packages - 02 Sys Library"
+title: "Packages - 02 Sys Library"
 description: ""
 summary: ""
 date: 2025-02-12T00:03:07+05:30
