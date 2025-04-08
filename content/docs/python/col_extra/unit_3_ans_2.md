@@ -15,8 +15,6 @@ seo:
 ---
 
 
-
-
 ## Recursion
 
 
@@ -28,9 +26,8 @@ seo:
 **Answer :**
 
 Recursion is a programming technique where a function calls itself to solve a smaller problem of the initial problem. A recursive function typically has two parts:
-
-1. **Base case**: The condition under which the recursion ends.
-2. **Recursive case**: The function calls itself with a modified argument.
+* **Base case**: The condition under which the recursion ends.
+* **Recursive case**: The function calls itself with a modified argument.
 
 ```python
 def factorial(n):
@@ -38,8 +35,7 @@ def factorial(n):
     if n == 0 or n == 1:
         return 1
     # Recursive case: n * (n-1)!
-    return n * factorial(n - 1)
-
+    return n * factorial(n-1)
 
 print(factorial(5))  # Output: 120
 print(factorial(0))  # Output: 1
@@ -50,7 +46,33 @@ ___
  
 ##### Write a function to display the Fibonacci sequence up to nth term where n is provided by the user.
 
-Basic Logic for Fibonacci
+Recursive Fibonacci for getting Just nth Fibonacci number 
+```python
+def fibonacci(n):
+    if n <= 1:
+        return n
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+
+n = 10
+print(f"Fibonacci of {n} is {fibonacci(n)}")
+```
+
+Printing Fibonacci Series with recursion upto n numbers.
+```python
+def fibonacci_sequence(n, a=0, b=1):
+    if n > 0:
+        print(a, end=" ")
+        fibonacci_sequence(n-1, b, a + b)  # Recursive call with next numbers
+
+n = 10
+print(f"Fibonacci sequence up to {n}: ", end="")
+fibonacci_sequence(n)
+```
+
+___
+
+Basic Logic for non recursive Fibonacci Sequence is
 ```python
 def fibonacci(n):
     a, b = 0, 1
@@ -94,11 +116,11 @@ def hanoi(n, source, auxiliary, destination):
         print(f"Move disk 1 from {source} to {destination}")
         return
         
-    hanoi(n - 1, source, destination, auxiliary)
+    hanoi(n-1, source, destination, auxiliary)
     
     print(f"Move disk {n} from {source} to {destination}")
     
-    hanoi(n - 1, auxiliary, source, destination)
+    hanoi(n-1, auxiliary, source, destination)
 
 n = int(input("Enter the number of disks: "))
 hanoi(n, 'A', 'B', 'C')
@@ -126,6 +148,39 @@ ___
 
 ##### Develop a recursive function to generate prime numbers in a given range.
 
+Recursive way
+```python
+def is_prime(n, i=2):
+    if n <= 1:  # Base case
+        return False
+        
+# Base case: i reaches sqrt(n), no divisors found, n is prime
+    if i*i > n:
+        return True
+        
+    # If n is divisible by i, it's not prime
+    if n % i == 0:
+        return False
+        
+    # Recursive case: check the next divisor
+    return is_prime(n, i+1)
+
+def generate_primes(start, end):
+    if start > end:
+        return
+        
+    if is_prime(start):
+        print(start, end=" ")
+    generate_primes(start + 1, end)
+
+
+start = 10
+end = 30
+print(f"Prime numbers between {start} and {end}: ", end="")
+generate_primes(start, end)
+```
+
+Non recursive Approach
 ```python
 import math
 
@@ -257,7 +312,6 @@ Lambda is assigned to `square` so it is a lambda function call that returns the 
 25
 ```
 
-
 Using a lambda function to filter even numbers from a list:
 ```python
 >>> lst = [10, 11, 12, 13, 14, 15, 16, 17]
@@ -324,7 +378,6 @@ Using filter and lambda function to get even numbers from a list:
 
 ___
 
-
 `reduce()` function is used to apply a binary function (a function that takes two arguments) cumulatively to the items of an iterable, reducing to a single value. 
  
 This function is from the `functools` module, so it needs to be imported.
@@ -337,7 +390,6 @@ result = reduce(lambda x, y: x + y, nums)
 print(result)  
 # Output: 10
 ```
-
 
 ____
 
@@ -368,7 +420,6 @@ List comprehension consists of `[]` square braces, containing an expression up f
 - **condition (optional)**: A filter that only includes items that satisfy the condition.
 
 The result is a new list which contains elements formed as a result of executing the expression according to the for loop and if statements.
-
 
 Square only even numbers:
 ```python
@@ -640,7 +691,6 @@ _____
 
 ##### Implement anonymous(lambda) functions for the following:
 
-
 i) Filter out only even numbers from the given list.
 
 **Answer :**
@@ -660,7 +710,6 @@ Using filter and lambda
 >>> evens
 [2, 4, 6]
 ```
-
 
 ii) Reduce the given list of numbers to its sum.
 
@@ -741,20 +790,22 @@ odd = list( filter( lambda x: x%2!= 0, lis))
 evens = [ x for x in lis if x%2==0]
 odd = [ x for x in lis if x%2!=0]
 
+# combining range also
 evens = [ x for x in range(1,50) if x%2==0]
 odd = [ x for x in range(1,50) if x%2!=0]
 ```
 
 (iii) Sum of list of odd numbers of a
 ```python
+# Using list comprehension
 odd = [ x for x in range(1,50) if x%2!=0]
 total = sum(odd)
 
-# or
+# or using reduce and lambda
 from functools import reduce 
 total = reduce( lambda x, y = x+y, odd )
 
-# or
+# or simple loop
 total = 0
 for i in odd:
 	total += i
@@ -770,9 +821,11 @@ cubes = [ x**3 for i in range(1,50)]
 
 # Taking total
 cube_sum = reduce(lambda x,y : x+y, cubes)
-#or
+
+# or
 cube_sum = sum(cubes)
-#or
+
+# or
 cube_sum = 0
 for i in cubes:
 	cube_sum += i
@@ -838,6 +891,5 @@ In one line
 
 
 ___
-
 
 
