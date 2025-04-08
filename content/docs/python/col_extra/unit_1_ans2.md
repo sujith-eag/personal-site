@@ -17,7 +17,9 @@ seo:
 
 ##### Write a program using a while loop that asks the user for a number, and prints a countdown from that number to zero.
 
-Reverse iterating to zero from a number using `-1` step
+**Answer :**
+
+Reverse iterating to zero from a number using `-1` step in for loop, while loop for input.
 ```python
 >>> while True:
 ...     num = int(input("Num : "))
@@ -34,11 +36,42 @@ Num : 7
 1
 ```
 
+Using while loop for printing
+```python
+num = int(input("Enter Number: "))
+i = num
+
+while i>=0:
+	print(f"Countdown: {i}")
+	i -= 1
+```
+
+```python
+>>> num = int(input("Enter Number: "))
+Enter Number: 6
+>>> i = num
+>>> while i>= 0:
+...     print(f"Countdown: {i}")
+...     i -= 1
+... 
+Countdown: 6
+Countdown: 5
+Countdown: 4
+Countdown: 3
+Countdown: 2
+Countdown: 1
+Countdown: 0
+```
+
 ___
 
 ##### Develop a program to print the sum of n natural numbers.
 
-Accumulating the values into `total = 0` using `+= num` 
+**Answer :**
+
+Accumulating the values into `total = 0` using `+= num`
+
+Using for loop
 ```python
 >>> n = 10
 >>> total = 0
@@ -49,9 +82,24 @@ Accumulating the values into `total = 0` using `+= num`
 55
 ```
 
+Using while loop
+```python
+>>> n = 10
+>>> total = 0
+>>> 
+>>> while n > 0:
+...     total += n
+...     n -= 1
+... 
+>>> total
+55
+```
+
 ___
 
 ##### Develop a python program to find the sum of even numbers and odd numbers in the given list.
+
+**Answer :**
 
 ```python
 >>> list_1 = [1,2,3,5,7,8,9,11,12,15,13]
@@ -59,18 +107,18 @@ ___
 >>> odd = 0
 >>> 
 >>> for i in list_1:
-...     if( i % 2== 0):
+...     if( i%2 == 0):
 ...             even += i
 ...     else:
-...             odd+=i
+...             odd += i
 ... 
 >>> even, odd
 (22, 64)
 ```
 
-Same logic in a function, Complete Program
+Same logic put in a function that returns both for a Complete Program.
 ```python
-def sum_even_odd(numbers):
+def Even_Odd(numbers):
     even_sum = 0
     odd_sum = 0
     for num in numbers:
@@ -84,7 +132,7 @@ def sum_even_odd(numbers):
 
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-even_sum, odd_sum = sum_even_odd(numbers)
+even_sum, odd_sum = Even_Odd(numbers)
 
 print(f"Sum of even numbers: {even_sum}")
 print(f"Sum of odd numbers: {odd_sum}")
@@ -94,10 +142,13 @@ ___
 
 ##### Develop a python program to sum the digits of a given number.
 
-Logic to iterate over a number:
-* Dividing number with modulus 10 to get the number in unit place (last position)
-* Accumulating that digit in total
-* Reassigning the number by doing a floor division with 10 to remove the unit place number 
+**Answer :**
+
+Logic to iterate over a number without converting it to a string:
+* Divide number with modulus 10, `%10` returns the remainder which will be the number in unit place (last position)
+* Accumulate that digit in total with `+=`
+* Removing the unit place from number by doing a floor division with 10,  `//10` to remove the unit place from number for next iteration. 
+* Iterate in while loop till the number becomes 0 when all numbers have been removed.
 
 ```python
 >>> num = 45743
@@ -127,6 +178,9 @@ ____
 
 ##### Write a program to count the total number of digits and sum of digits in a number using a while loop.
 
+**Answer :**
+
+Adding a count variable with same previous logic
 ```python
 >> num = 456323445334
 >>> count = 0
@@ -161,7 +215,14 @@ ____
 
 ##### Implement a Python Program to reverse a number and also find the number of digits and Sum of digits in the reversed number. Prompt the user for input.
 
-Logic to reverse Number with place manipulation.
+**Answer :**
+
+Logic to reverse Number with place manipulation:
+* Logic for Iterating over number remains same where last digit is obtained.
+* Using an integer `rev=0` to hold the reversed number (not the sum)
+* `rev = rev*10 + digit` increments the unit place of `rev` and adds the digit in its unit place.
+* This moves the last digit to the first and reverses the string.
+
 ```python
 >>> num = 45743
 >>> rev = 0
@@ -174,6 +235,7 @@ Logic to reverse Number with place manipulation.
 34754
 ```
 
+Also taking count and finding total also in one program
 ```python
 >>> num = 456323445334
 >>> rev_num = 0
@@ -210,8 +272,11 @@ ___
 
 ##### Design a program to print the mid number (which is between minimum and maximum) out of three input numbers
 
-Design a Python program to find the average of best two test scores out of three test scores taken as input.
+* Design a Python program to find the average of best two test scores out of three test scores taken as input.
 
+**Answer :**
+
+Using Comparison and if statements.
 ```python
 >>> a, b, c = 3, 6, 5
 >>> 
@@ -241,7 +306,11 @@ ___
 
 * Develop a python function to return the number of palindrome words in a line of text.
 
-Logic for palindrome check 
+**Answer :**
+
+Logic for palindrome check is to reverse a word `[::-1]` and compare with original.
+Additionally it can be converted to lower using `word.lower()` to make it case insensitive.
+
 ```python
 def is_palindrome( s = "MADAM"):
     return s == s[::-1]
@@ -250,6 +319,7 @@ print(is_palindrome())
 # Output: True
 ```
 
+Splitting a string into word an checking each word to get count.
 ```python
 >>> text = "Madam the racecar and the level of civic duty were admired by the radar"
 >>> words = text.split(" ")
@@ -264,6 +334,7 @@ print(is_palindrome())
 5
 ```
 
+Making the logic into a function to check for palindrome in a text.
 ```python
 def count_palindromes(text):
     words = text.split()
@@ -283,6 +354,9 @@ ___
 
 ##### Design a simple calculator with different mathematical operations using python script.
 
+**Answer :**
+
+A menu driven calculator function for four operations.
  ```python
  def calculator():
 	 print("Select operation:")
@@ -317,25 +391,34 @@ ___
 
 ##### Using for loop, print of table of Celsius/Fahrenheit equivalences. Let c be the Celsius temperatures, ranging from 0 to 100. For each value of c, print the corresponding Fahrenheit temperature.
 
+**Answer :**
 
 ```python
-print("Celsius\tFahrenheit")
+print("Celsius\tFahrenheit") # header
 
 # Loop through Celsius values from 0 to 100
 for celsius in range(0, 101):
     fahrenheit = (9/5) * celsius + 32
     print(f"{celsius}\t{fahrenheit}")
-
 ```
 
 ____
 
-##### Develop a script to read n values into a list. Separate the numbers in the list into two new lists, first contains all prime numbers and second contains all non-prime numbers.
+##### Develop a script to read n values into a list. 
+Separate the numbers in the list into two new lists, first contains all prime numbers and second contains all non-prime numbers.
+
+**Answer :**
 
 Steps: 
 * Input to accept n values from the user and store them in a list.
 * A Prime Check function to check if a number is prime.
 * Traversing through the list and classifying each number as prime or non-prime, and storing them in two separate lists.
+
+Logic for checking if it is a prime is:
+* if a number is 1 or less than 1 it is not prime
+* Divide the number from those between 2 and (square root of the number +1) and convert it to an `int` to get a whole number.
+* If any value in this range can divide without remainder then it is not a prime.
+* If no values divided, then it is a prime.
 
 ```python
 import math
@@ -376,16 +459,29 @@ def separate_numbers():
 separate_numbers()
 ```
 
-The last section can be done with list comprehension also
+
+The last section can be done with list comprehension also instead of `if else`.
 ```python
 primes = [ num for num in values if is_prime(num) ]
+
 non_primes = [ num for num in values if not is_prime(num) ]
 ```
 
 ____
 
-Develop a Python program that will accept, as input, a series of names and salaries. Use the name ‘End’ to mark the end of the sequence of values. After the values have been entered, print the average salary and the names and salaries of those individuals with the highest and lowest salaries.
+##### Program on finding highest and Lowest
 
+* Develop a Python program that will accept, as input, a series of names and salaries. Use the name ‘End’ to mark the end of the sequence of values. After the values have been entered, print the average salary and the names and salaries of those individuals with the highest and lowest salaries.
+
+**Answer :**
+
+Logic of Program if to be done in list:
+* Using forever loop to get input and having a `if` condition to break the loop if input is end.
+* Getting the input as float, if it is not a number then using `try except and continue` to handle the error.
+* If it is a valid number, then name and salary are stored in a list.
+* `sum` and `len` of list are used to find the average.
+* Finding the index of `max()` of salary in list using `index()`
+* The same index can be used in names list to get the right name.
 ```python
 names = []
 salaries = []
@@ -394,7 +490,7 @@ while True:
 	name = input("Enter name (or 'End' to exit) :")
 
 	if name.lower() == "end":
-		break;
+		break
 	
 	try:
 		salary = float(input(f"Enter salary for {name}") )
@@ -412,9 +508,53 @@ index_low = salaries.index(min(salaries))
 
 print(f"Average will be {average_salary:.2f}")
 print(f"Person: {names[index_high]} has Hight salary of {max(salaries)}")
-print(f"Person: {names[index_low]} has Low salary of {min[salaries]}")
+print(f"Person: {names[index_low]} has Low salary of {min(salaries)}")
 ```
 
+
+Same program done using dictionary:
+Iterating over key values to get the highest and lowest values and their respective names.
+(This handles only one person, not multiple people with same high and low salaries)
+
+```python
+detail = {}
+
+while True:
+    name = input("Enter name of person (or 'End' to quit) : ")
+    if name.lower() == 'end':
+        break
+
+    try:
+        salary = float(input(f"Enter salary of {name} : "))
+    except ValueError:
+        print("Invalid Salary")
+        continue
+		
+    detail[name] = salary
+
+total_salary = 0
+highest = 0
+lowest = 10**100
+high_name = ""
+low_name = ""
+
+for name, sal in detail.items():
+    total_salary += sal
+
+    if sal > highest:
+        highest = sal
+        high_name = name
+		
+    if sal < lowest:
+        lowest = sal
+        low_name = name
+
+average = total_salary/len(detail)
+
+print("\nThe Average Salary is :", average)
+print(f"The higest salary is for {high_name} with {highest}")
+print(f"The lowest salary is for {low_name} with {lowest}\n")
+```
 
 ____
 
@@ -422,10 +562,8 @@ ____
 
 To develop a Python program that finds the roots of a quadratic equation ( ax^2 + bx + c = 0 ), we need to use the quadratic formula:
 
-1. Input Validation: to ensure `a, b, c`  are numbers and `a` is not zero.
- 
+1. Input Validation: to ensure `a, b, c`  are numbers and `a` is not zero. 
 2. **Discriminant Calculation**: The discriminant ( `b^2 - 4ac` ) will determine the nature of the roots.
-
 3. If the discriminant is negative, the program should calculate and display the complex roots.
 
 ```python

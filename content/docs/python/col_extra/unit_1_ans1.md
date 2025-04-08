@@ -15,24 +15,23 @@ seo:
 ---
 
 
-
 #### What are identical objects and equivalent objects? Give examples.
 
 **Answer :**
 
-- Identical objects: They are the same object in memory.
-- Equivalent objects: They have the same content or value.
-
+Identical objects are the same object in memory.    
+Equivalent objects are different objects that have the same content or value.
 
 * **Identical Objects** ( having Same Object Identity) are two references that point to the exact same object in memory.
-- Using the `is` operator we can check if two references point to the same memory location (i.e., the same object).
+* Identity operator `is` can be used to check if two objects have the same reference pointing to the same memory location, then they are the same objects.
 
 ```python
 a = [1, 2, 3]
-b = a  
+b = a
 # b is assigned the same reference as a
 
-print(a is b)  # True
+print(a is b)  
+# True
 ```
 
 ```python
@@ -40,11 +39,14 @@ a = [1, 2, 3]
 b = [1, 2, 3]  
 # b is a new list with the same contents as a
 
-print(a is b)  # False
+print(a is b)  
+# False
 ```
 
-* ***Equivalent Objects** (Same Value) refer to two objects that have the same value or content, but they may be stored at different memory locations (i.e., they are not identical).
-- Two objects are equivalent (i.e., have the same value) can be checked using the `==` operator. This compares the values or content of the objects.
+___
+
+* **Equivalent Objects** (having Same Values) refer to two objects that have the same value or content, but they may be stored at different memory locations (i.e., they are not identical).
+- Comparison Operator `==` can be used to check if two objects have the same value or content, hence both are equivalent objects.
 
 ```python
 a = [1, 2, 3]
@@ -53,7 +55,6 @@ b = [1, 2, 3]
 print(a == b)  
 # True, because a and b have the same content
 ```
-
 
 ____
 
@@ -67,12 +68,10 @@ ____
 
 ##### Answer
 
-An **operator** is a symbol that performs an operation on one or more operands (variables or values).
-
-Classification Based on Nature:
+An **operator** is a symbol that performs an operation on one or more operands (variables or values). They can be classified based on Nature :
 - Arithmetic Operators : `+`, `-`, `*`, `/`, `%`, `//`, `**`
 - Assignment Operators : `=`, `+=`, `-=`, `*=`, `/=`, `%=` , `**=`, `//=`
-- Relational Operators : `>`, `<`, `==`, `!=`, `<=`, `>=`
+- Relational / Comparison Operators : `>`, `<`, `==`, `!=`, `<=`, `>=`
 - Logical Operators : `and`, `or`, `not`
 - Membership Operators : `in`, `not in`
 - Identity Operators : `is`, `is not`
@@ -136,7 +135,7 @@ y = -x  # y = -10
 ---
 
 ##### 4. Relational Operators
-Relational (or comparison) operators are used to compare two values. They return a boolean value (`True` or `False`).
+Relational (or Comparison) operators are used to compare two values. They return a boolean value (`True` or `False`).
 - **`>`**: Greater than
 - **`<`**: Less than
 - **`==`**: Equal to
@@ -179,9 +178,9 @@ print(not x)    # False
 ---
 
 ##### 6. Membership Operators
-Membership operators are used to check if a value is present in a sequence (like a string, list, tuple, etc.).
-- `in`: Returns `True` if the value is found in the sequence
-- `not in`: Returns `True` if the value is **not** found in the sequence
+Membership operators are used to check if a value is present in a sequence (like a string, list, dictionary, tuple, etc.).
+- `in`: Returns `True` if the value is found in the sequence.
+- `not in`: Returns `True` if the value is **not** found in the sequence.
 
 ```python
 fruits = ['apple', 'banana', 'orange']
@@ -232,8 +231,6 @@ print(x ^ y)  # Bitwise XOR: 6 (binary: 0110)
 print(~x)     # Bitwise NOT: -6 (binary: 1010)
 ```
 
-
-____
 ____
 
 #### Examine each of the following expressions. 
@@ -247,6 +244,8 @@ iv. 10 % 4 + 8 / 4
 v. 3 ** 10 / 3.
 ```
 
+**Answer :**
+
 ```python
 >>> 10/5
 2.0  
@@ -258,7 +257,8 @@ v. 3 ** 10 / 3.
 
 >>> 5.0/10
 0.5
-# One is float and another is int still result is float
+# One is float and another is int 
+# still result is float after division
 
 >>> 10 % 4 + 8 / 4
 4.0
@@ -273,17 +273,16 @@ v. 3 ** 10 / 3.
 # 59049 / 3 returns float
 ```
 
-
 ___
 
 ## Control Flow and Conditionals
 
 
-#### Write a python script to demonstrate `if..elif...else` statement in python.
+#### Write a python script to demonstrate 'if..elif...else' statement in python.
 
-`if...elif...else` are the primary structures for controlling the flow of execution based on conditions.
+`if...elif...else` are the primary structures for controlling the flow of the program and execution of code blocks based on conditional statements which are Boolean expressions.
 
-`if`, `elif`, `else` – Conditional execution of code blocks based on boolean expressions. Python checks each condition in order, and once one condition is true, it skips the rest:
+Python checks each condition in order within the `if..elif..else`, and if one of the condition is true, then it executes that code block and skips the rest of the code blocks :
 
 ```python
 x, y = 3, 4
@@ -300,7 +299,7 @@ else:
 name = input("What is your name? ")
 
 if name == "Harry" or name == "Hermione" or name == "Ron":
-    print("Gryffindor")
+	print("Gryffindor")
 elif name == "Draco":
     print("Slytherin")
 else:
@@ -314,9 +313,13 @@ ___
 
 #### Illustrate the different types of iterative statements available in Python.
 
+* Illustrate conditions and looping statements in python with suitable examples.
+
 **Answer :**
 
-`for` loop – Used to repeatedly execute a code block for a fixed number of times, often iterating over a sequence (like a list, tuple, string, range).
+`while` and `for` loops are two main iterative statements that are used to repeatedly execute a code block.
+
+`for` loop is Used to repeatedly execute a code block for a fixed number of times, it is also used for iterating over elements in sequence like a list, tuple, string, range, dictionary.
 
 Syntax:
 ```python
@@ -325,7 +328,7 @@ for item in iterable:
 ```
 
 ```python
-# Iterate over a list
+# Iterate over list elements
 for i in [0, 1, 2]:
     print("Meow")
 
@@ -339,13 +342,14 @@ for i in range(0, n):
 ```
 
 
-`while` loop – Repeats a block of code as long as a specified condition is true, used when the number of iterations is not known.
+`while` loop Repeats a block of code as long as a specified condition (Boolean Expression) is true, this is used when the number of iterations is not known in advance.
 
 Syntax
 ```python
 while condition:
 	# block of code
 ```
+The condition should eventually become false, otherwise the loop runs indefinitely as an infinite loop.
 
 ```python
 i = 3
@@ -365,19 +369,17 @@ ___
 
 #### Demonstrate the usage of pass, continue and break with the help of appropriate example.
 
-* Illustrate conditions and looping statements in python with suitable examples.
 * Illustrate break, continue and pass statements in Python.
 * Describe the purpose and usage of Break, Continue and Pass in Python.
 * In what situations, break and continue statements were used? Discuss with examples.
 * Demonstrate the usage of pass, break and continue statement in python using suitable examples.
 * Explain the significance of break, continue and pass with suitable example.
 
-
 **Answer :**
 
 - `break` – Exits the loop immediately and transfers control to the next statement after the loop.
 - `continue` – Skips the rest of the current loop iteration and moves to the next iteration.
-- `pass` – It is a do nothing statement, used as a placeholder.
+- `pass` – It is a do nothing statement, used as a placeholder in code blocks.
 
 Breaking out of the the loop when `i == 3`
 ```python
@@ -385,6 +387,7 @@ for i in range(5):
    if i == 3:
 	   break
    print(i)
+   
 # Output: 0 1 2
 ```
 
@@ -394,19 +397,8 @@ for i in range(5):
    if i == 3:
 	   continue
    print(i)
+   
 # Output: 0 1 2 4
-```
-
-```python
-for i in range(10):
-    if i == 4:
-        pass  # Do nothing when i is 4
-    elif i == 6:
-        continue  # Skip printing when i is 6
-    elif i == 8:
-        break  # Exit the loop when i is 8
-    else:
-        print(f"Current value of i: {i}")
 ```
 
 ```python
@@ -417,18 +409,21 @@ for i in range(5):
 # Output: 0 1 2 3 4
 ```
 
-```python
-prompt = "\nEnter the city you have visited:"
-prompt += "\nUse 'quit' to exit. "
+____
 
-while True:
-    city = input(prompt)
-    if city == "quit":
-        break  # Exits when 'quit' is entered
+```python
+for i in range(10):
+    if i == 4:
+        pass  # Do nothing when i is 4
+    elif i == 6:
+        continue  # Skip printing when i is 6
+    elif i == 8:
+        break  # Exit the loop when i is 8
     else:
-        print(f"\n{city.title()} is lovely")
+        print(f"Current value of i: {i}")  
 ```
 
+Printing only Odd Numbers in a range
 ```python
 number = 0
 
@@ -440,6 +435,18 @@ while number < 10:
         print(number)  # Prints only odd numbers
 ```
 
+Breaking out of loop using user input.
+```python
+prompt = "\nEnter the city you have visited:"
+prompt += "\nUse 'quit' to exit. "
+
+while True:
+    city = input(prompt)
+    if city == "quit":
+        break  # Exits when 'quit' is entered
+    else:
+        print(f"\n{city.title()} is lovely")
+```
 
 ___
 
@@ -510,7 +517,7 @@ Current Letter : y
 Current Letter : t
 ```
 
-ii) The letter `h` will not be printed as the loop gets passed to next iteration when `letter == h` without printing `h`.
+ii)  When `letter == h`, the `continue` executes and moves the loop to next iteration without printing `h`.
 ```python
 for letter in'Python':
 	if letter =='h':
@@ -525,7 +532,7 @@ Current Letter : o
 Current Letter : n
 ```
 
-iii) All letters are printed because pass does nothing even when `letter == h` . So execution continues and 'This is pass block' and letter 'h' are both printed.
+iii) All letters are printed because `pass` does nothing when `letter == h` . So execution continues and 'This is pass block' and letter 'h' both are printed.
 ```python
 for letter in'Python':
 	if letter =='h':
@@ -545,7 +552,11 @@ Current Letter : n
 
 ___
 
-#### Give the syntax of range() function and discuss its importance. Write a python script to demonstrate for loop statement with range() function.
+#### Give the syntax of 'range()' function and discuss its importance. 
+
+* Write a python script to demonstrate for loop statement with range() function.
+
+**Answer :**
 
 The `range()` function generates a sequence of numbers, commonly used for looping or generating lists with specific patterns.
 
@@ -584,17 +595,23 @@ Using length of a list as range input to iterate over the list.
 Finding all the divisors of a given number using range
 ```python
 def factors(n):
-	flist = []
+	DivList = []
 	for i in range(1, n + 1):
 		if n % i == 0:
-			flist.append(i)  
-		# Or flist = flist + [i]
-	return flist
+			DivList.append(i)  
+			# Or DivList = DivList + [i]
+	return DivList
 ```
 
 ___
-#### Demonstrate the usage of while statement in python. Write a python script to demonstrate while concept to add 5 numbers.
 
+#### Demonstrate the usage of while statement in python. 
+
+* Write a python script to demonstrate while concept to add 5 numbers.
+
+**Answer :**
+
+Adding only five numbers from a list.
 ```python
 >>> list_1 = [3, 5, 6, 7, 10, 15, 25]
 >>> number = 0
@@ -609,7 +626,7 @@ ___
 
 ___
 
-#### Printing Pattern
+#### Pattern Printing
 
 Develop a python program that reads two integer values n and m from the user, then produces a box that is n wide and m deep, such as the following:
 Enter a width: 5
@@ -634,8 +651,7 @@ Enter width: 5
 
 **Answer :**
 
-Easy Method is to print top, print middle and print bottom.
-(doesn't work in terminal without function)
+Easy Method is to print top, print middle and print bottom. (doesn't work in terminal without function)
 
 ```python
 width = int(input("Enter a width: "))
@@ -644,14 +660,13 @@ height = int(input("Enter a height: "))
 # Printing top
 print('@' * width)
 
-# Printing middle
+# Printing middle with blank space
 for i in range(height - 2):
-    print('@' + ' ' * (width - 2) + '@')
+    print('@' + " "*(width-2) + '@')
 
 # Printing Bottom if height was not 1
 if height > 1:
     print('@' * width)
-
 
 @@@@
 @  @
@@ -660,9 +675,9 @@ if height > 1:
 ```
 
 
-Proper method using double loop, one to print the height and another to print the width.
+Proper method using double loop, one to print the height and another to print the width by checking for last and first rows.
 
-`if (i == 0 or i == height-1):` is used to check if it is first or last line and print the full width and go to next iteration. (Printing row at a time)
+`if (i == 0 or i == height-1):` is used to check if it is first or last line and print the full width and go to next iteration. (Printing each row at a time)
 
 ```python
 n = int(input("Enter a width: "))
@@ -672,7 +687,7 @@ for i in range(m):
     if i == 0 or i == m-1:  # First and last row
         print('@' * n)
     else:                   # Middle rows
-        print('@' + ' ' * (n - 2) + '@')
+        print('@' + " "*(n-2) + '@')
 ```
 
 ```
@@ -686,7 +701,7 @@ Enter a height: 4
 ```
 
 
-Another method: 
+Another method print loop by each element: 
 
 Second loop moves horizontally (using `end = ""`) and prints character only when it is first and last element., otherwise prints space. (Printing character one at a time)
 
@@ -749,11 +764,12 @@ ___
 ```
 Is it possible to get the same output using a single loop?Justify.
 
+**Answer :**
 
 To display a right angled triangle with 10 rows
 ```python
-for i in range(1,11):
-	for j in range(1, i+1):
+for i in range(1,11):  # for 10 rows
+	for j in range(1, i+1): # for * print
 		print("* ", end=' ')
 	print()
 ```
@@ -826,11 +842,11 @@ n = 5  # Half the height of the diamond
 
 # Upper half
 for i in range(1, n + 1):
-    print(' ' * (n - i) + '* ' * i)
+    print(' '*(n-i) + '* '*i)
 
 # Lower half
 for i in range(n-1, 0, -1):
-    print(' ' * (n - i) + '* ' * i)
+    print(' '*(n-i) + '* '*i)
 ```
 
 ```
