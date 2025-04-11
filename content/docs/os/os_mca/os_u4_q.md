@@ -15,84 +15,96 @@ seo:
 ---
 
 
+### Memory Management Concepts
 
-1. Exemplify the process of paging and segmentation of memory.
-2. With a neat diagram, explain the concept of segmentation. What are the advantages of segmentation?
-3. What is Segmentation? Illustrate it with a neat sketch.
+#### Segmentation
 
+- What is Segmentation? Illustrate it with a neat sketch.
+- With a neat diagram, explain the concept of segmentation. What are the advantages of segmentation?
+- Exemplify the process of paging and segmentation of memory.
+- Paging vs Segmentation: Explain with examples and differences.
 
-4. With a neat diagram of paging hardware, explain the concept of paging. How does paging differ from segmentation? Explain with an example.
-5. Explain paging and its hardware with a neat diagram. What are the advantages of paging?
-6. Describe paging with the hardware diagram.
-7. With a neat diagram, explain paging hardware with TLB.
-8. With a neat diagram and example, demonstrate the working procedure of paging hardware with TLB.
-9. Explain with the help of a neat diagram how TLB can be used to improve Effective Access Time.
+#### Paging
 
+- Explain paging and its hardware with a neat diagram. What are the advantages of paging?
+- With a neat diagram of paging hardware, explain the concept of paging. How does paging differ from segmentation? Explain with an example.
+- Describe paging with the hardware diagram.
+- With a neat diagram, explain paging hardware with TLB.
+- With a neat diagram and example, demonstrate the working procedure of paging hardware with TLB.
+- Explain with the help of a neat diagram how TLB can be used to improve Effective Access Time.
 
-10. Under what circumstances do page faults occur? Describe the actions taken by the OS when page faults occur.
-11. With a neat diagram, describe the steps in handling a page fault.
-12. Describe the steps in handling a page fault with a neat diagram.
+---
 
+### Page Faults and Handling
 
+- Under what circumstances do page faults occur? Describe the actions taken by the OS when page faults occur.
+- With a neat diagram, describe the steps in handling a page fault.
+- Describe the steps in handling a page fault with a neat diagram.
 
-13. Distinguish between: i) Logical vs physical address space  ii) Paging vs segmentation  iii) First fit and best fit algorithms
+---
 
-14. Discuss first-fit, best-fit, and worst-fit strategies of dynamic memory allocation.
+#### Fragmentation
 
-15. Distinguish between internal fragmentation and external fragmentation. How do you overcome the problem of both internal and external fragmentation?
+- Distinguish between internal fragmentation and external fragmentation. How do you overcome the problem of both?
+- Write short notes on the following: Fragmentation.
 
-16. Write a note on trashing.
+#### Allocation Strategies
 
-17. Explain briefly the structures of the following Page tables: i) Hierarchical page table ii) Inverted page table
+- Distinguish between: First fit and Best fit algorithms.
+- Discuss first-fit, best-fit, and worst-fit strategies of dynamic memory allocation.
+- Explain the strategies for selecting the free hole.
+- Give five memory partitions of 100KB, 500KB, 200KB, 300KB, and 600KB (in order). How would each of the first-fit, best-fit, and worst-fit algorithms place processes of 212KB, 417KB, 112KB, and 426KB (in order)? Which algorithm uses the memory efficiently?
 
-18. Write short notes on the following: i) Swapping process in memory  ii) Fragmentation.
+---
 
-19. Illustrate the facts and concepts for the following terms: i) Dynamic Loading  ii) Address Binding  iii) Swapping.
+### Addressing and Address Space
 
-20. What do you mean by memory protection? Elaborate on the facts of memory protection with proper justifications.
+- Distinguish between: Logical vs Physical address space.
+- Illustrate the facts and concepts for the following terms: Address Binding.
+- What do you mean by memory protection? Elaborate on the facts of memory protection with proper justifications.
+- Calculate the maximum number of pages needed if a system supports a 16-bit address line and 1KB page size.
 
-21. Calculate the maximum number of pages needed if a system supports a 16-bit address line and 1KB page size.
+---
 
-22. Define Access Matrix for protection and how it is implemented.
+### Swapping and Memory Techniques
 
-23. Illustrate how swap space management is implemented.
+- Write short notes on the following: Swapping process in memory.
+- Illustrate the facts and concepts for the following terms: Swapping.
+- Illustrate how swap space management is implemented.
+- Write a note on thrashing.
+- Illustrate the facts and concepts for the following terms: Dynamic Loading.
 
-24. Explain the strategies for selecting the free hole.
+---
 
-25. Give five memory partitions of 100KB, 500KB, 200KB, 300KB, and 600KB (in order). How would each of the first-fit, best-fit, and worst-fit algorithms place processes of 212KB, 417KB, 112KB, and 426KB (in order)? Which algorithm uses the memory efficiently?
+Page Table Structures
+- Explain briefly the structures of the following Page tables:  i) Hierarchical page table  ii) Inverted page table
 
-____
+Protection and Access Control
+- Define Access Matrix for protection and how it is implemented.
 
+---
 
+1. A process references 5 pages (A, B, C, D, E) in the following order: A, B, C, D, A, E, B, C, E, D. Assuming the replacement algorithms are FIFO, LRU, and Optimal, find out the number of page faults during the sequence of references, starting with an empty main memory with 3 frames.
 
-1. Illustrate any two page-replacement algorithms for the following reference string: 1, 2, 3, 4, 1, 2, 5, 1, 2, 3, 4, 5.
+2. Illustrate any two page-replacement algorithms for the following reference string: 1, 2, 3, 4, 1, 2, 5, 1, 2, 3, 4, 5. compare the number of page faults for algorithms algorithms using three frames.
 
-2. Given the page reference string: 1, 2, 3, 4, 2, 1, 5, 6, 2, 1, 2, 3, 7, 6, 3, 2, 1, 2, 3, 6, and 3 frames, compare the number of page faults for the following page replacement algorithms: LRU, FIFO, Optimal page replacement algorithm.
+3. Given the page reference string: 1, 2, 3, 4, 2, 1, 5, 6, 2, 1, 2, 3, 7, 6, 3, 2, 1, 2, 3, 6, and 3 frames, compare the number of page faults for the following page replacement algorithms: LRU, FIFO, Optimal page replacement algorithm.
 
-3. A process references 5 pages (A, B, C, D, E) in the following order: A, B, C, D, A, E, B, C, E, D. Assuming the replacement algorithms are FIFO, LRU, and Optimal, find out the number of page faults during the sequence of references, starting with an empty main memory with 3 frames.
+4. A small computer has 4 page frames. A process makes the following list of page references: 1, 2, 3, 4, 0, 3, 2, 1, 5, 2, 3, 1, 2, 5, 0. How many page faults occur using FIFO, LRU, and Optimal page replacement algorithms?
 
-4. A process references 5 pages (A, B, C, D, E) in the following order: A, B, C, D, A, E, B, C, E, D. Assuming the replacement algorithms are FIFO, LRU, and Optimal, find out the number of page faults during the sequence of references, starting with an empty main memory with 3 frames.
+5. Consider the following page reference string: 1, 2, 3, 4, 2, 1, 5, 6, 2, 1, 2, 3, 7, 6, 3, 2, 3, 6. Find out the number of page faults, assuming 3 frames, using: FIFO, LRU, Optimal page replacement algorithm.
 
-5. A small computer has 4 page frames. A process makes the following list of page references: 1, 2, 3, 4, 0, 3, 2, 1, 5, 2, 3, 1, 2, 5, 0. How many page faults occur using FIFO, LRU, and Optimal page replacement algorithms?
+6. Consider the following page reference string: 1, 2, 3, 4, 2, 1, 5, 6, 2, 1, 2, 3, 7, 6, 3, 2, 1, 2, 3, 6. How many page faults would occur in the case of:  FIFO, LRU, Optimal page replacement algorithms assuming three and four frames?
 
-6. Consider the following page reference string: 1, 2, 3, 4, 2, 1, 5, 6, 2, 1, 2, 3, 7, 6, 3, 2, 3, 6. Find out the number of page faults, assuming 3 frames, using: FIFO, LRU, Optimal page replacement algorithm.
+7. A computer has 4 page frames. A process makes the following list of page references: 1, 2, 3, 4, 6, 3, 2, 1, 5, 2, 3, 1, 2, 5, 6. How many page faults occur using: FIFO,  LRU, Optimal page replacement algorithms?  Consider that initially 3 frames are filled for FIFO, 2 frames are filled for LRU, and 1 frame is filled for Optimal page replacement.
 
-7. Consider the following page reference string: 1, 2, 3, 4, 2, 1, 5, 6, 2, 1, 2, 3, 7, 6, 3, 2, 1, 2, 3, 6. How many page faults would occur in the case of:  FIFO, LRU, Optimal page replacement algorithms assuming three and four frames?
+8. Consider the reference string 7, 2, 3, 4, 3, 2, 1, 4, 5, 2, 3, 1, 8, 7, 3, 2, 4, 1, 1, 2 with 3 memory frames. Determine the page faults using: FIFO, LRU, Optimal page replacement algorithm. Consider that initially 3 frames are filled.
 
-8. A computer has 4 page frames. A process makes the following list of page references: 1, 2, 3, 4, 6, 3, 2, 1, 5, 2, 3, 1, 2, 5, 6. How many page faults occur using: FIFO,  LRU, Optimal page replacement algorithms?  Consider that initially 3 frames are filled for FIFO, 2 frames are filled for LRU, and 1 frame is filled for Optimal page replacement.
+9. Consider the reference string 1, 2, 3, 4, 2, 2, 5, 3, 2, 1, 6, 3, 4, 5, 3, 1 with 3 memory frames. Determine the page faults using: FIFO, LRU, Optimal page replacement algorithm.
 
-9. Consider the reference string 7, 2, 3, 4, 3, 2, 1, 4, 5, 2, 3, 1, 8, 7, 3, 2, 4, 1, 1, 2 with 3 memory frames. Determine the page faults using: FIFO, LRU, Optimal page replacement algorithm. Consider that initially 3 frames are filled.
+10. A small computer has 3 page frames. A process makes the following list of page references: 5, 4, 3, 2, 1, 4, 3, 5, 4, 3, 2, 1, 5. How many page faults occur using FIFO, LRU, and Optimal page replacement algorithms?
 
-10. Consider the reference string 1, 2, 3, 4, 2, 2, 5, 3, 2, 1, 6, 3, 4, 5, 3, 1 with 3 memory frames. Determine the page faults using: FIFO, LRU, Optimal page replacement algorithm.
-
-11. A small computer has 3 page frames. A process makes the following list of page references: 5, 4, 3, 2, 1, 4, 3, 5, 4, 3, 2, 1, 5. How many page faults occur using FIFO, LRU, and Optimal page replacement algorithms?
-
-12. A small computer has 3 page frames. A process makes the following list of page references: 5, 4, 3, 2, 1, 4, 3, 5, 4, 3, 2, 1, 5. How many page faults occur using FIFO, LRU, and Optimal page replacement algorithms?
-
-13. Consider the reference string 1, 2, 3, 4, 6, 5, 2, 5, 5, 6, 4, 1, 1, 2, 3, 4 with 4 memory frames. Determine the page fault using: FIFO, LRU, Optimal page replacement algorithm.
-
-14. Consider the reference string 1, 2, 3, 4, 6, 5, 2, 5, 5, 6, 4, 1, 1, 2, 3, 4 with 4 memory frames. Determine the page fault using: FIFO, LRU, Optimal page replacement algorithm.
-
+11. Consider the reference string 1, 2, 3, 4, 6, 5, 2, 5, 5, 6, 4, 1, 1, 2, 3, 4 with 4 memory frames. Determine the page fault using: FIFO, LRU, Optimal page replacement algorithm.
 
 _____
 

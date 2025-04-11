@@ -1,5 +1,5 @@
 ---
-title: "DS - Unit-2 Questions Answered"
+title: "DS - Unit-2 Q_Answered"
 description: ""
 summary: ""
 date: 2025-01-01T16:00:52+05:30
