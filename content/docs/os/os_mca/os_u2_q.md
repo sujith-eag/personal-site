@@ -15,6 +15,7 @@ seo:
 ---
 
 
+
 ### Process Basics
 
 - Define a process. List the different fields of a Process Control Block (PCB).
@@ -26,6 +27,8 @@ seo:
 - Define a process and present its various states.
 
 - Explain the different states of a process with a neat diagram.
+
+- Explain how a system process is created and terminated.
 
 
 ### Scheduling and Execution

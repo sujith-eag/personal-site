@@ -15,7 +15,7 @@ seo:
 ---
 
 
-### Operating System Services
+#### Operating System Services
 
 * List and explain operating system services.
 * Discuss the operating system services.
@@ -23,11 +23,9 @@ seo:
 * Define an operating system. List and explain the services provided by an operating system.
 * List the services provided by the operating system. Elaborate on each service in the context of its convenience to the users.
 
-* Explain how a system process is created and terminated.
-
 ---
 
-### System Calls
+#### System Calls
 
 * Write short notes on different types of system calls.
 * What are system calls? Discuss any three system calls.  
@@ -38,24 +36,14 @@ seo:
 
 ---
 
-### System Programs
+#### System Programs
 
 * What are system programs? Explain their categories.
 * Define a system program. Explain the different categories provided by system programs.
 
-___
-
-### Virtual Machines
-
-* What are virtual machines? Discuss their benefits.
-* With a neat diagram, describe the architecture of VMware and Java Virtual Machine.
-* What is a virtual machine? Discuss JVM.  
-* Define Virtual Machines. Explain in detail their implementations and benefits with examples.
-* With a neat diagram, describe the architecture of VMware and Java Virtual Machine. 
-
 ---
 
-### Dual-Mode Operation
+#### Dual-Mode Operation
 
 * Explain the dual-mode operation in an operating system with a neat diagram.
 * Explain the dual-mode operation in an operating system.
@@ -63,7 +51,7 @@ ___
 
 ---
 
-### Computer Systems
+#### Computer Systems
 
 * Compare client-server with peer-to-peer computing. 
 
@@ -80,7 +68,9 @@ ___
 
 ---
 
-### Kernel Approaches
+## Old Syllabus
+
+#### Kernel Approaches
 
 * In what ways is the modular kernel approach similar to the layered approach? In what ways does it differ from the layered approach?  
 * In what ways is the modular kernel approach similar to the layered approach? How does it differ from the layered approach?  
@@ -88,7 +78,7 @@ ___
 
 ---
 
-### Multithreading
+#### Multithreading
 
 * Explain different multithreading models. 
 * What is multithreading? Explain various multithreading models.
@@ -96,5 +86,14 @@ ___
 * Mention and explain any four benefits of multithreaded programming.
 * Present the benefits of multithreaded programming.
 
+____
+
+#### Virtual Machines
+
+* What are virtual machines? Discuss their benefits.
+* With a neat diagram, describe the architecture of VMware and Java Virtual Machine.
+* What is a virtual machine? Discuss JVM.  
+* Define Virtual Machines. Explain in detail their implementations and benefits with examples.
+* With a neat diagram, describe the architecture of VMware and Java Virtual Machine. 
 
 ____
