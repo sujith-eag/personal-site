@@ -116,6 +116,15 @@ The percentage of times that the page number of interest is found in the TLB is 
 
 ### Virtual Memory Management
 
+Memory protection in a paged environment is accomplished through **protection bits** associated with each frame. One additional bit, called the **valid-invalid bit**, is generally attached to each page table entry.
+
+- When the bit is set to **valid**, the page is part of the process’s logical address space and is therefore a legal (valid) page.
+
+- When the bit is set to **invalid**, the page is not part of the process’s logical address space, and illegal address references are trapped using the valid-invalid bit.
+
+{{< figure src="images/os/8_15_ValidBits-min.jpg" alt="Valid-Invalid Bits" caption="Valid-Invalid Bit Scheme" >}}
+
+The operating system sets this bit for each page to allow or disallow access to the page. If a page’s valid-invalid bit is set to invalid, the computer traps to the operating system in case of an invalid page reference.
 
 ### Page Faults and Handling
 
@@ -125,50 +134,42 @@ The percentage of times that the page number of interest is found in the TLB is 
 
 **Answer :**
 
-### Paging Memory Protection
+In virtual memory systems that use **demand paging**, only the necessary pages of a program are loaded into memory on demand. The rest remain on secondary storage until needed.
 
-Memory protection in a paged environment is accomplished through **protection bits** associated with each frame. These bits are typically stored in the page table.
+A page fault occurs when a running program tries to access a page that is not currently loaded into main memory (RAM). 
 
-One additional bit, called the **valid-invalid bit**, is generally attached to each page table entry.
+Common reasons for a page fault include:
 
-- When the bit is set to **valid**, the page is part of the process’s logical address space and is therefore a legal (valid) page.
+- The process is accessing part of its logical address space but it has not yet been loaded into main memory.
 
-- When the bit is set to **invalid**, the page is not part of the process’s logical address space, and illegal address references are trapped using the valid-invalid bit.
+- The page was previously in memory but was swapped out to disk to make room for other pages.
 
-The operating system sets this bit for each page to allow or disallow access to the page. If a page’s valid-invalid bit is set to invalid, the computer traps to the operating system in case of an invalid page reference.
+- The page table entry is marked as invalid for the accessed page, indicating the page is not in memory.
 
-### Demand Paging
+The memory management unit (MMU), during address translation, checks the page table entry’s valid-invalid bit. If the bit is set to invalid, a page fault is triggered.
+Control is transferred to the operating system indicating the required page needs to be loaded into memory.
 
-In traditional systems, the entire executable program is loaded into memory from secondary storage before it begins execution. However, in many cases, we don’t need the entire program in memory at once.
+---
 
-A technique known as **demand paging** is used in virtual memory systems. With demand paging, pages of a program are loaded into memory only when they are actually needed during execution. Pages that are never accessed are never loaded into physical memory.
+**Actions Taken by the Operating System on a Page Fault**
 
-A demand-paging system is similar to a paging system with swapping.
+1. **Check the validity of the memory reference**: The OS checks internal table (in PCB) to determine if memory access is legal.
 
-In a demand-paged system, while a process is executing, some pages will be in memory, and others will be in secondary storage. To track the location of each page, a **valid-invalid bit** scheme is used.
+2. If the access is invalid (accessing a restricted area), the process is terminated. If it is valid but the page is simply not in memory, the OS proceeds to load the page.
 
-- When the bit is set to **valid**, the associated page is in memory.
-- When the bit is set to **invalid**, the page is either not in the process's address space or it is in secondary storage.
+3. **Locate the page on secondary storage**: The OS finds the missing page in the process’s swap space on the disk.
 
-{{< figure src="images/os/8_15_ValidBits-min.jpg" alt="Valid-Invalid Bits" caption="Valid-Invalid Bit Scheme" >}}
+4. **Find a free frame**: The OS checks the list of free frames in memory. If no free frame is available, it selects a victim page to remove using a page replacement algorithm.
 
-If a page is marked **invalid** and a process tries to access it, a **page fault** occurs. The page-table hardware, while translating the address, will detect the invalid bit and cause a **trap** to the operating system, indicating that the required page needs to be loaded into memory.
+5. **Read the page into memory**: The required page is loaded from disk into the selected frame in physical memory. If the victim page was modified, it is written back to disk before being replaced.
 
-The procedure for handling a page fault is as follows:
+6. **Update the page table**: The OS updates the page table to reflect the new location of the page now in memory and marks it as valid.
 
-1. Check an internal table (usually maintained in the **process control block**) to determine whether the memory access is valid or invalid.
-2. If the reference is invalid, terminate the process. If valid but the page has not yet been brought into memory, load the page.
-3. Find a free memory frame (by taking one from the free-frame list).
-4. Schedule a secondary storage operation to read the desired page into the allocated frame.
-5. Once the read is complete, update the internal table and page table to indicate that the page is now in memory.
-6. Restart the instruction that caused the page fault. The process can now continue as if the page had always been in memory.
+7. **Restart the instruction**: The CPU restarts the instruction that caused the page fault. From the program’s point of view, the page is now available in memory.
 
 {{< figure src="images/os/9_06_PageFaultSteps-min.jpg" alt="Page Fault Handling" caption="Steps in Handling a Page Fault" >}}
 
-The hardware to support demand paging is similar to that for paging and swapping:
-
-- **Page table**: Tracks whether a page is in memory or on secondary storage, with the ability to mark an entry invalid using a valid-invalid bit or special protection bits.
-- **Secondary memory**: Holds pages that are not currently in main memory. This is usually a high-speed disk or non-volatile memory (NVM), often referred to as the **swap device**, with the storage area called **swap space**.
+Secondary storage (usually a portion of the hard drive or SSD) is used to store pages that are not in main memory. This area is called **swap space**. The page table tracks whether each page is in memory or on disk.
 
 ---
 
@@ -180,17 +181,37 @@ The hardware to support demand paging is similar to that for paging and swapping
 
 **Answer :**
 
-### Swapping
+**Swapping** is a memory management technique where a process is temporarily moved out of main memory (RAM) to a secondary storage (such as a hard disk or SSD) and brought back later when needed for execution. This allows the system to free up physical memory for other processes.
 
-In order for process instructions and data to be executed, they must be in memory. However, a process, or a portion of it, can be temporarily swapped out of memory to a backing store and then brought back into memory for continued execution. Swapping makes it possible for the total physical address space of all processes to exceed the system's real physical memory, increasing the degree of multiprogramming.
+Swapping enables the operating system to manage more processes than the available physical memory can accommodate at once. 
 
-Most modern systems, including Linux and Windows, use a variation of swapping where individual **pages** of a process (rather than the entire process) are swapped. This allows physical memory to be oversubscribed without incurring the cost of swapping entire processes, as typically only a small number of pages will be involved in the swap.
+- The space on disk where swapped-out processes are stored is often referred to as the **backing store** or **swap space**.
 
-### Thrashing
+- When a process is swapped out, all its memory contents are copied to the disk.
 
-**Thrashing** occurs when a process does not have enough frames to hold all the pages it needs, resulting in excessive page faults. When a process must constantly replace pages, it spends more time paging than executing, severely degrading performance. Thrashing results in high paging activity and leads to significant performance issues.
+- When swapped back in, the contents are loaded into memory, and the process resumes execution from where it left off.
+
+Modern operating systems (like Windows and Linux) rarely swap out **entire processes**. Instead, they use **paging**, where only individual pages of a process are moved in and out of memory. This is more efficient because only the portions of memory that are actually in use are swapped.
 
 ---
+
+**Thrashing** is a condition in a virtual memory system where the system spends more time servicing page faults than executing actual processes. it causes:
+
+- Drastic **drop in CPU utilization** because the CPU is waiting on memory all the time.
+- **System performance degrades severely**, sometimes to the point where the system becomes unresponsive.
+
+Causes of Thrashing:
+
+* Occurs when a process does not have enough memory frames to hold all the pages it is actively using.
+
+- High **degree of multiprogramming**: Too many processes are competing for limited memory.
+
+- Poor **page replacement algorithms**: Important pages may be removed from memory too often.
+
+- Processes with **frequent context switching** and random memory access patterns.
+
+---
+
 ### Page Replacement Algorithms
 
 Various page-replacement algorithms exist to determine which page to swap out when a page fault occurs. These include:
@@ -215,6 +236,7 @@ The **Least Recently Used (LRU)** algorithm approximates the optimal page-replac
 
 LRU is widely used as a page-replacement algorithm and is considered to be effective.
 
+____
 
 ### Page Replacement Problems
 
@@ -240,5 +262,7 @@ LRU is widely used as a page-replacement algorithm and is considered to be effec
 
 11. Consider the reference string 1, 2, 3, 4, 6, 5, 2, 5, 5, 6, 4, 1, 1, 2, 3, 4 with 4 memory frames. Determine the page fault using: FIFO, LRU, Optimal page replacement algorithm.
 
+
 _____
+
 
