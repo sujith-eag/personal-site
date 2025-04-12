@@ -5,7 +5,7 @@ summary: ""
 date: 2025-01-12T21:20:56+05:30
 lastmod: 2025-01-12T21:20:56+05:30
 draft: false
-weight: 1981
+weight: 1980
 toc: true
 seo:
   title: "" # custom title (optional)
@@ -13,7 +13,6 @@ seo:
   canonical: "" # custom canonical URL (optional)
   noindex: false # false (default) or true
 ---
-
 
 
 ### Operating System Services
@@ -169,7 +168,8 @@ This division enforces security, protection, and stability, ensuring that user a
 
 ---
 
-The OS operates in two distinct modes: User (1) / Kernel Mode (0)
+The OS operates in two distinct modes implemented with a mode bit.
+A Mode bit is a special hardware-supported bit used to distinguishes the current mode of execution:  0→Kernel Mode .  1→User Mode
 
 **User Mode** : is used when the user applications are running.
 - Access to critical system resources is restricted (e.g., hardware, kernel memory).
@@ -180,21 +180,11 @@ The OS operates in two distinct modes: User (1) / Kernel Mode (0)
 - Operating system runs in this mode and has full access to all system resources, including hardware and all instructions.
 - Can execute privileged operations like memory management, device control, and process scheduling.
 
+The system switches between user mode and kernel mode during System Call, Interrupt or Exceptions (Trap). Each of these transitions causes the CPU to switch to kernel mode, handle the request, and then return to user mode after completing the task.
+
 ____
 
-A Mode bit is a special hardware-supported bit used to distinguishes the current mode of execution:
-- 0 → Kernel Mode
-- 1 → User Mode
-
-The system switches between user mode and kernel mode during System Call, Interrupt or Exceptions (Trap).
-
-Each of these transitions causes the CPU to switch to kernel mode, handle the request, and then return to user mode after completing the task.
-
----
-
-A **timer** is a hardware, it prevents a process from monopolizing the CPU indefinitely. When the timer expires, it generates an interrupt, allowing the OS to regain control and possibly switch to another process.
-
-This is crucial for preemptive multitasking and system responsiveness.
+A **timer** is a hardware, it prevents a process from monopolizing the CPU indefinitely. When the timer expires, it generates an interrupt, allowing the OS to regain control and possibly switch to another process. This is crucial for preemptive multitasking and system responsiveness.
 
 ---
 
@@ -215,25 +205,31 @@ This is crucial for preemptive multitasking and system responsiveness.
 
 **Answer :**
 
-Traditional computing setups refer to systems where computing resources such as servers and workstations are located locally within an organization.
-
-- PC: A single-user system focused on ease of use and performance, but with less emphasis on resource utilization.
-- Mainframe: A multi-user system designed for resource maximization and efficient information sharing.
-- Workstations: Connected to servers via networks, offering a balance of performance and resource utilization.
-- Network Computers / Thin Clients: Focus on easy maintenance and security, with less local processing power.
-
-
 **Types of Computer Systems**
 
-**Client-server computing** : involves splitting roles between servers and clients. Servers offer resources or services like web pages, file storage, or authentication, while clients request and use those services. This model is widely used in modern networks, including websites and enterprise systems.
+**Client-server computing** : is based on centralized model where one or more servers provide services, data, or resources to multiple client machines. Clients depend on the server to function properly.
 
-**Peer-to-peer computing** : involves computers in a network acting both as clients and servers. Each system can request and provide services, creating a collaborative environment. It is scalable and fault-tolerant because there is no single point of failure. This model is often used for decentralized applications.
+It involves splitting roles between servers and clients. Servers handle requests from clients and offers resources or services like web pages, file storage, or authentication, while clients request and use those services. Clients depend on the server to function properly.
 
-Client-server computing is based on a centralized model where one or more servers provide services, data, or resources to multiple client machines. The server handles requests from clients and sends the required response. Clients depend on the server to function properly.
+This model is widely used in modern networks, including websites and enterprise systems.
 
-Peer-to-peer computing, on the other hand, is decentralized. Each node, or peer, in the network can act both as a client and a server. There is no central server; instead, all peers share resources directly among themselves. This model is commonly used in file-sharing networks and blockchain applications.
+___
+
+**Peer-to-peer computing** : is a decentralized model, it involves computers in a network acting both as clients and servers. Each system(node, peer) in the network can request and provide services, creating a collaborative environment. There is no central server; instead, all peers share resources directly among themselves.
+
+It is scalable and fault-tolerant because there is no single point of failure. This model is often used for decentralized applications, file-sharing networks and blockchain applications.
 
 ____
+
+**Cloud computing** : provides computing resources like storage, processing power, and software over the internet. Instead of owning physical hardware, users rent what they need from a cloud provider. This model is flexible, scalable, and cost-effective.
+
+Cloud Service Models:
+- IaaS (Infrastructure as a Service): Provides virtualized computing resources like virtual machines, storage, and networks (e.g., Amazon EC2, Azure Virtual Machines).
+- PaaS (Platform as a Service): Provides a platform for developers to build and deploy applications without managing the underlying infrastructure (e.g., Google App Engine, Azure App Services, Heroku).
+- SaaS (Software as a Service): Delivers software applications over the internet on a subscription basis (e.g., Google Workspace, Salesforce).
+- DBaaS (Database as a Service): Offers database hosting and management without requiring users to manage the infrastructure (e.g., Amazon RDS, Google Cloud SQL).
+
+___
 
 **Embedded systems** : are dedicated systems designed to perform a specific task within a larger device. They are often resource-constrained, have limited functionality, and are designed for real-time operation. Examples include systems in washing machines, microwave ovens, and medical devices.
 
@@ -241,13 +237,18 @@ ____
 
 ____
 
-**Cloud computing** : provides computing resources like storage, processing power, and software over the internet. Instead of owning physical hardware, users rent what they need from a cloud provider. This model is flexible, scalable, and cost-effective.
-
 **Clustered systems** : consist of multiple computers linked together to function as a single unit. They provide high availability and load balancing. If one node fails, others can take over its tasks. Clustering is commonly used in data centers, scientific computing, and online services requiring high uptime.
 
 **Distributed system** : is made up of multiple independent computers that work together and appear to users as a single system. The goal is to share resources, increase reliability, and improve performance. Distributed systems are common in cloud computing, web services, and large-scale applications.
 
 ____
+
+Traditional computing setups refer to systems where computing resources such as servers and workstations are located locally within an organization.
+
+- PC: A single-user system focused on ease of use and performance, but with less emphasis on resource utilization.
+- Mainframe: A multi-user system designed for resource maximization and efficient information sharing.
+- Workstations: Connected to servers via networks, offering a balance of performance and resource utilization.
+- Network Computers / Thin Clients: Focus on easy maintenance and security, with less local processing power.
 
 **Mainframe systems** : are large, powerful machines that support hundreds or thousands of users at the same time. They are known for their reliability, security, and centralized control. Mainframes are used in banking, government, and enterprise data processing.
 

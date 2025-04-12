@@ -1,11 +1,11 @@
 ---
-title: "OS - Unit-3 - Q_Answered"
+title: "OS - Unit-3 - Deadlock Answered"
 description: ""
 summary: ""
 date: 2025-01-12T21:20:56+05:30
 lastmod: 2025-01-12T21:20:56+05:30
 draft: false
-weight: 1985
+weight: 1984
 toc: true
 seo:
   title: "" # custom title (optional)

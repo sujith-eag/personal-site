@@ -1,11 +1,11 @@
 ---
-title: "OS - Unit-2 - Q_Answered"
+title: "OS - Unit-2 - Process Scheduling Answered"
 description: ""
 summary: ""
 date: 2025-01-12T21:20:56+05:30
 lastmod: 2025-01-12T21:20:56+05:30
 draft: false
-weight: 1983
+weight: 1981
 toc: true
 seo:
   title: "" # custom title (optional)
@@ -15,46 +15,87 @@ seo:
 ---
 
 
+### Process
+
+- Define a process. List the different fields of a Process Control Block (PCB).
+- What is a Process Control Block (PCB)? Explain its contents.
+- Write a short note on the following with respect to processes:   i) Process State   ii) Process Control Block (PCB)
+
+**Answer :**
+
+A process is an active instance of a program in execution. While a program is a passive set of instructions stored on disk (such as an executable file). A process includes everything needed to execute those instructions — including memory, CPU registers, and input/output resources.
+
+When a program is loaded into memory for execution, it becomes a process and is assigned a unique Process ID (PID) by the operating system.
 
 
-A program is a passive entity. It is essentially a file that contains a list of instructions (e.g., an executable file) along with associated resources.
+Process Memory Layout:
+A process typically consists of the following memory sections:
 
-A program becomes a process when it is loaded into memory. A process is an active instance of a program, with its own execution context.
+Text Section: Contains the actual code (instructions) of the program.
+Data Section: Stores global and static variables.
+Heap: Used for dynamic memory allocation during runtime that grows and shrinks as the program executes.
+Stack: Stores function parameters, local variables, and return addresses.
 
-Internally, every process is represented by several components:
-- Text Section: Contains the executable code of the program.
-- Data Section: Stores global and static variables.
-- Process Stack: Stores temporary data such as:
-    - Function parameters
-    - Return addresses
-    - Local variables
-- Heap Section: Dynamically allocated memory during runtime that grows and shrinks as the program executes.
-
-#### Structure of a Process in Memory:
 
 {{< figure src="images/os/3_01_Process_Memory.jpg" alt="3.01 A Process in Memory" caption="3.01 A Process in Memory" >}}
 
----
 
-While multiple processes can be associated with the same program, each process is considered a separate execution sequence. For instance:
+Multiple processes can be associated with the same program, each process is considered a separate execution sequence. For instance:
 - Different users running distinct copies of the same program, or
 - A single user running multiple instances of a program, like a web browser.
 
 In these cases, each process is independent, even though their text sections (program code) may be identical. The data, heap, and stack sections will differ for each process.
 
-Modern computer systems enable multiple programs to be loaded and executed concurrently. This requires tighter control and better compartmentalization of resources, leading to the concept of a process, which is a program in execution.
+___
 
----
+### Process Control Block (PCB)
+
+The Process Control Block (PCB) is a data structure maintained by the operating system to store all information about a process. Every process in an OS is represented by a PCB, also known as a Task Control Block.
+
+The PCB holds important information related to a process:
+
+- **Process State**: Current status of the process (e.g., New, Ready, Running, Waiting, Terminated).
+
+- **Process ID (PID)**: Unique identifier for the process.
+
+- **Program Counter**: Address of the next instruction to execute in that process.
+
+- **CPU Registers**: Contents of all registers (general-purpose and special-purpose) the process uses. Snapshot of register values (used to restore process state during context switches).
+
+- **CPU Scheduling Information**: Priority of the process, scheduling queue pointers, and other parameters used by the scheduler.
+
+- **Memory Management Information**: Includes base/limit registers, page tables, segment tables depending on the memory system used.
+
+- **Accounting Information**: CPU usage, execution time, time limits, process start time, and owner/user ID.
+
+- **I/O Status Information**: List of allocated I/O devices, open files, and I/O requests.
+
+{{< figure src="images/os/3_03_PCB.jpg" alt="3.03 Process Control Block" caption="3.03 Process Control Block" >}}
+
+___
+
+When an interrupt occurs, OS saves the PCB of a process when switching out of it (context switch), and restores it when the process resumes once the interrupt is handled, ensuring smooth multitasking and process isolation.
+
+{{< figure src="images/os/3_04_ProcessSwitch.jpg" alt="3.04 Process Switching" caption="3.04 Process Switching" >}}
+
+____
 
 ### Process State
 
-As a process runs, it transitions through various states depending on its current activity. A process can be in one of the following states:
+- Define a process and present its various states.
+- Explain the different states of a process with a neat diagram.
+- Explain how a system process is created and terminated.
+
+**Answer :**
+
+A process state represents the current activity of a process. A process transitions between various states during its lifecycle:
 
 - New: The process is in the process of being created.
-- Ready: The process is ready to be assigned to the CPU.
+- Ready: The process is ready and waiting to be assigned to the CPU.
 - Running: The process is actively executing instructions.
-- Waiting: The process is waiting for some event, such as I/O completion or signal reception.
-- Terminated: The process has completed its execution.
+- Waiting (Blocked): The process is waiting for some event, such as I/O completion or signal reception.
+- Terminated: The process has completed its execution or it was killed.
+
 
 {{< figure src="images/os/3_02_ProcessState.jpg" alt="3.02 States Of Process" caption="3.02 States Of Process" >}}
 
@@ -62,124 +103,129 @@ Note:
 - Only one process can be in the running state on the CPU at any given moment.
 - Multiple processes can be in the ready or waiting states at the same time.
 
----
 
-### Process Control Block (PCB)
+_____
+### Scheduling and Execution
 
-Every process in an operating system is represented by a Process Control Block (PCB), also known as a Task Control Block.
+- Explain the various process schedulers.
+- Why is it important for the scheduler to distinguish I/O-bound programs and CPU-bound programs?
+- Describe the role and functioning of context switching.
+- Define the following terms:  
+	i) Dispatcher  
+	ii) Short-term scheduler  
+	iii) Context switching  
+	iv) CPU-bound processes  
+	v) I/O-bound processes  
+	vi) Device queue
 
-{{< figure src="images/os/3_03_PCB.jpg" alt="3.03 Process Control Block" caption="3.03 Process Control Block" >}}
+**Answer :**
 
-The PCB holds important information related to a process:
+The goal of multiprogramming is to improve CPU utilization by ensuring the CPU always has a process to execute. It allows multiple processes to reside in memory simultaneously so that when one process is waiting (e.g., for I/O), the CPU can switch to another ready process.
 
-- Process State: The current state of the process (e.g., Running, Waiting, Ready).
-- Program Counter: The address of the next instruction to be executed in the process.
-- CPU Registers: All registers that the process uses (e.g., general-purpose registers, stack pointers).
-- CPU Scheduling Information: Includes process priority, pointers to scheduling queues, and other scheduling parameters.
-- Memory Management Information: Includes base and limit registers, page tables, or segment tables, depending on the memory system.
-- Accounting Information: Tracks CPU and real time usage, time limits, account numbers, and job or process identifiers.
-- I/O Status Information: Lists I/O devices allocated to the process and any open files.
-
-When an interrupt occurs, the program counter and other state information must be saved to allow the process to resume execution correctly once the interrupt is handled.
-
-{{< figure src="images/os/3_04_ProcessSwitch.jpg" alt="3.04 Process Switching" caption="3.04 Process Switching" >}}
-
----
-
-### Process Scheduling
-
-The goal of multiprogramming is to ensure that the CPU is always being utilized, thereby maximizing CPU utilization. The objective of time-sharing systems is to switch the CPU between processes rapidly enough that users can interact with each program while it runs.
-
-The Process Scheduler selects an available process from the set of processes waiting for execution on the CPU whenever one process must wait, improving system efficiency.
-
-When there are more processes than available CPU time, some processes will have to wait until the CPU becomes free again.
+In time-sharing systems, the objective is to enable multiple users to interact with their processes concurrently. The operating system rapidly switches the CPU between user processes, providing the illusion that each user has their own dedicated system. This is achieved through frequent context switches, allowing real-time user interaction with running programs.
 
 ---
+
+Whenever a running process enters a waiting state (e.g., for I/O), the **CPU Scheduler** (short-term scheduler) selects another process from the **ready queue** to execute. This mechanism ensures efficient CPU usage and system responsiveness.
+
+If the number of processes exceeds the CPU’s capacity, some must wait their turn, leading to queueing and scheduling delays. Proper scheduling ensures fairness and efficient resource use.
 
 #### Scheduling Queues
 
-- Job Queue:  Processes enter the job queue when they are submitted for execution. This queue contains all processes in the system.
+In an operating system, various queues manage the state and progress of processes:
 
-- Ready Queue:  Processes in main memory that are ready to execute are placed in the ready queue.
+* **Job Queue** : When a user submits a process for execution, it is added to the job queue. Contains all processes in the system.
 
-- Device Queue:  If a process requests I/O (e.g., disk access) and the device is busy, it enters the device queue for that specific I/O device. Each device has its own queue.
+* **Ready Queue** : Contains processes that are in main memory and ready to execute. The CPU scheduler picks processes from this queue based on the scheduling algorithm.
 
+* **Device Queue**: Each I/O device has a separate device queue. If a process requests an I/O operation and the device is busy, it waits in the corresponding device queue.
 
 {{< figure  src="images/os/3_06_QueueingDiagram.jpg"  alt="3.06 Queueing Diagram Representing Process Scheduling"  caption="3.06 Queueing Diagram Representing Process Scheduling" >}}
 
+##### **CPU–I/O Cycle**:
 
-CPU-I/O Cycle : Process execution alternates between CPU bursts and I/O waits until the program terminates.
-- I/O-bound programs: These programs tend to have short CPU bursts and frequent I/O operations.
-- CPU-bound programs: These have long CPU bursts and minimal I/O operations.
+A process typically executes in a cycle of CPU bursts and I/O bursts until it terminates:
+
+- **I/O-bound processes**: Spend more time on I/O than computation. These have short CPU bursts and frequent I/O operations.
+
+- **CPU-bound processes**: Perform intensive computation with long CPU bursts and infrequent I/O.
+
+This cycle allows the operating system to balance workloads and maximize device utilization.
 
 ___
 
 #### Schedulers
 
-1. Long-Term Scheduler (Job Scheduler) : Selects processes from a pool and loads them into memory for execution, controlling the degree of multiprogramming (the number of processes in memory).
+Schedulers are responsible for selecting processes at various stages of execution:
 
-2. Short-Term Scheduler (CPU Scheduler) : When the CPU is idle, it selects a process from the ready queue and allocates CPU time to it. This ensures that CPU time is used efficiently.
+**Long-Term Scheduler (Job Scheduler)** : Determines and selects processes and loads them into the system memory for processing. Controls the degree of multiprogramming (i.e., how many processes are loaded in memory). It may favor a mix of I/O-bound and CPU-bound processes for optimal resource use.
 
-3. Medium-Term Scheduling : In multiprogramming systems, sometimes it’s beneficial to remove processes from main memory (swapping them to disk) to reduce the level of multiprogramming and manage system resources.
+**Short-Term Scheduler (CPU Scheduler)** : When the CPU is idle, Selects from the ready queue the process that will execute next. Executes frequently (milliseconds) to ensure fast and fair CPU allocation. Must be fast and efficient due to its frequent execution.
 
-Swapping allows processes to be later reintroduced into memory and continue execution from where they left off, helping balance memory load and system performance.
+**Medium-Term Scheduling** : In multiprogramming systems, sometimes it’s beneficial to temporarily remove processes from main memory (swapping them to disk) to reduce the level of multiprogramming and reduce the load on system and free up memory. 
+
+Swapped-out processes are moved to secondary storage and reloaded later into memory and continue execution from where they left off, helping balance memory load and system performance.
 
 {{< figure  src="images/os/3_07_QueuingDiagram2.jpg"  alt="3.07 Medium Term Scheduling in Queueing Diagram"  caption="3.07 Medium Term Scheduling in Queueing Diagram" >}}
-
 
 ---
 
 #### Context Switching
 
-A context switch occurs when the operating system switches from one process to another. The current process’s state (including CPU registers and other information in the PCB) is saved, and the state of the next process is loaded.
+A context switch is the process of saving the state of a currently running process and loading the state of another process. This allows multiple processes to share the CPU effectively.
 
-Context switching happens frequently as the CPU alternates between tasks.
+Key Elements of Context Switching:
+* Saves the CPU state (program counter, registers, etc.) of the current process into its PCB.
+* Loads the CPU state of the next process from its PCB.
+* Updates scheduling and memory management information accordingly.
 
-- Overhead: Context switches add overhead because the system must spend time saving and loading process states, which does not directly contribute to task execution.
+A context switch occurs when the operating system switches from one process to another.  Context switching happens frequently as the CPU alternates between tasks.
 
-- Speed Variation: The time taken for a context switch can vary depending on system factors, such as memory speed and the number of registers involved.  
+- Overhead: Context switches add overhead because the system must spend time saving and loading process states, no useful work is done while switching.
+
+- Factors Affecting Speed : The time taken for a context switch can vary depending on system factors, such as memory access speed, the number of registers involved. System architecture and optimization of the OS kernel.
 
 ---
 
 #### Dispatcher
 
-The dispatcher is responsible for transferring control of the CPU to the process selected by the short-term scheduler. The dispatcher performs operations like context switching, switching to user mode, and jumping to the correct program location.
+The dispatcher is a system component that is responsible for transferring control of the CPU to the process selected by the short-term scheduler. 
 
-Dispatch Latency is the time taken to perform a context switch and start executing a new process. This latency is crucial for optimizing process scheduling efficiency.
+The dispatcher performs operations like context switching, switching the CPU from kernel mode to user mode, and Starts execution at the correct program counter for the selected process..
 
----
+**Dispatch Latency** is the time taken to perform a context switch and start executing a new process. To stop one process and start another. This latency is crucial for optimizing process scheduling efficiency.
 
-### CPU Scheduling
+____
 
-CPU scheduling happens in the following situations:
-
-1. Running → Waiting: A process requests I/O or another resource.
-2. Running → Ready: An interrupt occurs, causing the process to return to the ready state.
-3. Waiting → Ready: The process finishes its I/O and is ready to execute again.
-4. Process Termination: The process completes its execution.
-
-- Nonpreemptive Scheduling: Once a process is running, it holds the CPU until it terminates or blocks (e.g., for I/O).
-
-- Preemptive Scheduling: The OS can interrupt a running process to allocate CPU time to another process, allowing higher-priority processes to execute. This can lead to race conditions if multiple processes share data.
-
-
----
 
 #### Scheduling Criteria
 
+* Present various criteria to evaluate the best CPU scheduling algorithm.
+
+**Answer :**
+
 To compare different scheduling algorithms, the following criteria are considered:
 
-- CPU Utilization: The goal is to maximize CPU usage (e.g., from 40% to 90%).
-- Throughput: The number of processes completed per unit of time, indicating system efficiency.
-- Turnaround Time: The total time from process submission to completion, including waiting times.
-- Waiting Time: The amount of time a process spends waiting in the ready queue.
-- Response Time: The time from process submission to the first response from the system.
+- **CPU Utilization** : The percentage of time the CPU is actively working (not idle). The goal is to maximize CPU Utilization (e.g., from 40% to 90%). A well-utilized CPU means the system is efficiently using hardware resources.
+
+- **Throughput** : The number of processes completed per unit of time (processes per second), indicating system efficiency. Goal is to Maximize throughput. Higher throughput implies better overall system productivity.
+
+- **Turnaround Time** : The total time taken for a process to complete — from submission to completion including the waiting time. Goal is to Minimize turnaround time. Lower turnaround time means faster job completion, which is essential for batch systems.
+
+Formula : `Turnaround Time = Completion Time - Arrival Time`
+
+
+- **Waiting Time** : The total time a process spends in the ready queue waiting for CPU allocation. Goal is to Minimize waiting time. High waiting time indicates inefficiency and can lead to poor responsiveness, especially in interactive systems.
+
+Formula : `Waiting Time = Turnaround Time - CPU Burst Time`
+
+- **Response Time** : The time from submission of a process to the first time the process gets the CPU (i.e., when it starts responding). Goal is to Minimize response time. Critical in time-sharing and interactive systems where users expect quick feedback (e.g., typing in a text editor or web browser).
 
 Optimization goals:
-- Maximize CPU utilization and throughput.
-- Minimize turnaround time, waiting time, and response time.
+- Maximize CPU Utilization and Throughput.
+- Minimize Turnaround Time, Waiting Time, and Response Time.
 
----
+____
 
 ### Scheduling Algorithms
 
@@ -190,20 +236,17 @@ CPU scheduling involves determining which process from the ready queue should be
 The FCFS scheduling algorithm allocates CPU to processes in the order they arrive, using a FIFO queue. The process at the front of the queue gets the CPU, and when it completes, it is removed.
 
 ##### Drawbacks of FCFS
+* Monopolization of CPU: A CPU-bound process consumes the CPU while I/O-bound processes, which could proceed with little CPU time, wait. This leads to inefficient use of I/O devices.
 
-1. Monopolization of CPU: A CPU-bound process consumes the CPU while I/O-bound processes, which could proceed with little CPU time, wait. This leads to inefficient use of I/O devices.
+* Transition and Idle CPU: Once a CPU-bound process finishes its burst, it moves to the I/O queue, causing idle periods for the CPU while I/O-bound processes complete their tasks.
 
-2. Transition and Idle CPU: Once a CPU-bound process finishes its burst, it moves to the I/O queue, causing idle periods for the CPU while I/O-bound processes complete their tasks.
-
-3. Convoy Effect: A long CPU-bound process delays smaller, I/O-bound processes, causing inefficient use of resources.
-
+* Convoy Effect: A long CPU-bound process delays smaller, I/O-bound processes, causing inefficient use of resources.
 
 ---
 
 #### Shortest Job First Scheduling
 
-The Shortest Job First (SJF) scheduling algorithm assigns the CPU to the process with the shortest CPU burst.  
-If two processes have the same burst, FCFS is used to break the tie.
+The Shortest Job First (SJF) scheduling algorithm assigns the CPU to the process with the shortest CPU burst.   If two processes have the same burst, FCFS is used to break the tie.
 
 - Nonpreemptive SJF: The process that starts executing runs until it completes, even if another process arrives with a shorter burst.
 
@@ -213,8 +256,7 @@ If two processes have the same burst, FCFS is used to break the tie.
 
 #### Priority Scheduling
 
-The Priority Scheduling algorithm allocates CPU time based on process priority. The process with the highest priority gets the CPU.  
-If two processes have the same priority, FCFS is used.
+The Priority Scheduling algorithm allocates CPU time based on process priority. The process with the highest priority gets the CPU.   If two processes have the same priority, FCFS is used.
 
 - Preemptive Priority Scheduling: A higher-priority process preempts a lower-priority process that is already running.
 
@@ -222,9 +264,9 @@ If two processes have the same priority, FCFS is used.
 
 ##### Major Issues:
 
-Indefinite Blocking (Starvation): Low-priority processes may never get to execute because higher-priority processes continuously preempt them.
+* Indefinite Blocking (Starvation): Low-priority processes may never get to execute because higher-priority processes continuously preempt them.
 
-Aging is used to solve starvation by gradually increasing the priority of long-waiting processes, ensuring that they eventually get executed.
+* Aging is used to solve starvation by gradually increasing the priority of long-waiting processes, ensuring that they eventually get executed.
 
 ---
 
@@ -232,39 +274,96 @@ Aging is used to solve starvation by gradually increasing the priority of long-w
 
 The Round-Robin (RR) scheduling algorithm is a variant of FCFS, but with preemption.
 
+The Ready Queue functions as a circular queue. The CPU scheduler allocates the CPU to each process for a time quantum. After the time quantum ends, the process is preempted and placed back at the end of the ready queue.
+
 - Time Quantum (or Time Slice): A small time unit (typically between 10 to 100 milliseconds) allocated to each process.
 - Preemption: No process is allowed to monopolize the CPU for more than 1 time quantum.
 
-1. The Ready Queue functions as a circular queue.
-2. The CPU scheduler allocates the CPU to each process for a time quantum.
-3. After the time quantum ends, the process is preempted and placed back at the end of the ready queue.
-
 This approach prevents any single process from monopolizing the CPU, allowing for better time-sharing.
 
----
+___
+### CPU Scheduling Problems
 
-### Process Synchronization
+1. Consider the following set of processes:  
 
-Process synchronization involves ensuring that cooperating processes maintain data consistency when accessing shared resources. This is crucial for maintaining the integrity of shared data.
+| Process | Priority | Arrival Time (ms) | Burst Time (ms) |
+| ------- | -------- | ----------------- | --------------- |
+| P1      | 2        | 0                 | 10              |
+| P2      | 1        | 2                 | 4               |
+| P3      | 4        | 0                 | 2               |
+| P4      | 1        | 5                 | 1               |
+| P5      | 3        | 4                 | 6               |
+The lowest number in priority indicates the highest priority of the process.
 
-##### Problems from Concurrent Execution
+   i) Draw Gantt charts for SJF and Preemptive-Priority scheduling algorithms.  
+   ii) Calculate the waiting time and average waiting time for each algorithm.  
+   iii) Calculate the turnaround time and average turnaround time for each algorithm.  
+   iv) Which is the more efficient algorithm?
 
-A race condition occurs when multiple processes or threads concurrently access and modify shared data, leading to inconsistent or incorrect results, depending on the timing of the operations.
+___
 
-#### Critical Section Problem
+3. Consider the following processes:  
 
-In a system with n processes ({P0, P1, ..., Pn-1}), each process has a critical section—a segment of code where the process manipulates shared resources. The challenge is ensuring that no two processes execute their critical sections simultaneously.
+| Process | Arrival Time (ms) | CPU Time (ms) |
+|---------|--------------------|---------------|
+| P1      | 0                  | 3             |
+| P2      | 2                  | 3             |
+| P3      | 3                  | 5             |
+| P4      | 4                  | 2             |
+| P5      | 8                  | 3             |
 
-The critical-section problem requires that each process requests permission to enter its critical section, usually in the entry section of its code. After executing the critical section, the process enters the exit section, followed by the remainder section.
-
-##### Requirements for a Solution:
-
-A valid solution to the critical-section problem must satisfy:
-
-1. Mutual Exclusion: If one process is in its critical section, no other process can enter its critical section at the same time.
-2. Progress: If no process is in its critical section and multiple processes are waiting, one of the waiting processes must be allowed to enter the critical section.
-3. Bounded Waiting: There must be a limit on how many times other processes are allowed to enter their critical sections before a waiting process is granted access.
-
+   i) Draw the Gantt chart for the SJF algorithm.  
+   ii) Calculate the average waiting and turnaround times for FCFS and Round-Robin scheduling (time slice = 1 ms).  
 
 ____
 
+4. Consider the following set of processes, with the length of the CPU burst given in milliseconds. The processes arrived in the order P1, P2, P3, P4, P5, all at time 0:  
+
+| Process | Burst Time | Priority |
+|---------|------------|----------|
+| P1      | 8          | 4        |
+| P2      | 2          | 1        |
+| P3      | 2          | 3        |
+| P4      | 3          | 3        |
+| P5      | 5          | 2        |
+
+i) Draw Gantt charts for the following scheduling algorithms:  
+   - First-Come-First-Serve (FCFS)  
+   - Non-Preemptive Priority Scheduling  
+   - Round Robin (Time Quantum = 1 ms)  
+
+ii) Calculate the waiting time of each process for each scheduling algorithm. Also, find the average waiting time for each algorithm.  
+iii) Calculate the turnaround time of each process for each scheduling algorithm. Also, find the average turnaround time for each algorithm.
+
+___
+
+5. Assume the following jobs are executed with one processor:  
+
+| Process | Burst Time |
+|---------|------------|
+| P0      | 80         |
+| P1      | 20         |
+| P2      | 10         |
+| P3      | 20         |
+| P4      | 50         |
+
+   i) Draw a Gantt chart for FCFS scheduling.  
+   ii) Calculate the turnaround time for process P3.  
+   iii) Determine the average waiting time.  
+
+___
+
+6. Five batch jobs arrive simultaneously. Their estimated running times (in milliseconds) and priorities (with 5 being the highest priority) are as follows:  
+
+| Job | Estimated Time | Priority |
+|-----|----------------|----------|
+| A   | 10             | 3        |
+| B   | 6              | 5        |
+| C   | 2              | 2        |
+| D   | 4              | 1        |
+| E   | 8              | 4        |
+
+   i) Draw Gantt charts for Round Robin (Quantum = 5 ms), Priority Scheduling, and SJF algorithms.  
+   ii) Determine average waiting and turnaround times for each algorithm.  
+
+---
