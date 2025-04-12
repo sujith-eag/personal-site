@@ -29,12 +29,13 @@ When a program is loaded into memory for execution, it becomes a process and is 
 
 
 Process Memory Layout:
+
 A process typically consists of the following memory sections:
 
-Text Section: Contains the actual code (instructions) of the program.
-Data Section: Stores global and static variables.
-Heap: Used for dynamic memory allocation during runtime that grows and shrinks as the program executes.
-Stack: Stores function parameters, local variables, and return addresses.
+* Text Section: Contains the actual code (instructions) of the program.
+* Data Section: Stores global and static variables.
+* Heap: Used for dynamic memory allocation during runtime that grows and shrinks as the program executes.
+* Stack: Stores function parameters, local variables, and return addresses.
 
 
 {{< figure src="images/os/3_01_Process_Memory.jpg" alt="3.01 A Process in Memory" caption="3.01 A Process in Memory" >}}
@@ -231,7 +232,7 @@ ____
 
 CPU scheduling involves determining which process from the ready queue should be allocated CPU time.
 
-#### First-Come, First-Served Scheduling (FCFS)
+##### First-Come, First-Served Scheduling (FCFS)
 
 The FCFS scheduling algorithm allocates CPU to processes in the order they arrive, using a FIFO queue. The process at the front of the queue gets the CPU, and when it completes, it is removed.
 
@@ -244,7 +245,7 @@ The FCFS scheduling algorithm allocates CPU to processes in the order they arriv
 
 ---
 
-#### Shortest Job First Scheduling
+##### Shortest Job First Scheduling
 
 The Shortest Job First (SJF) scheduling algorithm assigns the CPU to the process with the shortest CPU burst.   If two processes have the same burst, FCFS is used to break the tie.
 
@@ -254,7 +255,7 @@ The Shortest Job First (SJF) scheduling algorithm assigns the CPU to the process
 
 ---
 
-#### Priority Scheduling
+##### Priority Scheduling
 
 The Priority Scheduling algorithm allocates CPU time based on process priority. The process with the highest priority gets the CPU.   If two processes have the same priority, FCFS is used.
 
@@ -262,7 +263,7 @@ The Priority Scheduling algorithm allocates CPU time based on process priority. 
 
 - Nonpreemptive Priority Scheduling: A higher-priority process waits until the current process completes or blocks before it executes.
 
-##### Major Issues:
+##### Issues:
 
 * Indefinite Blocking (Starvation): Low-priority processes may never get to execute because higher-priority processes continuously preempt them.
 
@@ -270,7 +271,7 @@ The Priority Scheduling algorithm allocates CPU time based on process priority. 
 
 ---
 
-#### Round Robin Scheduling
+##### Round Robin Scheduling
 
 The Round-Robin (RR) scheduling algorithm is a variant of FCFS, but with preemption.
 
@@ -282,6 +283,7 @@ The Ready Queue functions as a circular queue. The CPU scheduler allocates the C
 This approach prevents any single process from monopolizing the CPU, allowing for better time-sharing.
 
 ___
+
 ### CPU Scheduling Problems
 
 1. Consider the following set of processes:  
@@ -293,6 +295,7 @@ ___
 | P3      | 4        | 0                 | 2               |
 | P4      | 1        | 5                 | 1               |
 | P5      | 3        | 4                 | 6               |
+
 The lowest number in priority indicates the highest priority of the process.
 
    i) Draw Gantt charts for SJF and Preemptive-Priority scheduling algorithms.  
@@ -302,22 +305,22 @@ The lowest number in priority indicates the highest priority of the process.
 
 ___
 
-3. Consider the following processes:  
+2. Consider the following processes:  
 
 | Process | Arrival Time (ms) | CPU Time (ms) |
-|---------|--------------------|---------------|
-| P1      | 0                  | 3             |
-| P2      | 2                  | 3             |
-| P3      | 3                  | 5             |
-| P4      | 4                  | 2             |
-| P5      | 8                  | 3             |
+| ------- | ----------------- | ------------- |
+| P1      | 0                 | 3             |
+| P2      | 2                 | 3             |
+| P3      | 3                 | 5             |
+| P4      | 4                 | 2             |
+| P5      | 8                 | 3             |
 
    i) Draw the Gantt chart for the SJF algorithm.  
    ii) Calculate the average waiting and turnaround times for FCFS and Round-Robin scheduling (time slice = 1 ms).  
 
 ____
 
-4. Consider the following set of processes, with the length of the CPU burst given in milliseconds. The processes arrived in the order P1, P2, P3, P4, P5, all at time 0:  
+3. Consider the following set of processes, with the length of the CPU burst given in milliseconds. The processes arrived in the order P1, P2, P3, P4, P5, all at time 0:  
 
 | Process | Burst Time | Priority |
 |---------|------------|----------|
@@ -337,7 +340,7 @@ iii) Calculate the turnaround time of each process for each scheduling algorithm
 
 ___
 
-5. Assume the following jobs are executed with one processor:  
+4. Assume the following jobs are executed with one processor:  
 
 | Process | Burst Time |
 |---------|------------|
@@ -353,7 +356,7 @@ ___
 
 ___
 
-6. Five batch jobs arrive simultaneously. Their estimated running times (in milliseconds) and priorities (with 5 being the highest priority) are as follows:  
+5. Five batch jobs arrive simultaneously. Their estimated running times (in milliseconds) and priorities (with 5 being the highest priority) are as follows:  
 
 | Job | Estimated Time | Priority |
 |-----|----------------|----------|
