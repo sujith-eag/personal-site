@@ -15,7 +15,6 @@ seo:
 ---
 
 
-
 ### Memory Protection and Address Space
 
 - What do you mean by memory protection? Elaborate on the facts of memory protection with proper justifications.

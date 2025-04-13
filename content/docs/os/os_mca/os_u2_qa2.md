@@ -14,7 +14,6 @@ seo:
   noindex: false # false (default) or true
 ---
 
-
 ### Process Synchronization
 
 Process synchronization refers to the coordination of the execution of processes that share resources, in order to maintain consistency and avoid conflicts. 

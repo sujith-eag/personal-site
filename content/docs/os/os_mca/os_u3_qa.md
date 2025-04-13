@@ -25,7 +25,7 @@ Deadlock is a situation where a set of processes are blocked because each proces
 
 A deadlock occurs when the following four conditions are met simultaneously:
 
-* **Mutual Exclusion** : At least one resource must be held in a non-shareable mode. Only one process can use the resource at a time
+* **Mutual Exclusion** : At least one resource must be held in a non-shareable mode. Only one process can use the resource at a time. If another process requests, it must wait until the resource is released.
 
 * **Hold and Wait** : A process must be holding at least one resource and waiting to acquire additional resources held by other processes.
 
@@ -95,7 +95,7 @@ To determine if the current request can be satisfied or if the thread must be de
 
 One common approach to deadlock avoidance is the Banker’s Algorithm.
 
-- System state is considered safe if there exists at least one sequence of processes that can be executed without causing a deadlock. If no such sequence exists, the state is unsafe, and deadlock could occur.
+- System state is considered safe if there exists at least one sequence of processes that all processes can complete execution without causing a deadlock. If no such sequence exists, the state is unsafe, and deadlock could occur.
 
 - Banker's Algorithm checks whether a resource allocation would result in a safe state. It does this by simulating the allocation and determining if there is a sequence of processes that can execute without resulting in deadlock.
 
@@ -117,9 +117,9 @@ In deadlock detection and recovery, the system allows deadlocks to occur but has
 
 **Deadlock Recovery** : Once a deadlock is detected, the system must take action to recover from it.
 
-- **Process Termination** : is to kill one or more processes involved in the deadlock to break the circular wait cycle. This can be done by either aborting a process or rolling back the process to some safe state.
+- **Process Termination** : is to kill one or more processes involved in the deadlock to break the circular wait cycle (at cost of loosing partial computation). This can be done by either aborting a process or rolling back the process to some safe state.
 
-- **Resource Preemption** : from the processes involved in the deadlock and reallocating them to other processes. The preempted process may be restarted later.
+- **Resource Preemption** : from the processes involved in the deadlock and reallocating them to other processes. The preempted process may be restarted later. (The issue to handle are Selecting a victim, Rollback of affected process, Not choosing a process repeatedly causing starvation)
 
 ___
 
@@ -127,7 +127,6 @@ ___
 
 * Discuss the Resource Allocation Graph.
 * Narrate the different components of the Resource Allocation Graph. How do you analyze RAG with respect to safe state and unsafe state?
-* Demonstrate how to identify deadlocks using the Resource Allocation Graph.
 * Demonstrate how to identify deadlocks using the Resource Allocation Graph.
 * Deadlock exists if a cycle exists. Yes or No? Justify your answer with a suitable example.
 * Present the definitions for the following terms:  i) Safe state   ii) Aborted state  iii) Claim edge iv) Cycle state
@@ -175,21 +174,24 @@ ____
 
 #### Deadlock Avoidance Using RAG
 
-Resource Allocation Graph Algorithm is also used for deadlock avoidance by using a claim edge in addition to request and assignment edge.
+Resource Allocation Graph Algorithm is also used for deadlock avoidance by using a claim edge in addition to request and assignment edge. It is a graph-based approach that helps determine whether granting a resource request will lead to a safe state or an unsafe state, potentially causing a deadlock.
 
 - **Claim edge** : This edge resembles a request edge but is represented in the graph by a dashed line. (Ti → Rj) indicates that thread Ti may request resource Rj at some point in the future. 
 
+
+Initial Claim: All claim edges must be present in the resource-allocation graph before execution.
+
 When thread Ti requests resource Rj, the request can be granted only if converting the claim edge (Ti → Rj) to an assignment edge (Rj → Ti) does not create a cycle in the graph (detected using a cycle-detection algorithm).
 
-- If no cycle exists, the allocation is safe and the resource is granted.
+If granting request does not create cycle, the allocation is safe and the resource is granted.
 
-- If a cycle is found, the allocation would put the system in an unsafe state, and thread Ti must wait for its request to be satisfied.
+If a cycle is detected, the allocation would put the system in an unsafe state, and thread Ti must wait for its request to be satisfied.
 
-{{< figure  src="images/os/7_07_DeadlockAvoidance-min.jpg"  alt="."  caption="." >}}
+{{< figure  src="images/os/7_07_DeadlockAvoidance-min.jpg"  alt="."  caption="Deadlock Avoidance" >}}
 
 Suppose thread T2 requests resource R2. Although R2 is free, allocating it to T2 would create a cycle in the graph. A cycle indicates an unsafe state, and a deadlock could occur if T1 requests R2 and T2 requests R1.
 
-{{< figure  src="images/os/7_08_UnsafeState-min.jpg"  alt="."  caption="." >}}
+{{< figure  src="images/os/7_08_UnsafeState-min.jpg"  alt="Unsafe State"  caption="Unsafe State" >}}
 
 The resource-allocation graph algorithm does not apply to systems with multiple instances of each resource type.
 
