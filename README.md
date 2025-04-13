@@ -80,7 +80,7 @@ Feel free to open an issue or fork if you're inspired to build your own version.
 ## 📬 Contact
 
 - ✉️ Email: [eagle.suji@email.com](mailto:eagle.suji@email.com)
-- 💼 LinkedIn: [Follow on LinkedIn](https://linkedin.com/comm.mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=sujith-kumar-503a28348)
+- 💼 LinkedIn: [Follow on LinkedIn](www.linkedin.com/in/sujith-kumar-eag)
 
 ---
 
