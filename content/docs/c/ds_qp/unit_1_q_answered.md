@@ -17,17 +17,17 @@ seo:
 
 #### Introduction to Data Structures: Definition, Need of Data Structures, Classification of Data Structures.
 
-
 * What are Data Structures? Explain the classification of data sutures with examples?
 * Define data structure. List its types and also explain the need of Data structures.
 
+
 **Answer :**
 
-**Data Structure :** is a collection of data values and the relationships between them. It defines the arrangement of data and operations that can be performed on the data. Data structures are used to store data in a way that allows for efficient access and modification.
+**Data Structure :** is a collection of data values and the relationships between them. It defines the arrangement of data and operations that can be performed on the data. 
 
-A **Data Structure** is a way of organizing, managing, and storing data efficiently so that it can be accessed and modified in an optimal manner. Different types of data structures are used for different types of data, and the selection of an appropriate data structure can greatly impact the efficiency of an algorithm.
+A **Data Structure** is a way of organizing, managing, and storing data efficiently so that it can be accessed and modified in an efficient manner.  Different types of data structures are used for different types of data, and the selection of an appropriate data structure can greatly impact the efficiency of an algorithm.
 
-### **Types of Data Structures:**
+### Types of Data Structures:
 
 1. **Primitive Data Structures**: These are the most basic types of data structures that are directly operated upon by the CPU. They represent a single value.
 	- **Integer**: A whole number (`5`).
@@ -45,7 +45,7 @@ A **Data Structure** is a way of organizing, managing, and storing data efficien
 
 ____
 
-Classification of Data Structures can be broadly be done into two categories:
+Classification of Non_Primitive Data Structures can be broadly be done into two categories:
 1. Linear Data Structures
 2. Non-linear Data Structures
 
@@ -92,8 +92,8 @@ ____
 An **iterative function** uses loops (for, while, or do-while) to repeat a set of instructions until a certain condition is met. Iteration involves repeating a block of code in a loop.
 Typically involves maintaining state variables that change with each iteration.
 
-**Memory Usage**: Generally uses less memory because no additional stack space is needed.
-**Performance**: Usually faster in terms of execution as there are fewer overheads compared to recursion.
+**Memory Usage** is generally less because no additional stack space is needed.
+**Performance** is faster in terms of execution as there are fewer overheads compared to recursion.
 
 To calculate the **sum of numbers from 1 to N**:
 ```c
@@ -107,11 +107,11 @@ int sumIterative(int n) {
 ```
 
 **Recursion** is used to divide a task into smaller sub-tasks to solve the bigger problem.
-- A function **calls itself** / recursive call to solve the subproblems, often reducing the problem size with each call.
-- Requires a **base case** which defines the ending condition to terminate the recursion and prevent infinite calls.
+- A function calls itself / recursive call to solve the subproblems, often reducing the problem size with each call.
+- Requires a base case which defines the ending condition to terminate the recursion and prevent infinite calls which leads to stack overflow.
  
-- **Memory Usage**: Uses more memory because each recursive call adds a new stack frame.
-- **Performance**: Can be slower due to the overhead of multiple function calls and stack operations.
+- **Memory Usage** is more because each recursive call adds a new stack frame.
+- **Performance** can be slower due to the overhead of multiple function calls and stack operations.
 
 To calculate the **sum of numbers from 1 to N**:
 ```c
@@ -144,7 +144,8 @@ int fibonacciRecursive(int n) {
 
 Fibonacci Series Using Iteration (More Efficient):
 ```c
-int fibonacciIterative(int n) {
+int fibonacciIterative(int n) 
+{
 
     if (n <= 1) return n;
     
@@ -159,10 +160,9 @@ int fibonacciIterative(int n) {
 ```
 
 In this iterative approach:
-- **Time Complexity**: O(n)
-- **Space Complexity**: O(1)
-- **Efficiency**: It computes the Fibonacci number in linear time with constant space, making it much more efficient than the recursive approach.
-
+- Time Complexity: O(n)
+- Space Complexity: O(1)
+- Efficiency: It computes the Fibonacci number in linear time with constant space, making it much more efficient than the recursive approach.
 
 _____
 
@@ -173,11 +173,13 @@ _____
 ```c
 #include <stdio.h>
 
-int factorial(int n) {
+int factorial(int n) 
+{
     if (n == 0 || n == 1) {
         return 1;
     }
-    else {
+    else 
+    {
         return n * factorial(n - 1);
     }
 }
@@ -197,7 +199,6 @@ int main() {
 }
 
 ```
-
 
 ____
 
@@ -256,32 +257,26 @@ The recursive solution is based on the following steps:
 ```c
 #include <stdio.h>
 
-void towerOfHanoi(int n, char source, char auxiliary, char destination) {
-    // Base case: If there is only one disk
-    if (n == 1) {
-        printf("Move disk 1 from rod %c to rod %c\n", source, destination);
-        return;
-    }
-    
-    // Move the first n-1 disks from source to auxiliary rod
-    towerOfHanoi(n - 1, source, destination, auxiliary);
-    
-    // Move the nth disk from source to destination rod
-    printf("Move disk %d from rod %c to rod %c\n", n, source, destination);
-    
-    // Move the n-1 disks from auxiliary rod to destination rod
-    towerOfHanoi(n - 1, auxiliary, source, destination);
+void towerOfHanoi(int n, char A, char B, char C)
+{
+	if (n>0)
+	{
+		towerOfHanoi(n-1, A, C, B);
+		printf("\nMove the disk %d, from %c tower to %c \n", n, A, C);
+		towerOfHanoi(n-1, B, A, C);
+	}	
 }
 
-int main() {
-    int n = 5;
-    printf("Solution for %d disks:\n", n);
-    
-    // Recursive call function
-    towerOfHanoi(n, 'A', 'B', 'C');  
-    // A -> source, B -> auxiliary, C -> destination
-    
-    return 0;
+int main()
+{
+	int n;
+	printf("Enter the number of Disks: \n");
+	scanf("%d", &n);
+	
+	printf("\nThe Sequence of moves are as Follows: \n");
+	towerOfHanoi(n, 'A', 'B', 'C');
+	
+	return 0;
 }
 ```
 
@@ -308,7 +303,6 @@ The sequence of moves is as follows:
 6. Move disk 2 from rod B to rod C
 7. Move disk 1 from rod A to rod C
 
-
 For `n = 5` disks, the number of moves required is: `2^5−1 = 32−1 =31` moves
 
 ____
@@ -318,7 +312,6 @@ ____
 * What is Stack? Write C functions to perform push (), pop () and display operations on STACK.
 * What is Stack? Write a c program to implement stack using an array checking all necessary conditions and to perform the following operations: push (), pop () and display.
 * Define Stack. Develop routines to handle insert, push, pop and print operations on Stack.
-* Define Stack. Develop routines to handle push, pop and print operations on Stack.
 * Write C functions to perform push (), pop () and display operations on STACK.
 
 **Answer :**
@@ -475,47 +468,57 @@ Operations to reverse a string using stack :
 char stack[MAX];
 int top = -1;
 
-void push(char value) {
-    if (top < MAX - 1) {
-        stack[++top] = value;
-    } else {
+void push(char value) 
+{
+    if (top == MAX - 1) 
+    {
         printf("Stack Overflow\n");
+        return;
     }
+    stack[++top] = value;
 }
 
-char pop() {
-    if (top >= 0) {
-        return stack[top--];
-    } else {
+char pop() 
+{
+    if (top == -1) 
+    {
         printf("Stack Underflow\n");
         return -1;
     }
+	return stack[top--];
 }
 
-void display() {
-    if (top == -1) {
+void display() 
+{
+    if (top == -1) 
+    {
         printf("Stack is empty\n");
-    } else {
-        printf("Stack elements: ");
-        for (int i = 0; i <= top; i++) {
-            printf("%c ", stack[i]);
-        }
-        printf("\n");
+        return;
     }
+	
+	printf("Stack elements: ");
+	for (int i = 0; i <= top; i++) {
+		printf("%c ", stack[i]);
+	}
+	printf("\n");
 }
 
-void reverseString(char str[]) {
-    for (int i = 0; str[i] != '\0'; i++) {
+void reverseString(char str[]) 
+{
+    for (int i = 0; str[i] != '\0'; i++) 
+    {
         push(str[i]);
     }
 
     // Pop characters and overwrite string
-    for (int i = 0; str[i] != '\0'; i++) {
+    for (int i = 0; str[i] != '\0'; i++) 
+    {
         str[i] = pop();
     }
 }
 
-int main() {
+int main() 
+{
     char str[MAX];
 
     printf("Enter a string: ");
@@ -538,11 +541,7 @@ ____
 ### Applications of Stacks: Conversion from Infix to Postfix
 
 * Write a C program to convert an infix expression to postfix expression using STACK. Also convert the following infix expression to postfix expression by mentioning the steps clearly: 
-* Write the algorithm for converting the Infix Expression to Postfix expression. Also transform the following expression to its postfix equivalent form by using the conversion algorithm steps.      
-* Convert the following infix expression to postfix and prefix expressions:
-* Convert the following infix expression to postfix expression by showing the steps clearly:
-* Write an algorithm to convert an infix expression to postfix. Use the algorithm for converting the following expression into postfix form. 
-
+* Write the algorithm for converting the Infix Expression to Postfix expression. Also transform the following expression to its postfix equivalent form by using the conversion algorithm steps.
 
 * `(a+b)*(c+(d-e))`
 * `(A+B)*C-D*F+E`         
@@ -582,12 +581,12 @@ To convert an infix expression to a postfix expression, we use a stack to store 
 
 ____
 
-1. **Infix**: `(a+b)*(c+(d-e))`   Postfix: a b + c d e - + *
-2. **Infix**: `(A+B)*C-D*F+E`      **Postfix**: A B + C * D F * - E +
-3. **Infix**: `(A+B)-C)*D`      **Postfix**: A B + C - D *
+1. **Infix**: `(a+b)*(c+(d-e))`    Postfix: a b + c d e - + *
+2. **Infix**: `(A+B)*C-D*F+E`        **Postfix**: A B + C * D F * - E +
+3. **Infix**: `(A+B)-C)*D`              **Postfix**: A B + C - D *
 4. **Infix**: `(A-(B+C))*D)$(E+F)`  **Postfix**: A B C + - D * E F + $
-5. **Infix**: `((M+(N-O)*P)^Q+R)`  **Postfix**: M N O - P * + Q ^ R +
-6. **Infix**: `A^B^C-D+E+F/G`     **Postfix**: A B C ^ ^ D - E + F G / +
+5. **Infix**: `((M+(N-O)*P)^Q+R)`    **Postfix**: M N O - P * + Q ^ R +
+6. **Infix**: `A^B^C-D+E+F/G`            **Postfix**: A B C ^ ^ D - E + F G / +
 7. **Infix**: `((A+(B-C) *D) ^E+F)`  **Postfix**: A B C - D * + E ^ F +
 8. **Infix**: `X^Y^Z-D+E+F/G`  **Postfix**: X Y Z ^ ^ D - E + F G / +
 9. **Infix**: `(A ^ B * (H - J * K)) + P / K * G`  **Postfix**: A B H J K * - ^ * P K / G * +
@@ -598,13 +597,8 @@ ____
 ____
 ### Evaluation of a postfix expression.
 
-* Design an algorithm to evaluate a postfix Expression.
 * Develop an algorithm to evaluate a postfix expression. Trace the algorithm for the expression:
-* Design an algorithm to evaluate a postfix Expression. And Trace the algorithm for the expression: 
 * Write a function in C for evaluating a postfix expression. Justify the usage of stack for evaluating the given expression:
-* Write an algorithm to evaluate a postfix expression and apply the same for the given expression. 
-* Design an algorithm to evaluate a postfix Expression. And Trace the algorithm for the expression:           
-* Develop an algorithm to evaluate a postfix expression. Trace the algorithm for the expression:    
 
 * `2536+**5/2-`
 * `6 2 3 + - 3 8 2 / + * 2 $ 3 +`.
@@ -617,14 +611,14 @@ ____
 **Answer :**
 
 Postfix Evaluation Algorithm:
-* Initialize an empty stack.
-* For each symbol in the postfix expression (from left to right):
+1.  Initialize an empty stack.
+2.  For each symbol in the postfix expression (from left to right):
 	* If the symbol is a number: Push it onto the stack.
 	* If the symbol is an operator (e.g., +, -, *, /):
 		* Pop the top two operands from the stack.
 		* Apply the operator to the two operands (first on right and second on left).
 		* Push the result of operation back onto the stack.
-* At the end of the expression, the stack should contain exactly one element, which is the result of the evaluation.
+3.  At the end of the expression, the stack should contain exactly one element, which is the result of the evaluation.
 
 ___
 
