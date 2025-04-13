@@ -17,9 +17,9 @@ seo:
 
 #### Queues: Introduction to Queues, Definition, Array Representation of Queues, Primitive operations of queue and its implementation; 
 
-What is Queue? List its types. Mention the limitations of Linear Queue. Also Explain the insert, delete and display operations on Queue with appropriate examples.
+* What is Queue? List its types. Mention the limitations of Linear Queue. Also Explain the insert, delete and display operations on Queue with appropriate examples.
 
-Write a C program to simulate the insert and delete operations of a Queue. Trace the program for the following sequence of operations for Queue of size 3. i. Insert 3 elements ii. Delete 2 elements iii. Insert 3 elements.
+* Write a C program to simulate the insert and delete operations of a Queue. Trace the program for the following sequence of operations for Queue of size 3. i. Insert 3 elements ii. Delete 2 elements iii. Insert 3 elements.
 
 **Answer :**
 
@@ -122,9 +122,10 @@ _____
 
 Represent diagrammatically the following sequence of operations on an empty stack.
 Push (54); push (52); pop (); push (55); push (62); S=pop ();
+
 Represent diagrammatically the following sequence of operations on an empty queue.
-enqueue(21); enqueue(24);dequeue();enqueue(28);enqueue(32);
-Q=dequeue();
+enqueue(21); enqueue(24);dequeue();enqueue(28);enqueue(32); Q=dequeue();
+
 Find the value of S+Q.
 
 (Diagram to show insertion and deletion in stack and queue: Answer will be  62 + 24 = 86)
@@ -139,7 +140,6 @@ ____
 * Write a program to perform insert and delete operations on Circular QUEUE.
 * Write C functions for the Insertion and Deletion of elements in a circular queue. For an array of size 4, show (diagrammatically) the representation of the queue for the conditions.  i. Insert 3 elements   ii. Delete 2 elements  iii. Insert 3 elements    iv. Delete 1 element.
 * Write C functions for Insertion and Deletion of elements in a circular queue. For an array of size 3, show (diagrammatically) the representation of the queue for the conditions.  i. Insert 3 elements   ii. Delete 2 elements   iii. Insert 3 elements   iv. Delete 1 element.
-
 
 **Answer :**
 
@@ -326,9 +326,9 @@ ____
 
 **Answer :**
 
-Priority Queue is a data structure that operates similarly to a regular queue but each element in the priority queue is associated with a priority. The element with the highest priority is always served before the elements with lower priority, regardless of their insertion order. The order of elements depends on their priority levels so elements with high priority are dequeud first.
+Priority Queue is a data structure that operates similarly to a regular queue but each element in the priority queue is associated with a priority. The element with the highest priority is always served before the elements with lower priority, regardless of their insertion order. 
 
-If two elements have the same priority, they are dequeued according to their insertion order.
+The order of elements depends on their priority levels so elements with high priority are dequeud first. If two elements have the same priority, they are dequeued according to their insertion order.
 
 Priority queues are typically implemented using data structures that allow efficient access to the element with the highest (or lowest) priority:
 
@@ -349,6 +349,10 @@ _____
 
 
 
+
+
+____
+
 * Design a program to create Singly Linked List (SLL) of student data having the following the fields: Std_USN, Name, Marks and Total and display the same.
 
 * Illustrate the creation and display operations on Singly Linked List (SLL) of Employee Data with the fields: Employee ID, Name, company name and Mobile number.
@@ -364,9 +368,8 @@ _____
 * Write a C function to insert a node in a doubly linked list by position. Your program should take position as input from the user.
 * Differentiate between doubly Linked List and singly Linked List. Write a C function to insert a node in a doubly linked list by position. Your program should take position as input from user.
 * Differentiate between doubly Linked List and singly Linked List. Also develop a ‘C’ routine to insert a node before a given key node in a doubly linked list.
-* Write a C function to insert a node in a doubly linked list by position. Your program should take position as input from user.
-* Write a C function to insert a node in a doubly linked list by position. Your program should take position as input from user.
-* Develop a ‘C’ routine to insert a node before a given key node in a doubly linked list.
+
+
 
 
 ____
@@ -381,11 +384,10 @@ ____
 
 * Develop an algorithm to perform queue operation into a Circular Linked List.
 
-* Discuss the routines to simulate the operations of Queue using singly linked list.
-
 * Write a routines to simulate the operations of Queue using singly linked list.
 
-* Differentiate between doubly Linked List and singly Linked List. Develop an algorithm to perform stack operation into a circular single linked List.
+* Develop an algorithm to perform stack operation into a circular single linked List.
+
 
 
 
