@@ -15,20 +15,29 @@ seo:
 ---
 
 
-
 ##### Trees: Importance of Trees, Basic Tree Concepts and Terminologies: node, path, degree, internal nodes, height and subtree. 
 ##### Binary Tree: Binary Trees, Binary Tree Representations, Representing Lists as Binary trees, Minimum nodes, Maximum nodes, Nearly complete binary tree
 
 
 * Give the properties of binary trees that distinguish them from general trees.
-* Explain how to change a general tree into a binary tree with an example.
 
+**Answer :**
+
+A binary tree is a specific type of tree data structure that has unique properties compared to general trees.
+
+Maximum Number of Children:
+* In Binary Tree each node can have at most two children (left and right child).
+* In General Tree each node can have any number of children (no fixed limit).
+
+Child Node Distinction:
+* In Binary Tree children are ordered — the position of left and right matters.
+* In General Tree children are unordered — there's no distinction between them in terms of position.
+
+Binary trees are more structured and are often used in applications like binary search trees (BSTs), heaps, and expression trees.
 
 ____
 
-Explain the Level of a tree with example. In a Binary Tree what is the maximum number of nodes that can be found in level 12.
-
-With a suitable examples, define the following:
+##### With a suitable examples, define the following:
 i) Binary tree
 ii) Degree of a node
 iii) Level of a binary tree
@@ -38,7 +47,100 @@ vi) Height of a tree
 vii) Binary Search Tree.
 viii) Expression Tree
 
+Explain the Level of a tree with example. In a Binary Tree what is the maximum number of nodes that can be found in level 12.
 
+**Answer :**
+
+In a binary tree The maximum number of nodes at level _n_ is `2ⁿ`. So, at **level 12**, the maximum number of nodes is:
+
+```
+2¹² = 4096 nodes
+```
+
+---
+
+##### Degree of a Node:
+
+The degree of a node is the number of children it has.
+
+```
+      10
+     /  \
+    5    15
+```
+
+- Node 10 has degree 2 (two children)
+- Node 5 and 15 have degree 0 (no children)
+
+---
+
+##### Level of a Binary Tree:
+
+The level of a node is the number of edges from the root to that node.
+- Node 10 is at level 0
+- Node 5 and 15 are at level 1
+
+The level of a node in a tree refers to the distance (in edges) from the root node to that particular node. The root node is always at level 0 and each level below increases by 1.
+
+```
+        A         → Level 0
+       / \
+      B   C       → Level 1
+     / \   \
+    D   E   F     → Level 2
+```
+
+---
+
+##### Complete Binary Tree:
+
+A complete binary tree is a binary tree in which all levels are completely filled, except possibly the last, and all nodes in the last level are as left as possible. and new elements are filled from left to right.
+
+```
+      1
+     / \
+    2   3
+   / \
+  4   5
+```
+
+---
+
+##### Nearly Complete Binary Tree:
+
+A **nearly complete binary tree** is **almost** a complete binary tree — it may be missing some nodes at the **last level**, but they should be added as **left as possible**. Often used synonymously with a complete binary tree, but in some contexts, it's used to describe a complete tree with one or two nodes missing at the bottom right.
+
+---
+
+##### Height of a Tree:
+
+The height of a tree is the length of the longest path from the root to a leaf (measured in number of edges).
+
+Longest path: A → B → D,  So, height = 2
+
+```
+      A
+     / \
+    B   C
+   /
+  D
+```
+
+---
+
+##### Binary Search Tree (BST):
+
+A Binary Search Tree is a binary tree in which:
+- The left subtree of a node contains only nodes with values less than the node’s value.
+- The right subtree contains only nodes with values greater than the node’s value.
+
+```
+      8
+     / \
+    3   10
+   / \    \
+  1   6    14
+```
 
 _____
 
@@ -176,8 +278,68 @@ ____
 
 ### Construction of Expression Tree.
 
-
 * Define expression tree. Write the procedure to construct the expression tree from an infix expression.
+
+**Answer :**
+
+An expression tree is a binary tree used to represent arithmetic expressions.
+- Leaves are operands (constants or variables).
+- Internal nodes are operators (`+`, `-`, `*`, `/`, etc.).
+
+For the infix expression: `(a + b) * (c - d)` The corresponding expression tree is:
+
+```
+        *
+       / \
+      +   -
+     / \ / \
+    a  b c  d
+```
+
+---
+
+To construct an expression tree, Infix expressions are converted to postfix, and then expression tree is constructed from postfix.
+- Infix: `(a + b) * (c - d)`
+- Postfix: `a b + c d - *`
+
+Stack is used to construct the tree: 
+1. Scan the postfix expression from left to right.
+2. For each **operand**:  
+	* Create a new tree node.  Push it onto the stack.
+3. For each **operator**:
+	- Pop two nodes from the stack (right and left operands).
+	- Create a new node with the operator.
+	- Set the popped nodes as the right and left children.
+	- Push the new node back onto the stack.
+4. After the expression is processed, the stack will contain one element — the **root** of the expression tree.
+
+---
+
+Postfix: `a b + c d - *`
+
+**Step-by-step Tree Construction:**
+
+1. Read `a` → push node(`a`)
+2. Read `b` → push node(`b`)
+3. Read `+` → pop `b`, `a` → create `+` node with children `a` and `b` → push `+`
+4. Read `c` → push node(`c`)
+5. Read `d` → push node(`d`)
+6. Read `-` → pop `d`, `c` → create `-` node → push `-`
+7. Read `*` → pop `-`, `+` → create `*` node → push `*`
+
+Final expression tree:
+
+```
+        *
+       / \
+      +   -
+     / \ / \
+    a  b c  d
+```
+
+---
+
+
 
 * Give the algorithms for pre-order and post-order tree traversals. Represent the following expression using binary tree and write the pre-order and Post-order traversals for the tree generated.  
 
@@ -196,12 +358,9 @@ _____
 
 #### Binary Search Tree: Binary Search Trees – Basic Concepts, Operations (Insertion, Deletion, Find the smallest node, Find the largest node, and Find a requested node), Applications, 
 
-
 * Write an algorithm to insert and delete an element in a Binary Search Tree.
 
 * Explain algorithm to delete a node from the Binary Search Tree (BST) with an appropriate example.
-
-* Write an algorithm to delete a node from the Binary Search Tree (BST). Explain with an appropriate example.
 
 * Write algorithms to perform the following operations on a BST: i. Search for a requested node  ii. Add a new node.
 
@@ -212,7 +371,192 @@ _____
 * Write C function to find the maximum element in BST.
 
 
+**Answer :**
 
+A Binary Search Tree (BST) is a binary tree with  each node has at most two children.
+For any node:
+- Left subtree contains nodes with values less than the node’s value.
+- Right subtree contains nodes with values greater than the node’s value.
+- No duplicate values are allowed.
+
+---
+
+**Inserting a Node in BST**
+
+Insertion in a BST maintains its sorted property. The new value is compared with the root:
+- If it's smaller, insert in the **left** subtree.
+- If it's greater, insert in the **right** subtree.
+- Continue until you find a NULL (empty) spot.
+
+```
+If tree is empty:
+      Create a new node with the key and return it.
+If Key < root->data:
+      Insert Key into left subtree.
+Else if Key > root->data:
+      Insert Key into right subtree.
+Return the root.
+```
+
+```c
+struct Node* insert(struct Node* root, int key) 
+{
+    if (root == NULL) {
+        struct Node* newNode = malloc(sizeof(struct Node));
+        newNode->data = key;
+        newNode->left = newNode->right = NULL;
+        return newNode;
+    }
+
+	if (key < root->data)
+        root->left = insert(root->left, key);
+    
+    else if (key > root->data)
+        root->right = insert(root->right, key);
+    
+    return root;
+}
+```
+
+---
+
+Searching for a Node in BST
+- Start from the root.
+- If the key matches root → found.
+- If key < root → search in left subtree.
+- If key > root → search in right subtree.
+
+This process reduces the search space by half at every step → **O(log n)** time complexity for balanced trees.
+
+```
+If root is NULL → return NULL (not found)
+
+If key == root->data → return root
+If key < root->data → search left
+Else → search right
+```
+
+```c
+struct Node* search(struct Node* root, int key) 
+{
+    if (root == NULL || root->data == key)
+        return root;
+
+	if (key < root->data)
+        return search(root->left, key);
+    
+    return search(root->right, key);
+}
+```
+
+---
+
+
+Deleting a node in BST requires maintaining the BST property. There are **three cases**:
+
+1. Node is a leaf → simply remove it.
+2. Node has one child → replace it with its child.
+3. Node has two children → replace with:
+	- Inorder successor (smallest node in right subtree)
+	- Then delete the successor recursively.
+
+```
+If tree is empty → return NULL
+
+If key < root->data → delete in left subtree
+
+If key > root->data → delete in right subtree
+
+Else:
+    a) Node with no child → free node, return NULL
+    b) One child → return the non-null child
+    c) Two children:
+        - Find inorder successor
+        - Replace root->data with successor->data
+        - Delete successor in right subtree
+Return root
+```
+
+```c
+struct Node* findMin(struct Node* root) {
+    while (root->left != NULL)
+        root = root->left;
+    return root;
+}
+
+struct Node* delete(struct Node* root, int key) {
+    if (root == NULL)
+        return NULL;
+    if (key < root->data)
+        root->left = delete(root->left, key);
+    else if (key > root->data)
+        root->right = delete(root->right, key);
+    else {
+        // Node found
+        if (root->left == NULL) {
+            struct Node* temp = root->right;
+            free(root);
+            return temp;
+        } else if (root->right == NULL) {
+            struct Node* temp = root->left;
+            free(root);
+            return temp;
+        }
+        struct Node* temp = findMin(root->right);
+        root->data = temp->data;
+        root->right = delete(root->right, temp->data);
+    }
+    return root;
+}
+```
+
+---
+
+Finding the Smallest Node in BST, the leftmost node contains the smallest value.
+
+```
+1. Start at root
+2. Traverse left until left == NULL
+3. Return current node
+```
+
+```c
+struct Node* findMin(struct Node* root) 
+{
+    while (root != NULL && root->left != NULL)
+        root = root->left;
+    return root;
+}
+```
+
+---
+
+Finding the Largest Node in BST, rightmost node in a BST holds the largest value.
+
+```
+1. Start at root
+2. Traverse right until right == NULL
+3. Return current node
+```
+
+```c
+struct Node* findMax(struct Node* root) 
+{
+    while (root != NULL && root->right != NULL)
+        root = root->right;
+    return root;
+}
+```
+
+---
+
+| Operation          | Time Complexity (Avg) | Description                      |
+| ------------------ | --------------------- | -------------------------------- |
+| Insert Node        | O(log n)              | Recursively insert left or right |
+| Search Node        | O(log n)              | Traverse left or right           |
+| Delete Node        | O(log n)              | Handle 0, 1, or 2 children       |
+| Find Smallest Node | O(log n)              | Traverse leftmost path           |
+| Find Largest Node  | O(log n)              | Traverse rightmost path          |
 
 _____
 
@@ -235,17 +579,9 @@ ____
 
 ### Threaded Binary Trees.
 
-With suitable example, illustrate Threaded Binary tree.
-
-Explain threaded binary trees and their representation with a neat diagram. Also develop function to do the inorder traversal of a threaded binary tree.
-
-What area threaded tree and its advantage?
-
-Define and give an example for Threaded Binary tree.
-
-Write short note on: Threaded Binary Tree.
-
-Define Threaded Binary Tree and show its representation.
+* Explain threaded binary trees and their representation with a neat diagram. Also develop function to do the inorder traversal of a threaded binary tree.
+* What area threaded tree and its advantage?
+* Define and give an example for Threaded Binary tree
 
 **Answer :**
 
@@ -265,13 +601,6 @@ There are two types of threaded binary trees:
 
 2. **Double Threaded Binary Tree**: In this type, both the **left** and **right** pointers are used for threading. The **left thread** points to the inorder predecessor, and the **right thread** points to the inorder successor.
 
-```
-        10
-       /  \
-      5    15
-     / \     \
-    3   7    20
-```
 
 (Proper Diagram needed)
 

@@ -15,28 +15,33 @@ seo:
 ---
 
 
-
-
 #### Advanced concepts in Trees: AVL Search Trees: Need for AVL Search Trees, Definition, Balancing Trees (L-L Rotation, R-R Rotation, L-R Double Rotation, R-L Double Rotation)-, 
 
 * How to overcome the drawbacks of Binary Search Tree (BST) using AVL tree? Illustrate with an example.
 
 **Answer :**
 
-A Binary Search Tree (BST) is a tree data structure in which each node has at most two children, and the left child’s key is less than the parent’s key, while the right child’s key is greater than the parent’s key.
+A Binary Search Tree (BST) is a tree data structure in which each node has at most two children, and the key in the left subtree is less than the node’s key, while the key in the right subtree key is greater.
 
 Drawbacks of BST:
-1. Can become Unbalanced : If nodes are inserted in a sorted order (increasing or decreasing), the BST can become unbalanced and resemble a linked list.
-2. Inefficient Search : In the worst case, searching, inserting, and deleting in a degenerate BST becomes inefficient with O(n) time complexity, where n is the number of nodes.
+* **BST can become Unbalanced** : If nodes are inserted in a sorted order (increasing or decreasing), the BST can become unbalanced and degenerate into a linear structure resembling a linked list.
+* **Inefficient Operations** : In the worst case scenario, time complexity for search, insert, and deletion becomes O(n) due to unbalanced structure, where n is the number of nodes.
 
-An AVL tree is a self-balancing binary search tree, which automatically adjusts itself to ensure that it remains balanced. It ensures that the height of the left and right subtrees of any node differ by at most 1 (i.e., the balance factor is -1, 0, or 1). An AVL tree keeps the BST properties while ensuring balance.
+#### AVL Tree
 
-If the balance factor is violated (i.e., it becomes -2 or 2), the tree performs rotations to restore balance. avoiding the worst-case scenario of a skewed tree.
+An AVL tree is a self-balancing binary search tree, which automatically adjusts itself to ensure that it remains balanced. 
 
-Optimized Search: By keeping the height of the tree logarithmic (O(log n)), the search, insertion, and deletion operations are efficient.
+Characteristics of AVL trees:
+* **Balance factor** : It ensures that the height of left and right subtrees of any node differ by at most 1 (i.e., the balance factor is -1, 0, or 1). An AVL tree keeps the BST properties while ensuring balance.
+
+* If the balance factor is violated (i.e., it becomes -2 or 2), the tree performs rotations to restore balance. avoiding the worst-case scenario of a skewed tree.
+
+* **Optimized Search** : Operations such as search, insertion, and deletion maintain a time complexity of **O(log n)** due to the balanced structure.
 
 
-Inserting nodes into a Binary Search Tree in increasing order:  10, 20, 30, 40, 50, 25. The tree becomes unbalanced with all nodes skewed to the right, making it inefficient for operations. The height of the tree is O(n), which means searching for a node will take O(n) time in the worst case.
+**Inserting nodes into a Binary Search Tree in increasing order:**
+
+For the given sequence : 10, 20, 30, 40, 50, 25.  The tree becomes unbalanced with all nodes skewed to the right, making it inefficient for operations. The height of the tree is O(n), which means searching for a node will take O(n) time in the worst case.
 
 ```
           10
@@ -62,50 +67,51 @@ Inserting Same Nodes into an AVL Tree
 - Insert: 20
 ```
    10
-	 \
-	 20
+     \
+     20
 ```
 
 - After inserting 30, the AVL tree detects an imbalance at node 10. The balance factor of 10 becomes -2, which triggers a left rotation at node 10 to restore balance.
 
 After left rotation:
 ```
-	 20
-	/  \
-  10    30
+     20
+    /  \
+  10   30
 ```
 
 - Insert: 40
 ```
-	 20
-	/  \
-  10    30
-		 \
-	      40
+     20
+    /  \
+  10   30
+            \
+            40
 ```
 
 - After inserting 50, the AVL tree detects an imbalance at node 30. The balance factor of 30 becomes -2, which triggers a left rotation at node 30.
 
 After left rotation:
 ```
-	 20
-	/  \
-  10    40
-		/  \
-	  30    50
+     20
+    /  \
+  10   40
+        /  \
+      30   50
 ```
 
 - After inserting 25, the AVL tree detects an imbalance at node 20. The balance factor of 20 becomes 2, which triggers a right left rotation.
 
 ```
-	 20
-	/  \
-  10    40
-		/  \
-	  30    50
-	  /
-	25
+     20
+    /  \
+  10   40
+        /  \
+      30   50
+     /
+   25
 ```
+
 After right left rotation:
 ```
        30
@@ -116,7 +122,6 @@ After right left rotation:
 
 ```
 Now, the tree is balanced, and the height of the tree is O(log n), ensuring that operations like search, insert, and delete will be efficient.
-
 
 ____
 
@@ -134,59 +139,82 @@ An AVL Tree is a self-balancing binary search tree (BST) where the height differ
 
 `Balance Factor = Height of Left Subtree - Height of Right Subtree`.
 For a node to be balanced, its balance factor should be in the range of -1 to +1.
-If the balance factor is less than -1 or greater than 1, the tree is unbalanced and requires a rotation The four common cases of imbalance in AVL trees are handled using single rotations (left or right) and double rotations (left-right or right-left).
+
+If the balance factor becomes less than -1 or greater than 1 due to an insertion or deletion, the tree becomes unbalanced and must be rebalanced using rotations.
+
+There are four common cases of AVL tree imbalance:
+- Left-Left (L-L)
+- Right-Right (R-R)
+- Left-Right (L-R)
+- Right-Left (R-L)
+
+These imbalances in AVL trees are handled using single rotations (left or right) and double rotations (left-right or right-left).
 
 This property ensures that the tree remains balanced, meaning the height of the tree is always O(log n), where n is the number of nodes in the tree. This gives the AVL tree efficient time complexity for operations like search, insert, and delete.
 
 ---
 
-There are four main cases of unbalanced AVL trees:
+**Left-Left (L-L) Case:**
 
-1. Left-Left (L-L) Case: Occurs when the left child of the left subtree causes the imbalance. To fix this, we perform a right rotation on the root of the subtree.
+Occurs when a node is inserted into the **left subtree of the left child** of an unbalanced node. (Left child of the left subtree causes the imbalance. 
+
+To fix this, a single right rotation is performed on the root of the subtree.
 * Set the left child of the current root as the new root
 * Make the right child of new root(20) as the left child of the current root (30)
 * Set Current root (30) as the right child of the new root (20).
 
 ```
-	  30
-	 /   
+      30
+     /   
    20      
   /   
 10
 
-After right rotation:
+After right rotation to node 30:
 
-	  20
-	 /  \
+      20
+     /  \
    10    30
 ```
 
-2. Right-Right (R-R) Case: Occurs when the right child of the right subtree causes the imbalance. To fix this, we perform a left rotation on the root of the subtree.
+
+**Right-Right (R-R) Case** :  
+
+Occurs when a node is inserted into the **right subtree of the right child** of an unbalanced node. (Right child of the right subtree causes the imbalance).
+
+To fix this, we perform a single left rotation on the root of the subtree.
 * Set the right child of current root as new root. 
 * Make the left child of the new root (20) the right child of the current root (10).
 * Set the current root (10) as the left child of the new root (20).
 ```
-  10
-	\
-	20
-	  \
-	  30
-	  
-After left rotation:
+    10
+      \
+      20
+        \
+        30
 
-	  20
-	 /  \
+After left rotation at node 10:
+
+      20
+     /  \
    10    30
 ```
 
-3. Right-Left (R-L) Case: Occurs when the right child of the left subtree causes the imbalance. To fix this, we first perform a right rotation on the right child of the root. Then perform left rotation on the root.
+
+**Right-Left (R-L) Case** : 
+
+Occurs when a node is inserted into the **left subtree of the right child** of an unbalanced node.
+
+To fix this, we perform a double rotation(Right-Left)
+* Right rotation on the right child of the root. 
+* Left rotation on the unbalanced root.
 
 ```
-	  10
-		\
-		 30
-		/
-	  20
+      10
+        \
+         30
+        /
+      20
 
 Right Rotation on 30:
 
@@ -198,28 +226,34 @@ Right Rotation on 30:
 
 Left rotation on 10:
 
-	  20
-	 /  \
+      20
+     /  \
    10    30
 ```
 
-4. Left-Right (L-R) Case: Occurs when the left child of the right subtree causes the imbalance. To fix this, we first perform a left rotation on the left child and of the root. Then perform a right rotation on the root.
+
+**Left-Right (L-R) Case** : 
+
+Occurs when a node is inserted into the **right subtree of the left child** of an unbalanced node.
+
+To fix this, we perform a double rotation(Left-Right)
+* Left rotation on the left child of the root. 
+* Right rotation on the unbalanced root.
 
 ```
-	  30
-	 /
+      30
+     /
    10
-	 \
-	 20
+     \
+     20
 
 Left Rotation on 10:
 
       30
      /
    20
-  /
-10
-
+   /
+ 10
 
 Right Rotation on 30:
 
@@ -227,6 +261,7 @@ Right Rotation on 30:
      /  \
    10    30
 ```
+
 
 _____
 
@@ -254,67 +289,92 @@ _____
 * What are the applications of Heap? Write the algorithm for Reheap UP and Reheap Down operation.
 * Discuss algorithms used in Heap construction with a suitable example: i) reheap up    ii) reheap down
 * Explain the algorithms to perform following operations with an example: i) Max heap construction ii) Max heap deletion.
-* Discuss algorithms used in Heap construction with a suitable example: reheap up and reheap down
-* Write the algorithm for Reheap UP and Reheap Down operation.
 * Explain the reheap up and reheap down algorithms used in Heap construction with a suitable example.
-* Define heap. Write the algorithm for reheap up and reheap down
 
 **Answer :**
 
-Heap Construction Algorithms:
-1. Reheap Up: is used when adding a new element to the heap. The new element is initially placed at the end of the heap, and then reheapUp is used to maintain the heap property by moving the element up the tree until it reaches the correct position.
+A heap is a special tree-based data structure that satisfies the heap property.
 
-2. Reheap Down: is used when the root of the heap is removed, and the last element in the heap is moved to the root. ReheapDown is then used to maintain the heap property by moving the element down the tree until it reaches the correct position.
+In a max-heap, every parent node is greater than or equal to its children; in a min-heap, every parent node is less than or equal to its children. 
 
-Both operations have O(log n) time complexity, ensuring that the heap remains efficient for priority queue operations.
+##### Common Applications of Heap:
 
+* **Priority Queues** – Efficient for accessing the highest or lowest priority element.
 
-Reheap Up Operation on insertion : 
+* **Heap Sort** – comparison-based, in-place sorting algorithm that uses a binary heap to sort elements.
 
-* The Reheap Up (or Bubble Up) operation is used when an element is added to the heap typically inserted at the end of the tree from left t right following the complete binary tree rules.
-* After the insertion, we need to ensure that the heap property is maintained by comparing the inserted element with its parent and swapping them if value it is larger (in a max-heap) or smaller (in a min-heap).
-* Repeat until the element is in the correct position, or it becomes the root.
+* **Dijkstra’s Algorithm** – For finding the shortest path in graphs.
+
+* **Job Scheduling Systems** – For scheduling jobs/tasks based on priority.
+
+* **Median Maintenance in data streams** – Heaps are used in real-time to keep track of medians of dynamic stream of numbers.
+
+* **Data Stream Management** – For maintaining top-k elements in a stream of data efficiently. (Trending hashtags, top-scoring users in games, real-time recommendation systems)
+
+___
+
+Heap Construction Algorithms **Reheap Up** and **Reheap Down** operations maintain the heap structure:
+- Reheap Up restores the heap property after insertion.
+- Reheap Down restores the heap property after deletion.
+
+Both operations ensure that a heap maintains O(log n) time complexity, making heaps suitable for efficient implementations of priority queues, heap sort, and graph algorithms like Dijkstra’s algorithm.
+
+___
+
+**Reheap Up** : is used when adding a new element to the heap. 
+* The new element is inserted at the end of the heap to maintain CBT structure.
+* Compare the inserted element with its parent.
+* if the element is greater (in max-heap), swap with its parent.
+* Repeat until the heap property is restored or the element reaches the root.
+* reheapUp is used to maintain the heap property by moving the element up the tree until it reaches the correct position.
 
 Starting with an empty heap, let’s insert the elements: `[10, 20, 30, 15, 5]`
-1. Insert 10: Heap = `[10]`
-2. Insert 20: Heap = `[10, 20]`
-    - Compare 20 with its parent (10). Since 20 > 10, swap them.
-    - Heap = `[20, 10]`
-3. Insert 30: Heap = `[20, 10, 30]`
-    - Compare 30 with its parent (10). Since 30 > 10, swap them.
-    - Heap = `[20, 30, 10]`
-    - Compare 30 with its new parent (20). Since 30 > 20, swap them.
-    - Heap = `[30, 20, 10]`
-4. Insert 15: Heap = `[30, 20, 10, 15]`
-    - Compare 15 with its parent (20). Since 15 < 20, no need to swap.
-    - Heap = `[30, 20, 10, 15]`
-5. Insert 5: Heap = `[30, 20, 10, 15, 5]`
-    - Compare 5 with its parent (15). Since 5 < 15, no need to swap.
-    - Heap = `[30, 20, 10, 15, 5]`
+
+Insert 10: Heap = `[10]`
+
+Insert 20: Heap = `[10, 20]`
+- Compare 20 with its parent (10). Since 20 > 10, swap them.
+- Heap = `[20, 10]`
+
+Insert 30: Heap = `[20, 10, 30]`
+- Compare 30 with its parent (10). Since 30 > 10, swap them.
+- Heap = `[20, 30, 10]`
+- Compare 30 with its new parent (20). Since 30 > 20, swap them.
+- Heap = `[30, 20, 10]`
+
+Insert 15: Heap = `[30, 20, 10, 15]`
+- Compare 15 with its parent (20). Since 15 < 20, no need to swap.
+- Heap = `[30, 20, 10, 15]`
+
+Insert 5: Heap = `[30, 20, 10, 15, 5]`
+- Compare 5 with its parent (15). Since 5 < 15, no need to swap.
+- Heap = `[30, 20, 10, 15, 5]`
 
 Final Heap: `[30, 20, 10, 15, 5]`
 
-____
+______
 
-Reheap Down (Bubble Down) Operation on deletion :
-
-* The Reheap Down (or Bubble Down) operation is used when an element is removed from the heap (usually the root). 
-* After the removal, the last element in the heap is moved to the root to maintain the CBT structure property
-* To restore the heap property by comparing the new root with its children and swapping it with the larger (in a max-heap) or smaller (in a min-heap) child.
-* Repeat until the heap property is in correct position or becomes a leaf node.
+**Reheap Down** : is used when the root of the heap is removed. 
+* Replace the root with the last element
+* Compare the new root with its children
+* Swap If the root is smaller than the larger child (in max-heap)
+* Repeat until the heap property is restored
 
 Starting with the heap: `[30, 20, 10, 15, 5]`, let’s remove the root (30) and perform a reheap down.
-1. Remove root 30: Move 5 to the root: `[5, 20, 10, 15]`
-2. Compare 5 with its children (20 and 10). The largest child is 20.
-3. Swap 5 and 20: `[20, 5, 10, 15]`
-4. Now, compare 5 with its new children (15). The largest child is 15.
-5. Swap 5 and 15: `[20, 15, 10, 5]`
+
+Remove root 30: Move 5 to the root: `[5, 20, 10, 15]`
+* Compare 5 with its children (20 and 10). The largest child is 20.
+* Swap 5 and 20: `[20, 5, 10, 15]`
+* Now, compare 5 with its new children (15). The largest child is 15.
+* Swap 5 and 15: `[20, 15, 10, 5]`
+
 Final Heap after reheap down: `[20, 15, 10, 5]`
 
+ReheapDown is then used to maintain the heap property by moving the element down the tree until it reaches the correct position.
 
-_____
+____
 
-Define Heap? Write Heap sort Algorithm and sort the below tree.
+* Define Heap? Write Heap sort Algorithm and sort the below tree.
 ```
                     27
                   /    \
@@ -324,9 +384,6 @@ Define Heap? Write Heap sort Algorithm and sort the below tree.
 ```
 
 **Answer :**
-
-
-
 
 
 

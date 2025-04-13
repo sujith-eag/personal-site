@@ -168,7 +168,6 @@ When elements are dequeued, the front pointer moves ahead, and the space at the 
 Front -> 30, 40, 50, 60 <- Rear (after two dequeues)
 ```
 
-
 ---
 
 Insertion (Enqueue) Algorithm in Circular Queue:

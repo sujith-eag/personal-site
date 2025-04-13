@@ -15,7 +15,6 @@ seo:
 ---
 
 
-
 #### Multi-way trees: Introduction, Definition, features. B-trees – Introduction, Definition and features, 
 
 * Illustrate the properties of m-way tree with an example.
@@ -24,11 +23,14 @@ seo:
 
 **Answer :**
 
-i. M-way Tree : is a tree data structure where each node can have at most **m** children. It is a generalization of a binary tree where each node can have more than two children. The number **m** refers to the maximum number of children that a node can have.
+#### M-way Tree : 
+
+M-way tree is a tree data structure where each node can have at most **m** children. It is a generalization of a binary tree where each node can have more than two children. 
+
+The number **m** refers to the maximum number of children that a node can have.
 - Each node in the tree can have up to m children.
 - The root node may have fewer than m children, but non-root nodes must have between ⌈m/2⌉ and m children.
 - The tree is balanced, meaning the depth of all leaf nodes is the same.
-
 
 For a 3-way tree (a ternary tree), each node can have at most 3 children.
 
@@ -42,10 +44,9 @@ For a 3-way tree (a ternary tree), each node can have at most 3 children.
 
 ____
 
-ii. B-tree : is a self-balancing tree data structure that maintains sorted data and allows for efficient insertion, deletion, and searching operations. It is commonly used in databases and file systems where large blocks of data need to be managed efficiently.
-- All leaves are at the same level.
-- The tree is balanced, and the height of the tree is logarithmic with respect to the number of elements.
-- The B-tree ensures that operations like search, insert, and delete are efficient with a time complexity of \(O(\log n)\).
+#### B-tree
+
+B-tree is a self-balancing tree data structure that maintains sorted data and allows for efficient insertion, deletion, and searching operations. 
 
 B-tree of order m is a tree where:
   - Each node can have up to m children.
@@ -59,9 +60,16 @@ Consider a B-tree of order 3 (m = 3). Each node can hold up to 2 keys and have u
        [5]  [15] [25, 30]
 ```
 
+It is commonly used in databases and file systems where large blocks of data need to be managed efficiently.
+- All leaves are at the same level.
+- The tree is balanced, and the height of the tree is logarithmic with respect to the number of elements.
+- The B-tree ensures that operations like search, insert, and delete are efficient with a time complexity of \(O(\log n)\).
+
 ____
 
-iii. 2-3 Tree :  is a special type of balanced search tree where every internal node can have either 2 or 3 children. It is a type of B-tree of order 3.
+#### 2-3 Tree  
+
+2-3 Tree is a special type of balanced search tree where every internal node can have either 2 or 3 children. It is a type of B-tree of order 3.
 - Every path from the root to a leaf has the same length (the tree is balanced).
 - The tree ensures logarithmic time complexity for search, insertion, and deletion operations.
 
@@ -82,14 +90,16 @@ In a 2-3 tree:
 
 ____
 
-iv. 2-3-4 Tree:  is a self-balancing tree where each node can have 2, 3, or 4 children and can store 1, 2, or 3 keys, respectively. This tree is a generalization of both the 2-tree and 3-tree and is also a type of B-tree.
+#### 2-3-4 Tree
+
+2-3-4 Tree is a self-balancing tree where each node can have 2, 3, or 4 children and can store 1, 2, or 3 keys, respectively. 
+
+This tree is a generalization of both the 2-tree and 3-tree and is also a type of B-tree.
 - 2-node: A node with 1 key and 2 children.
 - 3-node: A node with 2 keys and 3 children.
 - 4-node: A node with 3 keys and 4 children.
 
-Like 2-3 trees, the 2-3-4 tree is balanced, with all leaves at the same level.
-
-It supports efficient insertion and deletion operations, with a time complexity of \(O(\log n)\).
+Like 2-3 trees, the 2-3-4 tree is balanced, with all leaves at the same level. It supports efficient insertion and deletion operations, with a time complexity of O(\log n).
 
 The 2-3-4 tree can be converted into a B-tree of order 4, meaning it is essentially a B-tree with a maximum of 4 children per node.
 
@@ -256,7 +266,6 @@ Breadth-First Search (BFS) is an algorithm for traversing or searching tree or g
 BFS is an essential graph traversal algorithm that explores nodes layer by layer, ensuring that all nodes at the current depth level are processed before moving on to the next level. 
 
 It is widely used for applications like finding the shortest path in unweighted graphs, web crawling, and social network analysis.
-
 
 1. Start with the starting node: We enqueue the starting node and mark it as visited.
 2. Process each node: We dequeue a node, print or store it, and then enqueue all of its unvisited neighbors.
@@ -476,8 +485,6 @@ _____
 6. DFS completes as all nodes are visited.    
 
 - Output: `A B D E C`
-
-
 
 ```python
 DFS(graph, start):
