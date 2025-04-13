@@ -87,7 +87,7 @@ Operating systems offers various User interfaces to meet various user needs:
 
 System calls act as the interface between the user space and the kernel space.
 
-A **system call** is a programmatic way through which a user-level program requests a service from the **operating system’s kernel**. 
+A **system call** is a programmatic way through which a user-level program requests a service from the **operating system’s kernel**. They are processed via traps which gets validated, executed by OS and returns control to user program.
 
 These services typically involve access to hardware resources or other operations that require privileged access, such as creating a process, accessing a file, or communicating with a device. Since user programs do not have direct access to critical hardware or protected parts of the system (for reasons of security, control, and abstraction).
 
@@ -184,7 +184,7 @@ The system switches between user mode and kernel mode during System Call, Interr
 
 ____
 
-A **timer** is a hardware, it prevents a process from monopolizing the CPU indefinitely. When the timer expires, it generates an interrupt, allowing the OS to regain control and possibly switch to another process. This is crucial for preemptive multitasking and system responsiveness.
+A **timer** is a hardware, it prevents a process from monopolizing the CPU indefinitely. Timer is set to a specified duration for a process and when the timer expires, it generates an interrupt, allowing the OS to regain control and possibly switch to another process. This is crucial for preemptive multitasking and system responsiveness.
 
 ---
 
@@ -207,15 +207,13 @@ A **timer** is a hardware, it prevents a process from monopolizing the CPU indef
 
 **Types of Computer Systems**
 
-**Client-server computing** : is based on centralized model where one or more servers provide services, data, or resources to multiple client machines. Clients depend on the server to function properly.
+**Client-server computing** : is a specialized distributed system based on centralized model where one or more servers provide services, data, or resources. Client machines request for and make use of these resources. 
 
-It involves splitting roles between servers and clients. Servers handle requests from clients and offers resources or services like web pages, file storage, or authentication, while clients request and use those services. Clients depend on the server to function properly.
-
-This model is widely used in modern networks, including websites and enterprise systems.
+This model splits roles between servers and clients. Clients depend on the server to function properly. This is widely used in modern networks, including websites and enterprise systems.
 
 ___
 
-**Peer-to-peer computing** : is a decentralized model, it involves computers in a network acting both as clients and servers. Each system(node, peer) in the network can request and provide services, creating a collaborative environment. There is no central server; instead, all peers share resources directly among themselves.
+**Peer-to-peer computing** : is a distributed system based on decentralized model. It involves computers in a network acting both as clients and servers. Each system(node, peer) in the network can request and provide services, creating a collaborative environment. There is no central server, all peers share resources directly among themselves.
 
 It is scalable and fault-tolerant because there is no single point of failure. This model is often used for decentralized applications, file-sharing networks and blockchain applications.
 
@@ -233,7 +231,7 @@ ___
 
 **Embedded systems** : are dedicated systems designed to perform a specific task within a larger device. They are often resource-constrained, have limited functionality, and are designed for real-time operation. Examples include systems in washing machines, microwave ovens, and medical devices.
 
-**Real-time systems** : are designed to provide timely and predictable responses to events. They must process inputs and generate outputs within strict time constraints. There are two types: hard real-time systems, where missing a deadline can cause failure, and soft real-time systems, where occasional deadline misses are acceptable. Examples include flight control systems and medical monitoring devices.
+**Real-time systems** : are designed to provide timely and predictable responses to events. They must process inputs and generate outputs within strict time constraints. Examples include flight control systems and medical monitoring devices.
 
 ____
 
@@ -246,8 +244,11 @@ ____
 Traditional computing setups refer to systems where computing resources such as servers and workstations are located locally within an organization.
 
 - PC: A single-user system focused on ease of use and performance, but with less emphasis on resource utilization.
+
 - Mainframe: A multi-user system designed for resource maximization and efficient information sharing.
+
 - Workstations: Connected to servers via networks, offering a balance of performance and resource utilization.
+
 - Network Computers / Thin Clients: Focus on easy maintenance and security, with less local processing power.
 
 **Mainframe systems** : are large, powerful machines that support hundreds or thousands of users at the same time. They are known for their reliability, security, and centralized control. Mainframes are used in banking, government, and enterprise data processing.
@@ -258,16 +259,15 @@ Traditional computing setups refer to systems where computing resources such as 
 
 **Multiprocessor systems** : are computers that have more than one CPU. These systems allow multiple processes to run simultaneously, increasing performance and efficiency. There are two types: symmetric multiprocessing, where all processors are equal, and asymmetric multiprocessing, where one processor controls others. These systems are used in high-performance computing and servers.
 
-
 ---
 
 #### System Boot
 
-Booting is the process of starting or restarting a computer system. It involves loading the operating system kernel into the system's main memory (RAM) and beginning its execution so that the computer becomes operational.
+Booting is the process of starting or restarting a computer system by loading the operating system kernel into the system's main memory (RAM) and beginning its execution so that the computer becomes operational.
 
-The bootstrap program is a small, specialized code that resides in firmware, usually in ROM (Read-Only Memory) or flash memory on the motherboard. Because ROM is non-volatile, it retains its contents even when the power is off.
+The Bootstrap Loader is a small, specialized code that resides in firmware, usually in ROM (Read-Only Memory) or flash memory on the motherboard. Because ROM is non-volatile, it retains its contents even when the power is off.
 
-This bootstrap program is the first code that runs when the system is powered on. Its job is to perform basic system checks and then locate and load the operating system kernel from disk into memory.
+This bootstrap program is the first code that runs when the system is powered on. It Starts the booting process and initializes the system by performing basic system checks and then locate and load the operating system kernel from disk into memory.
 
 
 ---

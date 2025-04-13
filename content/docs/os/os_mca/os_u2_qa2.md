@@ -14,11 +14,14 @@ seo:
   noindex: false # false (default) or true
 ---
 
+
 ### Process Synchronization
 
-Process synchronization refers to the coordination of the execution of processes that share resources, in order to maintain consistency and avoid conflicts. When multiple processes access shared data or resources concurrently, there is a risk that the data may become inconsistent or corrupted. Therefore, synchronization mechanisms are required to ensure correct process behavior and data integrity.
+Process synchronization refers to the coordination of the execution of processes that share resources, in order to maintain consistency and avoid conflicts. 
 
-A common issue that arises is known as a **race condition**, which occurs when multiple processes concurrently access and modify shared data, leading to inconsistent or incorrect results, depending on the timing of the operations.
+A common issue that arises is **race condition**, which occurs when multiple processes concurrently access and modify shared data, leading to inconsistent, data corruption or incorrect results, depending on the timing of the operations.
+
+Therefore, synchronization mechanisms are required to ensure correct process behavior and data integrity.
 
 ---
 
@@ -29,7 +32,9 @@ A common issue that arises is known as a **race condition**, which occurs when m
 
 **Answer :**
 
-In a system with multiple processes (P0, P1, ..., Pn−1), each process may include a segment of code called the **critical section**, where it accesses or modifies shared resources such as variables, files, or data structures. The main problem is to design a mechanism that ensures only one process can execute in its critical section at a time (no two processes execute their critical sections simultaneously), in order to avoid race conditions and ensure data consistency.
+In a system with multiple processes (P0, P1, ..., Pn−1), each process may include a segment of code called the **critical section**, where it accesses or modifies shared resources such as variables, files, or data structures. 
+
+The Critical Section Problem is to design a mechanism that ensures only one process can execute in its critical section at a time (no two processes execute their critical sections simultaneously), in order to avoid race conditions and ensure data consistency.
 
 Each process follows a structure that typically consists of four sections:
 
@@ -62,7 +67,6 @@ These requirements ensure that the system maintains consistency, avoids deadlock
 
 **Answer :**
 
-
 **Interprocess Communication (IPC)** refers to the mechanism that allows processes to communicate and coordinate their actions when running concurrently. IPC is essential in systems where multiple processes must cooperate and share data.
 
 Processes can be classified as:
@@ -75,11 +79,11 @@ Processes can be classified as:
 
 Providing an environment for process cooperation allows the operating system to support:
 
-1. **Information Sharing** : Enables Processes to access and modify shared data.
+1. **Information Sharing** : Enables Processes to access and modify shared data between several users needing it.
 
 2. **Computation Speedup** : Large tasks can be divided among multiple processes to run concurrently, improving overall performance by distributed workloads.
 
-3. **Modularity** : Large systems can be broken into smaller, independent processes that are easier to manage and understand and maintain.
+3. **Modularity** : Large systems can be broken into smaller, independent processes that are easier to manage and understand and maintain. IPC allow processes to collaborate without needing them to be tightly coupled.
 
 4. **Convenience** : Cooperative multitasking allows users to run multiple applications at the same time, improving system usability and responsiveness.
 
@@ -132,18 +136,21 @@ Message passing systems can be implemented using different methods, including:
 #### Message Passing Communication
 
 **Direct Communication**: Processes (Sender or Reciever) explicitly name each other during communication and messages are directly sent to process.
+
 - `send(P, message)` – Send message to process P.
 - `receive(Q, message)` – Receive message from process Q.
 
 Can be symmetric addressing (both sender and receiver know each other) or asymmetric addressing (only sender or receiver identifies the other).
-- send(P, message): Send a message to process P.
-- receive(id, message): Receive a message from any process, with `id` set to the name of the sender.
+
+- `send(P, message)` - Send a message to process P.
+- `receive(id, message)` - Receive a message from any process, with `id` set to the name of the sender.
 
 Tends to create tighter coupling between processes, reducing flexibility.
 
 ____
 
 **Indirect Communication**: Processes communicate via mailboxes or ports where messages are placed and retrieved, not directly with each other.
+
 - `send(mailbox, message)` – Send message to a mailbox.
 - `receive(mailbox, message)` – Receive message from a mailbox.
 
@@ -188,9 +195,11 @@ One common problem in cooperative processes is the Producer-Consumer problem.
 - Producer Process: Produces data and stores it in a shared buffer.
 - Consumer Process: Consumes the data produced by the producer.
 
-For both processes to run concurrently, they need a shared buffer — a region of memory where the producer can place data, and the consumer can retrieve it. Synchronization between the producer and consumer is crucial to prevent problems like:
-- Buffer Overflow: If the buffer is full and the producer tries to add more data, it may overwrite existing data before the consumer can consume it.
-- Buffer Underflow: If the buffer is empty and the consumer tries to retrieve data, it may access non-existent data.
+For both processes to run concurrently, they need a shared buffer — a region of memory where the producer can place data, and the consumer can retrieve it. 
+
+Synchronization between the producer and consumer is crucial to prevent problems like:
+- **Buffer Overflow** : If the buffer is full and the producer tries to add more data, it may overwrite existing data before the consumer can consume it.
+- **Buffer Underflow** : If the buffer is empty and the consumer tries to retrieve data, it may access non-existent data.
 
 To avoid these issues, synchronization mechanisms such as mutexes, semaphores, or monitors are commonly used to ensure mutual exclusion and avoid race conditions.
 
@@ -203,12 +212,15 @@ To avoid these issues, synchronization mechanisms such as mutexes, semaphores, o
 
 **Answer :**
 
-A **semaphore** is an integer variable that controls access to a shared resource. Apart from being initialized, the semaphore can only be accessed using two operations: `wait()` and `signal()`, both of which are atomic (indivisible) operations.
+A **semaphore** is an synchronization tool (integer variable) that manages access of multiple processes to a shared resource.
+
+Apart from being initialized, the semaphore can only be accessed using two operations: `wait()` and `signal()`, both of which are atomic (indivisible) operations.
 
 - The **`wait()`** operation checks the value of the semaphore. If the value is greater than 0, it decrements the value and allows the process to proceed. If the value is 0 or less, the process will wait (i.e., it will keep checking the value until it can proceed). This prevents the process from proceeding if resources are unavailable.
 
 ```c
-wait(S) {
+wait(S) 
+{
     while (S <= 0)
         ; // busy wait
     S--;
@@ -218,12 +230,21 @@ wait(S) {
 - The **`signal()`** operation increments the semaphore value, signaling that a resource has been released or an event has occurred. This operation allows waiting processes to continue if necessary.
 
 ```c
-signal(S) {
+signal(S) 
+{
     S++;
 }
 ```
 
 Both the `wait()` and `signal()` operations modify the semaphore’s value. These operations must be executed atomically—meaning no other process can change the semaphore’s value while it’s being modified. 
+
+
+A binary semaphore is a special type of semaphore that can only have two values: 0 and 1. It is often used for mutual exclusion to ensure that only one process can access a critical section at a time.
+
+A counting semaphore is a synchronization tool that can hold a non-negative
+integer value representing the number of available instances of a particular resource.
+
+
 
 ____
 
@@ -243,6 +264,7 @@ This scenario is a simple model for the problem of allocating resources (chopsti
 Challenges:
 - **Deadlock**: If every philosopher picks up the fork on their left at the same time and waits for the right fork, no one can proceed.
 - **Starvation**: A philosopher might wait indefinitely if others keep taking the forks they need.
+- **Concurrency Control** : Philosophers must pick up and release chopsticks in a way that prevents conflicts and ensures progress.
 
 ---
 

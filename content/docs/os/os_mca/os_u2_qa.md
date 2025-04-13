@@ -27,8 +27,7 @@ A process is an active instance of a program in execution. While a program is a 
 
 When a program is loaded into memory for execution, it becomes a process and is assigned a unique Process ID (PID) by the operating system.
 
-
-Process Memory Layout:
+##### Process Memory Layout:
 
 A process typically consists of the following memory sections:
 
@@ -41,7 +40,7 @@ A process typically consists of the following memory sections:
 {{< figure src="images/os/3_01_Process_Memory.jpg" alt="3.01 A Process in Memory" caption="3.01 A Process in Memory" >}}
 
 
-Multiple processes can be associated with the same program, each process is considered a separate execution sequence. For instance:
+Multiple processes can be associated with the same program, each process is considered a separate execution sequence.
 - Different users running distinct copies of the same program, or
 - A single user running multiple instances of a program, like a web browser.
 
@@ -149,7 +148,7 @@ A process typically executes in a cycle of CPU bursts and I/O bursts until it te
 
 - **I/O-bound processes**: Spend more time on I/O than computation. These have short CPU bursts and frequent I/O operations.
 
-- **CPU-bound processes**: Perform intensive computation with long CPU bursts and infrequent I/O.
+- **CPU-bound processes**: Perform intensive computation with long CPU bursts (arithmetic computations, logical operations, and program execution) and infrequent I/O. 
 
 This cycle allows the operating system to balance workloads and maximize device utilization.
 
@@ -198,7 +197,6 @@ The dispatcher performs operations like context switching, switching the CPU fro
 
 ____
 
-
 #### Scheduling Criteria
 
 * Present various criteria to evaluate the best CPU scheduling algorithm.
@@ -212,13 +210,10 @@ To compare different scheduling algorithms, the following criteria are considere
 - **Throughput** : The number of processes completed per unit of time (processes per second), indicating system efficiency. Goal is to Maximize throughput. Higher throughput implies better overall system productivity.
 
 - **Turnaround Time** : The total time taken for a process to complete — from submission to completion including the waiting time. Goal is to Minimize turnaround time. Lower turnaround time means faster job completion, which is essential for batch systems.
-
-Formula : `Turnaround Time = Completion Time - Arrival Time`
-
+* `Turnaround Time = Completion Time - Arrival Time`
 
 - **Waiting Time** : The total time a process spends in the ready queue waiting for CPU allocation. Goal is to Minimize waiting time. High waiting time indicates inefficiency and can lead to poor responsiveness, especially in interactive systems.
-
-Formula : `Waiting Time = Turnaround Time - CPU Burst Time`
+* `Waiting Time = Turnaround Time - CPU Burst Time`
 
 - **Response Time** : The time from submission of a process to the first time the process gets the CPU (i.e., when it starts responding). Goal is to Minimize response time. Critical in time-sharing and interactive systems where users expect quick feedback (e.g., typing in a text editor or web browser).
 
@@ -236,12 +231,13 @@ CPU scheduling involves determining which process from the ready queue should be
 
 The FCFS scheduling algorithm allocates CPU to processes in the order they arrive, using a FIFO queue. The process at the front of the queue gets the CPU, and when it completes, it is removed.
 
-##### Drawbacks of FCFS
-* Monopolization of CPU: A CPU-bound process consumes the CPU while I/O-bound processes, which could proceed with little CPU time, wait. This leads to inefficient use of I/O devices.
+**Drawbacks of FCFS :**
 
-* Transition and Idle CPU: Once a CPU-bound process finishes its burst, it moves to the I/O queue, causing idle periods for the CPU while I/O-bound processes complete their tasks.
+* **Monopolization of CPU** : A CPU-bound process consumes the CPU while I/O-bound processes, which could proceed with little CPU time, wait. This leads to inefficient use of I/O devices.
 
-* Convoy Effect: A long CPU-bound process delays smaller, I/O-bound processes, causing inefficient use of resources.
+* **Transition and Idle CPU** : Once a CPU-bound process finishes its burst, it moves to the I/O queue, causing idle periods for the CPU while I/O-bound processes complete their tasks.
+
+* **Convoy Effect** : A long CPU-bound process delays smaller, I/O-bound processes, causing inefficient use of resources.
 
 ---
 
@@ -263,7 +259,7 @@ The Priority Scheduling algorithm allocates CPU time based on process priority. 
 
 - Nonpreemptive Priority Scheduling: A higher-priority process waits until the current process completes or blocks before it executes.
 
-##### Issues:
+**Issues:**
 
 * Indefinite Blocking (Starvation): Low-priority processes may never get to execute because higher-priority processes continuously preempt them.
 
