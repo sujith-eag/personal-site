@@ -16,6 +16,7 @@ seo:
 
 
 
+
 The `date` command in Unix-like operating systems is used to display or set the system date and time. 
 ```bash {frame="none"}
 date [OPTION]... [+FORMAT]
@@ -101,7 +102,6 @@ $ echo "3 + 4" | bc
 - **Logical**: `&&`, `||`
 - **Bitwise**: `&`, `|`, `^`, `~`, `<<`, `>>`
 
-
 #### Options
 
 `-l` (Standard Math Library) : loads the standard math library, which enables functions like `sine`, `cosine`, `sqrt`, `exp`, etc.
@@ -165,3 +165,5 @@ $ echo "a=5; b=3; a*b" | bc
 15
 ```
 
+
+____

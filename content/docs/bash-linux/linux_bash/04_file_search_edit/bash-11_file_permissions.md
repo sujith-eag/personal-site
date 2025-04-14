@@ -20,7 +20,7 @@ File permissions are a mechanism that supports operating system protection, ensu
 
 Since users primarily interact with files, the resources that we protect with permissions are **files** and **directories**.
 
-### **Access Control Mechanism**
+### Access Control Mechanism
 
 Many operating systems implement file permissions using **Access Control Lists (ACLs)**. An ACL is attached to a specific file or directory and lists the users and groups that have access rights to that resource. The list can become lengthy, depending on the number of users.
 
@@ -28,14 +28,14 @@ Each **user** or **group** can have specific access rights to a file.
 - The **owner** might have **read**, **write**, and **execute** permissions.
 - Other users (members of the **group** or the **world**) might have different levels of access, such as **read** or **execute** only.
 
-#### **Permission Types and Access Rights**
+#### Permission Types and Access Rights
 
 In Linux, file permissions are defined for **three categories**:
 - **Owner (`u`)**
 - **Group (`g`)**
 - **Others (`o`)**, also known as **world**
 
-#### **Access Rights**:
+#### Access Rights:
 
 **`r` (read)**:
 - For **files**: Allows viewing, copying, or opening as read-only.
@@ -51,10 +51,10 @@ In Linux, file permissions are defined for **three categories**:
 
 ---
 
-## **Changing Permissions from the Command Line**
+### Changing Permissions from the Command Line
 
 
-### **Using the `chmod` Command**
+#### Using the `chmod` Command
 
 `chmod` (change mode) is used to alter the permissions of a file or directory.
 
@@ -67,7 +67,7 @@ chmod permissions file(s)
 using symbols (`+`, `-`, `=`), or numeric values (3-digit numbers).
 
 
-#### **1. Using `+` and `-` for Permission Changes**
+#### 1. Using `+` and `-` for Permission Changes
 This approach adds (`+`) or removes (`-`) specific permissions for the **user (`u`)**, **group (`g`)**, or **others (`o`)** along with `r, w, x`
 
 To **remove** write permission for the **group** and **read** permission for **others**:
@@ -86,7 +86,7 @@ chmod a+x file.txt
 ```
 
 
-#### **2. Using `=` to Set Exact Permissions**
+#### 2. Using `=` to Set Exact Permissions
 
 Instead of adding or removing permissions, you can **assign** permissions directly using `=`.
 
@@ -109,7 +109,7 @@ chmod u+x,g=r,o-r file
 chmod u+x,g-w,o= file
 ```
 
-#### **3. Using Numeric Permissions**
+#### 3. Using Numeric Permissions
 
 This approach uses **3-digit numbers** to represent permissions. Each digit corresponds to the permissions for **owner**, **group**, and **others**, respectively.
 
@@ -147,12 +147,12 @@ So, `750` represents the permissions `rwx r-x ---`.
 ---
 
 
-## **Changing Ownership and Group**
+## Changing Ownership and Group
 
 
 > **Note:** Only the **root** user can change ownership of files. Non-root users can only change the group of a file they own, provided they are a member of the target group.
 
-#### **Commands to Change Ownership**
+#### Commands to Change Ownership
 
 **`chown`** is used to change both **owner** and **group** of a file or directory.
 ```bash {frame="none"}
@@ -174,13 +174,13 @@ chgrp citg /home/fox/citg/project-data.txt
 
 ---
 
-# **Changing Permissions from the GUI**
+## Changing Permissions from the GUI
 
 Many **File Browsers** allow you to view and change file permissions graphically. You can typically right-click on a file or directory, select **Properties**, and then navigate to the **Permissions** tab to make changes.
 
 ---
 
-# **Advanced Permissions**
+## Advanced Permissions
 
 There are additional, advanced permission types in Linux that provide more complex control over file access:
 

@@ -16,9 +16,11 @@ seo:
 
 
 
+
 Linux offers several methods to search for files or directories, with the `find` command being one of the most powerful and versatile tools. 
 
-### **File Browser**
+### File Browser
+
 A **file browser** provides a graphical interface for searching files. It includes:
 - A **search bar** where you can enter search terms.
 - **Drop-down menus** to filter by criteria such as modification date, file type, or size.
@@ -28,7 +30,7 @@ In some cases, file browsers also allow **full-text searching**, where the searc
 
 _____
 
-## **`find` Command**
+### 'find' Command
 
 The `find` command is used to search for files and directories based on specific criteria. It’s a flexible and powerful tool with many options and actions.
 
@@ -48,7 +50,8 @@ This command will recursively list all files and directories starting from the c
 
 ___
 
-#### **Filtering by Type**
+#### Filtering by Type
+
 You can filter the search results by file type using the `-type` option:
 
 **`-type d`**: Lists only directories.
@@ -64,7 +67,8 @@ $ find . -type f
 
 ___
 
-#### **Searching by Name**
+#### Searching by Name
+
 To search for files based on their name, use the `-name` option with the string or pattern you're looking for. 
 ```bash {frame="none"}
 $ find . -name "*.txt"
@@ -88,7 +92,7 @@ $ find . -iname "*.txt"
 
 ____
 
-### **Combining `find` with Other Commands**
+### Combining 'find' with Other Commands
 
 You can use `find` with other commands. For example, to count the lines in all `.txt` files found by `find`, use command substitution:
 
@@ -105,10 +109,7 @@ $ wc -l $(find . -name "*.dat") | sort -n
 ```
 This command finds all `.dat` files, counts their lines, and sorts the results.
 
-
-
 ____
-___
 
 There are three categories of options
 1. Search criteria: which `-name` and `-iname` are part
@@ -134,10 +135,10 @@ If the integer is preceded by `+` then `find` looks for matches where the proper
 
 ___
 
-### **Search Criteria Options**
+### Search Criteria Options
 `find` offers many search criteria to refine searches, including time-based, size-based, and type-based options.     
 
-#### **Time-Based Options**
+#### Time-Based Options
 
 These options let you search for files based on when they were last accessed or modified: 
 
@@ -159,7 +160,7 @@ $ find . -mtime +10  # Files modified more than 10 days ago
 ```
 
 
-#### **Size-Based Options**
+#### Size-Based Options
 
 You can search for files based on their size:
 - **`-size [+-]n`**: Files of a specific size. Use suffixes like `c` (bytes), `k` (kilobytes), `M` (megabytes), etc.
@@ -175,7 +176,7 @@ k (kilobytes), M (megabytes) and G (Gigabytes)
 `-size -1000c` means less than 1000 bytes in size.     
 
 
-#### **File Type Options**
+#### File Type Options
 
 You can filter by file type:
 - **`-type d`**: Directories
@@ -188,7 +189,7 @@ $ find . -type f  # Regular files
 ```
 
 
-#### **Permission-Based Options**
+#### Permission-Based Options
 
 Search for files based on their permissions:
 - **`-perm`**: Files with specific permissions. For example, to find files with `755` permissions:
@@ -197,7 +198,7 @@ $ find . -perm 755
 ```
 
 
-#### **Owner and Group Search**
+#### Owner and Group Search
 
 Search for files based on their owner or group:
 - **`-user username`**: Files owned by a specific user.
@@ -212,11 +213,9 @@ $ find . -user alice  # Files owned by 'alice'
 $ find . -group staff  # Files belonging to the 'staff' group
 ```
 
-
 _____
 
-
-### **Logical Operators**
+### Logical Operators
 
 You can combine multiple conditions using logical operators:
 
@@ -254,7 +253,7 @@ Without parenthesis, not is applied first, followed by and, then or.
 ____
 
 
-### **Depth and Mounting Options**
+### Depth and Mounting Options
 
 - **`-maxdepth`**: Limit the search to a certain depth.
 
@@ -268,12 +267,9 @@ $ find . -maxdepth 2  # Search only two levels deep
 $ find . -mount -name "*.txt"  # Only search the current filesystem
 ```
 
-
-
 ---
 
-
-## **3. Actions with `find`**
+## 3. Actions with `find`
 
 You can specify actions to take on the found files using options like `-exec`, `-delete`, and others.
 
@@ -313,12 +309,9 @@ $ find . -name "*.txt" -prune  # Skip directories
 $ find . -name "*.txt" -quit  # Stop after finding the first .txt file
 ```
 
-
-
 ---
 
-
-## **4. Other Methods of Locating Files**
+## 4. Other Methods of Locating Files
 
 
 **`which`**: Finds the path of an executable file which is present in `PATH`.

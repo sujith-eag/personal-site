@@ -52,10 +52,25 @@ File Names, Path Name, type, locating commands, The file attributes.
 
 An **inode** is a data structure which is part of Linux file space, it doesn't contain the name and contents but stores all metadata about a file and contains pointers to point at the files's physical blocks.
 
-- **Hard Link**:  Points directly at the file's `inode`. A hard link is a direct reference to the inode of a file. Multiple hard links can point to the same inode, and they are indistinguishable from the original file. When the link count of a file (i.e., the number of hard links) is greater than one, the file is still accessible as long as one link exists.
+#### Hard Link  
 
-- **Symbolic (Soft) Link**:  Points at a hard link. A symbolic link is a reference to another file or directory by its path. A symbolic link can point to a file in another directory and is distinguishable from regular files by the leading `l` in the file permissions (`lrwxrwxrwx`).
-- The name is indicated as `link -> file` where `link` is the symbolic link and the `file` is the item being pointed at. The file will be in another directory.
+A **hard link** is essentially an additional directory entry that associates a file name with the same inode number. 
+
+A hard link is a direct reference to the inode of a file. Multiple hard links can point to the same inode, and they are indistinguishable from the original file. 
+
+When the link count of a file (i.e., the number of hard links) is greater than one, the file is still accessible as long as one link exists.
+
+#### Symbolic Links (Soft links)
+
+A **symbolic link** (also known as a **soft link**) is a special type of file that contains a reference to another file or directory in the form of a **path**.
+
+* Points at a hard link of a file. A symbolic link is a reference to another file or directory by its path. 
+
+* Symbolic links are identified by the `l` file type when viewed using the `ls -l` command.  (`lrwxrwxrwx`).
+
+* Symbolic links **do not increase the link count** of the original file, unlike hard links.
+
+* The name is indicated as `link -> file` where `link` is the symbolic link and the `file` is the item being pointed at. The file will be in another directory.
 
 ____
 
@@ -322,11 +337,153 @@ ___
 * List various file permissions. Explain the different ways of changing them with an example.
 * What is Relative Permissions and Absolute Permission? Give example.
 * Explain the following commands: (i) umask (ii) chown (iii) chmod
+* Change file permission using chmod with both symbolic and numeric mode. 
+
+**Answer :**
+
+Each **user** or **group** can have specific access rights to a file.
+- The **owner** might have **read**, **write**, and **execute** permissions.
+- Other users (members of the **group** or the **world**) might have different levels of access, such as **read** or **execute** only.
+
+In Linux, file permissions are defined for **three categories**:
+- **Owner (`u`)**
+- **Group (`g`)**
+- **Others (`o`)**, also known as **world**
+
+##### Access Rights:
+
+**`r` (read)**:
+- For **files**: Allows viewing, copying, or opening as read-only.
+- For **directories**: Allows listing the contents with `ls`.
+
+**`w` (write)**:
+- For **files**: Allows overwriting or modifying the file.
+- For **directories**: Allows creating, modifying, or deleting files in the directory.
+
+**`x` (execute)**:
+- For **files**: Allows executing the file (important for programs or shell scripts).
+- For **directories**: Allows `cd` into the directory.
+
+---
+
+#### 'chmod' Command
+
+`chmod` (change mode) is used to alter the permissions of a file or directory.
+
+```bash {frame="none"}
+chmod permissions file(s)
+```
+**`file(s)`** refers to the file(s) or directories to which you want to apply the permissions.
+
+**`permissions`** can be specified in three ways: 
+using symbols (`+`, `-`, `=`), or numeric values (3-digit numbers).
+
+
+##### 1. Using `+` and `-` for Permission Changes
+
+This approach adds (`+`) or removes (`-`) specific permissions for the **user (`u`)**, **group (`g`)**, or **others (`o`)** along with `r, w, x`
+
+To **remove** write permission for the **group** and **read** permission for **others**:
+```bash {frame="none"}
+chmod g-w, o-r file.txt
+```
+
+To **add** execute permission for the **owner** and **group**:
+```bash {frame="none"}
+chmod u+x, g+x file.txt
+```
+
+To apply changes to **all** categories (owner, group, others) at once using `a`:
+```bash {frame="none"}
+chmod a+x file.txt
+```
+
+
+##### 2. Using `=` to Set Exact Permissions
+
+Instead of adding or removing permissions, you can **assign** permissions directly using `=`.
+
+To **assign** `rwx` (read, write, and execute) permissions to the **owner**, `r` (read) to the **group**, and **no permissions** to **others**:
+```bash {frame="none"}
+chmod u=rwx, g=r, o= file.txt
+```
+
+If you do not specify a category (like `u=`), it will **not change** the permissions for that category:
+```bash {frame="none"}
+chmod g=, o= file.txt  
+# Does not change owner permissions
+```
+
+You can combine `=` with `+` or `-`:
+```bash {frame="none"}
+chmod u=rwx, g-w,o-r file
+chmod u=rwx, g-w,o= file
+chmod u+x, g=r, o-r file
+chmod u+x, g-w, o= file
+```
+
+##### 3. Using Numeric Permissions
+
+This approach uses **3-digit numbers** to represent permissions. Each digit corresponds to the permissions for **owner**, **group**, and **others**, respectively.
+
+The numbers are calculated by adding:
+- `4` for **read (r)**
+- `2` for **write (w)**
+- `1` for **execute (x)**
+
+To set `rwx`(7), `r-x`(5), and no permissions `---`(0) for owner, group, and others respectively:
+```bash {frame="none"}
+chmod 750 file.txt  
+# rwx (7) for owner, r-x (5) for group, 
+# no permissions (0) for others
+```
+
+- `rwx` = 4 + 2 + 1 = **7**
+- `r-x` = 4 + 1 = **5**
+- `---` = 0 = **0**
+
+So, `750` represents the permissions `rwx r-x ---`.
+
+`----- 000`    
+`--x--x--x  111`
+`r----- 400` Many more combinations
+
+| Permission | `rwx` | `rw-` | `r-x` | `---` |
+| ---------- | ----- | ----- | ----- | ----- |
+| **Owner**  | 7     | 6     | 5     | 0     |
+| **Group**  | 7     | 6     | 5     | 0     |
+| **Others** | 7     | 6     | 5     | 0     |
+
+
+____
+
+#### Commands to Change Ownership
+
+**`chown`** is used to change both **owner** and **group** of a file or directory.
+```bash {frame="none"}
+chown newowner file(s)
+
+chown newowner:newgroup file(s)
+```
+
+**`chgrp`** is used to change only the **group** of a file.
+```bash {frame="none"}
+chgrp newgroup file(s)
+```
+
+```bash {frame="none"}
+chown fox /home/fox/*.txt
+
+chown www:www /usr/local/apache/htdocs/*
+
+chgrp citg /home/fox/citg/project-data.txt
+```
+
+____
 * An user issues the following command umask 022, What are the permissions for all files and directories created after this command.
 * How do you add write permission to group and execute permission to others for a file named test.
 * What is the impact of removing write and execute permission for a user of a directory.
-* Explain the command to set the modification and access time of a file with syntax and options.
-* Change file permission using chmod with both symbolic and numeric mode. 
+
 
 A file’s current permission are r_- r_x rw_ specify the chmod expression required to change them for the following
 (i) rwx rwx rwx
@@ -370,7 +527,162 @@ ____
 * Explain the following commands with options and examples. (i) date (ii) printf (iii) bc (iv)uname (v) cal (vi)script.
 * With suitable example, illustrate the following UNIX Commands: i) bc ii) wc iii) rm iv) cal v) date.
 * Discuss the following commands with an example. i. date ii. cat iii. wc
+* Explain the command to set the modification and access time of a file with syntax and options.
 
+**Answer :**
+
+##### touch (Create/Modify File Timestamps)
+
+Creates a new empty file or updates the access/modification timestamp of an existing file.
+```bash {frame="none"}
+touch newfile.txt       
+# Create a new empty file
+```
+
+- `-a`: Update access time.
+- `-m`: Update modification time.
+
+##### wc (Word Count)
+
+Counts lines, words, and characters in a file.
+```bash {frame="none"}
+wc file.txt
+
+wc -l file.txt       
+# Count lines in file
+```
+
+- `-c`: Count characters.
+- `-w`: Count words.
+- `-l`: Count lines.
+
+##### cat (Concatenate and Display Files)
+
+The cat (concatenate) command is used to view, combine, and create files.
+
+`cat [options] filename`
+
+Displays the contents of files.
+- `-n`: Add line numbers to output.
+- `-T`: Show tab characters as `^I`.
+
+```bash {frame="none"}
+cat file.txt
+cat -n file.txt        
+# Display with line numbers
+```
+
+
+##### ls (List Directory Contents)
+
+Lists files in the current directory with several options:
+
+```bash {frame="none"}
+ls ~/Desktop/trial
+# Using absolute path
+
+ls -F Desktop
+# List contents of Desktop directory
+```
+
+`-a` Show hidden files (those starting with `.`) and the `.` (current directory) and `..` (parent directory).     
+
+`-h` Displays file sizes in human readable format (KB, MB) (along with `-l`).    
+`-i` Shows inode numbers for the files
+
+`-r` Reverse alphabetical order of file listing.    
+`-R` Recursive listing (listing all contents of all sub directories)
+
+`-S` Sort files by size (used with `-l`)
+`-t` Sorts files by modification time (along with `-l`).    
+`-X` Extension based sorting (along with `-l`)
+
+
+
+##### pwd (Print Working Directory)
+
+Displays the current working directory. `~`  tilde character at the start of a path means **the current users home directory**
+
+`~/data` refers to `/Users/sujith/data`, useful for absolute path typing.
+
+
+##### cd (Change Directory)
+
+Used to change the current directory.
+
+```bash {frame="none"}
+cd /home/user/Documents
+cd ~     # Go to the home directory
+cd ..    # Go to the parent directory
+cd -     # Toggle to previous directory
+cd /     # goes to root directory
+cd ../.. # goes up two levels (parent of parent)
+```
+
+
+##### date 
+
+The `date` command is used to display or set the system date and time. 
+```bash {frame="none"}
+date [OPTION]... [+FORMAT]
+
+date [-u|--utc|--universal] [MMDDhhmm[[CC]YY][]]
+```
+
+OPTION : Various options to customize how the date is displayed.
+FORMAT : The format in which you want to display the date. (it has to follow `+`)
+
+```bash {frame="none"}
+$ date "+%a, %b %d, %Y - %r"
+
+Sun, Dec 31, 2024 - 02:00:00 PM
+```
+
+```bash {frame="none"}
+$ date +%a:%A
+
+Sun:Sunday
+```
+
+
+##### bc (Basic Calculator)
+
+
+`bc` is an arbitrary precision calculator language. It's used for performing arithmetic operations, and it supports a variety of functions and operations, including basic math, variable assignments, and more.
+
+Simply typing `bc` will start an interactive mode, where we can input mathematical expressions and get results.      
+We can also use `bc` for calculations directly from the command line.
+
+```bash {frame="none"}
+$ echo "3 + 4" | bc
+7
+```
+
+- **Addition and Division**:
+```bash {frame="none"}
+$ echo "5 + 3" | bc
+8
+$ echo "10 / 4" | bc
+2
+```
+
+- **Using `scale` for Decimal Precision**:
+```bash {frame="none"}
+$ echo "scale=4; 7/3" | bc
+2.3333
+```
+
+- **Using Functions with `-l`**:
+```bash {frame="none"}
+$ echo "scale=5; sqrt(100)" | bc -l
+10.00000
+```
+
+- **Assigning Variables**:
+```bash {frame="none"}
+$ echo "a=5; b=3; a*b" | bc
+15
+```
 
 ____
 
@@ -380,6 +692,156 @@ ____
 * Illustrate with an example how will you perform renaming and moving operation in UNIX.
 * Illustrate cp and mv command. Highlight the difference between them.
 * List and explain any Three directory related commands.
+
+**Answer :**
+
+
+##### mv (Move or Rename Files)
+
+Used to move or rename files and directories.
+```
+mv [options] source destination
+```
+
+- `-f`: Force move (overwrite without prompting).
+- `-i`: Interactive move (prompt before overwriting).
+- `-n`: Do not overwrite existing files.
+```bash {frame="none"}
+mv oldfile.txt newfile.txt
+mv file1 /home/user/dir/  
+# Move file1 to a directory
+```
+
+If `destination` is a directory without a file name, the file's name is not changed.
+
+```bash {frame="none"}
+mv fo1.txt ~/temp
+# moves to temp
+
+mv fo1.txt ~/temp/fo2.txt
+# moves and renames
+
+mv *.txt /home/zapp
+```
+
+To move a file into the current directory, `.` can be used as the destination.
+
+
+**Renaming Files**
+To rename a file or move it to a new location:
+```bash {frame="none"}
+mv [old] [new]  # Moves or renames a file
+```
+
+```bash {frame="none"}
+mv trial/draft.txt trial/quotes.txt  
+# Renames draft.txt to quotes.txt
+
+mv draft.txt quotes.txt
+# Renames within the same directory
+```
+
+##### cp (Copy Files)
+
+Copies files or directories.
+- Destination is another directory, then the file name remains the same after copying.
+- Destination is a directory and a file name, then the file is copied with a new name.
+- Destination is a filename, then the file is copied into the current directory with a new name.
+
+```bash {frame="none"}
+cp [old] [new]  # Copies a file
+
+cp quotes.txt thesis/quotation.txt  
+# Copies to a new location
+```
+
+- `-r`: Recursive copy (used for directories).
+- `-b`: Create backups of each destination file.
+- `-L`: Follow symbolic links.
+- `-p`: Preserve the original file’s metadata (permissions, timestamps).
+- `-v`: Verbose mode (shows each step).
+- `-I` `-s`   Create hard/symbolic link rather than physical copy
+- `-u`  copy only if source is newer than the destination or destination missing
+
+```bash {frame="none"}
+cp file1.txt file2.txt   
+# Copy a file
+
+cp -r dir1 dir2          
+# Copy a directory recursively
+```
+
+##### rm (Remove Files)
+
+Deletes files and directories.
+
+```
+rm [options] file(s)
+```
+
+- `-f`: Force removal (no confirmation).
+- `-i`: Interactive removal (prompt before each deletion).
+- `-r`: Recursive removal (for directories).
+
+```bash {frame="none"}
+rm file1.txt
+
+rm -r dir1    
+# Remove a directory and its contents
+```
+
+Use `rm -i` to prompt for confirmation before deletion. `rm` permanently deletes files, so it's advisable to use `-i` to ask for confirmation before deleting. 
+
+
+##### mkdir (Make Directory)
+
+Used to create a directory, in the current directory or a specified path.
+
+```bash {frame="none"}
+mkdir newdir
+```
+- `-m` `--mode`: Specify the initial permissions of the directory.
+
+To create multiple directories at once:
+```bash {frame="none"}
+mkdir north south pacific  
+# Creates three separate directories
+```
+
+
+Creating a Directory Tree, by creating the main directory first, then child directories inside.
+```bash {frame="none"}
+mkdir place place/one place/two
+```
+
+
+The `-p` option is used to create multiple directories at once:
+```bash {frame="none"}
+mkdir -p [path/to/nested/directories]  
+# Creates nested directories
+
+mkdir -p ../project/data ../project/results
+```
+
+```bash {frame="none"}
+mkdir -p 2016/data/{processed,raw}  
+# Creates the full structure in one command
+```
+
+To list all nested subdirectories within a directory, use `ls -R`.
+
+
+
+##### rmdir (Remove Directory)
+
+Removes an empty directory.
+
+```bash {frame="none"}
+rmdir emptydir
+```
+
+
+____
 
 Assuming that you are positioned in the directory /home/mca, what are these commands presumed to do and explain whether they will work at all
 (i) cd../..
@@ -422,36 +884,137 @@ Filters in Unix are commands that take input, process it, and produce output, ty
 
 Common filter commands are `cat, cut, head, tail, sort, uniq, tr`
 
-
-The cat (concatenate) command is used to view, combine, and create files.
-`cat [options] filename`
-
+##### head (Display the First Part of a File)
 
 The head command is used to display the first few lines or bytes of a file. It is useful for quickly viewing the beginning of large text files.
+
 `head [options].. [files]..`
 
+Displays the first 10 lines of a file by default.
+- `-n #`: Specify the number of lines to display.
+- `-c #`: Display the first number of bytes.
+
+```bash {frame="none"}
+head file.txt
+
+head -n 5 file.txt    # Display the first 5 lines
+```
+
+##### tail (Display the End of a File)
+
 The tail command is used to display the last few lines or bytes of a file. It is useful for viewing logs, real-time updates, and recent data.
+
 `tail [options].. [files]..`
+
+Displays the last 10 lines of a file by default.
+- `-n #`: Specify the number of lines to display.
+- `-c #`: Display the last number of bytes.
+
+```bash {frame="none"}
+tail file.txt
+
+tail -n 5 file.txt    # Display the last 5 lines
+```
+
+
+##### sort 
 
 The sort command is used to arrange lines in text files in a specific order.
 `sort [options].. [files]..`
 
+```bash {frame="none"}
+sort lengths.txt  # Sorts alphanumerically by default
+sort -n           # Sorts numerically
+sort -r           # Sorts in reverse order
+```
+- `-r`: Reverse order.
+- `-f`: Ignore case differences.
+- `-n`: Numeric sorting.
+
+Sort doesn't change the file, but sends results to screen.     
+To sort a file and redirect the output to a new file:
+
+```bash {frame="none"}
+sort -n lengths.txt > sorted-lengths.txt
+```
+
+
+##### cut (Remove Portions of Each Line)
+
 The cut command in Unix is used to extract specific sections of each line from a file or standard input. It is commonly used for text processing and works by selecting portions of data based on bytes, characters or fields.
+
 `cut [options] filename`
 
-The pr command in Linux is used to format text files for printing. It adds headers, footers, page breaks, columns, and more to make output look structured when printed
-`pr [options] [file]`
+Extracts parts of lines from a file based on specified delimiters.
+- `-b`: Select bytes.
+- `-c`: Select characters.
+- `-d`: Specifies the delimiter (e.g., comma, space).    
+- `-f`: Specifies the field(s) to extract.     
+- `--complement`: Returns everything except the specified fields.
+
+```bash {frame="none"}
+cut -d -f1 /etc/passwd      
+# Extract first field of /etc/passwd
+```
+
+Slitting a file vertically.      
+The `cut` command is used to remove or extract specific sections of each line in a file:
+```bash {frame="none"}
+cut -d , -f 2 animals.csv
+# Extracts the second field from a comma-delimited file
+```
+
+
+##### uniq
+
+The uniq command in Linux is used to filter out adjacent duplicate lines from a sorted file or input. It helps in detecting and removing consecutive duplicate entries while keeping the first occurrence.
+`uniq [options] file1`
+
+It operates on a single file, searching for consecutive duplicate lines.     Parameters can be used to remove duplicate lines.      
+It does not overwrite the file but the output can be can be moved to a new file.
+
+```bash {frame="none"}
+uniq file.txt > file_without_duplicates.txt
+```
+
+`-c` for counting occurrences,      
+`-d` for displaying only duplicate lines.
+
+
+##### Merging Files with 'paste'
 
 The paste command in Linux is used to merge lines of files horizontally (side by side) by joining them column-wise.
 `paste [options] file1 file2 ...`
 
-The uniq command in Linux is used to filter out adjacent duplicate lines from a sorted file or input. It helps in detecting and removing consecutive duplicate entries while keeping the first occurrence.
-`uniq [options] file1`
+```bash {frame="none"}
+paste file1.txt file2.txt
+```
+**`paste`** merges files line by line without requiring a common field. The first line is appended to the first line of other file.
+
+
+##### Joining Files with 'join'
+
+Joins two sorted files based on a common field (default is field 1).
+```bash {frame="none"}
+join file1.txt file2.txt
+```
+When the two files contain a row that contains that same value, then those two lines are joined together. Lines that do not contain a matching first field are not joined. (Joining tables using a matching keys)
+
+`-1 NUM`: Specifies which field to join on in the first file.    
+`-2 NUM`: Specifies which field to join on in the second file.     
+`-i`: Ignore case differences.      
+`-e` uses `STRING` in place of an empty field      
+`-a 1` or `-a 2` outputs lines from the first or second file which did not contain a match to the other file.
+
+---
+
 
 The tr (translate) command in Linux is used for text transformation by replacing, deleting, or compressing characters from standard input (stdin)
 `tr [options] set1 [set2]`
 
 
+The pr command in Linux is used to format text files for printing. It adds headers, footers, page breaks, columns, and more to make output look structured when printed
+`pr [options] [file]`
 
 ____
 
@@ -485,8 +1048,78 @@ ___
 
 The grep stands for Global Regular Expression Print. The grep command in Linux is used to search for specific text or patterns in files or input streams.
 
-`grep [OPTIONS] PATTERN [FILE]`
-`grep -c "hello" file.txt`
+```bash {frame="none"}
+egrep [options] regex filename(s)
+
+grep [OPTIONS] PATTERNS [FILE(s)]
+
+grep -c "hello" file.txt
+```
+
+`-i, --ignore-case`    ignore case distinctions in patterns and data 
+(Perform case-insensitive search  `grep -i "error\|fail" logfile.txt`)
+
+`-n, --line-number  `       print line number along with matching output lines
+`grep -n "error" logfile.txt`
+
+`-v, --invert-match`        select non-matching lines (print the lines that do not have the pattern) `grep -v "sucess" logfile.txt`
+
+`^` Matches the lines that starts with the specific pattern
+
+`$` Match lines that end with specific pattern
+`grep "^Start" logfile.txt`   `grep "End$" logfile.txt`
+
+
+`grep` program searches one or more files by line to match against a specified regular expression. Each line is treated as the string and `grep` searches for any substring of the line that matches the regex. If found, by default `grep` outputs the matching lines.
+
+regex is a string that can but does not have to include metacharacters.     
+Files can be listed with space or wildcards.     
+
+>[!important]
+>The regex is placed in single quotes `' '` to avoid metacharacters being interpreted as wildcards and doing filename expansion (globbing) on wildcards `* ? []`.     
+>`|` will sets up pipes instead of performing OR action. 
+>Items Found in `" "` are interpreted, they are not treated literally like in `' '`
+
+
+
+To search for a specific phrase using quotes makes it easier to search for phrases or single words:
+```bash {frame="none"}
+$ egrep "is not" haiku.txt
+
+$ egrep "not" haiku.txt
+```
+
+```bash {frame="none"}
+egrep 2022 *.txt  
+# all lines that contain 2022
+
+egrep ^a *.txt
+# all lines that start with an a
+```
+
+```bash {frame="none"}
+egrep '[Ss]mith' *.txt
+# Find lines having smith or Smith
+
+egrep 'Duke|Zappa' *.txt
+# Find lines containing Duke or Zappa
+```
+
+```bash {frame="none"}
+egrep '[0-9]+' *.txt
+# Find lines that contain atleast one digit 
+```
+
+```bash {frame="none"}
+egrep '^[0-9]*[^0-9]+$' *.txt
+# Finds lines that if they have digits are found at the beginning of the line.
+
+egrep '^[A-Z][a-z]+ [A-Z][a-z]+$' *.txt
+# Find all lines that contain exactly two words, both capitalized
+
+egrep '[a-z]+ [a-z]+ [a-z]+' *.txt
+# Find lines that contain at least 3 words, lowercased
+```
 
 
 
@@ -504,6 +1137,127 @@ i) Append !! at the end of each line
 ii) Delete multiple spaces in a file
 iii) Replace lower case characters with upper case characters.
 iv) Print the lines that do not contain the word Read.
+
+
+**Answer :**
+
+`sed` is **stream-editor** which a program that takes a stream of text and modifies it.     
+It is a multipurpose tool that combines the work of several filters.   
+
+A stream is a short for I/O stream meaning the stream of text characters that are being input from one source and output to another.      
+The role of `sed` is to manipulate the text in the stream en route from input to output.     
+
+Like `diff` command, `sed` uses instructions to act on text.     
+An instruction combines an **address** for selecting lines, with an **action** to be taken on them.  
+
+```bash {frame="none"}
+sed [options] script file(s)
+
+sed [options] 'address action' file(s)
+```
+`-e`option that lets use multiple instructions       
+`-f` to take instructions from a file.      
+
+
+Addressing in `sed` is done in two ways:
+* One line number to select a single line or two line numbers (3,7), which specifies a group of contiguous lines. 
+* By specifying a `/` enclosed pattern which occurs in a line (`/From:/`)
+
+The action component is drawn from `sed`'s internal commands.
+
+`sed` processes several instruction in a sequential manner. each instruction operates on the previous instruction.
+
+To select first two lines similar to head command.
+```bash {frame="none"}
+sed -n '1,2p' emp.lst
+```
+
+
+`$` to select the last line. which is simulating the tail command.
+```bash {frame="none"}
+sed -n '$p' emp.lst
+```
+
+But `sed` can select a contiguous lines from anywhere `(9,11)`which is not possible with head and tail.     
+It can also select multiple groups of lines from many sections.
+```bash {frame="none"}
+sed -n '1,2p 
+7,9p 
+$p' emp.lst
+```
+
+`-e` allows for entering multiple instructions each preceded by the option.
+```bash {frame="none"}
+sed -n -e '1,2p' -e '7,9p' -e '$p' emp.lst
+```
+
+
+#### Context Addressing
+
+Context addressing allows for specifying one or two patterns to locate lines. Patterns must be bordered with `/` on either side.
+```bash {frame="none"}
+sed -n '/director/p' emp.lst
+```
+A comma separated pair of context addresses to select a group of lines. Line and context address can also be mixed.
+```bash {frame="none"}
+sed -n '/guptha/,/Sena/p' emp.lst
+
+sed -n '1,/guptha/p' emp.lst
+```
+
+> Note: Multiple files, file gobbing works only in the context addressing but not in line addressing and not even when line addressing and context are mixed.
+
+Here two files are given but only one is selected and read
+```bash {frame="none"}
+$ sed -n '1,/void/p' singly_list.c singly_list_final.c 
+#include <stdio.h>
+#include <stdlib.h>
+
+void create(int x);
+```
+
+This will search from multiple files because both are context addressing
+```bash {frame="none"}
+$ sed -n '/struct/,/void/p' singly_list.c singly_list_final.c 
+$ sed -n '/struct/,/void/p' *.c
+```
+
+___
+
+#### Using Regular Expressions
+
+Context addressing can also use Regular expressions.
+```bash {frame="none"}
+sed -n '[aA]gg*[ar]wal/p' emp.lst
+
+sed -n '/sa[kx]s*ena/p
+		guptha/p' emp.lst
+```
+First to select all the Agarwals and second to select Saksena or guptha.
+
+
+____
+
+
+### Writing Selected lines to a file
+
+`w` write command can be used to write the selected line to a separate file.
+```bash {frame="none"}
+sed -n '/director/w dlist' emp.lst 
+```
+Here when `-n` is used there will be no display of all the lines but it is not needed to write to file.    
+
+Full file can be split up by giving multiple address.
+```bash {frame="none"}
+sed -n '/director/w dlist
+		/manager/w mlist
+		/executive/w elist' emp.lst
+
+sed -n '1,500w file1
+	501,$w file2' file.main
+```
+
+
 
 _____
 
@@ -537,6 +1291,27 @@ Examples of Wildcard Usage :
 * `ls [abc][abc][abc]`
 
 * `ls file?.{dat,txt}`: Lists files like `file1.dat`, `file2.txt`, etc.
+
+```bash {frame="none"}
+ls *t*ane.pdb   
+# Lists files with 't' and 'ane' in their names
+
+cp *dataset* backup/datasets  
+# Copies all files with 'dataset' in the name
+
+ls *t?ne.*     # matches octane, pentane
+ls *t??ne.pdb  # matches ethane, methane
+ls ethane.*    # only ethane
+```
+
+Wildcards can be combined for more specific patterns:
+
+```bash {frame="none"}
+ls ???ane.pdb  
+# Matches any three characters followed by 'ane.pdb'
+```
+
+When a shell sees a wildcard, it expands the wildcard to create a list of matching filenames before running the preceding command.
 
 ___
 

@@ -33,7 +33,6 @@ These work by modifying the directory entries of the files they access.
 * `mv` replaces the name of an existing directory entry without disturbing its inode number. 
 * `rm` removes an entry from the directory.
 
-
 ___
 
 ### [mv](/personal-site/docs/bash-linux/command-docs/mv-move)

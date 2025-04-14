@@ -16,12 +16,12 @@ seo:
 
 
 
-In Bash, variables can be defined from the command line and used later in the same shell session or from within a script.    
-All variables are typically capitalized but not a requirement.
+In Bash, variables can be defined from the command line and used later in the same shell session or from within a script. All variables are typically capitalized but not a requirement.
 
 When a variable is available throughout the environment for use, not just one session or script, it is called an **environment variable**.
 
-#### **env**  
+#### env - Environment Variables
+
 The `env` command can be used to see all the environment variables defined (these can vary across distributions).
 
 ```bash {frame="none"}
@@ -59,7 +59,7 @@ sujith
 
 ---
 
-### **Common Bash Environment Variables**
+### Common Bash Environment Variables
 
 - **`DESKTOP_SESSION`**: Name of the desktop GUI (e.g., `gnome`)
 - **`HISTSIZE`**: Size of the history list (e.g., `1000`)
@@ -84,9 +84,7 @@ Without the `PATH` variable, you would need to specify the full path to the exec
 
 ### **Defining Variables**
 
-To store a value in a variable, use an **assignment statement**.    
-The syntax is `VAR=VALUE` with **no spaces** around the equal sign.    
-We can define new variables or redefine existing ones.
+To store a value in a variable, use an **assignment statement**. The syntax is `VAR=VALUE` with no spaces around the equal sign. We can define new variables or redefine existing ones.
 
 ```bash {frame="none"}
 $ FIRST=Sujith
@@ -121,7 +119,7 @@ If a command like `pwd` is stored in a variable and called, Bash will execute it
 `readonly variable` will not allow the variable to be reassigned.    
 
 ```bash {frame="none"}
-$ psit=~/Desktop/website/site
+$ psite=~/Desktop/website/site
 $ cd $psite
 
 $ pnote=~/Desktop/obsid/notes
@@ -194,7 +192,6 @@ alias ll='ls -alF'
 alias ls='ls --color=auto'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 ```
-
 
 
 To remove an alias, use the `unalias` command:

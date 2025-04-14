@@ -25,7 +25,8 @@ The development of shells has evolved over time, with major milestones including
 
 ---
 
-### Bash - `Bourne Again SHell`
+### Bash - 'Bourne Again SHell'
+
 *(Git Bash - for Windows interaction with Git)*
 
 The grammar of a shell allows combining existing tools into powerful pipelines and handling large volumes of data automatically. Writing a sequence of commands in a script improves the reproducibility of workflows.
@@ -211,3 +212,5 @@ The last part represents the output of the `date` command.
 The date is put inside `backquotes` which are not single quotes.    
 Using single quotes will not execute the command but treats it literally and prints whatever was inside.     
 In Bash it is recommended to use of the form `$(command)` rather than the `backquotes`.  
+
+____

@@ -15,7 +15,7 @@ seo:
 ---
 
 
-### **Command-Line Editing**
+### Command-Line Editing
 
 Bash supports several special keystrokes for command-line editing. These keystrokes are combinations of the **Control** key, **Escape** key, or other keys and are based on the `emacs` text editor.
 
@@ -53,7 +53,7 @@ ___
 
 ---
 
-### **Redirection**
+### Redirection
 
 Redirection is the process of using operators to control where input or output from a command goes.
 
@@ -124,11 +124,11 @@ These files always have zero size and will incinerate any output written to it. 
 
 
 ____
-### **Pipes**
+### Pipes
 
 Pipes (`|`) allow the output of one command to be used as input for another command, enabling efficient chaining of multiple commands.
 
-#### **Basic Pipe Usage**
+#### Basic Pipe Usage
 
 Sort a file and display the smallest value.
 ```bash {frame="none"}
@@ -152,7 +152,8 @@ This command concatenates all `.txt` files, sorts their contents, and writes the
 
 
 ***When a Command Needs to be Ignorant of Its Source***     
-If `wc *.c`   would give the individual count of all the files and also the total count.      
+I
+f `wc *.c`   would give the individual count of all the files and also the total count.      
 By passing the input to `wc` using pipe when the command does not know the source, it outputs just the total of the stream from pipe.
 
 ```bash {frame="none"}
@@ -166,7 +167,7 @@ fi
 
 ---
 
-#### **Using Tilde Expansion**
+#### Using Tilde Expansion
 
 In Bash, **tilde expansion** allows the `~` symbol to represent the home directory, eliminating the need to type the full path `/home/username/`.
 
@@ -185,7 +186,7 @@ it is termed as `filename` expansion.
 
 ---
 
-#### **Brace Expansion**
+#### Brace Expansion
 
 Brace expansion allows for grouping file names or directories that share the same path. It’s useful for creating multiple files or directories in one go.
 
@@ -211,7 +212,7 @@ This will expand to:
 ____
 
 
-### **History List**
+### History List
 
 All entered commands are stored in a history list. Can be viewed by typing `history`.
 
@@ -228,7 +229,7 @@ Using `!100` recalls the command at position 100 in the history list.
 
 ---
 
-#### **Recalling Instructions from the History List**
+#### Recalling Instructions from the History List
 
 - **`!!`** : Recalls and runs the last instruction.
 - **`!n`** : Recalls and runs the `n`-th instruction from the history list.
@@ -246,7 +247,7 @@ ls -l !$
 ls !*
 ```
 
-#### **Recalling Previous Instructions to Edit or Display**
+#### Recalling Previous Instructions to Edit or Display
 
 - **`<up arrow>`** or **`Ctrl + p`** : Retrieve the last instruction in the history list.
 - **`<down arrow>`** or **`Ctrl + n`** : Move forward in the history list.
@@ -256,7 +257,7 @@ Can also use:
 - **`!:2000`** : Prints the 2000th instruction from the history (may not work if there are fewer than 2000 entries).
 - **`!:str`** : Prints the last instruction that starts with `str`.
 
-#### **Options for the `history` Command**
+#### Options for the `history` Command
 
 - **`history -c`** : Clears the history list.
 

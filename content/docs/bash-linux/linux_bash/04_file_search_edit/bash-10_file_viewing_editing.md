@@ -21,9 +21,9 @@ Each performs a simple function, these can be combined with other tools using re
 
 ____
 
-## 1. **File Creation and Editing**
+## 1. File Creation and Editing
 
-### **Creating a Text File Using the Nano Editor**
+### Creating a Text File Using the Nano Editor
 
 To create a text file with the `nano` editor:
 ```bash {frame="none"}
@@ -54,9 +54,9 @@ touch my_file.txt
 ---
 
 
-## 2. **Text File Viewing and Analysis**
+## 2. Text File Viewing and Analysis
 
-### **Word Count with [wc](/personal-site/docs/bash-linux/command-docs/wc-word-count)**
+### Word Count with [wc](/personal-site/docs/bash-linux/command-docs/wc-word-count)
 
 The `wc` command outputs the count of characters (bytes), words (whitespace between characters), and lines (`\n`) in a text file.
 
@@ -81,7 +81,7 @@ If  `wc -l` is run without specifying a filename, it waits for input,  can exit 
 
 ---
 
-### **Finding Printable Characters with `strings`**
+### Finding Printable Characters with `strings`
 
 ```bash {frame="none"}
 strings sujith.jpeg -n 10
@@ -100,9 +100,9 @@ Bm&EmvX{2;
 ---
 
 
-## 3. **Text File Navigation Commands**
+## 3. Text File Navigation Commands
 
-### **Viewing Files with `more`, `less`, and `cat`**
+### Viewing Files with `more`, `less`, and `cat`
 
 - **`cat`**: Displays the entire content of a file. Best for small files.
 
@@ -116,7 +116,7 @@ Bm&EmvX{2;
 
 ---
 
-### **Viewing Specific Parts of a File with `head` and `tail`**
+### Viewing Specific Parts of a File with `head` and `tail`
 
 [*head and tail*](/personal-site/docs/bash-linux/command-docs/head-tail)
 **`head`**: By default, shows the first 10 lines of a file.      
@@ -133,9 +133,9 @@ Precede the integer with plus to indicate the starting point within the file.
 ---
 
 
-## 4. **Sorting and Manipulating Files**
+## 4. Sorting and Manipulating Files
 
-### **Sorting Files with [*sort*](/personal-site/docs/bash-linux/command-docs/sort)**
+### Sorting Files with [*sort*](/personal-site/docs/bash-linux/command-docs/sort)
 
 The `sort` command sorts lines of text files / output:
 ```bash {frame="none"}
@@ -157,7 +157,7 @@ sort -n lengths.txt > sorted-lengths.txt
 ---
 
 
-## 5. **File Comparison and Difference Commands**
+## 5. File Comparison and Difference Commands
 
 
 ### Comparing Files with *cmp*, *comm*, and *diff*
@@ -219,9 +219,9 @@ uniq file.txt > file_without_duplicates.txt
 ---
 
 
-## 6. **File Manipulation Commands**
+## 6. File Manipulation Commands
 
-### **Joining Files with `join`**
+### Joining Files with `join`
 
 Joins two sorted files based on a common field (default is field 1).
 ```bash {frame="none"}
@@ -238,7 +238,7 @@ When the two files contain a row that contains that same value, then those two l
 
 ---
 
-### **Merging Files with `paste`**
+### Merging Files with `paste`
 
 ```bash {frame="none"}
 paste file1.txt file2.txt
@@ -248,7 +248,7 @@ paste file1.txt file2.txt
 
 ---
 
-### **Splitting Files with `split`**
+### Splitting Files with `split`
 
 ```bash {frame="none"}
 split -b 1000 file.txt prefix
@@ -261,7 +261,7 @@ We specify the file to split and a `prefix` which is name used for new files.
 
 ---
 
-### **Extracting Data with `cut`**
+### Extracting Data with `cut`
 
 Slitting a file vertically.      
 The `cut` command is used to remove or extract specific sections of each line in a file:
@@ -315,7 +315,7 @@ rwxrwxr-x
 
 ---
 
-### **Example Workflow**
+### Example Workflow
 
 ```bash {frame="none"}
 cd nart-pacific-gyre
@@ -328,7 +328,7 @@ wc -l *.txt | sort -n | tail -n 5  # Display the last five file line counts
 
 
 
-### **Text Editors: `vi` and `vim`**
+### Text Editors: `vi` and `vim`
 
 **`vi`** (or its improved version **`vim`**) is the default text editor found in most Linux distributions. It is used for editing text files from the command line. `vim` (Vi IMproved) offers additional features like syntax highlighting, better search functionalities, and more. While `vi` is still widely used, `vim` is recommended due to its enhanced capabilities.
 

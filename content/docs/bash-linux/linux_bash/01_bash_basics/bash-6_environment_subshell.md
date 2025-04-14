@@ -102,19 +102,70 @@ source ~/.bashrc
 
 ### Internal and External Commands
 
-`$ type echo`     
-`echo is a shell builtin`    
+Shell built-in commands (also called **internal commands**) are commands that are executed directly by the shell, without calling an external program. These are part of the shell itself and are typically used for basic shell control, environment configuration, and scripting.
 
-`echo` is not an external command, Shell won't look for it in the PATH variable to locate it when it is called. Rather it will execute it from its own set of built in commands that are not stored as separate files. These Built-in commands are called as Internal commands.
+```bash {frame="none"}
+type <command>
+```
+
+```bash {frame="none"}
+type cd
+# cd is a shell builtin
+
+type echo
+# echo is a shell builtin
+```
+
+`echo` is not an external command, Shell won't look for it in the PATH variable to locate it when it is called. Rather it will execute it from its own set of built in commands that are not stored as separate files.
 
 Certain commands are built into the shell because it is difficult or impossible to implement them as separate external commands.    
 The child process inherits the current working directory from its parent as one of the environmental parameters. It is important for the `cd` command to not spawn any children to achieve a change of directory. If it did so through a separate process then after `cd` had completed its run, control would revert to the parent and the original directory would be restored. Then it would be impossible to change directory.  
 
+##### Shell Environment and Control
+
+- `cd` – Change the current directory
+- `pwd` – Print working directory
+- `echo` – Print text to the terminal
+- `export` – Set environment variables
+- `unset` – Unset environment variables or functions
+- `set` – Set shell options or positional parameters
+- `shift` – Shift positional parameters
+- `alias` / `unalias` – Create or remove command aliases
+- `type` – Show how a command would be interpreted (e.g. builtin, alias, external)
+
+##### Shell Logic and Flow
+
+- `if`, `then`, `else`, `elif`, `fi` – Conditional statements
+- `for`, `while`, `until`, `do`, `done` – Loops
+- `case`, `esac` – Switch-case construct
+- `break`, `continue` – Control loop flow
+- `return` – Return from a function
+- `exit` – Exit the shell
+
+##### Job Control
+
+- `jobs` – List background jobs
+- `fg` – Bring a job to the foreground
+- `bg` – Resume a job in the background
+- `kill` – Send signal to a job (though there's also an external `/bin/kill`)
+- `wait` – Wait for a process to finish
+
+##### Input and Redirection
+- `read` – Read input into a variable
+- `exec` – Replace the shell with a command or change file descriptors
+
+##### Miscellaneous
+
+- `help` – Display help for builtins
+- `history` – Show command history
+- `source` or `.` – Run a script in the current shell
+- `true` / `false` – Return a success or failure status
 
 ___
 ### **Compiler vs Interpreter**
 
 - **Compiler**: A compiler translates the entire source code of a program into machine code (binary code) that can be executed by the computer. It produces an independent executable file.
+
 - **Interpreter**: An interpreter directly executes instructions written in a programming language, without converting them into machine code beforehand. It processes the code line by line.
 
 Some languages, like Java, use an intermediate **bytecode**, which is platform-independent. The bytecode is then interpreted by the Java Virtual Machine (JVM), making the code portable across different systems.

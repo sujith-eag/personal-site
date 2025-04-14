@@ -29,17 +29,16 @@ ls -F Desktop
 # List contents of Desktop directory
 ```
 
-These commands display the contents of the `Desktop` directory (or any specified directory).    
-The `-F` option appends a character to each file to indicate its type (e.g., `/` for directories, `*` for executables).
+These commands display the contents of the `Desktop` directory (or any specified directory). The `-F` option appends a character to each file to indicate its type (e.g., `/` for directories, `*` for executables).
 
 
-#### **ls with Multiple Directories**
+#### 'ls' with Multiple Directories
 
 ```bash {frame="none"}
 sujith@sujith-Latitude-7490:~$ ls ./ Desktop/ Documents/ Downloads/
 ```
 
-In this example, the `ls` command lists the contents of multiple directories.      However, using semicolons `;` between the commands might not work as intended because semicolons separate commands rather than options.
+In this example, the `ls` command lists the contents of multiple directories. However, using semicolons `;` between the commands might not work as intended because semicolons separate commands rather than options.
 
 ```bash {frame="none"}
 sujith@sujith-Latitude-7490:~$ ls .; Desktop/; Documents/; Downloads/;
@@ -55,7 +54,7 @@ The `ls` command should be executed separately for each directory or with valid 
 
 ---
 
-### **Long Listing Format**
+### Long Listing Format
 
 `-l` option to get a more detailed view of files and directories:
 
@@ -66,7 +65,7 @@ sujith@sujith-Latitude-7490:~/Desktop$ ls -l
 ```bash {frame="none"}
 total 24
 drwxrwxr-x 4 sujith sujith 4096 Sep  3 15:29  courses
-drwxr-xr-x 2 sujith sujith 4096 Dec 22 16:11 'MCA Sem1 Text Books'
+drwxr-xr-x 2 sujith sujith 4096 Dec 22 16:11 'MCA Sem1 Books'
 drwxr-xr-x 4 sujith sujith 4096 Dec 18 19:56  obsidian-vaults
 drwxrwxr-x 7 sujith sujith 4096 Oct  6 15:21  Opage
 drwxrwxr-x 6 sujith sujith 4096 Dec 24 10:09  pylab
@@ -75,7 +74,7 @@ drwxrwxr-x 8 sujith sujith 4096 Oct 26 09:04  websites
 -rw-rw-r--  1 sujith sujith 2957628 Oct 30 13:52 'Option WorkSheet.pdf'
 ```
 
-#### **Understanding the Output of `ls -l`**
+#### Understanding the Output of 'ls -l'
 
 1. **File Type**:  The first part of file permissions. 
     `d` represents a directory
@@ -92,7 +91,7 @@ drwxrwxr-x 8 sujith sujith 4096 Oct 26 09:04  websites
 
 6. **Last Modified Date**: The last modification date and time of the file or directory. (creation date/time if not modified)
 
-7. **Name**: The name of the file or directory. For a symbolic link, the name is followed by `->` 
+7. **Name**: The name of the file or directory. (For a symbolic link, the name is followed by `->` )
 
 
 ---
@@ -130,3 +129,5 @@ ls -Fal    # Combined options (file types, human-readable sizes, and long listin
 ls -la     # Long listing with hidden files
 ls -al     # Another variation
 ```
+
+___

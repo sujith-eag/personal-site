@@ -22,57 +22,57 @@ These links are primarily categorized into **hard links** and **symbolic links**
 
 ___
 
-### **Hard Links**
+### Hard Links
 
 A **hard link** is essentially an additional directory entry that associates a file name with the same inode number. 
 
 An **inode** is a data structure that stores information about a file, including its physical location on the disk.
 
-#### **How Hard Links Work**
+#### How Hard Links Work
 - A hard link consists of a file's **name** and its associated **inode number**.
 - Each file and directory has at least one hard link that connects its name in the directory to the inode, which contains the pointers to the actual file data on disk.
 - **Inodes** contain metadata, such as the file's size, permissions, and the physical disk block locations where the data is stored.
 - A directory typically contains links to files and other directories. These links are always associated with inodes.
 - A file can have multiple hard links, meaning it can be referenced by different names from different locations in the filesystem. All links point to the same inode, and thus, the same data.
 
-#### **Characteristics of Hard Links**
+#### Characteristics of Hard Links
 
 - Hard links are efficient because they don’t require additional storage for the content of the file, only another directory entry pointing to the same inode.
 - Hard links can only be created within the **same partition**. For example, a hard link in `/home` cannot point to a file in `/etc`, as these are typically separate partitions.
 - Deleting one hard link does not delete the file. The file will remain in the filesystem until all hard links to it are removed.     
     Example: If a file has two hard links, the link count will be 2. Deleting one link reduces the count to 1, but the file still exists. Only when the last link is deleted does the file get removed from the filesystem.
 
-#### **Permissions with Hard Links**
+#### Permissions with Hard Links
 
 - When creating a hard link, it **inherits the permissions** of the original file. The link does not have its own permissions; it simply points to the same inode, which determines access.
 
 ---
 
-### **Symbolic Links (Soft Links)**
+### Symbolic Links (Soft Links)
 
 A **symbolic link** (also known as a **soft link**) is a special type of file that contains a reference to another file or directory in the form of a **path**. Unlike hard links, symbolic links can span across partitions and point to files or directories located elsewhere in the filesystem.
 
-#### **How Symbolic Links Work**
+#### How Symbolic Links Work
 
 - A symbolic link is essentially a pointer to the **original file or directory**.
 - It does not point directly to the inode of the target file; instead, it contains a **path** to the file or directory. This makes symbolic links more flexible but also less efficient than hard links.
 - Symbolic links are identified by the `l` file type when viewed using the `ls -l` command.
 - Symbolic links **do not increase the link count** of the original file, unlike hard links.
 
-#### **Characteristics of Symbolic Links**
+#### Characteristics of Symbolic Links
 
 - Symbolic links can point to **files or directories** that are located on different partitions or even remote systems.
 - If the target of a symbolic link is deleted or moved, the symbolic link becomes a **"dead link"** (i.e., a broken reference that no longer points to an existing file).
 - Deleting a symbolic link **does not affect the target file or its link count**, as the symbolic link is just a reference to the target, not part of the actual file structure.
 
-#### **Permissions with Symbolic Links**
+#### Permissions with Symbolic Links
 
 - Symbolic links themselves have their own set of permissions, but they are typically not used to control access to the target file. Instead, permissions are controlled on the target file or directory.
 - If a user does not have permission to access the **original file**, they won’t be able to follow the symbolic link to access it either.
 
 ---
 
-## **Creating Hard and Symbolic Links**
+## Creating Hard and Symbolic Links
 
 The **`ln`** command is used to create both hard and symbolic links.
 ```bash {frame="none"}
@@ -101,7 +101,7 @@ This creates a symbolic link pointing to `/path/to/original/file`.
 
 ---
 
-## **Key Differences Between Hard and Symbolic Links**
+## Key Differences Between Hard and Symbolic Links
 
 |Feature|**Hard Link**|**Symbolic Link (Soft Link)**|
 |---|---|---|
@@ -116,14 +116,14 @@ This creates a symbolic link pointing to `/path/to/original/file`.
 
 ---
 
-### **Common Use Cases**
+### Common Use Cases
 
-#### **Hard Links**:
+#### Hard Links:
 
 - **Backup systems**: Hard links are often used in backup systems to create multiple references to files, saving space without duplicating the data.
 - **File management**: Allowing multiple names for the same file, useful in cases where you want to organize or move files but keep the same content under different names.
 
-#### **Symbolic Links**:
+#### Symbolic Links:
 
 - **Shortcut creation**: Symbolic links are commonly used to create shortcuts to files or directories. For example, in user directories or for frequently used files.
 - **Redirecting files**: Symbolic links can be used to point to files that have been moved to a different location, helping maintain compatibility with existing scripts or applications.

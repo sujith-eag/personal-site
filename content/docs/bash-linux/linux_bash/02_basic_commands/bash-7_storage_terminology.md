@@ -15,9 +15,11 @@ seo:
 ---
 
 
+
 Key concepts related to storage and file management in Linux.
 
-#### **File Space**
+#### File Space
+
 File space is the physical collection of storage devices (like hard drives or SSDs) used to store files and makes up the locations of all files and directories. This space can be viewed in two ways:
 
 - **Logical View**: This is the way we interact with files and directories. Files and directories are organized hierarchically and accessed by logical names (e.g., `home/user/documents`).
@@ -28,9 +30,10 @@ OS have commands to show both views but we prefer to see logical view.
 
 ___
 
-## **Files and Directories**
+## Files and Directories
 
-### **Files**:     
+### Files:     
+
 A File is the smallest logical unit within the file space. It is a container for storing information or a sequence of characters. It has properties like name, type, and data.     
 The file will contain only what is written in it, there is no end-of-file (eof) mark. A file's size, nor even it's name is not stored in the file itself. It is all kept separately in the disk which is only accessible to the kernel.    
 
@@ -38,25 +41,19 @@ Files are stored as a collection of disk blocks. These blocks might not be store
 
 UNIX treats directories and devices also as files only, so is the shell and kernel.  
 
-***Ordinary file (Regular files)*** :     
-Contains only data as a stream of characters. Text files and Binary files.   
-**Text file** contains printable characters which makes up viewable contents.
-**Binary files** contain both printable and unprintable characters that cover the entire ASCII range.  Most of UNIX commands are Binary files. Executable files, Pictures, sound and video files are all binary files.
 
-***Directory files*** :    
-A directory contains no data but keeps the names of files / directories it contains and a number associated with them called the inode number.
+**Ordinary file (Regular files)** : Contains only data as a stream of characters. Text files and Binary files.
+* **Text file** contains printable characters which makes up viewable contents.
+* **Binary files** contain both printable and unprintable characters that cover the entire ASCII range.  Most of UNIX commands are Binary files. Executable files, Pictures, sound and video files are all binary files.
 
-***Device files*** :    
-All devices and peripherals are represented by files. To read or write a device, operations has to be performed on its associated file.    
+**Directory files** : A directory contains no data but keeps the names of files / directories it contains and a number associated with them called the inode number. Directories are used to organize files in a hierarchical structure. Sub-directories can be created within a directory to form a deeper organizational structure.
+
+**Device files** : All devices and peripherals are represented by files. To read or write a device, operations has to be performed on its associated file.    
 Device file names are usually found within the `/dev` directory.
-
-### **Directories**:     
-Directories are a folder to store filenames and other directories.    
-Directories are used to organize files in a hierarchical structure. Sub-directories can be created within a directory to form a deeper organizational structure.
 
 ___
 
-### **Partitioning**
+### Partitioning
 
 A **partition** is a physical division of storage on a device. Linux allows partitions to be mounted into specific locations (directories) in the filesystem. Partitions can be used to separate system files, user files, and virtual memory (swap space).
 
@@ -70,7 +67,8 @@ Linux offers three separate partitions: `/boot`, `LVM` and `swap`
 
 ___
 
-### **Inode**
+### Inode
+
 An **inode** is additional part of Linux file space, it is a data structure that doesn't contain the name and contents but stores all metadata about a file, such as:
 - File type (regular file, directory, symbolic link, etc.)
 - File owner UID and group GID
@@ -84,7 +82,8 @@ Each file, directory, and symbolic link has an associated inode. The inode does 
 
 ___
 
-#### **Links**
+#### Links
+
 `link` is a pointer which points from a file in a directory to its `inode` which contains pointers to point at the files's physical blocks.
 
 - **Hard Link**:  Points directly at the file's `inode`. A hard link is a direct reference to the inode of a file. Multiple hard links can point to the same inode, and they are indistinguishable from the original file. When the link count of a file (i.e., the number of hard links) is greater than one, the file is still accessible as long as one link exists.
@@ -94,7 +93,7 @@ ___
 
 ___
 
-### **Relative and Absolute Paths**
+### Relative and Absolute Paths
 
 We will be in `current working directory` and accessing files in another directory needs specifying a directory path.
 
@@ -112,7 +111,7 @@ There are two primary ways to access files:
 
 ___
 
-#### **`PATH` Variable**
+#### 'PATH' Variable
 
 The `PATH` environment variable holds a list of directories where executable files are located. When you type a command like `ls` or `cat`, the system checks these directories to find the corresponding executable.
 
@@ -130,16 +129,17 @@ PATH=new_directory:$PATH
 
 ___
 
-#### **Filename Arguments and Wildcards**
+#### Filename Arguments and Wildcards
 
-- **Wildcard Expansion (Globbing)**: Bash allows the use of wildcards (also called globbing) to match multiple files.
-    - `*`: Matches any number of characters.
-    - `?`: Matches exactly one character.
-    - `[chars]`: Matches one character from the specified list.
-    - `[char1-char2]`: Matches one character within the specified range. `[0-9] [a-e] [A-Z]`
-    - `{word1,word2, word3}`: Matches any of the specified words.
-    - `[!chars]`  match any one character not in the list   `ls [!a]*` means first character not `a`
+**Wildcard Expansion (Globbing)**: 
 
+Bash allows the use of wildcards (also called globbing) to match multiple files.
+- `*`: Matches any number of characters.
+- `?`: Matches exactly one character.
+- `[chars]`: Matches one character from the specified list.
+- `[char1-char2]`: Matches one character within the specified range. `[0-9] [a-e] [A-Z]`
+- `{word1,word2, word3}`: Matches any of the specified words.
+- `[!chars]`  match any one character not in the list   `ls [!a]*` means first character not `a`
 
 `ls *.txt`: Lists all files with a `.txt` extension.
 `ls f*`: Lists all files starting with `f`.
@@ -148,7 +148,6 @@ ___
 `ls [abc][abc][abc]`
 
 `ls file?.{dat,txt}`: Lists files like `file1.dat`, `file2.txt`, etc.
-
 
 ___
 
@@ -182,5 +181,7 @@ Users work with their own files, write programs and create files. These are avai
 
 **`/tmp`** : Where a user is allowed to create temporary files which are wiped away regularly by the system.
 
-
 **`/var`**: Contains variable data such as log files and databases of the file system.
+
+
+___
