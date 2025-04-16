@@ -15,6 +15,7 @@ seo:
 ---
 
 
+
 #### Advanced concepts in Trees: AVL Search Trees: Need for AVL Search Trees, Definition, Balancing Trees (L-L Rotation, R-R Rotation, L-R Double Rotation, R-L Double Rotation)-, 
 
 * How to overcome the drawbacks of Binary Search Tree (BST) using AVL tree? Illustrate with an example.
@@ -39,11 +40,15 @@ An AVL tree is a self-balancing binary search tree, which automatically adjusts 
 
 Characteristics of AVL trees:
 * **Balance factor** : It ensures that the height of left and right subtrees of any node differ by at most 1 (i.e., the balance factor is -1, 0, or 1). An AVL tree keeps the BST properties while ensuring balance.
+* Balance Factor = height(left subtree) - height(right subtree)
+
+* The minimum number of nodes is `n(h) = n(h-1) + n(h-2)+1`
 
 * If the balance factor is violated (i.e., it becomes -2 or 2), the tree performs rotations to restore balance. avoiding the worst-case scenario of a skewed tree.
 
 * **Optimized Search** : Operations such as search, insertion, and deletion maintain a time complexity of **O(log n)** due to the balanced structure.
 
+____
 
 **Inserting nodes into a Binary Search Tree in increasing order:**
 
@@ -63,7 +68,7 @@ For the given sequence : 10, 20, 30, 40, 50, 25.  The tree becomes unbalanced wi
 
 ___
 
-Inserting Same Nodes into an AVL Tree
+**Inserting Same Nodes into an AVL Tree**
 
 - Insert: 10
 ```
@@ -183,6 +188,7 @@ After right rotation to node 30:
    10    30
 ```
 
+____
 
 **Right-Right (R-R) Case** :  
 
@@ -192,6 +198,7 @@ To fix this, we perform a single left rotation on the root of the subtree.
 * Set the right child of current root as new root. 
 * Make the left child of the new root (20) the right child of the current root (10).
 * Set the current root (10) as the left child of the new root (20).
+
 ```
     10
       \
@@ -206,6 +213,7 @@ After left rotation at node 10:
    10    30
 ```
 
+_____
 
 **Right-Left (R-L) Case** : 
 
@@ -237,6 +245,7 @@ Left rotation on 10:
    10    30
 ```
 
+____
 
 **Left-Right (L-R) Case** : 
 
@@ -268,7 +277,6 @@ Right Rotation on 30:
    10    30
 ```
 
-
 _____
 
 #### AVL tree Operations: Insertion, Deletion. 
@@ -288,6 +296,7 @@ _____
 * Create an AVL tree using the following data. Show the balance factors in the resulting tree. `14 23 7 10 33 56 80 66 70` Insert 44 and 50 into the tree created.
 
 _____
+____
 
 #### Heaps – Definition, Heap Maintenance operations: insertion and deletion. Rheapup, Rheapdown algorithms and heap implementation, Applications.
 
@@ -298,107 +307,128 @@ _____
 
 **Answer :**
 
-A heap is a special tree-based data structure that satisfies the heap property.
+A heap is a special tree-based data structure that satisfies the heap property.  Used primarily for priority queues, heapsort, and efficient selection problems.
 
-In a max-heap, every parent node is greater than or equal to its children; in a min-heap, every parent node is less than or equal to its children. 
+For a binary tree to qualify as a heap, it must satisfy two main properties:
 
-A max (min) tree is a tree in which the key value in each node is not smaller (larger) than the key values in its children (if any).
-A max heap is a Complete binary tree that is also a max tree.
+**Structuring Property** — Complete Binary Tree (CBT)
 
-A min heap is a CBT that is also a min tree.
+A heap must be a Complete Binary Tree:
+- All levels of the tree are completely filled, except possibly the last level.
+- In the last level, nodes are filled from left to right (with no gaps in between).
 
-By definition, key in the root of a max tree is the larges and root in the min heap is the smallest.
+**Ordering Property** — Heap Condition which defines the type of heap:
+
+Min-Heap:
+- The value of each parent node is less than or equal to the value of its children.
+- The smallest element is always at the root.
+
+Max-Heap:
+- The value of each parent node is greater than or equal to the value of its children.
+- The largest element is always at the root.
+
+___
+
+- A Max Tree is a binary tree where every node’s key is not smaller than the keys of its children.
+
+- A Min Tree is a binary tree where every node’s key is not larger than the keys of its children.
+
+- A Max Heap is a Complete Binary Tree that also satisfies the Max Tree ordering property.
+
+- A Min Heap is a Complete Binary Tree that also satisfies the Min Tree ordering property.
+
+Heaps are typically implemented using **arrays** for efficient indexing : For a node at index `i`:
+- Left child: `2i + 1`
+- Right child: `2i + 2`
+- Parent: `(i - 1) / 2`
 
 ___
 
-##### Common Applications of Heap:
-
-* **Priority Queues** – Efficient for accessing the highest or lowest priority element.
-
-* **Heap Sort** – comparison-based, in-place sorting algorithm that uses a binary heap to sort elements.
-
-* **Dijkstra’s Algorithm** – For finding the shortest path in graphs.
-
-* **Job Scheduling Systems** – For scheduling jobs/tasks based on priority.
-
-* **Median Maintenance in data streams** – Heaps are used in real-time to keep track of medians of dynamic stream of numbers.
-
-* **Data Stream Management** – For maintaining top-k elements in a stream of data efficiently. (Trending hashtags, top-scoring users in games, real-time recommendation systems)
-
-___
+#### Heap Construction Algorithms
 
 Heap Construction Algorithms **Reheap Up** and **Reheap Down** operations maintain the heap structure:
 - Reheap Up restores the heap property after insertion.
 - Reheap Down restores the heap property after deletion.
 
-Both operations ensure that a heap maintains O(log n) time complexity, making heaps suitable for efficient implementations of priority queues, heap sort, and graph algorithms like Dijkstra’s algorithm.
+Both operations ensure the heap property in O(log n) time, which makes heaps highly efficient for:
+- Priority Queues
+- Heap Sort
+- Graph Algorithms (e.g., Dijkstra’s Algorithm)
 
 ___
 
-When an element is added to heap following CBT property at the end, the new node moves towards the root, it bubbles up as far as it is necessary to ensure a max heap. 
+#### Reheap Up Operations 
 
+When a new element is inserted into the heap, it's placed at the end of the array (to maintain the Complete Binary Tree structure).
 
-**Reheap Up** : is used when adding a new element to the heap. 
-* The new element is inserted at the end of the heap to maintain CBT structure.
-* Compare the inserted element with its parent.
-* if the element is greater (in max-heap), swap with its parent.
-* Repeat until the heap property is restored or the element reaches the root.
-* reheapUp is used to maintain the heap property by moving the element up the tree until it reaches the correct position.
+1. Insert the element at the last position of the heap.
+2. Compare the new node with its parent.
+3. If it violates the heap property (e.g., greater than parent in a max-heap), swap the two.
+4. Repeat this process until:   
+- The element reaches the root, or        
+- The parent node satisfies the heap property.
 
-Starting with an empty heap, let’s insert the elements: `[10, 20, 30, 15, 5]`
+This process ensures the heap maintains its ordering from **leaf to root**.
 
-Insert 10: Heap = `[10]`
+Follow the path from the newly added node upward, checking at each step if the parent is smaller (in max-heap). Stop when parent is larger or root is reached.
 
-Insert 20: Heap = `[10, 20]`
-- Compare 20 with its parent (10). Since 20 > 10, swap them.
-- Heap = `[20, 10]`
+#### Reheap Down Operations
 
-Insert 30: Heap = `[20, 10, 30]`
-- Compare 30 with its parent (10). Since 30 > 10, swap them.
-- Heap = `[20, 30, 10]`
-- Compare 30 with its new parent (20). Since 30 > 20, swap them.
-- Heap = `[30, 20, 10]`
+When deleting the root node from a heap:
 
-Insert 15: Heap = `[30, 20, 10, 15]`
-- Compare 15 with its parent (20). Since 15 < 20, no need to swap.
-- Heap = `[30, 20, 10, 15]`
+1. Replace the root with the last element in the heap.
+2. Compare the new root with its children.
+3. If the root is smaller than the larger child (in a max-heap), swap them.
+4. Repeat this process down the tree until:
+- The node reaches a leaf, or
+- The node is larger than both its children (in max-heap).
 
-Insert 5: Heap = `[30, 20, 10, 15, 5]`
-- Compare 5 with its parent (15). Since 5 < 15, no need to swap.
-- Heap = `[30, 20, 10, 15, 5]`
-
-Final Heap: `[30, 20, 10, 15, 5]`
-
-______
-
-When an element is deleted from a heap it is taken from its root. For CBT property the element at end, the new node moves towards the leaf, it bubbles down as far as it is necessary to ensure heap property. 
-
-**Reheap Down** : is used when the root of the heap is removed. 
-* Replace the root with the last element
-* Compare the new root with its children
-* Swap If the root is smaller than the larger child (in max-heap)
-* Repeat until the heap property is restored
-
-Starting with the heap: `[30, 20, 10, 15, 5]`, let’s remove the root (30) and perform a reheap down.
-
-Remove root 30: Move 5 to the root: `[5, 20, 10, 15]`
-* Compare 5 with its children (20 and 10). The largest child is 20.
-* Swap 5 and 20: `[20, 5, 10, 15]`
-* Now, compare 5 with its new children (15). The largest child is 15.
-* Swap 5 and 15: `[20, 15, 10, 5]`
-
-Final Heap after reheap down: `[20, 15, 10, 5]`
+This process ensures the heap maintains its ordering from **root to leaf**.
 
 ____
 
-Reheap Down is then used to maintain the heap property by moving the element down the tree until it reaches the correct position.
+Since the heap is a Complete Binary Tree, with `n` elements, it has a height of `log(n)`.  
+Both `Reheap Up` and `Reheap Down` operations perform at most `log(n)` comparisons/swaps.
 
-Reheap up is then used to maintain the heap property by moving the element up the tree until it reaches the correct position.
-This follows a path from the new leaf to the to the root untill either it reaches the root or reaches a position i such that value in the parent position `i/2` is at least as large as the value to be inserted.
+- Insertion (Reheap Up): O(log n)
 
-Since heap is a CBT, with n elements, it has a height of `log(n+1)`. this means the loop to insert the node will iterate `log(n)` times hence the complexity of insertion is `O(log(n))`
+- Deletion (Reheap Down): O(log n)
 
-which is similar for heap down also which is heap deletion.
+____
+
+##### Common Applications of Heap:
+
+* **Priority Queues** – Efficient for accessing the highest or lowest priority element.
+
+* **Job Scheduling Systems** – For scheduling jobs/tasks based on priority. OS process scheduling, network packet scheduling.
+
+* **Heap Sort** – comparison-based, in-place sorting algorithm that uses min or max heap to sort elements.
+
+* **Dijkstra’s Algorithm** – For finding the shortest path in graphs.
+
+* **Median Maintenance in data streams** – Heaps are used in real-time to keep track of medians of dynamic stream of numbers.
+
+* **Data Stream Management** – For maintaining top-k elements in a stream of data efficiently. (Trending hashtags, top-scoring users in games, real-time recommendation systems)
+
+- **Database Indexing** - Helps optimize queries using heap-structured indices.
+
+- **Memory Management** - used in languages like Java and Python for dynamic memory allocation and garbage collection.
+
+- **Kth Largest/Smallest Element** - Frequently used in competitive programming and real-time data queries.
+
+- **AI/ML Search Algorithms** - A algorithm for pathfinding, Huffman encoding for data compression.
+
+____
+
+### Heap Sort
+
+Heap Sort is a comparison-based, in-place sorting algorithm that uses a binary heap to sort elements efficiently.
+
+- Construct a max-heap from the input data.
+
+- Repeatedly remove the root (maximum element) and move it to the end of the array.
+
+- Reheapify the remaining elements to maintain the heap structure.
 
 ____
 
@@ -410,10 +440,6 @@ ____
                /  \    /  \
              10   19  31   42
 ```
-
-**Answer :**
-
-
 
 ____
 
@@ -429,7 +455,6 @@ ____
 
 * Construction the heap tree from the following data : `32, 8, 21, 18, 39, 55, 75, 80, 40, 99.` Design an algorithm for the same.
 
-
-
 ___
+
 

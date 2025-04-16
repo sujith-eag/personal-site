@@ -23,7 +23,7 @@ seo:
 
 **Answer :**
 
-M-way tree is a tree data structure where each node can have at most **m** children. It is a generalization of a binary tree where each node can have more than two children. 
+M-way tree is a tree data structure where each node can have at most **m** children. It is a generalization of a binary tree where each node can have more than two children and nodes can store multiple keys. 
 
 The number **m** refers to the maximum number of children that a node can have.
 - Each node in the tree can have up to m children.
@@ -46,27 +46,27 @@ ____
 
 A B-tree is a self-balancing search tree data structure that maintains sorted data and allows for efficient insertion, deletion, and searching operations.
 
-Particularly suited for disk-based storage systems such as databases and file systems.
-
 A **B-tree of order _m_** is an **m-way search tree** that satisfies the following properties:
 
-1. Each node can have at most _m_ children.
-2. The root node must have at least two children if it is not a leaf.
-3. Each internal node (except the root) must have at least ⌈_m_/2⌉ children.
+* All leaves are at the same level (i.e., the tree is height-balanced).
 
-4. Each node can contain a maximum of _m_ − 1 keys.
-5. Each node (except root) must contain at least ⌈_m_/2⌉ − 1 keys.
+* About Number of Nodes :
+	* The root node must have at least two children.
+	* Each internal node (except the root) must have at least `⌈m/2⌉` children.
+	* Each node can have at most _m_ children.
 
-6. All leaves are at the same level (i.e., the tree is height-balanced).
-
+* About Number of Keys :
+	* Each node can contain a maximum of `m − 1` keys.
+	* Each node (except root) must contain at least (`[m-1] / 2`) keys.
+	* Root contains at least 1 key.
 
 ---
 
-Example: B-Tree of Order 3 (m = 3)
-
-- Each node can store up to **2 keys**.    
-- Each node can have **up to 3 children**.
-- Internal nodes must have at least ⌈3/2⌉ = **2 children**.
+B-Tree of Order 3 (m = 3)
+- Each node can store up to 2 keys.  (3-1 = 2)
+- At least `[3-1] / 2 = 1` key per node
+- Each node can have up to 3 children.
+- Internal nodes must have at least ⌈3/2⌉ = 2 nodes.
 
 ```
           [10, 20]
@@ -78,41 +78,45 @@ Example: B-Tree of Order 3 (m = 3)
 
 #### Special Cases of B-Trees
 
-A **B-tree of order 3** is often referred to as a **2-3 Tree**: 
-- Internal nodes can have **2 or 3 children**, hence keys per node can be **1 or 2**.
+A B-tree of order 3 is often referred to as a 2-3 Tree: 
+- Internal nodes can have 2 or 3 children, hence keys per node can be 1 or 2.
 
-A **B-tree of order 4** is called a **2-3-4 Tree**: 
-- Internal nodes can have **2, 3, or 4 children**, i.e., **1 to 3 keys** per node.
+A B-tree of order 4 is called a 2-3-4 Tree: 
+- Internal nodes can have 2, 3, or 4 children, i.e., 1 to 3 keys per node.
 
-A B-tree of order 5 is **not** referred to as a 2-3-4-5 tree: Because in such a B-tree, **nodes cannot have exactly 2 children** (except the root). The minimum degree (⌈5/2⌉ = 3) forbids degree 2 in internal nodes.
+A B-tree of order 5 is not referred to as a 2-3-4-5 tree : It allows up to 4 keys per node, i.e., up to 5 children.
+
+- The minimum degree is ⌈5/2⌉ = 3, meaning:
+    - Every internal node (except the root) must have at least 3 children.
+    - Therefore, internal nodes cannot have only 2 children (i.e., a node with 1 key is not allowed for internal nodes).
+
+- Because of this restriction, a B-tree of order 5 cannot have internal nodes with degrees 2, so it is not called a 2-3-4-5 Tree.
+
+- Internal nodes can only have **3, 4, or 5 children**, which means they hold **2, 3, or 4 keys** respectively.
 
 ---
+
 #### Key Characteristics
 
-- **Balanced Tree**: All leaf nodes are at the same depth, ensuring balanced structure.
-- **Sorted Order**: Keys are maintained in sorted order.
-- **Efficient Operations**:
-    - **Search**: O(log n)
-    - **Insert**: O(log n)
-    - **Delete**: O(log n)
+- Balanced Tree: All leaf nodes are at the same depth, ensuring balanced structure.
+- Sorted Order: Keys are maintained in sorted order.
+- Efficient Operations:
+    - Search: O(log n)
+    - Insert: O(log n)
+    - Delete: O(log n)
 	
 The logarithmic time complexity ensures that operations remain fast even for very large data sets, especially when minimizing disk reads.
 
-B-Trees are ideal for **storage systems** that read and write large blocks of data. They're widely used in:
+B-Trees are ideal for storage systems that read and write large blocks of data. They're widely used in:
 
-- **Databases** (e.g., MySQL, PostgreSQL)	
-- **File Systems** (e.g., NTFS, HFS+, ext4)
-- **Indexing structures** for large datasets
+- Databases (e.g., MySQL, PostgreSQL)	
+- File Systems (e.g., NTFS, HFS+, ext4)
+- Indexing structures for large datasets
 
 ____
 
-#### 2-3 Tree  
+#### 2-3 tree:
 
-2-3 Tree is a special type of balanced search tree where every internal node can have either 2 or 3 children. It is a type of B-tree of order 3.
-- Every path from the root to a leaf has the same length (the tree is balanced).
-- The tree ensures logarithmic time complexity for search, insertion, and deletion operations.
-
-In a 2-3 tree:
   - 2-node: A node that has 1 key and 2 children.
   - 3-node: A node that has 2 keys and 3 children.
 
@@ -122,25 +126,15 @@ In a 2-3 tree:
     [5]      [15]    [25, 30]
 ```
 
-- The root node has 2 keys: 10 and 20, and 3 children.
-- The left child is a 2-node with the key 5.
-- The middle child is a 2-node with the key 15.
-- The right child is a 3-node with keys 25 and 30.
-
 ____
 
 #### 2-3-4 Tree
 
-2-3-4 Tree is a self-balancing tree where each node can have 2, 3, or 4 children and can store 1, 2, or 3 keys, respectively. 
-
-This tree is a generalization of both the 2-tree and 3-tree and is also a type of B-tree.
 - 2-node: A node with 1 key and 2 children.
 - 3-node: A node with 2 keys and 3 children.
 - 4-node: A node with 3 keys and 4 children.
 
-Like 2-3 trees, the 2-3-4 tree is balanced, with all leaves at the same level. It supports efficient insertion and deletion operations, with a time complexity of O(\log n).
-
-The 2-3-4 tree can be converted into a B-tree of order 4, meaning it is essentially a B-tree with a maximum of 4 children per node.
+It is essentially a B-tree with a maximum of 4 children per node.
 
 ```
            [10, 20, 30]
@@ -148,37 +142,18 @@ The 2-3-4 tree can be converted into a B-tree of order 4, meaning it is essentia
    [5]   [15]  [25]   [35, 40]
 ```
 
-- The root node contains 3 keys: 10, 20, and 30, and has 4 children.
-- The leftmost child is a 2-node with the key 5.
-- The second child is a 2-node with the key 15.
-- The third child is a 2-node with the key 25.
-- The rightmost child is a 3-node with the keys 35 and 40.
-
-____
-
-| Tree Type  | Number of Children per Node | Number of Keys per Node |
-| ---------- | --------------------------- | ----------------------- |
-| M-way Tree | Up to m                     | Varies, typically m-1   |
-| B-tree     | Up to m                     | m-1                     |
-| 2-3 Tree   | 2 or 3                      | 1 or 2                  |
-| 2-3-4 Tree | 2, 3, or 4                  | 1, 2, or 3              |
-
 ____
 
 * Draw complete 2-3 and 2-3-4 trees.
 
 * Calculate the maximum number of data entries in a:  i) 3-way tree of height 3   ii) m-way tree of height h  iii) B-Tree of order 5 with a height of h.
 
-**Answer :**
-
-
-
 ________
 
 #### Construction of B-trees of order 3, order 4 and order 5, Implementation, Simplified B-Trees: 2-3 tree, 2-3-4 tree.
 
 * List the properties of B-tree. Explain the insertion operation in B-tree using essential data of your choice.
-* Construct B-tree of order 4 from the following elements given as follows: `1,6,8,2,9,12,15,7,18,3,4,20.`
+* Construct B-tree of order 4 from the following elements given as follows: `1, 6, 8, 2, 9, 12, 15, 7, 18, 3, 4, 20.`
 * Construct a B-tree of order 4 created by inserting the following data arriving in sequence: `92, 24, 6, 7, 11, 8, 22, 4, 5, 16, 19, 20, 78.`
 * Draw the B-tree of order 3 created by inserting the following data arriving in sequence: `92, 24, 6, 7, 11, 8, 22, 4, 5, 16, 19, 20, 78`
 * Draw a B-tree of order 5 for the following set of elements arriving in the sequence:  `76, 21, 14, 11,97, 85, 74, 63, 45, 42, 57, 20, 16, 19, 52, 30, 21`
@@ -190,6 +165,7 @@ ____
 * Create a 2-3 tree of order 3 for the following data arriving in sequence. `11, 12, 8, 20, 25, 16, 12, 26, 17, 27, 52, 16, 48, 68, 3, 26, 29, 53, 95, 55.`
 
 ____
+___
 
 #### Graphs: Basic concepts, Terminologies: vertices, edge, cycle, loop, graph vs tree, operations: insert vertex delete vertex, insert edge, delete edge. 
 
@@ -197,19 +173,29 @@ ____
 
 **Answer :**
 
-- Path: A sequence of vertices with edges between them.
-- Cycle: A path where the first and last vertex are the same and no other vertex is repeated.
-- Loop: An edge that connects a vertex to itself.
+A graph is a non-linear data structure that consists of a set of vertices (also called nodes) and a set of edges (connections between the nodes).
 
-- Weighted Graph: A graph where each edge has an associated weight or cost.
+A graph **G** is defined as an ordered pair **G = (V, E)**, where:
+- **V** is the set of vertices
+- **E** is the set of edges that connect pairs of vertices
 
-- Degree of a vertex is the number of edges incident to that vertex (for undirected graphs).
-- Out-Degree: The number of outgoing edges from a vertex in a directed graph. ( nomber of edges for which vertex is tail)
-- In-Degree: The number of incoming edges to a vertex in a directed graph. (number of degree for which vertex is head)
+A **path** is a sequence of vertices connected by edges.  
 
-____
+A **cycle** is a path where the first and last vertices are the same, and no other vertex is repeated.  
 
-1. **Path**:  in a graph is a sequence of vertices such that each consecutive pair of vertices is connected by an edge. A path does not necessarily need to be a simple path, meaning that it can have repeated vertices or edges.
+A **loop** is an edge that connects a vertex to itself.
+
+A **weighted graph** is a graph where each edge has a weight or cost associated with it.
+
+In an **undirected graph**, the **degree** of a vertex is the number of edges connected to it.
+
+In a **directed graph**:
+- The **in-degree** of a vertex is the number of edges coming into it (where the vertex is the head).
+- The **out-degree** of a vertex is the number of edges going out from it (where the vertex is the tail).
+
+___
+
+**Path**:  in a graph is a sequence of vertices such that each consecutive pair of vertices is connected by an edge. A path does not necessarily need to be a simple path, meaning that it can have repeated vertices or edges.
 
 ```
 	A
@@ -220,7 +206,9 @@ D       E
 ```
 A path from A to E could be A → C → E.
 
-2. **Cycle**: is a path in which the first vertex is the same as the last vertex and no other vertex repeats. A graph that contains a cycle is called a cyclic graph; otherwise, it’s an acyclic graph.
+____
+
+**Cycle**: is a path in which the first vertex is the same as the last vertex and no other vertex repeats. A graph that contains a cycle is called a cyclic graph; otherwise, it’s an acyclic graph.
 
 ```
 	A
@@ -232,12 +220,15 @@ A path from A to E could be A → C → E.
 
 The cycle is D → E → C → A → B → D.
 
-3. **Loop**: (or self-loop) is an edge that connects a vertex to itself. The vertex is both the start and the end point of the edge. where the edge connects A → A
+___
+**Loop**: (or self-loop) is an edge that connects a vertex to itself. The vertex is both the start and the end point of the edge. where the edge connects A → A
 
-4. **Degree**: of a vertex is the number of edges incident to it.
-	- In-Degree: The number of incoming edges to a vertex (in directed graphs).
-	- Out-Degree: The number of outgoing edges from a vertex (in directed graphs).
-    - In an undirected graph, the degree is the number of edges connected to the vertex.
+___
+
+**Degree**: of a vertex is the number of edges incident to it.
+- In-Degree: The number of incoming edges to a vertex (in directed graphs).
+- Out-Degree: The number of outgoing edges from a vertex (in directed graphs).
+- In an undirected graph, the degree is the number of edges connected to the vertex.
 
 ```
 	A
@@ -250,7 +241,9 @@ D       E
 - The degree of B is 2 (edges to A and D).
 - The degree of C is 2 (edges to A and E).
 
-5. **Weighted Graph**: is a graph where each edge has a weight (or cost) associated with it. The weight typically represents some quantity such as distance, cost, or time, depending on the context of the graph.
+____
+
+**Weighted Graph**: is a graph where each edge has a weight (or cost) associated with it. The weight typically represents some quantity such as distance, cost, or time, depending on the context of the graph.
 
 ```
 	A
@@ -262,18 +255,22 @@ D       E
 
 The weight of the edge from A to B is 5, the weight from A to C is 3, and the weight from C to B is 2.
 
-6. **Out-Degree**: of a vertex in a directed graph is the number of edges leaving the vertex. This only applies to directed graphs, where edges have a direction.
+___
+
+**Out-Degree**: of a vertex in a directed graph is the number of edges leaving the vertex. This only applies to directed graphs, where edges have a direction.
 ```
-   A → B → C
-		↑
-		D
+A → B → C
+	↑
+	D
 ```
 
 - The out-degree of A is 1 (since it has one outgoing edge to B).
 - The out-degree of B is 2 (since it has outgoing edges to C and D).
 - The out-degree of C is 0 (no outgoing edges).
 
-7. **In-Degree**: of a vertex in a directed graph is the number of edges entering the vertex. This only applies to directed graphs, where edges have a direction.
+___
+
+**In-Degree**: of a vertex in a directed graph is the number of edges entering the vertex. This only applies to directed graphs, where edges have a direction.
 ```
    A → B → C
 		↑
@@ -284,14 +281,9 @@ The weight of the edge from A to B is 5, the weight from A to C is 3, and the we
 - The in-degree of B is 1 (one incoming edge from A).
 - The in-degree of C is 1 (one incoming edge from B).
 - The in-degree of D is 1 (one incoming edge from B).
-
-
 ____
-##### Discuss the steps to add and delete a vertex in the graph with suitable examples.
 
-
-
-
+* Discuss the steps to add and delete a vertex in the graph with suitable examples.
 
 ____
 
@@ -311,7 +303,9 @@ BFS resambles preorder tree traversal and DFS resambles level order tree travers
 
 ____
 
-Breadth-First Search (BFS) is an algorithm for traversing or searching tree or graph data structures. BFS starts at the root node (or any arbitrary node in the case of a graph) and explores all the neighboring nodes at the present depth level before moving on to nodes at the next depth level. BFS uses a **queue** to keep track of the nodes to be explored.
+Breadth-First Search (BFS) is an algorithm for traversing or searching tree or graph data structures. BFS starts at the root node (or any arbitrary node in the case of a graph) and explores all the neighboring nodes at the present depth level before moving on to nodes at the next depth level. 
+
+BFS uses a **queue** to keep track of the nodes to be explored.
 
 BFS is an essential graph traversal algorithm that explores nodes layer by layer, ensuring that all nodes at the current depth level are processed before moving on to the next level. 
 
@@ -411,6 +405,21 @@ BFS Traversal Process (Starting from A):
 
 
 ### **BFS Pseudocode**
+
+```
+BFS(G, start_vertex):
+1. Create a queue Q
+2. Mark start_vertex as visited
+3. Enqueue start_vertex into Q
+
+4. While Q is not empty:
+    a. Dequeue a vertex v from Q
+    b. Visit and process vertex v (e.g., print v)
+    c. For each neighbor u of vertex v:
+        i. If u is not visited:
+            - Mark u as visited
+            - Enqueue u into Q
+```
 
 ```python
 BFS(graph, start):
@@ -603,8 +612,6 @@ The Adjacency Matrix Representation of G is a 2D array of size n×n. The matrix 
 
 To answer how many edges are there in a graph or if G is connected, Adjacency matrix will require at least `O(n^2)` time, as `n^2 - n` entries of the matrix have to be examined (n diagonal entries are all zeros ) ........
 
-
-
 Consider a simple undirected graph with 4 nodes:
 ```
     1 -- 2
@@ -631,7 +638,6 @@ For the same graph, the adjacency list would look like this:
 3: [1, 4]
 4: [2, 3]
 ```
-
 
 Adjacency Matrix :
 - Space Complexity: `O(n^2)` where n is the number of nodes (this can be inefficient for sparse graphs). Suitable for dense graphs where most of the possible edges exist.
