@@ -1,11 +1,11 @@
 ---
-title: "DS - Unit-3 Q_Answered"
+title: "DS - Unit-3 Trees Answered"
 description: ""
 summary: ""
 date: 2025-01-01T16:00:52+05:30
 lastmod: 2025-01-01T16:00:52+05:30
 draft: false
-weight: 280
+weight: 281
 toc: true
 seo:
   title: "" # custom title (optional)
@@ -18,22 +18,22 @@ seo:
 ##### Trees: Importance of Trees, Basic Tree Concepts and Terminologies: node, path, degree, internal nodes, height and subtree. 
 ##### Binary Tree: Binary Trees, Binary Tree Representations, Representing Lists as Binary trees, Minimum nodes, Maximum nodes, Nearly complete binary tree
 
-
 * Give the properties of binary trees that distinguish them from general trees.
 
 **Answer :**
 
-A binary tree is a specific type of tree data structure that has unique properties compared to general trees.
+A **binary tree** is a hierarchical data structure in which each node has **at most two children**, commonly referred to as the **left child** and the **right child**. It is a special case of a **general tree**, where nodes can have any number of children.
 
 Maximum Number of Children:
-* In Binary Tree each node can have at most two children (left and right child).
-* In General Tree each node can have any number of children (no fixed limit).
+- In a binary tree, each node can have at most two children.
+- In a general tree, a node can have any number of children.
 
-Child Node Distinction:
-* In Binary Tree children are ordered — the position of left and right matters.
-* In General Tree children are unordered — there's no distinction between them in terms of position.
+Child Node Order:
+- In a binary tree, children are ordered: the distinction between left and right matters.
+- In a general tree, children are unordered.
 
-Binary trees are more structured and are often used in applications like binary search trees (BSTs), heaps, and expression trees.
+Structure and Use:
+- Binary trees are more structured and are widely used in applications like binary search trees, heaps, and expression trees.
 
 ____
 
@@ -51,17 +51,53 @@ Explain the Level of a tree with example. In a Binary Tree what is the maximum n
 
 **Answer :**
 
-In a binary tree The maximum number of nodes at level _n_ is `2ⁿ`. So, at **level 12**, the maximum number of nodes is:
+
+---
+
+#### Basic Terminology and Definitions
+
+
+Nodes along the path from root to the nodes are ancestors of that node.
+
+Children of same parent are termed as siblings
+
+___
+
+A **binary tree** is a hierarchical data structure in which each node has **at most two children**, commonly referred to as the **left child** and the **right child**. It is a special case of a **general tree**, where nodes can have any number of children.
+
+---
+
+Maximum Number of Children:
+- In a binary tree, each node can have at most two children.
+- In a general tree, a node can have any number of children.
+
+Child Node Order:
+- In a binary tree, children are ordered: the distinction between left and right matters.
+- In a general tree, children are unordered.
+
+Structure and Use:
+- Binary trees are more structured and are widely used in applications like binary search trees, heaps, and expression trees.
+
+---
+
+#### Basic Terminology and Definitions
+
+##### i) Binary Tree
+
+A binary tree is a tree data structure where each node has up to two children: a left child and a right child.
 
 ```
-2¹² = 4096 nodes
+     A
+    / \
+   B   C
 ```
 
 ---
 
-##### Degree of a Node:
+##### ii) Degree of a Node
 
-The degree of a node is the number of children it has.
+The **degree of a node** is the number of children it has.  
+Nodes with degree 0 are called **leaf nodes** or **terminal nodes**.
 
 ```
       10
@@ -69,18 +105,18 @@ The degree of a node is the number of children it has.
     5    15
 ```
 
-- Node 10 has degree 2 (two children)
-- Node 5 and 15 have degree 0 (no children)
+- Node `10` has degree 2
+- Nodes `5` and `15` have degree 0
+
+The **degree of a tree** is the maximum degree among all its nodes.
 
 ---
 
-##### Level of a Binary Tree:
+##### iii) Level of a Node in a Binary Tree
 
-The level of a node is the number of edges from the root to that node.
-- Node 10 is at level 0
-- Node 5 and 15 are at level 1
-
-The level of a node in a tree refers to the distance (in edges) from the root node to that particular node. The root node is always at level 0 and each level below increases by 1.
+The **level** of a node is the number of **edges from the root** to that node.
+- The root node is at level 0.
+- Each level down increases by 1.
 
 ```
         A         → Level 0
@@ -90,11 +126,19 @@ The level of a node in a tree refers to the distance (in edges) from the root no
     D   E   F     → Level 2
 ```
 
----
+- Maximum nodes at level _n_: `2^(n - 1)` 
+* At level 12 → `2^11 = 2048 nodes`
 
-##### Complete Binary Tree:
+- Maximum nodes in a binary tree of height _h_: `2^h - 1`
+* For height 4 → `2^4 - 1 = 15 nodes`
 
-A complete binary tree is a binary tree in which all levels are completely filled, except possibly the last, and all nodes in the last level are as left as possible. and new elements are filled from left to right.
+____
+
+##### iv) Complete Binary Tree
+
+A **complete binary tree** is a binary tree where:
+- All levels are completely filled **except possibly the last**, and
+- The last level is filled from **left to right**.
 
 ```
       1
@@ -106,17 +150,17 @@ A complete binary tree is a binary tree in which all levels are completely fille
 
 ---
 
-##### Nearly Complete Binary Tree:
+##### v) Nearly Complete Binary Tree
 
-A **nearly complete binary tree** is **almost** a complete binary tree — it may be missing some nodes at the **last level**, but they should be added as **left as possible**. Often used synonymously with a complete binary tree, but in some contexts, it's used to describe a complete tree with one or two nodes missing at the bottom right.
+A **nearly complete binary tree** is almost a complete binary tree but may be missing a few nodes in the **bottom-right part** of the last level. All other levels are fully filled and nodes in the last level are as far **left as possible**.
+
+This structure is often used in **binary heaps**.
 
 ---
 
-##### Height of a Tree:
+##### vi) Height of a Tree
 
-The height of a tree is the length of the longest path from the root to a leaf (measured in number of edges).
-
-Longest path: A → B → D,  So, height = 2
+The **height** of a tree is the **longest path** from the root to any leaf, measured in number of edges.
 
 ```
       A
@@ -126,13 +170,20 @@ Longest path: A → B → D,  So, height = 2
   D
 ```
 
+- Longest path: A → B → D
+- **Height** = 2 (edges)
+
+If counting nodes instead of edges, height would be 3.
+
 ---
 
-##### Binary Search Tree (BST):
+##### vii) Binary Search Tree (BST)
 
-A Binary Search Tree is a binary tree in which:
-- The left subtree of a node contains only nodes with values less than the node’s value.
-- The right subtree contains only nodes with values greater than the node’s value.
+A **Binary Search Tree** is a binary tree where:
+- The **left subtree** of a node contains only nodes with **values less than** the node’s value.
+- The **right subtree** contains only nodes with **values greater than** the node’s value.
+
+This property allows for **efficient searching, insertion, and deletion** operations.
 
 ```
       8
@@ -142,6 +193,28 @@ A Binary Search Tree is a binary tree in which:
   1   6    14
 ```
 
+---
+
+##### viii) Expression Tree
+
+An **expression tree** is a binary tree used to represent **arithmetic expressions**:
+- **Internal nodes** contain operators (`+, -, *, /`)
+- **Leaf nodes** contain operands (constants or variables)
+
+Expression: `(a + b) * (c - d)`
+
+**Expression Tree:**
+
+```
+       *
+      / \
+     +   -
+    / \ / \
+   a  b c  d
+```
+
+Expression trees are used in **compilers** and **interpreters** to parse and evaluate expressions.
+
 _____
 
 #### Tree Traversals Depth First Traversal (Preorder, Inorder and Postorder), Breadth First Traversal, 
@@ -149,8 +222,21 @@ _____
 
 * Write the algorithm for Binary Tree Inorder, Preorder and Postorder traversal.
 
+```c
+void inorder (treePointer root)
+{
+	if(root)
+	{
+		inorder(root->left);
+		printf("%d", root->data);
+		inorder(root->right);
+	}
+}
+```
 
-
+Inorder calls for moving down the tree towards the left until you cannot go no further.
+Then "visit" the node, move one node to the right ( right child of last node) and continue.
+If you cannot move to right then go back one more node.
 
 ____
 
@@ -173,6 +259,8 @@ iii. Show the breadth first traversal of the tree.
                 3   5
 ```
 
+____
+
 Traverse the given tree using Inorder and Postorder traversals.
 ```
                         A
@@ -184,6 +272,8 @@ Traverse the given tree using Inorder and Postorder traversals.
 	            H             I     J
 ```
 
+____
+
 Find the following in the tree given: 
 ```
                         125
@@ -194,10 +284,11 @@ Find the following in the tree given:
             /  \   /  \  /  \    /    \
            4   12 18  24 31  44 66    90
 ```
-i) Balance factor of the tree.
-ii) Show the depth first traversal (preorder, inorder and postorder) of the tree.
+i) Balance factor of the tree.        
+ii) Show the depth first traversal (preorder, inorder and postorder) of the tree.       
 iii. Show the breadth first traversal of the tree.
 
+____
 
 Find the following in the tree given:
 ```
@@ -212,14 +303,14 @@ Find the following in the tree given:
 		                         K
 
 ```
-i) Balance factor of the tree.  
-ii) Show the depth first traversal (preorder, inorder and postorder) of the tree.  
+
+i) Balance factor of the tree.    
+ii) Show the depth first traversal (preorder, inorder and postorder) of the tree.       
 iii) Show the breadth first traversal of the tree.
 
 ____
 
-
-Generate Binary Tree looking into the following tree traversals:
+* Generate Binary Tree looking into the following tree traversals:
 Preorder: ABDGCEHIF
 Inorder: DGBAHEICF
 
@@ -339,8 +430,6 @@ Final expression tree:
 
 ---
 
-
-
 * Give the algorithms for pre-order and post-order tree traversals. Represent the following expression using binary tree and write the pre-order and Post-order traversals for the tree generated.  
 
 * `A + ( B - C ) * D $ ( E * F )`
@@ -349,10 +438,6 @@ Final expression tree:
 * `( M / ( N + O )) + ((( P / Q ) - R ) * S)`
 * `( A + B * C ) $ (( D + E ) * F)`
 * `( 5 + 6 * 7 ) $ ( ( 5 + 6 ) * 7 ))`
-
-
-
-
 
 _____
 
@@ -477,39 +562,6 @@ Else:
 Return root
 ```
 
-```c
-struct Node* findMin(struct Node* root) {
-    while (root->left != NULL)
-        root = root->left;
-    return root;
-}
-
-struct Node* delete(struct Node* root, int key) {
-    if (root == NULL)
-        return NULL;
-    if (key < root->data)
-        root->left = delete(root->left, key);
-    else if (key > root->data)
-        root->right = delete(root->right, key);
-    else {
-        // Node found
-        if (root->left == NULL) {
-            struct Node* temp = root->right;
-            free(root);
-            return temp;
-        } else if (root->right == NULL) {
-            struct Node* temp = root->left;
-            free(root);
-            return temp;
-        }
-        struct Node* temp = findMin(root->right);
-        root->data = temp->data;
-        root->right = delete(root->right, temp->data);
-    }
-    return root;
-}
-```
-
 ---
 
 Finding the Smallest Node in BST, the leftmost node contains the smallest value.
@@ -548,16 +600,6 @@ struct Node* findMax(struct Node* root)
 }
 ```
 
----
-
-| Operation          | Time Complexity (Avg) | Description                      |
-| ------------------ | --------------------- | -------------------------------- |
-| Insert Node        | O(log n)              | Recursively insert left or right |
-| Search Node        | O(log n)              | Traverse left or right           |
-| Delete Node        | O(log n)              | Handle 0, 1, or 2 children       |
-| Find Smallest Node | O(log n)              | Traverse leftmost path           |
-| Find Largest Node  | O(log n)              | Traverse rightmost path          |
-
 _____
 
 
@@ -574,7 +616,6 @@ Construct the Binary Search Tree (BST) from the following elements  `D A T A S T
 Construct the Binary Search Tree (BST) from the following elements: `D A T A S T R U C T U R E S U S I N G C` also write the in-order, pre-order and post-order traversals for the BST generated.
 
 
-
 ____
 
 ### Threaded Binary Trees.
@@ -585,13 +626,15 @@ ____
 
 **Answer :**
 
-A Threaded Binary Tree is a binary tree in which null pointers (those pointing to child nodes that do not exist) are replaced by threads. 
+A Threaded Binary Tree is a binary tree in which null pointers (those pointing to child nodes that do not exist) are replaced by pointers called threads to other nodes in the tree. 
 
 In a normal binary tree, each node has two pointers: left and right for each child. If a node does not have a left or right child, those pointers are set to NULL.
 
 In a threaded binary tree, we replace these NULL pointers with threads:
-- A left thread is used to point to the inorder predecessor (the node that would come before it in an inorder traversal).
-- A right thread is used to point to the inorder successor (the node that would come after it in an inorder traversal).
+- If a left child of a root is  NULL then replace it with pointer to the node that would be visited before the root in an inorder traversal (Inorder Predecessor of root).
+- If a right child of a root is  NULL then replace it with pointer to the node that would be visited after the root in an inorder traversal (Inorder Successor of root).
+
+(Make an inorder traversal of a tree and connect all leaf nodes to its left and right)
 
 This modification allows us to traverse the tree in inorder without needing a stack or recursion, simply by following the left and right threads.
 

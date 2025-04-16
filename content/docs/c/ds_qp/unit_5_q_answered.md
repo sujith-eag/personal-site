@@ -1,11 +1,11 @@
 ---
-title: "DS - Unit-5 Q_Answered"
+title: "DS - Unit-5 B-Tree and Graph Answered"
 description: ""
 summary: ""
 date: 2025-01-01T16:00:52+05:30
 lastmod: 2025-01-01T16:00:52+05:30
 draft: false
-weight: 284
+weight: 285
 toc: true
 seo:
   title: "" # custom title (optional)
@@ -22,8 +22,6 @@ seo:
 * Define and explain with example for the following: i. m-way tree   ii. B-tree   iii. 2-3 tree    iv. 2-3-4 tree
 
 **Answer :**
-
-#### M-way Tree : 
 
 M-way tree is a tree data structure where each node can have at most **m** children. It is a generalization of a binary tree where each node can have more than two children. 
 
@@ -46,24 +44,65 @@ ____
 
 #### B-tree
 
-B-tree is a self-balancing tree data structure that maintains sorted data and allows for efficient insertion, deletion, and searching operations. 
+A B-tree is a self-balancing search tree data structure that maintains sorted data and allows for efficient insertion, deletion, and searching operations.
 
-B-tree of order m is a tree where:
-  - Each node can have up to m children.
-  - Each node (except the root) must have at least ⌈m/2⌉ children.
-  - Each node can store up to m-1 keys (values).
+Particularly suited for disk-based storage systems such as databases and file systems.
 
-Consider a B-tree of order 3 (m = 3). Each node can hold up to 2 keys and have up to 3 children.
+A **B-tree of order _m_** is an **m-way search tree** that satisfies the following properties:
+
+1. Each node can have at most _m_ children.
+2. The root node must have at least two children if it is not a leaf.
+3. Each internal node (except the root) must have at least ⌈_m_/2⌉ children.
+
+4. Each node can contain a maximum of _m_ − 1 keys.
+5. Each node (except root) must contain at least ⌈_m_/2⌉ − 1 keys.
+
+6. All leaves are at the same level (i.e., the tree is height-balanced).
+
+
+---
+
+Example: B-Tree of Order 3 (m = 3)
+
+- Each node can store up to **2 keys**.    
+- Each node can have **up to 3 children**.
+- Internal nodes must have at least ⌈3/2⌉ = **2 children**.
+
 ```
           [10, 20]
          /   |   \
-       [5]  [15] [25, 30]
+      [5]  [15] [25, 30]
 ```
 
-It is commonly used in databases and file systems where large blocks of data need to be managed efficiently.
-- All leaves are at the same level.
-- The tree is balanced, and the height of the tree is logarithmic with respect to the number of elements.
-- The B-tree ensures that operations like search, insert, and delete are efficient with a time complexity of \(O(\log n)\).
+---
+
+#### Special Cases of B-Trees
+
+A **B-tree of order 3** is often referred to as a **2-3 Tree**: 
+- Internal nodes can have **2 or 3 children**, hence keys per node can be **1 or 2**.
+
+A **B-tree of order 4** is called a **2-3-4 Tree**: 
+- Internal nodes can have **2, 3, or 4 children**, i.e., **1 to 3 keys** per node.
+
+A B-tree of order 5 is **not** referred to as a 2-3-4-5 tree: Because in such a B-tree, **nodes cannot have exactly 2 children** (except the root). The minimum degree (⌈5/2⌉ = 3) forbids degree 2 in internal nodes.
+
+---
+#### Key Characteristics
+
+- **Balanced Tree**: All leaf nodes are at the same depth, ensuring balanced structure.
+- **Sorted Order**: Keys are maintained in sorted order.
+- **Efficient Operations**:
+    - **Search**: O(log n)
+    - **Insert**: O(log n)
+    - **Delete**: O(log n)
+	
+The logarithmic time complexity ensures that operations remain fast even for very large data sets, especially when minimizing disk reads.
+
+B-Trees are ideal for **storage systems** that read and write large blocks of data. They're widely used in:
+
+- **Databases** (e.g., MySQL, PostgreSQL)	
+- **File Systems** (e.g., NTFS, HFS+, ext4)
+- **Indexing structures** for large datasets
 
 ____
 
@@ -161,10 +200,12 @@ ____
 - Path: A sequence of vertices with edges between them.
 - Cycle: A path where the first and last vertex are the same and no other vertex is repeated.
 - Loop: An edge that connects a vertex to itself.
-- Degree: The number of edges incident to a vertex (for undirected graphs).
+
 - Weighted Graph: A graph where each edge has an associated weight or cost.
-- Out-Degree: The number of outgoing edges from a vertex in a directed graph.
-- In-Degree: The number of incoming edges to a vertex in a directed graph.
+
+- Degree of a vertex is the number of edges incident to that vertex (for undirected graphs).
+- Out-Degree: The number of outgoing edges from a vertex in a directed graph. ( nomber of edges for which vertex is tail)
+- In-Degree: The number of incoming edges to a vertex in a directed graph. (number of degree for which vertex is head)
 
 ____
 
@@ -260,6 +301,15 @@ ____
 * Discuss Breadth-first traversal of a graph with suitable example and algorithm
 
 **Answer :**
+
+Given an undirected graph G = (V, E) and a vertex, v in V(G).
+
+To visit all the nodes vertices in G that are reachable from v, that is all vertices connected to v there are two ways.
+
+BFS resambles preorder tree traversal and DFS resambles level order tree traversal
+
+
+____
 
 Breadth-First Search (BFS) is an algorithm for traversing or searching tree or graph data structures. BFS starts at the root node (or any arbitrary node in the case of a graph) and explores all the neighboring nodes at the present depth level before moving on to nodes at the next depth level. BFS uses a **queue** to keep track of the nodes to be explored.
 
@@ -545,9 +595,15 @@ ____
 
 A graph can be represented using various data structures, the two most common being the Adjacency Matrix and the Adjacency List. 
 
-Adjacency Matrix Representation : is a 2D array of size n×n, where n is the number of nodes in the graph. The matrix entry `matrix[i][j]` is:
-- **1** (or the weight of the edge) if there is an edge from node `i` to node `j`.
-- **0** if there is no edge from node `i` to node `j`.
+Let G = (V, E) be a graph with n vertices, n>= 1
+  
+The Adjacency Matrix Representation of G is a 2D array of size n×n. The matrix entry 
+- `a[i][j]` = **1** (or the weight of the edge) iff the edge (i, j) is in E(G) (there is an edge from node `i` to node `j`.)
+- `a[i][j]`= **0** if there is no edge from node `i` to node `j`.
+
+To answer how many edges are there in a graph or if G is connected, Adjacency matrix will require at least `O(n^2)` time, as `n^2 - n` entries of the matrix have to be examined (n diagonal entries are all zeros ) ........
+
+
 
 Consider a simple undirected graph with 4 nodes:
 ```
@@ -586,7 +642,6 @@ Adjacency List :
 - Space Complexity : O(n + e), where n is the number of nodes and e is the number of edges (more space-efficient for sparse graphs). Suitable for sparse graphs where few edges exist relative to the number of nodes.
 - Advantages: More space-efficient for sparse graphs. Efficient traversal of all edges.
 - Disadvantages: Edge lookup is slower than the adjacency matrix: O(n)O(n) in the worst case.
-
 
 ____
 

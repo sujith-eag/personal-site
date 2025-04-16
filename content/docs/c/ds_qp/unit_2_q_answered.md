@@ -1,11 +1,11 @@
 ---
-title: "DS - Unit-2 Q_Answered"
+title: "DS - Unit-2 Queue and Linked List Answered"
 description: ""
 summary: ""
 date: 2025-01-01T16:00:52+05:30
 lastmod: 2025-01-01T16:00:52+05:30
 draft: false
-weight: 278
+weight: 279
 toc: true
 seo:
   title: "" # custom title (optional)
@@ -135,13 +135,8 @@ int main()
 
 _____
 
-Represent diagrammatically the following sequence of operations on an empty stack.
-Push (54); push (52); pop (); push (55); push (62); S=pop ();
-
-Represent diagrammatically the following sequence of operations on an empty queue.
-enqueue(21); enqueue(24);dequeue();enqueue(28);enqueue(32); Q=dequeue();
-
-Find the value of S+Q.
+* Represent diagrammatically the following sequence of operations on an empty stack. Push (54); push (52); pop (); push (55); push (62); S=pop ();
+* Represent diagrammatically the following sequence of operations on an empty queue. enqueue(21); enqueue(24);dequeue();enqueue(28);enqueue(32); Q=dequeue();   Find the value of S+Q.
 
 (Diagram to show insertion and deletion in stack and queue: Answer will be  62 + 24 = 86)
 
@@ -153,8 +148,6 @@ ____
 * Explain the limitations of Linear Queue with an example. Also explain with the program how to overcome these limitations using Circular Queue.
 * State the limitations of Linear Queue and explain how it will be resolved in Circular Queue. Explain the algorithms for Insertion and Deletion of elements in a circular queue.
 * Write a program to perform insert and delete operations on Circular QUEUE.
-* Write C functions for the Insertion and Deletion of elements in a circular queue. For an array of size 4, show (diagrammatically) the representation of the queue for the conditions.  i. Insert 3 elements   ii. Delete 2 elements  iii. Insert 3 elements    iv. Delete 1 element.
-* Write C functions for Insertion and Deletion of elements in a circular queue. For an array of size 3, show (diagrammatically) the representation of the queue for the conditions.  i. Insert 3 elements   ii. Delete 2 elements   iii. Insert 3 elements   iv. Delete 1 element.
 
 **Answer :**
 
@@ -179,6 +172,7 @@ When elements are dequeued, the front pointer moves ahead, and the space at the 
 1. Enqueue `10, 20, 30, 40, 50`
 2. Dequeue `10, 20`
 3. Enqueue `60` — _Works because the space freed by `10` and `20` is reused._
+
 ```
 Front -> 30, 40, 50, 60 <- Rear (after two dequeues)
 ```
@@ -293,9 +287,13 @@ int main() {
 
 ____
 
-Representing Enqueue Dequeue operations in Circular queue
+##### Representing Enqueue Dequeue operations in Circular queue
 
-* Queue is empty.
+* Write C functions for the Insertion and Deletion of elements in a circular queue. For an array of size 4, show (diagrammatically) the representation of the queue for the conditions.  i. Insert 3 elements   ii. Delete 2 elements  iii. Insert 3 elements    iv. Delete 1 element.
+
+**Answer :**
+
+Queue is empty.
 ```c
 Front = -1, Rear = -1
 Queue: [ _, _, _, _ ]
@@ -334,6 +332,12 @@ Enqueue 60: Front = 2, Rear = 1
 Queue: [50, 60, 30, 40]
 ```
 
+* Delete 1 element
+```c
+Dequeue 30: Front = 3, Rear = 1
+Queue: [50, 60, _, 40]
+```
+
 ____
 
 ##### What do you mean by priority queue? Discuss different types of priority queue.
@@ -348,63 +352,149 @@ Priority queues are typically implemented using data structures that allow effic
 
 ____
 
-* Explain how queue data structure is useful in categorizing data with an algorithm.
-___
-
-#### Static and Dynamic Memory Allocation
-
-Static memory allocation is when memory allocation is done at compile time, and once the memory is allotted, it will remain from the beginning to end of the program. Cannot be changed or altered after allocation or while executing program.
-
-Static memory allocation is fast and saves running time. Static memory allocation allots memory from the stack.
-
-Static Memory used in array. `int a[5] = {1,2,3,4,5}`
+#### Memory Allocation
 
 
-Dynamic memory allocation is done at run time while execution is happening where the size of the data structure changes. Memory is allocated from heap for dynamic allocation.
+Memory allocation refers to the process of assigning memory space to variables or data structures during the execution of a program. In programming, especially in languages like C and C++, memory can be allocated in two ways: **static** and **dynamic**.
 
-Dynamic memory is more efficient as compared to static memory allocation since only required amount of memory is allocated and memory is not wasted by pre-allocating it.
+---
 
-In C, Dynamic memory allocation is done using library function 
-* `malloc()` - `void* malloc(size)`
-* `calloc()` - `void* calloc(n, size)`
-* `free()` - for deallocating the memory
+#### Static Memory Allocation
 
-`malloc()` is memory allocation used to dynamicaally allocate a single large block of memory with specified size. It returns a void pointer which can be type cast into a pointer of any form. It will will have initialized default garbage value at each block.
-`(cast-type*) malloc( element-size )`
+Static memory allocation is the process where memory is allocated at **compile time**. Once memory is allocated, it remains fixed throughout the execution of the program and cannot be changed or altered during runtime.
 
-`calloc()` is contiguous allocation similar to `malloc` but it initializes each block with a default value `0` and has one extra argument which takes the number of memory blocks needed.
-`ptr = (cast-type*) calloc(n, element-size)`
+- The memory is allocated from the **stack**.
 
-`ralloc()` can be used to reallocate previously allocated memory if it was not sufficient.
-`ptr = realloc(ptr, newSize)`
+- It is generally **faster** and involves **less overhead** since the memory is reserved in advance.
 
-`free()` is used for dynamic de-allocation of memory to reduce wastage of memory. `free(ptr)`
+- Since the size is fixed, it may lead to **memory wastage** if the allocated size is more than required, or **overflow** if it's less than required.
+
+```c
+int a[5] = {1, 2, 3, 4, 5}; 
+// Array of fixed size 5
+```
+
+Here, memory for 5 integers is allocated during compilation and cannot be resized during execution.
+
+---
+
+#### Dynamic Memory Allocation
+
+Dynamic memory allocation is done at **runtime**, allowing the program to request memory as needed during execution. This provides flexibility as the memory size can be adjusted according to the requirements of the program.
+
+- Memory is allocated from the **heap**.
+
+- It is **more efficient** in terms of memory usage because only the required amount of memory is allocated.
+
+- However, it requires **manual memory management** to avoid memory leaks.
+
+---
+
+#### Functions Used for Dynamic Memory Allocation in C
+
+* `malloc()` – Memory Allocation  
+
+Allocates a single block of memory of a specified size but does **not initialize** it. The memory contains **garbage values** by default.
+
+```c
+ptr = (type*) malloc(size_in_bytes);
+```
+
+```c
+int* arr = (int*) malloc(5 * sizeof(int));
+```
+
+____
+
+* `calloc()` – Contiguous Allocation  
+
+Similar to `malloc()`, but allocates **multiple blocks** of memory and **initializes each block to zero**.
+
+```c
+ptr = (type*) calloc(number_of_elements, size_of_each_element);
+```
+
+```c
+int* arr = (int*) calloc(5, sizeof(int));
+```
+
+____
+
+* *`realloc()` – Reallocation of Memory
+
+Used to **resize** a previously allocated memory block. Useful when the originally allocated memory is insufficient.
+
+```c
+ptr = realloc(ptr, new_size_in_bytes);
+```
+
+```c
+arr = realloc(arr, 10 * sizeof(int)); 
+// Resize array to hold 10 integers
+```
+
+____
+
+* `free()` – Memory Deallocation  
+
+Frees the dynamically allocated memory, returning it to the heap to avoid **memory leaks**.
+
+```c
+free(ptr);
+```
 
 _____
+____
 
-#### Linked list: Introduction
+### Linked list: Introduction
 
+A linked list is a linear data structure consisting of a sequence of elements, called nodes, where each node is stored separately in memory and connected via pointers.
 
-A linked list is a data Structure that consists a sequence of nodes which are a collection of nodes that are randomly stored in memory.
-Each node has a two parts, data part stores the actual value and pointer part holds the reference to the next node in the list.
+Each node in a **singly linked list** contains two parts:
 
-Extra pointer like head and tail are used to point at the first and last nodes in the list.
+1. Data – stores the actual value.
+2. Pointer (Next) – stores the reference to the next node in the sequence.
 
-Linked list is designed to be efficient for Insertion and deletion of elements from any position in list (when compared to array) with searching taking `O(n)`
+An extra pointer, usually called **head**, is used to keep track of the beginning of the list. Optionally, a **tail** pointer may be used to point to the last node for faster insertions at the end.
 
+---
 
-Advantages:
-* Efficient memory usage (no pre-allocation).
-* Dynamic size adjustment.
-* Faster insertion and deletion (compared to arrays).
+- **No Direct Access**: Elements cannot be accessed directly using an index.
 
-Disadvantages
-* More memory usage due to the extra pointer in each node.
-* Cannot be accessed directly like an array (requires sequential access).
-* Slower search operations compared to arrays.
+- **Extra Memory Overhead**: Each node requires extra memory for storing a pointer.
 
+- **Slower Search Time**: Searching is O(n) because you must traverse the list node by node.
 
-___
+---
+
+#### Doubly Linked List vs. Singly Linked List
+
+A doubly linked list is a type of linked list where each node contains three parts:
+1. Data
+2. Pointer to the next node
+3. Pointer to the previous node
+
+This allows traversal in **both directions** — forward and backward.
+
+1. Bidirectional Traversal:
+    - In a singly linked list, you can only traverse in one direction (forward).
+    - In a doubly linked list, you can traverse both forward and backward using the `next` and `prev` pointers.
+        
+2. Easier Deletion of a Given Node:
+    - In a singly linked list, to delete a node, you must keep track of the previous node.
+    - In a doubly linked list, the node itself holds a pointer to its previous node, making deletion straightforward without needing to traverse back.
+
+3. Efficient Insertion and Deletion at Both Ends:
+    - With a doubly linked list (and with a tail pointer), insertion and deletion at both the beginning and end of the list can be done efficiently in O(1) time.
+
+4. More Flexible Navigation:    
+    - Can implement reverse traversal or reverse printing easily.
+    - Useful in applications like undo/redo operations, where you need to move back and forth in history.
+
+5. Better for Certain Complex Data Structures:    
+    - Doubly linked lists serve as a base for more complex structures like **doubly-ended queues (deque)** and **linked hash maps**.
+
+---
 
 #### Representation and implementation of operations (Insertion, Deletion and Search) of Singly linked list
 
@@ -413,10 +503,6 @@ ___
 * Develop routines to perform each of the following operation on a linear list: i. Delete every second element for a list    ii. Return the number of elements in the list.
 * Write an algorithm to search an item in a singly linked list. Explain the algorithm with example.
 
-
-
-
-
 ____
 
 * Design a program to create Singly Linked List (SLL) of student data having the following the fields: Std_USN, Name, Marks and Total and display the same.
@@ -424,7 +510,6 @@ ____
 * Illustrate the creation and display operations on Singly Linked List (SLL) of Employee Data with the fields: Employee ID, Name, company name and Mobile number.
 
 * Implement a singly linked list to store a polynomial equation.
-
 
 _____
 
@@ -436,7 +521,6 @@ _____
 * Differentiate between doubly Linked List and singly Linked List. Also develop a ‘C’ routine to insert a node before a given key node in a doubly linked list.
 
 **Answer :**
-
 
 
 ____
@@ -451,6 +535,8 @@ ____
 
 * Develop an algorithm to perform queue operation into a Circular Linked List.
 * Write a routines to simulate the operations of Queue using singly linked list.
+
+**Answer :**
 
 ```c
 #include <stdio.h>
@@ -557,8 +643,13 @@ int main() {
 }
 ```
 
+____
+
+#### Stack Representation using Linked List
 
 * Develop an algorithm to perform stack operation into a circular single linked List.
+
+**Answer :**
 
 ```c
 #include <stdio.h>
@@ -661,3 +752,4 @@ void display()
 ```
 
 ___
+

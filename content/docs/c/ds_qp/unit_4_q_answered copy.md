@@ -1,11 +1,11 @@
 ---
-title: "DS - Unit-4 Q_Answered"
+title: "DS - Unit-4 AVL and Heap Answered"
 description: ""
 summary: ""
 date: 2025-01-01T16:00:52+05:30
 lastmod: 2025-01-01T16:00:52+05:30
 draft: false
-weight: 282
+weight: 283
 toc: true
 seo:
   title: "" # custom title (optional)
@@ -21,7 +21,13 @@ seo:
 
 **Answer :**
 
-A Binary Search Tree (BST) is a tree data structure in which each node has at most two children, and the key in the left subtree is less than the node’s key, while the key in the right subtree key is greater.
+A Binary Search Tree (BST) is a tree data structure in which each node has at most two children.
+Each node has exactly one key and the keys in the tree are distinct.
+
+The keys (if any) in the left subtree are smaller than the key in the root.
+Keys (if any) in the right subtree are larger than the key in the root.
+The left and right subtrees are also binary sub trees.
+
 
 Drawbacks of BST:
 * **BST can become Unbalanced** : If nodes are inserted in a sorted order (increasing or decreasing), the BST can become unbalanced and degenerate into a linear structure resembling a linked list.
@@ -281,7 +287,6 @@ _____
 
 * Create an AVL tree using the following data. Show the balance factors in the resulting tree. `14 23 7 10 33 56 80 66 70` Insert 44 and 50 into the tree created.
 
-
 _____
 
 #### Heaps – Definition, Heap Maintenance operations: insertion and deletion. Rheapup, Rheapdown algorithms and heap implementation, Applications.
@@ -296,6 +301,15 @@ _____
 A heap is a special tree-based data structure that satisfies the heap property.
 
 In a max-heap, every parent node is greater than or equal to its children; in a min-heap, every parent node is less than or equal to its children. 
+
+A max (min) tree is a tree in which the key value in each node is not smaller (larger) than the key values in its children (if any).
+A max heap is a Complete binary tree that is also a max tree.
+
+A min heap is a CBT that is also a min tree.
+
+By definition, key in the root of a max tree is the larges and root in the min heap is the smallest.
+
+___
 
 ##### Common Applications of Heap:
 
@@ -320,6 +334,9 @@ Heap Construction Algorithms **Reheap Up** and **Reheap Down** operations mainta
 Both operations ensure that a heap maintains O(log n) time complexity, making heaps suitable for efficient implementations of priority queues, heap sort, and graph algorithms like Dijkstra’s algorithm.
 
 ___
+
+When an element is added to heap following CBT property at the end, the new node moves towards the root, it bubbles up as far as it is necessary to ensure a max heap. 
+
 
 **Reheap Up** : is used when adding a new element to the heap. 
 * The new element is inserted at the end of the heap to maintain CBT structure.
@@ -354,6 +371,8 @@ Final Heap: `[30, 20, 10, 15, 5]`
 
 ______
 
+When an element is deleted from a heap it is taken from its root. For CBT property the element at end, the new node moves towards the leaf, it bubbles down as far as it is necessary to ensure heap property. 
+
 **Reheap Down** : is used when the root of the heap is removed. 
 * Replace the root with the last element
 * Compare the new root with its children
@@ -370,7 +389,16 @@ Remove root 30: Move 5 to the root: `[5, 20, 10, 15]`
 
 Final Heap after reheap down: `[20, 15, 10, 5]`
 
-ReheapDown is then used to maintain the heap property by moving the element down the tree until it reaches the correct position.
+____
+
+Reheap Down is then used to maintain the heap property by moving the element down the tree until it reaches the correct position.
+
+Reheap up is then used to maintain the heap property by moving the element up the tree until it reaches the correct position.
+This follows a path from the new leaf to the to the root untill either it reaches the root or reaches a position i such that value in the parent position `i/2` is at least as large as the value to be inserted.
+
+Since heap is a CBT, with n elements, it has a height of `log(n+1)`. this means the loop to insert the node will iterate `log(n)` times hence the complexity of insertion is `O(log(n))`
+
+which is similar for heap down also which is heap deletion.
 
 ____
 

@@ -1,11 +1,11 @@
 ---
-title: "DS - Unit-1 Q_Answered"
+title: "DS - Unit-1 Recursion and Stack Answered"
 description: ""
 summary: ""
 date: 2025-01-01T16:00:52+05:30
 lastmod: 2025-01-01T16:00:52+05:30
 draft: false
-weight: 276
+weight: 277
 toc: true
 seo:
   title: "" # custom title (optional)
@@ -13,130 +13,6 @@ seo:
   canonical: "" # custom canonical URL (optional)
   noindex: false # false (default) or true
 ---
-
-
-#### Introduction to Data Structures: Definition, Need of Data Structures, Classification of Data Structures.
-
-* What are Data Structures? Explain the classification of data sutures with examples?
-* Define data structure. List its types and also explain the need of Data structures.
-
-**Answer :**
-
-A **Data Structure** is a systematic way of organizing, storing and  managing data efficiently to allow for efficient access and modification.
-
-**Data Structure** is a collection of data values and the relationships between them. It defines the arrangement of data and operations that can be performed on it like insertion, deletion and updation.
-
-Every application uses a Data Structure, Different types of data structures are used for different types of data, and the selection of an appropriate data structure can greatly impact the efficiency of an algorithm.
-
-#### Characteristics of Data Structure
-
-* Correctness : Data must be represented accurately and managed.
-* Time Complexity : Running time or execution time of operations like insert, delete and search should take the least possible time.
-* Space Complexity : Memory usage should be as minimal and efficient.
-
-#### Types of Data Structures:
-
-Data structures are classified into two main categories :
-
-1. **Primitive Data Structures**: These are the most basic data types that can hold or represent only single value and are directly operated upon by the CPU.
-	- **Integer**: A whole number (`5`, `-6`)
-	- **Float/Double**: A number with decimal points (`3.14`).
-	- **Character**: A single character (`'a'`).
-	- **Boolean**: Logical values representing `true` or `false`.
-
-2. **Non-Primitive Data Structures**:  These data structures are more complex and are derived from primitive data types. They can hold multiple values and have different arrangements of data.
-
-____
-
-Classification of Non Primitive Data Structures can be broadly be done into two categories:
-1. Linear Data Structures
-2. Non-linear Data Structures
-
-#### Linear Data Structures
-
-In linear data structures, the data elements are arranged in a sequential or linear order one after the other. Each element has a unique predecessor and successor, except for the first and last elements.
-
-- **Array**: A collection of elements, all of the same type, stored in contiguous memory locations. It provides fast access to individual elements using an index.  `int arr[5] = {1, 2, 3, 4, 5};`
-
-- **Linked List**: A linear collection of elements, where each element (node) contains data and a reference (link) to the next node. Unlike arrays, linked lists do not require contiguous memory locations. A linked list of integers: `10 -> 20 -> 30 -> NULL`.
-
-- **Stack**: A collection of elements that follows the **Last In, First Out (LIFO)** principle. Elements are added and removed only from the top.  Stack of plates: `Top -> Plate1 -> Plate2 -> Plate3`.
-
-- **Queue**: A collection of elements that follows the **First In, First Out (FIFO)** principle. Elements are added at the rear and removed from the front. Queue of people: `First Person -> Second Person -> Third Person`.
-
-
-#### Non Linear Data Structures
-
-In Non-linear data structure, elements are not stores sequentially, they are connected to each other in a hierarchical or interconnected manner.
-
-- **Tree** : A hierarchical structure with a root node and child nodes, where each node can have zero or more child nodes. It is used to represent hierarchical relationships. A family tree or a file directory structure.
-- Trees : Binary Tree, Binary Search Tree, AVL Tree, B-Tree, B+ Tree, Red-Black Tree
-
-
-- **Graph** : A collection of nodes (vertices) and edges (connections) between the nodes.
-- Graphs : Directed, Undirected, Weighted, Unweighted.
-- Graphs can represent relationships between entities in many real-world problems (e.g., social networks, maps, Routing algorithms, transportation systems).
-
-Examples and applications of Different Data Structures :
-
-
-
-____
-
-### **Need for Data Structures:**
-
-When amount of data is very large, operations on it in a linear fashion will be very slow and processing will not be efficient. Multiple concurrent requests cannot be handled in a inefficient data structure leading to delays or crashes.
-
-* Handling Large volumes of data needs efficient structures to prevent performance issues.
-
-- **Efficient Data Management** : Data structures organize data for efficient access, retrieval and modification.
-- Arrays provide O(1) access time using an index.
-
-- **Memory Optimization** : Data structures help in efficient use of memory. 
-- Linked lists allow dynamic memory allocation, avoiding the need to pre-allocate a fixed amount of memory like in arrays.
-
-- **Faster Processing** : Specialized Data structures are optimized for fast searching, insertion, deletion, and traversal. 
-- Binary Search Trees allow efficient searching.
-
-- Different algorithms are optimized with specific data structures to achieve optimal performance. 
-- Sorting algorithms may use arrays, Graph algorithms use adjacency lists or matrices.
-
-- Data structures help in solving real-world problems. (Graphs are used to represent social networks, and trees are used to represent file systems.)
-
-
-Efficiency of Data Structure can be characterized by its time complexity as: 
-- **Worst Case**: Maximum time the operation could take.
-- **Best Case**: Minimum time required.
-- **Average Case**: Expected time over all inputs.
-
-
-___
-
-#### Operations Performed on Data Structures
-
-* **Create** : involves allocating memory for a data structure and initializing it for use. It defines the data structure's size and format, either statically or dynamically.
-* Creating an array of 10 integers, or initializing a linked list with a head pointer set to `NULL`.
-
-* **Delete** : refers to deallocating memory that was previously allocated to a data structure or removing an element from it.
-
-* **Updation** : modifies the value of an existing element in the data structure. It usually requires accessing the element first and then replacing its value.
-
-* **Searching** : involves locating an element in data structure. It may also find the locations of all elements that satisfy certain conditions.
-
-* **Sorting** : is arranging data in a specific order, either in ascending order or in descending order. Sorting makes merging and searching more efficient.
-* Sorting an array of integers in ascending order using bubble sort or quicksort.
-
-* **Merging** : combines two or more data structures (usually sorted) into a single data structure while maintaining the sorted order.
-* Merging two sorted arrays into a third sorted array.
-
-* **Splitting** : Splitting is a process of partitioning single list to multiple list based on certain condition or size.
-
-* **Traversal** : involves visiting all the nodes in a data structure usually to perform some operation on elements.
-* Traversing a linked list to display its elements or traversing a binary tree using in-order traversal.
-
-Time Complexity for All Operations for different data Structures :
-
-____
 
 #### Recursion: Recursive definition and processes, Designing the recursive functions, Examples on recursion: Factorial of a number, Fibonacci numbers
 
@@ -183,15 +59,19 @@ int sumRecursive(int n) {
 }
 ```
 
+____
 
-#### Applications of Recursion
+##### Applications of Recursion
 
-* Searching and sorting algorithms: Recursive algorithms are used to search and sort data structures like trees and graphs.
-* Mathematical calculations: Recursive algorithms are used to solve problems such as factorial,Fibonacci sequence, etc.
-* Compiler design: Recursion is used in the design of compilers to parse and analyze programming languages.
-* Graphics: many computer graphics algorithms, such as fractals and the Mandelbrot set, use recursion to generate complex patterns.
-* Artificial intelligence: recursive neural networks are used in natural language processing, computer vision, and other AI applications.
+* **Searching and sorting algorithms** : Recursive algorithms are used to search and sort data structures like trees and graphs.
 
+* **Mathematical calculations** : Recursive algorithms are used to solve problems such as factorial,Fibonacci sequence, etc.
+
+* **Compiler design** : Recursion is used in the design of compilers to parse and analyze programming languages.
+
+* **Graphics** : many computer graphics algorithms, such as fractals and the Mandelbrot set, use recursion to generate complex patterns.
+
+* **Artificial intelligence** : recursive neural networks are used in natural language processing, computer vision, and other AI applications.
 
 ---
 
@@ -268,6 +148,7 @@ int main()
 }
 ```
 
+____
 
 ##### Fibonacci Series Using Iteration (More Efficient):
 
@@ -305,6 +186,8 @@ int main()
 	return 0;
 }
 ```
+
+___
 
 ##### Using While Loop and no separate function
 
@@ -444,8 +327,10 @@ For `n = 3` disks, the recursive calls break down as follows:
 
 For `n = 5` disks, the number of moves required is: `2^5−1 = 32−1 =31` moves
 
+___
 ____
-#### Stack: Introduction to Stacks, Operations on a Stack
+
+### Stack: Introduction to Stacks, Operations on a Stack
 
 * Define stack. Give the implementation of push, pop and display functions. Include check for empty and full conditions.
 * What is Stack? Write C functions to perform push (), pop () and display operations on STACK.
@@ -455,11 +340,11 @@ ____
 
 **Answer :**
 
-Stack is a linear data structure having same data types. Elements are arranged in a sequential order.
-
-Stack is an ordered list in which insertion (push) and deletion (pop) are made at only one end called the top.
+Stack is a linear data structure having same data types. Elements are arranged in a sequential order in which insertion (push) and deletion (pop) are made at only one end called the top.
 
 Since the last element inserted is the last one to be removed, a stack is also known as `Last-in-First_out  LIFO` list
+
+
 
 Stack Operations:
 * Push: Insert an element onto the stack.
@@ -468,20 +353,8 @@ Stack Operations:
 * isFull: Check if the stack is full.
 * isEmpty: Check if the stack is empty.
 
-(Diagram of stack push and pop from the top can be drawn here)
+(Diagram of stack push and pop from the top)
 
-#### Applications of Stack
-
-* Function call stack in programming.
-* Undo/Redo functionality in text editors.
-* Backtracking algorithms (e.g., maze solving).
-* Expression evaluation (postfix/prefix/infix conversion).
-* Parentheses matching in compilers.
-* Web browser history navigation.
-* Reversing strings or data structures.
-* Depth-First Search (DFS) in graphs.
-* Parsing nested structures (e.g., XML/JSON).
-* Tower of Hanoi puzzle implementation.
 
 ____
 
@@ -752,6 +625,7 @@ ____
 12. **Infix**: `3 – 6 / (9 * (2 ^ 4))`  **Postfix**: 3 6 9 2 4 ^ * / -
 
 ____
+
 ### Evaluation of a postfix expression.
 
 * Develop an algorithm to evaluate a postfix expression. Trace the algorithm for the expression:
