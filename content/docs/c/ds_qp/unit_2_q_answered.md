@@ -23,9 +23,11 @@ seo:
 
 **Answer :**
 
-A Queue is a linear data structure that follows the First In, First Out (FIFO) principle. In a queue, the element that is inserted first is the one to be removed first. It can be visualized like a line of people standing at a counter; the person who arrives first is served first.
+A Queue is a linear data structure that follows the First In, First Out (FIFO) principle. In a queue, the element that is inserted first is the one to be removed first. 
 - Front: The front of the queue represents the position from where elements are removed.
 - Rear: The rear of the queue represents the position where elements are added.
+
+It can be visualized like a line of people standing at a counter; the person who arrives first is served first.
 
 **Types of Queues:**
 1. **Linear Queue**: A simple queue where elements are inserted at the rear end and removed from the front end.
@@ -41,6 +43,19 @@ A Queue is a linear data structure that follows the First In, First Out (FIFO) p
 1. **Insert (Enqueue)**: To add an element to the rear of the queue.
 2. **Delete (Dequeue)**: To remove an element from the front of the queue.
 3. **Display**: To display all the elements in the queue.
+4. IsEmpty and IsFull : to check empty and full queue
+
+#### Applications of Queue
+
+* Ticket Booking Systems:Managing people in a queue for seat allotments.
+* Call Center Support:Customer calls handled in the order they are received.
+* Printers:Print jobs are executed sequentially in the order of request.
+* Messaging Systems:Managing message delivery in applications like SMS.
+* CPU Task Scheduling:Processes waiting to be executed by the CPU.
+* Networking:Packets waiting to be transmitted in routers.
+* Order Processing:Online shopping orders being processed sequentially.
+* Traffic Light Systems:Vehicles passing through intersections in a queued manner.
+* Task Queues in Applications :Background jobs like email sending or notifications.
 
 ```c
 #include <stdio.h>
@@ -333,13 +348,65 @@ Priority queues are typically implemented using data structures that allow effic
 
 ____
 
-##### Explain how queue data structure is useful in categorizing data with an algorithm.
+* Explain how queue data structure is useful in categorizing data with an algorithm.
+___
+
+#### Static and Dynamic Memory Allocation
+
+Static memory allocation is when memory allocation is done at compile time, and once the memory is allotted, it will remain from the beginning to end of the program. Cannot be changed or altered after allocation or while executing program.
+
+Static memory allocation is fast and saves running time. Static memory allocation allots memory from the stack.
+
+Static Memory used in array. `int a[5] = {1,2,3,4,5}`
 
 
+Dynamic memory allocation is done at run time while execution is happening where the size of the data structure changes. Memory is allocated from heap for dynamic allocation.
+
+Dynamic memory is more efficient as compared to static memory allocation since only required amount of memory is allocated and memory is not wasted by pre-allocating it.
+
+In C, Dynamic memory allocation is done using library function 
+* `malloc()` - `void* malloc(size)`
+* `calloc()` - `void* calloc(n, size)`
+* `free()` - for deallocating the memory
+
+`malloc()` is memory allocation used to dynamicaally allocate a single large block of memory with specified size. It returns a void pointer which can be type cast into a pointer of any form. It will will have initialized default garbage value at each block.
+`(cast-type*) malloc( element-size )`
+
+`calloc()` is contiguous allocation similar to `malloc` but it initializes each block with a default value `0` and has one extra argument which takes the number of memory blocks needed.
+`ptr = (cast-type*) calloc(n, element-size)`
+
+`ralloc()` can be used to reallocate previously allocated memory if it was not sufficient.
+`ptr = realloc(ptr, newSize)`
+
+`free()` is used for dynamic de-allocation of memory to reduce wastage of memory. `free(ptr)`
 
 _____
 
-#### Linked list: Introduction, Representation and implementation of operations (Insertion, Deletion and Search) of Singly, 
+#### Linked list: Introduction
+
+
+A linked list is a data Structure that consists a sequence of nodes which are a collection of nodes that are randomly stored in memory.
+Each node has a two parts, data part stores the actual value and pointer part holds the reference to the next node in the list.
+
+Extra pointer like head and tail are used to point at the first and last nodes in the list.
+
+Linked list is designed to be efficient for Insertion and deletion of elements from any position in list (when compared to array) with searching taking `O(n)`
+
+
+Advantages:
+* Efficient memory usage (no pre-allocation).
+* Dynamic size adjustment.
+* Faster insertion and deletion (compared to arrays).
+
+Disadvantages
+* More memory usage due to the extra pointer in each node.
+* Cannot be accessed directly like an array (requires sequential access).
+* Slower search operations compared to arrays.
+
+
+___
+
+#### Representation and implementation of operations (Insertion, Deletion and Search) of Singly linked list
 
 * Write an algorithm to insert a node in between any two nodes in an ordered linked list.
 * Write a C Program to insert a node with a value X to the right of the node with the value Y in a SLL.
@@ -361,13 +428,14 @@ ____
 
 _____
 
-### Doubly and Circular Linked Lists,
+### Operations on Doubly and Circular Linked Lists,
 
 * Examine the advantages of double linked list over single linked list.
 * Write a C function to insert a node in a doubly linked list by position. Your program should take position as input from the user.
 * Differentiate between doubly Linked List and singly Linked List. Write a C function to insert a node in a doubly linked list by position. Your program should take position as input from user.
 * Differentiate between doubly Linked List and singly Linked List. Also develop a ‘C’ routine to insert a node before a given key node in a doubly linked list.
 
+**Answer :**
 
 
 
@@ -382,12 +450,214 @@ ____
 ###  Implementation of stack and queue using lists.
 
 * Develop an algorithm to perform queue operation into a Circular Linked List.
-
 * Write a routines to simulate the operations of Queue using singly linked list.
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+struct node 
+{
+    int data;
+    struct node *next;
+} *head = NULL, *tail = NULL;
+
+
+void enqueue(int e) 
+{
+    struct node* new;
+    new = (struct node*) malloc(sizeof(struct node));
+    
+    new->data = e;
+    new->next = NULL;
+    if (rear == NULL) 
+    {
+        front = rear = new;
+        return;
+    }
+	rear->next = new;
+	rear = new;
+}
+
+void dequeue() 
+{
+    if (front == NULL) 
+    {
+        printf("Queue is Underflow \n");
+		return;
+    } 
+    
+	struct node* temp = front;
+	
+	front = front->next;
+	
+	if (front == NULL) 
+		rear = NULL;
+	
+	free(temp);
+}
+
+void peek() 
+{
+    if (front == NULL) 
+    {
+        printf("Queue is Underflow \n");
+		return;
+    } 
+ 
+	printf("The Front Element is %d\n", front->data);
+}
+
+void display() 
+{
+    if (front == NULL) 
+    {
+        printf("Queue is Empty \n");
+        return;
+    }
+     
+	struct node* temp = front;
+	
+	printf("Elements of Queue are \n");
+	while (temp != NULL) 
+	{
+		printf("%d \n", temp->data);
+		temp = temp->next;
+	}
+}
+
+int main() {
+    int e, ch;
+    while (1) {
+        printf("\n\n1->Enqueue element \t2->Dequeue element \n3->Peek \t\t4->Display \n5->Exit\n");
+        printf("\nEnter choice:\n");
+        scanf("%d", &ch);
+        switch (ch) {
+            case 1:
+                printf("Enter the element to be enqueued \n");
+                scanf("%d", &e);
+                enqueue(e);
+                break;
+            case 2:
+                dequeue();
+                break;
+            case 3:
+                peek();
+                break;
+            case 4:
+                display();
+                break;
+            case 5:
+                exit(0);
+            default:
+                printf("Enter the choice Correctly\n");
+        }
+    }
+    return 0;
+}
+```
+
 
 * Develop an algorithm to perform stack operation into a circular single linked List.
 
+```c
+#include <stdio.h>
+#include <stdlid.h>
 
+struct node
+{
+	int data;
+	struct node *next;
+}*top=NULL;
 
+void push(int ele);
+void pop();
+void peep();
+void display();
+
+int main()
+{
+	int ele;
+	int ch;
+
+	while(1)
+	{
+		printf("\n1. Insert\t2. Delete\t3. Peep\t4. Dispaly\t5. Exit\n");
+		printf("\nEnter choice: ");
+		scanf("%d", &ch);
+		switch(ch)
+		{
+			case 1:
+				printf("\nEnter the value to Push: ");
+				scanf("%d", &ele);
+				push(ele);
+				display();
+				break;
+			case 2:
+				pop();
+				display();
+				break;
+			case 3:
+				peep();
+				break;
+			case 4:
+				display();
+				break;
+			case 5:
+				exit(0);
+			default:
+				printf("\nEnter right choice\n");
+		}
+	}
+	return 0;
+}
+void push(int ele)
+{
+	struct node* new;
+	new = (struct node*) malloc(sizeof(struct node));
+	
+	new->data = ele;
+	new->next = top;
+	top = new;
+	
+	printf("Element %d is pushed in.\n", ele);
+}
+void pop()
+{
+	if(top == NULL)
+	{
+		printf("\nStack is empty\n");
+		return;
+	}
+	struct node* temp = top;
+	top = top->next;
+	free(temp);
+}
+void peep()
+{
+	if(top == NULL)
+	{
+		printf("No values\n");
+		return;
+	}
+	printf("\nValue on top is %d", top->data);
+}
+void display()
+{
+	if(top == NULL)
+	{
+		printf("No values\n");
+		return;
+	}
+	struct node* temp = top;
+
+	while(temp != NULL)
+	{
+		printf("%d -> ", temp->data);
+		temp = temp->next;
+	}
+	printf("\n");
+}
+```
 
 ___

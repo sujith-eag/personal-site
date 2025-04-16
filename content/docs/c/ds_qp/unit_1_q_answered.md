@@ -22,61 +22,119 @@ seo:
 
 **Answer :**
 
-**Data Structure :** is a collection of data values and the relationships between them. It defines the arrangement of data and operations that can be performed on the data. 
+A **Data Structure** is a systematic way of organizing, storing and  managing data efficiently to allow for efficient access and modification.
 
-A **Data Structure** is a way of organizing, managing, and storing data efficiently so that it can be accessed and modified in an efficient manner.  Different types of data structures are used for different types of data, and the selection of an appropriate data structure can greatly impact the efficiency of an algorithm.
+**Data Structure** is a collection of data values and the relationships between them. It defines the arrangement of data and operations that can be performed on it like insertion, deletion and updation.
 
-### Types of Data Structures:
+Every application uses a Data Structure, Different types of data structures are used for different types of data, and the selection of an appropriate data structure can greatly impact the efficiency of an algorithm.
 
-1. **Primitive Data Structures**: These are the most basic types of data structures that are directly operated upon by the CPU. They represent a single value.
-	- **Integer**: A whole number (`5`).
-	- **Float**: A number with decimal points (`3.14`).
+#### Characteristics of Data Structure
+
+* Correctness : Data must be represented accurately and managed.
+* Time Complexity : Running time or execution time of operations like insert, delete and search should take the least possible time.
+* Space Complexity : Memory usage should be as minimal and efficient.
+
+#### Types of Data Structures:
+
+Data structures are classified into two main categories :
+
+1. **Primitive Data Structures**: These are the most basic data types that can hold or represent only single value and are directly operated upon by the CPU.
+	- **Integer**: A whole number (`5`, `-6`)
+	- **Float/Double**: A number with decimal points (`3.14`).
 	- **Character**: A single character (`'a'`).
-	- **Boolean**: A data type representing `true` or `false`.
+	- **Boolean**: Logical values representing `true` or `false`.
 
-2. **Non-Primitive Data Structures**:  These data structures are more complex and are derived from primitive data types. They are classified into linear and non-linear data structures.
-	- **Array**: A collection of elements of the same type stored in contiguous memory locations.
-	- **Linked List**: A linear list of elements (nodes), where each node points to the next.
-	- **Stack**: A collection of elements with LIFO access.
-	- **Queue**: A collection of elements with FIFO access.
-	- **Tree**: A hierarchical data structure with nodes connected by edges.
-	- **Graph**: A collection of vertices and edges where edges represent relationships.
+2. **Non-Primitive Data Structures**:  These data structures are more complex and are derived from primitive data types. They can hold multiple values and have different arrangements of data.
 
 ____
 
-Classification of Non_Primitive Data Structures can be broadly be done into two categories:
+Classification of Non Primitive Data Structures can be broadly be done into two categories:
 1. Linear Data Structures
 2. Non-linear Data Structures
 
-In linear data structures, the data elements are stored in a sequential or linear order. Each element has a unique predecessor and successor, except for the first and last elements.
+#### Linear Data Structures
+
+In linear data structures, the data elements are arranged in a sequential or linear order one after the other. Each element has a unique predecessor and successor, except for the first and last elements.
 
 - **Array**: A collection of elements, all of the same type, stored in contiguous memory locations. It provides fast access to individual elements using an index.  `int arr[5] = {1, 2, 3, 4, 5};`
 
 - **Linked List**: A linear collection of elements, where each element (node) contains data and a reference (link) to the next node. Unlike arrays, linked lists do not require contiguous memory locations. A linked list of integers: `10 -> 20 -> 30 -> NULL`.
 
-- **Stack**: A collection of elements that follows the **Last In, First Out (LIFO)** principle. Only the top element can be accessed or removed at any time.  Stack of plates: `Top -> Plate1 -> Plate2 -> Plate3`.
+- **Stack**: A collection of elements that follows the **Last In, First Out (LIFO)** principle. Elements are added and removed only from the top.  Stack of plates: `Top -> Plate1 -> Plate2 -> Plate3`.
 
-- **Queue**: A collection of elements that follows the **First In, First Out (FIFO)** principle. The first element added is the first one to be removed. Queue of people: `First Person -> Second Person -> Third Person`.
+- **Queue**: A collection of elements that follows the **First In, First Out (FIFO)** principle. Elements are added at the rear and removed from the front. Queue of people: `First Person -> Second Person -> Third Person`.
 
-In non-linear data structures, the data elements are not stored in a sequential or linear order. The elements are connected to each other in a hierarchical or interconnected manner.
 
-- **Tree**: A hierarchical structure with a root node and child nodes, where each node can have zero or more child nodes. It is used to represent hierarchical relationships. A family tree or a file directory structure.
+#### Non Linear Data Structures
 
-- **Graph**: A collection of nodes (vertices) and edges (connections) between the nodes. Graphs can represent relationships between entities in many real-world problems (e.g., social networks, transportation systems). A social network where people (nodes) are connected by friendships (edges).
+In Non-linear data structure, elements are not stores sequentially, they are connected to each other in a hierarchical or interconnected manner.
+
+- **Tree** : A hierarchical structure with a root node and child nodes, where each node can have zero or more child nodes. It is used to represent hierarchical relationships. A family tree or a file directory structure.
+- Trees : Binary Tree, Binary Search Tree, AVL Tree, B-Tree, B+ Tree, Red-Black Tree
+
+
+- **Graph** : A collection of nodes (vertices) and edges (connections) between the nodes.
+- Graphs : Directed, Undirected, Weighted, Unweighted.
+- Graphs can represent relationships between entities in many real-world problems (e.g., social networks, maps, Routing algorithms, transportation systems).
+
+Examples and applications of Different Data Structures :
+
+
 
 ____
 
 ### **Need for Data Structures:**
 
-- **Efficient Data Management** : Data structures allow data to be efficiently stored, accessed and modified. (Arrays allow constant-time access to elements through indexing, while linked lists allow dynamic memory allocation).
+When amount of data is very large, operations on it in a linear fashion will be very slow and processing will not be efficient. Multiple concurrent requests cannot be handled in a inefficient data structure leading to delays or crashes.
 
-- **Memory Optimization** : Data structures help in efficient use of memory. (Linked lists provide a way to store data dynamically, avoiding the need to pre-allocate a fixed amount of memory like arrays).
+* Handling Large volumes of data needs efficient structures to prevent performance issues.
 
-- **Faster Processing** : Certain Data structures are optimized for certain operations like searching, insertion, deletion, and traversal. (Trees are used for sorted data and hierarchical data representation, hash tables for fast data lookup).
+- **Efficient Data Management** : Data structures organize data for efficient access, retrieval and modification.
+- Arrays provide O(1) access time using an index.
 
-- Different algorithms require different data structures to achieve optimal performance. (Sorting algorithms may use arrays, and graph algorithms may use adjacency lists or matrices).
+- **Memory Optimization** : Data structures help in efficient use of memory. 
+- Linked lists allow dynamic memory allocation, avoiding the need to pre-allocate a fixed amount of memory like in arrays.
+
+- **Faster Processing** : Specialized Data structures are optimized for fast searching, insertion, deletion, and traversal. 
+- Binary Search Trees allow efficient searching.
+
+- Different algorithms are optimized with specific data structures to achieve optimal performance. 
+- Sorting algorithms may use arrays, Graph algorithms use adjacency lists or matrices.
 
 - Data structures help in solving real-world problems. (Graphs are used to represent social networks, and trees are used to represent file systems.)
+
+
+Efficiency of Data Structure can be characterized by its time complexity as: 
+- **Worst Case**: Maximum time the operation could take.
+- **Best Case**: Minimum time required.
+- **Average Case**: Expected time over all inputs.
+
+
+___
+
+#### Operations Performed on Data Structures
+
+* **Create** : involves allocating memory for a data structure and initializing it for use. It defines the data structure's size and format, either statically or dynamically.
+* Creating an array of 10 integers, or initializing a linked list with a head pointer set to `NULL`.
+
+* **Delete** : refers to deallocating memory that was previously allocated to a data structure or removing an element from it.
+
+* **Updation** : modifies the value of an existing element in the data structure. It usually requires accessing the element first and then replacing its value.
+
+* **Searching** : involves locating an element in data structure. It may also find the locations of all elements that satisfy certain conditions.
+
+* **Sorting** : is arranging data in a specific order, either in ascending order or in descending order. Sorting makes merging and searching more efficient.
+* Sorting an array of integers in ascending order using bubble sort or quicksort.
+
+* **Merging** : combines two or more data structures (usually sorted) into a single data structure while maintaining the sorted order.
+* Merging two sorted arrays into a third sorted array.
+
+* **Splitting** : Splitting is a process of partitioning single list to multiple list based on certain condition or size.
+
+* **Traversal** : involves visiting all the nodes in a data structure usually to perform some operation on elements.
+* Traversing a linked list to display its elements or traversing a binary tree using in-order traversal.
+
+Time Complexity for All Operations for different data Structures :
 
 ____
 
@@ -89,10 +147,9 @@ ____
 **Answer :**
 
 An **iterative function** uses loops (for, while, or do-while) to repeat a set of instructions until a certain condition is met. Iteration involves repeating a block of code in a loop.
-Typically involves maintaining state variables that change with each iteration.
-
-**Memory Usage** is generally less because no additional stack space is needed.
-**Performance** is faster in terms of execution as there are fewer overheads compared to recursion.
+* Typically involves maintaining state variables that change with each iteration.
+* **Memory Usage** is generally less because no additional stack space is needed.
+* **Performance** is faster in terms of execution as there are fewer overheads compared to recursion.
 
 To calculate the **sum of numbers from 1 to N**:
 ```c
@@ -105,11 +162,14 @@ int sumIterative(int n) {
 }
 ```
 
-**Recursion** is used to divide a task into smaller sub-tasks to solve the bigger problem.
-- A function calls itself / recursive call to solve the subproblems, often reducing the problem size with each call.
-- Requires a base case which defines the ending condition to terminate the recursion and prevent infinite calls which leads to stack overflow.
+
+In computer science, recursion is a method of solving a computational problem where the solution depends on solutions to smaller instances of the same problem **Recursion** is used to divide a task into smaller sub-tasks to solve the bigger problem.
+
+- Requires a base case which defines the stopping criteria to terminate the recursion and prevent infinite recursive calls, leading to stack overflow.
+
+- A function calls itself / recursive call to solve the smaller subproblems, each of which can be solved in the same way, often reducing the problem size with each call and moving towards the base case.
  
-- **Memory Usage** is more because each recursive call adds a new stack frame.
+- **Memory Usage** is more because each recursive call adds a new call stack.
 - **Performance** can be slower due to the overhead of multiple function calls and stack operations.
 
 To calculate the **sum of numbers from 1 to N**:
@@ -123,47 +183,17 @@ int sumRecursive(int n) {
 }
 ```
 
+
+#### Applications of Recursion
+
+* Searching and sorting algorithms: Recursive algorithms are used to search and sort data structures like trees and graphs.
+* Mathematical calculations: Recursive algorithms are used to solve problems such as factorial,Fibonacci sequence, etc.
+* Compiler design: Recursion is used in the design of compilers to parse and analyze programming languages.
+* Graphics: many computer graphics algorithms, such as fractals and the Mandelbrot set, use recursion to generate complex patterns.
+* Artificial intelligence: recursive neural networks are used in natural language processing, computer vision, and other AI applications.
+
+
 ---
-
-#### Fibonacci Series Using Recursion
-
-It is not advisable to generate the Fibonacci series using recursion, especially for large numbers.
-- Exponential Time Complexity: A naive recursive implementation has exponential time complexity `O(2^n)` because it recalculates the same values multiple times. This leads to redundant calculations, causing a significant performance issue.
-- Stack Overflow: Recursive calls consume stack space for each function call, and for large inputs, this may lead to stack overflow.
-- Inefficiency: For large `n`, recursion may be inefficient compared to other methods like iteration or dynamic programming.
-
-```c
-int fibonacciRecursive(int n) {
-    if (n <= 1) {
-        return n;
-    }
-    return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2);
-}
-```
-
-Fibonacci Series Using Iteration (More Efficient):
-```c
-int fibonacciIterative(int n) 
-{
-
-    if (n <= 1) return n;
-    
-    int a = 0, b = 1, c;
-    for (int i = 2; i <= n; i++) {
-        c = a + b;
-        a = b;
-        b = c;
-    }
-    return b;
-}
-```
-
-In this iterative approach:
-- Time Complexity: O(n)
-- Space Complexity: O(1)
-- Efficiency: It computes the Fibonacci number in linear time with constant space, making it much more efficient than the recursive approach.
-
-_____
 
 ##### What is Recursive function? Write a recursive program to find Factorial of a number.
 
@@ -174,13 +204,10 @@ _____
 
 int factorial(int n) 
 {
-    if (n == 0 || n == 1) {
+    if (n == 0 || n == 1)
         return 1;
-    }
-    else 
-    {
-        return n * factorial(n - 1);
-    }
+        
+	return n * factorial(n - 1);
 }
 
 int main() {
@@ -188,18 +215,132 @@ int main() {
     printf("Enter a number: ");
     scanf("%d", &num);
     
-    if (num < 0) {
+    if (num < 0) 
+    {
         printf("Factorial is not defined for negative numbers.\n");
-    } else {
+    }
+    else
+    {
         printf("Factorial of %d is %d\n", num, factorial(num));
     }
     
     return 0;
 }
-
 ```
 
 ____
+
+#### Fibonacci Series Using Recursion
+
+It is not advisable to generate the Fibonacci series using recursion, especially for large numbers.
+- Exponential Time Complexity: A naive recursive implementation has exponential time complexity `O(2^n)` because it recalculates the same values multiple times. This leads to redundant calculations, causing a significant performance issue.
+- Stack Overflow: Recursive calls consume stack space for each function call, and for large inputs, this may lead to stack overflow.
+- Inefficiency: For large `n`, recursion may be inefficient compared to other methods like iteration or dynamic programming.
+
+##### Fibonacci using recursion 
+
+```c
+#include <stdio.h>
+
+int fibRecursive(int n)
+{
+    if (n <= 1) 
+        return n;
+    
+    return fibRecursive(n - 1) + fibRecursive(n - 2);
+}
+
+int main()
+{
+	int n;
+	printf("Enter Number of terms : ");
+	scanf("%d", &n);
+	printf("The Fibonacci series is :\n\n");
+
+	int step = 0;
+	for(int i = 0; i<n; i++)
+	{
+		printf("%d ", fibRecursive(step));
+		step++;
+	}
+	printf("\n");
+	return 0;
+}
+```
+
+
+##### Fibonacci Series Using Iteration (More Efficient):
+
+```c
+#include <stdio.h>
+
+int fibSequence(int n)
+{ 
+	if (n <= 1) 
+		return n;
+    
+    int a = 0, b = 1, c;
+    for (int i = 2; i <= n; i++) {
+        c = a + b;
+        a = b;
+        b = c;
+    }
+    return c;
+}
+
+int main()
+{
+	int n;
+	printf("Enter Number of terms : ");
+	scanf("%d", &n);
+	printf("The Fibonacci series is :\n\n");
+
+	int step = 0;
+	for(int i = 0; i<n; i++)
+	{
+		printf("%d ", fibSequence(step));
+		step++;
+	}
+	printf("\n");
+	return 0;
+}
+```
+
+##### Using While Loop and no separate function
+
+```c
+#include <stdio.h>
+
+int main()
+{
+	int n;
+	printf("Enter Number to get Fib Series : ");
+	scanf("%d", &n);
+		
+	int a = 0, b = 1, c = 0;	
+	printf("The Fib Sequence is:\n\n %d %d ", a, b);	
+	
+	int i = 2;
+	while(i < n)
+	{
+		c = a + b;
+		a = b;
+		b = c;
+		
+		i++;
+		printf("%d ", c);
+	}
+	printf("\n");
+	return 0;
+}
+```
+
+In this iterative approach:
+- Time Complexity: O(n)
+- Space Complexity: O(1)
+- Efficiency: It computes the Fibonacci number in linear time with constant space, making it much more efficient than the recursive approach.
+
+_____
 
 ##### Write a recursive C program to find GCD of two numbers.
 
@@ -242,9 +383,8 @@ ____
 **Answer :**
 
 The Tower of Hanoi problem involves three rods and `n` disks of different sizes. The goal is to move all disks from the source rod to the destination rod, following these rules:
-1. Only one disk can be moved at a time.
-2. A disk can only be moved to the top of another rod if it is smaller than the disk already present there.
-3. Auxiliary rod to be used to help in the process.
+1. Only one top disk can be moved at a time from one rod to another.
+2. Larger disk cannot be placed on smaller disks.
 
 The recursive solution is based on the following steps:
 1. Move the first `n-1` disks from the source rod to the auxiliary rod.
@@ -261,7 +401,7 @@ void towerOfHanoi(int n, char A, char B, char C)
 	if (n>0)
 	{
 		towerOfHanoi(n-1, A, C, B);
-		printf("\nMove the disk %d, from %c tower to %c \n", n, A, C);
+		printf("\nMove Disk %d, from %c tower to %c \n", n, A, C);
 		towerOfHanoi(n-1, B, A, C);
 	}	
 }
@@ -281,8 +421,17 @@ int main()
 
 ---
 
-For `n = 3` disks, the recursive calls break down as follows:
+The sequence of moves is as follows for three disks:
+1. Move disk 1 from rod A to rod C
+2. Move disk 2 from rod A to rod B
+3. Move disk 1 from rod C to rod B
+4. Move disk 3 from rod A to rod C
+5. Move disk 1 from rod B to rod A
+6. Move disk 2 from rod B to rod C
+7. Move disk 1 from rod A to rod C
 
+
+For `n = 3` disks, the recursive calls break down as follows:
 - Move 2 disks from `A` to `B` (using `C` as auxiliary).
     - Move 1 disk from `A` to `C` (using `B` as auxiliary).
     - Move disk 2 from `A` to `B`.
@@ -292,15 +441,6 @@ For `n = 3` disks, the recursive calls break down as follows:
     - Move 1 disk from `B` to `A` (using `C` as auxiliary).
     - Move disk 2 from `B` to `C`.
     - Move 1 disk from `A` to `C` (using `B` as auxiliary).
-
-The sequence of moves is as follows:
-1. Move disk 1 from rod A to rod C
-2. Move disk 2 from rod A to rod B
-3. Move disk 1 from rod C to rod B
-4. Move disk 3 from rod A to rod C
-5. Move disk 1 from rod B to rod A
-6. Move disk 2 from rod B to rod C
-7. Move disk 1 from rod A to rod C
 
 For `n = 5` disks, the number of moves required is: `2^5−1 = 32−1 =31` moves
 
@@ -315,7 +455,10 @@ ____
 
 **Answer :**
 
-Stack is an ordered list in which insertion (push) and deletion (pop) are made at one end called the top.
+Stack is a linear data structure having same data types. Elements are arranged in a sequential order.
+
+Stack is an ordered list in which insertion (push) and deletion (pop) are made at only one end called the top.
+
 Since the last element inserted is the last one to be removed, a stack is also known as `Last-in-First_out  LIFO` list
 
 Stack Operations:
@@ -326,6 +469,21 @@ Stack Operations:
 * isEmpty: Check if the stack is empty.
 
 (Diagram of stack push and pop from the top can be drawn here)
+
+#### Applications of Stack
+
+* Function call stack in programming.
+* Undo/Redo functionality in text editors.
+* Backtracking algorithms (e.g., maze solving).
+* Expression evaluation (postfix/prefix/infix conversion).
+* Parentheses matching in compilers.
+* Web browser history navigation.
+* Reversing strings or data structures.
+* Depth-First Search (DFS) in graphs.
+* Parsing nested structures (e.g., XML/JSON).
+* Tower of Hanoi puzzle implementation.
+
+____
 
 Function to push
 ```c
