@@ -98,7 +98,7 @@
 [[social]]
   name = "LinkedIn"
   pre = '<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4h16a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1" /><path d="M8 11v5" /><path d="M8 8v.01" /><path d="M12 16v-5" /><path d="M16 16v-3a2 2 0 0 0 -4 0" /></svg>'
-  url = "https://www.linkedin.com/in/sujith-kumar-eag"
+  url = "https://www.linkedin.com/in/sujith-eag"
   weight = 10
 
 # [[social]]
